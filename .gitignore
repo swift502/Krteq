@@ -1,0 +1,4 @@
+source/kicad/**/*/*-backups
+source/kicad/**/*/production
+~*.lck
+jlcpcb
