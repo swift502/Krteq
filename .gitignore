@@ -1,4 +1,6 @@
 source/kicad/**/*/*-backups
 source/kicad/**/*/production
+source/kicad/**/*/_autosave*
+source/kicad/**/*/#auto_saved_files#
 ~*.lck
 jlcpcb
