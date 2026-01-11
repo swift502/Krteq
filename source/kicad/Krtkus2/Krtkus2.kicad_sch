@@ -6922,7 +6922,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 302.26 197.1674 90)
 			(effects
 				(font
@@ -7000,7 +7000,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 194.31 197.1674 90)
 			(effects
 				(font
@@ -7148,7 +7148,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 264.16 161.6074 90)
 			(effects
 				(font
@@ -7226,7 +7226,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 257.81 197.1674 90)
 			(effects
 				(font
@@ -7465,7 +7465,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 228.6 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -7534,7 +7534,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 295.91 197.1674 90)
 			(effects
 				(font
@@ -7612,7 +7612,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 283.21 197.1674 90)
 			(effects
 				(font
@@ -7870,7 +7870,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 215.9 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -7939,7 +7939,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 213.36 179.3874 90)
 			(effects
 				(font
@@ -8087,7 +8087,7 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "THT LED"
 			(at 76.2 187.96 0)
 			(effects
 				(font
@@ -8262,7 +8262,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 238.76 197.1674 90)
 			(effects
 				(font
@@ -8342,7 +8342,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 279.4 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8483,7 +8483,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 203.2 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8552,7 +8552,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 226.06 179.3874 90)
 			(effects
 				(font
@@ -8632,7 +8632,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 304.8 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8701,7 +8701,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 251.46 197.1674 90)
 			(effects
 				(font
@@ -8868,7 +8868,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 295.91 179.3874 90)
 			(effects
 				(font
@@ -8946,7 +8946,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 257.81 161.6074 90)
 			(effects
 				(font
@@ -9026,7 +9026,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 215.9 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9097,7 +9097,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 203.2 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9168,7 +9168,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 228.6 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9398,7 +9398,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 279.4 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9469,7 +9469,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 254 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9540,7 +9540,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 241.3 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9768,7 +9768,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 283.21 161.6074 90)
 			(effects
 				(font
@@ -10094,7 +10094,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 276.86 197.1674 90)
 			(effects
 				(font
@@ -10174,7 +10174,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 247.65 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10315,7 +10315,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 241.3 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10613,7 +10613,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 226.06 197.1674 90)
 			(effects
 				(font
@@ -10691,7 +10691,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 308.61 197.1674 90)
 			(effects
 				(font
@@ -10771,7 +10771,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 292.1 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10840,7 +10840,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 213.36 197.1674 90)
 			(effects
 				(font
@@ -10920,7 +10920,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 317.5 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10989,7 +10989,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 276.86 161.6074 90)
 			(effects
 				(font
@@ -11067,7 +11067,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 187.96 161.6074 90)
 			(effects
 				(font
@@ -11145,7 +11145,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 251.46 179.3874 90)
 			(effects
 				(font
@@ -11225,7 +11225,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 304.8 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -11383,7 +11383,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 194.31 179.3874 90)
 			(effects
 				(font
@@ -11673,7 +11673,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 317.5 45.974 0)
 			(do_not_autoplace yes)
 			(effects
@@ -11742,7 +11742,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 200.66 161.6074 90)
 			(effects
 				(font
@@ -11820,7 +11820,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 308.61 161.6074 90)
 			(effects
 				(font
@@ -11900,7 +11900,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 304.8 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12041,7 +12041,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 215.9 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12199,7 +12199,7 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "THT LED"
 			(at 76.2 196.85 0)
 			(effects
 				(font
@@ -12552,7 +12552,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 207.01 179.3874 90)
 			(effects
 				(font
@@ -12840,7 +12840,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 232.41 197.1674 90)
 			(effects
 				(font
@@ -12920,7 +12920,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 292.1 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13375,7 +13375,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 228.6 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13533,7 +13533,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 270.51 179.3874 90)
 			(effects
 				(font
@@ -13613,7 +13613,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 292.1 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13682,7 +13682,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 257.81 179.3874 90)
 			(effects
 				(font
@@ -13760,7 +13760,7 @@
 				)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "THT LED"
 			(at 76.2 205.74 0)
 			(effects
 				(font
@@ -13846,7 +13846,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 238.76 179.3874 90)
 			(effects
 				(font
@@ -14155,7 +14155,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 266.7 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -14294,7 +14294,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 207.01 161.6074 90)
 			(effects
 				(font
@@ -14442,7 +14442,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 264.16 179.3874 90)
 			(effects
 				(font
@@ -14935,7 +14935,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 215.9 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -15006,7 +15006,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 190.5 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -15393,7 +15393,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 283.21 179.3874 90)
 			(effects
 				(font
@@ -15471,7 +15471,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 251.46 161.6074 90)
 			(effects
 				(font
@@ -16505,7 +16505,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 302.26 161.6074 90)
 			(effects
 				(font
@@ -16585,7 +16585,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 279.4 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16796,7 +16796,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 190.5 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16867,7 +16867,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 279.4 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16938,7 +16938,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 266.7 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17096,7 +17096,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 289.56 161.6074 90)
 			(effects
 				(font
@@ -17564,7 +17564,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 241.3 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17633,7 +17633,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 289.56 197.1674 90)
 			(effects
 				(font
@@ -17783,7 +17783,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 215.9 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17943,7 +17943,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 254 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18014,7 +18014,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 266.7 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18084,7 +18084,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 177.8 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18244,7 +18244,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 266.7 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18491,7 +18491,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 276.86 179.3874 90)
 			(effects
 				(font
@@ -18569,7 +18569,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 302.26 179.3874 90)
 			(effects
 				(font
@@ -18649,7 +18649,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 292.1 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18879,7 +18879,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 228.571 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19018,7 +19018,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 264.16 197.1674 90)
 			(effects
 				(font
@@ -19185,7 +19185,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 232.41 179.3874 90)
 			(effects
 				(font
@@ -19335,7 +19335,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 266.7 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19404,7 +19404,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 200.66 197.1674 90)
 			(effects
 				(font
@@ -19484,7 +19484,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 203.2 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19553,7 +19553,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 181.61 197.1674 90)
 			(effects
 				(font
@@ -19722,7 +19722,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 254 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19793,7 +19793,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 177.8 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19864,7 +19864,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 177.8 45.974 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20162,7 +20162,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 200.66 179.3874 90)
 			(effects
 				(font
@@ -20401,7 +20401,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 177.8 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20470,7 +20470,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 308.61 179.3874 90)
 			(effects
 				(font
@@ -20887,7 +20887,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 292.1 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20956,7 +20956,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 194.31 161.6074 90)
 			(effects
 				(font
@@ -21123,7 +21123,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 238.76 161.6074 90)
 			(effects
 				(font
@@ -21362,7 +21362,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 228.6 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21501,7 +21501,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 219.71 161.6074 90)
 			(effects
 				(font
@@ -22217,7 +22217,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 241.3 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22288,7 +22288,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 254 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22359,7 +22359,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 190.5 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22867,7 +22867,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 213.36 161.6074 90)
 			(effects
 				(font
@@ -22947,7 +22947,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 304.8 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23105,7 +23105,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 232.41 161.6074 90)
 			(effects
 				(font
@@ -23183,7 +23183,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 181.61 161.6074 90)
 			(effects
 				(font
@@ -23492,7 +23492,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 317.5 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23631,7 +23631,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 219.71 197.1674 90)
 			(effects
 				(font
@@ -23800,7 +23800,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 203.171 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23869,7 +23869,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 181.61 179.3874 90)
 			(effects
 				(font
@@ -23947,7 +23947,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 226.06 161.6074 90)
 			(effects
 				(font
@@ -24186,7 +24186,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 317.5 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24255,7 +24255,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 295.91 161.6074 90)
 			(effects
 				(font
@@ -24333,7 +24333,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 207.01 197.1674 90)
 			(effects
 				(font
@@ -24552,7 +24552,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 190.5 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24710,7 +24710,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 187.96 179.3874 90)
 			(effects
 				(font
@@ -24788,7 +24788,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 289.56 179.3874 90)
 			(effects
 				(font
@@ -24868,7 +24868,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 317.5 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24939,7 +24939,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 203.2 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25010,7 +25010,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 190.5 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25558,7 +25558,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 177.8 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25629,7 +25629,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 177.8 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25787,7 +25787,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 219.71 179.3874 90)
 			(effects
 				(font
@@ -25865,7 +25865,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 218.44 220.0274 90)
 			(effects
 				(font
@@ -25945,7 +25945,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 317.5 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26014,7 +26014,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 270.51 161.6074 90)
 			(effects
 				(font
@@ -26092,7 +26092,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 270.51 197.1674 90)
 			(effects
 				(font
@@ -26172,7 +26172,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 304.8 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26421,7 +26421,7 @@
 				)
 			)
 		)
-		(property "Value" "SW_Push"
+		(property "Value" "Switch"
 			(at 279.4 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26490,7 +26490,7 @@
 				)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "SMD LED"
 			(at 187.96 197.1674 90)
 			(effects
 				(font
