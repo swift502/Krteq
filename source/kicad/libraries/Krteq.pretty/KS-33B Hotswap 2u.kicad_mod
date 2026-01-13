@@ -135,46 +135,6 @@
 		(uuid "71e057f9-c020-4701-8331-29fca48e47f7")
 	)
 	(fp_line
-		(start -1.96 -6.25)
-		(end -1.96 -4.05)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "da8da2b3-bc75-41c5-900b-4472ce553479")
-	)
-	(fp_line
-		(start -1.96 -6.25)
-		(end 2.64 -6.25)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "6826adac-fd0d-4a78-a26a-720a1d3372a6")
-	)
-	(fp_line
-		(start -1.96 -4.05)
-		(end 2.64 -4.05)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "c603f009-ac3e-46ac-851b-4dd0cc5ef43a")
-	)
-	(fp_line
-		(start 2.64 -4.05)
-		(end 2.64 -6.25)
-		(stroke
-			(width 0.05)
-			(type default)
-		)
-		(layer "Edge.Cuts")
-		(uuid "6f4aef29-92c7-4458-82a7-32e523e10ba9")
-	)
-	(fp_line
 		(start 9 -6.5)
 		(end 15 -6.5)
 		(stroke
@@ -254,6 +214,46 @@
 		(layer "F.Fab")
 		(uuid "31ba89c8-dd03-4cdd-9ba7-3f7d0aded6a1")
 	)
+	(fp_line
+		(start -1.96 -6.25)
+		(end -1.96 -4.05)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "User.2")
+		(uuid "da8da2b3-bc75-41c5-900b-4472ce553479")
+	)
+	(fp_line
+		(start -1.96 -6.25)
+		(end 2.64 -6.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "User.2")
+		(uuid "6826adac-fd0d-4a78-a26a-720a1d3372a6")
+	)
+	(fp_line
+		(start -1.96 -4.05)
+		(end 2.64 -4.05)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "User.2")
+		(uuid "c603f009-ac3e-46ac-851b-4dd0cc5ef43a")
+	)
+	(fp_line
+		(start 2.64 -4.05)
+		(end 2.64 -6.25)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "User.2")
+		(uuid "6f4aef29-92c7-4458-82a7-32e523e10ba9")
+	)
 	(fp_text user "${REFERENCE}"
 		(at 0 -8.25 0)
 		(layer "F.Fab")
@@ -277,7 +277,7 @@
 		(size 3 3)
 		(drill 3)
 		(layers "*.Cu" "*.Mask")
-		(uuid "de5389ac-e796-4d65-8e9b-0cf32115de7b")
+		(uuid "64881a58-c29c-4217-b559-563ae8370ca8")
 	)
 	(pad "" np_thru_hole circle
 		(at 0 0 180)
@@ -301,11 +301,11 @@
 		(uuid "c335d4df-5e73-4f97-a7a9-cdd4823bfe9d")
 	)
 	(pad "1" smd roundrect
-		(at -7.2925 2.545)
-		(size 2.415 2.49)
+		(at -7.36 2.54)
+		(size 2.55 2.5)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.1)
-		(uuid "a2d5280a-ca4e-4cce-805c-00ae98481170")
+		(uuid "368062a0-51a1-4a5f-b83d-e07a2ad8f868")
 	)
 	(pad "2" smd roundrect
 		(at 6.09 5.08)
