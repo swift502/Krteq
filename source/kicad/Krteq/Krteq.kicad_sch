@@ -7381,7 +7381,7 @@
 			(uuid "b8ece266-a2b3-4c54-a387-10a9f32dd383")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R27")
 					(unit 1)
@@ -7459,7 +7459,7 @@
 			(uuid "c455b5c5-fca3-48dd-bbab-039e42505fd9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D123")
 					(unit 1)
@@ -7537,7 +7537,7 @@
 			(uuid "2738ab66-f3ab-4eaf-a82d-0a8d0c67eab1")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D107")
 					(unit 1)
@@ -7607,7 +7607,7 @@
 			(uuid "28f0200e-e662-4e57-a754-4bcdf7f9d0fb")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R4")
 					(unit 1)
@@ -7685,7 +7685,7 @@
 			(uuid "70184464-7566-465f-8760-4d8119e80425")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D77")
 					(unit 1)
@@ -7763,7 +7763,7 @@
 			(uuid "9f514080-6d81-4e5a-8b0d-185370e0bbd6")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D116")
 					(unit 1)
@@ -7833,7 +7833,7 @@
 			(uuid "9ec69f2c-e70d-4e39-aaa8-13697dfe29c1")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R28")
 					(unit 1)
@@ -7922,7 +7922,7 @@
 			(uuid "8a63c7d9-068e-4b81-9fa9-9e41565da174")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D50")
 					(unit 1)
@@ -7959,7 +7959,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 228.6 85.09 0)
 			(effects
 				(font
@@ -7993,7 +7993,7 @@
 			(uuid "b5e1137c-5b25-42db-8d7e-554f21afc1d3")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW26")
 					(unit 1)
@@ -8071,7 +8071,7 @@
 			(uuid "cb15c62f-d80e-4368-b09c-c93579f1c3ae")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D122")
 					(unit 1)
@@ -8149,7 +8149,7 @@
 			(uuid "d5713a87-9372-4dff-b802-6182dcc5a3c2")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D120")
 					(unit 1)
@@ -8238,7 +8238,7 @@
 			(uuid "5a12a80b-b6fe-4cc1-8370-cfe0a36bbcb9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D53")
 					(unit 1)
@@ -8327,7 +8327,7 @@
 			(uuid "e2a7bf80-afb4-47f6-a89d-4b5801bcf11c")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D19")
 					(unit 1)
@@ -8364,7 +8364,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 215.9 50.8 0)
 			(effects
 				(font
@@ -8398,7 +8398,7 @@
 			(uuid "589ed8a3-5e5e-4929-b403-0d46c440b500")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW17")
 					(unit 1)
@@ -8476,7 +8476,7 @@
 			(uuid "f98f95f6-380b-4cc8-bfa2-4798232c5d64")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D90")
 					(unit 1)
@@ -8546,7 +8546,7 @@
 			(uuid "f4751de5-8680-4d7a-a415-2c3af4bede87")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R11")
 					(unit 1)
@@ -8721,7 +8721,7 @@
 			(uuid "a955176f-db42-49c8-9224-62c467c83b46")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D22")
 					(unit 1)
@@ -8799,7 +8799,7 @@
 			(uuid "46046823-b765-4fa4-a20d-0ff44d6ac193")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D114")
 					(unit 1)
@@ -8836,7 +8836,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 279.4 50.8 0)
 			(effects
 				(font
@@ -8870,7 +8870,7 @@
 			(uuid "10a68758-86c9-4850-be52-5a79ef0e53f1")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW41")
 					(unit 1)
@@ -8940,7 +8940,7 @@
 			(uuid "f3ebb976-2072-4c11-b1b5-6d90a5201114")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R2")
 					(unit 1)
@@ -8977,7 +8977,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 203.2 50.8 0)
 			(effects
 				(font
@@ -9011,7 +9011,7 @@
 			(uuid "f7220bc7-87cd-45c0-b0f1-e4f76db2f672")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW13")
 					(unit 1)
@@ -9089,7 +9089,7 @@
 			(uuid "6d2f7f36-5399-4fe6-95c7-ed98f8d03b0f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D92")
 					(unit 1)
@@ -9126,7 +9126,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 304.8 85.09 0)
 			(effects
 				(font
@@ -9160,7 +9160,7 @@
 			(uuid "c76354c0-bb39-40d9-85d2-42347a89b343")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW54")
 					(unit 1)
@@ -9238,7 +9238,7 @@
 			(uuid "a79728ef-9d8e-4493-a521-a4c037d38976")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D115")
 					(unit 1)
@@ -9327,7 +9327,7 @@
 			(uuid "a71c333f-3b8f-4c85-b01b-0829d8a78e3c")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D13")
 					(unit 1)
@@ -9405,7 +9405,7 @@
 			(uuid "7da952f1-fb77-428c-b37b-d6388de378cb")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D102")
 					(unit 1)
@@ -9483,7 +9483,7 @@
 			(uuid "6e4c2b70-4b35-4ae1-b100-6715d7b9f6c6")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D76")
 					(unit 1)
@@ -9520,7 +9520,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 215.9 85.09 0)
 			(effects
 				(font
@@ -9554,7 +9554,7 @@
 			(uuid "bdcf7287-83f2-495e-97c7-c52cbdabf8ae")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW20")
 					(unit 1)
@@ -9591,7 +9591,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 203.2 62.23 0)
 			(effects
 				(font
@@ -9625,7 +9625,7 @@
 			(uuid "8bbd0445-36be-4bb2-965c-8d8bae2e7e21")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW14")
 					(unit 1)
@@ -9662,7 +9662,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 228.6 50.8 0)
 			(effects
 				(font
@@ -9696,7 +9696,7 @@
 			(uuid "45af3c39-2e09-4e73-abf1-2545b4288e9d")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW23")
 					(unit 1)
@@ -9766,7 +9766,7 @@
 			(uuid "4ef04eff-4a19-4eff-b401-b9218b4c88a0")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R24")
 					(unit 1)
@@ -9855,7 +9855,7 @@
 			(uuid "961eb01c-a9c8-4d8e-9f3b-eca4652192f9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D26")
 					(unit 1)
@@ -9892,7 +9892,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 279.4 62.23 0)
 			(effects
 				(font
@@ -9926,7 +9926,7 @@
 			(uuid "79a9230a-3414-4342-9d60-15dd9cbca621")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW42")
 					(unit 1)
@@ -9963,7 +9963,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 254 73.66 0)
 			(effects
 				(font
@@ -9997,7 +9997,7 @@
 			(uuid "0866b285-c816-4582-bed1-efcfbc698a47")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW34")
 					(unit 1)
@@ -10034,7 +10034,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 241.3 62.23 0)
 			(effects
 				(font
@@ -10068,7 +10068,7 @@
 			(uuid "fa085776-624f-423d-8e4f-17f148ea8e8c")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW28")
 					(unit 1)
@@ -10138,7 +10138,7 @@
 			(uuid "85eac7c9-093c-4ea8-a613-b0efbf01d897")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R16")
 					(unit 1)
@@ -10227,7 +10227,7 @@
 			(uuid "05695b17-6d23-47a9-ad9b-b7a3481b56a4")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D64")
 					(unit 1)
@@ -10305,7 +10305,7 @@
 			(uuid "3225d030-1607-4baa-87f3-3e584c6b1467")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D80")
 					(unit 1)
@@ -10375,7 +10375,7 @@
 			(uuid "87567982-d60e-4ee9-8874-8e5f043396ee")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R52")
 					(unit 1)
@@ -10464,7 +10464,7 @@
 			(uuid "6aca8835-275b-4963-9a01-5d07845b27f6")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D47")
 					(unit 1)
@@ -10553,7 +10553,7 @@
 			(uuid "d3b8054d-d12b-4f2d-bc50-22658b868602")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D35")
 					(unit 1)
@@ -10631,7 +10631,7 @@
 			(uuid "49ff6999-8160-471e-83ef-29330ec4e83e")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D119")
 					(unit 1)
@@ -10668,7 +10668,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 247.65 96.52 0)
 			(effects
 				(font
@@ -10702,7 +10702,7 @@
 			(uuid "97cf8838-f8f7-49c5-9117-8b5180677539")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW31")
 					(unit 1)
@@ -10772,7 +10772,7 @@
 			(uuid "bb4af146-8071-4b2c-8607-77ae8a969f09")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R3")
 					(unit 1)
@@ -10809,7 +10809,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 241.3 85.09 0)
 			(effects
 				(font
@@ -10843,7 +10843,7 @@
 			(uuid "432df6a4-cd85-4d83-abe4-13904efbace8")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW30")
 					(unit 1)
@@ -10913,7 +10913,7 @@
 			(uuid "83671f04-53cb-4871-8c08-76b94f53ec1c")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R41")
 					(unit 1)
@@ -11002,7 +11002,7 @@
 			(uuid "6aaa99c3-d2ed-40a8-b878-5561a381267a")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D60")
 					(unit 1)
@@ -11072,7 +11072,7 @@
 			(uuid "a28dcfa8-7363-46b3-8a20-5942c857a046")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R14")
 					(unit 1)
@@ -11150,7 +11150,7 @@
 			(uuid "8f1756c2-6965-464d-9971-f0eeab73bbae")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D112")
 					(unit 1)
@@ -11228,7 +11228,7 @@
 			(uuid "3e6158f8-156f-4d1e-a636-0dcddc3340ef")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D124")
 					(unit 1)
@@ -11265,7 +11265,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 292.1 62.23 0)
 			(effects
 				(font
@@ -11299,7 +11299,7 @@
 			(uuid "d7f6e501-10e1-4fa0-aada-66cd6036b66f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW47")
 					(unit 1)
@@ -11377,7 +11377,7 @@
 			(uuid "436f5422-2891-4ceb-8c2a-1bf9237a6b47")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D110")
 					(unit 1)
@@ -11414,7 +11414,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 317.5 50.8 0)
 			(effects
 				(font
@@ -11448,7 +11448,7 @@
 			(uuid "eab0d21a-ca54-4d1a-adc5-1603532c6e67")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW57")
 					(unit 1)
@@ -11526,7 +11526,7 @@
 			(uuid "d3c66246-4a87-46d8-a3b9-35386d2280bd")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D79")
 					(unit 1)
@@ -11604,7 +11604,7 @@
 			(uuid "b410157d-6811-408a-a3ad-8db0d84bb653")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D66")
 					(unit 1)
@@ -11682,7 +11682,7 @@
 			(uuid "d50a38c4-d39b-4dbf-86c4-cb268f8419a9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D95")
 					(unit 1)
@@ -11719,7 +11719,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 304.8 50.8 0)
 			(effects
 				(font
@@ -11753,7 +11753,7 @@
 			(uuid "45da1c73-06e1-4893-a80a-ec9743c16e51")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW51")
 					(unit 1)
@@ -11842,7 +11842,7 @@
 			(uuid "2b04d70f-edba-4c25-a03a-bf7937127df7")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D62")
 					(unit 1)
@@ -11920,7 +11920,7 @@
 			(uuid "61b6d7ae-3f2f-4578-b4a6-20435b2d221c")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D87")
 					(unit 1)
@@ -11990,7 +11990,7 @@
 			(uuid "77d7fe19-6830-48a8-bb52-5bc2b7306435")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R55")
 					(unit 1)
@@ -12060,7 +12060,7 @@
 			(uuid "52341a1a-a3c3-4e64-9169-bcaacdec8417")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R7")
 					(unit 1)
@@ -12130,7 +12130,7 @@
 			(uuid "f5cbfdff-6f04-470a-9376-bcffe18cc249")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R12")
 					(unit 1)
@@ -12167,7 +12167,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 317.5 39.37 0)
 			(effects
 				(font
@@ -12201,7 +12201,7 @@
 			(uuid "2f4185af-b803-4a04-93a2-e44111ef8b00")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW56")
 					(unit 1)
@@ -12279,7 +12279,7 @@
 			(uuid "b857348f-b270-4672-9a9f-cb611b1b6b4b")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D68")
 					(unit 1)
@@ -12357,7 +12357,7 @@
 			(uuid "a58e25c0-882b-443b-abd7-b99376855862")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D84")
 					(unit 1)
@@ -12394,7 +12394,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 304.8 96.52 0)
 			(effects
 				(font
@@ -12428,7 +12428,7 @@
 			(uuid "83f8cfb5-4a20-47b3-b160-2f1074291616")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW55")
 					(unit 1)
@@ -12498,7 +12498,7 @@
 			(uuid "e39b0d0c-8eac-44ad-a077-d728efc16593")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R38")
 					(unit 1)
@@ -12535,7 +12535,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 215.9 62.23 0)
 			(effects
 				(font
@@ -12569,7 +12569,7 @@
 			(uuid "736e6bac-05ca-4307-82b9-4e52e05c9b1c")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW18")
 					(unit 1)
@@ -12658,7 +12658,7 @@
 			(uuid "fc50e61a-d153-4edc-8640-2afa5b82d68c")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D20")
 					(unit 1)
@@ -12744,7 +12744,7 @@
 			(uuid "ee28d9f0-2c1e-49fa-878f-ef5c72486d67")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D2")
 					(unit 1)
@@ -12833,7 +12833,7 @@
 			(uuid "78c1ad3b-9ada-48f1-bf08-5def3bcd7424")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D14")
 					(unit 1)
@@ -12922,7 +12922,7 @@
 			(uuid "9e308caf-d760-42d7-83ee-b57bfa9aab9b")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D55")
 					(unit 1)
@@ -13011,7 +13011,7 @@
 			(uuid "3864d6ad-c458-4358-9f61-22fd1682193b")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D41")
 					(unit 1)
@@ -13089,7 +13089,7 @@
 			(uuid "dfab6651-5595-4e8f-93e5-da41853964d1")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D89")
 					(unit 1)
@@ -13159,7 +13159,7 @@
 			(uuid "a28744ed-3e14-4831-be92-cb6d7bfb2ddd")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R19")
 					(unit 1)
@@ -13229,7 +13229,7 @@
 			(uuid "89d5f050-1891-47da-9fa1-d8d000e706d9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R47")
 					(unit 1)
@@ -13299,7 +13299,7 @@
 			(uuid "dc2693ef-40aa-4f0e-a1e2-920bbf8b4970")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R51")
 					(unit 1)
@@ -13377,7 +13377,7 @@
 			(uuid "87343f0f-6200-4dc5-afe1-da9081a9f97d")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D113")
 					(unit 1)
@@ -13414,7 +13414,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 292.1 50.8 0)
 			(effects
 				(font
@@ -13448,7 +13448,7 @@
 			(uuid "59f9ccfb-8748-4735-b4ba-86fdd81aa083")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW46")
 					(unit 1)
@@ -13518,7 +13518,7 @@
 			(uuid "70762177-4b81-445c-8ae3-d83096e8c346")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R37")
 					(unit 1)
@@ -13607,7 +13607,7 @@
 			(uuid "e9124047-b5d9-4a91-a7d9-08302eee182f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D58")
 					(unit 1)
@@ -13696,7 +13696,7 @@
 			(uuid "3aec7a3d-68d2-43df-9006-8fdb1ecd2c52")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D11")
 					(unit 1)
@@ -13766,7 +13766,7 @@
 			(uuid "ae837c8a-6d6b-4a50-9837-3f664a453a19")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R5")
 					(unit 1)
@@ -13869,7 +13869,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 228.6 62.23 0)
 			(effects
 				(font
@@ -13903,7 +13903,7 @@
 			(uuid "f3b2883a-2506-47fa-a0bc-0701960d9b8d")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW24")
 					(unit 1)
@@ -13992,7 +13992,7 @@
 			(uuid "fac81ac1-d075-4a11-9dfa-3ff4567c5f06")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D8")
 					(unit 1)
@@ -14070,7 +14070,7 @@
 			(uuid "2cb38b63-9a78-4a61-88b4-65d9dcea2654")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D98")
 					(unit 1)
@@ -14107,7 +14107,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 292.1 73.66 0)
 			(effects
 				(font
@@ -14141,7 +14141,7 @@
 			(uuid "7e6b075a-6369-4ec0-84a9-388d266f42cc")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW48")
 					(unit 1)
@@ -14219,7 +14219,7 @@
 			(uuid "35581946-efbb-41b0-866b-1a45999fb09b")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D96")
 					(unit 1)
@@ -14305,7 +14305,7 @@
 			(uuid "269b1191-c411-421b-80b3-5e3f03437d72")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D3")
 					(unit 1)
@@ -14383,7 +14383,7 @@
 			(uuid "d0586c4d-53d8-4f5e-8d05-dd94bc25f57d")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D94")
 					(unit 1)
@@ -14453,7 +14453,7 @@
 			(uuid "2969e3b5-d4c8-4a2d-a0da-48b88d78b3c3")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R39")
 					(unit 1)
@@ -14542,7 +14542,7 @@
 			(uuid "1ec37c17-65b4-44d6-93bb-8e4f293fc899")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D45")
 					(unit 1)
@@ -14612,7 +14612,7 @@
 			(uuid "f8e107df-efcf-49cc-9994-196032278cb3")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R34")
 					(unit 1)
@@ -14649,7 +14649,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 266.7 73.66 0)
 			(effects
 				(font
@@ -14683,7 +14683,7 @@
 			(uuid "689b1c1a-badb-4e8f-8437-8c10ed558bab")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW38")
 					(unit 1)
@@ -14753,7 +14753,7 @@
 			(uuid "853c703d-5a33-4cef-984a-2f1f8b383634")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R61")
 					(unit 1)
@@ -14831,7 +14831,7 @@
 			(uuid "e837988e-330e-49b5-bf49-abd4e7797233")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D69")
 					(unit 1)
@@ -14901,7 +14901,7 @@
 			(uuid "d8a83cc7-e364-4140-a155-5d134cb8937a")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R35")
 					(unit 1)
@@ -14979,7 +14979,7 @@
 			(uuid "d8c2bb1b-6dde-4ffb-a26d-54a09d0beeed")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D97")
 					(unit 1)
@@ -15233,7 +15233,7 @@
 			(uuid "35900788-a863-4d41-8e11-9e05b35a8c8d")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R48")
 					(unit 1)
@@ -15322,7 +15322,7 @@
 			(uuid "8310214c-5bf7-470d-8215-d2ef4dc814bf")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D34")
 					(unit 1)
@@ -15392,7 +15392,7 @@
 			(uuid "0e097bcc-5f68-4160-8637-5d643fe3bd7b")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R31")
 					(unit 1)
@@ -15429,7 +15429,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 215.9 73.66 0)
 			(effects
 				(font
@@ -15463,7 +15463,7 @@
 			(uuid "5203e474-b5f7-4333-942c-90c8231727f9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW19")
 					(unit 1)
@@ -15500,7 +15500,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 190.5 73.66 0)
 			(effects
 				(font
@@ -15534,7 +15534,7 @@
 			(uuid "bf401aff-a4c1-45bd-820e-498f0cb4a360")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW9")
 					(unit 1)
@@ -15604,7 +15604,7 @@
 			(uuid "d6918c5a-79ea-4c7e-89d5-8d3e9b553dda")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R18")
 					(unit 1)
@@ -15693,7 +15693,7 @@
 			(uuid "3734bd19-6ef8-4a59-8deb-e990b6711a0d")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D15")
 					(unit 1)
@@ -15782,7 +15782,7 @@
 			(uuid "51cd4b65-7ff4-4d86-bf4e-567da4792d20")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D63")
 					(unit 1)
@@ -15852,7 +15852,7 @@
 			(uuid "d5d012ca-8627-460e-bc4b-76ecc38fde1b")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R62")
 					(unit 1)
@@ -15930,7 +15930,7 @@
 			(uuid "4843c2d5-0983-408d-a124-d7baa04e833a")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D100")
 					(unit 1)
@@ -16008,7 +16008,7 @@
 			(uuid "9bc5febe-41bb-4820-8197-a1e6fac92dd6")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D75")
 					(unit 1)
@@ -16078,7 +16078,7 @@
 			(uuid "22a0164c-d484-42e8-a8ee-f81d6492a668")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R30")
 					(unit 1)
@@ -16167,7 +16167,7 @@
 			(uuid "029cee9e-7fe6-4d22-b5d0-5a6861d4ff0c")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D54")
 					(unit 1)
@@ -16237,7 +16237,7 @@
 			(uuid "602a2754-a822-47e6-8e20-df62b91db7a7")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R46")
 					(unit 1)
@@ -16307,7 +16307,7 @@
 			(uuid "37848cd2-d822-4322-954e-3b979cdda022")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R45")
 					(unit 1)
@@ -16396,7 +16396,7 @@
 			(uuid "4be1b047-8fc4-477f-a861-2c29d9a9508d")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D59")
 					(unit 1)
@@ -16485,7 +16485,7 @@
 			(uuid "15aa22da-a4c7-4235-a7b7-b8427cd7130d")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D39")
 					(unit 1)
@@ -16551,7 +16551,7 @@
 			(uuid "47d277ee-ba51-41a4-a749-4d5a42ab36f7")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "#PWR02")
 					(unit 1)
@@ -16620,7 +16620,7 @@
 			(uuid "6fbdbadf-b583-4c3e-a1e5-fdc4e655721f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R66")
 					(unit 1)
@@ -16690,7 +16690,7 @@
 			(uuid "76803996-b710-455a-af4e-ef9642a41c73")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R59")
 					(unit 1)
@@ -16779,7 +16779,7 @@
 			(uuid "9d1389f5-8868-44d7-a60f-d50f6299ffd4")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D51")
 					(unit 1)
@@ -16868,7 +16868,7 @@
 			(uuid "adce4022-259f-405c-887d-2dbf8448f0b4")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D29")
 					(unit 1)
@@ -16957,7 +16957,7 @@
 			(uuid "fbec0483-0f3a-4cfe-abdf-49e0d48edb11")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D32")
 					(unit 1)
@@ -17108,7 +17108,7 @@
 			(uuid "19843f87-2aa2-4c08-988a-8b5a561ac434")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D83")
 					(unit 1)
@@ -17145,7 +17145,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 279.4 85.09 0)
 			(effects
 				(font
@@ -17179,7 +17179,7 @@
 			(uuid "c8985cd1-ab4f-4ca8-93d0-f3e52939e042")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW44")
 					(unit 1)
@@ -17249,7 +17249,7 @@
 			(uuid "d4d596f4-fefb-484f-b220-f01d21502297")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R32")
 					(unit 1)
@@ -17319,7 +17319,7 @@
 			(uuid "26204185-70a5-46e4-98f0-70b62ca20aae")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R1")
 					(unit 1)
@@ -17356,7 +17356,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 190.5 96.52 0)
 			(effects
 				(font
@@ -17390,7 +17390,7 @@
 			(uuid "1a3cb102-a50f-4666-ae1d-aa08afc82fb3")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW11")
 					(unit 1)
@@ -17427,7 +17427,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 279.4 96.52 0)
 			(effects
 				(font
@@ -17461,7 +17461,7 @@
 			(uuid "3372b0d4-4b25-42b1-b714-899bb31446b6")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW45")
 					(unit 1)
@@ -17498,7 +17498,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 266.7 50.8 0)
 			(effects
 				(font
@@ -17532,7 +17532,7 @@
 			(uuid "12247764-3871-4ca9-a51a-3b51a4a25beb")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW36")
 					(unit 1)
@@ -17621,7 +17621,7 @@
 			(uuid "3f9afb13-826a-4455-bc82-9b4172352f44")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D49")
 					(unit 1)
@@ -17699,7 +17699,7 @@
 			(uuid "7c5f9388-fdfe-4426-bfa9-2a33a071df48")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D81")
 					(unit 1)
@@ -17788,7 +17788,7 @@
 			(uuid "38bef677-38b2-4c34-acbd-d38e8db5c423")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D18")
 					(unit 1)
@@ -17858,7 +17858,7 @@
 			(uuid "799acd3b-72a0-4295-8d7d-44495643602a")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R40")
 					(unit 1)
@@ -17998,7 +17998,7 @@
 			(uuid "9f1fdd29-6f31-4b33-bb90-3eac9e603846")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R57")
 					(unit 1)
@@ -18087,7 +18087,7 @@
 			(uuid "215bca8e-28d9-455f-89ea-bf03d49fc6c1")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D30")
 					(unit 1)
@@ -18124,7 +18124,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 241.3 50.8 0)
 			(effects
 				(font
@@ -18158,7 +18158,7 @@
 			(uuid "415e1067-b352-465f-a5b8-482d3d29782b")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW27")
 					(unit 1)
@@ -18236,7 +18236,7 @@
 			(uuid "15e68a57-2c06-40bc-ac1a-58e07420fcb2")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D121")
 					(unit 1)
@@ -18306,7 +18306,7 @@
 			(uuid "fd4b5f85-a64f-4e90-a4a4-c7184b3002fe")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R20")
 					(unit 1)
@@ -18343,7 +18343,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 215.9 96.52 0)
 			(effects
 				(font
@@ -18377,7 +18377,7 @@
 			(uuid "bb1d2e29-c54e-423d-bb15-018b0ac1b7b1")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW21")
 					(unit 1)
@@ -18466,7 +18466,7 @@
 			(uuid "268bcdc9-79df-4bcb-b5f4-da5c0e070289")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D57")
 					(unit 1)
@@ -18503,7 +18503,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 254 62.23 0)
 			(effects
 				(font
@@ -18537,7 +18537,7 @@
 			(uuid "304223be-00d3-4e1c-a04f-454ca3bb68e3")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW33")
 					(unit 1)
@@ -18574,7 +18574,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 266.7 96.52 0)
 			(effects
 				(font
@@ -18608,7 +18608,7 @@
 			(uuid "b87a1b35-30f1-459e-97bb-30e9d3a4686b")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW40")
 					(unit 1)
@@ -18644,7 +18644,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 177.8 85.09 0)
 			(effects
 				(font
@@ -18678,7 +18678,7 @@
 			(uuid "44dd42f4-8bb5-4c73-9444-9cf862720b92")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW5")
 					(unit 1)
@@ -18767,7 +18767,7 @@
 			(uuid "c63c3321-eb2c-48d0-9d6c-17c09ddb33c3")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D43")
 					(unit 1)
@@ -18804,7 +18804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 266.7 85.09 0)
 			(effects
 				(font
@@ -18838,7 +18838,7 @@
 			(uuid "c983f784-b62d-4d1f-8ae8-0ddf63d2171f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW39")
 					(unit 1)
@@ -18927,7 +18927,7 @@
 			(uuid "b9b0bd0b-84fd-4d1c-ae2b-8182a8e8669f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D46")
 					(unit 1)
@@ -19016,7 +19016,7 @@
 			(uuid "ea49fa71-cba0-43f7-9b86-d5474f59dbcd")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D38")
 					(unit 1)
@@ -19094,7 +19094,7 @@
 			(uuid "9bf5054c-6537-46ef-a1ef-93836c2ee41f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D99")
 					(unit 1)
@@ -19172,7 +19172,7 @@
 			(uuid "e590f956-3a9f-4cd9-88c8-e770480fd048")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D103")
 					(unit 1)
@@ -19209,7 +19209,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 292.1 96.52 0)
 			(effects
 				(font
@@ -19243,7 +19243,7 @@
 			(uuid "3edafb14-e647-44a3-b39d-2cb19e8cc393")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW50")
 					(unit 1)
@@ -19313,7 +19313,7 @@
 			(uuid "ba508ce5-be10-45fc-8a4a-67d3677cadbd")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R29")
 					(unit 1)
@@ -19402,7 +19402,7 @@
 			(uuid "090c11ca-aa67-4215-a247-87c22f8af708")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D52")
 					(unit 1)
@@ -19439,7 +19439,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 228.571 96.52 0)
 			(effects
 				(font
@@ -19473,7 +19473,7 @@
 			(uuid "25ac96cd-c381-419a-99a0-e84ffffd9203")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW22")
 					(unit 1)
@@ -19543,7 +19543,7 @@
 			(uuid "2cce410a-02a4-4cbb-a461-faac8d802074")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R54")
 					(unit 1)
@@ -19621,7 +19621,7 @@
 			(uuid "e93d7754-d2b9-416b-8591-962818781dfd")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D117")
 					(unit 1)
@@ -19710,7 +19710,7 @@
 			(uuid "3e7e3d6d-39a4-466a-9520-a7e180771aea")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D21")
 					(unit 1)
@@ -19788,7 +19788,7 @@
 			(uuid "431a48fc-01de-4dba-8566-9b0b90ffd093")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D93")
 					(unit 1)
@@ -19858,7 +19858,7 @@
 			(uuid "1f1796a4-f3b8-4b27-8376-03964df84b4f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R8")
 					(unit 1)
@@ -19895,7 +19895,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 266.7 62.23 0)
 			(effects
 				(font
@@ -19929,7 +19929,7 @@
 			(uuid "c2737b6b-00e0-4df8-83e5-1dfd1873451a")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW37")
 					(unit 1)
@@ -20007,7 +20007,7 @@
 			(uuid "e80cc9f8-1116-40ae-a2d1-14fa62ecf229")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D108")
 					(unit 1)
@@ -20044,7 +20044,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 203.2 85.09 0)
 			(effects
 				(font
@@ -20078,7 +20078,7 @@
 			(uuid "ad7a03fd-8482-4758-b6f0-d542d86eb622")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW16")
 					(unit 1)
@@ -20156,7 +20156,7 @@
 			(uuid "bca449dc-9aa0-4568-badf-82dca420b835")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D105")
 					(unit 1)
@@ -20245,7 +20245,7 @@
 			(uuid "ec3ded84-8b2d-42e7-a4fa-239922c3eb65")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D24")
 					(unit 1)
@@ -20282,7 +20282,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 254 85.09 0)
 			(effects
 				(font
@@ -20316,7 +20316,7 @@
 			(uuid "960c3e00-6443-45f0-9e8f-83e458bd9be1")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW35")
 					(unit 1)
@@ -20353,7 +20353,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 177.8 73.66 0)
 			(effects
 				(font
@@ -20387,7 +20387,7 @@
 			(uuid "5e71c2e4-0c32-47dd-9591-60d547af424a")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW4")
 					(unit 1)
@@ -20424,7 +20424,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 177.8 39.37 0)
 			(effects
 				(font
@@ -20458,7 +20458,7 @@
 			(uuid "5c9b9f02-a6e4-46bf-97d7-554c7e6acb3b")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW1")
 					(unit 1)
@@ -20547,7 +20547,7 @@
 			(uuid "8db8a9a2-5eb6-4f17-9af5-a7c84e38071b")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D31")
 					(unit 1)
@@ -20617,7 +20617,7 @@
 			(uuid "ab11068d-c8d5-4f8a-a5d4-62146b125cab")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R6")
 					(unit 1)
@@ -20687,7 +20687,7 @@
 			(uuid "1fa091d4-4893-4a4e-9499-c82de8e406be")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R53")
 					(unit 1)
@@ -20765,7 +20765,7 @@
 			(uuid "9f5bd3b4-a05b-4f86-9cad-6b3f03b6c79e")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D88")
 					(unit 1)
@@ -20835,7 +20835,7 @@
 			(uuid "a7ec1713-dd65-4560-a936-c16d5ffc6b78")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R9")
 					(unit 1)
@@ -20924,7 +20924,7 @@
 			(uuid "1c7e320d-618f-4064-b4cd-1b416c48ef0f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D6")
 					(unit 1)
@@ -20961,7 +20961,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 177.8 50.8 0)
 			(effects
 				(font
@@ -21073,7 +21073,7 @@
 			(uuid "ca5989cf-4a7f-47e5-aa27-810b34e814b0")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D104")
 					(unit 1)
@@ -21143,7 +21143,7 @@
 			(uuid "0b691c52-1f6f-4499-bf36-6c3c2dc51aed")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R64")
 					(unit 1)
@@ -21232,7 +21232,7 @@
 			(uuid "cbadcc94-577d-4cd0-92c4-88fa8936d819")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D23")
 					(unit 1)
@@ -21321,7 +21321,7 @@
 			(uuid "db856200-77b2-47b0-8220-148b4904704a")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D7")
 					(unit 1)
@@ -21410,7 +21410,7 @@
 			(uuid "0e7a4231-0864-4e28-9d0c-3c96518625e3")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D27")
 					(unit 1)
@@ -21447,7 +21447,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 292.1 85.09 0)
 			(effects
 				(font
@@ -21481,7 +21481,7 @@
 			(uuid "88fb594f-a424-4217-b9f7-efda7b55114e")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW49")
 					(unit 1)
@@ -21559,7 +21559,7 @@
 			(uuid "030e7431-ae4e-4ff0-822d-bc13c6f4faf9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D67")
 					(unit 1)
@@ -21648,7 +21648,7 @@
 			(uuid "d7def1ab-8bb0-41ff-9c17-0f9b9f234975")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D5")
 					(unit 1)
@@ -21726,7 +21726,7 @@
 			(uuid "30b6f20e-fa83-400d-bdf0-91c7475227f6")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D74")
 					(unit 1)
@@ -21796,7 +21796,7 @@
 			(uuid "583901f4-1415-46bd-869b-03ae63eec89f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R58")
 					(unit 1)
@@ -21885,7 +21885,7 @@
 			(uuid "9d9f6db4-b98f-423c-bca8-4f0959174873")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D56")
 					(unit 1)
@@ -21922,7 +21922,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 228.6 73.66 0)
 			(effects
 				(font
@@ -21956,7 +21956,7 @@
 			(uuid "900ddacf-b810-4a28-ae37-f18d2a06026a")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW25")
 					(unit 1)
@@ -22026,7 +22026,7 @@
 			(uuid "48e40ac6-2932-40d4-ab7d-717858103a42")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R50")
 					(unit 1)
@@ -22104,7 +22104,7 @@
 			(uuid "47f41443-1e93-4aac-9ac3-479f90b53abe")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D71")
 					(unit 1)
@@ -22174,7 +22174,7 @@
 			(uuid "66876a56-3ea1-44df-b412-86e23c9efdee")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R25")
 					(unit 1)
@@ -22263,7 +22263,7 @@
 			(uuid "dbc890ba-1407-4ab6-87c1-3ecbb27c3038")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D42")
 					(unit 1)
@@ -22352,7 +22352,7 @@
 			(uuid "4e2c2709-6edf-41dd-96ce-9f7d580e7298")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D37")
 					(unit 1)
@@ -22441,7 +22441,7 @@
 			(uuid "814b6cb3-43ed-4528-b963-b8850e957685")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D9")
 					(unit 1)
@@ -22511,7 +22511,7 @@
 			(uuid "651efc0b-c87c-430f-9da3-d594a444cf8a")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R10")
 					(unit 1)
@@ -22581,7 +22581,7 @@
 			(uuid "521993b8-a359-4151-89fd-fa0982a2b594")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R23")
 					(unit 1)
@@ -22651,7 +22651,7 @@
 			(uuid "f050a8ca-ae8b-4b2d-9959-480af25a48b0")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R22")
 					(unit 1)
@@ -22740,7 +22740,7 @@
 			(uuid "7596d3ee-1e76-43dc-aec6-db5f1ef9f7b7")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D28")
 					(unit 1)
@@ -22777,7 +22777,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 241.3 73.66 0)
 			(effects
 				(font
@@ -22811,7 +22811,7 @@
 			(uuid "af2e675c-980e-4d56-bd52-57394708883c")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW29")
 					(unit 1)
@@ -22848,7 +22848,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 254 50.8 0)
 			(effects
 				(font
@@ -22882,7 +22882,7 @@
 			(uuid "e07b24d4-ffda-42f3-a948-de32f0a91968")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW32")
 					(unit 1)
@@ -22919,7 +22919,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 190.5 62.23 0)
 			(effects
 				(font
@@ -22953,7 +22953,7 @@
 			(uuid "02f69ff9-9bcc-4007-8671-49447eb2297f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW8")
 					(unit 1)
@@ -23023,7 +23023,7 @@
 			(uuid "486ea301-2da8-4757-9b7e-d66b8df89ab6")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R36")
 					(unit 1)
@@ -23112,7 +23112,7 @@
 			(uuid "72659ba3-c257-4294-8ab7-cf1e888ae0fb")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D48")
 					(unit 1)
@@ -23182,7 +23182,7 @@
 			(uuid "a5dadaf0-8175-4e71-9719-72771afa1791")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R17")
 					(unit 1)
@@ -23252,7 +23252,7 @@
 			(uuid "1049d8e4-04ca-4f39-96d0-4b9a227b94b0")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R13")
 					(unit 1)
@@ -23322,7 +23322,7 @@
 			(uuid "41bf921e-446b-4899-bebe-e8dd29af1c97")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R60")
 					(unit 1)
@@ -23392,7 +23392,7 @@
 			(uuid "3a2a5dd4-75f8-403a-b596-d46242000bd0")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R63")
 					(unit 1)
@@ -23470,7 +23470,7 @@
 			(uuid "62f92a2b-9048-487f-aca4-332ecb7860d9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D70")
 					(unit 1)
@@ -23507,7 +23507,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 304.8 62.23 0)
 			(effects
 				(font
@@ -23541,7 +23541,7 @@
 			(uuid "ddbbb609-15de-40cb-af5e-2cfebeb7f856")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW52")
 					(unit 1)
@@ -23630,7 +23630,7 @@
 			(uuid "f0805085-0a74-41ec-b43d-d7d84303a2d9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D33")
 					(unit 1)
@@ -23708,7 +23708,7 @@
 			(uuid "834736f7-48a4-4a34-b44a-ac083ecd56bd")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D73")
 					(unit 1)
@@ -23786,7 +23786,7 @@
 			(uuid "752e4e91-87b5-4017-9b11-33213abdd8ed")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D65")
 					(unit 1)
@@ -23856,7 +23856,7 @@
 			(uuid "2b6de5e4-09be-466c-8b1f-da84e84bbf3f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R21")
 					(unit 1)
@@ -23945,7 +23945,7 @@
 			(uuid "0175e8b9-a6be-4a28-9e32-11eb38740578")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D44")
 					(unit 1)
@@ -24015,7 +24015,7 @@
 			(uuid "e81e3c7c-f36f-476e-8a1c-55887fb8f962")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R43")
 					(unit 1)
@@ -24052,7 +24052,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 317.5 62.23 0)
 			(effects
 				(font
@@ -24086,7 +24086,7 @@
 			(uuid "ec8cd6f6-a4d1-4d62-bdc3-a0bb22b52b97")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW58")
 					(unit 1)
@@ -24156,7 +24156,7 @@
 			(uuid "c3778bec-53d0-44ac-b9fc-5f6ed7d5507e")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R15")
 					(unit 1)
@@ -24234,7 +24234,7 @@
 			(uuid "af55196d-5ae0-436d-b0f0-5ff521937020")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D111")
 					(unit 1)
@@ -24323,7 +24323,7 @@
 			(uuid "9fc3eb81-f11c-44cb-beb2-486f2f9dbdc6")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D10")
 					(unit 1)
@@ -24360,7 +24360,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 203.171 96.52 0)
 			(effects
 				(font
@@ -24394,7 +24394,7 @@
 			(uuid "7cf86fd8-e6f0-46ab-94f1-3cbdf6727fb9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW12")
 					(unit 1)
@@ -24472,7 +24472,7 @@
 			(uuid "a270329f-8d20-4d6d-8b4f-32df8be2df48")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D85")
 					(unit 1)
@@ -24550,7 +24550,7 @@
 			(uuid "2fb97d8f-3994-4084-9239-dd54099cf698")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D72")
 					(unit 1)
@@ -24639,7 +24639,7 @@
 			(uuid "b9471cae-0c35-470b-bc46-23d8b1ad80cb")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D4")
 					(unit 1)
@@ -24709,7 +24709,7 @@
 			(uuid "e7fe7e47-d437-4c46-b3d0-da8274317cf1")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R26")
 					(unit 1)
@@ -24746,7 +24746,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 317.5 96.52 0)
 			(effects
 				(font
@@ -24780,7 +24780,7 @@
 			(uuid "8e56a45e-8b77-4acc-a422-9db4d7a91e9c")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW61")
 					(unit 1)
@@ -24858,7 +24858,7 @@
 			(uuid "cdda4275-ee5c-4394-8dc6-1aba7d4a6d58")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D82")
 					(unit 1)
@@ -24936,7 +24936,7 @@
 			(uuid "8116a731-15a5-4a91-8e9d-533a059a2c5e")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D109")
 					(unit 1)
@@ -25006,7 +25006,7 @@
 			(uuid "c3e571d4-a883-4e24-8818-273a6fdfb8ed")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R44")
 					(unit 1)
@@ -25076,7 +25076,7 @@
 			(uuid "475fbbd4-3eaa-4461-836c-718088713458")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R49")
 					(unit 1)
@@ -25112,7 +25112,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 190.5 50.8 0)
 			(effects
 				(font
@@ -25146,7 +25146,7 @@
 			(uuid "e1cf9b1d-6ac3-4e81-8a01-97a59c511d47")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW7")
 					(unit 1)
@@ -25235,7 +25235,7 @@
 			(uuid "808fd63c-3c28-4bcf-ade1-d28e1acfd5d9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D61")
 					(unit 1)
@@ -25313,7 +25313,7 @@
 			(uuid "3baef4a2-cd0d-4fd2-83ae-6c538842d4d3")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D86")
 					(unit 1)
@@ -25391,7 +25391,7 @@
 			(uuid "3ad7434b-5418-406c-b223-8a7dd52d2f1b")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D101")
 					(unit 1)
@@ -25428,7 +25428,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 317.5 73.66 0)
 			(effects
 				(font
@@ -25462,7 +25462,7 @@
 			(uuid "3d9259a9-dc45-4fba-be15-9ae28fa0657f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW59")
 					(unit 1)
@@ -25499,7 +25499,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 203.2 73.66 0)
 			(effects
 				(font
@@ -25533,7 +25533,7 @@
 			(uuid "3249112a-c1da-46a3-b0ca-4e6f36c8b852")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW15")
 					(unit 1)
@@ -25570,7 +25570,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 190.5 85.09 0)
 			(effects
 				(font
@@ -25604,7 +25604,7 @@
 			(uuid "858de384-e35d-4b60-8fff-2575c50f46c2")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW10")
 					(unit 1)
@@ -25674,7 +25674,7 @@
 			(uuid "55d0ebfc-bc58-416e-be91-a2f06cda7dbf")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R42")
 					(unit 1)
@@ -25744,7 +25744,7 @@
 			(uuid "cf13e186-801e-4c40-aea7-5f4bb82badf9")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R33")
 					(unit 1)
@@ -25814,7 +25814,7 @@
 			(uuid "547a9b9f-abf8-4c03-b0c6-cb679644565e")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "R56")
 					(unit 1)
@@ -25903,7 +25903,7 @@
 			(uuid "f64b7dc2-e094-41bd-b9ef-7be7d4a65c9f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D17")
 					(unit 1)
@@ -25992,7 +25992,7 @@
 			(uuid "1dc1ea0b-1cc8-4c23-89c7-df759a427e6f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D36")
 					(unit 1)
@@ -26081,7 +26081,7 @@
 			(uuid "52155cfa-b7e1-4fc3-9d58-364ef6eb861f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D12")
 					(unit 1)
@@ -26118,7 +26118,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 177.8 62.23 0)
 			(effects
 				(font
@@ -26152,7 +26152,7 @@
 			(uuid "c90e6265-a038-4aae-b176-a2abcbfec7e3")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW3")
 					(unit 1)
@@ -26189,7 +26189,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 177.8 96.52 0)
 			(effects
 				(font
@@ -26223,7 +26223,7 @@
 			(uuid "4381a231-05ab-4301-ab9f-ca01652f1931")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW6")
 					(unit 1)
@@ -26312,7 +26312,7 @@
 			(uuid "dee8cd8b-b4c6-4ffb-a8eb-8b769e182496")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D25")
 					(unit 1)
@@ -26390,7 +26390,7 @@
 			(uuid "add39a34-f75f-4d97-8b4b-59ae90e5395f")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D91")
 					(unit 1)
@@ -26468,7 +26468,7 @@
 			(uuid "dd5406c0-f7e9-4e63-9f46-0e88e1ca152a")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D125")
 					(unit 1)
@@ -26505,7 +26505,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 317.5 85.09 0)
 			(effects
 				(font
@@ -26539,7 +26539,7 @@
 			(uuid "8ad26c55-8895-45b4-8d62-c60fca2a5fbc")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW60")
 					(unit 1)
@@ -26617,7 +26617,7 @@
 			(uuid "953921b7-12f3-4f68-bce3-4f8c847d1903")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D78")
 					(unit 1)
@@ -26695,7 +26695,7 @@
 			(uuid "48533d91-4355-4447-a3e5-e482bf472376")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D118")
 					(unit 1)
@@ -26732,7 +26732,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 304.8 73.66 0)
 			(effects
 				(font
@@ -26766,7 +26766,7 @@
 			(uuid "6474448c-bb06-42dc-80e0-6eec392a49aa")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW53")
 					(unit 1)
@@ -26855,7 +26855,7 @@
 			(uuid "a553f5c5-a4fc-4699-8566-1dc65626d4b7")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D40")
 					(unit 1)
@@ -26944,7 +26944,7 @@
 			(uuid "daf88387-af2f-479a-bbaf-b44eb05463ac")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D16")
 					(unit 1)
@@ -26981,7 +26981,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krtkus_lib:KS-33 3.0"
+		(property "Footprint" "Krteq_lib:KS-33 3.0"
 			(at 279.4 73.66 0)
 			(effects
 				(font
@@ -27015,7 +27015,7 @@
 			(uuid "6e5f3a72-9de6-4659-828a-d80530da4da2")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW43")
 					(unit 1)
@@ -27093,7 +27093,7 @@
 			(uuid "865d3e58-b9aa-4adc-812c-d07eab998478")
 		)
 		(instances
-			(project "Krtkus2"
+			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D106")
 					(unit 1)

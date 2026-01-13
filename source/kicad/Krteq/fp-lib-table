@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Krteq_lib")(type "KiCad")(uri "${KIPRJMOD}/../libraries/Krteq_lib.pretty")(options "")(descr ""))
+)

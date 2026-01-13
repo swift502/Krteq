@@ -1,4 +1,0 @@
-(fp_lib_table
-  (version 7)
-  (lib (name "Krtkus_lib")(type "KiCad")(uri "${KIPRJMOD}/../libraries/Krtkus_lib.pretty")(options "")(descr ""))
-)
