@@ -8897,7 +8897,7 @@
 				)
 			)
 		)
-		(property "Value" "160"
+		(property "Value" "VARTHT"
 			(at 68.58 200.66 90)
 			(do_not_autoplace yes)
 			(effects
@@ -8906,7 +8906,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 68.58 198.882 90)
 			(effects
 				(font
@@ -10729,7 +10729,7 @@
 				)
 			)
 		)
-		(property "Value" "160"
+		(property "Value" "VARTHT"
 			(at 68.58 209.55 90)
 			(do_not_autoplace yes)
 			(effects
@@ -10738,7 +10738,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 68.58 207.772 90)
 			(effects
 				(font
@@ -17276,7 +17276,7 @@
 				)
 			)
 		)
-		(property "Value" "160"
+		(property "Value" "VARTHT"
 			(at 68.58 191.77 90)
 			(do_not_autoplace yes)
 			(effects
@@ -17285,7 +17285,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 68.58 189.992 90)
 			(effects
 				(font
