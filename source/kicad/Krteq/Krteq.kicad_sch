@@ -7959,7 +7959,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 228.6 85.09 0)
 			(effects
 				(font
@@ -8364,7 +8364,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 215.9 50.8 0)
 			(effects
 				(font
@@ -8836,7 +8836,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 279.4 50.8 0)
 			(effects
 				(font
@@ -8977,7 +8977,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 203.2 50.8 0)
 			(effects
 				(font
@@ -9126,7 +9126,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 304.8 85.09 0)
 			(effects
 				(font
@@ -9520,7 +9520,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 215.9 85.09 0)
 			(effects
 				(font
@@ -9591,7 +9591,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 203.2 62.23 0)
 			(effects
 				(font
@@ -9662,7 +9662,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 228.6 50.8 0)
 			(effects
 				(font
@@ -9892,7 +9892,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 279.4 62.23 0)
 			(effects
 				(font
@@ -9963,7 +9963,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 254 73.66 0)
 			(effects
 				(font
@@ -10034,7 +10034,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 241.3 62.23 0)
 			(effects
 				(font
@@ -10668,7 +10668,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 2u"
 			(at 247.65 96.52 0)
 			(effects
 				(font
@@ -10809,7 +10809,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 241.3 85.09 0)
 			(effects
 				(font
@@ -11265,7 +11265,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 292.1 62.23 0)
 			(effects
 				(font
@@ -11414,7 +11414,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 317.5 50.8 0)
 			(effects
 				(font
@@ -11719,7 +11719,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 304.8 50.8 0)
 			(effects
 				(font
@@ -12167,7 +12167,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 317.5 39.37 0)
 			(effects
 				(font
@@ -12394,7 +12394,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 304.8 96.52 0)
 			(effects
 				(font
@@ -12535,7 +12535,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 215.9 62.23 0)
 			(effects
 				(font
@@ -13414,7 +13414,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 292.1 50.8 0)
 			(effects
 				(font
@@ -13869,7 +13869,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 228.6 62.23 0)
 			(effects
 				(font
@@ -14107,7 +14107,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 292.1 73.66 0)
 			(effects
 				(font
@@ -14649,7 +14649,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 266.7 73.66 0)
 			(effects
 				(font
@@ -15429,7 +15429,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 215.9 73.66 0)
 			(effects
 				(font
@@ -15500,7 +15500,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 190.5 73.66 0)
 			(effects
 				(font
@@ -17145,7 +17145,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 279.4 85.09 0)
 			(effects
 				(font
@@ -17356,7 +17356,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 190.5 96.52 0)
 			(effects
 				(font
@@ -17427,7 +17427,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 279.4 96.52 0)
 			(effects
 				(font
@@ -17498,7 +17498,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 266.7 50.8 0)
 			(effects
 				(font
@@ -18124,7 +18124,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 241.3 50.8 0)
 			(effects
 				(font
@@ -18343,7 +18343,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 215.9 96.52 0)
 			(effects
 				(font
@@ -18503,7 +18503,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 254 62.23 0)
 			(effects
 				(font
@@ -18574,7 +18574,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 266.7 96.52 0)
 			(effects
 				(font
@@ -18644,7 +18644,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 177.8 85.09 0)
 			(effects
 				(font
@@ -18804,7 +18804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 266.7 85.09 0)
 			(effects
 				(font
@@ -19209,7 +19209,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 292.1 96.52 0)
 			(effects
 				(font
@@ -19439,7 +19439,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 228.571 96.52 0)
 			(effects
 				(font
@@ -19895,7 +19895,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 266.7 62.23 0)
 			(effects
 				(font
@@ -20044,7 +20044,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 203.2 85.09 0)
 			(effects
 				(font
@@ -20282,7 +20282,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 254 85.09 0)
 			(effects
 				(font
@@ -20353,7 +20353,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 177.8 73.66 0)
 			(effects
 				(font
@@ -20424,7 +20424,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 177.8 39.37 0)
 			(effects
 				(font
@@ -20961,7 +20961,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 177.8 50.8 0)
 			(effects
 				(font
@@ -21447,7 +21447,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 292.1 85.09 0)
 			(effects
 				(font
@@ -21922,7 +21922,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 228.6 73.66 0)
 			(effects
 				(font
@@ -22777,7 +22777,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 241.3 73.66 0)
 			(effects
 				(font
@@ -22848,7 +22848,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 254 50.8 0)
 			(effects
 				(font
@@ -22919,7 +22919,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 190.5 62.23 0)
 			(effects
 				(font
@@ -23507,7 +23507,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 304.8 62.23 0)
 			(effects
 				(font
@@ -24052,7 +24052,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 317.5 62.23 0)
 			(effects
 				(font
@@ -24360,7 +24360,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 203.171 96.52 0)
 			(effects
 				(font
@@ -24746,7 +24746,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 317.5 96.52 0)
 			(effects
 				(font
@@ -25112,7 +25112,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 190.5 50.8 0)
 			(effects
 				(font
@@ -25428,7 +25428,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 317.5 73.66 0)
 			(effects
 				(font
@@ -25499,7 +25499,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 203.2 73.66 0)
 			(effects
 				(font
@@ -25570,7 +25570,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 190.5 85.09 0)
 			(effects
 				(font
@@ -26118,7 +26118,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 177.8 62.23 0)
 			(effects
 				(font
@@ -26189,7 +26189,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 177.8 96.52 0)
 			(effects
 				(font
@@ -26505,7 +26505,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 317.5 85.09 0)
 			(effects
 				(font
@@ -26732,7 +26732,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 304.8 73.66 0)
 			(effects
 				(font
@@ -26981,7 +26981,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Krteq_lib:KS-33 3.0"
+		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
 			(at 279.4 73.66 0)
 			(effects
 				(font

@@ -1,4 +1,4 @@
-26706762098203886
+26708530602690117
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -68487,10 +68487,17 @@ solder jumper open
 0
 3
 3
-Krteq_lib
-KS-33 3.0
-Cherry MX keyswitch, 1.00u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
-Cherry MX keyswitch 1.00u PCB
+Krteq
+KS-33B Hotswap 1u
+KS-33B (GLP 3.0) switch, hotswap socket
+
+0
+2
+2
+Krteq
+KS-33B Hotswap 2u
+KS-33B (GLP 3.0) switch, hotswap socket and a 2u stabilizer
+
 0
 2
 2
