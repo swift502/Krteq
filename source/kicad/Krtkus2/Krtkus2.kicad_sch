@@ -7860,7 +7860,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 289.56 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -7959,7 +7959,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 228.6 85.09 0)
 			(effects
 				(font
@@ -8176,7 +8176,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 289.56 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8265,7 +8265,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 200.66 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8364,7 +8364,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 215.9 50.8 0)
 			(effects
 				(font
@@ -8659,7 +8659,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 213.36 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8836,7 +8836,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 279.4 50.8 0)
 			(effects
 				(font
@@ -8897,7 +8897,7 @@
 				)
 			)
 		)
-		(property "Value" "VARTHT"
+		(property "Value" "THT R"
 			(at 68.58 200.66 90)
 			(do_not_autoplace yes)
 			(effects
@@ -8977,7 +8977,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 203.2 50.8 0)
 			(effects
 				(font
@@ -9126,7 +9126,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 304.8 85.09 0)
 			(effects
 				(font
@@ -9265,7 +9265,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 187.96 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9520,7 +9520,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 215.9 85.09 0)
 			(effects
 				(font
@@ -9591,7 +9591,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 203.2 62.23 0)
 			(effects
 				(font
@@ -9662,7 +9662,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 228.6 50.8 0)
 			(effects
 				(font
@@ -9793,7 +9793,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 226.06 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9892,7 +9892,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 279.4 62.23 0)
 			(effects
 				(font
@@ -9963,7 +9963,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 254 73.66 0)
 			(effects
 				(font
@@ -10034,7 +10034,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 241.3 62.23 0)
 			(effects
 				(font
@@ -10165,7 +10165,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 314.96 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10402,7 +10402,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 276.86 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10491,7 +10491,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 251.46 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10668,7 +10668,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 247.65 96.52 0)
 			(effects
 				(font
@@ -10729,7 +10729,7 @@
 				)
 			)
 		)
-		(property "Value" "VARTHT"
+		(property "Value" "THT R"
 			(at 68.58 209.55 90)
 			(do_not_autoplace yes)
 			(effects
@@ -10809,7 +10809,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 241.3 85.09 0)
 			(effects
 				(font
@@ -10940,7 +10940,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 314.96 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -11265,7 +11265,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 292.1 62.23 0)
 			(effects
 				(font
@@ -11414,7 +11414,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 317.5 50.8 0)
 			(effects
 				(font
@@ -11719,7 +11719,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 304.8 50.8 0)
 			(effects
 				(font
@@ -11780,7 +11780,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 314.96 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12167,7 +12167,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 317.5 39.37 0)
 			(effects
 				(font
@@ -12394,7 +12394,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 304.8 96.52 0)
 			(effects
 				(font
@@ -12535,7 +12535,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 215.9 62.23 0)
 			(effects
 				(font
@@ -12596,7 +12596,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 213.36 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12771,7 +12771,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 187.96 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12860,7 +12860,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 302.26 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12949,7 +12949,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 264.16 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13414,7 +13414,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 292.1 50.8 0)
 			(effects
 				(font
@@ -13545,7 +13545,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 302.26 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13634,7 +13634,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 187.96 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13869,7 +13869,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 228.6 62.23 0)
 			(effects
 				(font
@@ -13930,7 +13930,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 175.26 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -14107,7 +14107,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 292.1 73.66 0)
 			(effects
 				(font
@@ -14480,7 +14480,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 276.86 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -14649,7 +14649,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 266.7 73.66 0)
 			(effects
 				(font
@@ -15260,7 +15260,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 245.11 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -15429,7 +15429,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 215.9 73.66 0)
 			(effects
 				(font
@@ -15500,7 +15500,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 190.5 73.66 0)
 			(effects
 				(font
@@ -15631,7 +15631,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 200.66 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -15720,7 +15720,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 314.96 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16105,7 +16105,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 302.26 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16334,7 +16334,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 314.96 48.26 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16423,7 +16423,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 264.16 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16717,7 +16717,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 289.56 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16806,7 +16806,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 226.06 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16895,7 +16895,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 238.76 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17145,7 +17145,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 279.4 85.09 0)
 			(effects
 				(font
@@ -17276,7 +17276,7 @@
 				)
 			)
 		)
-		(property "Value" "VARTHT"
+		(property "Value" "THT R"
 			(at 68.58 191.77 90)
 			(do_not_autoplace yes)
 			(effects
@@ -17356,7 +17356,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 190.5 96.52 0)
 			(effects
 				(font
@@ -17427,7 +17427,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 279.4 96.52 0)
 			(effects
 				(font
@@ -17498,7 +17498,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 266.7 50.8 0)
 			(effects
 				(font
@@ -17559,7 +17559,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 289.56 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17726,7 +17726,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 200.66 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18025,7 +18025,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 238.76 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18124,7 +18124,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 241.3 50.8 0)
 			(effects
 				(font
@@ -18343,7 +18343,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 215.9 96.52 0)
 			(effects
 				(font
@@ -18404,7 +18404,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 302.26 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18503,7 +18503,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 254 62.23 0)
 			(effects
 				(font
@@ -18574,7 +18574,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 266.7 96.52 0)
 			(effects
 				(font
@@ -18644,7 +18644,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 177.8 85.09 0)
 			(effects
 				(font
@@ -18705,7 +18705,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 264.16 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18804,7 +18804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 266.7 85.09 0)
 			(effects
 				(font
@@ -18865,7 +18865,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 276.86 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18954,7 +18954,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 251.46 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19209,7 +19209,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 292.1 96.52 0)
 			(effects
 				(font
@@ -19340,7 +19340,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 289.56 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19439,7 +19439,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 228.571 96.52 0)
 			(effects
 				(font
@@ -19648,7 +19648,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 213.36 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19895,7 +19895,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 266.7 62.23 0)
 			(effects
 				(font
@@ -20183,7 +20183,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 213.36 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20282,7 +20282,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 254 85.09 0)
 			(effects
 				(font
@@ -20353,7 +20353,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 177.8 73.66 0)
 			(effects
 				(font
@@ -20424,7 +20424,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 177.8 39.37 0)
 			(effects
 				(font
@@ -20485,7 +20485,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 238.76 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20862,7 +20862,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 175.26 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20961,7 +20961,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 177.8 50.8 0)
 			(effects
 				(font
@@ -21170,7 +21170,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 213.36 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21259,7 +21259,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 175.26 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21348,7 +21348,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 226.06 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21447,7 +21447,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 292.1 85.09 0)
 			(effects
 				(font
@@ -21586,7 +21586,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 175.26 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21823,7 +21823,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 302.26 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21922,7 +21922,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 228.6 73.66 0)
 			(effects
 				(font
@@ -22201,7 +22201,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 264.16 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22290,7 +22290,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 251.46 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22379,7 +22379,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 175.26 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22678,7 +22678,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 226.06 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22777,7 +22777,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 241.3 73.66 0)
 			(effects
 				(font
@@ -22848,7 +22848,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 254 50.8 0)
 			(effects
 				(font
@@ -22919,7 +22919,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 190.5 62.23 0)
 			(effects
 				(font
@@ -23050,7 +23050,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 276.86 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23507,7 +23507,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 304.8 62.23 0)
 			(effects
 				(font
@@ -23568,7 +23568,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 238.76 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23883,7 +23883,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 276.86 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24052,7 +24052,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 317.5 62.23 0)
 			(effects
 				(font
@@ -24261,7 +24261,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 187.96 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24360,7 +24360,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 203.171 96.52 0)
 			(effects
 				(font
@@ -24577,7 +24577,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 175.26 48.26 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24746,7 +24746,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 317.5 96.52 0)
 			(effects
 				(font
@@ -25112,7 +25112,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 190.5 50.8 0)
 			(effects
 				(font
@@ -25173,7 +25173,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 314.96 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25428,7 +25428,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 317.5 73.66 0)
 			(effects
 				(font
@@ -25499,7 +25499,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 203.2 73.66 0)
 			(effects
 				(font
@@ -25570,7 +25570,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 190.5 85.09 0)
 			(effects
 				(font
@@ -25841,7 +25841,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 200.66 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25930,7 +25930,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 251.46 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26019,7 +26019,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 187.96 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26118,7 +26118,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 177.8 62.23 0)
 			(effects
 				(font
@@ -26189,7 +26189,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 177.8 96.52 0)
 			(effects
 				(font
@@ -26250,7 +26250,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 226.06 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26505,7 +26505,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 317.5 85.09 0)
 			(effects
 				(font
@@ -26732,7 +26732,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 304.8 73.66 0)
 			(effects
 				(font
@@ -26793,7 +26793,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 264.16 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26882,7 +26882,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "D"
 			(at 200.66 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26981,7 +26981,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krtkus_lib:KS-33 3.0"
 			(at 279.4 73.66 0)
 			(effects
 				(font
