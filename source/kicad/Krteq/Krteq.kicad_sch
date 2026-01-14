@@ -8897,7 +8897,7 @@
 				)
 			)
 		)
-		(property "Value" "THT R"
+		(property "Value" "R"
 			(at 68.58 200.66 90)
 			(do_not_autoplace yes)
 			(effects
@@ -10729,7 +10729,7 @@
 				)
 			)
 		)
-		(property "Value" "THT R"
+		(property "Value" "R"
 			(at 68.58 209.55 90)
 			(do_not_autoplace yes)
 			(effects
@@ -17276,7 +17276,7 @@
 				)
 			)
 		)
-		(property "Value" "THT R"
+		(property "Value" "R"
 			(at 68.58 191.77 90)
 			(do_not_autoplace yes)
 			(effects
