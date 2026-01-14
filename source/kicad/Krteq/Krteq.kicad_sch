@@ -3997,16 +3997,6 @@
 	)
 	(wire
 		(pts
-			(xy 233.651 100.33) (xy 233.651 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "33555474-bba4-42e9-bb70-95764305616d")
-	)
-	(wire
-		(pts
 			(xy 259.08 78.74) (xy 259.08 90.17)
 		)
 		(stroke
@@ -4064,16 +4054,6 @@
 			(type default)
 		)
 		(uuid "370164f3-7fba-4007-8a13-0e0f68cdb464")
-	)
-	(wire
-		(pts
-			(xy 223.491 101.6) (xy 223.52 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "38d20b1f-8f62-49ed-b361-e72bb03bc853")
 	)
 	(wire
 		(pts
@@ -4484,6 +4464,16 @@
 			(type default)
 		)
 		(uuid "6615d8d4-3d20-432d-b930-269981d80808")
+	)
+	(wire
+		(pts
+			(xy 233.68 90.17) (xy 233.68 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66f22f14-bd42-44ad-bb92-28c31e6c0e9f")
 	)
 	(wire
 		(pts
@@ -5867,16 +5857,6 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 100.33) (xy 233.68 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f139d35a-fc20-4875-b6e0-901d267ad06c")
-	)
-	(wire
-		(pts
 			(xy 222.25 205.74) (xy 228.6 205.74)
 		)
 		(stroke
@@ -5974,16 +5954,6 @@
 			(type default)
 		)
 		(uuid "f66ec4f8-e9e6-44d6-8a4d-cf8f40a5a8a6")
-	)
-	(wire
-		(pts
-			(xy 233.651 100.33) (xy 233.68 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f6bcbe2d-8d21-455e-8b73-fc4fce1982e5")
 	)
 	(wire
 		(pts
@@ -7938,7 +7908,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0ad9da19-ccd8-49f3-9ead-b4810c57f30b")
-		(property "Reference" "SW26"
+		(property "Reference" "SW25"
 			(at 228.6 92.202 0)
 			(do_not_autoplace yes)
 			(effects
@@ -7993,7 +7963,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "SW26")
+					(reference "SW25")
 					(unit 1)
 				)
 			)
@@ -8956,7 +8926,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "179f2595-7dbe-4420-aba6-3365fd583a9d")
-		(property "Reference" "SW13"
+		(property "Reference" "SW12"
 			(at 203.2 57.912 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9011,7 +8981,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "SW13")
+					(reference "SW12")
 					(unit 1)
 				)
 			)
@@ -9570,7 +9540,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19ce64a7-160e-4b31-aa4d-75ffd8947e73")
-		(property "Reference" "SW14"
+		(property "Reference" "SW13"
 			(at 203.2 69.342 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9625,7 +9595,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "SW14")
+					(reference "SW13")
 					(unit 1)
 				)
 			)
@@ -9641,7 +9611,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "19f2cc58-b1cb-44ec-bb38-59af0e5f2eda")
-		(property "Reference" "SW23"
+		(property "Reference" "SW22"
 			(at 228.6 57.912 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9696,7 +9666,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "SW23")
+					(reference "SW22")
 					(unit 1)
 				)
 			)
@@ -13848,7 +13818,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54894214-554f-496c-a5f8-7a42bcf7f1fc")
-		(property "Reference" "SW24"
+		(property "Reference" "SW23"
 			(at 228.6 69.342 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13903,7 +13873,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "SW24")
+					(reference "SW23")
 					(unit 1)
 				)
 			)
@@ -19337,7 +19307,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 228.571 101.6 0)
+		(at 228.6 101.6 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19345,8 +19315,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9e87255c-de1e-4625-9f4c-2565304ca36c")
-		(property "Reference" "SW22"
-			(at 228.571 103.632 0)
+		(property "Reference" "SW26"
+			(at 228.6 103.632 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -19355,7 +19325,7 @@
 			)
 		)
 		(property "Value" "Switch"
-			(at 228.571 103.124 0)
+			(at 228.6 103.124 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -19365,7 +19335,7 @@
 			)
 		)
 		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
-			(at 228.571 96.52 0)
+			(at 228.6 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19374,7 +19344,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 228.571 96.52 0)
+			(at 228.6 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19383,7 +19353,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 228.571 101.6 0)
+			(at 228.6 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19400,7 +19370,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "SW22")
+					(reference "SW26")
 					(unit 1)
 				)
 			)
@@ -19950,7 +19920,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a55f8f16-70ef-4ebc-9b4f-d08be663152a")
-		(property "Reference" "SW16"
+		(property "Reference" "SW15"
 			(at 203.2 92.202 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20005,7 +19975,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "SW16")
+					(reference "SW15")
 					(unit 1)
 				)
 			)
@@ -21828,7 +21798,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c1fde9ff-fa63-4000-9563-f69bede447ee")
-		(property "Reference" "SW25"
+		(property "Reference" "SW24"
 			(at 228.6 80.772 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21883,7 +21853,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "SW25")
+					(reference "SW24")
 					(unit 1)
 				)
 			)
@@ -24258,7 +24228,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_Push")
-		(at 203.171 101.6 0)
+		(at 203.2 101.6 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -24266,8 +24236,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e20799c1-1838-4d68-bcf7-f4af2e90939b")
-		(property "Reference" "SW12"
-			(at 203.171 103.632 0)
+		(property "Reference" "SW16"
+			(at 203.2 103.632 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -24276,7 +24246,7 @@
 			)
 		)
 		(property "Value" "Switch"
-			(at 203.171 103.124 0)
+			(at 203.2 103.124 0)
 			(do_not_autoplace yes)
 			(effects
 				(font
@@ -24286,7 +24256,7 @@
 			)
 		)
 		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
-			(at 203.171 96.52 0)
+			(at 203.2 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24295,7 +24265,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 203.171 96.52 0)
+			(at 203.2 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24304,7 +24274,7 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
-			(at 203.171 101.6 0)
+			(at 203.2 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -24321,7 +24291,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "SW12")
+					(reference "SW16")
 					(unit 1)
 				)
 			)
@@ -25478,7 +25448,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f108d448-7651-4cc0-9d97-f8d724bac4ff")
-		(property "Reference" "SW15"
+		(property "Reference" "SW14"
 			(at 203.2 80.772 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25533,7 +25503,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "SW15")
+					(reference "SW14")
 					(unit 1)
 				)
 			)

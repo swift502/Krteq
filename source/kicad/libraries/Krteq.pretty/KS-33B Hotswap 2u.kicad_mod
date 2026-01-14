@@ -175,8 +175,8 @@
 		(uuid "da238bf5-09de-4e27-9942-1037770848fa")
 	)
 	(fp_rect
-		(start -7.1 -7.1)
-		(end 7.1 7.1)
+		(start -8.7 -2.6)
+		(end 7.4 6.7)
 		(stroke
 			(width 0.05)
 			(type default)
