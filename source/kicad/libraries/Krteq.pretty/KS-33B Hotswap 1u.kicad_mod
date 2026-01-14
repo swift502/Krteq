@@ -94,6 +94,17 @@
 		(layer "Dwgs.User")
 		(uuid "17a37dc2-1fc7-4198-bc2d-40147f9021f4")
 	)
+	(fp_rect
+		(start -7.1 -7.1)
+		(end 7.1 7.1)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "da319e33-c049-4291-a98d-8159f7bc4e14")
+	)
 	(fp_line
 		(start -7 -7)
 		(end -7 7)

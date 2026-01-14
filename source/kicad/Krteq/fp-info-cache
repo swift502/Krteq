@@ -1,4 +1,4 @@
-26708530612573497
+26710299189426281
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -68498,6 +68498,13 @@ Krteq
 KS-33B Hotswap 2u
 KS-33B (GLP 3.0) switch, hotswap socket and a 2u stabilizer
 
+0
+2
+2
+Krteq
+MHT151WDT
+LED SMD 1206 (3216 Metric), reverse mount, square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
+diode reverse
 0
 2
 2

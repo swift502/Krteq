@@ -1,0 +1,226 @@
+(footprint "MHT151WDT"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "LED SMD 1206 (3216 Metric), reverse mount, square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
+	(tags "diode reverse")
+	(property "Reference" "REF**"
+		(at 0 -2.145 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "f4eff010-21e2-4756-9d75-4fd5503bae14")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "MHT151WDT"
+		(at 0 2.145 0)
+		(layer "F.Fab")
+		(uuid "a5e73364-ee21-45f7-97eb-ad17053f33e3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "26b623fe-88d8-4eb9-83c0-02889f34db55")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1255219a-b3c9-4ca9-81ca-6897ea3baefa")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -2.28 -1.46)
+		(end 2.28 -1.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "45870aec-64f5-48fb-a636-0c1d9878ae9f")
+	)
+	(fp_line
+		(start -2.28 1.46)
+		(end -2.28 -1.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "eda0687d-5404-40df-ab82-b9b860c88af4")
+	)
+	(fp_line
+		(start 2.28 -1.46)
+		(end 2.28 1.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "5b80d562-dcd6-4da2-b814-206e88ac636d")
+	)
+	(fp_line
+		(start 2.28 1.46)
+		(end -2.28 1.46)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "29d29108-26f7-44f2-a666-cef72ad8cb30")
+	)
+	(fp_line
+		(start -2.2 -0.7)
+		(end -2.2 1.1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "c5a9fa09-f76c-4fe9-afc7-112235be9cd1")
+	)
+	(fp_line
+		(start -2.2 1.1)
+		(end 2.2 1.1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "3d75d38e-78c5-45bc-be40-d932f4a452fa")
+	)
+	(fp_line
+		(start -1.8 -1.1)
+		(end -2.2 -0.7)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "e9cb988b-d242-4b44-bf49-3fd01bd6486d")
+	)
+	(fp_line
+		(start 2.2 -1.1)
+		(end -1.8 -1.1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "a16ccb81-7ff9-4936-b87b-40fa3063c728")
+	)
+	(fp_line
+		(start 2.2 1.1)
+		(end 2.2 -1.1)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "9a5f8d6e-ba4f-4f70-9481-9706f1dacd04")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -2.3 0)
+		(layer "F.Fab")
+		(uuid "98cd26b5-0c93-48a1-8276-dc10fcb4e784")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at 0 0)
+		(size 2.1 2.1)
+		(drill 2.1)
+		(layers "*.Cu" "*.Mask")
+		(uuid "6f5018ba-081c-4ae8-bf8b-dcb5d05cdd66")
+	)
+	(pad "1" smd custom
+		(at -1.75 0)
+		(size 0.7 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(options
+			(clearance outline)
+			(anchor rect)
+		)
+		(primitives
+			(gr_poly
+				(pts
+					(xy -0.448685 -0.650001) (xy -0.448685 0.649999)
+					(arc
+						(start 0.681317 0.649999)
+						(mid 0.499357 -0.000001)
+						(end 0.681318 -0.650001)
+					)
+				)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "ab9886e5-7116-44b6-ae34-3ec4d72ec5e4")
+	)
+	(pad "2" smd custom
+		(at 1.75 0)
+		(size 0.7 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(options
+			(clearance outline)
+			(anchor rect)
+		)
+		(primitives
+			(gr_poly
+				(pts
+					(xy 0.448472 0.65) (xy 0.448472 -0.65)
+					(arc
+						(start -0.68153 -0.65)
+						(mid -0.49957 0)
+						(end -0.681531 0.65)
+					)
+				)
+				(width 0)
+				(fill yes)
+			)
+		)
+		(uuid "046ac8a4-1147-4fe3-b440-3dfecb3d6589")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_1206_3216Metric_ReverseMount.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

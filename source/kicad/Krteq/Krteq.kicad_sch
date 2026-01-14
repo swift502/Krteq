@@ -356,295 +356,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Q_NMOS"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Q_NMOS"
-				(at 5.08 -1.27 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "N-MOSFET transistor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "NMOS N-MOS"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Q_NMOS_0_1"
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.921 0.381) (xy 3.683 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Q_NMOS_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1937,6 +1648,293 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Transistor_FET:Q_NMOS_GSD"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Q_NMOS_GSD"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "N-MOSFET transistor, gate/source/drain"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "transistor NMOS N-MOS N-MOSFET"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Q_NMOS_GSD_0_1"
+				(polyline
+					(pts
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 0) (xy -2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 1.651 0)
+					(radius 2.794)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.921 0.381) (xy 3.683 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Q_NMOS_GSD_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "G"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "D"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -2196,6 +2194,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "076f06e5-3cba-41b9-ad04-f55421e6ed0d")
+	)
+	(junction
+		(at 260.35 219.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "07e4b5a9-0b7e-46bf-92e6-b18317721932")
 	)
 	(junction
 		(at 190.5 172.72)
@@ -2538,12 +2542,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3b8953b3-36d5-415e-89d8-7a8043ae755f")
-	)
-	(junction
-		(at 260.35 219.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3c47eba0-9f67-4118-8833-67bedb603ecb")
 	)
 	(junction
 		(at 298.45 205.74)
@@ -7338,7 +7336,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 196.85 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -7416,7 +7414,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 298.45 194.31 0)
 			(effects
 				(font
@@ -7494,7 +7492,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 190.5 194.31 0)
 			(effects
 				(font
@@ -7564,7 +7562,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 177.8 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -7642,7 +7640,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 260.35 158.75 0)
 			(effects
 				(font
@@ -7720,7 +7718,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 254 194.31 0)
 			(effects
 				(font
@@ -7790,7 +7788,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 203.2 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -8028,7 +8026,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 292.1 194.31 0)
 			(effects
 				(font
@@ -8106,7 +8104,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 279.4 194.31 0)
 			(effects
 				(font
@@ -8433,7 +8431,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 209.55 176.53 0)
 			(effects
 				(font
@@ -8503,7 +8501,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 222.25 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -8756,7 +8754,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 234.95 194.31 0)
 			(effects
 				(font
@@ -9046,7 +9044,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 222.25 176.53 0)
 			(effects
 				(font
@@ -9195,7 +9193,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 247.65 194.31 0)
 			(effects
 				(font
@@ -9362,7 +9360,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 292.1 176.53 0)
 			(effects
 				(font
@@ -9440,7 +9438,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 254 158.75 0)
 			(effects
 				(font
@@ -9723,7 +9721,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 177.8 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -10095,7 +10093,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 260.35 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -10262,7 +10260,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 279.4 158.75 0)
 			(effects
 				(font
@@ -10332,7 +10330,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 228.6 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -10588,7 +10586,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 273.05 194.31 0)
 			(effects
 				(font
@@ -10870,7 +10868,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 292.1 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -11029,7 +11027,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 247.65 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -11107,7 +11105,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 222.25 194.31 0)
 			(effects
 				(font
@@ -11185,7 +11183,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 304.8 194.31 0)
 			(effects
 				(font
@@ -11334,7 +11332,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 209.55 194.31 0)
 			(effects
 				(font
@@ -11483,7 +11481,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 273.05 158.75 0)
 			(effects
 				(font
@@ -11561,7 +11559,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 184.15 158.75 0)
 			(effects
 				(font
@@ -11639,7 +11637,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 247.65 176.53 0)
 			(effects
 				(font
@@ -11877,7 +11875,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 190.5 176.53 0)
 			(effects
 				(font
@@ -11947,7 +11945,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 254 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -12017,7 +12015,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 196.85 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -12087,7 +12085,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 228.6 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -12236,7 +12234,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 196.85 158.75 0)
 			(effects
 				(font
@@ -12314,7 +12312,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 304.8 158.75 0)
 			(effects
 				(font
@@ -12455,7 +12453,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 273.05 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -13046,7 +13044,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 203.2 176.53 0)
 			(effects
 				(font
@@ -13116,7 +13114,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 279.4 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -13186,7 +13184,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 196.85 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -13256,7 +13254,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 222.25 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -13334,7 +13332,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 228.6 194.31 0)
 			(effects
 				(font
@@ -13475,7 +13473,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 266.7 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -13723,7 +13721,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 184.15 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -14027,7 +14025,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 266.7 176.53 0)
 			(effects
 				(font
@@ -14176,7 +14174,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 254 176.53 0)
 			(effects
 				(font
@@ -14340,7 +14338,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 234.95 176.53 0)
 			(effects
 				(font
@@ -14410,7 +14408,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 279.4 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -14569,7 +14567,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 247.65 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -14710,7 +14708,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 292.1 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -14788,7 +14786,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 203.2 158.75 0)
 			(effects
 				(font
@@ -14858,7 +14856,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 254 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -14936,7 +14934,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 260.35 176.53 0)
 			(effects
 				(font
@@ -15190,7 +15188,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 203.2 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -15349,7 +15347,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 222.25 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -15561,7 +15559,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 273.05 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -15809,7 +15807,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 298.45 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -15887,7 +15885,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 279.4 176.53 0)
 			(effects
 				(font
@@ -15965,7 +15963,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 247.65 158.75 0)
 			(effects
 				(font
@@ -16035,7 +16033,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 215.9 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -16194,7 +16192,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 190.5 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -16264,7 +16262,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 184.15 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -16647,7 +16645,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 279.4 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -16966,79 +16964,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Q_NMOS")
-		(at 265.43 219.71 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "80f99f40-d3d3-418b-be6f-07b06554cdd2")
-		(property "Reference" "Q1"
-			(at 271.018 219.456 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Q_NMOS"
-			(at 271.78 220.9799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 270.51 217.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 265.43 219.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "N-MOSFET transistor"
-			(at 265.43 219.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "G"
-			(uuid "6c64e418-d121-40c0-bd8a-36c80533eecd")
-		)
-		(pin "D"
-			(uuid "f5f183a6-5da0-48fa-8f2e-580577f796b5")
-		)
-		(pin "S"
-			(uuid "91f6b2c1-4803-43b4-b83d-c064e9e5d09f")
-		)
-		(instances
-			(project ""
-				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 298.45 158.75 90)
 		(unit 1)
@@ -17065,7 +16990,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 298.45 158.75 0)
 			(effects
 				(font
@@ -17206,7 +17131,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 228.6 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -17656,7 +17581,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 285.75 158.75 0)
 			(effects
 				(font
@@ -17815,7 +17740,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 285.75 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -17955,7 +17880,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 266.7 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -18193,7 +18118,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 285.75 194.31 0)
 			(effects
 				(font
@@ -18263,7 +18188,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 285.75 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -19051,7 +18976,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 273.05 176.53 0)
 			(effects
 				(font
@@ -19129,7 +19054,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 298.45 176.53 0)
 			(effects
 				(font
@@ -19270,7 +19195,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 209.55 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -19500,7 +19425,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 247.65 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -19578,7 +19503,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 260.35 194.31 0)
 			(effects
 				(font
@@ -19745,7 +19670,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 228.6 176.53 0)
 			(effects
 				(font
@@ -19815,7 +19740,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 203.2 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -19964,7 +19889,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 196.85 194.31 0)
 			(effects
 				(font
@@ -20113,7 +20038,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 177.8 194.31 0)
 			(effects
 				(font
@@ -20574,7 +20499,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 190.5 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -20644,7 +20569,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 234.95 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -20722,7 +20647,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 196.85 176.53 0)
 			(effects
 				(font
@@ -20792,7 +20717,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 209.55 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -21030,7 +20955,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 304.8 176.53 0)
 			(effects
 				(font
@@ -21100,7 +21025,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 214.63 224.79 90)
 			(do_not_autoplace yes)
 			(effects
@@ -21516,7 +21441,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 190.5 158.75 0)
 			(effects
 				(font
@@ -21683,7 +21608,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 234.95 158.75 0)
 			(effects
 				(font
@@ -21753,7 +21678,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 273.05 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -21983,7 +21908,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 215.9 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -22061,7 +21986,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 215.9 158.75 0)
 			(effects
 				(font
@@ -22131,7 +22056,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 184.15 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -22468,7 +22393,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 215.9 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -22538,7 +22463,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 304.8 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -22608,7 +22533,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 298.45 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -22980,7 +22905,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 260.35 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -23139,7 +23064,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 266.7 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -23209,7 +23134,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 234.95 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -23279,7 +23204,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 285.75 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -23349,7 +23274,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 304.8 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -23427,7 +23352,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 209.55 158.75 0)
 			(effects
 				(font
@@ -23665,7 +23590,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 228.6 158.75 0)
 			(effects
 				(font
@@ -23743,7 +23668,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 177.8 158.75 0)
 			(effects
 				(font
@@ -23813,7 +23738,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 292.1 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -23972,7 +23897,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 304.8 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -24113,7 +24038,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 254 166.37 90)
 			(do_not_autoplace yes)
 			(effects
@@ -24191,7 +24116,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 215.9 194.31 0)
 			(effects
 				(font
@@ -24429,7 +24354,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 177.8 176.53 0)
 			(effects
 				(font
@@ -24507,7 +24432,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 222.25 158.75 0)
 			(effects
 				(font
@@ -24666,7 +24591,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 190.5 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -24815,7 +24740,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 292.1 158.75 0)
 			(effects
 				(font
@@ -24893,7 +24818,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 203.2 194.31 0)
 			(effects
 				(font
@@ -24963,7 +24888,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 177.8 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -25033,7 +24958,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 209.55 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -25270,7 +25195,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 184.15 176.53 0)
 			(effects
 				(font
@@ -25348,7 +25273,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 285.75 176.53 0)
 			(effects
 				(font
@@ -25465,6 +25390,79 @@
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW59")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:Q_NMOS_GSD")
+		(at 265.43 219.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f0244148-aaf3-43ac-a039-91b94f3fe968")
+		(property "Reference" "Q1"
+			(at 271.78 218.4399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Q_NMOS_GSD"
+			(at 271.78 220.9799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 270.51 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 265.43 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "N-MOSFET transistor, gate/source/drain"
+			(at 265.43 219.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0a0fa77a-5264-43f8-b57b-3fbd234d1ffe")
+		)
+		(pin "1"
+			(uuid "1d97c717-3734-4c3e-b862-90c02970bf26")
+		)
+		(pin "3"
+			(uuid "c394529f-49e0-4135-82e9-2f85d33874eb")
+		)
+		(instances
+			(project ""
+				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -25631,7 +25629,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 298.45 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -25701,7 +25699,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 234.95 184.15 90)
 			(do_not_autoplace yes)
 			(effects
@@ -25771,7 +25769,7 @@
 				)
 			)
 		)
-		(property "Value" "470"
+		(property "Value" "330"
 			(at 260.35 201.93 90)
 			(do_not_autoplace yes)
 			(effects
@@ -26347,7 +26345,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 215.9 176.53 0)
 			(effects
 				(font
@@ -26425,7 +26423,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 214.63 217.17 0)
 			(effects
 				(font
@@ -26574,7 +26572,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 266.7 158.75 0)
 			(effects
 				(font
@@ -26652,7 +26650,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 266.7 194.31 0)
 			(effects
 				(font
@@ -27050,7 +27048,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_ReverseMount_Hole1.8x2.4mm"
+		(property "Footprint" "Krteq:MHT151WDT"
 			(at 184.15 194.31 0)
 			(effects
 				(font
