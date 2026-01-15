@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "9.0")
 	(layer "F.Cu")
-	(descr "LED SMD 1206 (3216 Metric), reverse mount, square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
+	(descr "-35℃~+85℃ 130° 20mA 3.65V 900mcd 95mW Frosted Yellow Lens Reverse Mount White 1206 LED Indication - Discrete ROHS")
 	(tags "diode reverse")
 	(property "Reference" "REF**"
 		(at 0 -2.145 0)
