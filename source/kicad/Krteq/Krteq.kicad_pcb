@@ -44393,13 +44393,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "1490b3df-69e5-4621-afcf-fe12ce76b1a3")
-		(at 76.2 76.2 180)
+		(at 247.65 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW51"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "6755bb04-ce74-41bc-a910-acd21519f9e1")
+			(uuid "239f7e01-0275-43ff-9ef1-2e3838b0f75f")
 			(effects
 				(font
 					(size 1 1)
@@ -44411,7 +44411,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "9cab3b5b-3706-4682-804f-7f9b7a3a4f0f")
+			(uuid "ca6f3b32-770c-4426-b0c4-84cbdcd4ed50")
 			(effects
 				(font
 					(size 1 1)
@@ -44425,7 +44425,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "233d8906-9cc5-4d03-b857-cba708fc98a1")
+			(uuid "e42a20d0-101d-4df8-9b1c-79968f94bc2d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44439,7 +44439,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "7365f105-753e-460d-8f5d-4cb1a0a44825")
+			(uuid "0d353381-c11a-412f-a7bd-0bbc7ff14e3c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44655,13 +44655,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "14f5c332-53de-4e04-9945-dfd671b23eb9")
-		(at 209.55 95.25 180)
+		(at 114.3 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW18"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "4fdb6ce1-e452-4210-9922-f737d4e9c1be")
+			(uuid "cbe7617e-78a6-4a72-b553-7140b83e5abf")
 			(effects
 				(font
 					(size 1 1)
@@ -44673,7 +44673,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "84c54eb0-7b55-4ed0-8ad3-e18706e1e9de")
+			(uuid "5e785937-e2fc-40b5-9387-a574dc1a8601")
 			(effects
 				(font
 					(size 1 1)
@@ -44687,7 +44687,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "b8679bff-bbf6-498e-9d5b-d03d60c0a60c")
+			(uuid "0802f29a-0b10-40e7-8907-0bae921a67f6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44701,7 +44701,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "9e88d715-7bae-4b0c-bd8f-e639c477c888")
+			(uuid "b2a13c5e-bf97-4d51-b282-ab4cdb8705c2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44917,13 +44917,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "16bfcf83-9219-4a97-acec-99aff27f1037")
-		(at 152.4 95.25 180)
+		(at 171.45 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW33"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "21dc18c6-f77b-4ad8-a177-dbee685449d3")
+			(uuid "92b7796a-3e8e-43d8-8c6f-298aa1740afc")
 			(effects
 				(font
 					(size 1 1)
@@ -44935,7 +44935,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "4d7a54b8-6e38-4264-b8d6-dc67423de7bd")
+			(uuid "4bb98f65-59e9-47a6-a5ff-8378557787a7")
 			(effects
 				(font
 					(size 1 1)
@@ -44949,7 +44949,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c2972561-89da-4b8a-831f-585500b0b4aa")
+			(uuid "3f0184f4-53f3-4872-98f0-92a3747e642c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44963,7 +44963,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "d598f5ba-b0f8-4da2-888c-7090fb53555c")
+			(uuid "8f1aa050-bb2f-438e-a39d-fda1364eb2d7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45179,13 +45179,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "1c2845b1-eaf6-4f24-8e2e-c104edfc12ec")
-		(at 266.7 76.2 180)
+		(at 57.15 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW2"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "3f166219-e119-4250-9d20-77c3a08b3d03")
+			(uuid "224bdf72-b435-482d-bc88-6bc9656d22a1")
 			(effects
 				(font
 					(size 1 1)
@@ -45197,7 +45197,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "29e41174-8888-459d-959c-aa717437e0d9")
+			(uuid "0400fd63-b8a3-4db5-b397-6b2ea33baa10")
 			(effects
 				(font
 					(size 1 1)
@@ -45211,7 +45211,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "a833a5fc-aad2-4de6-b6c1-792433c7c0c6")
+			(uuid "c4d7f79c-0cf9-42eb-b073-acf3eb60a17f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45225,7 +45225,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "ad4c0e1e-6082-4fca-8c66-5558067db078")
+			(uuid "28b0416a-b1be-4db2-abda-d9e0732d6a71")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45441,13 +45441,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "1cd05418-9697-4276-96db-349db447a2b9")
-		(at 209.55 133.35 180)
+		(at 114.3 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW20"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "4d43960d-63d9-417c-b1a8-60d921d8162a")
+			(uuid "4647ea9e-b20c-4d23-91d2-18481e0e8f78")
 			(effects
 				(font
 					(size 1 1)
@@ -45459,7 +45459,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "bbad0b2c-d394-41a3-aa9b-8085b76984df")
+			(uuid "11ec54de-2316-49e3-ba85-d7c28a16d90b")
 			(effects
 				(font
 					(size 1 1)
@@ -45473,7 +45473,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "052af0a5-df06-400c-8b3b-276535336716")
+			(uuid "59aba4c8-0f60-4b21-b85d-43e82a7e1db7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45487,7 +45487,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "65bef200-42c6-4168-82fe-2d496ef16741")
+			(uuid "0e221563-2b55-4656-8d83-e7ca613ff8e1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45703,13 +45703,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "23b4d363-bae2-412c-8fe2-a7bb8801499a")
-		(at 190.5 152.4 180)
+		(at 133.35 152.4 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW26"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "497dfec9-2cc8-4dac-bf57-2031c6eb2cb6")
+			(uuid "ea04f4e3-0f99-4a6b-a699-eefd3a8cb08c")
 			(effects
 				(font
 					(size 1 1)
@@ -45721,7 +45721,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "7e16ffb8-6288-4315-b798-192d78cf12d9")
+			(uuid "838dfeaa-9d8b-43ac-8a33-479886a09f13")
 			(effects
 				(font
 					(size 1 1)
@@ -45735,7 +45735,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "3396f238-5e6d-44eb-ad3a-daa718721920")
+			(uuid "378649c5-dd1b-4486-8395-3cfec7252f31")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45749,7 +45749,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "1aabf513-f92c-48fb-930a-80b121c3e716")
+			(uuid "287abdff-df51-4360-9056-2fc8c1de2ad8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -45965,13 +45965,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "2489655b-28ea-47c5-abfb-a7b1b5ef376d")
-		(at 171.45 95.25 180)
+		(at 152.4 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW28"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "0704e49b-377f-4ca9-966a-5aebd3bec105")
+			(uuid "086f734b-72c5-4a01-b48b-f422003008df")
 			(effects
 				(font
 					(size 1 1)
@@ -45983,7 +45983,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "2b2b01f3-a921-4574-9c44-2445b223cbf6")
+			(uuid "df30a15c-72a2-4c41-805d-46f55aec2d60")
 			(effects
 				(font
 					(size 1 1)
@@ -45997,7 +45997,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "6cd60493-9c5a-4b15-aabb-d9a46518f4bf")
+			(uuid "e5cdd622-3491-4d7e-9a3c-a469c29ebc30")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -46011,7 +46011,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "ca203487-d7cb-4792-92f6-fe2fd1993b09")
+			(uuid "64461187-0909-463b-8b62-f876cf995c9a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -46227,13 +46227,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "2b4dd87c-bb0a-4be1-aaaf-dbcb9dedb60f")
-		(at 57.15 57.15 180)
+		(at 266.7 57.15 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW56"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "b7a01396-429b-408d-8af7-9c172a7b25dc")
+			(uuid "10e7bebd-20ac-4f6e-b2af-b411f314912e")
 			(effects
 				(font
 					(size 1 1)
@@ -46245,7 +46245,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "e1419d3b-acf6-4b2c-a05e-229eaf58c7c5")
+			(uuid "0fb7b2be-225f-4338-b471-fb4f3c301d4c")
 			(effects
 				(font
 					(size 1 1)
@@ -46259,7 +46259,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "b98c9794-cf31-49d7-8f7f-9fecebd06ad3")
+			(uuid "35b6a0ff-85f9-4115-a9af-a5116a359fb0")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -46273,7 +46273,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "7da9507d-b1f4-4f86-a875-7aa75db4d63f")
+			(uuid "ac8bb684-5091-400e-b5fb-c5da5000722d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -46489,13 +46489,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "2f3190da-71f0-4df8-b369-cd579fc030cc")
-		(at 228.6 133.35 180)
+		(at 95.25 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW15"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "4560eb4e-2f8b-420b-bac5-2283a48152c4")
+			(uuid "3d1612e9-9b7b-4126-aa5e-57c9b5091492")
 			(effects
 				(font
 					(size 1 1)
@@ -46507,7 +46507,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "5ee91871-29a1-40b5-85db-8e81dc16f786")
+			(uuid "98750cbd-892c-46c7-b8de-cdc250c35c50")
 			(effects
 				(font
 					(size 1 1)
@@ -46521,7 +46521,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "5ea6fc96-afa0-4958-906c-77ae88270f10")
+			(uuid "ba2ea070-ff78-4e67-acbd-d8ecdc402942")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -46535,7 +46535,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "37f91b61-9ad7-4248-9f6e-7420bf31e141")
+			(uuid "e7cec99d-aab9-4fd6-9e35-b4fd3601332d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -46751,13 +46751,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "3186523f-798d-4b8e-bba2-33c87d84a4d0")
-		(at 266.7 114.3 180)
+		(at 57.15 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW4"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "49930f01-15ab-4489-9620-51be79690bde")
+			(uuid "2ed47815-15d8-410e-bc08-dce3b4609e71")
 			(effects
 				(font
 					(size 1 1)
@@ -46769,7 +46769,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "86d6c07d-1ebd-49c9-b98c-06359612f37f")
+			(uuid "01097b91-ca3d-4f87-9d60-25bd64d76e27")
 			(effects
 				(font
 					(size 1 1)
@@ -46783,7 +46783,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "bdc9d0a3-236e-4367-824c-1cefb2c2c29b")
+			(uuid "00b076dd-5beb-482f-92c7-a93bd8d749e2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -46797,7 +46797,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c7519fab-883f-405f-a4e5-a98218f3f9d8")
+			(uuid "3d4dec2c-9807-4a4f-9ca1-d7339ebac2e1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47019,7 +47019,7 @@
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "218c51f9-2b96-4d60-bff3-4fd03315e1d8")
+			(uuid "bbae585e-7180-4c06-a4aa-dee51040ffd9")
 			(effects
 				(font
 					(size 1 1)
@@ -47031,7 +47031,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "5658da3c-f459-44f1-9fdf-e47881a35189")
+			(uuid "e18e6e8a-0d28-4506-a504-dee9689ee649")
 			(effects
 				(font
 					(size 1 1)
@@ -47045,7 +47045,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "bd776462-78bf-4785-b42a-5da97ab5755a")
+			(uuid "6adb819e-5b34-4b45-96c8-3a0a55146edc")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47059,7 +47059,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "13340649-b95b-4fe3-b3fc-71de19e03b9d")
+			(uuid "1bc6c4d0-b771-4dc8-9a39-c70f019827e1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47355,13 +47355,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "333d3483-add2-4e02-8ee8-fde84c2bcbb0")
-		(at 76.2 152.4 180)
+		(at 247.65 152.4 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW55"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "fbc20d9b-221a-48a5-a4c3-6f9a3c3b5693")
+			(uuid "4e357225-0750-4a5c-b6d4-ba29a9a03cb4")
 			(effects
 				(font
 					(size 1 1)
@@ -47373,7 +47373,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "6f1b47a0-aa7c-41da-9f26-9ff4b1024b9f")
+			(uuid "b1ab44c0-9fc8-4180-935e-e7f48d26f239")
 			(effects
 				(font
 					(size 1 1)
@@ -47387,7 +47387,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "a754d9be-9eaa-4b2a-b35e-9dc65d15a8b0")
+			(uuid "4b39093e-2490-48b4-a0e9-70a54ba8676c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47401,7 +47401,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "2403c846-256e-424e-9a48-0e118a2df182")
+			(uuid "e426c2ed-f8a1-4033-84bf-50dad5388dc6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47617,13 +47617,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "3eb2de79-e47a-4a9d-bf53-389d83f936ee")
-		(at 76.2 133.35 180)
+		(at 247.65 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW54"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "bca8e715-1347-48e7-b1db-f50f3fa034b0")
+			(uuid "2ab6d094-8656-4f20-a326-188ed6bb6e7b")
 			(effects
 				(font
 					(size 1 1)
@@ -47635,7 +47635,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "bab7c847-2e2b-4eaf-a2bf-14a8ab6cdce7")
+			(uuid "53f15650-687e-4463-8345-ff3b48bba211")
 			(effects
 				(font
 					(size 1 1)
@@ -47649,7 +47649,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "19039f5f-e746-4532-8153-99dc380480c7")
+			(uuid "d6a65acd-7ce6-4750-900d-9727707280fb")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47663,7 +47663,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "41f92b58-6fc1-4754-b518-f3db37b52080")
+			(uuid "41bc3233-c452-4c7c-bf5e-16efc0875327")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47879,13 +47879,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "47ab6473-3481-4a7f-bb7c-b037286dd646")
-		(at 76.2 95.25 180)
+		(at 247.65 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW52"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "2e28ad05-c2ea-494c-96fd-daa682cc1e07")
+			(uuid "cd31ae5d-8501-4b54-b62b-d1c2fdcb30aa")
 			(effects
 				(font
 					(size 1 1)
@@ -47897,7 +47897,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "a2c97a61-1c2c-441f-a30c-7861f45cf993")
+			(uuid "e358aa53-102f-48a6-82e3-4afcebe231c8")
 			(effects
 				(font
 					(size 1 1)
@@ -47911,7 +47911,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "232122b4-5561-4a5a-83a2-bac17e565cf5")
+			(uuid "3530025e-974d-4d92-8a8d-b27f3d5bec13")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47925,7 +47925,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "d9b92457-f149-4622-bd54-fb03fa25084a")
+			(uuid "28d18a04-b763-4a72-aaa5-0139ecbf4317")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48320,13 +48320,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "4c717a9f-7ba8-4075-b67e-1a16ebe5dbab")
-		(at 95.25 152.4 180)
+		(at 228.6 152.4 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW50"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "ea98764a-efe6-4a76-b623-b80c1c08eec5")
+			(uuid "1fe8f644-7817-417f-b5f9-a856cd205abb")
 			(effects
 				(font
 					(size 1 1)
@@ -48338,7 +48338,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "ecaad677-21b2-437f-a95c-3c109b5f4231")
+			(uuid "e27d995e-5656-4192-ac7c-d5143f580c52")
 			(effects
 				(font
 					(size 1 1)
@@ -48352,7 +48352,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "29bbb2df-36fa-4fff-bff2-42ab5a26694d")
+			(uuid "855aeab1-f7c1-4e86-84b2-c7d42db7bb7b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48366,7 +48366,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "9620797e-5711-4acf-ba82-c4418a0a2f87")
+			(uuid "d8494f53-583d-4ee8-84a4-be87f52968e4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48582,13 +48582,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "4dea0a09-f137-4a3e-b7cf-9d82f3a50899")
-		(at 133.35 152.4 180)
+		(at 190.5 152.4 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW40"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "23dfcc53-5921-4bd6-8e08-a1c96091e755")
+			(uuid "6d663f93-219b-4142-9f72-4e53a62b54ca")
 			(effects
 				(font
 					(size 1 1)
@@ -48600,7 +48600,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "64b379f6-4fc4-4485-b9a4-cc365a9cd8d1")
+			(uuid "e4ef67e8-1661-4dc1-8e86-489c22d0a5b8")
 			(effects
 				(font
 					(size 1 1)
@@ -48614,7 +48614,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "2f6c09cb-de06-4736-b7f4-037732876b34")
+			(uuid "72a0c5e1-ea82-42d6-a24b-d048febaa3df")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48628,7 +48628,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "e84c6d01-f1f7-4956-be21-57aa19f75a22")
+			(uuid "5f4402ac-8e93-4a68-9c29-6d0c78048037")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48844,13 +48844,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "5417318a-e582-45db-994e-7f805d441205")
-		(at 228.6 76.2 180)
+		(at 95.25 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW12"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "d7dbc915-5763-47bd-aa41-7d30d9578e64")
+			(uuid "1cd42049-42e4-44a3-a779-38c6a53fe312")
 			(effects
 				(font
 					(size 1 1)
@@ -48862,7 +48862,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "c6113941-3187-4296-814c-0e58e2680603")
+			(uuid "ec8751a7-fa45-4cef-ad43-9d0db2da1b33")
 			(effects
 				(font
 					(size 1 1)
@@ -48876,7 +48876,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "3fec37ad-c742-4695-ad29-950ea9a74358")
+			(uuid "67794039-8301-44da-8c63-2534fe558f64")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48890,7 +48890,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "d48840de-199c-4feb-aa4f-c043e012637e")
+			(uuid "798a2229-c055-48a2-adc8-292b5cf34c10")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -49106,13 +49106,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "548a6efd-fd64-4e9d-a4f8-8be3ff4ee1fe")
-		(at 57.15 76.2 180)
+		(at 266.7 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW57"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "8b126292-e861-4179-8da8-6bdef1a3edcd")
+			(uuid "e75d841b-fa07-4479-bc25-dee445250333")
 			(effects
 				(font
 					(size 1 1)
@@ -49124,7 +49124,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "bc497183-4b1b-43cf-8f27-299c74296bc6")
+			(uuid "0b80fda9-b09a-4eff-8747-e346094e03c9")
 			(effects
 				(font
 					(size 1 1)
@@ -49138,7 +49138,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "3689747a-435f-4443-8bff-11c56c4c06b2")
+			(uuid "d3709b71-f74a-46cc-8bd7-d65c752a2c25")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -49152,7 +49152,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "e5ace6d9-04ad-4971-bf27-cf07dca7a877")
+			(uuid "4b0b8421-1634-4381-a601-0385f9da3ee6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -49368,13 +49368,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "549be933-c3e7-44e0-a218-ffaf9a21ff9e")
-		(at 171.45 114.3 180)
+		(at 152.4 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW29"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "3ac5bbcb-176b-41df-a163-ec8c64c6c400")
+			(uuid "9a9c3550-dc54-49eb-8b0c-00c0b8c8b8ee")
 			(effects
 				(font
 					(size 1 1)
@@ -49386,7 +49386,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "a1c2a89f-4b01-4210-a549-b36559a21d2d")
+			(uuid "d8c4bd11-107f-4484-a536-9487a8c00910")
 			(effects
 				(font
 					(size 1 1)
@@ -49400,7 +49400,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "e90e5647-1dc3-4b5a-ac4e-02ba2dc5decc")
+			(uuid "157923e0-821e-4294-b4e7-6a87b88f79ba")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -49414,7 +49414,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c357e96a-312f-45b6-a226-dcf6a1a6f6de")
+			(uuid "a038ec58-e04f-4df4-a533-9889cc2f03e5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -49630,13 +49630,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "57ff2280-4fa1-400b-a3ea-95c8481f7d4f")
-		(at 133.35 95.25 180)
+		(at 190.5 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW37"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "fd54bb7c-d409-434c-9f9e-0afe8517908c")
+			(uuid "71ec3d87-0ca6-4b45-a999-4d0c234c94c8")
 			(effects
 				(font
 					(size 1 1)
@@ -49648,7 +49648,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "94d00565-6d91-4067-bf93-98df3af90cef")
+			(uuid "4184f949-f234-4983-8c53-8c0257cc757f")
 			(effects
 				(font
 					(size 1 1)
@@ -49662,7 +49662,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "b558ad70-9665-4114-87a0-148fc2c15ddd")
+			(uuid "5f06f714-f931-4b4c-9642-62ef3419754a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -49676,7 +49676,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "b111997b-85ab-4540-b738-d4c8cae7cb81")
+			(uuid "5b263ad3-c345-451f-9723-e8ee0d992b1e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -49892,13 +49892,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "59b88ba1-cb70-4ac6-bf11-c4d12b378ba6")
-		(at 190.5 133.35 180)
+		(at 133.35 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW25"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "6ba02988-5e55-4eaa-8cd1-cea56b351811")
+			(uuid "6aea5428-2997-4187-821c-298ac49db633")
 			(effects
 				(font
 					(size 1 1)
@@ -49910,7 +49910,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "c051baae-76a0-43dd-820d-0107398866b3")
+			(uuid "7b116660-5c23-4956-8f26-2b74f45bd424")
 			(effects
 				(font
 					(size 1 1)
@@ -49924,7 +49924,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c37ee291-8bd3-4b90-982f-2442fdfa3289")
+			(uuid "cdf07649-6573-4b79-843b-8e15a67fdd2f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -49938,7 +49938,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "dcd238a6-1ffc-4399-a6c3-d5c44b2d38b1")
+			(uuid "eee732db-9e9b-426d-84a5-062192518f32")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -50154,13 +50154,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "5bf8de6e-e6e6-47c6-a546-ee01bd678e1d")
-		(at 190.5 95.25 180)
+		(at 133.35 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW23"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "f0d70810-c8af-4c0f-8dfc-00c5386dfbf9")
+			(uuid "c9169885-3c72-4ee8-a7ac-de27063e51b4")
 			(effects
 				(font
 					(size 1 1)
@@ -50172,7 +50172,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "f657ac59-3317-41ac-9993-c4f1ef809429")
+			(uuid "be541c13-72b6-45ac-be77-a11c79045268")
 			(effects
 				(font
 					(size 1 1)
@@ -50186,7 +50186,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "77117c13-95d8-417c-9cfb-f965226305c2")
+			(uuid "fb941c87-2b3b-48be-8be0-06081e2c60cf")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -50200,7 +50200,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "b49db608-0267-4470-9414-dbd25ccc7f93")
+			(uuid "f17a3385-124e-4420-902b-625d0196a5a3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -50416,13 +50416,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "63d493b9-d4d3-46ea-8320-17675818d6c7")
-		(at 247.65 152.4 180)
+		(at 76.2 152.4 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW11"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "288193fa-a181-4fe5-8a26-d96a698853b3")
+			(uuid "63be65c7-bf2c-4ed7-b171-ea7dec58bbc6")
 			(effects
 				(font
 					(size 1 1)
@@ -50434,7 +50434,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "7043287f-6a2a-43c3-96e3-cd665ca65b7e")
+			(uuid "4d763da7-b305-4a85-8b9e-f6e332003831")
 			(effects
 				(font
 					(size 1 1)
@@ -50448,7 +50448,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "df257ceb-d28c-4b99-ae5a-0b8f25c8807b")
+			(uuid "dcb8e059-48ec-4074-8690-f1a82c4c8fb2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -50462,7 +50462,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "6abe4f33-f04c-4dca-9558-7777bdac6eed")
+			(uuid "c353f1f2-7aa5-4df8-b8f0-8f3a52ad0ac5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -50678,13 +50678,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "641cebca-527c-4bb0-bfed-c53eef83cffd")
-		(at 95.25 76.2 180)
+		(at 228.6 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW46"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "5b24e108-c95c-4eb9-bdb1-6407174c6a17")
+			(uuid "9a146c0e-5589-4854-820e-35e6a7653ae9")
 			(effects
 				(font
 					(size 1 1)
@@ -50696,7 +50696,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "a298659f-fac1-4e0c-ac40-f9ce54cb50de")
+			(uuid "34043ee3-6bd7-4c4c-85a5-925c51457fe5")
 			(effects
 				(font
 					(size 1 1)
@@ -50710,7 +50710,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "8455407a-779c-4fc8-9108-f08f751301b0")
+			(uuid "48362838-c8a6-48a6-9933-6fe3deff7dc8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -50724,7 +50724,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "0ffb83e1-8dc3-45e1-ab18-178c0ec6f5eb")
+			(uuid "475d9b74-8cbf-4f60-a887-a7845688f06c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -50940,13 +50940,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "655a64ea-6fff-4b73-bc5c-e38daf41bba0")
-		(at 266.7 95.25 180)
+		(at 57.15 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW3"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "516c357a-afe8-465e-978b-f7dac98c054d")
+			(uuid "c7951cf2-a4bc-4c07-9fa9-18427d43de08")
 			(effects
 				(font
 					(size 1 1)
@@ -50958,7 +50958,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "f68e2fed-402d-4fa3-8ba2-13716bb7ea4b")
+			(uuid "d53789f7-a72c-4c46-8cb5-836169343aec")
 			(effects
 				(font
 					(size 1 1)
@@ -50972,7 +50972,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "fc5e9923-6d79-43f8-b308-86264b4c17f3")
+			(uuid "97ab1c0a-94d4-445e-b505-0417cf32c156")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -50986,7 +50986,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "52d14a04-5060-425b-883e-a617f949684a")
+			(uuid "c5d678f6-4aff-4282-a7a1-2c37a0918733")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51202,13 +51202,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "661e6c0a-c314-4987-944e-0441db50584b")
-		(at 152.4 114.3 180)
+		(at 171.45 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW34"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "fc334692-4467-47fa-bf8f-633fd0ffaa66")
+			(uuid "a4c11eb5-c7b3-4ee6-a085-388b91ea24ef")
 			(effects
 				(font
 					(size 1 1)
@@ -51220,7 +51220,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "94d5cacd-a537-4a9b-9c91-80bbaba424ff")
+			(uuid "cdc76ef2-1815-4e92-a869-a257d0489966")
 			(effects
 				(font
 					(size 1 1)
@@ -51234,7 +51234,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "38648b08-2c11-4ed4-802d-5a13674ac272")
+			(uuid "fedcf381-6a71-4ac5-8830-e912bd300f3a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51248,7 +51248,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "e5922155-218b-4cda-8c0d-7c53372cf93b")
+			(uuid "6053ad41-3306-45de-bdd3-3a4a431176ab")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51464,13 +51464,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "6752cef5-e19c-4178-b5e6-611911dfd0a0")
-		(at 133.35 133.35 180)
+		(at 190.5 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW39"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "674f6d05-c967-4a55-a7bf-e481cec9eba1")
+			(uuid "52ae36f8-c3b5-4921-a0b1-4b950df73928")
 			(effects
 				(font
 					(size 1 1)
@@ -51482,7 +51482,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "1045e355-6953-454b-a32a-93c9e77adaef")
+			(uuid "92aeb01f-dfbb-416e-8223-482a1dab015a")
 			(effects
 				(font
 					(size 1 1)
@@ -51496,7 +51496,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "98eb87ee-27a5-4797-9f1c-3ca2aa54fbf9")
+			(uuid "e0b3877c-f145-40b2-8556-a821d6bb4b0a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51510,7 +51510,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "edd14d7f-d2cc-4144-bb19-df6a2ca6ebd5")
+			(uuid "f3aff2a9-936b-45fd-99e0-98409021a227")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51726,13 +51726,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "690a3ff7-a846-4bb2-a342-e3965945437c")
-		(at 133.35 114.3 180)
+		(at 190.5 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW38"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "6e77b2d8-bfc4-47f7-938b-c6b321aee4f2")
+			(uuid "02cb13da-ae79-4d8b-a412-0975c6429283")
 			(effects
 				(font
 					(size 1 1)
@@ -51744,7 +51744,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "e4263c94-07d9-4f1b-a52d-c87cca92352e")
+			(uuid "670fa2fb-e9f5-4bd3-82fc-819915a69bb6")
 			(effects
 				(font
 					(size 1 1)
@@ -51758,7 +51758,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c251c244-512e-4db0-865e-ca2f1daa498c")
+			(uuid "619d6f0c-0201-4f07-babf-b01c553af4a6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51772,7 +51772,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "8e612847-123d-4b91-b815-5b59ee0b74af")
+			(uuid "79fb0421-5c2f-4bad-93ff-6de850b54c71")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -51988,13 +51988,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "6e2b6ef4-dcd5-48af-bc67-a8343080f161")
-		(at 57.15 114.3 180)
+		(at 266.7 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW59"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "132f5f98-1038-4d69-8623-8882c9ae8925")
+			(uuid "5d870fed-da94-4f00-874c-c6b2a826d75e")
 			(effects
 				(font
 					(size 1 1)
@@ -52006,7 +52006,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "f039d5f4-4516-44ec-8774-66f6a442a6e4")
+			(uuid "46abca16-5016-4fd8-8c34-b813f7239b1a")
 			(effects
 				(font
 					(size 1 1)
@@ -52020,7 +52020,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "48b57288-24e1-4cbc-a170-aba3c5c4a093")
+			(uuid "5b4a80e2-3e8e-4ba6-b305-00c5bc8ae0c6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52034,7 +52034,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "f43207b5-472b-4b2e-9bc1-4f26b7492389")
+			(uuid "68d3c2bb-fc51-477d-b932-5f5c70d76c4e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52429,13 +52429,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "74ca46f0-fd63-488a-b683-edda23548223")
-		(at 95.25 95.25 180)
+		(at 228.6 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW47"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "5d389c40-57fd-438e-960e-5144998770b8")
+			(uuid "fa7e311f-482a-42bf-ad79-f5c169c8266b")
 			(effects
 				(font
 					(size 1 1)
@@ -52447,7 +52447,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "91acdc65-72f7-4e16-b4b4-6d6ce1dfc86b")
+			(uuid "72da357c-25d8-416c-9b84-0d54a3204dae")
 			(effects
 				(font
 					(size 1 1)
@@ -52461,7 +52461,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "f4fb0c84-2ba0-439a-be7c-4fad257277b1")
+			(uuid "bd15798e-e59a-4e27-abf4-b71d55db087d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52475,7 +52475,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "3453384e-18f1-4900-a44f-590ec7f80c23")
+			(uuid "b87d4eda-9064-49da-b07b-0dc1289b00b2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52691,13 +52691,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "77c927b8-dbed-46de-8441-7e3d605e6e2d")
-		(at 114.3 76.2 180)
+		(at 209.55 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW41"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "1800f335-e5d6-4fc0-8b8e-279a330c0696")
+			(uuid "8bb7989b-baa4-49dd-bef7-4a25257781b1")
 			(effects
 				(font
 					(size 1 1)
@@ -52709,7 +52709,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "55876dda-33dd-4168-84dd-40c086b078f6")
+			(uuid "86b1862f-482b-472a-a980-2ba04113d163")
 			(effects
 				(font
 					(size 1 1)
@@ -52723,7 +52723,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c152c28d-b17d-46e2-9250-af724c8cbf1c")
+			(uuid "ffec4f96-de95-4a52-8cfd-c2e1e1d28785")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52737,7 +52737,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "990d85d6-9715-458c-a36d-87afa128dd6d")
+			(uuid "a79baa22-a72b-44dc-94ea-cf56923c5a36")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52953,13 +52953,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "78b57697-4808-4942-b525-ed13aae7d920")
-		(at 266.7 57.15 180)
+		(at 57.15 57.15 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW1"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "fb3cc16d-3f12-4d4a-a4f7-e6f30613acd7")
+			(uuid "81a4ad96-8b51-47a0-9fa1-502cdb944e99")
 			(effects
 				(font
 					(size 1 1)
@@ -52971,7 +52971,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "a9d37eb0-b122-4238-97d6-e95601b10a23")
+			(uuid "f740a45e-3f17-4f5a-869f-0bbc18db741c")
 			(effects
 				(font
 					(size 1 1)
@@ -52985,7 +52985,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "8e120ab6-6631-4bef-98c8-6a5540873eee")
+			(uuid "e231e6b2-9508-4269-ad9a-4d8338915a0c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -52999,7 +52999,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "0b749a2d-f8bc-4122-9689-fcbfdb157108")
+			(uuid "26f0c571-e0b2-461e-bbf9-d2991c91830b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -53215,13 +53215,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "7e057035-84f6-4a80-b541-900480f13eeb")
-		(at 266.7 152.4 180)
+		(at 57.15 152.4 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW6"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "ea69744c-a581-42ec-bab0-3aeb20f1557e")
+			(uuid "78c20a38-a76a-4e5d-95de-c683dd4d8bf2")
 			(effects
 				(font
 					(size 1 1)
@@ -53233,7 +53233,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "2d4197d9-a1c0-4dc0-ac9a-6be74df09260")
+			(uuid "6a4dd0c3-3bcb-48b8-98b9-ecd4c41cc0de")
 			(effects
 				(font
 					(size 1 1)
@@ -53247,7 +53247,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "fe9e5ee5-4370-4cb5-9660-857e8b05e6b3")
+			(uuid "3180ae54-45a4-4fb7-89c6-1b2f583e3786")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -53261,7 +53261,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "4a600132-bd48-4849-b269-773939ac385d")
+			(uuid "a01f1000-4226-4bca-b511-f1fdad42b313")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -53477,13 +53477,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "80211c14-6c0b-496d-b052-1604bce20949")
-		(at 114.3 114.3 180)
+		(at 209.55 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW43"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "b65c6e28-6a91-476d-967e-fee5351c43f8")
+			(uuid "c5d7f1f2-1ac8-4c99-9315-cd35c80690ce")
 			(effects
 				(font
 					(size 1 1)
@@ -53495,7 +53495,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "11c49cb1-f626-478f-81da-0b4a4bdaeb00")
+			(uuid "ddb2465c-fce4-47a3-9d87-576332e71813")
 			(effects
 				(font
 					(size 1 1)
@@ -53509,7 +53509,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "cf00a90f-3762-4f65-b287-0c3e4413789d")
+			(uuid "bb1821e9-2843-4934-a0b3-65e885dff011")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -53523,7 +53523,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "fd40e70c-24e5-46e6-83cf-863630714b4a")
+			(uuid "2424a532-2804-4741-8dac-126960eb5fbd")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -53739,13 +53739,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "85314709-5b21-4f91-87dc-7b7c7ac41185")
-		(at 57.15 95.25 180)
+		(at 266.7 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW58"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "ea6465f5-0087-4b18-9a32-d3abf7c26892")
+			(uuid "a1064eba-034a-445b-b397-f0a471e08c31")
 			(effects
 				(font
 					(size 1 1)
@@ -53757,7 +53757,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "92be5968-e0bc-497b-b07e-797c2f20d395")
+			(uuid "674ccb1b-d565-44e7-a664-d9b217690861")
 			(effects
 				(font
 					(size 1 1)
@@ -53771,7 +53771,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "970d2132-3b31-4840-afb6-72fa3f907588")
+			(uuid "412e24e8-ec73-49bb-98a7-c776ec506054")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -53785,7 +53785,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c9a38571-9f27-4508-ac5e-dc2cc5c227c9")
+			(uuid "9f78d09b-ef3a-4759-80d4-6da1fef024b4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54001,13 +54001,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "8a6b70c1-415a-44ed-812e-2dcfe1c7cb35")
-		(at 152.4 133.35 180)
+		(at 171.45 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW35"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "b421ad20-5d7d-4e18-bd3c-3a237b8c7eae")
+			(uuid "6bfe8803-3868-4988-be71-1974affd8257")
 			(effects
 				(font
 					(size 1 1)
@@ -54019,7 +54019,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "d1a8dd1d-44be-44e3-88cd-a8560b70a122")
+			(uuid "3436a89d-032f-44fc-9046-3c6e3851d692")
 			(effects
 				(font
 					(size 1 1)
@@ -54033,7 +54033,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "2f6e24d8-deee-480d-b0b1-072b59cb8f8e")
+			(uuid "25543807-9674-4c5e-81be-5324caa1561a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54047,7 +54047,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "f3e0b5a4-d251-4444-a3b6-48756cff15c8")
+			(uuid "4be8ae07-9927-495a-9522-446f0c1ed239")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54263,13 +54263,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "8b845468-4c47-4b47-8e6e-4a569a724fa2")
-		(at 209.55 114.3 180)
+		(at 114.3 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW19"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "2fd8b4d6-85bf-4d5a-9d5f-a371bc61cefc")
+			(uuid "a27cd1e2-fffa-4704-85bc-28fe9f5d3939")
 			(effects
 				(font
 					(size 1 1)
@@ -54281,7 +54281,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "eed3137e-8fd9-40a6-8955-9155dc071f13")
+			(uuid "bc042269-c660-4856-9ecf-ab11e204ab62")
 			(effects
 				(font
 					(size 1 1)
@@ -54295,7 +54295,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "a97ac76a-ca19-4d78-b974-ad2b98b77762")
+			(uuid "4865008d-67e9-46f3-916c-ba5c714ee166")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54309,7 +54309,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "b475bc3f-4f9e-475c-bb3a-306345eccdb6")
+			(uuid "377feec9-23ff-49b2-95c7-3bad2be18233")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54525,13 +54525,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "91d0e233-6901-40da-9263-40bbe6ba4be1")
-		(at 76.2 114.3 180)
+		(at 247.65 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW53"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "e2578273-4432-400c-be5b-44222debbb19")
+			(uuid "703a141c-244e-4572-ba3d-5f7a0166bcff")
 			(effects
 				(font
 					(size 1 1)
@@ -54543,7 +54543,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "044721ad-24be-4fee-954c-3e1faa3c58d1")
+			(uuid "0e7ffbf0-ab9c-47cd-bcbd-f5ca35350163")
 			(effects
 				(font
 					(size 1 1)
@@ -54557,7 +54557,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "a50c209c-f5fb-46f4-8429-93e0f7f68e63")
+			(uuid "26729e50-56f2-40fb-8bda-2e76325395ac")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54571,7 +54571,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "6027c9be-1d21-4d56-99a0-fdbf9e48798b")
+			(uuid "681efceb-74f2-4a74-994d-f6a0d8e8b8db")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54787,13 +54787,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "93e1780c-731d-4124-8444-7e064b3a6727")
-		(at 247.65 76.2 180)
+		(at 76.2 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW7"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "8d18fcba-0bec-4e12-8315-c32526cca538")
+			(uuid "f11e3175-f2db-41da-a231-40fccfacf780")
 			(effects
 				(font
 					(size 1 1)
@@ -54805,7 +54805,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "dc41b18f-de8d-425e-a6a8-cfb15fd548b6")
+			(uuid "9c6e691c-5af9-4a07-952c-bc72fa608acc")
 			(effects
 				(font
 					(size 1 1)
@@ -54819,7 +54819,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "9cdce9ed-75a6-4006-8cac-77fe58dbee7d")
+			(uuid "a923c420-d5d7-4b52-a5bd-2870bb41820d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -54833,7 +54833,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "29155d24-c656-4943-83b3-7add68f81927")
+			(uuid "d2c8ffd8-dafe-43e8-9f5e-b521ca47bea9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55049,13 +55049,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "9a835c35-e03c-4877-838a-560df0e96028")
-		(at 152.4 76.2 180)
+		(at 171.45 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW32"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "ace7ead7-ae58-41c1-8946-dd1f3d94def5")
+			(uuid "1cc92c83-434e-4e52-8ddd-6b24e71b7887")
 			(effects
 				(font
 					(size 1 1)
@@ -55067,7 +55067,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "3ce6559e-365e-4983-b3da-194986ed13e0")
+			(uuid "e87b3bc4-4bb7-4366-9afe-91365e2b1e77")
 			(effects
 				(font
 					(size 1 1)
@@ -55081,7 +55081,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "a0948688-f690-42af-bd50-4f909ab795ed")
+			(uuid "5f0731ca-cc6d-43bb-ace0-eb92e0c645d0")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55095,7 +55095,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "066db00b-8e7c-4d03-8c78-9a96d05a03e1")
+			(uuid "a5ef0597-6d9e-437e-b966-67eb4a26a8db")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55311,13 +55311,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "9bbf38ed-db93-483d-9d62-0d2ec3404df6")
-		(at 247.65 133.35 180)
+		(at 76.2 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW10"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "6a8e0bd5-9f61-481c-bf42-df108e2efb95")
+			(uuid "20c1582d-a330-4643-99f0-f77a6384d102")
 			(effects
 				(font
 					(size 1 1)
@@ -55329,7 +55329,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "72064186-2d3f-4a2a-945a-e48256807192")
+			(uuid "c8ce1bab-eddd-4fba-9d79-39ddc2cc65c4")
 			(effects
 				(font
 					(size 1 1)
@@ -55343,7 +55343,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "f49748b3-210c-4a3d-b45c-c348b3dfe80c")
+			(uuid "08e37c9e-1ef7-45c6-8fb9-84b56c80a0ef")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55357,7 +55357,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "f84d224a-e1a0-42a7-a829-fb3255e42333")
+			(uuid "2891c7c1-149d-4b7d-9843-5bfcf5646fc2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55573,13 +55573,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "9ece2e31-b49d-455f-83bf-29a86f8c742f")
-		(at 171.45 76.2 180)
+		(at 152.4 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW27"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "fb96a084-c989-4e35-9bcb-0f6e88560cde")
+			(uuid "01af2264-46fa-4a6d-8721-63b60835972f")
 			(effects
 				(font
 					(size 1 1)
@@ -55591,7 +55591,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "3cce0aa5-5f4e-407d-89ad-900cb702bb7f")
+			(uuid "8cb2b86f-eb00-4174-bd64-ea25d82f6c5d")
 			(effects
 				(font
 					(size 1 1)
@@ -55605,7 +55605,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "dcefe531-727d-46c4-a80e-e88631fb3a0a")
+			(uuid "e034cddb-1221-4aa5-83a7-c1d504b93555")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55619,7 +55619,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "86ff940f-c5dc-411c-a5d8-998c7dad5b04")
+			(uuid "eb88e0fb-1bd7-4bc1-a164-a282960878f5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55835,13 +55835,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "a31beff6-4dec-4202-b481-72a8ee83963b")
-		(at 57.15 152.4 180)
+		(at 266.7 152.4 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW61"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "eec0dac3-b88b-4e32-9731-bc6d0db468f8")
+			(uuid "b989e9c4-ee20-4557-ad23-56751851cceb")
 			(effects
 				(font
 					(size 1 1)
@@ -55853,7 +55853,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "df930563-58fe-4d57-b4c2-3201d55d08c3")
+			(uuid "849ccf2b-1191-4c89-afc8-0f0a02e67667")
 			(effects
 				(font
 					(size 1 1)
@@ -55867,7 +55867,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "09cd5b94-18c2-4c93-bee9-fbefd7ebc7eb")
+			(uuid "4650f3f5-f017-47d1-9f8f-36303cd20349")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -55881,7 +55881,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "8e0497a7-fb4d-4d43-9e93-bf7f07e35e3d")
+			(uuid "3dd04091-5e38-4346-9928-fb8daa6d53f3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -56097,13 +56097,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "ac8d9e92-bfdc-4ab3-8418-8224fde14a6c")
-		(at 57.15 133.35 180)
+		(at 266.7 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW60"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "c6d27551-9599-49de-bc13-887fafcb195b")
+			(uuid "cf8e8f41-cddc-434e-912c-44c2029e8b80")
 			(effects
 				(font
 					(size 1 1)
@@ -56115,7 +56115,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "da554218-d39e-4caa-9c2c-9758757650d0")
+			(uuid "44567506-7995-42dc-8517-e86b35bd7fc9")
 			(effects
 				(font
 					(size 1 1)
@@ -56129,7 +56129,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "d902e0f8-2753-4a57-aa26-063d0f6b30e0")
+			(uuid "250f6d7b-a53c-427e-acc2-556e31edbc40")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -56143,7 +56143,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "72d350b6-8d5b-42d8-9d31-e747c55b36f6")
+			(uuid "101d1100-b010-4ec5-a7ab-1ef0e6a9431b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -56359,13 +56359,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "aff741a6-ac01-4ff3-aa8c-a6b2e5f04112")
-		(at 209.55 152.4 180)
+		(at 114.3 152.4 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW21"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "21eae15a-b000-41ba-9194-0760dcf1d554")
+			(uuid "bfa842b3-43cb-4d14-90a6-52ab784d2f33")
 			(effects
 				(font
 					(size 1 1)
@@ -56377,7 +56377,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "73ad8d46-9d2c-46b0-a75e-8e323d8244d4")
+			(uuid "b8f3f1b6-7297-4159-8b6f-d610883ee285")
 			(effects
 				(font
 					(size 1 1)
@@ -56391,7 +56391,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "72420b02-e428-4348-9366-899ee10e9840")
+			(uuid "639636cf-48b8-4e3f-a05f-1c7086b72add")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -56405,7 +56405,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "0951425a-77dc-43b0-ad0e-79d7bc5883a8")
+			(uuid "9efe716f-62e2-43b4-a1c2-2c52c641b954")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -56621,13 +56621,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "b6115bb4-e229-439d-a2d2-f8ab11068c42")
-		(at 228.6 95.25 180)
+		(at 95.25 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW13"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "00cbdafd-9138-46f7-9dd3-60d4337849ce")
+			(uuid "d21aadd3-a737-41bd-86ca-08b296b19788")
 			(effects
 				(font
 					(size 1 1)
@@ -56639,7 +56639,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "5fd75b2f-3a2e-491b-ad9a-fab3aae3fbae")
+			(uuid "12563a97-86b0-4e59-947d-1269dc5b6b86")
 			(effects
 				(font
 					(size 1 1)
@@ -56653,7 +56653,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "45edccd3-7c3b-42aa-a9fb-834174dbc04c")
+			(uuid "eb86c7e7-9e13-4b72-b197-01c30ebc8d03")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -56667,7 +56667,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "d48e5bda-0a07-4684-b112-ffe57efe4e29")
+			(uuid "7ff624e7-293b-4ad9-90c2-f7957a0ab930")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -56883,13 +56883,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "bd03ca49-6013-4b70-99de-250ce7f1d893")
-		(at 228.6 114.3 180)
+		(at 95.25 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW14"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "4d4bc94e-4317-4ea5-9461-43617ba29a4e")
+			(uuid "0e0b8705-1fee-4c1f-a77e-22bf8f94a7a3")
 			(effects
 				(font
 					(size 1 1)
@@ -56901,7 +56901,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "0f5b864e-cdee-425d-b5fa-e35d3ba2f582")
+			(uuid "1780000f-783e-4431-882a-f4b95ad186f1")
 			(effects
 				(font
 					(size 1 1)
@@ -56915,7 +56915,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "a41cd848-a299-45da-968d-e5ad6ac17ce5")
+			(uuid "c56be6ce-fb53-4152-8dea-41d65a6544a9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -56929,7 +56929,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c62e8738-ec8e-425e-81ec-20f36bc9a40a")
+			(uuid "6d07ccbb-a8df-4ba2-b842-95e3a74c2f7e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -57145,13 +57145,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "bee01077-87b1-42bf-bfff-c70d569fdb7c")
-		(at 247.65 114.3 180)
+		(at 76.2 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW9"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "c15648aa-ee05-44ea-a405-444af834d35a")
+			(uuid "ebfd3e60-af2b-4b08-9159-baabfbdfd84f")
 			(effects
 				(font
 					(size 1 1)
@@ -57163,7 +57163,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "9e56c4f3-1b00-4824-8240-08b74f9478e4")
+			(uuid "a3ed50f1-bd96-4478-a301-5e544154f829")
 			(effects
 				(font
 					(size 1 1)
@@ -57177,7 +57177,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "6e5d99a0-f2fd-479a-9347-7652649ce0ac")
+			(uuid "0e801238-6d61-4516-b49d-e0c091e7a8ac")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -57191,7 +57191,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "f8772587-5900-43da-99db-b1e1b4ed9e5e")
+			(uuid "5c1ff8cc-45b7-43da-a573-1ac5c013b3c2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -57407,13 +57407,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "c1296ca9-5698-4a63-a8d7-4fea453cd40c")
-		(at 95.25 114.3 180)
+		(at 228.6 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW48"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "bb809140-6d5d-4d25-862a-90f0a028aa69")
+			(uuid "c07027ed-8d35-4ee5-b29e-80ae4bc0e2f7")
 			(effects
 				(font
 					(size 1 1)
@@ -57425,7 +57425,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "eeb46bdd-90fd-4a68-a65b-f6fdfb452470")
+			(uuid "1ba3b953-9607-45e1-9573-bb81646b4040")
 			(effects
 				(font
 					(size 1 1)
@@ -57439,7 +57439,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "2c7587ac-c213-43c5-b580-3e846e162b25")
+			(uuid "6bc2189f-ade9-49a4-abcd-49e32777342d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -57453,7 +57453,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "5cae43ad-c0ed-4435-9c30-151fcb645cf8")
+			(uuid "ced30489-6702-4f75-b863-041185912354")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -57669,13 +57669,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "ca0bef12-9341-4a36-8bf5-99e760a5357a")
-		(at 114.3 133.35 180)
+		(at 209.55 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW44"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "c83cc83b-9df2-44c2-8257-20f33ae07f01")
+			(uuid "64721305-022b-4b80-a3d0-c2596d240ea9")
 			(effects
 				(font
 					(size 1 1)
@@ -57687,7 +57687,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "61d86da1-2696-4733-a96f-f37fa3133391")
+			(uuid "db920639-5046-4e5e-8a3a-9b91df14eaf0")
 			(effects
 				(font
 					(size 1 1)
@@ -57701,7 +57701,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "95e2dcc1-4ca9-4aa1-aa01-64880e6c123e")
+			(uuid "63341376-3f01-433d-a9d7-b1b6aedd49e9")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -57715,7 +57715,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "9c33f78e-e95c-4cc4-8f6a-df304b467808")
+			(uuid "62722a94-1275-4d27-99e5-ae7c433f7712")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -57931,13 +57931,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "ca553416-347f-4a4d-b7df-31646f830720")
-		(at 190.5 76.2 180)
+		(at 133.35 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW22"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "0a466b82-9d86-4002-a72f-b4077fbfc17c")
+			(uuid "d9a1d8a8-f6e6-49b1-8da2-b30db346eefa")
 			(effects
 				(font
 					(size 1 1)
@@ -57949,7 +57949,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "054f2014-01d8-41d3-9e22-04a7ba6a3a2a")
+			(uuid "2308fe6d-5f66-44e7-8f7b-a02b14c36b71")
 			(effects
 				(font
 					(size 1 1)
@@ -57963,7 +57963,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c181c490-0f5c-42f5-8e08-049238e1070f")
+			(uuid "55143abf-f60f-4701-8333-8215d20ea6ba")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -57977,7 +57977,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "1aa8064c-babd-4094-805b-dce774c6cb5e")
+			(uuid "57389065-9bf3-40fa-8ee2-57b48ec07c68")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58193,13 +58193,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "cde7843f-631d-42f2-887a-72991ecb011c")
-		(at 190.5 114.3 180)
+		(at 133.35 114.3 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW24"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "15de8de4-1e11-45ae-a3d9-bfb63cc09aa4")
+			(uuid "e5cb45b7-a2ea-47b1-a681-924af5e33ca2")
 			(effects
 				(font
 					(size 1 1)
@@ -58211,7 +58211,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "a7d7d556-316a-491e-8c97-e769676a3ff1")
+			(uuid "6106f6ff-396b-4222-9598-4993e367aab4")
 			(effects
 				(font
 					(size 1 1)
@@ -58225,7 +58225,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "cf08ade0-f4e9-45e4-b0e5-94b8b3f7eb24")
+			(uuid "8bd39619-37ca-4517-9538-ff02ff2ba11b")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58239,7 +58239,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "30c0fa60-ff1b-4eb7-bc6d-d709953d18a7")
+			(uuid "e8ac7c85-99fc-4c6d-a89f-a8bdd5c12c6c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58455,13 +58455,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "cf2a0802-24d8-4e7f-9960-ecbc168023f6")
-		(at 171.45 133.35 180)
+		(at 152.4 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW30"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "3647f1a9-05aa-438b-aa1b-b461b5320a52")
+			(uuid "d81159b6-8c61-44c0-bbb7-85825eb8041c")
 			(effects
 				(font
 					(size 1 1)
@@ -58473,7 +58473,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "fcecbffd-085e-4407-b4cb-481cb824bea0")
+			(uuid "5f43fa80-fc45-4cba-84ca-0a7f109f5390")
 			(effects
 				(font
 					(size 1 1)
@@ -58487,7 +58487,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "7caf32ad-7910-4fe8-9934-43336a6a5f0e")
+			(uuid "b70819e3-1869-450d-8e1c-17e05cd06729")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58501,7 +58501,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "787e3ff5-5ad6-48f2-b102-36310ef021a4")
+			(uuid "b2507f04-8793-4a9f-aa01-84121c8b0f13")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58717,13 +58717,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "d1bed2f2-bbaf-4be7-9727-75867f570bb9")
-		(at 247.65 95.25 180)
+		(at 76.2 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW8"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "5a592449-a8b4-48ec-ae3a-0bc362c80573")
+			(uuid "a75225cf-1d73-44f3-adbc-f1311e4f9240")
 			(effects
 				(font
 					(size 1 1)
@@ -58735,7 +58735,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "c0ebc7bc-95f8-47f1-b6c0-cbcacd5cc960")
+			(uuid "d1359fc0-e330-49ef-93bf-352385f1e8d6")
 			(effects
 				(font
 					(size 1 1)
@@ -58749,7 +58749,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "4a07d524-da9a-4ae9-a69f-e3a8545308b7")
+			(uuid "90c117bf-523e-49f0-b146-541affa1b51f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58763,7 +58763,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "b08ae539-71d7-4e3c-a203-56130b3c99ce")
+			(uuid "405a5e1d-bb6f-4a65-ae87-114d50d65598")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58979,13 +58979,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "d7366478-f096-4a8d-add9-4fbd3eb2261c")
-		(at 266.7 133.35 180)
+		(at 57.15 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW5"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "51fa5687-414c-4279-ba4d-76a703351712")
+			(uuid "d9730c18-d552-48bb-a52c-c7690bb0578a")
 			(effects
 				(font
 					(size 1 1)
@@ -58997,7 +58997,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "629b8130-dda3-4d31-9c17-31b777a5dedd")
+			(uuid "90678dc6-a93b-45c9-b4b3-1280e2a2535a")
 			(effects
 				(font
 					(size 1 1)
@@ -59011,7 +59011,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "1e66a5a0-4054-4698-a453-dd427f5c143d")
+			(uuid "25bf356c-30ba-4e80-9fd3-3fa720eb3d7c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -59025,7 +59025,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "0fb2e3a8-b376-4b60-a860-bf62c4d76ab6")
+			(uuid "156b1208-b76c-406f-a05f-6c73e69ecb9f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -59241,13 +59241,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "e46d0036-dd81-44ab-86d2-bfb630a3d9cd")
-		(at 228.6 152.4 180)
+		(at 95.25 152.4 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW16"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "137f5b03-5388-4401-89b8-ab5a5502d079")
+			(uuid "85ed66f9-c2f0-474c-af1d-97d8272ff846")
 			(effects
 				(font
 					(size 1 1)
@@ -59259,7 +59259,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "920882fa-efea-4b41-a004-656783e75cd0")
+			(uuid "99dbb046-f427-4ae4-a001-0166c136f63f")
 			(effects
 				(font
 					(size 1 1)
@@ -59273,7 +59273,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "3e488650-be3c-46a1-928c-527a2d3150dc")
+			(uuid "f91146ca-e19c-4c17-8b16-c867ab10846f")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -59287,7 +59287,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "104343c7-80f3-4aff-98e3-bb4b2d23ff68")
+			(uuid "50e35e9b-eb04-4d73-8f88-cec1cb8d5318")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -59503,13 +59503,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "e4ab8187-07a2-40f0-a253-fdc1505b0713")
-		(at 114.3 95.25 180)
+		(at 209.55 95.25 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW42"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "08830bef-b1c1-45ea-a6fc-ee20d8018ac9")
+			(uuid "3e4191e3-f2c9-4025-88e7-eff21a6cbd1f")
 			(effects
 				(font
 					(size 1 1)
@@ -59521,7 +59521,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "d0b94e22-b966-41a5-b409-c8543695cc32")
+			(uuid "1f9b71f7-b0e8-4c59-b5b8-5eedfbc41bc7")
 			(effects
 				(font
 					(size 1 1)
@@ -59535,7 +59535,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c7ddd3c1-55dd-4d77-b882-0b9eb25108fb")
+			(uuid "945754b9-755b-4e28-82d4-39c82af1b0d4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -59549,7 +59549,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "10fccb1d-ec61-4c48-841a-282eecb82c57")
+			(uuid "eedc506c-7c00-421d-9db0-ff377d6392cc")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -59765,13 +59765,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "eabb9ec0-1801-49a8-a48c-2b251ee54650")
-		(at 114.3 152.4 180)
+		(at 209.55 152.4 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW45"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "13588cc0-d5cf-44a7-898b-3fc9b0135494")
+			(uuid "e4582470-afc9-42c0-890c-361b22bc418e")
 			(effects
 				(font
 					(size 1 1)
@@ -59783,7 +59783,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "759bb541-89fa-4a8c-a18a-f4b15bc45d3f")
+			(uuid "13ec85aa-7735-43bb-a29e-b61d5ff3c0e1")
 			(effects
 				(font
 					(size 1 1)
@@ -59797,7 +59797,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "a5de7ecd-92eb-4432-a418-0256b48d21ec")
+			(uuid "eb1841f3-a528-442d-93b6-f619a2e86240")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -59811,7 +59811,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "49f1133e-01dc-4d48-b14d-80384cdf7b61")
+			(uuid "7c1d7d78-90d1-429b-bd2d-f080be34ef3e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60027,13 +60027,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "ed1af4fa-b4ad-435e-8b6e-fc36fc9da0f4")
-		(at 209.55 76.2 180)
+		(at 114.3 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW17"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "4651ded7-1759-4ff6-be39-fc07395aba0d")
+			(uuid "f65a6abe-9769-48fd-a3fe-bb3934db48c4")
 			(effects
 				(font
 					(size 1 1)
@@ -60045,7 +60045,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "fcc58b62-5593-4d41-a8a1-56249ab224da")
+			(uuid "4a5236b5-8b12-4854-99da-2687b6b03f59")
 			(effects
 				(font
 					(size 1 1)
@@ -60059,7 +60059,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "97ec1b5c-cdab-48eb-8dc3-dd61a37a5377")
+			(uuid "9e6f01ea-6446-4297-a865-1a7a73222ad1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60073,7 +60073,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "0a4c93e3-41ee-4ea6-b68b-83dfddac1f7b")
+			(uuid "f2d1925f-0de4-41a5-821f-d3d9b6d62536")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60289,13 +60289,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "f5aef20e-22c1-4470-8479-6b5d1eb28c96")
-		(at 133.35 76.2 180)
+		(at 190.5 76.2 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW36"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "3166573e-14dd-42ae-89fb-4d225af864b4")
+			(uuid "19d578c4-4270-4f78-af21-b921388fcdd7")
 			(effects
 				(font
 					(size 1 1)
@@ -60307,7 +60307,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "a03b2ca3-1f43-495b-99ee-c89579745d70")
+			(uuid "f6d18d44-4657-41c2-a6bf-6fd1b087cc32")
 			(effects
 				(font
 					(size 1 1)
@@ -60321,7 +60321,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "58ca122d-ae1f-4e05-8d10-602ccaf253a3")
+			(uuid "3008d33d-a381-4a21-8bcd-30bfd914fd2c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60335,7 +60335,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "1128d646-3ccd-441d-a5d9-20960146d8bf")
+			(uuid "1f02ef48-bbde-43bb-9317-235815fab1a8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60551,13 +60551,13 @@
 	(footprint "Krteq:KS-33B Hotswap 1u"
 		(layer "B.Cu")
 		(uuid "f7b0e30e-e38a-46db-a054-f3be311981bc")
-		(at 95.25 133.35 180)
+		(at 228.6 133.35 180)
 		(descr "KS-33B (GLP 3.0) switch, hotswap socket")
 		(property "Reference" "SW49"
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "a2c958f7-d755-4d9a-b998-04295e86c01a")
+			(uuid "3aa66379-0126-4c14-a48c-a8dedce219be")
 			(effects
 				(font
 					(size 1 1)
@@ -60569,7 +60569,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "1d79c53d-df38-473b-b9bb-4d165475d110")
+			(uuid "b42b1057-9bf9-4418-a6fe-50fd69df4d81")
 			(effects
 				(font
 					(size 1 1)
@@ -60583,7 +60583,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "70ffc3ef-4b11-4a4a-ae2d-0498cfad93db")
+			(uuid "f524a1b3-f174-41e5-a652-f460ea0efa41")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60597,7 +60597,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "0b8a6575-7618-48d8-a50a-25554d75a1c0")
+			(uuid "722fe092-16d9-4416-9a13-fbce5ebed261")
 			(effects
 				(font
 					(size 1.27 1.27)
