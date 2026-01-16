@@ -7917,7 +7917,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 228.6 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8322,7 +8322,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 215.9 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8548,7 +8548,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 76.2 191.77 0)
 			(effects
 				(font
@@ -8794,7 +8794,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 279.4 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8935,7 +8935,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 203.2 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9084,7 +9084,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 304.8 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9478,7 +9478,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 215.9 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9549,7 +9549,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 203.2 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9620,7 +9620,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 228.6 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9850,7 +9850,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 279.4 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9921,7 +9921,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 254 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9992,7 +9992,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 241.3 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10626,7 +10626,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 2u"
 			(at 247.65 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10767,7 +10767,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 241.3 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -11223,7 +11223,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 292.1 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -11372,7 +11372,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 317.5 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -11677,7 +11677,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 304.8 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12125,7 +12125,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 317.5 45.974 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12352,7 +12352,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 304.8 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12493,7 +12493,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 215.9 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12660,7 +12660,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 76.2 200.66 0)
 			(effects
 				(font
@@ -13372,7 +13372,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 292.1 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13827,7 +13827,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 228.6 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -14065,7 +14065,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 292.1 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -14221,7 +14221,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 76.2 209.55 0)
 			(effects
 				(font
@@ -14607,7 +14607,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 266.7 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -15387,7 +15387,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 215.9 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -15458,7 +15458,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 190.5 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17030,7 +17030,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 279.4 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17241,7 +17241,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 190.5 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17312,7 +17312,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 279.4 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17383,7 +17383,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 266.7 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18009,7 +18009,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 241.3 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18228,7 +18228,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 215.9 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18388,7 +18388,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 254 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18459,7 +18459,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 266.7 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18529,7 +18529,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 177.8 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18689,7 +18689,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 266.7 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19094,7 +19094,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 292.1 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19324,7 +19324,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 228.6 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19780,7 +19780,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 266.7 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19929,7 +19929,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 203.2 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20167,7 +20167,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 254 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20238,7 +20238,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 177.8 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20309,7 +20309,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 177.8 45.974 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20846,7 +20846,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 177.8 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21332,7 +21332,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 292.1 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21807,7 +21807,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 228.6 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22662,7 +22662,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 241.3 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22733,7 +22733,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 254 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22804,7 +22804,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 190.5 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23392,7 +23392,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 304.8 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23937,7 +23937,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 317.5 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24245,7 +24245,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 203.2 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24631,7 +24631,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 317.5 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24997,7 +24997,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 190.5 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25313,7 +25313,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 317.5 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25457,7 +25457,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 203.2 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25528,7 +25528,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 190.5 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26076,7 +26076,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 177.8 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26147,7 +26147,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 177.8 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26463,7 +26463,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 317.5 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26690,7 +26690,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 304.8 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26939,7 +26939,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "Switch 1u"
 			(at 279.4 80.264 0)
 			(do_not_autoplace yes)
 			(effects

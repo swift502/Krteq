@@ -95,8 +95,8 @@
 		(uuid "17a37dc2-1fc7-4198-bc2d-40147f9021f4")
 	)
 	(fp_rect
-		(start -8.7 -2.6)
-		(end 7.4 6.7)
+		(start -6.3 -2.9)
+		(end 6.3 7)
 		(stroke
 			(width 0.05)
 			(type default)
