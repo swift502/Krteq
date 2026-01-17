@@ -20,7 +20,7 @@ Stabilizer: https://ueeshop.ly200-cdn.com/u_file/UPAW/UPAW819/2506/10/file/GATER
 <!-- - PCB -->
 <!-- - Case -->
 - 61x Gateron KS-33B (GLP 3.0) switches
-- 61x Low-Profile Shinethrough MX Keycaps
+- 61x MX Low-Profile Shinethrough Keycaps
 - Gateron 2u Low-Profile Plate Mounted Stabilizer
 - Raspberry Pi Pico
 - 6" (15cm) Panel Mount USB Extension Cable
