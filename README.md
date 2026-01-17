@@ -1,10 +1,28 @@
 # Krteq
 
-Switch: https://ueeshop.ly200-cdn.com/u_file/UPAW/UPAW819/2506/10/file/GATERONKS-33LowProfile30GreyHeronSwitch-KS-33BHB10B050NW-G13.pdf
-Socket: https://www.lcsc.com/datasheet/C41430893.pdf
-Stabilizer: https://ueeshop.ly200-cdn.com/u_file/UPAW/UPAW819/2506/10/file/GATERONLowProfilePlateMountedStabilizer-KS-WXZ-Z10F01-D08-97.pdf
+## Parts
 
-# BOM
+### Build from source data
+
+- PCB
+- Case
+
+### Buy (keyboard)
+
+- 61x Gateron KS-33B (GLP 3.0) switches
+- 61x MX Low-Profile Shinethrough Keycaps
+- Gateron 2u Low-Profile Plate Mounted Stabilizer
+
+### Buy (electronics)
+
+- Raspberry Pi Pico
+- 6" (15cm) Panel Mount USB Extension Cable
+- 3x 5mm LEDs
+- 3x THT Resistors
+
+### SMD Parts
+
+The PCB is designed to be ordered from JLCPCB already assembled with these parts: 
 
 | Part | Mfr | JLC |
 | --- | --- |  --- |
@@ -15,22 +33,17 @@ Stabilizer: https://ueeshop.ly200-cdn.com/u_file/UPAW/UPAW819/2506/10/file/GATER
 | R470 | 0603WAF4700T5E | C23179 |
 | R10K | 0603WAF1002T5E | C25804 |
 
-# Parts
+## Options
 
-<!-- - PCB -->
-<!-- - Case -->
-- 61x Gateron KS-33B (GLP 3.0) switches
-- 61x MX Low-Profile Shinethrough Keycaps
-- Gateron 2u Low-Profile Plate Mounted Stabilizer
-- Raspberry Pi Pico
-- 6" (15cm) Panel Mount USB Extension Cable
-- 3x 5mm LEDs
-- 3x THT Resistors
+### Customization
 
-# Options
+- Case: Filament colors
+- Inidicator LEDs:
+    - Colors
+    - Brightness (resistor values)
+
+### Options
 
 - PCB: Can be ordered from JLCPCB to have all SMD parts already soldered on
-- Case: Case colors
-- MCU Hot-swap: The RPi can be soldered directly, but the case can also fit low-profile pin headers to make the board replacable in case something goes wrong
-- Inidicator: LED colors, resistor values then determine their brightness
-- USB micro b or c
+- MCU hot-swap: The RPi can be soldered directly, but the case can also fit low-profile pin headers to make the board replacable in case something goes wrong
+- USB type: Micro B or USB C (RPI and extension cable variants)
