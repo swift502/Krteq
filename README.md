@@ -33,3 +33,4 @@ Stabilizer: https://ueeshop.ly200-cdn.com/u_file/UPAW/UPAW819/2506/10/file/GATER
 - Case: Case colors
 - MCU Hot-swap: The RPi can be soldered directly, but the case can also fit low-profile pin headers to make the board replacable in case something goes wrong
 - Inidicator: LED colors, resistor values then determine their brightness
+- USB micro b or c
