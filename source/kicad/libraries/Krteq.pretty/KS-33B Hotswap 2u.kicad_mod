@@ -53,7 +53,7 @@
 			)
 		)
 	)
-	(attr smd)
+	(attr through_hole)
 	(fp_line
 		(start -9.525 -9.525)
 		(end -9.525 9.525)
@@ -268,4 +268,37 @@
 		(uuid "5c6720c9-f0e3-4807-a6df-b399e885f568")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/KS-33B.step"
+		(offset
+			(xyz 158.986 42.34 -5.3)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -180 -0)
+		)
+	)
+	(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/Hotswap.step"
+		(offset
+			(xyz -0.64 -3.8 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
+		)
+	)
+	(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/Stabilizer.step"
+		(offset
+			(xyz 60 0 1.55)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -180 -0)
+		)
+	)
 )

@@ -176,7 +176,7 @@
 		(uuid "046ac8a4-1147-4fe3-b440-3dfecb3d6589")
 	)
 	(embedded_fonts no)
-	(model "${KICAD9_3DMODEL_DIR}/LED_SMD.3dshapes/LED_1206_3216Metric_ReverseMount.step"
+	(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/ReverseLED.step"
 		(offset
 			(xyz 0 0 0)
 		)
@@ -184,7 +184,7 @@
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 0)
+			(xyz -180 -0 -0)
 		)
 	)
 )
