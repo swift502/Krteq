@@ -2,11 +2,13 @@
 
 ## Parts
 
-- 61x Gateron KS-33B (GLP 3.0) switches
-- 61x MX Low-Profile Shinethrough Keycaps
-- Gateron 2u Low-Profile Plate Mounted Stabilizer
+- [PCB](production/pcb/)
+- [Case](production/case/)
 - Raspberry Pi Pico
 - 15cm (6") USB Panel Mount Extension Cable
+- 61x Gateron KS-33B (GLP 3.0) switches
+- 61x MX Low-Profile Keycaps
+- Gateron 2u Low-Profile Plate Mounted Stabilizer
 - Rubber feet
 
 ## PCB
