@@ -6,6 +6,8 @@
 - 61x MX Low-Profile Shinethrough Keycaps
 - Gateron 2u Low-Profile Plate Mounted Stabilizer
 
+---
+
 - Raspberry Pi Pico
 - 15cm (6") USB Panel Mount Extension Cable
 - Rubber feet
