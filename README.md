@@ -5,8 +5,10 @@
 - 61x Gateron KS-33B (GLP 3.0) switches
 - 61x MX Low-Profile Shinethrough Keycaps
 - Gateron 2u Low-Profile Plate Mounted Stabilizer
+
 - Raspberry Pi Pico
 - 15cm (6") USB Panel Mount Extension Cable
+- Rubber feet
 
 ## PCB
 
@@ -14,6 +16,7 @@ The PCB is designed to be ordered from JLCPCB already assembled using the follow
 
 | Part | Mfr | JLC |
 | --- | --- |  --- |
+| Hotswap |  |  |
 | Diode | 1N4148WS | C2128 |
 | LED | MHT151WDT | C401114 |
 | Mosfet | HX2302A | C296295 |
