@@ -11,7 +11,7 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), improving 
 - Gateron LP 3.0 switches
 - Screwless PCB edge mount
 - 3D printed case with a 7 degree tilt
-- ?mm × ?mm × ?mm
+- 237mm × 125mm × 27mm
 
 ## Parts
 
