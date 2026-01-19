@@ -11,7 +11,7 @@
 
 ## PCB
 
-The PCB is designed to be ordered from JLCPCB already assembled using the following parts.
+The PCB is designed to be ordered already assembled from JLCPCB with the following parts.
 
 | Part | Mfr | JLC |
 | --- | --- |  --- |
