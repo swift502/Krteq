@@ -34,11 +34,11 @@ The PCB is designed to be ordered already assembled from JLCPCB with the followi
 | D | 1N4148WS | C2128 |
 | LED | MHT151WDT | C401114 |
 | NMOS | HX2302A | C296295 |
-| R100 | 0603WAF1000T5E | C22775 |
+| R100 | 0603WAF1000T5E | C22775 | >> lower for leds 82
 | R330 | 0603WAF3300T5E | C23138 |
-| R470 | 0603WAF4700T5E | C23179 |
+| R470 | 0603WAF4700T5E | C23179 | >> use for all gate resistors
 | R10K | 0603WAF1002T5E | C25804 |
-| R100K | 0603WAF1003T5E | C25803 |
+| R100K | 0603WAF1003T5E | C25803 | >> use 10k instead
 
 ## Case
 
