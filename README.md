@@ -9,7 +9,7 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), improving 
 - Backlight (single color, no effects)
 - QMK/VIA compatible
 - Gateron LP 3.0 switches
-- Tray mount
+- Tray mount PCB, integrated plate
 - 3D printed case with a 7 degree tilt
 - 237mm × 125mm × 27mm
 
