@@ -595,7 +595,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "aafdc6e3-8fef-4054-af54-5d7fc25b3a71")
@@ -911,7 +911,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "23a25473-9e52-436f-8158-2919903efbf6")
@@ -1743,7 +1743,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "d5076a11-3641-423b-bfa2-2552a3712d32")
@@ -2106,7 +2106,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "7ce8f4b5-760d-4e21-b9f2-04551ebb1992")
@@ -2423,7 +2423,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "0eab6803-ba01-4642-8cec-03b36216aaa1")
@@ -2787,7 +2787,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "2dfcd984-dedc-442a-b797-f2d9d6b74bbf")
@@ -3004,7 +3004,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "6b529a61-8210-4de3-bfef-6955f50eb0bf")
@@ -3321,7 +3321,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "03e3fc13-ff88-45ea-b680-891a7656f1a7")
@@ -3685,7 +3685,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "1f253e12-666f-4a28-9e4c-5a6afe467925")
@@ -3902,7 +3902,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "ca6f3b32-770c-4426-b0c4-84cbdcd4ed50")
@@ -4186,7 +4186,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "5e785937-e2fc-40b5-9387-a574dc1a8601")
@@ -4616,7 +4616,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "4bb98f65-59e9-47a6-a5ff-8378557787a7")
@@ -4900,7 +4900,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "4f5e15f9-8fc5-4ffd-81b8-1920c4bb4458")
@@ -5363,7 +5363,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "b9515093-b368-4909-bd8a-8c65748b9b87")
@@ -5726,7 +5726,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "0400fd63-b8a3-4db5-b397-6b2ea33baa10")
@@ -6011,7 +6011,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "8f21d0c1-2e15-4f7d-8b69-06765fa49a46")
@@ -6228,7 +6228,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "11ec54de-2316-49e3-ba85-d7c28a16d90b")
@@ -6512,7 +6512,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "4019ebe5-dc17-4e35-8472-36e52dca8fc0")
@@ -6974,7 +6974,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "838dfeaa-9d8b-43ac-8a33-479886a09f13")
@@ -7259,7 +7259,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "eb573b5f-3d5e-42d2-a8be-acc68f50b53d")
@@ -7477,7 +7477,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "867eddd9-b3ca-474c-a586-b13f32281a16")
@@ -8063,7 +8063,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "df30a15c-72a2-4c41-805d-46f55aec2d60")
@@ -8347,7 +8347,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "e97f4702-058f-45b6-a008-6d0541cbec89")
@@ -8664,7 +8664,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "3b388b07-c681-420d-962f-5e5d1137b260")
@@ -8881,7 +8881,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "ab6cb1b1-d729-4528-84dc-fa1acfc23ce5")
@@ -9343,7 +9343,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "0fb7b2be-225f-4338-b471-fb4f3c301d4c")
@@ -9773,7 +9773,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "9498f421-7aec-4345-bac9-59085697916a")
@@ -10236,7 +10236,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "08cb523f-ea19-4b50-8ee1-a34376da97b5")
@@ -10453,7 +10453,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "f78c9c68-907a-4df1-99b0-54b8e27cae8e")
@@ -10770,7 +10770,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "943605f0-394a-4379-9f94-b2cef640a81d")
@@ -10988,7 +10988,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "33bfce08-f96b-4d73-ba72-bd505f641f31")
@@ -11205,7 +11205,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "98750cbd-892c-46c7-b8de-cdc250c35c50")
@@ -11489,7 +11489,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "9d6a2b34-1d58-4230-a28c-1e9c4e6d0194")
@@ -11805,7 +11805,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "e1bb810f-013a-4245-a4be-bc0000d8f2f3")
@@ -12122,7 +12122,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "bfdacea6-e3e9-4a22-af81-e0e94cbf8ea6")
@@ -12339,7 +12339,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "01097b91-ca3d-4f87-9d60-25bd64d76e27")
@@ -12623,7 +12623,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 2u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "e18e6e8a-0d28-4506-a504-dee9689ee649")
@@ -12940,7 +12940,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "b1ab44c0-9fc8-4180-935e-e7f48d26f239")
@@ -13224,7 +13224,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "2f9f4c82-8ca7-4fcf-a36b-004d11805bd1")
@@ -13832,7 +13832,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "c245f403-c3a5-415f-a8a6-25d5a08577af")
@@ -14441,7 +14441,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "403b5efc-77cf-4247-9bb4-06b06041bfb6")
@@ -14658,7 +14658,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "53f15650-687e-4463-8345-ff3b48bba211")
@@ -14942,7 +14942,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "6735e430-e3af-4cde-aba8-8d5b881d04c8")
@@ -15259,7 +15259,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "e5f032a2-c9fa-4bdf-90b0-0d1531ec094a")
@@ -15622,7 +15622,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "512ab2e0-5955-4f8d-a6cc-539aaf364453")
@@ -15938,7 +15938,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "e358aa53-102f-48a6-82e3-4afcebe231c8")
@@ -16223,7 +16223,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "2a0ff9eb-ae7f-444a-9e7e-dd851ac4837a")
@@ -16732,7 +16732,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "e27d995e-5656-4192-ac7c-d5143f580c52")
@@ -17016,7 +17016,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "e4ef67e8-1661-4dc1-8e86-489c22d0a5b8")
@@ -17446,7 +17446,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "ec8751a7-fa45-4cef-ad43-9d0db2da1b33")
@@ -17730,7 +17730,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "0b80fda9-b09a-4eff-8747-e346094e03c9")
@@ -18014,7 +18014,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "d8c4bd11-107f-4484-a536-9487a8c00910")
@@ -18299,7 +18299,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "b6f1d76a-1fd6-424a-8699-ef1cc8f93dca")
@@ -18516,7 +18516,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "470"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "e181831d-39e8-4905-9680-bea3acf390f2")
@@ -18808,7 +18808,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "4184f949-f234-4983-8c53-8c0257cc757f")
@@ -19093,7 +19093,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "b41ab06c-4cb5-49f5-b693-189291269685")
@@ -19310,7 +19310,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "470"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "53a7b83d-fcd9-4d11-9310-b61561addd23")
@@ -19456,7 +19456,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "c70a5a43-0033-4d6b-90dd-4c3efe98e984")
@@ -19772,7 +19772,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "44fd3579-e283-4d78-bf35-4a26f2e4e100")
@@ -19918,7 +19918,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "7b116660-5c23-4956-8f26-2b74f45bd424")
@@ -20203,7 +20203,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 0)
 			(layer "B.Fab")
 			(uuid "b43f9d7f-2d56-42ea-9407-3a987270fd39")
@@ -20420,7 +20420,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "be541c13-72b6-45ac-be77-a11c79045268")
@@ -20850,7 +20850,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "47fcb1c7-5066-4845-b525-a5234cdcb285")
@@ -21167,7 +21167,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "0d0f69e2-5897-4537-9843-11eec9cbe7b0")
@@ -21384,7 +21384,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "03b51b6c-97a9-4635-95ac-602b9313a35e")
@@ -21701,7 +21701,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "2e677f3a-d3e2-4a41-93f5-455ffb1104b8")
@@ -22064,7 +22064,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "4d763da7-b305-4a85-8b9e-f6e332003831")
@@ -22348,7 +22348,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "34043ee3-6bd7-4c4c-85a5-925c51457fe5")
@@ -22633,7 +22633,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "19f30035-d923-4a8d-9a8a-ebe6265ce3c5")
@@ -22851,7 +22851,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 0)
 			(layer "B.Fab")
 			(uuid "4679d2a4-018d-4efd-9231-b0451a728e3d")
@@ -23068,7 +23068,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "d53789f7-a72c-4c46-8cb5-836169343aec")
@@ -23352,7 +23352,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "cdc76ef2-1815-4e92-a869-a257d0489966")
@@ -23782,7 +23782,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "92aeb01f-dfbb-416e-8223-482a1dab015a")
@@ -24212,7 +24212,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "670fa2fb-e9f5-4bd3-82fc-819915a69bb6")
@@ -24497,7 +24497,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "e5fd2abc-0334-4268-a50e-28d386e73856")
@@ -24715,7 +24715,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 0)
 			(layer "B.Fab")
 			(uuid "825b5b30-5c6d-4fc2-b232-e3c0b7c7a4d1")
@@ -24932,7 +24932,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "8b7dbb70-a02b-44e6-9742-858538641bbe")
@@ -25248,7 +25248,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "0bd81ba9-91c2-4f91-a396-82efed8cecaf")
@@ -25710,7 +25710,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "46abca16-5016-4fd8-8c34-b813f7239b1a")
@@ -26140,7 +26140,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "39b92b89-e6b7-4fe8-8103-dd4a5ed068a9")
@@ -26456,7 +26456,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "72da357c-25d8-416c-9b84-0d54a3204dae")
@@ -26740,7 +26740,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "dfc09d28-6f21-4690-b118-2f25e7e2e8b9")
@@ -27202,7 +27202,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "28264e70-6520-48f9-8510-5fbf3495fd99")
@@ -27518,7 +27518,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "86b1862f-482b-472a-a980-2ba04113d163")
@@ -27803,7 +27803,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "3b8c9f90-af5c-4225-8d14-cdd660358f1c")
@@ -28020,7 +28020,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "f740a45e-3f17-4f5a-869f-0bbc18db741c")
@@ -28305,7 +28305,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "3cd18d5d-e15c-4192-bdbd-337fac97dc7e")
@@ -28523,7 +28523,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "db4a2679-19be-444f-9980-01f240a741f6")
@@ -28740,7 +28740,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "8fb4b1c8-0502-451d-9f9f-5401f4a008c4")
@@ -29057,7 +29057,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "af030069-b564-478c-a987-6ad90e19f2af")
@@ -29274,7 +29274,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "1a01f560-bab7-4347-a022-aa039133064f")
@@ -29590,7 +29590,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "6a4dd0c3-3bcb-48b8-98b9-ecd4c41cc0de")
@@ -29875,7 +29875,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "6afe12d1-781d-4486-a8cf-963e4fe27f4c")
@@ -30092,7 +30092,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "82"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "e693cb3f-aea0-4ad9-9b2a-883c4f821bc6")
@@ -30238,7 +30238,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "ddb2465c-fce4-47a3-9d87-576332e71813")
@@ -30960,7 +30960,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "674ccb1b-d565-44e7-a664-d9b217690861")
@@ -31244,7 +31244,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "e84436c1-1f3e-4657-bab4-dc11bfdb4686")
@@ -31560,7 +31560,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "99cf8a2a-64df-4fcb-8cac-9b222f210d3b")
@@ -32314,7 +32314,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "2444b7df-8e54-439e-9356-cccc369b9210")
@@ -32776,7 +32776,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "3436a89d-032f-44fc-9046-3c6e3851d692")
@@ -33206,7 +33206,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "bc042269-c660-4856-9ecf-ab11e204ab62")
@@ -33491,7 +33491,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "e0b96220-c080-4806-b252-1829be955f23")
@@ -33854,7 +33854,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "23c6885a-1798-4c81-930e-b84965491424")
@@ -34540,7 +34540,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "ba7c62b8-bba2-4c17-8a4a-002969d7a89e")
@@ -34757,7 +34757,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "5169a114-8228-4037-b684-86012d7af06c")
@@ -35074,7 +35074,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "2314a845-dc8b-43d0-92ac-a308032d8767")
@@ -35437,7 +35437,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "0c75a49b-2d02-4421-8c03-e5ae111ebeb7")
@@ -35753,7 +35753,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "0e7ffbf0-ab9c-47cd-bcbd-f5ca35350163")
@@ -36184,7 +36184,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "b5ca5b90-0742-459c-b3ed-544ddd34110d")
@@ -36401,7 +36401,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "cc537e52-a7bb-4ed6-8086-8db0f6b92501")
@@ -36717,7 +36717,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "82"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "fd1ecc63-b816-4cba-a978-84b8bc4fc028")
@@ -36863,7 +36863,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "4d888ed2-ed81-423e-bbf0-bd715b9d9b5d")
@@ -37179,7 +37179,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "9c6e691c-5af9-4a07-952c-bc72fa608acc")
@@ -37463,7 +37463,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "0b3d71c8-6b4a-4bf4-8ad6-33de6be939a1")
@@ -37779,7 +37779,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "aab2a868-e7fe-49c6-b339-baa141e15872")
@@ -38095,7 +38095,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "ebe6f1ea-03ba-4296-8205-0f75dfad4945")
@@ -38703,7 +38703,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "ed7bfcae-39f0-4d0a-977c-5cf0dbfad60d")
@@ -39020,7 +39020,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "af7cf405-523f-4930-8f36-41401f8ead7b")
@@ -39237,7 +39237,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "d97bcae1-8a11-4643-9988-e69c85156e2b")
@@ -39553,7 +39553,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "3fac8a24-3779-4842-8f2f-8ec05398bb13")
@@ -39869,7 +39869,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "8daad02d-4921-4289-8b18-962638bcbc6a")
@@ -40185,7 +40185,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "e87b3bc4-4bb7-4366-9afe-91365e2b1e77")
@@ -40469,7 +40469,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "c8ce1bab-eddd-4fba-9d79-39ddc2cc65c4")
@@ -40753,7 +40753,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "470"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "f345b821-be88-4a8e-8b81-8a2b91abfff7")
@@ -40899,7 +40899,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "0cb3d34c-4bdd-40bf-bad4-209a1e3d0be6")
@@ -41215,7 +41215,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "8cb2b86f-eb00-4174-bd64-ea25d82f6c5d")
@@ -41500,7 +41500,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "4f45336a-c19d-4a6f-9c94-ec9ca0f74cf4")
@@ -41718,7 +41718,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "699b3cce-6444-4879-bebd-40b6793c804a")
@@ -41935,7 +41935,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "63dbea84-e500-4a8b-b8bb-e9918ffe2c37")
@@ -42252,7 +42252,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "6c1d9ac7-8426-46f1-a922-d74b1663c2a1")
@@ -42615,7 +42615,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "849ccf2b-1191-4c89-afc8-0f0a02e67667")
@@ -42899,7 +42899,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "2aa74a5e-09cd-4905-8b51-cee8a958cdd2")
@@ -43215,7 +43215,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "c4d695f5-41aa-486a-b119-810b7555668d")
@@ -43678,7 +43678,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "a0b94777-c4e2-4c70-a087-d96d413defc0")
@@ -43895,7 +43895,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "44567506-7995-42dc-8517-e86b35bd7fc9")
@@ -44179,7 +44179,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "a1062f86-3a59-4cd2-ab47-23f58f955e12")
@@ -44495,7 +44495,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "b8f3f1b6-7297-4159-8b6f-d610883ee285")
@@ -44780,7 +44780,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "4f1f87a7-16a2-4ce0-bb43-5ecc514abb46")
@@ -44998,7 +44998,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "2e446ad2-0df7-46ef-8065-1802f7f37a0d")
@@ -45362,7 +45362,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "c031915c-41db-493b-a37e-dfca2ccaf25d")
@@ -45579,7 +45579,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "12563a97-86b0-4e59-947d-1269dc5b6b86")
@@ -45864,7 +45864,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "3af7ceef-1ff6-4091-84f8-bee5443203d9")
@@ -46081,7 +46081,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "8b45f4ca-5408-4fe2-a4cf-61b38df64f5c")
@@ -46836,7 +46836,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "5032c7bb-3de8-4045-b7b9-7d624a8b08f1")
@@ -47054,7 +47054,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "27e9cab6-7f20-414c-aef7-98f20c15a638")
@@ -47271,7 +47271,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "1780000f-783e-4431-882a-f4b95ad186f1")
@@ -47555,7 +47555,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "0ccce799-4f35-4888-8504-283315b27751")
@@ -48018,7 +48018,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "be3be5d0-a917-412f-ad5c-ca2aca5a9f08")
@@ -48235,7 +48235,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "a3ed50f1-bd96-4478-a301-5e544154f829")
@@ -48519,7 +48519,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "38b0889f-61a3-4e9c-916f-94524b41e749")
@@ -48811,7 +48811,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "1ba3b953-9607-45e1-9573-bb81646b4040")
@@ -49096,7 +49096,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "394201a2-230e-4e53-8e0b-d9e3d36a87bd")
@@ -49606,7 +49606,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "e2fd82c7-0792-46c9-9aa0-ee09764b1a47")
@@ -50116,7 +50116,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "06300950-3c1d-42b0-9b5d-99d0dbd9c894")
@@ -50479,7 +50479,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "db920639-5046-4e5e-8a3a-9b91df14eaf0")
@@ -50763,7 +50763,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "2308fe6d-5f66-44e7-8f7b-a02b14c36b71")
@@ -51193,7 +51193,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "62f758a2-a58a-422b-9dad-53d36f94d500")
@@ -51509,7 +51509,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "c5000a43-94b4-46de-8130-db0826f02ecd")
@@ -51825,7 +51825,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "6106f6ff-396b-4222-9598-4993e367aab4")
@@ -52109,7 +52109,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "5f43fa80-fc45-4cba-84ca-0a7f109f5390")
@@ -52394,7 +52394,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "b020a046-f2b1-4424-a5b9-c81dd1dd7325")
@@ -52612,7 +52612,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "2da42502-fe76-4de9-b855-12b37448b55d")
@@ -52829,7 +52829,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "d1359fc0-e330-49ef-93bf-352385f1e8d6")
@@ -53114,7 +53114,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "2e5551de-072c-4f65-b87d-13a162c94b3f")
@@ -53331,7 +53331,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "8a28a976-2db7-4fac-85d9-45c82403d69b")
@@ -53647,7 +53647,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "896a857c-40ba-4d1f-b454-b7487cd6e95c")
@@ -53964,7 +53964,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "3b1d177b-2778-4371-836e-b942f99756f6")
@@ -54181,7 +54181,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "82"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "66224df8-a41c-4776-a68b-6f9c1a48dffa")
@@ -54473,7 +54473,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "90678dc6-a93b-45c9-b4b3-1280e2a2535a")
@@ -54758,7 +54758,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "080af4bd-4905-40cd-a82f-ef0be93dfb0d")
@@ -54975,7 +54975,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "6f1ba258-207f-409b-854c-eab6d636c409")
@@ -55292,7 +55292,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "24d42bc0-5077-45fd-aeb4-76d613975153")
@@ -55947,7 +55947,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "99dbb046-f427-4ae4-a001-0166c136f63f")
@@ -56231,7 +56231,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "1f9b71f7-b0e8-4c59-b5b8-5eedfbc41bc7")
@@ -56516,7 +56516,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "1dba6059-aa99-4689-99cf-dabb5bcb8e06")
@@ -56733,7 +56733,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "6e8e83f0-a90a-4044-8b0e-922d9dc8a008")
@@ -57050,7 +57050,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "be77af32-6d72-47d6-bcd5-1e83fe06285c")
@@ -57413,7 +57413,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "13ec85aa-7735-43bb-a29e-b61d5ff3c0e1")
@@ -57697,7 +57697,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "c1a09cfa-4aae-45ee-8113-aa99fcc29c02")
@@ -58013,7 +58013,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "d984d6cf-9be6-4dc9-945f-40d59a72f74c")
@@ -58329,7 +58329,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "4a6f0946-191c-40e2-bbc4-cf534619a608")
@@ -58645,7 +58645,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "4a5236b5-8b12-4854-99da-2687b6b03f59")
@@ -58930,7 +58930,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "9acce1fe-b279-4e45-bb89-fb4042952ee7")
@@ -59148,7 +59148,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "d195ead1-4d74-48d5-8c16-7cbb4bd5feed")
@@ -59365,7 +59365,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "b81b6f12-a630-4923-8a6e-aa1efd410182")
@@ -60051,7 +60051,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "472eb6e9-80ca-4842-a57d-e7925fac962b")
@@ -60268,7 +60268,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "e04ff0a1-f77f-4bbf-b012-05a9869a2f3d")
@@ -60584,7 +60584,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "f6d18d44-4657-41c2-a6bf-6fd1b087cc32")
@@ -60869,7 +60869,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "61a3244b-f936-424f-8845-cafdd9daa4e2")
@@ -61086,7 +61086,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "6f61bc92-e995-43c1-95e5-7e0cc0cdd7d3")
@@ -61548,7 +61548,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
 			(uuid "b42b1057-9bf9-4418-a6fe-50fd69df4d81")
@@ -61978,7 +61978,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 0 -2.1 180)
 			(layer "B.Fab")
 			(uuid "fca4fc22-d475-42c4-9ca7-a214e0851ed3")
@@ -62295,7 +62295,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "38a6b6a9-b8b2-4539-bf6e-368fb922ba0f")
@@ -64072,7 +64072,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "8d772fcd-14c3-4a09-abb3-8ac472068b11")
@@ -64219,7 +64219,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 0 -2.145 180)
 			(layer "B.Fab")
 			(uuid "a58f750b-0aa1-4e5b-968b-dc296d96934e")

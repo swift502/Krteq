@@ -29,16 +29,15 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), improving 
 The PCB is designed to be ordered already assembled from JLCPCB with the following parts:
 
 | Part | Mfr | JLC |
-| :-: | --- | --- |
-| Hotswap socket |  |  |
-| D | 1N4148WS | C2128 |
+| --- | --- | --- |
+| Switch | CPG151101S11-16 | C41430893 |
+| Diode | 1N4148WS | C2128 |
 | LED | MHT151WDT | C401114 |
 | NMOS | HX2302A | C296295 |
-| R100 | 0603WAF1000T5E | C22775 | >> lower for leds 82
+| R82 | 0603WAF820JT5E | C23255 |
 | R330 | 0603WAF3300T5E | C23138 |
-| R470 | 0603WAF4700T5E | C23179 | >> use for all gate resistors
+| R470 | 0603WAF4700T5E | C23179 |
 | R10K | 0603WAF1002T5E | C25804 |
-| R100K | 0603WAF1003T5E | C25803 | >> use 10k instead
 
 ## Case
 

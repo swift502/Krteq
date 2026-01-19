@@ -7456,7 +7456,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 316.23 197.1674 90)
 			(effects
 				(font
@@ -7534,7 +7534,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 208.28 197.1674 90)
 			(effects
 				(font
@@ -7682,7 +7682,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 278.13 161.6074 90)
 			(effects
 				(font
@@ -7760,7 +7760,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 271.78 197.1674 90)
 			(effects
 				(font
@@ -7910,7 +7910,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 303.53 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -7999,7 +7999,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 242.57 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8068,7 +8068,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 309.88 197.1674 90)
 			(effects
 				(font
@@ -8146,7 +8146,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 297.18 197.1674 90)
 			(effects
 				(font
@@ -8226,7 +8226,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 303.53 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8315,7 +8315,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 214.63 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8404,7 +8404,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 229.87 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8473,7 +8473,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 227.33 179.3874 90)
 			(effects
 				(font
@@ -8623,7 +8623,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 227.33 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8710,7 +8710,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 252.73 197.1674 90)
 			(effects
 				(font
@@ -8856,7 +8856,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 293.37 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8927,7 +8927,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 217.17 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -8996,7 +8996,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 240.03 179.3874 90)
 			(effects
 				(font
@@ -9076,7 +9076,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 318.77 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9145,7 +9145,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 265.43 197.1674 90)
 			(effects
 				(font
@@ -9225,7 +9225,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 201.93 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9312,7 +9312,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 309.88 179.3874 90)
 			(effects
 				(font
@@ -9390,7 +9390,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 271.78 161.6074 90)
 			(effects
 				(font
@@ -9470,7 +9470,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 229.87 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9541,7 +9541,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 217.17 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9612,7 +9612,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 242.57 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9753,7 +9753,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 240.03 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9842,7 +9842,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 293.37 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9913,7 +9913,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 267.97 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -9984,7 +9984,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 255.27 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10125,7 +10125,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 328.93 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10212,7 +10212,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 297.18 161.6074 90)
 			(effects
 				(font
@@ -10362,7 +10362,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 290.83 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10451,7 +10451,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 265.43 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10538,7 +10538,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 290.83 197.1674 90)
 			(effects
 				(font
@@ -10618,7 +10618,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 2u"
+		(property "Value" "Switch"
 			(at 261.62 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10689,7 +10689,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 255.27 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10830,7 +10830,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 328.93 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -10987,7 +10987,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 240.03 197.1674 90)
 			(effects
 				(font
@@ -11065,7 +11065,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 322.58 197.1674 90)
 			(effects
 				(font
@@ -11145,7 +11145,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 306.07 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -11214,7 +11214,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 227.33 197.1674 90)
 			(effects
 				(font
@@ -11294,7 +11294,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 331.47 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -11363,7 +11363,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 290.83 161.6074 90)
 			(effects
 				(font
@@ -11441,7 +11441,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 201.93 161.6074 90)
 			(effects
 				(font
@@ -11519,7 +11519,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 265.43 179.3874 90)
 			(effects
 				(font
@@ -11599,7 +11599,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 318.77 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -11670,7 +11670,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 328.93 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -11757,7 +11757,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 92.71 193.3574 90)
 			(effects
 				(font
@@ -11835,7 +11835,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 208.28 179.3874 90)
 			(effects
 				(font
@@ -12191,7 +12191,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 331.47 45.974 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12261,7 +12261,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 43.18 212.09 90)
 			(do_not_autoplace yes)
 			(effects
@@ -12329,7 +12329,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 214.63 161.6074 90)
 			(effects
 				(font
@@ -12407,7 +12407,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 322.58 161.6074 90)
 			(effects
 				(font
@@ -12487,7 +12487,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 318.77 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12628,7 +12628,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 229.87 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12699,7 +12699,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 227.33 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12788,7 +12788,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 201.93 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12877,7 +12877,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 316.23 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -12966,7 +12966,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 278.13 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13055,7 +13055,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "470"
 			(at 115.57 207.01 90)
 			(do_not_autoplace yes)
 			(effects
@@ -13123,7 +13123,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 220.98 179.3874 90)
 			(effects
 				(font
@@ -13411,7 +13411,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 246.38 197.1674 90)
 			(effects
 				(font
@@ -13491,7 +13491,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 306.07 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13632,7 +13632,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 316.23 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13721,7 +13721,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 201.93 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -13946,7 +13946,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 242.57 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -14017,7 +14017,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 189.23 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -14104,7 +14104,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 284.48 179.3874 90)
 			(effects
 				(font
@@ -14183,7 +14183,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 119.38 212.09 90)
 			(do_not_autoplace yes)
 			(effects
@@ -14253,7 +14253,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 306.07 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -14324,7 +14324,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "470"
 			(at 39.37 207.01 90)
 			(do_not_autoplace yes)
 			(effects
@@ -14392,7 +14392,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 271.78 179.3874 90)
 			(effects
 				(font
@@ -14470,7 +14470,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 252.73 179.3874 90)
 			(effects
 				(font
@@ -14550,7 +14550,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "470"
 			(at 77.47 207.01 90)
 			(do_not_autoplace yes)
 			(effects
@@ -14690,7 +14690,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 290.83 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -14849,7 +14849,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 280.67 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -14920,7 +14920,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "82"
 			(at 88.9 198.12 90)
 			(do_not_autoplace yes)
 			(effects
@@ -15058,7 +15058,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 220.98 161.6074 90)
 			(effects
 				(font
@@ -15206,7 +15206,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 278.13 179.3874 90)
 			(effects
 				(font
@@ -15540,7 +15540,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 259.08 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -15699,7 +15699,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 229.87 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -15770,7 +15770,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 204.47 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -15911,7 +15911,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 214.63 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16000,7 +16000,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 328.93 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16157,7 +16157,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 297.18 179.3874 90)
 			(effects
 				(font
@@ -16235,7 +16235,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 265.43 161.6074 90)
 			(effects
 				(font
@@ -16385,7 +16385,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 316.23 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16614,7 +16614,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 328.93 48.26 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16703,7 +16703,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 278.13 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -16997,7 +16997,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 303.53 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17086,7 +17086,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 240.03 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17175,7 +17175,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 252.73 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17262,7 +17262,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 316.23 161.6074 90)
 			(effects
 				(font
@@ -17341,7 +17341,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 81.28 212.09 90)
 			(do_not_autoplace yes)
 			(effects
@@ -17411,7 +17411,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 293.37 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17552,7 +17552,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 204.47 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17623,7 +17623,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 293.37 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17694,7 +17694,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 280.67 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17765,7 +17765,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 303.53 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -17852,7 +17852,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 303.53 161.6074 90)
 			(effects
 				(font
@@ -17932,7 +17932,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "82"
 			(at 127 198.12 90)
 			(do_not_autoplace yes)
 			(effects
@@ -18002,7 +18002,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 214.63 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18374,7 +18374,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 252.73 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18463,7 +18463,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 255.27 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18532,7 +18532,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 303.53 197.1674 90)
 			(effects
 				(font
@@ -18682,7 +18682,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 229.87 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18753,7 +18753,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 316.23 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18842,7 +18842,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 267.97 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18913,7 +18913,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 280.67 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -18983,7 +18983,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 191.77 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19054,7 +19054,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 278.13 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19143,7 +19143,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 280.67 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19214,7 +19214,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 290.83 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19303,7 +19303,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 265.43 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19390,7 +19390,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 290.83 179.3874 90)
 			(effects
 				(font
@@ -19468,7 +19468,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 316.23 179.3874 90)
 			(effects
 				(font
@@ -19548,7 +19548,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 306.07 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19689,7 +19689,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 303.53 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19778,7 +19778,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 242.57 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -19917,7 +19917,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 278.13 197.1674 90)
 			(effects
 				(font
@@ -19997,7 +19997,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 227.33 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20084,7 +20084,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 246.38 179.3874 90)
 			(effects
 				(font
@@ -20234,7 +20234,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 280.67 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20303,7 +20303,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 214.63 197.1674 90)
 			(effects
 				(font
@@ -20383,7 +20383,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 217.17 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20452,7 +20452,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 195.58 197.1674 90)
 			(effects
 				(font
@@ -20532,7 +20532,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 227.33 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20694,7 +20694,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 267.97 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20765,7 +20765,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 191.77 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20836,7 +20836,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 191.77 45.974 0)
 			(do_not_autoplace yes)
 			(effects
@@ -20907,7 +20907,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 252.73 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21134,7 +21134,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 214.63 179.3874 90)
 			(effects
 				(font
@@ -21284,7 +21284,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 189.23 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21373,7 +21373,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 191.77 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21442,7 +21442,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 322.58 179.3874 90)
 			(effects
 				(font
@@ -21592,7 +21592,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 227.33 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21681,7 +21681,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 189.23 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21770,7 +21770,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 240.03 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21859,7 +21859,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 306.07 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -21928,7 +21928,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 208.28 161.6074 90)
 			(effects
 				(font
@@ -22008,7 +22008,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 189.23 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22095,7 +22095,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 252.73 161.6074 90)
 			(effects
 				(font
@@ -22245,7 +22245,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 316.23 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22334,7 +22334,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 242.57 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22539,7 +22539,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 233.68 161.6074 90)
 			(effects
 				(font
@@ -22689,7 +22689,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 278.13 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22778,7 +22778,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 265.43 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -22867,7 +22867,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 189.23 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23166,7 +23166,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 240.03 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23255,7 +23255,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 255.27 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23326,7 +23326,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 267.97 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23397,7 +23397,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 204.47 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23538,7 +23538,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 290.83 105.41 0)
 			(do_not_autoplace yes)
 			(effects
@@ -23905,7 +23905,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 227.33 161.6074 90)
 			(effects
 				(font
@@ -23985,7 +23985,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 318.77 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24056,7 +24056,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 252.73 93.98 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24143,7 +24143,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 246.38 161.6074 90)
 			(effects
 				(font
@@ -24221,7 +24221,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 195.58 161.6074 90)
 			(effects
 				(font
@@ -24444,7 +24444,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 290.83 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24603,7 +24603,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 331.47 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24742,7 +24742,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 233.68 197.1674 90)
 			(effects
 				(font
@@ -24822,7 +24822,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 201.93 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24911,7 +24911,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 217.17 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -24980,7 +24980,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 195.58 179.3874 90)
 			(effects
 				(font
@@ -25058,7 +25058,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 240.03 161.6074 90)
 			(effects
 				(font
@@ -25138,7 +25138,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 189.23 48.26 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25297,7 +25297,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 331.47 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25366,7 +25366,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 309.88 161.6074 90)
 			(effects
 				(font
@@ -25444,7 +25444,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 220.98 197.1674 90)
 			(effects
 				(font
@@ -25662,7 +25662,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 54.61 193.3574 90)
 			(effects
 				(font
@@ -25741,7 +25741,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 204.47 57.404 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25812,7 +25812,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 328.93 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -25899,7 +25899,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 201.93 179.3874 90)
 			(effects
 				(font
@@ -25977,7 +25977,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 303.53 179.3874 90)
 			(effects
 				(font
@@ -26057,7 +26057,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 331.47 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26201,7 +26201,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 217.17 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26272,7 +26272,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 204.47 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26553,7 +26553,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 214.63 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26642,7 +26642,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 265.43 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26731,7 +26731,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 201.93 82.55 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26820,7 +26820,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 191.77 68.834 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26891,7 +26891,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 191.77 103.124 0)
 			(do_not_autoplace yes)
 			(effects
@@ -26962,7 +26962,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 240.03 59.69 0)
 			(do_not_autoplace yes)
 			(effects
@@ -27051,7 +27051,7 @@
 				)
 			)
 		)
-		(property "Value" "100"
+		(property "Value" "82"
 			(at 50.8 198.12 90)
 			(do_not_autoplace yes)
 			(effects
@@ -27119,7 +27119,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 233.68 179.3874 90)
 			(effects
 				(font
@@ -27197,7 +27197,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 232.41 220.0274 90)
 			(effects
 				(font
@@ -27277,7 +27277,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 331.47 91.694 0)
 			(do_not_autoplace yes)
 			(effects
@@ -27346,7 +27346,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 284.48 161.6074 90)
 			(effects
 				(font
@@ -27424,7 +27424,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 284.48 197.1674 90)
 			(effects
 				(font
@@ -27504,7 +27504,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 318.77 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -27573,7 +27573,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 130.81 193.3574 90)
 			(effects
 				(font
@@ -27653,7 +27653,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 278.13 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -27742,7 +27742,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "D"
+		(property "Value" "Diode"
 			(at 214.63 71.12 0)
 			(do_not_autoplace yes)
 			(effects
@@ -27831,7 +27831,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch 1u"
+		(property "Value" "Switch"
 			(at 293.37 80.264 0)
 			(do_not_autoplace yes)
 			(effects
@@ -27900,7 +27900,7 @@
 				)
 			)
 		)
-		(property "Value" "SMD LED"
+		(property "Value" "LED"
 			(at 201.93 197.1674 90)
 			(effects
 				(font
