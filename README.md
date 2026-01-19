@@ -1,8 +1,8 @@
 # Krteq
 
-An extended 5x12 keyboard with 2 extra keys. This design is intended for ortho layouts with a shifted number row, allowing for the placement of the delete and tilde keys above their usual spots. PCBs are designed in Kicad, case in Blender.
+An extended 5x12 keyboard with 2 extra keys. Intended for ortho layouts with a shifted number row, allowing for the placement of the delete and tilde keys above their usual spots. PCBs are designed in Kicad, case in Blender.
 
-Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), improving on many of the flaws and bringing everything together to create a more maintainable, better encapsulated and overall more complete product.
+Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), aiming to improve the former design to create a more maintainable, better encapsulated and overall more complete product.
 
 - Low profile
 - Hotswap
@@ -26,7 +26,7 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), improving 
 
 ## PCB
 
-The PCB is designed to be ordered already assembled from JLCPCB with the following parts.
+The PCB is designed to be ordered already assembled from JLCPCB with the following parts:
 
 | Part | Mfr | JLC |
 | :-: | --- | --- |
