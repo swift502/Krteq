@@ -28,7 +28,7 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 
 The PCB is designed to be ordered already assembled from JLCPCB with the following parts:
 
-| Part | Mfr | JLC |
+| Part | MPN | JLC |
 | --- | --- | --- |
 | Switch | CPG151101S11-16 | C41430893 |
 | Diode | 1N4148WS | C2128 |

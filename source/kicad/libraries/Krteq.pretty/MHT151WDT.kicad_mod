@@ -18,7 +18,7 @@
 		)
 	)
 	(property "Value" "MHT151WDT"
-		(at 0 2.145 0)
+		(at 0 -2.3 0)
 		(layer "F.Fab")
 		(uuid "a5e73364-ee21-45f7-97eb-ad17053f33e3")
 		(effects
@@ -55,6 +55,36 @@
 		)
 	)
 	(attr smd)
+	(fp_line
+		(start -2.25 -0.8)
+		(end -2.25 0.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "5fffd4bb-95ad-4ccd-8fb1-89b5e7807414")
+	)
+	(fp_line
+		(start -2.25 -0.8)
+		(end 2.3 -0.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "d17b95fb-ceeb-4c66-a79e-6441764e0304")
+	)
+	(fp_line
+		(start -2.25 0.8)
+		(end 2.3 0.8)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "17f3d693-99bc-4afa-9114-343d448cdafa")
+	)
 	(fp_line
 		(start -2.28 -1.46)
 		(end 2.28 -1.46)
@@ -97,57 +127,47 @@
 	)
 	(fp_line
 		(start -2.2 -0.7)
-		(end -2.2 1.1)
+		(end -2.2 0.7)
 		(stroke
 			(width 0.1)
-			(type default)
+			(type solid)
 		)
 		(layer "F.Fab")
 		(uuid "c5a9fa09-f76c-4fe9-afc7-112235be9cd1")
 	)
 	(fp_line
-		(start -2.2 1.1)
-		(end 2.2 1.1)
-		(stroke
-			(width 0.1)
-			(type default)
-		)
-		(layer "F.Fab")
-		(uuid "3d75d38e-78c5-45bc-be40-d932f4a452fa")
-	)
-	(fp_line
-		(start -1.8 -1.1)
+		(start 2.2 -0.7)
 		(end -2.2 -0.7)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "F.Fab")
-		(uuid "e9cb988b-d242-4b44-bf49-3fd01bd6486d")
+		(uuid "e2936c98-30b9-4bac-a931-92f76617cf17")
 	)
 	(fp_line
-		(start 2.2 -1.1)
-		(end -1.8 -1.1)
+		(start 2.2 0.7)
+		(end -2.2 0.7)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(layer "F.Fab")
-		(uuid "a16ccb81-7ff9-4936-b87b-40fa3063c728")
+		(uuid "994b1a5d-109e-4aa5-be58-15b55bb60889")
 	)
 	(fp_line
-		(start 2.2 1.1)
-		(end 2.2 -1.1)
+		(start 2.2 0.7)
+		(end 2.2 -0.7)
 		(stroke
 			(width 0.1)
-			(type default)
+			(type solid)
 		)
 		(layer "F.Fab")
 		(uuid "9a5f8d6e-ba4f-4f70-9481-9706f1dacd04")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 0 -2.3 0)
-		(layer "F.Fab")
+		(at 0 2.3 0)
+		(layer "F.SilkS")
 		(uuid "98cd26b5-0c93-48a1-8276-dc10fcb4e784")
 		(effects
 			(font
