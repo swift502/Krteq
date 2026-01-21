@@ -2,7 +2,7 @@
 
 An extended 5x12 keyboard with 2 extra keys. Intended for ortho layouts with a shifted number row, allowing for the placement of the delete and tilde keys above their usual spots. PCBs are designed in Kicad, case in Blender.
 
-Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning from it's lessons to make this easier to build, more maintainable, better encapsulated and an overall more complete design.
+Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning from it's lessons to make this one easier to build, more maintainable, better encapsulated and overall a more complete design.
 
 - Low profile
 - Hotswap
