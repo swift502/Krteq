@@ -15,8 +15,8 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 
 ## Parts
 
-- [PCB](#pcb)
-- [Case](#case)
+- [PCB](production/pcb)
+- [Case](production/case)
 - Raspberry Pi Pico
 - 15cm (6") USB Panel Mount Extension Cable
 - 61x Gateron KS-33B (GLP 3.0) switches
@@ -24,22 +24,6 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 - Gateron 2u Low-Profile Plate Mounted Stabilizer
 - Rubber feet
 
-## PCB
+## MX switch mod
 
-The PCB is designed to be ordered already assembled from JLCPCB with the following parts:
-
-| Part | MPN | JLC |
-| --- | --- | --- |
-| Switch | CPG151101S11-16 | C41430893 |
-| Diode | 1N4148WS | C2128 |
-| LED | MHT151WDT | C401114 |
-| NMOS | HX2302A | C296295 |
-| R82 | 0603WAF820JT5E | C23255 |
-| R330 | 0603WAF3300T5E | C23138 |
-| R470 | 0603WAF4700T5E | C23179 |
-| R10K | 0603WAF1002T5E | C25804 |
-
-## Case
-
-## Modularity
-
+Worth noting that the KS-33B footprint is compatible with regular MX switches. By modifying the top case model and raising it slightly, you'd have a version of Krteq which fits regular sized MX style switches.
