@@ -288,13 +288,13 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "B.Cu")
 		(uuid "0052873c-52f4-4097-830a-11943c7f9de5")
-		(at 132.9625 81.2855 -90)
+		(at 133.851724 81.2855 -90)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R11"
 			(at 0 1.43 90)
 			(layer "B.SilkS")
-			(uuid "3e9971ea-0292-49b2-957b-4a7561946a55")
+			(uuid "82a972af-fb1c-4c40-9924-dada31635e83")
 			(effects
 				(font
 					(size 1 1)
@@ -306,7 +306,7 @@
 		(property "Value" "10kΩ"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
-			(uuid "1d83d9ef-8cdb-40c1-9de2-9d95e5d07c5f")
+			(uuid "1033a7f8-51fc-4e68-a25a-d4258c7f3ba6")
 			(effects
 				(font
 					(size 1 1)
@@ -319,7 +319,7 @@
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "553e675f-7afc-49aa-95a8-96f23af4e71f")
+			(uuid "0a9a4c40-31f1-48c4-accd-a970ac771482")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -332,7 +332,7 @@
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "dd201a12-f662-4831-81e9-a1237bd327e2")
+			(uuid "b13bc3fe-a2e2-453b-86a0-eb907b58eae4")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1156,13 +1156,13 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "B.Cu")
 		(uuid "08d9ebb0-f096-456c-a1c5-619fd6270533")
-		(at 138.55 81.2855 180)
+		(at 139.439224 81.2855 180)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q4"
 			(at 0 2.4 0)
 			(layer "B.SilkS")
-			(uuid "cb016386-ccb3-4969-8267-8ac28320b933")
+			(uuid "f87de958-0bdd-41a4-a49e-65d37bb12fbb")
 			(effects
 				(font
 					(size 1 1)
@@ -1174,7 +1174,7 @@
 		(property "Value" "Q NMOS GSD"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
-			(uuid "cf9c8af1-cc23-47f6-9bd9-30ba15b886ea")
+			(uuid "27eee161-9ba8-420d-8b6d-5a54bca0ff2f")
 			(effects
 				(font
 					(size 1 1)
@@ -1187,7 +1187,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "f81a18bb-1888-46f3-8c48-b4f2390f7761")
+			(uuid "8016b18b-6cb6-4518-8c31-c733b8d83352")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1200,7 +1200,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "8d55d6d8-1abb-4ec9-bb79-136d18de50e2")
+			(uuid "4b80471f-5e59-4590-b8f5-0c72905975d7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -57208,13 +57208,13 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "B.Cu")
 		(uuid "c32b3a95-6f21-40de-a897-cc7bedc6a1f7")
-		(at 144.503125 81.2855 -90)
+		(at 145.392349 81.2855 -90)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R10"
 			(at 0 1.43 90)
 			(layer "B.SilkS")
-			(uuid "b6d86887-dd01-4ffe-aa4c-acfa4ff3cafc")
+			(uuid "96fa48cb-6efb-4bb3-a1ee-96634ff65e00")
 			(effects
 				(font
 					(size 1 1)
@@ -57226,7 +57226,7 @@
 		(property "Value" "470Ω"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
-			(uuid "8edd95c3-0317-4a60-8386-b6028760ff6d")
+			(uuid "ea4bec19-fdba-4cfa-9fb7-b1aa07dead53")
 			(effects
 				(font
 					(size 1 1)
@@ -57239,7 +57239,7 @@
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c9f67533-32cf-4e27-aae8-ac87499c4087")
+			(uuid "3f0dfe8b-565d-4145-95c4-f427fa211f3e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -57252,7 +57252,7 @@
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "e4d68b98-b985-4396-8240-995c55a5b059")
+			(uuid "854c31f6-574d-495f-a187-016a88e17687")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -72147,7 +72147,7 @@
 	(footprint "Module:RaspberryPi_Pico_Common_THT"
 		(layer "B.Cu")
 		(uuid "fcfa62a3-8acd-4122-b0ab-e55d78039fb7")
-		(at 204.66 95.464373 90)
+		(at 206.66 95.464373 90)
 		(descr "Raspberry Pi Pico common (Pico & Pico W) through-hole footprint, supports Raspberry Pi Pico 2, default socketed model has height of 8.51mm, https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf")
 		(tags "module usb pcb antenna")
 		(property "Reference" "A1"
@@ -73527,8 +73527,8 @@
 			)
 			(polygon
 				(pts
-					(xy 155.540105 88.974373) (xy 159.190105 93.674373) (xy 163.53 93.674373) (xy 163.53 79.474373)
-					(xy 159.190105 79.474373) (xy 155.540105 84.174373) (xy 154.53 84.174373) (xy 154.53 88.974373)
+					(xy 157.540105 88.974373) (xy 161.190105 93.674373) (xy 165.53 93.674373) (xy 165.53 79.474373)
+					(xy 161.190105 79.474373) (xy 157.540105 84.174373) (xy 156.53 84.174373) (xy 156.53 88.974373)
 				)
 			)
 		)
@@ -73561,8 +73561,8 @@
 			)
 			(polygon
 				(pts
-					(xy 208.23 92.324373) (xy 208.23 90.514373) (xy 207.83 90.514373) (xy 207.83 82.634373) (xy 208.23 82.634373)
-					(xy 208.23 80.824373) (xy 227.73 80.824373) (xy 227.73 92.324373)
+					(xy 210.23 92.324373) (xy 210.23 90.514373) (xy 209.83 90.514373) (xy 209.83 82.634373) (xy 210.23 82.634373)
+					(xy 210.23 80.824373) (xy 229.73 80.824373) (xy 229.73 92.324373)
 				)
 			)
 		)
