@@ -9,8 +9,8 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 - Backlight (single color, no effects)
 - QMK/VIA compatible
 - Gateron LP 3.0 switches
-- Tray mount PCB, integrated plate
 - 3D printed case with a 7 degree tilt
+- Tray mount PCB, integrated plate
 - 237mm × 125mm × 27mm
 
 ## Parts
@@ -18,12 +18,9 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 - [PCB](production/pcb)
 - [Case](production/case)
 - Raspberry Pi Pico
-- 15cm (6") USB Panel Mount Extension Cable
+- 30cm (1ft) USB Panel-Mount Extension Cable
 - 61x Gateron KS-33B (GLP 3.0) switches
 - 61x MX Low-Profile Keycaps
-- Gateron 2u Low-Profile Plate Mounted Stabilizer
+- Gateron 2u Low-Profile Plate-Mounted Stabilizer
 - Rubber feet
 
-## MX switch mod
-
-Worth noting that the KS-33B footprint is compatible with regular MX switches. By modifying the top case model and raising it slightly, you'd have a version of Krteq which fits regular sized MX style switches.

@@ -462,7 +462,7 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "B.Cu")
 		(uuid "008de6fa-1a4e-4bd4-b8f6-e8a84c569865")
-		(at 209.125 81.738625 -90)
+		(at 208.9 81.738625 -90)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R3"
@@ -3119,13 +3119,13 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "B.Cu")
 		(uuid "0d0536e2-1d42-4112-9643-6bc18e17023a")
-		(at 224.225 82.238625 -90)
+		(at 224.45 82.238625 -90)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q3"
 			(at 0 2.4 90)
 			(layer "B.SilkS")
-			(uuid "89401724-0997-41e2-a424-caa7d40f82e4")
+			(uuid "c08c0ae2-c6b7-43ca-a1c0-b923a9a2bf63")
 			(effects
 				(font
 					(size 1 1)
@@ -3137,7 +3137,7 @@
 		(property "Value" "Q NMOS GSD"
 			(at 0 -2.4 90)
 			(layer "B.Fab")
-			(uuid "e8e8f1ae-46ee-449f-982b-54188a5529ea")
+			(uuid "fc434d15-2771-4af1-8e80-628e8cb637a2")
 			(effects
 				(font
 					(size 1 1)
@@ -3150,7 +3150,7 @@
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "127d6045-9faf-4c69-95fe-45e2d769664a")
+			(uuid "dbd9940b-3d84-44ae-90dc-413433f4c914")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3163,7 +3163,7 @@
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "4fb658ed-a1aa-41c3-9916-5bcac4271e1e")
+			(uuid "96af8d73-de7e-48fd-81d5-4723e2f6d3bd")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4566,7 +4566,7 @@
 	(footprint "Package_TO_SOT_SMD:SOT-23"
 		(layer "B.Cu")
 		(uuid "12c43b58-4fee-4f91-97c5-ec63c111eb92")
-		(at 205.625 82.238625 -90)
+		(at 205.4 82.238625 -90)
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q1"
@@ -21027,13 +21027,13 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "B.Cu")
 		(uuid "445d6117-2a05-4405-a730-f2d732a8074e")
-		(at 227.725 81.738625 -90)
+		(at 227.95 81.738625 -90)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R9"
 			(at 0 1.43 90)
 			(layer "B.SilkS")
-			(uuid "d66f2a91-8bee-48dc-a234-b5906b2f5ba7")
+			(uuid "39b7818a-eb12-4095-be23-fd9b832a5bff")
 			(effects
 				(font
 					(size 1 1)
@@ -21045,7 +21045,7 @@
 		(property "Value" "10kΩ"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
-			(uuid "4da51c51-7386-4529-8b00-cf2e12c54c7c")
+			(uuid "07d4a695-6081-4d90-8d0e-249100e45f3c")
 			(effects
 				(font
 					(size 1 1)
@@ -21058,7 +21058,7 @@
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "e94f0049-6df4-4747-999a-322dfe538fcb")
+			(uuid "1a9a374f-84d5-4d21-a127-e2b4bf72a3d5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21071,7 +21071,7 @@
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "be9b320e-c7a7-4cfd-bce2-26c576d875d4")
+			(uuid "546f4106-eca8-451c-81ac-55be17d8c353")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36274,7 +36274,7 @@
 			(at 0 2.145 180)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "5ca32177-5d2f-4d02-afc7-6300ac1e4758")
+			(uuid "a699f2e5-6465-46fa-b3f4-f8edfe20d437")
 			(effects
 				(font
 					(size 1 1)
@@ -36286,7 +36286,7 @@
 		(property "Value" "LED"
 			(at 0 2.3 180)
 			(layer "B.Fab")
-			(uuid "b544f534-aba6-43e4-8140-e07f96d7fdea")
+			(uuid "240310ea-a509-4db8-97a8-240fee4a7c06")
 			(effects
 				(font
 					(size 1 1)
@@ -36300,7 +36300,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "b4b868f7-ae19-4516-842c-00b5fca3e46c")
+			(uuid "bc624a48-a398-464e-a2b9-6062189b6cd2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -36314,7 +36314,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "77750cdc-43d3-4eb7-9292-2a53ba70287c")
+			(uuid "630a95b9-697f-4c84-bc2b-55f2aab9671a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47781,13 +47781,13 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "B.Cu")
 		(uuid "9231a5c5-6258-46d2-9eb7-6e7dc37c6cd1")
-		(at 230.225 81.738625 90)
+		(at 230.45 81.738625 90)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R8"
 			(at 0 1.43 90)
 			(layer "B.SilkS")
-			(uuid "318eb24d-d0c8-4295-8f97-ebb2c3680c14")
+			(uuid "b319d6c1-7dd5-4b36-91e3-4dda5292fc13")
 			(effects
 				(font
 					(size 1 1)
@@ -47799,7 +47799,7 @@
 		(property "Value" "470Ω"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
-			(uuid "80232333-8310-4981-85a5-b9b415391431")
+			(uuid "a00cc715-c2d6-41c6-a65c-85fc4da607ea")
 			(effects
 				(font
 					(size 1 1)
@@ -47812,7 +47812,7 @@
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "41533de4-7c1d-44ab-9d6a-30a7705227d1")
+			(uuid "def2ce3b-5baa-4ca8-85c5-8956e879e9d6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -47825,7 +47825,7 @@
 			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "e4313805-17ea-41a2-89f7-3aab2b491148")
+			(uuid "e490fcbe-2e6c-442e-8e50-b3a62dc43287")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -53407,7 +53407,7 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "B.Cu")
 		(uuid "9d35a35c-7453-4c3e-bdfa-5686d80176ee")
-		(at 211.625 81.738625 90)
+		(at 211.4 81.738625 90)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R2"
@@ -59827,14 +59827,14 @@
 	(footprint "Krteq:MHT151WDT"
 		(layer "B.Cu")
 		(uuid "b5f60ad0-b95f-4b16-a8cc-9e795e9931d9")
-		(at 228.725 85.738625)
+		(at 228.95 85.738625)
 		(descr "-35℃~+85℃ 130° 20mA 3.65V 900mcd 95mW Frosted Yellow Lens Reverse Mount White 1206 LED Indication - Discrete ROHS")
 		(tags "diode reverse")
 		(property "Reference" "D3"
 			(at 0 2.145 180)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "fb72c9d7-5c5f-44c5-a72a-7b1d0f54fe07")
+			(uuid "11425dfc-4145-4299-b7d9-32a9e02cc587")
 			(effects
 				(font
 					(size 1 1)
@@ -59846,7 +59846,7 @@
 		(property "Value" "LED"
 			(at 0 2.3 180)
 			(layer "B.Fab")
-			(uuid "d3107d5d-4391-44a3-97d7-53be94b00e0f")
+			(uuid "a52ddf02-959d-4a83-8140-279e05b0d5cd")
 			(effects
 				(font
 					(size 1 1)
@@ -59860,7 +59860,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "6752b444-ca7e-463f-a10c-030408b61662")
+			(uuid "6d1fe488-31f8-426d-b5e1-16fe84327f88")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -59874,7 +59874,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "7391e937-7a85-441f-a4cc-86328b4c3115")
+			(uuid "6809bdcf-4494-46c2-9684-f23835bafd75")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -78415,7 +78415,7 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "B.Cu")
 		(uuid "f058f2f1-9a69-406a-a18e-5266ade6b59e")
-		(at 205.625 85.738625 180)
+		(at 205.4 85.738625 180)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R1"
@@ -78589,13 +78589,13 @@
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "B.Cu")
 		(uuid "f16c9c40-78a0-4101-8df9-78cef6eb1159")
-		(at 224.225 85.738625 180)
+		(at 224.45 85.738625 180)
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R7"
 			(at 0 1.43 0)
 			(layer "B.SilkS")
-			(uuid "c7012a43-360f-4459-9e28-145760f12522")
+			(uuid "319de1a1-3854-4260-8ff9-3bbb8409fca6")
 			(effects
 				(font
 					(size 1 1)
@@ -78607,7 +78607,7 @@
 		(property "Value" "82Ω"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
-			(uuid "9ce293ed-b8ce-4ba8-986f-b72e469f16db")
+			(uuid "bb0dd1ad-374e-438e-9728-df82f8cf97fa")
 			(effects
 				(font
 					(size 1 1)
@@ -78620,7 +78620,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "6a5bf03c-e148-44e2-a6d0-b450ec75cfc8")
+			(uuid "b3d6a166-8231-4031-810f-1c9ae06249e5")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -78633,7 +78633,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "379e8609-4386-4fe6-93fc-6a5b60213718")
+			(uuid "a00674b8-1ed3-4d5f-9a03-b4b469082c37")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -79029,7 +79029,7 @@
 	(footprint "Krteq:MHT151WDT"
 		(layer "B.Cu")
 		(uuid "f434defb-967f-41b2-9301-4b3d0b0f08a3")
-		(at 210.125 85.738625)
+		(at 209.9 85.738625)
 		(descr "-35℃~+85℃ 130° 20mA 3.65V 900mcd 95mW Frosted Yellow Lens Reverse Mount White 1206 LED Indication - Discrete ROHS")
 		(tags "diode reverse")
 		(property "Reference" "D1"
