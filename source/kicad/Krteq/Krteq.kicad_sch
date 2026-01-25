@@ -17113,7 +17113,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Module:RaspberryPi_Pico_Common_THT"
+		(property "Footprint" "Krteq:Raspberry Pi Pico"
 			(at 82.55 133.35 0)
 			(effects
 				(font

@@ -1,4 +1,4 @@
-26712071404242251
+26712071412091972
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -68509,7 +68509,7 @@ diode reverse
 2
 2
 Krteq
-Pi Pico
+Raspberry Pi Pico
 Raspberry Pi Pico common (Pico & Pico W) through-hole footprint, supports Raspberry Pi Pico 2, default socketed model has height of 8.51mm, https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf
 module usb pcb antenna
 0

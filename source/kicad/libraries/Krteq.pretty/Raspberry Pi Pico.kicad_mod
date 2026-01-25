@@ -1,4 +1,4 @@
-(footprint "Pi Pico"
+(footprint "Raspberry Pi Pico"
 	(version 20241229)
 	(generator "pcbnew")
 	(generator_version "9.0")
@@ -6,8 +6,7 @@
 	(descr "Raspberry Pi Pico common (Pico & Pico W) through-hole footprint, supports Raspberry Pi Pico 2, default socketed model has height of 8.51mm, https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf")
 	(tags "module usb pcb antenna")
 	(property "Reference" "A1"
-		(at 20.6375 48.895 0)
-		(unlocked yes)
+		(at 8.9 24.2 90)
 		(layer "F.SilkS")
 		(uuid "9149335c-ab15-437d-a368-1b61d38652e2")
 		(effects
@@ -15,7 +14,6 @@
 				(size 1 1)
 				(thickness 0.15)
 			)
-			(justify left)
 		)
 	)
 	(property "Value" "RaspberryPi_Pico"
