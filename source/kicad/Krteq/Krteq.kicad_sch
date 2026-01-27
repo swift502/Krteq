@@ -8091,7 +8091,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 300.99 71.12 90)
 			(effects
 				(font
@@ -8100,7 +8100,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 300.99 71.12 90)
 			(effects
 				(font
@@ -8479,7 +8479,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 300.99 105.41 90)
 			(effects
 				(font
@@ -8488,7 +8488,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 300.99 105.41 90)
 			(effects
 				(font
@@ -8586,7 +8586,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 212.09 105.41 90)
 			(effects
 				(font
@@ -8595,7 +8595,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 212.09 105.41 90)
 			(effects
 				(font
@@ -8966,7 +8966,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 224.79 82.55 90)
 			(effects
 				(font
@@ -8975,7 +8975,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 224.79 82.55 90)
 			(effects
 				(font
@@ -9694,7 +9694,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 199.39 93.98 90)
 			(effects
 				(font
@@ -9703,7 +9703,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 199.39 93.98 90)
 			(effects
 				(font
@@ -10348,7 +10348,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 237.49 71.12 90)
 			(effects
 				(font
@@ -10357,7 +10357,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 237.49 71.12 90)
 			(effects
 				(font
@@ -10810,7 +10810,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 326.39 105.41 90)
 			(effects
 				(font
@@ -10819,7 +10819,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 326.39 105.41 90)
 			(effects
 				(font
@@ -11101,7 +11101,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 288.29 93.98 90)
 			(effects
 				(font
@@ -11110,7 +11110,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 288.29 93.98 90)
 			(effects
 				(font
@@ -11208,7 +11208,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 262.89 59.69 90)
 			(effects
 				(font
@@ -11217,7 +11217,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 262.89 59.69 90)
 			(effects
 				(font
@@ -11677,7 +11677,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 326.39 59.69 90)
 			(effects
 				(font
@@ -11686,7 +11686,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 326.39 59.69 90)
 			(effects
 				(font
@@ -12715,7 +12715,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 326.39 82.55 90)
 			(effects
 				(font
@@ -12724,7 +12724,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 326.39 82.55 90)
 			(effects
 				(font
@@ -13978,7 +13978,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 224.79 59.69 90)
 			(effects
 				(font
@@ -13987,7 +13987,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 224.79 59.69 90)
 			(effects
 				(font
@@ -14085,7 +14085,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 199.39 105.41 90)
 			(effects
 				(font
@@ -14094,7 +14094,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 199.39 105.41 90)
 			(effects
 				(font
@@ -14192,7 +14192,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 313.69 71.12 90)
 			(effects
 				(font
@@ -14201,7 +14201,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 313.69 71.12 90)
 			(effects
 				(font
@@ -14299,7 +14299,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 275.59 82.55 90)
 			(effects
 				(font
@@ -14308,7 +14308,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 275.59 82.55 90)
 			(effects
 				(font
@@ -15127,7 +15127,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 313.69 105.41 90)
 			(effects
 				(font
@@ -15136,7 +15136,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 313.69 105.41 90)
 			(effects
 				(font
@@ -15234,7 +15234,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 199.39 71.12 90)
 			(effects
 				(font
@@ -15243,7 +15243,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 199.39 71.12 90)
 			(effects
 				(font
@@ -15584,7 +15584,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 186.69 93.98 90)
 			(effects
 				(font
@@ -15593,7 +15593,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 186.69 93.98 90)
 			(effects
 				(font
@@ -16419,7 +16419,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 288.29 71.12 90)
 			(effects
 				(font
@@ -16428,7 +16428,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 288.29 71.12 90)
 			(effects
 				(font
@@ -17449,7 +17449,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 256.54 105.41 90)
 			(effects
 				(font
@@ -17458,7 +17458,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 256.54 105.41 90)
 			(effects
 				(font
@@ -17910,7 +17910,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 212.09 59.69 90)
 			(effects
 				(font
@@ -17919,7 +17919,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 212.09 59.69 90)
 			(effects
 				(font
@@ -18017,7 +18017,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 326.39 93.98 90)
 			(effects
 				(font
@@ -18026,7 +18026,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 326.39 93.98 90)
 			(effects
 				(font
@@ -18492,7 +18492,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 313.69 59.69 90)
 			(effects
 				(font
@@ -18501,7 +18501,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 313.69 59.69 90)
 			(effects
 				(font
@@ -18775,7 +18775,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 326.39 48.26 90)
 			(effects
 				(font
@@ -18784,7 +18784,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 326.39 48.26 90)
 			(effects
 				(font
@@ -18882,7 +18882,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 275.59 59.69 90)
 			(effects
 				(font
@@ -18891,7 +18891,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 275.59 59.69 90)
 			(effects
 				(font
@@ -19230,7 +19230,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 300.99 82.55 90)
 			(effects
 				(font
@@ -19239,7 +19239,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 300.99 82.55 90)
 			(effects
 				(font
@@ -19337,7 +19337,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 237.49 105.41 90)
 			(effects
 				(font
@@ -19346,7 +19346,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 237.49 105.41 90)
 			(effects
 				(font
@@ -19444,7 +19444,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 250.19 82.55 90)
 			(effects
 				(font
@@ -19453,7 +19453,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 250.19 82.55 90)
 			(effects
 				(font
@@ -20178,7 +20178,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 300.99 59.69 90)
 			(effects
 				(font
@@ -20187,7 +20187,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 300.99 59.69 90)
 			(effects
 				(font
@@ -20469,7 +20469,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 212.09 93.98 90)
 			(effects
 				(font
@@ -20478,7 +20478,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 212.09 93.98 90)
 			(effects
 				(font
@@ -20931,7 +20931,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 250.19 59.69 90)
 			(effects
 				(font
@@ -20940,7 +20940,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 250.19 59.69 90)
 			(effects
 				(font
@@ -21400,7 +21400,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 313.69 93.98 90)
 			(effects
 				(font
@@ -21409,7 +21409,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 313.69 93.98 90)
 			(effects
 				(font
@@ -21773,7 +21773,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 275.59 105.41 90)
 			(effects
 				(font
@@ -21782,7 +21782,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 275.59 105.41 90)
 			(effects
 				(font
@@ -21969,7 +21969,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 288.29 82.55 90)
 			(effects
 				(font
@@ -21978,7 +21978,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 288.29 82.55 90)
 			(effects
 				(font
@@ -22076,7 +22076,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 262.89 93.98 90)
 			(effects
 				(font
@@ -22085,7 +22085,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 262.89 93.98 90)
 			(effects
 				(font
@@ -22552,7 +22552,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 300.99 93.98 90)
 			(effects
 				(font
@@ -22561,7 +22561,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 300.99 93.98 90)
 			(effects
 				(font
@@ -22932,7 +22932,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 224.79 71.12 90)
 			(effects
 				(font
@@ -22941,7 +22941,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 224.79 71.12 90)
 			(effects
 				(font
@@ -23593,7 +23593,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 224.79 105.41 90)
 			(effects
 				(font
@@ -23602,7 +23602,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 224.79 105.41 90)
 			(effects
 				(font
@@ -24058,7 +24058,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 250.19 71.12 90)
 			(effects
 				(font
@@ -24067,7 +24067,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 250.19 71.12 90)
 			(effects
 				(font
@@ -24525,7 +24525,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 186.69 71.12 90)
 			(effects
 				(font
@@ -24534,7 +24534,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 186.69 71.12 90)
 			(effects
 				(font
@@ -24905,7 +24905,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 224.79 93.98 90)
 			(effects
 				(font
@@ -24914,7 +24914,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 224.79 93.98 90)
 			(effects
 				(font
@@ -25012,7 +25012,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 186.69 82.55 90)
 			(effects
 				(font
@@ -25021,7 +25021,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 186.69 82.55 90)
 			(effects
 				(font
@@ -25119,7 +25119,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 237.49 82.55 90)
 			(effects
 				(font
@@ -25128,7 +25128,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 237.49 82.55 90)
 			(effects
 				(font
@@ -25411,7 +25411,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 186.69 59.69 90)
 			(effects
 				(font
@@ -25420,7 +25420,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 186.69 59.69 90)
 			(effects
 				(font
@@ -25702,7 +25702,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 313.69 82.55 90)
 			(effects
 				(font
@@ -25711,7 +25711,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 313.69 82.55 90)
 			(effects
 				(font
@@ -26236,7 +26236,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 275.59 93.98 90)
 			(effects
 				(font
@@ -26245,7 +26245,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 275.59 93.98 90)
 			(effects
 				(font
@@ -26343,7 +26343,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 262.89 82.55 90)
 			(effects
 				(font
@@ -26352,7 +26352,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 262.89 82.55 90)
 			(effects
 				(font
@@ -26450,7 +26450,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 186.69 105.41 90)
 			(effects
 				(font
@@ -26459,7 +26459,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 186.69 105.41 90)
 			(effects
 				(font
@@ -26821,7 +26821,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 237.49 93.98 90)
 			(effects
 				(font
@@ -26830,7 +26830,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 237.49 93.98 90)
 			(effects
 				(font
@@ -27283,7 +27283,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 288.29 105.41 90)
 			(effects
 				(font
@@ -27292,7 +27292,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 288.29 105.41 90)
 			(effects
 				(font
@@ -27927,7 +27927,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 250.19 93.98 90)
 			(effects
 				(font
@@ -27936,7 +27936,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 250.19 93.98 90)
 			(effects
 				(font
@@ -28405,7 +28405,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 288.29 59.69 90)
 			(effects
 				(font
@@ -28414,7 +28414,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 288.29 59.69 90)
 			(effects
 				(font
@@ -28873,7 +28873,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 199.39 59.69 90)
 			(effects
 				(font
@@ -28882,7 +28882,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 199.39 59.69 90)
 			(effects
 				(font
@@ -29261,7 +29261,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 186.69 48.26 90)
 			(effects
 				(font
@@ -29270,7 +29270,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 186.69 48.26 90)
 			(effects
 				(font
@@ -30097,7 +30097,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 326.39 71.12 90)
 			(effects
 				(font
@@ -30106,7 +30106,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 326.39 71.12 90)
 			(effects
 				(font
@@ -31018,7 +31018,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 212.09 82.55 90)
 			(effects
 				(font
@@ -31027,7 +31027,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 212.09 82.55 90)
 			(effects
 				(font
@@ -31125,7 +31125,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 262.89 71.12 90)
 			(effects
 				(font
@@ -31134,7 +31134,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 262.89 71.12 90)
 			(effects
 				(font
@@ -31232,7 +31232,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 199.39 82.55 90)
 			(effects
 				(font
@@ -31241,7 +31241,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 199.39 82.55 90)
 			(effects
 				(font
@@ -31517,7 +31517,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 237.49 59.69 90)
 			(effects
 				(font
@@ -31526,7 +31526,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 237.49 59.69 90)
 			(effects
 				(font
@@ -32370,7 +32370,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 275.59 71.12 90)
 			(effects
 				(font
@@ -32379,7 +32379,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 275.59 71.12 90)
 			(effects
 				(font
@@ -32477,7 +32477,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 212.09 71.12 90)
 			(effects
 				(font
@@ -32486,7 +32486,7 @@
 				(hide yes)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 212.09 71.12 90)
 			(effects
 				(font

@@ -893,7 +893,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -907,7 +907,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -1237,7 +1237,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -1251,7 +1251,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -2612,7 +2612,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -2626,7 +2626,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -4099,7 +4099,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -4113,7 +4113,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -7056,7 +7056,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -7070,7 +7070,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -9184,7 +9184,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -9198,7 +9198,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -11138,7 +11138,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -11152,7 +11152,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -11768,7 +11768,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -11782,7 +11782,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -12892,7 +12892,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -12906,7 +12906,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -13696,7 +13696,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -13710,7 +13710,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -15044,7 +15044,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -15058,7 +15058,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -15388,7 +15388,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -15402,7 +15402,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -17347,7 +17347,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -17361,7 +17361,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -18039,7 +18039,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -18053,7 +18053,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -19846,7 +19846,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -19860,7 +19860,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20824,7 +20824,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20838,7 +20838,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -25746,7 +25746,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -25760,7 +25760,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -27128,7 +27128,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -27142,7 +27142,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -27758,7 +27758,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -27772,7 +27772,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -32248,7 +32248,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -32262,7 +32262,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -32592,7 +32592,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -32606,7 +32606,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -33716,7 +33716,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -33730,7 +33730,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -34492,7 +34492,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -34506,7 +34506,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -35296,7 +35296,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -35310,7 +35310,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -37536,7 +37536,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -37550,7 +37550,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -38166,7 +38166,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -38180,7 +38180,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -40614,7 +40614,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -40628,7 +40628,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -40958,7 +40958,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -40972,7 +40972,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -41824,7 +41824,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -41838,7 +41838,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -43840,7 +43840,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -43854,7 +43854,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -44470,7 +44470,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -44484,7 +44484,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -45274,7 +45274,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -45288,7 +45288,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -46684,7 +46684,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -46698,7 +46698,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -47028,7 +47028,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -47042,7 +47042,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -47804,7 +47804,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -47818,7 +47818,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -48148,7 +48148,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -48162,7 +48162,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -48492,7 +48492,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -48506,7 +48506,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -49184,7 +49184,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -49198,7 +49198,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -49814,7 +49814,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -49828,7 +49828,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -50158,7 +50158,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -50172,7 +50172,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -50502,7 +50502,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -50516,7 +50516,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -51884,7 +51884,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -51898,7 +51898,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -53232,7 +53232,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -53246,7 +53246,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -54468,7 +54468,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -54482,7 +54482,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -54812,7 +54812,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -54826,7 +54826,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -56048,7 +56048,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -56062,7 +56062,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -59034,7 +59034,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -59048,7 +59048,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -60904,7 +60904,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -60918,7 +60918,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -65512,7 +65512,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -65526,7 +65526,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -65856,7 +65856,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -65870,7 +65870,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -68354,7 +68354,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -68368,7 +68368,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -68698,7 +68698,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -68712,7 +68712,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -70220,7 +70220,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -70234,7 +70234,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -72522,7 +72522,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -72536,7 +72536,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -73758,7 +73758,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -73772,7 +73772,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -74102,7 +74102,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -74116,7 +74116,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -74446,7 +74446,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -74460,7 +74460,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -75794,7 +75794,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -75808,7 +75808,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -77058,7 +77058,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -77072,7 +77072,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -78120,7 +78120,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -78134,7 +78134,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -79244,7 +79244,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "1N4148WS"
+		(property "MPN" "1N4148W"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -79258,7 +79258,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "SOD-323"
+		(property "Package" "SOD-123"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -79819,7 +79819,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf"
 			(at 8.89 -24.13 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -79832,7 +79832,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Raspberry Pi Pico"
 			(at 8.89 -24.13 90)
 			(layer "B.Fab")
 			(hide yes)
@@ -79840,6 +79840,34 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "MPN" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ea6b3c45-4446-494a-8ef6-f81189f397a3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2f01665b-e981-4974-89ff-1788626bfe51")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)
