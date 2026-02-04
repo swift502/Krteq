@@ -24,3 +24,15 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 - Gateron 2u Low-Profile Plate-Mounted Stabilizer
 - Rubber feet
 
+## PCB BOM
+
+| Reference | Manufacturer Part Number |
+|---|---|
+| Switch Diode | 1N4148W |
+| Backlight LED | MHT151WDT |
+| Q (GSD) | HX2302A |
+| R82Ω | 0603WAF820JT5E |
+| R470Ω | 0603WAF4700T5E |
+| R10kΩ | 0603WAF1002T5E |
+| R330Ω | 0603WAF3300T5E |
+| Switch socket | CPG151101S11-16 |
