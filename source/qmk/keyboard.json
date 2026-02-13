@@ -15,8 +15,7 @@
     },
     "indicators": {
         "num_lock": "GP0",
-        "caps_lock": "GP1",
-        "scroll_lock": "GP2"
+        "caps_lock": "GP1"
     },
     "keyboard_name": "Krteq",
     "maintainer": "swift502",

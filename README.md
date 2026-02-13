@@ -13,6 +13,8 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 - Tray mount PCB, integrated plate
 - 233mm × 127mm × 30mm
 
+Connecting the keyboard to [usevia.app](https://usevia.app) requires manually uploading the [design file](production/krteq_via.json) in the design tab.
+
 ## Parts
 
 - [PCB](#pcb)

@@ -49,3 +49,25 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 
     return process_record_user(keycode, record);
 }
+
+void keyboard_post_init_kb(void)
+{
+    setPinOutput(GP2);
+    keyboard_post_init_user();
+}
+
+layer_state_t layer_state_set_kb(layer_state_t state)
+{
+    uint8_t layer = get_highest_layer(state);
+
+    if (layer == 4 || layer == 5)
+    {
+        writePinHigh(GP2);
+    }
+    else
+    {
+        writePinLow(GP2);
+    }
+
+    return layer_state_set_user(state);
+}
