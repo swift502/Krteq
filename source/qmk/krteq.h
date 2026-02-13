@@ -2,7 +2,7 @@
 
 #include "quantum.h"
 
-enum krtkus_keycodes
+enum krteq_keycodes
 {
     KRT_VOL = QK_KB_0
 };

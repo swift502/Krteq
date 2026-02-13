@@ -1,4 +1,4 @@
-#include "krtkus.h"
+#include "krteq.h"
 
 bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 {
