@@ -41,14 +41,15 @@ def run_qmk_compile():
     subprocess.run(args, env=env, check=True)
     print()
 
-def obtain_hex_file():
+def retrieve_bin():
+    # Move .uf2 file
     shutil.move(bin_remote, bin_local)
     print(f"Moved '{bin_remote}' to '{bin_local}'.")
 
+    # Clean up
     shutil.rmtree(kb_remote)
     print(f"Cleaned up '{kb_remote}'.")
 
-# Main
 copy_qmk_folder()
 run_qmk_compile()
-obtain_hex_file()
+retrieve_bin()
