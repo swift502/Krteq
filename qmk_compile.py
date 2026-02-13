@@ -33,7 +33,7 @@ def run_qmk_compile():
     env["MSYSTEM"] = "MINGW64"
 
     # Args
-    command = "qmk compile -kb krteq -km default"
+    command = "qmk compile -kb krteq -km default --clean"
     args = [msys_exe, "--login", "-c", command]
 
     # Run
