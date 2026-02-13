@@ -1,4 +1,8 @@
 {
+    "backlight": {
+        "pin": "GP13",
+        "levels": 5
+    },
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
     "dynamic_keymap": {
@@ -8,6 +12,11 @@
         "extrakey": true,
         "nkro": true,
         "via": true
+    },
+    "indicators": {
+        "num_lock": "GP0",
+        "caps_lock": "GP1",
+        "scroll_lock": "GP2"
     },
     "keyboard_name": "Krteq",
     "maintainer": "swift502",
@@ -26,8 +35,8 @@
     "url": "https://github.com/swift502/Krteq",
     "usb": {
         "device_version": "1.0.0",
-        "pid": "0x1617",
-        "vid": "0x4A42"
+        "vid": "0x4A42",
+        "pid": "0x1617"
     },
     "layouts": {
         "LAYOUT_default": {
