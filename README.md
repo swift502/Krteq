@@ -28,9 +28,7 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 
 Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. Additional formats can easily be exported from the Kicad 9 project if needed. All the parts are SMD. The PCB was meant to be ordered already assembled for an easier (although more expensive) build process.
 
-### Intended BOM
-
-Parts can be substituted for alternatives with equivalent specs if needed.
+### Suggested BOM
 
 | Part | Manufacturer Part Number |
 |---|---|
@@ -47,15 +45,15 @@ Parts can be substituted for alternatives with equivalent specs if needed.
 
 Case can be found in [production/case](production/case). Designed for PLA, 100% infill, 0.15mm. The top and the bottom pieces just snap together, no screws needed.  The PCB is then sandwiched between the two parts.
 
-Top case has a "Keychron" variant, which adjusts stabilizer cutout for their non-standard triangular stem design. Make sure to check if your keycaps use the straight or triangular stem design if you plan on using low-profile Keychron keycaps.
-
-https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers
+Top case has a "Keychron" variant, which adjusts stabilizer cutout for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers). Make sure to check if your keycaps use the straight or triangular stem design if you plan on using low-profile Keychron keycaps.
 
 ## Build
 
-Most of the PCB is meant to come pre-assembled from a PCB manufacturer. In that case, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can be soldered directly as well.
+Most of the PCB is meant to come pre-assembled from a PCB manufacturer. In that case, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
 
-Once the MCU is assembled, connect the USB cable to it. Then screw the cable's other end to the case. Finally, assemble the case, switches and keycaps. Done!
+Once the MCU is soldered, assemble the cable. Screw the cable's panel end to the inside wall of the case, then connect the other end to the Pico. The cable is used to correct USB port orientation, but also to protect Pico's USB port from snapping, which can happen if it's stressed over time.
+
+Once the cable is secured and connected like this, you can assemble the case by just sliding the top part over the bottom part. Make sure the cable doesn't get squeezed. Finally, assemble the switches and keycaps, and you're done!
 
 ## QMK
 
@@ -64,18 +62,28 @@ Once the MCU is assembled, connect the USB cable to it. Then screw the cable's o
 - Info: https://docs.qmk.fm/reference_info_json
 - Keycodes: https://docs.qmk.fm/keycodes
 
-### Compiling and Flashing
+### Compiling (Windows)
 
-On Windows, install:
+Install:
 
 - Python: https://www.python.org/
 - MSYS: https://msys.qmk.fm
 
-Then run the compile script:
+Run the compile script:
 
 ```sh
 python qmk_compile.py
 ```
+
+### Flashing (Windows)
+
+Flash the Pico before assembling the case for the first time. Hold the BOOTSEL button while connecting the USB cable to have it show up as a storage device, then copy the compiled .uf2 file to it.
+
+Once the firmware is uploaded, flashing can be triggered via the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
+
+To clear keymap overrides and revert to the default keymap, use the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> key combination.
+
+```sh
 
 ### Resetting
 
@@ -86,7 +94,7 @@ Once the firmware is flashed, it provides key combinations to enter bootloader o
 
 ## Kicad 9
 
-Switch grid reference table:
+Switch grid reference:
 
 | Grid | Size |
 | --- | --- |
