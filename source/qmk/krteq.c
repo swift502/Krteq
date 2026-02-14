@@ -1,0 +1,71 @@
+#include QMK_KEYBOARD_H
+
+bool process_record_kb(uint16_t keycode, keyrecord_t *record)
+{
+    uint8_t mods = get_mods();
+    bool double_shift = (mods & MOD_MASK_SHIFT) == MOD_MASK_SHIFT;
+
+    switch (keycode)
+    {
+        case KRT_VOL:
+            if (record->event.pressed)
+            {
+                if (mods & MOD_MASK_CTRL)
+                {
+                    host_consumer_send(AUDIO_MUTE);
+                }
+                else if (mods & MOD_MASK_SHIFT)
+                {
+                    host_consumer_send(AUDIO_VOL_UP);
+                }
+                else
+                {
+                    host_consumer_send(AUDIO_VOL_DOWN);
+                }
+            }
+            else
+            {
+                host_consumer_send(0);
+            }
+            return false;
+
+        case KC_B:
+            if (record->event.pressed && double_shift)
+            {
+                reset_keyboard();
+                return false;
+            }
+            break;
+
+        case KC_C:
+            if (record->event.pressed && double_shift)
+            {
+                eeconfig_disable();
+                soft_reset_keyboard();
+                return false;
+            }
+            break;
+    }
+
+    return process_record_user(keycode, record);
+}
+
+void keyboard_post_init_kb(void)
+{
+    setPinOutput(GP2);
+    keyboard_post_init_user();
+}
+
+layer_state_t layer_state_set_kb(layer_state_t state)
+{
+    if (get_highest_layer(state) > 3)
+    {
+        writePinHigh(GP2);
+    }
+    else
+    {
+        writePinLow(GP2);
+    }
+
+    return layer_state_set_user(state);
+}
