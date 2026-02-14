@@ -19,11 +19,11 @@ bin_remote = root_remote / f"{name}_default.uf2"
 # Remove existing
 if kb_remote.exists():
     shutil.rmtree(kb_remote)
-    print(f"Removed existing folder '{kb_remote}'.")
+    print(f"Removed existing folder {kb_remote}")
 
 # Setup qmk keyboard folder
 shutil.copytree(kb_local, kb_remote)
-print(f"Copied '{kb_local}' to '{kb_remote}'.")
+print(f"Copied {kb_local} to {kb_remote}")
 
 # Environment
 # https://docs.qmk.fm/other_vscode#msys2-setup
@@ -41,8 +41,8 @@ print()
 
 # Retrieve bin file
 shutil.move(bin_remote, bin_local)
-print(f"Moved '{bin_remote}' to '{bin_local}'.")
+print(f"Moved {bin_remote} to {bin_local}")
 
 # Clean up
 shutil.rmtree(kb_remote)
-print(f"Cleaned up '{kb_remote}'.")
+print(f"Cleaned up {kb_remote}")
