@@ -86,8 +86,6 @@ Once the firmware is uploaded, flashing can be triggered via the <kbd>LShift</kb
 
 To clear keymap overrides and revert to the default keymap, use the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> key combination.
 
-```sh
-
 ### Resetting
 
 Once the firmware is flashed, it provides key combinations to enter bootloader or clear the keyboard's persistent storage.
@@ -97,12 +95,12 @@ Once the firmware is flashed, it provides key combinations to enter bootloader o
 
 ## Kicad 9
 
-Switch grid reference:
+Switch grid:
 
 | Grid | Size |
 | --- | --- |
 | Switch 1 | 19.05 |
 | Switch 1/4 | 4.7625 |
 | Switch 1/16 | 1.190625 |
-| Switch 1/32 | 0,5953125 |
+| Switch 1/32 | 0.5953125 |
 | Switch 1/64 | 0.29765625 |
