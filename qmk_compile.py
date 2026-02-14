@@ -3,18 +3,18 @@ import shutil
 import subprocess
 from pathlib import Path
 
-# Exec
+name = "krteq"
 msys_exe = r"C:\QMK_MSYS\usr\bin\bash.exe"
 
 # Local
 root_local = Path(__file__).parent.resolve()
 kb_local = root_local / "source" / "qmk"
-bin_local = root_local / "production" / "krteq.uf2"
+bin_local = root_local / "production" / f"{name}.uf2"
 
 # Remote
 root_remote = Path.home() / "qmk_firmware"
-kb_remote = root_remote / "keyboards" / "krteq"
-bin_remote = root_remote / "krteq_default.uf2"
+kb_remote = root_remote / "keyboards" / name
+bin_remote = root_remote / f"{name}_default.uf2"
 
 # Remove existing
 if kb_remote.exists():
@@ -31,7 +31,7 @@ env = os.environ.copy()
 env["MSYSTEM"] = "MINGW64"
 
 # Args
-command = "qmk compile -kb krteq -km default --clean"
+command = f"qmk compile -kb {name} -km default --clean"
 args = [msys_exe, "--login", "-c", command]
 
 # Run
