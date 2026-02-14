@@ -9,7 +9,7 @@ msys_exe = r"C:\QMK_MSYS\usr\bin\bash.exe"
 # Local
 root_local = Path(__file__).parent.resolve()
 kb_local = root_local / "source" / "qmk"
-bin_local = root_local / "production" / f"{name}.uf2"
+bin_local = root_local / "production" / f"{name}_firmware.uf2"
 
 # Remote
 root_remote = Path.home() / "qmk_firmware"
