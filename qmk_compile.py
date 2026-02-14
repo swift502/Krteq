@@ -39,7 +39,7 @@ print()
 subprocess.run(args, env=env, check=True)
 print()
 
-# Move .uf2 file
+# Retrieve bin file
 shutil.move(bin_remote, bin_local)
 print(f"Moved '{bin_remote}' to '{bin_local}'.")
 
