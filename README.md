@@ -61,8 +61,9 @@ Once the cable is secured and connected like this, you can assemble the case by 
 
 ### Documentation
 
-- Info: https://docs.qmk.fm/reference_info_json
+- Info data: https://docs.qmk.fm/reference_info_json
 - Keycodes: https://docs.qmk.fm/keycodes
+- Default keymap: https://docs.qmk.fm/configurator_default_keymaps
 
 ### Compiling (Windows)
 
