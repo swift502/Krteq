@@ -2,7 +2,7 @@
   "customKeycodes": [
     {
       "name": "Volume control",
-      "title": "KC_VOLD on press, KC_VOLU with Shift, KC_MUTE with Ctrl",
+      "title": "Volume down, up with Shift, mute with Ctrl",
       "shortName": "KrtVol"
     }
   ],
