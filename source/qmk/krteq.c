@@ -58,9 +58,7 @@ void keyboard_post_init_kb(void)
 
 layer_state_t layer_state_set_kb(layer_state_t state)
 {
-    uint8_t layer = get_highest_layer(state);
-
-    if (layer == 4 || layer == 5)
+    if (get_highest_layer(state) > 3)
     {
         writePinHigh(GP2);
     }
