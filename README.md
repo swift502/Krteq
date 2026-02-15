@@ -8,7 +8,7 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 - Hotswap
 - Backlight (single color, no effects)
 - QMK/VIA compatible
-- Gateron LP 3.0 switches
+- Gateron KS-33B (GLP 3.0) switches
 - 3D printed case with a 7 degree tilt
 - Tray mount PCB, integrated plate
 - 233mm × 127mm × 30mm
