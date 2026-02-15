@@ -103,7 +103,7 @@ python qmk_compile.py
 
 ### Flashing (Windows)
 
-Flash the firmware before assembling the case for the first time. Hold the BOOTSEL button while connecting the Pico to have it show up as a storage device, then copy the compiled [krteq_firmware.uf2](production) to it.
+Flash the firmware before assembling the case for the first time. Hold the BOOTSEL button while connecting the Pico to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) to it.
 
 Once the firmware is flashed, you can enter bootloader mode via a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
 
