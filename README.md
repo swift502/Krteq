@@ -47,9 +47,6 @@ Fabrication files in [production/pcb](production/pcb) are provided in several ma
 
 ### Case
 
-[![](https://img.shields.io/badge/Printables-Krteq-orange?logo=printables)](https://www.printables.com/model/)
-
-
 Case files for 3D printing can be found in [production/case](production/case). Tested with PLA 100% infill 0.15mm. 
 
 Top case has a "Keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers). Make sure to check if your keycaps use the straight or triangular stem design if you plan on using low-profile Keychron keycaps.
