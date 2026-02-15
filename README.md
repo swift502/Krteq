@@ -26,14 +26,6 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 - Gateron 2u Low-Profile Plate-Mounted Stabilizer
 - Rubber feet
 
-## Build
-
-Most of the PCB is meant to come pre-assembled from a PCB manufacturer. In that case, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
-
-Once the MCU is soldered, connect the cable. Screw the cable's panel end to the inside wall of the case, then connect the other end to the Pico. The cable is necessary to rotate the USB port orientation, but also to protect Pico's onboard USB port from snapping, which can happen if it's stressed over time.
-
-Finally, slide the top case over the whole assembly, place the switches and keycaps, and you're done!
-
 ## PCB
 
 Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. Additional formats can easily be exported from the Kicad 9 project if needed. All the parts are SMD. The PCB was meant to be ordered already assembled for an easier (although more expensive) build process.
@@ -56,6 +48,14 @@ Fabrication files in [production/pcb](production/pcb) are provided in several ma
 Case can be found in [production/case](production/case). Designed for PLA, 100% infill, 0.15mm. The top and the bottom pieces just snap together, no screws needed.  The PCB is then sandwiched between the two parts.
 
 Top case has a "Keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers). Make sure to check if your keycaps use the straight or triangular stem design if you plan on using low-profile Keychron keycaps.
+
+## Build
+
+Most of the PCB is meant to come pre-assembled from a PCB manufacturer. In that case, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
+
+Once the MCU is soldered, connect the cable. Screw the cable's panel end to the inside wall of the case, then connect the other end to the Pico. The cable is necessary to rotate the USB port orientation, but also to protect Pico's onboard USB port from snapping, which can happen if it's stressed over time.
+
+Finally, slide the top case over the whole assembly, place the switches and keycaps, and you're done!
 
 ## QnA
 
