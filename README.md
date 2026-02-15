@@ -63,7 +63,7 @@ Finally, slide the top case over the whole assembly, place the switches and keyc
 
 ### Why the unusual KS-33B switches?
 
-The problem I had when trying to order a pre-assembled low-profile hotswap keyboard PCB was the lack of low-profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the widely available regular hotswap sockets.
+The problem I had when trying to order a pre-assembled low-profile hotswap keyboard PCB was the lack of low-profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the much more common regular hotswap sockets.
 
 I'm making a big bet on these switches taking over current KS-33s to keep this design viable long term. The moment they stop selling, this design becomes much less accessible.
 
