@@ -30,7 +30,7 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 ### PCB
 
-Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. Additional formats can easily be exported from the Kicad 9 project if needed. All the parts are SMD. The PCB was meant to be ordered already assembled for an easier (although more expensive) build process.
+Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. If another format is needed, the source Kicad 9 project is available in [source/kicad](source/kicad). All the parts are SMD. The PCB is intended to be ordered already assembled for an easier (although more expensive) build process.
 
 #### Suggested BOM
 
@@ -47,15 +47,15 @@ Fabrication files in [production/pcb](production/pcb) are provided in several ma
 
 ### Case
 
-Case can be found in [production/case](production/case). Tested with PLA 100% infill 0.15mm. The top and the bottom pieces just snap together, no screws needed.  The PCB is then sandwiched between the two parts.
+Case can be found in [production/case](production/case). Tested with PLA 100% infill 0.15mm.
 
 Top case has a "Keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers). Make sure to check if your keycaps use the straight or triangular stem design if you plan on using low-profile Keychron keycaps.
 
 ### Assembly
 
-Most of the PCB is meant to come pre-assembled from a PCB manufacturer. In that case, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
+Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
 
-Once the MCU is soldered, connect the cable. Screw the cable's panel end to the inside wall of the case, then connect the other end to the Pico. The cable is necessary to rotate the USB port orientation, but also to protect Pico's onboard USB port from snapping, which can happen if it's stressed over time.
+Attach the cable to the case from the inside with screws, and connect the other end to the Pico. The cable is necessary to rotate the USB port orientation, but also to protect Pico's onboard USB port from snapping, which can happen if it's stressed over time.
 
 Finally, slide the top case over the whole assembly, place the switches and keycaps, and you're done!
 
@@ -63,17 +63,17 @@ Finally, slide the top case over the whole assembly, place the switches and keyc
 
 ### Why the rare KS-33B switches?
 
-The main issue I faced when trying to order a pre-assembled low-profile keyboard PCB was the lack of low-profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the widely available regular hotswap sockets.
+The problem I had when trying to order a pre-assembled low-profile hotswap keyboard PCB was the lack of low-profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the widely available regular hotswap sockets.
 
-I'm making a big bet on these switches becoming mainstream to keep this design viable long term. The moment they stop selling, this design becomes pretty much useless.
+I'm making a big bet on these switches taking over current KS-33s to keep this design viable long term. The moment they stop selling, this design becomes more difficult to build.
 
-### So is this board compatible with regular high profile switches?
+### So is this board compatible with regular profile switches?
 
-No, but it would be trivial to make it compatible. Literally just raise the height of the top case by a few millimeters. Maybe adjust stabilizer cutouts. But as it stands, I'm not planning on making this variant unless by some miracle there was a demand for it.
+Not now, but it would be trivial. Just raise the height of the top case by a few millimeters. Maybe adjust stabilizer cutouts. But I'm not planning on making it, unless by some miracle there was a demand for it.
 
 ### Why no RGB?
 
-The simple version of backlighting was a lot easier to implement hardware wise, and reduced the amount of components which could fail. Long term reliability was one of the main goals of this design. Also, it's obviously just not that important to me, and I realistically don't expect anyone but me to use this keyboard.
+The simple backlighting was a lot easier to implement hardware wise, and reduced the amount of components which could fail. Long term reliability was one of the main goals of this design. Also, it's just not that important to me, and I realistically don't expect anyone other than me to use this keyboard.
 
 ## QMK
 
@@ -98,7 +98,7 @@ python qmk_compile.py
 
 ### Flashing (Windows)
 
-Flash the firmware before assembling the case for the first time. Hold the BOOTSEL button while connecting the Pico to have it show up as a storage device, then copy the compiled [krteq_firmware.uf2](production/krteq_firmware.uf2) to it.
+Flash the firmware before assembling the case for the first time. Hold the BOOTSEL button while connecting the Pico to have it show up as a storage device, then copy the compiled [krteq_firmware.uf2](production) to it.
 
 Once the firmware is flashed, you can enter bootloader mode via a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
 
