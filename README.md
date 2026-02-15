@@ -47,7 +47,10 @@ Fabrication files in [production/pcb](production/pcb) are provided in several ma
 
 ### Case
 
-Case can be found in [production/case](production/case). Tested with PLA 100% infill 0.15mm.
+[![](https://img.shields.io/badge/Printables-Krteq-orange?logo=printables)](https://www.printables.com/model/)
+
+
+Case files for 3D printing can be found in [production/case](production/case). Tested with PLA 100% infill 0.15mm. 
 
 Top case has a "Keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers). Make sure to check if your keycaps use the straight or triangular stem design if you plan on using low-profile Keychron keycaps.
 
@@ -61,19 +64,21 @@ Finally, slide the top case over the whole assembly, place the switches and keyc
 
 ## QnA
 
-### Why the rare KS-33B switches?
+### Why the unusual KS-33B switches?
 
 The problem I had when trying to order a pre-assembled low-profile hotswap keyboard PCB was the lack of low-profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the widely available regular hotswap sockets.
 
-I'm making a big bet on these switches taking over current KS-33s to keep this design viable long term. The moment they stop selling, this design becomes more difficult to build.
+I'm making a big bet on these switches taking over current KS-33s to keep this design viable long term. The moment they stop selling, this design becomes much less accessible.
 
 ### So is this board compatible with regular profile switches?
 
-Not now, but it would be trivial. Just raise the height of the top case by a few millimeters. Maybe adjust stabilizer cutouts. But I'm not planning on making it, unless by some miracle there was a demand for it.
+Not now, but it would be trivial to make. Just raise the height of the top case by a few millimeters. Maybe adjust stabilizer cutouts.
+
+That said, I'm not planning on making it, unless by some miracle there was a significant demand for it.
 
 ### Why no RGB?
 
-The simple backlighting was a lot easier to implement hardware wise, and reduced the amount of components which could fail. Long term reliability was one of the main goals of this design. Also, it's just not that important to me, and I realistically don't expect anyone other than me to use this keyboard.
+The simple backlighting was a lot easier to implement hardware wise, and reduced the amount of components which could fail. Longevity was one of the main goals of this design. Also, it's just not that important to me, and I realistically don't expect anyone other than me to use this keyboard.
 
 ## QMK
 
