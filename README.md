@@ -26,6 +26,14 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 - Gateron 2u Low-Profile Plate-Mounted Stabilizer
 - Rubber feet
 
+## Build
+
+Most of the PCB is meant to come pre-assembled from a PCB manufacturer. In that case, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
+
+Once the MCU is soldered, connect the cable. Screw the cable's panel end to the inside wall of the case, then connect the other end to the Pico. The cable is necessary to rotate the USB port orientation, but also to protect Pico's onboard USB port from snapping, which can happen if it's stressed over time.
+
+Finally, slide the top case over the whole assembly, place the switches and keycaps, and you're done!
+
 ## PCB
 
 Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. Additional formats can easily be exported from the Kicad 9 project if needed. All the parts are SMD. The PCB was meant to be ordered already assembled for an easier (although more expensive) build process.
@@ -47,21 +55,29 @@ Fabrication files in [production/pcb](production/pcb) are provided in several ma
 
 Case can be found in [production/case](production/case). Designed for PLA, 100% infill, 0.15mm. The top and the bottom pieces just snap together, no screws needed.  The PCB is then sandwiched between the two parts.
 
-Top case has a "Keychron" variant, which adjusts stabilizer cutout for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers). Make sure to check if your keycaps use the straight or triangular stem design if you plan on using low-profile Keychron keycaps.
+Top case has a "Keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers). Make sure to check if your keycaps use the straight or triangular stem design if you plan on using low-profile Keychron keycaps.
 
-## Build
+## QnA
 
-Most of the PCB is meant to come pre-assembled from a PCB manufacturer. In that case, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
+### Why the rare KS-33B switches?
 
-Once the MCU is soldered, assemble the cable. Screw the cable's panel end to the inside wall of the case, then connect the other end to the Pico. The cable is used to correct USB port orientation, but also to protect Pico's USB port from snapping, which can happen if it's stressed over time.
+The main issue I faced when trying to order a pre-assembled low-profile keyboard PCB was the lack of low-profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the widely available regular hotswap sockets.
 
-Once the cable is secured and connected like this, you can assemble the case by just sliding the top part over the bottom part. Make sure the cable doesn't get squeezed. Finally, assemble the switches and keycaps, and you're done!
+I'm making a big bet on these switches becoming mainstream to keep this design viable long term. The moment they stop selling, this design becomes pretty much useless.
+
+### So is this board compatible with regular high profile switches?
+
+No, but it would be trivial to make it compatible. Literally just raise the height of the top case by a few millimeters. Maybe adjust stabilizer cutouts. But as it stands, I'm not planning on making this variant unless by some miracle there was a demand for it.
+
+### Why no RGB?
+
+The simple version of backlighting was a lot easier to implement hardware wise, and reduced the amount of components which could fail. Long term reliability was one of the main goals of this design. Also, it's obviously just not that important to me, and I realistically don't expect anyone but me to use this keyboard.
 
 ## QMK
 
 ### Documentation
 
-- Info data: https://docs.qmk.fm/reference_info_json
+- Info json: https://docs.qmk.fm/reference_info_json
 - Keycodes: https://docs.qmk.fm/keycodes
 - Default keymap: https://docs.qmk.fm/configurator_default_keymaps
 
@@ -80,18 +96,11 @@ python qmk_compile.py
 
 ### Flashing (Windows)
 
-Flash the Pico before assembling the case for the first time. Hold the BOOTSEL button while connecting the USB cable to have it show up as a storage device, then copy the compiled .uf2 file to it.
+Flash the firmware before assembling the case for the first time. Hold the BOOTSEL button while connecting the Pico to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) to it.
 
-Once the firmware is uploaded, flashing can be triggered via the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
+Once the firmware is flashed, you can enter bootloader mode via a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
 
-To clear keymap overrides and revert to the default keymap, use the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> key combination.
-
-### Resetting
-
-Once the firmware is flashed, it provides key combinations to enter bootloader or clear the keyboard's persistent storage.
-
-- <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> - Puts the keyboard into bootloader mode for flashing
-- <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> - Clears EEPROM and reverts to the default keymap
+To revert to the default keymap by clearing the EEPROM, use a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> key combination.
 
 ## Kicad 9
 
