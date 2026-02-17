@@ -76,14 +76,8 @@ void keyboard_post_init_user(void)
 
 layer_state_t layer_state_set_user(layer_state_t state)
 {
-    if (get_highest_layer(state) > 3)
-    {
-        gpio_write_pin_high(GP2);
-    }
-    else
-    {
-        gpio_write_pin_low(GP2);
-    }
-
+    bool input_lock = get_highest_layer(state) > 3;
+    gpio_write_pin(GP2, input_lock);
+    
     return state;
 }
