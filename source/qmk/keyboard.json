@@ -1,5 +1,10 @@
 {
     "backlight": {
+        "breathing": true,
+        "default": {
+            "brightness": 2,
+            "on": false
+        },
         "levels": 5,
         "pin": "GP13"
     },
