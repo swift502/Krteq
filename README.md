@@ -57,7 +57,7 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 
 Attach the cable to the case from the inside with screws, and connect the other end to the Pico. The cable is necessary to rotate the USB port orientation, but also to protect Pico's onboard USB port from snapping, which can happen if it's stressed over time.
 
-Finally, slide the top case over the whole assembly, place the switches and keycaps, and you're done!
+Next, place the pcb in the bottom case and slide the top assembly over the bottom case, sandwiching the PCB. Finally, place the switches and keycaps, and you're done!
 
 ## QnA
 
