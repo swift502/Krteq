@@ -3,6 +3,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
+# Config
 name = "krteq"
 msys_exe = r"C:\QMK_MSYS\usr\bin\bash.exe"
 
