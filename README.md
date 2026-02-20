@@ -8,14 +8,16 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 - Hotswap
 - Backlight (single color, no effects)
 - QMK/VIA compatible
-- Gateron LP 3.0 switches
+- Gateron KS-33B (GLP 3.0) switches
 - 3D printed case with a 7 degree tilt
 - Tray mount PCB, integrated plate
 - 233mm × 127mm × 30mm
 
 Connecting the keyboard to [usevia.app](https://usevia.app) requires manually uploading the [design file](production/krteq_via.json) in the design tab.
 
-## Parts
+## Build
+
+### Parts
 
 - [PCB](#pcb)
 - [Case](#case)
@@ -26,11 +28,11 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 - Gateron 2u Low-Profile Plate-Mounted Stabilizer
 - Rubber feet
 
-## PCB
+### PCB
 
-Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. Additional formats can easily be exported from the Kicad 9 project if needed. All the parts are SMD. The PCB was meant to be ordered already assembled for an easier (although more expensive) build process.
+Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. If another format is needed, the source Kicad 9 project is available in [source/kicad](source/kicad). All the parts are SMD. The PCB is intended to be ordered already assembled for an easier (although more expensive) build process.
 
-### Suggested BOM
+#### Suggested BOM
 
 | Part | Manufacturer Part Number |
 |---|---|
@@ -43,25 +45,43 @@ Fabrication files in [production/pcb](production/pcb) are provided in several ma
 | R330Ω | 0603WAF3300T5E |
 | Switch socket | CPG151101S11-16 |
 
-## Case
+### Case
 
-Case can be found in [production/case](production/case). Designed for PLA, 100% infill, 0.15mm. The top and the bottom pieces just snap together, no screws needed.  The PCB is then sandwiched between the two parts.
+Case files for 3D printing can be found in [production/case](production/case). Tested with PLA 100% infill 0.15mm. 
 
-Top case has a "Keychron" variant, which adjusts stabilizer cutout for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers). Make sure to check if your keycaps use the straight or triangular stem design if you plan on using low-profile Keychron keycaps.
+Top case has a "Keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers). Make sure to check if your keycaps use the straight or triangular stem design if you plan on using low-profile Keychron keycaps.
 
-## Build
+### Assembly
 
-Most of the PCB is meant to come pre-assembled from a PCB manufacturer. In that case, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
+Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
 
-Once the MCU is soldered, assemble the cable. Screw the cable's panel end to the inside wall of the case, then connect the other end to the Pico. The cable is used to correct USB port orientation, but also to protect Pico's USB port from snapping, which can happen if it's stressed over time.
+Attach the cable to the case from the inside with screws, and connect the other end to the Pico. The cable is necessary to rotate the USB port orientation, but also to protect Pico's onboard USB port from snapping, which can happen if it's stressed over time.
 
-Once the cable is secured and connected like this, you can assemble the case by just sliding the top part over the bottom part. Make sure the cable doesn't get squeezed. Finally, assemble the switches and keycaps, and you're done!
+Next, place the pcb in the bottom case and slide the top assembly over the bottom case, sandwiching the PCB. Finally, place the switches and keycaps, and you're done!
+
+## QnA
+
+### Why the unusual KS-33B switches?
+
+The problem I had when trying to order a pre-assembled low-profile hotswap keyboard PCB was the lack of low-profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the much more common and widely available regular hotswap sockets.
+
+I'm making a big bet on these switches taking over current KS-33s to keep this design viable long term. The moment they stop selling, the entire concept behind this board kind of falls apart.
+
+### So is this board compatible with regular profile switches?
+
+Not now, but it would be trivial to make. Just raise the height of the top case by a few millimeters. Maybe adjust stabilizer cutouts.
+
+That said, I'm not planning on making it, unless by some miracle there was a significant demand for it.
+
+### Why no RGB?
+
+The simple backlighting was a lot easier to implement hardware wise, and reduced the amount of components which could fail. Longevity was one of the main goals of this design. Also, it's just not that important to me, and I realistically don't expect anyone other than me to use this keyboard.
 
 ## QMK
 
 ### Documentation
 
-- Info data: https://docs.qmk.fm/reference_info_json
+- Info json: https://docs.qmk.fm/reference_info_json
 - Keycodes: https://docs.qmk.fm/keycodes
 - Default keymap: https://docs.qmk.fm/configurator_default_keymaps
 
@@ -80,18 +100,11 @@ python qmk_compile.py
 
 ### Flashing (Windows)
 
-Flash the Pico before assembling the case for the first time. Hold the BOOTSEL button while connecting the USB cable to have it show up as a storage device, then copy the compiled .uf2 file to it.
+Flash the firmware before assembling the case for the first time. Hold the BOOTSEL button while connecting the Pico to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) to it.
 
-Once the firmware is uploaded, flashing can be triggered via the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
+Once the firmware is flashed, you can enter bootloader mode via a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
 
-To clear keymap overrides and revert to the default keymap, use the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> key combination.
-
-### Resetting
-
-Once the firmware is flashed, it provides key combinations to enter bootloader or clear the keyboard's persistent storage.
-
-- <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> - Puts the keyboard into bootloader mode for flashing
-- <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> - Clears EEPROM and reverts to the default keymap
+To revert to the default keymap by clearing the EEPROM, use a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> key combination.
 
 ## Kicad 9
 
