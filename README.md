@@ -65,17 +65,17 @@ Next, place the pcb in the bottom case and slide the top assembly over the botto
 
 The problem I had when trying to order a pre-assembled low-profile hotswap keyboard PCB was the lack of low-profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the much more common and widely available regular hotswap sockets.
 
-I'm making a big bet on these switches taking over current KS-33s to keep this design viable long term. The moment they stop selling, the entire concept behind this board kind of falls apart.
+I'm making a big bet on these switches taking over current KS-33s to keep this design viable long term. The moment they stop selling, the entire concept of easy assembly would fall apart.
 
-### So is this board compatible with regular profile switches?
+### So is this board compatible with high profile switches?
 
-Not now, but it would be trivial to make. Just raise the height of the top case by a few millimeters. Maybe adjust stabilizer cutouts.
+Not now, but it would be trivial to make. Just raise the height of the top case by a few millimeters, and maybe adjust stabilizer cutouts.
 
-That said, I'm not planning on making it, unless by some miracle there was a significant demand for it.
+That said, I'm not planning on making it, unless there was a demand for it.
 
 ### Why no RGB?
 
-The simple backlighting was a lot easier to implement hardware wise, and reduced the amount of components which could fail. Longevity was one of the main goals of this design. Also, it's just not that important to me, and I realistically don't expect anyone other than me to use this keyboard.
+The simple backlighting was a lot easier to implement hardware wise, and reduced the amount of components which could fail, and longevity was one of the main goals of this design. It could be implemented but would require a complete redesign of the PCB.
 
 ## QMK
 
