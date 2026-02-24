@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, KC_LGUI, KRT_VOL, KC_LALT, MO(1),        KC_SPC,      MO(2),   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
     ),
     [1] = LAYOUT_default(
-        TG(4),                                                                                             KC_NUM,
+        KC_NUM,                                                                                            _______,
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
         KC_INS,  _______, KC_UP,   _______, KC_PGUP, KC_P7,   KC_P8,   KC_P9,   _______, _______, _______, _______,
         KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_P4,   KC_P5,   KC_P6,   _______, KC_LBRC, KC_RBRC, KC_BSLS,
@@ -36,48 +36,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, _______, _______, _______, _______,      KC_P0,       KC_PDOT, KC_HOME, _______, _______, KC_END
     ),
     [2] = LAYOUT_default(
-        BL_TOGG,                                                                                           KC_PSCR,
-        BL_DOWN, BL_UP,   _______, _______, _______, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU,
-        BL_BRTG, _______, _______, _______, _______, _______, _______, _______, _______, KC_PSLS, KC_PAST, KC_PMNS,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_PPLS,
+        _______,                                                                                           BL_TOGG,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU,
+        _______, _______, BL_UP,   _______, _______, _______, _______, _______, _______, KC_PSLS, KC_PAST, KC_PMNS,
+        _______, _______, BL_DOWN, _______, _______, _______, _______, _______, _______, _______, _______, KC_PPLS,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RSFT(KC_ENT),
         _______, _______, _______, _______, _______,      _______,     _______, _______, _______, _______, RCTL(KC_ENT)
-    ),
-    [3] = LAYOUT_default(
-        _______,                                                                                           _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______,      _______,     _______, _______, _______, _______, _______
-    ),
-    [4] = LAYOUT_default(
-        XXXXXXX,                                                                                           XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, MO(5),        XXXXXXX,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-    ),
-    [5] = LAYOUT_default(
-        TG(4),                                                                                             _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______,      _______,     _______, _______, _______, _______, _______
     )
 };
-
-void keyboard_post_init_user(void)
-{
-    gpio_set_pin_output(GP2);
-}
-
-layer_state_t layer_state_set_user(layer_state_t state)
-{
-    bool input_lock = get_highest_layer(state) > 3;
-    gpio_write_pin(GP2, input_lock);
-    
-    return state;
-}
