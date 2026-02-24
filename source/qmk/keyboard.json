@@ -1,5 +1,6 @@
 {
     "backlight": {
+        "breathing": true,
         "default": {
             "brightness": 2,
             "on": false
