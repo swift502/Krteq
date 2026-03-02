@@ -84,6 +84,7 @@ The simple backlighting was a lot easier to implement hardware wise, and reduced
 - Info json: https://docs.qmk.fm/reference_info_json
 - Keycodes: https://docs.qmk.fm/keycodes
 - Default keymap: https://docs.qmk.fm/configurator_default_keymaps
+- Backlight: https://docs.qmk.fm/features/backlight
 
 ### Compiling (Windows)
 
