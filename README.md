@@ -6,7 +6,7 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 
 - Low profile
 - Hotswap
-- Backlight (single color, breathing effect only)
+- White backlight (only breathing effect)
 - QMK/VIA compatible
 - Gateron KS-33B (GLP 3.0) switches
 - 3D printed case with a 7 degree tilt
