@@ -6,6 +6,7 @@
       "shortName": "KrtVol"
     }
   ],
+  "keycodes": ["qmk_lighting"],
   "matrix": {
     "rows": 6,
     "cols": 12

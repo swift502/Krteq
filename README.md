@@ -30,7 +30,7 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 ### PCB
 
-Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. If another format is needed, the source Kicad 9 project is available in [source/kicad](source/kicad). All the parts are SMD. The PCB is intended to be ordered already assembled for an easier (although more expensive) build process.
+Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. If another format was needed, the source Kicad 9 project is available in [source/kicad](source/kicad). All the parts are SMD. The PCB is intended to be ordered already assembled for an easier (although more expensive) build process.
 
 #### Suggested BOM
 
@@ -52,11 +52,17 @@ Top case has a "Keychron" variant, which adjusts stabilizer cutouts for their no
 
 ### Assembly
 
-Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
+First, make sure to [flash the firmware](#flashing-windows) to the Pico before assembling anything.
 
-Attach the cable to the case from the inside with screws, and connect the other end to the Pico. The cable is necessary to rotate the USB port orientation, but also to protect Pico's onboard USB port from snapping, which can happen if it's stressed over time.
+Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well. Once soldered or placed in the socket:
 
-Next, place the pcb in the bottom case and slide the top assembly over the bottom case, sandwiching the PCB. Finally, place the switches and keycaps, and you're done!
+1. Attach the 2u stabilizer to the top case
+2. Install the switches
+3. Connect the USB cable
+4. Push the top case down over the bottom case
+5. Install the keycaps
+
+And you're done!
 
 ## QnA
 
@@ -64,17 +70,15 @@ Next, place the pcb in the bottom case and slide the top assembly over the botto
 
 The problem I had when trying to order a pre-assembled low-profile hotswap keyboard PCB was the lack of low-profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the much more common and widely available regular hotswap sockets.
 
-I'm making a big bet on these switches taking over current KS-33s to keep this design viable long term. The moment they stop selling, the entire concept of easy assembly would fall apart.
+I'm making a big bet on these switches taking over current KS-33s, as the entire concept of getting a pre-assembled low-profile PCB completely relies on them.
 
 ### So is this board compatible with high profile switches?
 
 Not now, but it would be trivial to make. Just raise the height of the top case by a few millimeters, and maybe adjust stabilizer cutouts.
 
-That said, I'm not planning on making it, unless there was a demand for it.
-
 ### Why no RGB?
 
-The simple backlighting was a lot easier to implement hardware wise, and reduced the amount of components which could fail, and longevity was one of the main goals of this design. It could be implemented but would require a complete redesign of the PCB.
+The simple backlighting was easier to implement and reduced the amount of components that could fail, which was desirable, as longevity was one of the main goals of this design.
 
 ## QMK
 
@@ -100,11 +104,11 @@ python qmk_compile.py
 
 ### Flashing (Windows)
 
-Flash the firmware before assembling the case for the first time. Hold the BOOTSEL button while connecting the Pico to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) to it.
+Hold the BOOTSEL button while connecting the Pico to a computer to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) over to it.
 
 Once the firmware is flashed, you can enter bootloader mode via a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
 
-To revert to the default keymap by clearing the EEPROM, use a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> key combination.
+To revert to the default keymap, use a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> key combination.
 
 ## Kicad 9
 
