@@ -59,7 +59,7 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 1. Attach the 2u stabilizer to the top case
 2. Install the switches
 3. Connect the USB cable
-4. Push the top case down over the bottom case
+4. Push the top case down over the bottom case, it will snap in place
 5. Install the keycaps
 
 And you're done!
