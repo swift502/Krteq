@@ -16648,7 +16648,7 @@
 				)
 			)
 		)
-		(property "Value" "330Ω"
+		(property "Value" "82Ω"
 			(at 88.9 198.12 90)
 			(do_not_autoplace yes)
 			(effects
@@ -20326,7 +20326,7 @@
 				)
 			)
 		)
-		(property "Value" "330Ω"
+		(property "Value" "82Ω"
 			(at 127 198.12 90)
 			(do_not_autoplace yes)
 			(effects
@@ -31569,7 +31569,7 @@
 				)
 			)
 		)
-		(property "Value" "330Ω"
+		(property "Value" "82Ω"
 			(at 50.8 198.12 90)
 			(do_not_autoplace yes)
 			(effects

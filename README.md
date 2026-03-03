@@ -39,6 +39,7 @@ Fabrication files in [production/pcb](production/pcb) are provided in several ma
 | Switch Diode | 1N4148W |
 | Backlight LED | MHT151WDT |
 | GSD NMOS | HX2302A |
+| R82Ω | 0603WAF820JT5E |
 | R330Ω | 0603WAF3300T5E |
 | R470Ω | 0603WAF4700T5E |
 | R10kΩ | 0603WAF1002T5E |

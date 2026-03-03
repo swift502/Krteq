@@ -34172,7 +34172,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "330Ω"
+		(property "Value" "82Ω"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "1418f0ba-98bb-4de9-9d1d-e2b339ab64dd")
@@ -81616,7 +81616,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "330Ω"
+		(property "Value" "82Ω"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "a554161e-87f1-48ea-8652-c5d3690744eb")
@@ -81790,7 +81790,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "330Ω"
+		(property "Value" "82Ω"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "ebae56f1-14d1-4c0a-b7e4-57caa1fd4a79")
