@@ -55,13 +55,14 @@ Top case has a "Keychron" variant, which adjusts stabilizer cutouts for their no
 
 First, make sure to [flash the firmware](#flashing-windows) to the Pico before assembling anything.
 
-Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well. Once soldered or placed in the socket:
+Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
 
-1. Attach the 2u stabilizer to the top case
-2. Install the switches
-3. Connect the USB cable
-4. Push the top case down over the bottom case, it will snap in place
-5. Install the keycaps
+1. Install the Pico onto the PCB (soldered or socketed)
+2. Attach the 2u stabilizer to the top case
+3. Push few of the switches through the top case and into the PCB sockets, just enough to hold the case and PCB together
+4. Connect the panel mount USB cable to the Pico, and screw the other end to the case's USB port cutout
+5. Push the top case down over the bottom case, make sure the USB cable is tucked in and doesn't get pinched by the inner supports
+6. Install the remaining switches and keycaps
 
 And you're done!
 

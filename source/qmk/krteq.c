@@ -1,13 +1,12 @@
 #include QMK_KEYBOARD_H
 #include "hal.h"
 
-#define INDICATOR_BRIGHTNESS 5
-#define INDICATOR_PWM_RES 8
+#define INDICATOR_BRIGHTNESS 7
 
 // PWM Slice 0 (GP0 and GP1)
 static PWMConfig pwm0_cfg = {
     .frequency = 1000000,
-    .period = (1 << INDICATOR_PWM_RES) - 1,
+    .period = 255,
     .callback = NULL,
     .channels = {
         {PWM_OUTPUT_ACTIVE_HIGH, NULL},
@@ -18,7 +17,7 @@ static PWMConfig pwm0_cfg = {
 // PWM Slice 1 (GP2)
 static PWMConfig pwm1_cfg = {
     .frequency = 1000000,
-    .period = (1 << INDICATOR_PWM_RES) - 1,        
+    .period = 255,        
     .callback = NULL,
     .channels = {
         {PWM_OUTPUT_ACTIVE_HIGH, NULL},
