@@ -2,13 +2,20 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "QMK: Compile",
+      "label": "QMK Compile",
       "type": "shell",
       "command": "python qmk_compile.py",
+      "problemMatcher": [],
       "group": {
         "kind": "build",
         "isDefault": true
       }
+    },
+    {
+      "label": "QMK Compile Clean",
+      "type": "shell",
+      "command": "python qmk_compile.py --clean",
+      "problemMatcher": []
     }
   ]
 }
