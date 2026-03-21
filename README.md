@@ -26,6 +26,7 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 - 61x Gateron KS-33B (GLP 3.0) switches
 - 61x MX Low-Profile Keycaps
 - Gateron 2u Low-Profile Plate-Mounted Stabilizer
+- 2x M2x6 screws
 - Rubber feet
 
 ### PCB
@@ -57,11 +58,11 @@ First, make sure to [flash the firmware](#flashing-windows) to the Pico before a
 
 Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
 
-1. Install the Pico onto the PCB (soldered or socketed)
+1. Install the Pico onto the PCB (socketed or soldered)
 2. Attach the 2u stabilizer to the top case
-3. Push few of the switches through the top case and into the PCB sockets, just enough to hold the case and PCB together
+3. Push few of the switches through the top case and into the PCB sockets, just enough to hold the top case and PCB together
 4. Connect the panel mount USB cable to the Pico, and screw the other end to the case's USB port cutout
-5. Push the top case down over the bottom case, make sure the USB cable is tucked in and doesn't get pinched by the inner supports
+5. Slide the top case into the bottom case rails, and secure it with two M2x6 screws from the bottom
 6. Install the remaining switches and keycaps
 
 And you're done!
