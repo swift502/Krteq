@@ -1,7 +1,13 @@
+import argparse
 import os
 import shutil
 import subprocess
 from pathlib import Path
+
+# CLI Args
+args_parse = argparse.ArgumentParser()
+args_parse.add_argument("--clean", action="store_true")
+args = args_parse.parse_args()
 
 # Config
 name = "krteq"
@@ -32,7 +38,8 @@ env = os.environ.copy()
 env["MSYSTEM"] = "MINGW64"
 
 # Args
-command = f"qmk compile -kb {name} -km default --clean"
+command = f"qmk compile -kb {name} -km default"
+if args.clean: command += " --clean"
 args = [msys_exe, "--login", "-c", command]
 
 # Run
