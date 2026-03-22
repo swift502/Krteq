@@ -31,7 +31,7 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 ### PCB
 
-Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. If another format was needed, the source Kicad 9 project is available in [source/kicad](source/kicad). All the parts are SMD. The PCB is intended to be ordered already assembled for an easier (although more expensive) build process.
+Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. If another format was needed, the source Kicad 10 project is available in [source/kicad](source/kicad). All the parts are SMD. The PCB is intended to be ordered already assembled for an easier (although more expensive) build process.
 
 #### Suggested BOM
 
@@ -113,7 +113,7 @@ Once the firmware is flashed, you can enter bootloader mode via a <kbd>LShift</k
 
 To revert to the default keymap, use a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> key combination.
 
-## Kicad 9
+## Kicad
 
 Switch grid:
 

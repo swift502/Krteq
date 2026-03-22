@@ -1,4 +1,5 @@
 source/kicad/**/*/*-backups
+source/kicad/**/*/.history
 source/kicad/**/*/_autosave*
 source/kicad/**/*/#auto_saved_files#
 source/kicad/**/*/production
