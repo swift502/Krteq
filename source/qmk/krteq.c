@@ -3,7 +3,8 @@
 
 #define INDICATOR_BRIGHTNESS 1
 
-// PWM Slice 0 (GP0 and GP1)
+// PWM0 A - GP0 (Num Lock)
+// PWM0 B - GP1 (Caps Lock)
 static PWMConfig pwm0_cfg = {
     .frequency = 1000000,
     .period = 511,
@@ -14,7 +15,7 @@ static PWMConfig pwm0_cfg = {
     }
 };
 
-// PWM Slice 1 (GP2)
+// PWM1 A - GP2 (Scroll Lock)
 static PWMConfig pwm1_cfg = {
     .frequency = 1000000,
     .period = 511,        
@@ -77,6 +78,8 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 
 void keyboard_post_init_kb(void)
 {
+    // 2.19.2. Function Select (PWM)
+    // https://pip-assets.raspberrypi.com/categories/814-rp2040/documents/RP-008371-DS-1-rp2040-datasheet.pdf?disposition=inline
     palSetLineMode(GP0, PAL_MODE_ALTERNATE(4));
     palSetLineMode(GP1, PAL_MODE_ALTERNATE(4));
     palSetLineMode(GP2, PAL_MODE_ALTERNATE(4));
@@ -84,6 +87,7 @@ void keyboard_post_init_kb(void)
     pwmStart(&PWMD0, &pwm0_cfg);
     pwmStart(&PWMD1, &pwm1_cfg);
 
+    // Initialize off
     pwmEnableChannel(&PWMD0, 0, 0);
     pwmEnableChannel(&PWMD0, 1, 0);
     pwmEnableChannel(&PWMD1, 0, 0);
