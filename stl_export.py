@@ -84,8 +84,7 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
             except ReferenceError:
                 pass
                 
-        print(f"Batch export complete! Check {export_dir}")
-        self.report({'INFO'}, "Batch export complete!")
+        self.report({'INFO'}, "STL export complete.")
         return {'FINISHED'}
 
 class VIEW3D_PT_custom_export_panel(bpy.types.Panel):
