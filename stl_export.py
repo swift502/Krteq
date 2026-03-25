@@ -2,7 +2,7 @@ import bpy
 import os
 import math
 
-def export_stl(coll_name, export_dir, rotation=(0.0, 0.0, 0.0), clear_rotation=True):
+def export_stl(coll_name, export_dir, rotation, clear_rotation):
     coll = bpy.data.collections.get(coll_name)
     if not coll or not coll.objects:
         return f"Skipping: Collection '{coll_name}' is missing or empty."
@@ -35,24 +35,21 @@ def export_stl(coll_name, export_dir, rotation=(0.0, 0.0, 0.0), clear_rotation=T
         merged_obj.rotation_euler = rot_rad
 
     bpy.context.view_layer.update()
-
     export_path = os.path.join(export_dir, f"{coll_name}.stl")
-    
     bpy.ops.wm.stl_export(filepath=export_path, export_selected_objects=True)
-
     bpy.ops.object.delete()
-
 
 class OBJECT_OT_custom_export(bpy.types.Operator):
     bl_idname = "object.custom_export"
     bl_label = "Export Specific Collections"
     bl_description = "Merges and exports Top, Bottom, and LED collections"
 
-    def execute(self, context):
-        if not bpy.data.filepath:
-            self.report({'ERROR'}, "Please save your .blend file first to establish a path!")
-            return {'CANCELLED'}
+    def process_collection(self, coll_name, export_dir, rotation=(0.0, 0.0, 0.0), clear_rotation=True):
+        err = export_stl(coll_name, export_dir, rotation, clear_rotation)
+        if err:
+            self.report({'ERROR'}, err)
 
+    def execute(self, context):
         blend_dir = os.path.dirname(bpy.data.filepath)
         export_dir = os.path.abspath(os.path.join(blend_dir, "..", "production", "stl"))
         
@@ -64,14 +61,11 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
         original_selection = bpy.context.selected_objects
         original_active = bpy.context.active_object
 
-        err = export_stl("Top", export_dir, rotation=(180.0, 0.0, 0.0))
-        if err: self.report({'ERROR'}, err)
-        
-        err = export_stl("Bottom", export_dir, clear_rotation=False)
-        if err: self.report({'ERROR'}, err)
-        
-        err = export_stl("LED", export_dir)
-        if err: self.report({'ERROR'}, err)
+        self.process_collection("Top", export_dir, rotation=(180.0, 0.0, 0.0))
+        self.process_collection("Top Keychron", export_dir, rotation=(180.0, 0.0, 0.0))
+        self.process_collection("Bottom", export_dir, clear_rotation=False)
+        self.process_collection("Bottom Keychron", export_dir, clear_rotation=False)
+        self.process_collection("LED", export_dir)
 
         for obj in original_selection:
             try:
@@ -84,11 +78,11 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
             except ReferenceError:
                 pass
                 
-        self.report({'INFO'}, "STL export complete.")
+        self.report({'INFO'}, f"STL export complete")
         return {'FINISHED'}
 
 class VIEW3D_PT_custom_export_panel(bpy.types.Panel):
-    bl_label = "Production Exporter"
+    bl_label = "Krteq"
     bl_idname = "VIEW3D_PT_custom_export_panel"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
@@ -96,7 +90,7 @@ class VIEW3D_PT_custom_export_panel(bpy.types.Panel):
 
     def draw(self, context):
         layout = self.layout
-        layout.operator("object.custom_export", text="Export Collections to STL", icon='EXPORT')
+        layout.operator("object.custom_export", text="STL Export", icon='FILE_3D')
 
 classes = (
     OBJECT_OT_custom_export,
