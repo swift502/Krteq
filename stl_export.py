@@ -2,7 +2,7 @@ import bpy
 import os
 import math
 
-def export_specialized_collections(coll_name, settings, export_dir):
+def export_stl(coll_name, export_dir, rotation=(0.0, 0.0, 0.0), clear_rotation=True):
     coll = bpy.data.collections.get(coll_name)
     if not coll or not coll.objects:
         print(f"Skipping: Collection '{coll_name}' is missing or empty.")
@@ -28,12 +28,11 @@ def export_specialized_collections(coll_name, settings, export_dir):
     bpy.ops.object.convert(target='MESH')
     bpy.ops.object.join()
 
-    if settings.get("clear_rotation", True):
-        rot_deg = settings.get("rotation", (0.0, 0.0, 0.0))
+    if clear_rotation:
         rot_rad = (
-            math.radians(rot_deg[0]),
-            math.radians(rot_deg[1]),
-            math.radians(rot_deg[2])
+            math.radians(rotation[0]),
+            math.radians(rotation[1]),
+            math.radians(rotation[2])
         )
         merged_obj.rotation_euler = rot_rad
 
@@ -41,13 +40,7 @@ def export_specialized_collections(coll_name, settings, export_dir):
 
     export_path = os.path.join(export_dir, f"{coll_name}.stl")
     
-    try:
-        bpy.ops.export_mesh.stl(filepath=export_path, use_selection=True)
-        print(f"Success: Exported {coll_name}.stl")
-    except AttributeError:
-        # Fallback for Blender 4.1+
-        bpy.ops.wm.stl_export(filepath=export_path, export_selected_objects=True)
-        print(f"Success: Exported {coll_name}.stl (Blender 4.x+)")
+    bpy.ops.wm.stl_export(filepath=export_path, export_selected_objects=True)
 
     bpy.ops.object.delete()
 
@@ -67,20 +60,15 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
         
         os.makedirs(export_dir, exist_ok=True)
 
-        target_collections = {
-            "Top": {"rotation": (180.0, 0.0, 0.0), "clear_rotation": True},
-            "Bottom": {"rotation": (0.0, 0.0, 0.0), "clear_rotation": False},
-            "LED": {"rotation": (0.0, 0.0, 0.0), "clear_rotation": True},
-        }
-
         if bpy.context.active_object and bpy.context.active_object.mode != 'OBJECT':
             bpy.ops.object.mode_set(mode='OBJECT')
             
         original_selection = bpy.context.selected_objects
         original_active = bpy.context.active_object
 
-        for coll_name, settings in target_collections.items():
-            export_specialized_collections(coll_name, settings, export_dir)
+        export_stl("Top", export_dir, rotation=(180.0, 0.0, 0.0))
+        export_stl("Bottom", export_dir, clear_rotation=False)
+        export_stl("LED", export_dir)
 
         for obj in original_selection:
             try:
@@ -97,19 +85,17 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
         self.report({'INFO'}, "Batch export complete!")
         return {'FINISHED'}
 
-# --- 3. YOUR UI PANEL ---
 class VIEW3D_PT_custom_export_panel(bpy.types.Panel):
     bl_label = "Production Exporter"
     bl_idname = "VIEW3D_PT_custom_export_panel"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    bl_category = 'Export Tool'
+    bl_category = 'Krteq'
 
     def draw(self, context):
         layout = self.layout
         layout.operator("object.custom_export", text="Export Collections to STL", icon='EXPORT')
 
-# --- 4. REGISTRATION ---
 classes = (
     OBJECT_OT_custom_export,
     VIEW3D_PT_custom_export_panel,
