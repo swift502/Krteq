@@ -5,14 +5,12 @@ import math
 def export_stl(coll_name, export_dir, rotation=(0.0, 0.0, 0.0), clear_rotation=True):
     coll = bpy.data.collections.get(coll_name)
     if not coll or not coll.objects:
-        print(f"Skipping: Collection '{coll_name}' is missing or empty.")
-        return
+        return f"Skipping: Collection '{coll_name}' is missing or empty."
 
     root_obj_original = next((obj for obj in coll.objects if obj.name.startswith("Root")), None)
     
     if not root_obj_original:
-        print(f"Skipping: No object starting with 'Root' found in '{coll_name}'.")
-        return
+        return f"Skipping: No object starting with 'Root' found in '{coll_name}'."
 
     bpy.ops.object.select_all(action='DESELECT')
 
@@ -66,9 +64,14 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
         original_selection = bpy.context.selected_objects
         original_active = bpy.context.active_object
 
-        export_stl("Top", export_dir, rotation=(180.0, 0.0, 0.0))
-        export_stl("Bottom", export_dir, clear_rotation=False)
-        export_stl("LED", export_dir)
+        err = export_stl("Top", export_dir, rotation=(180.0, 0.0, 0.0))
+        if err: self.report({'ERROR'}, err)
+        
+        err = export_stl("Bottom", export_dir, clear_rotation=False)
+        if err: self.report({'ERROR'}, err)
+        
+        err = export_stl("LED", export_dir)
+        if err: self.report({'ERROR'}, err)
 
         for obj in original_selection:
             try:
