@@ -84,8 +84,8 @@ def export_stl(coll_name, rotation, clear_rotation, suffix):
     bpy.data.objects.remove(merged_obj, do_unlink=True)
     bpy.data.meshes.remove(merged_mesh)
 
-class OBJECT_OT_custom_export(bpy.types.Operator):
-    bl_idname = "object.custom_export"
+class OBJECT_OT_Krteq_export(bpy.types.Operator):
+    bl_idname = "object.krteq_export"
     bl_label = "Export Specific Collections"
     bl_description = "Merges and exports Top, Bottom, and LED collections"
 
@@ -119,22 +119,16 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
         context.scene.use_keychron_stab = original_use_keychron
 
         for obj in original_selection:
-            try:
-                obj.select_set(True)
-            except ReferenceError:
-                pass 
+            obj.select_set(True)
         if original_active:
-            try:
-                bpy.context.view_layer.objects.active = original_active
-            except ReferenceError:
-                pass
+            bpy.context.view_layer.objects.active = original_active
                 
         self.report({'INFO'}, f"STL export complete")
         return {'FINISHED'}
 
-class VIEW3D_PT_custom_export_panel(bpy.types.Panel):
+class VIEW3D_PT_Krteq_panel(bpy.types.Panel):
     bl_label = "Krteq"
-    bl_idname = "VIEW3D_PT_custom_export_panel"
+    bl_idname = "VIEW3D_PT_Krteq_panel"
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
     bl_category = 'Krteq'
@@ -142,12 +136,7 @@ class VIEW3D_PT_custom_export_panel(bpy.types.Panel):
     def draw(self, context):
         layout = self.layout
         layout.prop(context.scene, "use_keychron_stab")
-        layout.operator("object.custom_export", text="STL Export", icon='FILE_3D')
-
-classes = (
-    OBJECT_OT_custom_export,
-    VIEW3D_PT_custom_export_panel,
-)
+        layout.operator("object.krteq_export", text="STL Export", icon='FILE_3D')
 
 def register():
     bpy.types.Scene.use_keychron_stab = bpy.props.BoolProperty(
@@ -155,22 +144,16 @@ def register():
         description="Enable Keychron stabilizer",
         default=False
     )
-    for cls in classes:
-        try:
-            bpy.utils.unregister_class(cls)
-        except Exception:
-            pass
-        bpy.utils.register_class(cls)
+
+    bpy.utils.register_class(OBJECT_OT_Krteq_export)
+    bpy.utils.register_class(VIEW3D_PT_Krteq_panel)
 
 def unregister():
     if hasattr(bpy.types.Scene, "use_keychron_stab"):
         del bpy.types.Scene.use_keychron_stab
 
-    for cls in reversed(classes):
-        try:
-            bpy.utils.unregister_class(cls)
-        except Exception:
-            pass
+    bpy.utils.unregister_class(OBJECT_OT_Krteq_export)
+    bpy.utils.unregister_class(VIEW3D_PT_Krteq_panel)
 
 if __name__ == "__main__":
     register()

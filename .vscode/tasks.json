@@ -4,7 +4,7 @@
     {
       "label": "QMK Compile",
       "type": "shell",
-      "command": "python ${workspaceFolder}/scripts/qmk_compile.py",
+      "command": "python ${workspaceFolder}/source/scripts/qmk_compile.py",
       "problemMatcher": [],
       "group": {
         "kind": "build",
@@ -14,7 +14,7 @@
     {
       "label": "QMK Compile Clean",
       "type": "shell",
-      "command": "python ${workspaceFolder}/scripts/qmk_compile.py --clean",
+      "command": "python ${workspaceFolder}/source/scripts/qmk_compile.py --clean",
       "problemMatcher": []
     }
   ]
