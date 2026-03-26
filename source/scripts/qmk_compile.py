@@ -4,7 +4,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
-# CLI Args
+# Args
 args_parse = argparse.ArgumentParser()
 args_parse.add_argument("--clean", action="store_true")
 args = args_parse.parse_args()
