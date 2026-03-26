@@ -60,14 +60,18 @@ def export_stl(coll_name, export_dir, rotation, clear_rotation):
     original_selection = list(bpy.context.selected_objects)
     original_active = bpy.context.view_layer.objects.active
 
-    bpy.ops.object.select_all(action='DESELECT')
+    for scene_obj in bpy.context.view_layer.objects:
+        scene_obj.select_set(False)
+        
     merged_obj.select_set(True)
     bpy.context.view_layer.objects.active = merged_obj
 
     export_path = os.path.join(export_dir, f"{coll_name}.stl")
     bpy.ops.wm.stl_export(filepath=export_path, export_selected_objects=True)
 
-    bpy.ops.object.select_all(action='DESELECT')
+    for scene_obj in bpy.context.view_layer.objects:
+        scene_obj.select_set(False)
+
     for obj in original_selection:
         if obj.name in bpy.data.objects:
             obj.select_set(True)
@@ -96,8 +100,12 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
         if bpy.context.active_object and bpy.context.active_object.mode != 'OBJECT':
             bpy.ops.object.mode_set(mode='OBJECT')
             
-        original_selection = bpy.context.selected_objects
+        original_selection = list(bpy.context.selected_objects)
         original_active = bpy.context.active_object
+
+        bpy.context.view_layer.objects.active = None
+        for scene_obj in bpy.context.view_layer.objects:
+            scene_obj.select_set(False)
 
         self.process_collection("Top", export_dir, rotation=(180.0, 0.0, 0.0))
         self.process_collection("Bottom", export_dir, clear_rotation=False)
