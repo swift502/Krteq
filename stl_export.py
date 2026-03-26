@@ -4,7 +4,7 @@ import math
 import bmesh
 from mathutils import Euler
 
-def export_stl(coll_name, export_dir, rotation, clear_rotation, output_name):
+def export_stl(coll_name, output_name, rotation, clear_rotation):
     if not isinstance(output_name, str) or not output_name.strip():
         raise ValueError("output_name is required and must be a non-empty string")
 
@@ -70,6 +70,9 @@ def export_stl(coll_name, export_dir, rotation, clear_rotation, output_name):
     bpy.context.view_layer.objects.active = merged_obj
 
     file_stem = output_name.lower()
+    blend_dir = os.path.dirname(bpy.data.filepath)
+    export_dir = os.path.abspath(os.path.join(blend_dir, "..", "production", "stl"))
+    os.makedirs(export_dir, exist_ok=True)
     export_path = os.path.join(export_dir, f"{file_stem}.stl")
     bpy.ops.wm.stl_export(filepath=export_path, export_selected_objects=True)
 
@@ -90,17 +93,12 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
     bl_label = "Export Specific Collections"
     bl_description = "Merges and exports Top, Bottom, and LED collections"
 
-    def process_collection(self, coll_name, export_dir, output_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True):
-        err = export_stl(coll_name, export_dir, rotation, clear_rotation, output_name=output_name)
+    def process_collection(self, coll_name, output_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True):
+        err = export_stl(coll_name, output_name, rotation, clear_rotation)
         if err:
             self.report({'ERROR'}, err)
 
     def execute(self, context):
-        blend_dir = os.path.dirname(bpy.data.filepath)
-        export_dir = os.path.abspath(os.path.join(blend_dir, "..", "production", "stl"))
-        
-        os.makedirs(export_dir, exist_ok=True)
-
         if bpy.context.active_object and bpy.context.active_object.mode != 'OBJECT':
             bpy.ops.object.mode_set(mode='OBJECT')
             
@@ -114,13 +112,13 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
         original_use_keychron = context.scene.use_keychron_stab
 
         context.scene.use_keychron_stab = False
-        self.process_collection("Top", export_dir, rotation=(180.0, 0.0, 0.0), output_name="top")
-        self.process_collection("Bottom", export_dir, clear_rotation=False, output_name="bottom")
-        self.process_collection("LED", export_dir, output_name="led")
+        self.process_collection("Top", "top", rotation=(180.0, 0.0, 0.0))
+        self.process_collection("Bottom", "bottom", clear_rotation=False)
+        self.process_collection("LED", "led")
 
         context.scene.use_keychron_stab = True
-        self.process_collection("Top", export_dir, rotation=(180.0, 0.0, 0.0), output_name="top_keychron")
-        self.process_collection("Bottom", export_dir, clear_rotation=False, output_name="bottom_keychron")
+        self.process_collection("Top", "top_keychron", rotation=(180.0, 0.0, 0.0))
+        self.process_collection("Bottom", "bottom_keychron", clear_rotation=False)
 
         context.scene.use_keychron_stab = original_use_keychron
 
