@@ -4,7 +4,7 @@ import math
 import bmesh
 from mathutils import Euler
 
-def export_stl(coll_name, rotation, clear_rotation, suffix = ""):
+def export_stl(coll_name, rotation, clear_rotation, suffix):
     coll = bpy.data.collections.get(coll_name)
     if not coll or not coll.objects:
         return f"Skipping: Collection '{coll_name}' is missing or empty."
@@ -63,7 +63,13 @@ def export_stl(coll_name, rotation, clear_rotation, suffix = ""):
     blend_dir = os.path.dirname(bpy.data.filepath)
     export_dir = os.path.abspath(os.path.join(blend_dir, "..", "production", "stl"))
     os.makedirs(export_dir, exist_ok=True)
-    export_path = os.path.join(export_dir, f"{coll_name.lower()}_{suffix}.stl")
+
+    output_name = coll_name.lower()
+    if suffix:
+        output_name += f"_{suffix}"
+    output_name += ".stl"
+    export_path = os.path.join(export_dir, output_name)
+
     bpy.ops.wm.stl_export(filepath=export_path, export_selected_objects=True)
 
     for scene_obj in bpy.context.view_layer.objects:
@@ -83,7 +89,7 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
     bl_label = "Export Specific Collections"
     bl_description = "Merges and exports Top, Bottom, and LED collections"
 
-    def process_collection(self, coll_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True, suffix=""):
+    def process_collection(self, coll_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True, suffix=None):
         err = export_stl(coll_name, rotation, clear_rotation, suffix)
         if err:
             self.report({'ERROR'}, err)

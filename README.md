@@ -102,7 +102,7 @@ Install:
 Run the compile script:
 
 ```sh
-python qmk_compile.py
+python scripts/qmk_compile.py
 ```
 
 ### Flashing (Windows)
