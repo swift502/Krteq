@@ -4,10 +4,7 @@ import math
 import bmesh
 from mathutils import Euler
 
-def export_stl(coll_name, output_name, rotation, clear_rotation):
-    if not isinstance(output_name, str) or not output_name.strip():
-        raise ValueError("output_name is required and must be a non-empty string")
-
+def export_stl(coll_name, rotation, clear_rotation, suffix = ""):
     coll = bpy.data.collections.get(coll_name)
     if not coll or not coll.objects:
         return f"Skipping: Collection '{coll_name}' is missing or empty."
@@ -19,7 +16,6 @@ def export_stl(coll_name, output_name, rotation, clear_rotation):
 
     depsgraph = bpy.context.evaluated_depsgraph_get()
     merged_bm = bmesh.new()
-    source_count = 0
     root_world = root_obj_original.matrix_world.copy()
     root_world_inv = root_world.inverted()
 
@@ -32,11 +28,6 @@ def export_stl(coll_name, output_name, rotation, clear_rotation):
         temp_mesh.transform(root_world_inv @ obj.matrix_world)
         merged_bm.from_mesh(temp_mesh)
         bpy.data.meshes.remove(temp_mesh)
-        source_count += 1
-
-    if source_count == 0:
-        merged_bm.free()
-        return f"Skipping: Collection '{coll_name}' has no exportable geometry."
 
     merged_mesh = bpy.data.meshes.new(f"{coll_name}_export_mesh")
     merged_bm.to_mesh(merged_mesh)
@@ -69,11 +60,10 @@ def export_stl(coll_name, output_name, rotation, clear_rotation):
     merged_obj.select_set(True)
     bpy.context.view_layer.objects.active = merged_obj
 
-    file_stem = output_name.lower()
     blend_dir = os.path.dirname(bpy.data.filepath)
     export_dir = os.path.abspath(os.path.join(blend_dir, "..", "production", "stl"))
     os.makedirs(export_dir, exist_ok=True)
-    export_path = os.path.join(export_dir, f"{file_stem}.stl")
+    export_path = os.path.join(export_dir, f"{coll_name.lower()}_{suffix}.stl")
     bpy.ops.wm.stl_export(filepath=export_path, export_selected_objects=True)
 
     for scene_obj in bpy.context.view_layer.objects:
@@ -93,8 +83,8 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
     bl_label = "Export Specific Collections"
     bl_description = "Merges and exports Top, Bottom, and LED collections"
 
-    def process_collection(self, coll_name, output_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True):
-        err = export_stl(coll_name, output_name, rotation, clear_rotation)
+    def process_collection(self, coll_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True, suffix=""):
+        err = export_stl(coll_name, rotation, clear_rotation, suffix)
         if err:
             self.report({'ERROR'}, err)
 
@@ -112,13 +102,13 @@ class OBJECT_OT_custom_export(bpy.types.Operator):
         original_use_keychron = context.scene.use_keychron_stab
 
         context.scene.use_keychron_stab = False
-        self.process_collection("Top", "top", rotation=(180.0, 0.0, 0.0))
-        self.process_collection("Bottom", "bottom", clear_rotation=False)
-        self.process_collection("LED", "led")
+        self.process_collection("Top", rotation=(180.0, 0.0, 0.0))
+        self.process_collection("Bottom", clear_rotation=False)
+        self.process_collection("LED")
 
         context.scene.use_keychron_stab = True
-        self.process_collection("Top", "top_keychron", rotation=(180.0, 0.0, 0.0))
-        self.process_collection("Bottom", "bottom_keychron", clear_rotation=False)
+        self.process_collection("Top", rotation=(180.0, 0.0, 0.0), suffix="keychron")
+        self.process_collection("Bottom", clear_rotation=False, suffix="keychron")
 
         context.scene.use_keychron_stab = original_use_keychron
 
