@@ -90,6 +90,7 @@ class VIEW3D_PT_custom_export_panel(bpy.types.Panel):
 
     def draw(self, context):
         layout = self.layout
+        layout.prop(context.scene, "use_keychron_stab")
         layout.operator("object.custom_export", text="STL Export", icon='FILE_3D')
 
 classes = (
@@ -98,6 +99,11 @@ classes = (
 )
 
 def register():
+    bpy.types.Scene.use_keychron_stab = bpy.props.BoolProperty(
+        name="Keychron stab",
+        description="Enable Keychron stabilizer",
+        default=False
+    )
     for cls in classes:
         try:
             bpy.utils.unregister_class(cls)
@@ -106,6 +112,9 @@ def register():
         bpy.utils.register_class(cls)
 
 def unregister():
+    if hasattr(bpy.types.Scene, "use_keychron_stab"):
+        del bpy.types.Scene.use_keychron_stab
+
     for cls in reversed(classes):
         try:
             bpy.utils.unregister_class(cls)
