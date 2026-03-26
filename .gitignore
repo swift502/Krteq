@@ -7,3 +7,4 @@ source/kicad/**/*/database
 source/kicad/**/*/nextpcb
 source/kicad/**/*/jlcpcb
 ~*.lck
+__pycache__/
