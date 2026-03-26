@@ -31,7 +31,9 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 ### PCB
 
-Fabrication files in [production/pcb](production/pcb) are provided in several manufacturing formats. If another format was needed, the source Kicad 10 project is available in [source/kicad](source/kicad). All the parts are SMD. The PCB is intended to be ordered already assembled for an easier (although more expensive) build process.
+Fabrication files can be found in [production/pcb](production/pcb) and are provided in several manufacturing formats. All the parts are SMD. The PCB is intended to be ordered already assembled for an easier (although more expensive) build process.
+
+If another format was needed, the source Kicad 10 project is available in [source/kicad](source/kicad).
 
 #### Suggested BOM
 
