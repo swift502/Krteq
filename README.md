@@ -19,8 +19,8 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 ### Parts
 
-- [PCB](#pcb)
-- [Case](#case)
+- PCB
+- Case
 - Raspberry Pi Pico
 - 30cm (1ft) USB panel-mount extension cable
 - 61x Gateron KS-33B (GLP 3.0) switches
@@ -31,9 +31,9 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 ### PCB
 
-Fabrication files can be found in [production/pcb](production/pcb) and are provided in several manufacturing formats. All the parts are SMD. The PCB is intended to be ordered already assembled for an easier (although more expensive) build process.
+The source Kicad 10 project is available in [source/kicad](source/kicad).
 
-If another format was needed, the source Kicad 10 project is available in [source/kicad](source/kicad).
+Due to the variety of very specific PCB manufacturing formats, I've decided not to include pre-exported fabrication files. Open the Kicad project and export fab files for a PCB manufacturer of your choice using one of their respective export plugins.
 
 #### Suggested BOM
 
@@ -52,7 +52,7 @@ If another format was needed, the source Kicad 10 project is available in [sourc
 
 Case files for 3D printing can be found in [production/stl](production/stl). Tested with PLA, 0.15mm layer height, 100% infill.
 
-There's also a "Keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
+The top and bottom parts have a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
 
 ### Assembly
 
