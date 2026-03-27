@@ -4,21 +4,25 @@ import math
 import bmesh
 from mathutils import Euler
 
-def export_stl(coll_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True, suffix=None):
+def export_stl(op, coll_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True, suffix=None):
     coll = bpy.data.collections.get(coll_name)
 
     if not coll:
-        return f"Skipping: Collection '{coll_name}' not found"
+        op.report({'ERROR'}, f"Skipping: Collection '{coll_name}' not found")
+        return
     
     if not coll.objects:
-        return f"Skipping: Collection '{coll_name}' is empty"
+        op.report({'ERROR'}, f"Skipping: Collection '{coll_name}' is empty")
+        return
 
     if bpy.context.view_layer.layer_collection.children[coll_name].exclude:
-        return f"Skipping: Collection '{coll_name}' is excluded from view layer"
+        op.report({'ERROR'}, f"Skipping: Collection '{coll_name}' is excluded from view layer")
+        return
 
     root_obj = next((obj for obj in coll.objects if obj.name.startswith("Root")), None)
     if not root_obj:
-        return f"Skipping: Root object not found in '{coll_name}'"
+        op.report({'ERROR'}, f"Skipping: Root object not found in '{coll_name}'")
+        return
 
     depsgraph = bpy.context.evaluated_depsgraph_get()
     merged_bm = bmesh.new()
@@ -26,11 +30,14 @@ def export_stl(coll_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True, suffix=
     root_world_inv = root_world.inverted()
 
     for obj in coll.objects:
-        temp_mesh = bpy.data.meshes.new_from_object(obj.evaluated_get(depsgraph), depsgraph=depsgraph)
-        if temp_mesh:
-            temp_mesh.transform(root_world_inv @ obj.matrix_world)
-            merged_bm.from_mesh(temp_mesh)
-            bpy.data.meshes.remove(temp_mesh)
+        try:
+            temp_mesh = bpy.data.meshes.new_from_object(obj.evaluated_get(depsgraph), depsgraph=depsgraph)
+        except Exception as e:
+            op.report({'ERROR'}, f"Skipping object '{obj.name}' in '{coll_name}': {e}")
+            continue
+        temp_mesh.transform(root_world_inv @ obj.matrix_world)
+        merged_bm.from_mesh(temp_mesh)
+        bpy.data.meshes.remove(temp_mesh)
 
     merged_mesh = bpy.data.meshes.new(f"{coll_name}_export_mesh")
     merged_bm.to_mesh(merged_mesh)
@@ -55,7 +62,7 @@ def export_stl(coll_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True, suffix=
     export_dir = os.path.abspath(os.path.join(os.path.dirname(bpy.data.filepath), "..", "production", "stl"))
     os.makedirs(export_dir, exist_ok=True)
 
-    filename = f"{coll_name.lower()}_{suffix}.stl" if suffix else f"{coll_name.lower()}.stl"
+    filename = f"{coll_name.lower()}{f'_{suffix}' if suffix else ''}.stl"
     bpy.ops.wm.stl_export(filepath=os.path.join(export_dir, filename), export_selected_objects=True)
 
     bpy.data.objects.remove(merged_obj, do_unlink=True)
@@ -65,10 +72,6 @@ class OBJECT_OT_Krteq_export(bpy.types.Operator):
     bl_idname = "object.krteq_export"
     bl_label = "Export STL"
     bl_description = "Automated Krteq STL export"
-
-    def process_collection(self, coll_name, **kwargs):
-        if err := export_stl(coll_name, **kwargs):
-            self.report({'ERROR'}, err)
 
     def execute(self, context):
         if context.active_object and context.active_object.mode != 'OBJECT':
@@ -83,13 +86,13 @@ class OBJECT_OT_Krteq_export(bpy.types.Operator):
             scene_obj.select_set(False)
 
         context.scene.use_keychron_stab = False
-        self.process_collection("Top", rotation=(180.0, 0.0, 0.0))
-        self.process_collection("Bottom", clear_rotation=False)
-        self.process_collection("LED")
+        export_stl(self, "Top", rotation=(180.0, 0.0, 0.0))
+        export_stl(self, "Bottom", clear_rotation=False)
+        export_stl(self, "LED")
 
         context.scene.use_keychron_stab = True
-        self.process_collection("Top", rotation=(180.0, 0.0, 0.0), suffix="keychron")
-        self.process_collection("Bottom", clear_rotation=False, suffix="keychron")
+        export_stl(self, "Top", rotation=(180.0, 0.0, 0.0), suffix="keychron")
+        export_stl(self, "Bottom", clear_rotation=False, suffix="keychron")
 
         context.scene.use_keychron_stab = original_use_keychron
 
