@@ -1,8 +1,8 @@
 # Krteq
 
-[![](https://img.shields.io/badge/PCB-blue)](#)
-[![](https://img.shields.io/badge/Case-orange)](#)
-[![](https://img.shields.io/badge/Firmware-gray)](#)
+[![](https://img.shields.io/badge/PCB-blue)](#pcb)
+[![](https://img.shields.io/badge/Case-orange)](#case)
+[![](https://img.shields.io/badge/Firmware-gray)](#firmware)
 
 An extended 5x12 keyboard with 2 extra keys. Intended for ortho layouts with a shifted number row, allowing for the placement of the delete and tilde keys above their usual spots. PCBs are designed in Kicad, case in Blender.
 
@@ -19,25 +19,13 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 
 Connecting the keyboard to [usevia.app](https://usevia.app) requires manually uploading the [design file](production/krteq_via.json) in the design tab.
 
-## Build
+## PCB
 
-### Parts
+The source Kicad 10 project can be found in [source/kicad](source/kicad).
 
-- PCB
-- Case
-- Raspberry Pi Pico
-- 30cm (1ft) USB panel-mount extension cable
-- 61x Gateron KS-33B (GLP 3.0) switches
-- 61x MX low-profile keycaps
-- Gateron 2u low-profile plate-mounted stabilizer
-- 3x M2x6 flat head screw
-- Rubber feet
+To get fabrication files, open the Kicad project and export fab files for a PCB manufacturer of your choice using one of their respective export plugins.
 
-### PCB
-
-The source Kicad 10 project is available in [source/kicad](source/kicad). Open the Kicad project and export fab files for a PCB manufacturer of your choice using one of their respective export plugins.
-
-#### Suggested BOM
+### Suggested BOM
 
 | Part | Manufacturer Part Number |
 |---|---|
@@ -50,11 +38,55 @@ The source Kicad 10 project is available in [source/kicad](source/kicad). Open t
 | R10kΩ | 0603WAF1002T5E |
 | Switch socket | CPG151101S11-16 |
 
-### Case
+## Case
 
 Case files for 3D printing can be found in [production/stl](production/stl). Tested with PLA, 0.15mm layer height, 100% infill.
 
 The top and bottom parts have a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
+
+## Firmware
+
+A pre-compiled firmware file can be found here [production/krteq_firmware.uf2](production/krteq_firmware.uf2).
+
+QMK/VIA setup with a few custom features:
+
+- custom `KRT_VOL` keycode for combined volume control
+- pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
+- pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> reverts to the default keymap
+- indicator LED brightness is configurable in `krteq.c`
+
+### Compiling (Windows)
+
+Install:
+
+- Python: https://www.python.org/
+- MSYS: https://msys.qmk.fm
+
+Run the compile script:
+
+```sh
+python source/scripts/qmk_compile.py
+```
+
+### Flashing (Windows)
+
+For the first time, hold the BOOTSEL button while connecting the Pico to a computer to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) over to it.
+
+Once flashed, you can trigger the bootloader mode again by simply pressing the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
+
+## Build guide
+
+### Parts
+
+- [PCB](#pcb)
+- [Case](#case)
+- Raspberry Pi Pico
+- 30cm (1ft) USB panel-mount extension cable
+- 61x Gateron KS-33B (GLP 3.0) switches
+- 61x MX low-profile keycaps
+- Gateron 2u low-profile plate-mounted stabilizer
+- 3x M2x6 flat head screw
+- Rubber feet
 
 ### Assembly
 
@@ -87,39 +119,18 @@ Not now, but it would be trivial to make. It's just a matter of adjusting the to
 
 The simple backlighting was easier to implement and reduced the amount of components that could fail, which aligned with this project's goal of maximizing longevity.
 
-## QMK
+## Documentation
 
-### Documentation
+### QMK
 
-- Info json: https://docs.qmk.fm/reference_info_json
+- Info.json: https://docs.qmk.fm/reference_info_json
 - Keycodes: https://docs.qmk.fm/keycodes
 - Default keymap: https://docs.qmk.fm/configurator_default_keymaps
 - Backlight: https://docs.qmk.fm/features/backlight
 
-### Compiling (Windows)
+### Kicad
 
-Install:
-
-- Python: https://www.python.org/
-- MSYS: https://msys.qmk.fm
-
-Run the compile script:
-
-```sh
-python source/scripts/qmk_compile.py
-```
-
-### Flashing (Windows)
-
-Hold the BOOTSEL button while connecting the Pico to a computer to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) over to it.
-
-Once the firmware is flashed, you can enter bootloader mode via a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
-
-To revert to the default keymap, use a <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> key combination.
-
-## Kicad
-
-Switch grid:
+Switch grid reference table:
 
 | Grid | Size |
 | --- | --- |
