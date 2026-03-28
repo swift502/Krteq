@@ -81,7 +81,7 @@ I'm making a big bet on these switches taking over current KS-33s, as the entire
 
 ### So is this board compatible with high profile switches?
 
-Not now, but it would be trivial to make. Just raise the height of the top case by a few millimeters, and maybe adjust stabilizer cutouts.
+Not now, but it would be trivial to make. It's just a matter of adjusting the top case. However I have no use for a high profile version, so I'm not planning on making one.
 
 ### Why no RGB?
 
