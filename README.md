@@ -31,9 +31,7 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 ### PCB
 
-The source Kicad 10 project is available in [source/kicad](source/kicad).
-
-Due to the variety of very specific PCB manufacturing formats, I've decided not to include pre-exported fabrication files. Open the Kicad project and export fab files for a PCB manufacturer of your choice using one of their respective export plugins.
+The source Kicad 10 project is available in [source/kicad](source/kicad). Open the Kicad project and export fab files for a PCB manufacturer of your choice using one of their respective export plugins.
 
 #### Suggested BOM
 
