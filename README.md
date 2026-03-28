@@ -6,7 +6,7 @@
 
 An extended 5x12 keyboard with 2 extra keys. Intended for ortho layouts with a shifted number row, allowing for the placement of the delete and tilde keys above their usual spots. PCBs are designed in Kicad, case in Blender.
 
-Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning from it's lessons to make a design that's easier to build, more maintainable, better encapsulated and overall a more complete product.
+Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning from its lessons to make a design that's easier to build, more maintainable, better encapsulated and overall a more complete product.
 
 - Low profile
 - Hotswap
@@ -96,7 +96,7 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 
 1. Install the Pico onto the PCB (socketed or soldered)
 2. Attach the 2u stabilizer to the top case
-3. Push few of the switches through the top case and into the PCB sockets, just enough to hold the two parts together
+3. Push a few of the switches through the top case and into the PCB sockets, just enough to hold the two parts together
 4. Connect the panel mount USB cable to the Pico and screw the other end to the case's USB port cutout
 5. Slide the top assembly into the bottom case rails, and secure it with screws from the bottom
 6. Install the remaining switches and keycaps
@@ -117,7 +117,7 @@ Not now, but it would be trivial to make. It's just a matter of adjusting the to
 
 ### Why no RGB?
 
-The simple backlighting was easier to implement and reduced the amount of components that could fail, which aligned with this project's goal of maximizing longevity.
+The simple backlighting was easier to implement and reduced the number of components that could fail, which aligned with this project's goal of maximizing longevity.
 
 ## Documentation
 
