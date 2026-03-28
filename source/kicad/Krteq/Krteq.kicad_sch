@@ -8390,7 +8390,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 300.99 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -8846,7 +8846,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 300.99 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -8971,7 +8971,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 212.09 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -9415,7 +9415,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 224.79 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -10269,7 +10269,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 199.39 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -11033,7 +11033,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 237.49 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -11569,7 +11569,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 326.39 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -11910,7 +11910,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 288.29 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -12035,7 +12035,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 262.89 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -12582,7 +12582,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 326.39 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -13802,7 +13802,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 326.39 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -15279,7 +15279,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 224.79 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -15404,7 +15404,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 199.39 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -15529,7 +15529,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 313.69 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -15654,7 +15654,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 275.59 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -16620,7 +16620,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 313.69 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -16745,7 +16745,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 199.39 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -17153,7 +17153,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 186.69 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -18130,7 +18130,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 288.29 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -19314,7 +19314,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 256.54 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -19849,7 +19849,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 212.09 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -19974,7 +19974,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 326.39 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -20531,7 +20531,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 313.69 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -20860,7 +20860,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 326.39 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -20985,7 +20985,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 275.59 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -21391,7 +21391,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 300.99 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -21516,7 +21516,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 237.49 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -21641,7 +21641,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 250.19 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -22495,7 +22495,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 300.99 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -22836,7 +22836,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 212.09 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -23374,7 +23374,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 250.19 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -23921,7 +23921,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 313.69 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -24354,7 +24354,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 275.59 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -24582,7 +24582,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 288.29 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -24707,7 +24707,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 262.89 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -25265,7 +25265,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 300.99 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -25709,7 +25709,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 224.79 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -26484,7 +26484,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 224.79 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -27025,7 +27025,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 250.19 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -27570,7 +27570,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 186.69 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -28014,7 +28014,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 224.79 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -28139,7 +28139,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 186.69 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -28264,7 +28264,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 237.49 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -28606,7 +28606,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 186.69 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -28947,7 +28947,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 313.69 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -29571,7 +29571,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 275.59 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -29696,7 +29696,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 262.89 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -29821,7 +29821,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 186.69 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -30252,7 +30252,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 237.49 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -30788,7 +30788,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 288.29 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -31538,7 +31538,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 250.19 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -32100,7 +32100,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 288.29 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -32646,7 +32646,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 199.39 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -33102,7 +33102,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 186.69 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -34080,7 +34080,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 326.39 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -35155,7 +35155,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 212.09 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -35280,7 +35280,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 262.89 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -35405,7 +35405,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 199.39 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -35736,7 +35736,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 237.49 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -36739,7 +36739,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 275.59 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -36864,7 +36864,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Krteq:D_SOD-123"
 			(at 212.09 71.12 0)
 			(hide yes)
 			(show_name no)
