@@ -1,8 +1,8 @@
 # Krteq
 
-![PCB](https://img.shields.io/badge/PCB-blue)
-![Case](https://img.shields.io/badge/Case-orange)
-![Firmware](https://img.shields.io/badge/Firmware-gray)
+[![](https://img.shields.io/badge/PCB-blue)](#)
+[![](https://img.shields.io/badge/Case-orange)](#)
+[![](https://img.shields.io/badge/Firmware-gray)](#)
 
 An extended 5x12 keyboard with 2 extra keys. Intended for ortho layouts with a shifted number row, allowing for the placement of the delete and tilde keys above their usual spots. PCBs are designed in Kicad, case in Blender.
 
