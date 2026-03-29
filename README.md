@@ -42,7 +42,7 @@ To get fabrication files, open the Kicad project and export fab files for a PCB 
 
 Case files for 3D printing can be found in [production/stl](production/stl). Tested with PLA, 0.15mm layer height, 100% infill.
 
-You'll need to print at least 3 files. Top and bottom in one or two colors, and the LED covers using transparent filament.
+You'll need to print at least 3 files. Top and bottom in one or two colors, and the LED cover strip using transparent filament.
 
 The top and bottom parts have a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
 
@@ -116,7 +116,7 @@ I'm making a big bet on these switches taking over current KS-33s, as the entire
 
 ### So is this board compatible with high profile switches?
 
-Not now, but it would be trivial to make. It's just a matter of adjusting the top case. However I have no use for a high profile version, so I'm not planning on making one.
+Not now, but it would be trivial to make. It would only require a slight modification of the top case. I could easily do it if there was somehow demand for it.
 
 ### Why no RGB?
 
@@ -124,7 +124,7 @@ The simple backlighting was easier to implement and reduced the number of compon
 
 ### Why include scroll lock indicator?
 
-I really wanted an LED for my custom letter accent input method. I wanted it to be an actual compose LED, which is supported by QMK. However Windows doesn't support the compose lock state, so ultimately the third LED is a regular scroll lock. I still like it as a general purpose LED that can be used for any custom functionality, especially because it's not labeled.
+I really wanted an LED for my custom letter accent input method. I wanted it to be an actual compose LED, which is supported by QMK. However Windows doesn't support the compose lock state, so ultimately the third LED ended up being a regular scroll lock. I still like it as a general purpose LED that can be used for any custom functionality, especially because it's not labeled in any specific way.
 
 ## Documentation
 
