@@ -42,6 +42,8 @@ To get fabrication files, open the Kicad project and export fab files for a PCB 
 
 Case files for 3D printing can be found in [production/stl](production/stl). Tested with PLA, 0.15mm layer height, 100% infill.
 
+You'll need to print at least 3 files. Top and bottom in one or two colors, and the LED covers using transparent filament.
+
 The top and bottom parts have a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
 
 ## Firmware
@@ -95,12 +97,12 @@ First, make sure to [flash the firmware](#flashing-windows) to the Pico before a
 Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
 
 1. Install the Pico onto the PCB (socketed or soldered)
-2. Attach the 2u stabilizer to the top case
-2. Attach the indicator LED strip
-3. Push a few of the switches through the top case and into the PCB sockets, just enough to hold the two parts together
-4. Connect the panel mount USB cable to the Pico and screw the other end to the case's USB port cutout
-5. Slide the top assembly into the bottom case rails, and secure it with screws from the bottom
-6. Install the remaining switches and keycaps
+2. Attach the indicator LED cover strip to the top case
+3. Attach the 2u stabilizer to the top case
+4. Push a few of the switches through the top case and into the PCB sockets, just enough to hold the two parts together
+5. Connect the panel mount USB cable to the Pico and screw the other end to the case's USB port cutout
+6. Slide the top assembly into the bottom case rails, and secure it with screws from the bottom
+7. Install the remaining switches and keycaps
 
 And you're done!
 
@@ -119,6 +121,10 @@ Not now, but it would be trivial to make. It's just a matter of adjusting the to
 ### Why no RGB?
 
 The simple backlighting was easier to implement and reduced the number of components that could fail, which aligned with this project's goal of maximizing longevity.
+
+### Why include scroll lock indicator?
+
+I really wanted an LED for my custom letter accent input method. I wanted it to be an actual compose LED, which is supported by QMK. However Windows doesn't support the compose lock state, so ultimately the third LED is a regular scroll lock. I still like it as a general purpose LED that can be used for any custom functionality, especially because it's not labeled.
 
 ## Documentation
 
