@@ -8,6 +8,8 @@ An extended 5x12 keyboard with 2 extra keys. Intended for ortho layouts with a s
 
 Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning from its lessons to make a design that's easier to build, more maintainable, better encapsulated and overall a more complete product.
 
+### Features
+
 - Low profile
 - Hotswap
 - White backlight (only breathing effect)
