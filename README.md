@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/Case-orange)](#case)
 [![](https://img.shields.io/badge/Firmware-gray)](#firmware)
 
-An extended 5x12 keyboard with 2 extra keys. Intended for ortho layouts with a shifted number row, allowing for the placement of the delete and tilde keys above their usual spots. PCBs are designed in Kicad, case in Blender.
+An extended 5x12 keyboard with 2 extra keys. Intended for ortho layouts with a shifted number row, allowing for the placement of the delete and tilde keys above their usual spots.
 
 Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning from its lessons to make a design that's easier to build, more maintainable, better encapsulated and overall a more complete product.
 
@@ -23,9 +23,9 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 ## PCB
 
-The source Kicad 10 project can be found in [source/kicad](source/kicad).
+The Kicad 10 project can be found in [source/kicad](source/kicad).
 
-To get fabrication files, open the Kicad project and export fab files for a PCB manufacturer of your choice using one of their respective export plugins.
+To generate fabrication files, open the Kicad project and use an export plugin of one of the PCB manufacturers you want to order from. The order process is then highly dependent on the manufacturer.
 
 ### Suggested BOM
 
@@ -57,7 +57,6 @@ QMK/VIA setup with a few custom features:
 - custom `KRT_VOL` keycode for combined volume control
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> reverts to the default keymap
-- indicator LED brightness is configurable in `krteq.c`
 
 ### Compiling (Windows)
 
@@ -74,7 +73,7 @@ python source/scripts/qmk_compile.py
 
 ### Flashing (Windows)
 
-For the first time, hold the BOOTSEL button while connecting the Pico to a computer to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) over to it.
+For the initial flash, hold the BOOTSEL button while connecting the Pico to a computer to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) over to it.
 
 Once flashed, you can trigger the bootloader mode again by simply pressing the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
 
@@ -87,8 +86,8 @@ Once flashed, you can trigger the bootloader mode again by simply pressing the <
 - Raspberry Pi Pico
 - 30cm (1ft) USB panel-mount extension cable
 - 61x Gateron KS-33B (GLP 3.0) switches
-- 61x MX low-profile keycaps
-- Gateron 2u low-profile plate-mounted stabilizer
+- 61x MX low profile keycaps
+- Gateron 2u low profile plate-mounted stabilizer
 - 3x M2x6 flat head screw
 - Rubber feet
 
@@ -103,8 +102,9 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 3. Attach the 2u stabilizer to the top case
 4. Push a few of the switches through the top case and into the PCB sockets, just enough to hold the two parts together
 5. Connect the panel mount USB cable to the Pico and screw the other end to the case's USB port cutout
-6. Slide the top assembly into the bottom case rails, and secure it with screws from the bottom
-7. Install the remaining switches and keycaps
+6. Slide the top assembly into the bottom case rails
+7. Screw the top and bottom cases together using the 3 M2x6 screws
+8. Install the remaining switches and keycaps
 
 And you're done!
 
@@ -112,17 +112,17 @@ And you're done!
 
 ### Why the unusual KS-33B switches?
 
-The problem I had when trying to order a pre-assembled low-profile hotswap keyboard PCB was the lack of low-profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the much more common and widely available regular hotswap sockets.
+The problem I had when trying to order a pre-assembled low profile hotswap keyboard PCB was the lack of low profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the much more common and widely available regular hotswap sockets.
 
-I'm making a big bet on these switches taking over current KS-33s, as the entire concept of getting a pre-assembled low-profile PCB hinges on them.
+I'm making a big bet on these switches taking over current KS-33s, as the entire concept of getting a pre-assembled low profile PCB hinges on them.
 
 ### So is this board compatible with high profile switches?
 
-Not now, but it would be trivial to make. It would only require a slight modification of the top case. I could easily do it if there was somehow demand for it.
+Footprint-wise, yes, but it's currently missing a compatible top case. High profile top case variant could easily be made if there was demand for it.
 
 ### Why no RGB?
 
-The simple backlighting was easier to implement and reduced the number of components that could fail, which aligned with this project's goal of maximizing longevity.
+The simple backlighting was easier to implement and reduced the number of components which could fail, which aligned with this project's goal of maximizing longevity.
 
 ### Why include scroll lock indicator?
 

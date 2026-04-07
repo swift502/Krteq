@@ -1,8 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "hal.h"
 
-#define INDICATOR_BRIGHTNESS 1
-
 // PWM0 A - GP0 (Num Lock)
 // PWM0 B - GP1 (Caps Lock)
 static PWMConfig pwm0_cfg = {
@@ -99,9 +97,9 @@ bool led_update_kb(led_t led_state)
 
     if (res)
     {
-        pwmEnableChannel(&PWMD0, 0, led_state.num_lock ? INDICATOR_BRIGHTNESS : 0);
-        pwmEnableChannel(&PWMD0, 1, led_state.caps_lock ? INDICATOR_BRIGHTNESS : 0);
-        pwmEnableChannel(&PWMD1, 0, led_state.scroll_lock ? INDICATOR_BRIGHTNESS : 0);
+        pwmEnableChannel(&PWMD0, 0, led_state.num_lock ? 1 : 0);
+        pwmEnableChannel(&PWMD0, 1, led_state.caps_lock ? 1 : 0);
+        pwmEnableChannel(&PWMD1, 0, led_state.scroll_lock ? 1 : 0);
     }
 
     return res;
