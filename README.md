@@ -25,6 +25,8 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 The Kicad 10 project can be found in [source/kicad](source/kicad).
 
+All parts are SMD, as the PCB is intended to be assembled by a manufacturer for an easier, although more expensive build process. Resistor values correspond to max possible brightnesses, backlight intensity is then controlled by QMK, and LED indicator brightness is adjustable via custom PWM code.
+
 To generate fabrication files, open the Kicad project and use an export plugin of one of the PCB manufacturers you want to order from. The order process is then highly dependent on the manufacturer.
 
 ### Suggested BOM
