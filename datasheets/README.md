@@ -1,3 +1,3 @@
 # Datasheets
 
-The datasheet files in this folder are provided for reference only and remain the sole property of their respective authors. They are not covered by the project's CC0 license.
+The datasheets contained in this folder are provided for reference purposes only and are not covered by this project's CC0 license. Please refer to the respective manufacturers for licensing and usage terms of each datasheet.
