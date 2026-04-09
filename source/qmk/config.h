@@ -1,3 +1,3 @@
-// GP13 (Backlight) - PWM6 B
+// Backlight pin - GP13 (PWM6 B)
 #define BACKLIGHT_PWM_DRIVER PWMD6
 #define BACKLIGHT_PWM_CHANNEL RP2040_PWM_CHANNEL_B
