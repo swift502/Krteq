@@ -107,7 +107,7 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 > Now is your last chance to do the initial [firmware flash](#flashing-windows). After this point the Bootsel button won't be accessible. I also recommend plugging the keyboard in and testing it works at this point. If you find an issue, it's still very easy to test connectivity or swap out the Pico.
 
 6. Slide the top assembly into the bottom case rails
-7. Screw the top and bottom cases together using the 3 M2x6 screws
+7. Screw the top and bottom cases together
 8. Install the remaining switches and keycaps
 
 And you're done!
