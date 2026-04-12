@@ -95,9 +95,6 @@ Once flashed, you can trigger the bootloader mode again by simply pressing the <
 
 ### Assembly
 
-> [!IMPORTANT]
-> Make sure to [flash the firmware](#flashing-windows) to the Pico before starting the assembly!
-
 Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
 
 1. Install the Pico onto the PCB (socketed or soldered)
@@ -106,8 +103,8 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 4. Push a few of the switches through the top case and into the PCB sockets, just enough to hold the two parts together
 5. Connect the panel mount USB cable to the Pico and screw the other end to the case's USB port cutout
 
-> [!TIP]
-> At this point, I recommend plugging the keyboard in and testing it works. If you find an issue, it's still very easy to test connectivity or swap out the Pico.
+> [!IMPORTANT]
+> Now is your last chance to do the initial [firmware flash](#flashing-windows). After this point the Bootsel button won't be accessible. I also recommend plugging the keyboard in and testing it works at this point. If you find an issue, it's still very easy to test connectivity or swap out the Pico.
 
 6. Slide the top assembly into the bottom case rails
 7. Screw the top and bottom cases together using the 3 M2x6 screws
