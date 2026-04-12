@@ -107,7 +107,7 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 5. Connect the panel mount USB cable to the Pico and screw the other end to the case's USB port cutout
 
 > [!TIP]
-> At this point, I recommend plugging the keyboard in and testing it works. If anything's wrong, it's still very easy to test out connections or swap out the Pico.
+> At this point, I recommend plugging the keyboard in and testing it works. If you find a problem, it's still very easy to test out connections or swap out the Pico.
 
 6. Slide the top assembly into the bottom case rails
 7. Screw the top and bottom cases together using the 3 M2x6 screws
