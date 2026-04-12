@@ -100,7 +100,7 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 1. Install the Pico onto the PCB (socketed or soldered)
 2. Attach the indicator LED cover strip to the top case
 3. Attach the 2u stabilizer to the top case
-4. Push a few of the switches through the top case and into the PCB sockets, just enough to hold the two parts together
+4. Push the corner switches through the top case and into the PCB sockets to hold the two parts together
 5. Connect the panel mount USB cable to the Pico and screw the other end to the case's USB port cutout
 
 > [!IMPORTANT]
