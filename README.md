@@ -125,7 +125,7 @@ I'm making a big bet on these switches taking over current KS-33s, as the entire
 
 ### So is this board compatible with high profile switches?
 
-Footprint-wise, yes, but currently there's no compatible high-profile top case variant. However it could easily be made, if there was demand for it.
+Footprint-wise, yes, but currently there's no compatible high-profile top case variant. However, it would be trivial to make one if there was demand for it.
 
 ### Why no RGB?
 
