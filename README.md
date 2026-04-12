@@ -101,7 +101,7 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 2. Attach the indicator LED cover strip to the top case
 3. Attach the 2u stabilizer to the top case
 4. Push the corner switches through the top case and into the PCB sockets to hold the two parts together
-5. Connect the panel mount USB cable to the Pico and screw the other end to the case's USB port cutout
+5. Screw the panel mount cable to the case cutout and connect the other end to the Pico
 
 > [!IMPORTANT]
 > Now is your last chance to do the initial [firmware flash](#flashing-windows). After this point the Bootsel button won't be accessible. I also recommend plugging the keyboard in and testing it works at this point. If you find an issue, it's still very easy to test connectivity or swap out the Pico.
