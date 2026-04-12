@@ -95,7 +95,8 @@ Once flashed, you can trigger the bootloader mode again by simply pressing the <
 
 ### Assembly
 
-First, make sure to [flash the firmware](#flashing-windows) to the Pico before assembling anything.
+> [!IMPORTANT]
+> Make sure to [flash the firmware](#flashing-windows) to the Pico before starting the assembly!
 
 Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
 
@@ -104,6 +105,10 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 3. Attach the 2u stabilizer to the top case
 4. Push a few of the switches through the top case and into the PCB sockets, just enough to hold the two parts together
 5. Connect the panel mount USB cable to the Pico and screw the other end to the case's USB port cutout
+
+> [!TIP]
+> At this point, I recommend plugging the keyboard in and testing it works. If anything's wrong, it's still very easy to test out connections or swap out the Pico.
+
 6. Slide the top assembly into the bottom case rails
 7. Screw the top and bottom cases together using the 3 M2x6 screws
 8. Install the remaining switches and keycaps
@@ -124,7 +129,7 @@ Footprint-wise, yes, but it's currently missing a compatible top case. High prof
 
 ### Why no RGB?
 
-The simple backlighting was easier to implement and reduced the number of components which could fail, which aligned with this project's goal of maximizing longevity.
+The simple backlighting was a lot easier to implement and reduced the number of components which could fail, which aligned with this project's goal of maximizing longevity.
 
 ### Why include scroll lock indicator?
 
