@@ -128,9 +128,9 @@ Footprint-wise, yes, but currently there's no compatible high-profile top case v
 
 The simple backlighting was a lot easier to implement and reduced the number of components which could fail, which aligned with this project's goal of maximizing longevity.
 
-### Why include scroll lock indicator?
+### Who needs scroll lock?
 
-I really wanted an LED for my custom letter accent input method. I wanted it to be an actual compose LED, which would be supported by QMK, but unfortunately Windows doesn't implement the compose lock state. So ultimately the third LED ended up being a regular scroll lock. I still like it as a general purpose LED that can be used for custom functionality via AHK scripts, especially because it's not labeled in any specific way.
+I really wanted an LED for my custom letter accent input method. I wanted it to be an actual compose LED, which would be supported by QMK, but unfortunately not Windows. So ultimately the third LED ended up being a regular scroll lock. I still like it as a general purpose LED that can be used for custom functionality via AHK scripts.
 
 ## Documentation
 
