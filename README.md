@@ -104,7 +104,7 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 5. Screw the panel mount cable to the case cutout and connect the other end to the Pico
 
 > [!IMPORTANT]
-> Now is your last chance to perform the initial [firmware flash](#flashing-windows). After this point the Bootsel button won't be accessible. I also recommend plugging the keyboard in and testing it works at this point. If you find an issue, it's still very easy to test connectivity or swap out the Pico.
+> Now is your last chance to perform the initial [firmware flash](#flashing-windows). After this point the BOOTSEL button won't be accessible. I also recommend plugging the keyboard in and testing basic functionality. If you find an issue, it's still very easy to test connectivity or swap out the Pico.
 
 6. Slide the top assembly into the bottom case rails
 7. Screw the top and bottom cases together
@@ -130,7 +130,7 @@ The simple backlighting was a lot easier to implement and reduced the number of 
 
 ### Who needs scroll lock?
 
-I really wanted an LED for my custom letter accent input method. I wanted it to be an actual compose LED, which would be supported by QMK, but unfortunately not Windows. So ultimately the third LED ended up being a regular scroll lock. I still like it as a general purpose LED that can be used for custom functionality via AHK scripts.
+I really wanted an LED for my custom letter accent input method. I wanted it to be an actual compose LED, which would be supported by QMK, but unfortunately not Windows. So ultimately the third LED ended up being a regular scroll lock. So I use it for my accent input method, and generally like it as a general purpose LED that can be used for custom functionality via AHK scripts.
 
 ## Documentation
 
