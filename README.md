@@ -48,7 +48,7 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 
 ## Case
 
-Case is designed non-destructively in Blender, so it should be fairly easy to modify if needed. STL files for 3D printing can be found in [production/stl](production/stl). Tested with PLA, 0.15mm layer height, 100% infill.
+Case is designed non-destructively in Blender. Source file [here](source/Krteq.blend). So it should be fairly easy to modify if needed. STL files for 3D printing can be found in [production/stl](production/stl). Tested with PLA, 0.15mm layer height, 100% infill.
 
 You'll need to print at least 3 files. Top and bottom in one or two colors, and the LED cover strip using transparent filament.
 
