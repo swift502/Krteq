@@ -120,7 +120,7 @@ And you're done!
 
 ### Why the unusual KS-33B switches?
 
-The idea was that ordering a pre-assembled PCB will be faster, cheaper and long-term more viable, if it involves regular hotswap sockets, since they're always in stock and available in cheaper off-brand variants, unlike the Gateron low profile hotswap sockets, which seem to be quite rare. The fact that they also support any regular MX switch is a great bonus.
+The idea was that ordering a pre-assembled PCB will be faster, cheaper and long-term more viable if it involves regular hotswap sockets, since they're always in stock and available in cheaper off-brand variants, unlike the Gateron low profile hotswap sockets, which seem to be quite rare. The fact that they also support any regular MX switch is a nice bonus.
 
 ### So is this board compatible with high profile switches?
 
