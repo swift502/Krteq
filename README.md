@@ -1,3 +1,5 @@
+![](images/1.webp)
+
 # Krteq
 
 [![](https://img.shields.io/badge/PCB-blue)](#pcb)
@@ -20,6 +22,8 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 - 233mm × 127mm × 30mm
 
 Connecting the keyboard to [usevia.app](https://usevia.app) requires manually uploading the [design file](production/krteq_via.json) in the design tab.
+
+![](images/2.webp)
 
 ## PCB
 
