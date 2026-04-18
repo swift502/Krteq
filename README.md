@@ -120,17 +120,15 @@ And you're done!
 
 ### Why the unusual KS-33B switches?
 
-The problem I had when trying to order a pre-assembled low profile hotswap keyboard PCB was the lack of low profile hotswap sockets offered by PCB manufacturers. Because KS-33Bs share footprint with regular MX switches, they can be used with the much more common and widely available regular hotswap sockets.
-
-I'm making a big bet on these switches taking over current KS-33s, as the entire concept of getting a pre-assembled low profile PCB hinges on them.
+The idea is that ordering a pre-assembled PCB will be faster, cheaper and long-term more viable, if it involves regular hotswap sockets, since they're always in stock and available in cheaper off-brand variants. Unlike the Gateron low profile hotswap sockets, which seem to be quite rare. The fact that they also support any regular MX switch is a great bonus.
 
 ### So is this board compatible with high profile switches?
 
-Footprint-wise, yes, but currently there's no compatible high-profile top case variant. However, it would be trivial to make if there was demand for it.
+Footprint-wise, yes, but currently there's no compatible high-profile top case variant. However, it would be trivial to make one if there was demand for it.
 
 ### Why no RGB?
 
-The simple backlighting was a lot easier to implement and reduced the number of components which could fail, which aligned with this project's goal of maximizing longevity.
+The simple backlighting was a lot safer and easier to implement, and I thought it would be good enough. However now that I've experienced its limitations, I'd love to add proper RGB in the future.
 
 ### Who needs scroll lock?
 
