@@ -19,7 +19,7 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 - Gateron KS-33B (GLP 3.0) switches
 - 3D printed case with a 7 degree tilt
 - Tray mount PCB, integrated plate
-- 233mm × 127mm × 30mm
+- 233mm × 125mm × 30mm
 
 Connecting the keyboard to [usevia.app](https://usevia.app) requires manually uploading the [design file](production/krteq_via.json) in the design tab.
 
@@ -120,15 +120,15 @@ And you're done!
 
 ### Why the unusual KS-33B switches?
 
-The idea was that ordering a pre-assembled PCB will be faster, cheaper and long-term more viable if it involves regular hotswap sockets, since they're always in stock and available in cheaper off-brand variants, unlike the Gateron low profile hotswap sockets, which seem to be quite rare. The fact that they also support any regular MX switch is a nice bonus.
+The idea was that ordering a pre-assembled PCB will be faster, cheaper and long-term more viable if it involves regular hotswap sockets, since they're always in stock and available in cheaper off-brand variants, unlike the Gateron low profile hotswap sockets, which are much less common. The fact that they also support regular MX switches is a nice bonus.
 
 ### So is this board compatible with high profile switches?
 
-Footprint-wise, yes, but currently there's no compatible high-profile top case variant. However, it would be trivial to make one if there was demand for it.
+Footprint-wise, yes, but currently there's no compatible high-profile top case variant, though it would be trivial to make one, if there was demand for it.
 
 ### Why no RGB?
 
-The simple backlighting was a lot safer and easier to implement, and I thought it would be good enough. However now that I've experienced its limitations, I'd love to add proper RGB in the future.
+The simple backlighting was a lot safer and easier to implement. But now that I've confirmed it works, I'd love to implement proper RGB with all effects for the next revision.
 
 ### Who needs scroll lock?
 
