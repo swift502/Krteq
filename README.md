@@ -99,7 +99,9 @@ Once flashed, you can trigger the bootloader mode again by simply pressing the <
 
 ### Assembly
 
-![](images/build.webp)
+<a href="https://youtu.be/iH0en77GBfo" target="_blank">
+    <img src="images/build.webp"/>
+</a>
 
 Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
 
