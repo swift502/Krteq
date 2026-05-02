@@ -126,7 +126,7 @@ The idea was that ordering a pre-assembled PCB will be faster, cheaper and long-
 
 ### So is this board compatible with high profile switches?
 
-Footprint-wise, yes, but currently there's no compatible high-profile top case variant, though it would be trivial to make one, if there was demand for it.
+Footprint-wise, yes, but a compatible high-profile top case variant would have to be made, and I have no idea if the low profile stabilizer would be compatible with regular keycaps. So there's a few concerns, but theoretically it's possible.
 
 ### Why no RGB?
 
