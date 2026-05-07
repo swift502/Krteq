@@ -52,7 +52,7 @@ Case is designed non-destructively in Blender here [source/Krteq.blend](source/K
 
 You'll need to print at least 3 files. Top and bottom in one or two colors, and the LED cover strip using transparent filament.
 
-The top and bottom parts have a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
+The top part also has a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
 
 ## Firmware
 
