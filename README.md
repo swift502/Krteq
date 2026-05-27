@@ -29,9 +29,9 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 The Kicad 10 project can be found in [source/kicad](source/kicad). All parts are SMD. The PCB is intended to be ordered pre-assembled for an easier, although more expensive build process.
 
-Suggested resistor values correspond to max safe LED brightness, which is later adjusted using software. Backlight intensity is controlled by QMK's backlight system, and indicator brightness is adjustable via custom PWM code.
-
 To generate fabrication files, open the Kicad project and use an export plugin provided by one of the PCB manufacturers you want to order from. The order process is then highly dependent on the manufacturer.
+
+Suggested resistor values correspond to max safe LED brightness, which is later adjusted using software. Backlight intensity is controlled by QMK's backlight system, and indicator brightness is adjustable via custom PWM code.
 
 ### Suggested BOM
 
@@ -48,7 +48,7 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 
 ## Case
 
-Case is designed non-destructively in Blender here [source/Krteq.blend](source/Krteq.blend). So it should be fairly easy to modify if needed. STL files for 3D printing can be found in [production/stl](production/stl). Tested with PLA, 0.15mm layer height, 100% infill.
+Case is designed non-destructively in Blender here [source/Krteq.blend](source/Krteq.blend), so it should be fairly easy to modify if needed. STL files for 3D printing can be found in [production/stl](production/stl). Tested with PLA, 0.15mm layer height, 100% infill.
 
 You'll need to print at least 3 files. Top and bottom in one or two colors, and the LED cover strip using transparent filament.
 
