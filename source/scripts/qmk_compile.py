@@ -35,7 +35,7 @@ print(f"Copied {kb_local} to {kb_remote}")
 # Environment
 # https://docs.qmk.fm/other_vscode#msys2-setup
 env = os.environ.copy()
-env["MSYSTEM"] = "MINGW64"
+env["MSYSTEM"] = "MINGW64" # Will be deprecated in favor of UCRT64
 
 # Args
 command = f"qmk compile -kb {name} -km default"
