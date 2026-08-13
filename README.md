@@ -33,18 +33,42 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 
 Suggested resistor values correspond to max safe LED brightness, which is later adjusted using software. Backlight intensity is controlled by QMK's backlight system, and indicator brightness is adjustable via custom PWM code.
 
+### Footprints ToDo
+
+- switch diode ✓
+- switch socket
+- ks-33 1u
+- ks-33 2u
+- rgb led
+
+### 3D models ToDo
+
+- switch socket
+- ks-33
+- rgb led
+
 ### Suggested BOM
 
 | Part | Manufacturer Part Number |
 |---|---|
-| Switch Diode | 1N4148W |
-| Backlight LED | MHT151WDT |
-| GSD NMOS | HX2302A |
-| R82Ω | 0603WAF820JT5E |
-| R330Ω | 0603WAF3300T5E |
-| R470Ω | 0603WAF4700T5E |
-| R10kΩ | 0603WAF1002T5E |
-| Switch socket | CPG151101S11-16 |
+| Switch diode | 1N4148W |
+| Switch socket | CPG151101S11-2 |
+| RGB LED | A-SP1513R6GHB1C-A01-2A |
+| RGB driver | IS31FL3733-QFLS4-TR |
+| 0.1µF capacitor | CL05B104KO5NNNC |
+| 0.47µF capacitor | CL10B474KA8NNNC |
+| 2kΩ resistor | 0603WAF2001T5E |
+| 20kΩ resistor | 0603WAF2002T5E |
+| 100kΩ resistor | 0603WAF1003T5E |
+
+<!-- | Backlight LED | MHT151WDT | -->
+<!-- | GSD NMOS | HX2302A | -->
+<!-- | R82Ω | 0603WAF820JT5E | -->
+<!-- | R330Ω | 0603WAF3300T5E | -->
+<!-- | R470Ω | 0603WAF4700T5E | -->
+<!-- | R10kΩ | 0603WAF1002T5E | -->
+<!-- | Switch socket | CPG151101S11-16 | -->
+
 
 ## Case
 
@@ -118,7 +142,7 @@ Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU
 
 And you're done!
 
-## QnA
+<!-- ## QnA
 
 ### Why the unusual KS-33B switches?
 
@@ -134,7 +158,7 @@ The simple backlighting was a lot safer and easier to implement. But now that I'
 
 ### Who needs scroll lock?
 
-I really wanted an LED for my custom letter accent input method. I wanted it to be an actual compose LED, which would be supported by QMK, but unfortunately not Windows. So ultimately the third LED ended up being a regular scroll lock. I use it as an indicator for my custom accent input method, but generally like it as a general purpose LED that can be used for custom functionality via AHK scripts.
+I really wanted an LED for my custom letter accent input method. I wanted it to be an actual compose LED, which would be supported by QMK, but unfortunately not Windows. So ultimately the third LED ended up being a regular scroll lock. I use it as an indicator for my custom accent input method, but generally like it as a general purpose LED that can be used for custom functionality via AHK scripts. -->
 
 ## Documentation
 
