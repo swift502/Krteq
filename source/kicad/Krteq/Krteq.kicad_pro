@@ -554,7 +554,7 @@
     "annotate_start_num": 0,
     "annotation": {
       "method": 0,
-      "sort_order": 0
+      "sort_order": 1
     },
     "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
@@ -712,7 +712,7 @@
         "uuid": "9e7f33ad-d3b4-42c3-9373-23856f560db6"
       }
     ],
-    "used_designators": "R4,R8-12,J71,D1-64,#PWR3-8,U71,C4,SW1-64",
+    "used_designators": "R1-5,R8-12,J71,D1-64,#PWR3-8,U71,C1-7,SW1-64",
     "variants": []
   },
   "sheets": [
