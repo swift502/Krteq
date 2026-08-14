@@ -14,16 +14,57 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 
 - Low profile
 - Hotswap
-- White backlight (only breathing effect)
+- RGB backlight
 - QMK/VIA compatible
-- Gateron KS-33B (GLP 3.0) switches
 - 3D printed case with a 7 degree tilt
-- Tray mount PCB, integrated plate
+- Tray mount
 - 233mm × 125mm × 30mm
 
 Connecting the keyboard to [usevia.app](https://usevia.app) requires manually uploading the [design file](production/krteq_via.json) in the design tab.
 
 ![](images/2.webp)
+
+## Build guide
+
+### Parts
+
+- [PCB](#pcb)
+- [Case](#case)
+- Raspberry Pi Pico
+- 61x Gateron KS-33 switches
+- 61x MX low profile keycaps
+- Gateron 2u low profile plate-mounted stabilizer
+- 6x M2x6 flat head screw
+- 2x M2.5x5 screw
+- Rubber feet
+
+> [!WARNING]
+> TODO Verify length of all screws
+
+### Breakout boards
+
+- 128x32 OLED display breakout
+- Adafruit style USB-C breakout
+
+> [!WARNING]
+> TODO IMAGE
+
+### Assembly
+
+> [!WARNING]
+> TODO Update assembly guide
+
+1. Order pre-assembled PCB from a manufacturer of your choice
+1. Perform the initial firmware flash on the Pico
+1. Solder the Pico onto the PCB
+1. Solder the OLED breakout onto the PCB
+1. Screw the USB breakout to the top case
+1. Solder connecting wires between the USB breakout and the Pico TP pads
+1. Attach the 2u stabilizer to the top case
+1. Screw the top case to the bottom case
+1. Install the switches and keycaps
+
+And it's done!
 
 ## PCB
 
@@ -31,21 +72,18 @@ The Kicad 10 project can be found in [source/kicad](source/kicad). All parts are
 
 To generate fabrication files, open the Kicad project and use an export plugin provided by one of the PCB manufacturers you want to order from. The order process is then highly dependent on the manufacturer.
 
-Suggested resistor values correspond to max safe LED brightness, which is later adjusted using software. Backlight intensity is controlled by QMK's backlight system, and indicator brightness is adjustable via custom PWM code.
-
 ### Footprints ToDo
 
 - switch diode ✓
-- switch socket
-- ks-33 1u
-- ks-33 2u
+- switch socket ✓
+- ks-33 1u ✓
 - rgb led
 
 ### 3D models ToDo
 
-- switch socket
-- ks-33
-- rgb led
+- switch socket ✓
+- ks-33 ✓
+- rgb led ✓
 
 ### Suggested BOM
 
@@ -61,26 +99,13 @@ Suggested resistor values correspond to max safe LED brightness, which is later 
 | 20kΩ resistor | 0603WAF2002T5E |
 | 100kΩ resistor | 0603WAF1003T5E |
 
-<!-- | Backlight LED | MHT151WDT | -->
-<!-- | GSD NMOS | HX2302A | -->
-<!-- | R82Ω | 0603WAF820JT5E | -->
-<!-- | R330Ω | 0603WAF3300T5E | -->
-<!-- | R470Ω | 0603WAF4700T5E | -->
-<!-- | R10kΩ | 0603WAF1002T5E | -->
-<!-- | Switch socket | CPG151101S11-16 | -->
-
-
 ## Case
 
 Case is designed non-destructively in Blender here [source/Krteq.blend](source/Krteq.blend), so it should be fairly easy to modify if needed. STL files for 3D printing can be found in [production/stl](production/stl). Tested with PLA, 0.15mm layer height, 100% infill.
 
-You'll need to print at least 3 files. Top and bottom in one or two colors, and the LED cover strip using transparent filament.
-
 The top part also has a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
 
 ## Firmware
-
-A pre-compiled firmware file can be found here [production/krteq_firmware.uf2](production/krteq_firmware.uf2).
 
 QMK/VIA setup with a few custom features:
 
@@ -107,59 +132,6 @@ For the initial flash, hold the BOOTSEL button while connecting the Pico to a co
 
 Once flashed, you can trigger the bootloader mode again by simply pressing the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
 
-## Build guide
-
-### Parts
-
-- [PCB](#pcb)
-- [Case](#case)
-- Raspberry Pi Pico
-- 30cm (1ft) USB panel-mount extension cable
-- 61x Gateron KS-33B (GLP 3.0) switches
-- 61x MX low profile keycaps
-- Gateron 2u low profile plate-mounted stabilizer
-- 3x M2x6 flat head screw
-- Rubber feet
-
-### Assembly
-
-[![](images/build.webp)](https://youtu.be/iH0en77GBfo)
-
-Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
-
-1. Install the Pico onto the PCB (socketed or soldered)
-2. Attach the indicator LED cover strip to the top case
-3. Attach the 2u stabilizer to the top case
-4. Push the corner switches through the top case and into the PCB sockets to hold the two parts together
-5. Screw the panel mount cable to the case cutout and connect the other end to the Pico
-
-> [!IMPORTANT]
-> Now is your last chance to perform the initial [firmware flash](#flashing-windows). After this point the BOOTSEL button won't be accessible. I also recommend plugging the keyboard in and testing basic functionality. If you find an issue, it's still very easy to test connectivity or swap out the Pico.
-
-6. Slide the top assembly into the bottom case rails
-7. Screw the top and bottom cases together
-8. Install the remaining switches and keycaps
-
-And you're done!
-
-<!-- ## QnA
-
-### Why the unusual KS-33B switches?
-
-The idea was that ordering a pre-assembled PCB will be faster, cheaper and long-term more viable if it involves regular hotswap sockets, since they're always in stock and available in cheaper off-brand variants, unlike the Gateron low profile hotswap sockets, which are much less common. The fact that they also support regular MX switches is a nice bonus.
-
-### So is this board compatible with high profile switches?
-
-Footprint-wise, yes, but a compatible high-profile top case variant would have to be made, and I have no idea if the low profile stabilizer would be compatible with regular keycaps. So there's a few concerns, but theoretically it's possible.
-
-### Why no RGB?
-
-The simple backlighting was a lot safer and easier to implement. But now that I've confirmed it works, I'd love to implement proper RGB with all effects for the next revision.
-
-### Who needs scroll lock?
-
-I really wanted an LED for my custom letter accent input method. I wanted it to be an actual compose LED, which would be supported by QMK, but unfortunately not Windows. So ultimately the third LED ended up being a regular scroll lock. I use it as an indicator for my custom accent input method, but generally like it as a general purpose LED that can be used for custom functionality via AHK scripts. -->
-
 ## Documentation
 
 ### QMK
@@ -167,7 +139,8 @@ I really wanted an LED for my custom letter accent input method. I wanted it to 
 - Info.json: https://docs.qmk.fm/reference_info_json
 - Keycodes: https://docs.qmk.fm/keycodes
 - Default keymap: https://docs.qmk.fm/configurator_default_keymaps
-- Backlight: https://docs.qmk.fm/features/backlight
+- RGB matrix: https://docs.qmk.fm/features/rgb_matrix
+- OLED: https://docs.qmk.fm/features/oled_driver
 
 ### Kicad
 

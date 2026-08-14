@@ -1,15 +1,15 @@
-(footprint "MHT151WDT"
+(footprint "ReverseMount_RGB_LED"
 	(version 20260206)
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "-35℃~+85℃ 130° 20mA 3.65V 900mcd 95mW Frosted Yellow Lens Reverse Mount White 1206 LED Indication - Discrete ROHS")
-	(tags "diode reverse")
+	(descr "Reverse mount 4 pin LED 3.2x1.3mm")
+	(tags "diode reverse mount led")
 	(property "Reference" "REF**"
 		(at 0 -2.145 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "25b4104b-6f85-459b-a8ce-965efcd2a4b8")
+		(uuid "94b8dda8-a642-470e-a5c7-44f6f74bf79e")
 		(effects
 			(font
 				(size 1 1)
@@ -20,7 +20,7 @@
 	(property "Value" "MHT151WDT"
 		(at 0 -2.3 0)
 		(layer "F.Fab")
-		(uuid "bf6516ee-f3fe-4af5-ada5-af32deab1331")
+		(uuid "053649d8-0453-467d-8ec0-89761bce37f0")
 		(effects
 			(font
 				(size 1 1)
@@ -33,7 +33,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "dba0d44b-868a-4d4c-9578-e10378a483a7")
+		(uuid "5d7ee45c-6b55-46d2-8b8c-6bab8fdcfcab")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -46,7 +46,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "b6beecaa-fde3-4a81-8f09-6b0a69750b17")
+		(uuid "74839f54-6407-48ca-bdc4-f9389f008f53")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -64,7 +64,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "3e4eaeaa-cea3-44b9-9475-54aa86a7a1e7")
+		(uuid "ee42edf2-9656-4b04-ad74-d197ae17e3af")
 	)
 	(fp_line
 		(start -2.25 -0.8)
@@ -74,7 +74,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "85c00ad4-8a63-4ccd-8347-7acf574d1299")
+		(uuid "054ec4ea-29c4-4f11-b3b6-21b930c7160e")
 	)
 	(fp_line
 		(start -2.25 0.8)
@@ -84,7 +84,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "6274d03e-9c4d-4e99-bfce-a68daca45a77")
+		(uuid "60c5de71-fa1d-4723-9c69-2ae23839a3f8")
 	)
 	(fp_line
 		(start -1.690615 -1.592747)
@@ -94,7 +94,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "70abe052-4334-4d8f-b4b3-becf4369bcfd")
+		(uuid "473f8be4-4c5d-4016-b822-c7b725df1a42")
 	)
 	(fp_line
 		(start -1.571846 -1.94906)
@@ -104,7 +104,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "428b2467-e691-4844-b6b6-858cf4621076")
+		(uuid "46144989-fc6f-4beb-99f1-ade4365d9762")
 	)
 	(fp_line
 		(start -1.571846 -1.592747)
@@ -114,7 +114,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "952a2657-dc7a-448c-ad05-07833d02f107")
+		(uuid "9137b83e-391d-4971-a1b6-62dbc5cdeaf8")
 	)
 	(fp_line
 		(start 1.3 -0.8)
@@ -124,7 +124,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "4121d1ac-5871-4737-b345-ea841bd8a8ac")
+		(uuid "83e5e71e-f3c4-4894-bcce-a925675be309")
 	)
 	(fp_line
 		(start 1.3 0.8)
@@ -134,7 +134,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "ef721af4-0fe4-4cbc-93e6-a02d107657ba")
+		(uuid "5969be5d-5d07-43ce-b226-8a39ac2bc239")
 	)
 	(fp_line
 		(start 1.526257 -1.958426)
@@ -144,7 +144,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "7f3ece03-3996-43d6-a898-36b0911b22f9")
+		(uuid "70a55535-8108-4231-95f9-baf70083b297")
 	)
 	(fp_line
 		(start 1.913894 -1.7)
@@ -154,7 +154,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "d81f8397-f53f-4287-8ff0-e463e0fa20e4")
+		(uuid "c8459be3-3560-45d9-9070-94d930a80ee6")
 	)
 	(fp_line
 		(start 2.043105 -1.958426)
@@ -164,7 +164,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "0a3a4112-a5fe-42e1-991c-fb177b8ecb4f")
+		(uuid "9849f80f-87ff-4e51-bef4-bab20f39109b")
 	)
 	(fp_line
 		(start 2.3 -0.8)
@@ -174,7 +174,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "3c8ede79-cea9-4551-babb-864cbdfb82fc")
+		(uuid "962ac4c8-e83e-4699-a674-24c0977d62a7")
 	)
 	(fp_line
 		(start -2.28 -1.46)
@@ -184,7 +184,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "d167c904-5ef2-4ee8-a907-71efb19676da")
+		(uuid "caf57a98-9500-4cf2-8c5f-0cbc55b46a08")
 	)
 	(fp_line
 		(start -2.28 1.46)
@@ -194,7 +194,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "3e4778be-0bce-4f64-b5a6-f548fcc9f2f8")
+		(uuid "86d0b1dd-628d-42e4-98aa-469cfec38d98")
 	)
 	(fp_line
 		(start 2.28 -1.46)
@@ -204,7 +204,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "c8f84367-abf0-44ae-b2e2-ac3d04326962")
+		(uuid "a12448d8-9915-4a58-bc40-709a5f26ef69")
 	)
 	(fp_line
 		(start 2.28 1.46)
@@ -214,7 +214,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "f9cedd21-8401-4c4b-b917-776d0504c3c9")
+		(uuid "ca3b29c6-f422-4d66-8f83-8cc8a5c54602")
 	)
 	(fp_line
 		(start -2.2 -0.7)
@@ -224,7 +224,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "2ef33a99-f04c-471e-a3de-cbf1fc8c548f")
+		(uuid "4141d96b-31f3-4bdc-ab4b-f5f46949e52b")
 	)
 	(fp_line
 		(start 2.2 -0.7)
@@ -234,7 +234,7 @@
 			(type default)
 		)
 		(layer "F.Fab")
-		(uuid "f09ed1d4-c3b5-4eb1-a29b-84b5bdb02364")
+		(uuid "0d7137aa-5217-48fd-9be7-cb72bbfb9e1a")
 	)
 	(fp_line
 		(start 2.2 0.7)
@@ -244,7 +244,7 @@
 			(type default)
 		)
 		(layer "F.Fab")
-		(uuid "f4cc88e2-4fdd-4c29-af52-5d8ac7089c82")
+		(uuid "30ec30db-7dd5-4d02-88be-45bd8d9eb28d")
 	)
 	(fp_line
 		(start 2.2 0.7)
@@ -254,12 +254,12 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "9b59d174-2b80-43bb-bb06-397229b70b5c")
+		(uuid "08574562-6ff4-49ce-8a4d-20926b493400")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 2.3 0)
 		(layer "F.SilkS")
-		(uuid "51d8cf4d-68a2-4287-9392-a40695170d20")
+		(uuid "6fc7d34b-55fb-458e-860e-b24e831e700b")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -272,22 +272,22 @@
 		(size 2.1 2.1)
 		(drill oval 2.1 3)
 		(layers "*.Cu" "*.Mask")
-		(uuid "6614122f-00ad-4ead-b985-13e06a8fc35d")
+		(uuid "09301348-bcfb-450e-abce-1718d088de57")
 	)
 	(pad "1" smd rect
 		(at -1.675 0)
 		(size 0.85 1.25)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "5e61e9e1-f3ca-45bc-862e-94126253e925")
+		(uuid "ddcb4f6f-908a-4ab1-8dbd-e322075f5062")
 	)
 	(pad "2" smd rect
 		(at 1.675 0)
 		(size 0.85 1.25)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "2f22b815-9f5d-464a-b2a5-77a977b4f2d0")
+		(uuid "5c1912ff-5f75-4c33-b8f8-4ab709d2d7cc")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/ReverseLED.step"
+	(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/ReverseMount_LED.step"
 		(offset
 			(xyz 0 0 0)
 		)

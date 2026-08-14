@@ -1,0 +1,103 @@
+(footprint "Stabilizer_2U"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "2U low-profile stabilizer guide")
+	(property "Reference" "REF**"
+		(at -2.54 -2.794 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "a7658ddf-1fc3-4776-895f-d2b03e4f72bc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Stabilizer_2U"
+		(at 0 11 0)
+		(layer "F.Fab")
+		(uuid "6ccef9ff-31c0-4f35-a71b-fd2d7bfd3ca4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b275aaa1-6880-4265-b7c6-e97afa008879")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3ccb22db-6137-4249-a0d5-3eebadb015ff")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -15.1 -6.5)
+		(end -8.9 10.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "635760e1-b0e7-4d83-a286-9d37bdaad7be")
+	)
+	(fp_rect
+		(start 8.9 -6.5)
+		(end 15.1 10.5)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "d11f1ada-742c-4e00-8adb-bfa48b817667")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -11 0)
+		(layer "F.Fab")
+		(uuid "6fad4229-3ebc-4f03-b90b-d1838a0f9354")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/Stabilizer.step"
+		(offset
+			(xyz 60 0 1.55)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -180 -0)
+		)
+	)
+)
