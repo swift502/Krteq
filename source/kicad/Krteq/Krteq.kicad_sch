@@ -14253,6 +14253,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 172.72 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 172.72 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "17c74f4a-e855-4286-be91-3ebdc2dba44b")
 		)
@@ -14339,6 +14361,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 207.01 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 207.01 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "6412b27a-a064-43d7-8319-0b8ca122aae0")
 		)
@@ -14366,7 +14410,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -14705,7 +14749,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 240.03 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -14830,6 +14874,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 207.01 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 207.01 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 207.01 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -15254,6 +15320,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 218.44 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 218.44 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "e4b8648a-620b-4c13-83b5-7416f415a9c2")
 		)
@@ -15308,7 +15396,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 227.33 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -15443,6 +15531,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 264.16 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 264.16 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "8f088f82-3eba-47fe-8c7f-055c9608d83e")
 		)
@@ -15495,7 +15605,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
 			(at 101.6 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -15519,6 +15629,28 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 101.6 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B474KA8NNNC"
+			(at 101.6 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0402"
+			(at 101.6 157.48 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15598,6 +15730,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 218.44 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 218.44 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 218.44 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -15694,6 +15848,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 287.02 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 287.02 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "9817a69c-30b4-4543-aba1-ecace0dcf8ef")
 		)
@@ -15780,6 +15956,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 184.15 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 184.15 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "3bb89b1f-c74d-4bae-8593-6ad74857af93")
 		)
@@ -15856,6 +16054,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 252.73 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 252.73 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 252.73 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -16077,6 +16297,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 252.73 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 252.73 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "f1c5d030-dca3-4b5f-a78a-15d5ae71c607")
 		)
@@ -16131,7 +16373,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 290.83 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -16234,7 +16476,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 214.63 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -16337,7 +16579,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 316.23 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -16565,7 +16807,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 227.33 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -16668,7 +16910,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 214.63 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -16771,7 +17013,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 240.03 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -17008,6 +17250,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 309.88 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 309.88 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "91f42b23-a2ca-43b5-aea9-e8f302a2601d")
 		)
@@ -17187,7 +17451,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 290.83 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -17290,7 +17554,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 265.43 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -17393,7 +17657,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 252.73 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -17643,6 +17907,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 321.31 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 321.31 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 321.31 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -17957,7 +18243,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 2u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 259.08 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -18092,6 +18378,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 332.74 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 332.74 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "df5848f1-e3ad-448c-975f-65b6bd36a5fe")
 		)
@@ -18146,7 +18454,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 252.73 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -18281,6 +18589,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 195.58 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 195.58 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "f61fe66b-d838-4361-b8e0-6038435cfcbc")
 		)
@@ -18367,6 +18697,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 195.58 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 195.58 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "33ae7b14-4391-4a62-bb39-7b1c48adeafc")
 		)
@@ -18443,6 +18795,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 264.16 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 264.16 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 264.16 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -18632,7 +19006,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 303.53 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -18767,6 +19141,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 229.87 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 229.87 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "a6ab19ce-550e-49c4-b855-bbc01aa5b0b7")
 		)
@@ -18821,7 +19217,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 328.93 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -19026,7 +19422,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 316.23 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -19161,6 +19557,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 321.31 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 321.31 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "0871b5b2-4bbd-4231-a958-edcb760e93f0")
 		)
@@ -19237,6 +19655,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 309.88 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 309.88 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 309.88 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -19536,6 +19976,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 241.3 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 241.3 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "88e35b09-7762-4540-b7c0-8eefce077e93")
 		)
@@ -19612,6 +20074,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 195.58 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 195.58 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 195.58 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -19708,6 +20192,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 332.74 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 332.74 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "41235bd3-3104-4b0d-a9db-3302e2856cbd")
 		)
@@ -19762,7 +20268,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 328.93 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -19897,6 +20403,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 287.02 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 287.02 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "1f1b4dba-6370-4c42-a3bc-1ac85c08817c")
 		)
@@ -19983,6 +20511,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 298.45 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 298.45 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "847f803b-c1d9-495e-81c9-438486162af0")
 		)
@@ -20035,7 +20585,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
 			(at 91.44 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -20059,6 +20609,28 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 91.44 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05B104KO5NNNC"
+			(at 91.44 166.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0402"
+			(at 91.44 166.37 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20116,7 +20688,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 316.23 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -20219,7 +20791,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 227.33 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -20854,6 +21426,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 241.3 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 241.3 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "a190a6f5-0d59-4cd3-ac6f-9091d0c83582")
 		)
@@ -20908,7 +21502,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 303.53 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -21033,6 +21627,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 275.59 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 275.59 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 275.59 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -21379,6 +21995,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 218.44 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 218.44 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "4d4cc641-4212-44cc-8e81-92577806ec2b")
 		)
@@ -21433,7 +22071,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 240.03 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -21534,7 +22172,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
 			(at 63.5 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -21558,6 +22196,28 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 63.5 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B474KA8NNNC"
+			(at 63.5 176.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0402"
+			(at 63.5 176.53 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21740,7 +22400,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 303.53 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -21844,7 +22504,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:QFN-48-1EP_6x6mm_P0.4mm_EP4.2x4.2mm"
+		(property "Footprint" "Package_DFN_QFN:QFN-48-1EP_6x6mm_P0.4mm_EP4.4x4.4mm"
 			(at 86.36 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -21867,6 +22527,28 @@
 			)
 		)
 		(property "Description" "12x16 LED matrix driver with 8-bit PWM and breathing, QFN-48"
+			(at 86.36 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "IS31FL3733-QFLS4-TR"
+			(at 86.36 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "QFN-48-EP(6x6)"
 			(at 86.36 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -22176,6 +22858,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 229.87 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 229.87 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "dc4f60d7-c39c-4237-bcbf-243c591c0a23")
 		)
@@ -22387,6 +23091,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 344.17 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 344.17 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "2540923d-4850-4c52-8aa5-600f4e373ca7")
 		)
@@ -22441,7 +23167,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 278.13 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -22576,6 +23302,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 275.59 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 275.59 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "e6db8a2a-fc9b-4d37-9241-2e2c6b747281")
 		)
@@ -22652,6 +23400,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 241.3 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 241.3 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 241.3 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -22826,6 +23596,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 241.3 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 241.3 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "7e81d5f2-b809-453d-8eb6-4c192d9dbfb8")
 		)
@@ -22856,7 +23648,7 @@
 		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "67d0df73-90db-42e3-9f64-940cbdfc43b5")
 		(property "Reference" "A1"
@@ -23255,6 +24047,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 229.87 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 229.87 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "9419356d-1e2e-408b-ba3f-29251b6cab9a")
 		)
@@ -23341,6 +24155,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 218.44 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 218.44 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "57e36b01-f929-45f5-93c9-028af0678ea2")
 		)
@@ -23395,7 +24231,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 227.33 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -23498,7 +24334,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 201.93 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -23623,6 +24459,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 309.88 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 309.88 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 309.88 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -24094,6 +24952,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 172.72 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 172.72 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "32cbc8e3-6cd0-4440-a47f-c3287c564df2")
 		)
@@ -24498,6 +25378,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 184.15 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 184.15 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 184.15 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -24969,6 +25871,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 332.74 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 332.74 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "be46e440-fea5-4579-b756-49aca29faaa8")
 		)
@@ -25023,7 +25947,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 290.83 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -25260,6 +26184,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 207.01 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 207.01 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "8fdfae37-f54c-4407-b1df-403996b2f0f7")
 		)
@@ -25312,7 +26258,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
 			(at 81.28 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -25336,6 +26282,28 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 81.28 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B474KA8NNNC"
+			(at 81.28 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0402"
+			(at 81.28 157.48 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25393,7 +26361,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 201.93 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -25496,7 +26464,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 290.83 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -25599,7 +26567,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 278.13 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -26086,6 +27054,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 252.73 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 252.73 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "36746012-94ed-49bc-b470-ab2d320e9fbd")
 		)
@@ -26172,6 +27162,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 309.88 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 309.88 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "86cb1987-2e46-43e7-91b8-b197152086d0")
 		)
@@ -26248,6 +27260,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 287.02 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 287.02 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 287.02 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -26437,7 +27471,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 252.73 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -26540,7 +27574,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 227.33 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -26768,7 +27802,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 265.43 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -26871,7 +27905,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 278.13 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -26973,7 +28007,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 189.23 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -27233,6 +28267,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 184.15 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 184.15 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "f1656487-8079-49b1-ae42-6a5e5c6cfed1")
 		)
@@ -27287,7 +28343,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 278.13 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -27640,7 +28696,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 303.53 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -27765,6 +28821,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 275.59 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 275.59 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 275.59 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -27986,6 +29064,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 184.15 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 184.15 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "d2685b1e-1318-4c31-abe5-e77da4f95563")
 		)
@@ -28040,7 +29140,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 240.03 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -28268,7 +29368,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 278.13 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -28371,7 +29471,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 214.63 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -28631,6 +29731,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 172.72 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 172.72 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "a5c5bc81-b335-4593-a0df-0a3264ca87fd")
 		)
@@ -28685,7 +29807,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 265.43 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -28898,6 +30020,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 332.74 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 332.74 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "dd87ea2c-b9c3-4789-ac64-cce78c2a9342")
 		)
@@ -28952,7 +30096,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 189.23 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -29055,7 +30199,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 189.23 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -29315,6 +30459,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 275.59 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 275.59 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "84eef56d-474c-460f-9c65-c938e98889ab")
 		)
@@ -29494,7 +30660,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 189.23 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -29754,6 +30920,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 229.87 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 229.87 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "98e2b8fb-89d9-4c2c-8dfd-ec8ca323256a")
 		)
@@ -29965,6 +31153,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 252.73 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 252.73 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "d44e8514-f4b3-449e-b473-e43fff39e481")
 		)
@@ -30144,7 +31354,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 303.53 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -30497,7 +31707,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 240.03 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -30882,6 +32092,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 321.31 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 321.31 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "6a3ba0d8-d2b2-4bad-bdbd-a6237e3ed779")
 		)
@@ -31186,7 +32418,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 252.73 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -31289,7 +32521,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 265.43 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -31392,7 +32624,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 201.93 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -31696,7 +32928,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
 			(at 101.6 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -31720,6 +32952,28 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 101.6 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05B104KO5NNNC"
+			(at 101.6 166.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0402"
+			(at 101.6 166.37 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31777,7 +33031,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 316.23 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -31878,7 +33132,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
 			(at 91.44 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -31902,6 +33156,28 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 91.44 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL10B474KA8NNNC"
+			(at 91.44 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0402"
+			(at 91.44 157.48 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32209,7 +33485,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 328.93 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -32344,6 +33620,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 195.58 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 195.58 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "8340a062-f651-4862-a0f4-14d92c2ebaa1")
 		)
@@ -32396,7 +33694,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
 			(at 81.28 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -32420,6 +33718,28 @@
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
 			(at 81.28 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL05B104KO5NNNC"
+			(at 81.28 166.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0402"
+			(at 81.28 166.37 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32499,6 +33819,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 298.45 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 298.45 201.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 298.45 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -32688,7 +34030,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 214.63 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -32813,6 +34155,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 287.02 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 287.02 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 287.02 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -33002,7 +34366,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 328.93 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -33127,6 +34491,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 264.16 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 264.16 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 264.16 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -33269,7 +34655,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 201.93 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -33529,6 +34915,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 298.45 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 298.45 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "631eeade-d2af-4d89-8ca9-60b3e2c27566")
 		)
@@ -33583,7 +34991,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 328.93 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -33686,7 +35094,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 214.63 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -33789,7 +35197,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 201.93 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -34049,6 +35457,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 207.01 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 207.01 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "731581a3-44e2-4243-aa42-6f33dac05b69")
 		)
@@ -34260,6 +35690,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 298.45 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 298.45 181.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "6cb82d2e-2e1d-423f-8293-2bb4a5248587")
 		)
@@ -34439,7 +35891,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 189.23 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -34542,7 +35994,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 189.23 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -34667,6 +36119,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 172.72 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 172.72 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 172.72 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -34856,7 +36330,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 328.93 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -34959,7 +36433,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 316.23 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -35219,6 +36693,28 @@
 				)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 321.31 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 321.31 161.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "4c87935b-5f44-4cfe-af46-fbae978adb12")
 		)
@@ -35295,6 +36791,28 @@
 			)
 		)
 		(property "Description" "RGB LED, anode/blue/green/red"
+			(at 264.16 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 264.16 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
 			(at 264.16 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -35484,7 +37002,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:KS-33B Hotswap 1u"
+		(property "Footprint" "Krteq:Gateron_KS-33"
 			(at 290.83 71.12 0)
 			(hide yes)
 			(show_name no)
