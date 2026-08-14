@@ -19430,7 +19430,7 @@
 			(at -2.54 2.794 0)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "60551329-4352-4245-b3cf-7cf9d306c20e")
+			(uuid "1a939083-7153-428a-9f3a-144c186b114c")
 			(effects
 				(font
 					(size 1 1)
@@ -19442,7 +19442,7 @@
 		(property "Value" "Switch"
 			(at 0 -8.25 0)
 			(layer "B.Fab")
-			(uuid "3a66799b-6609-42d0-ad01-602f735760ef")
+			(uuid "57ffc489-4df4-425d-8a2b-f1eb2e99fb08")
 			(effects
 				(font
 					(size 1 1)
@@ -19456,7 +19456,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "2b9cf6bc-fd8f-45b6-945c-4c39afb8e6bd")
+			(uuid "f9b750b2-6afd-4047-ac5b-997effba6580")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19470,7 +19470,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "89f48ddc-bb17-4cc0-91b8-a45abade0945")
+			(uuid "8a468db0-9cfe-4227-875d-0334e6040495")
 			(effects
 				(font
 					(size 1.27 1.27)

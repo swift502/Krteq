@@ -3727,6 +3727,12 @@
 		(uuid "02710f6a-c228-43a9-87c0-9717ae1a2d27")
 	)
 	(junction
+		(at 48.26 191.77)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "030b7b17-0e86-445b-a7a3-d26abae439f4")
+	)
+	(junction
 		(at 167.64 226.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3757,7 +3763,7 @@
 		(uuid "061ef43b-3fcf-44a4-aef2-23e94762e843")
 	)
 	(junction
-		(at 88.9 147.32)
+		(at 88.9 148.59)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "06bbda34-ac4d-4bae-8d7d-503080ec2641")
@@ -3769,7 +3775,7 @@
 		(uuid "06c4c4ca-f761-4ff0-a85b-2429d5368b5a")
 	)
 	(junction
-		(at 88.9 156.21)
+		(at 88.9 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "07ee8491-c17e-413a-b8fb-257cc3f51f2f")
@@ -3917,12 +3923,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "150f16ae-eb3c-4a65-ad7a-2885cfe0de52")
-	)
-	(junction
-		(at 53.34 189.23)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "165a7629-cfab-4fe6-8a40-436697f2f077")
 	)
 	(junction
 		(at 334.01 87.63)
@@ -4097,6 +4097,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2fd6c950-5ef7-45e3-9024-4d2fd3385095")
+	)
+	(junction
+		(at 104.14 166.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "31d02e47-2290-40e8-8952-d2e988f96609")
 	)
 	(junction
 		(at 337.82 160.02)
@@ -4399,12 +4405,6 @@
 		(uuid "5615e4e5-df41-45a6-9809-840f7d46d37d")
 	)
 	(junction
-		(at 104.14 165.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "58576b0b-08fa-4e42-91a6-eb32bf726470")
-	)
-	(junction
 		(at 234.95 181.61)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4459,12 +4459,6 @@
 		(uuid "5d51778f-5728-44ea-87c2-a9099aa1ce82")
 	)
 	(junction
-		(at 83.82 165.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5d61f86b-9da4-49dc-97c7-e9af259f4f84")
-	)
-	(junction
 		(at 269.24 180.34)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4487,12 +4481,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6269d948-c93d-4f81-88fd-698bc0d83368")
-	)
-	(junction
-		(at 78.74 156.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "632699e6-ff22-4ae4-918a-2e26650d2c63")
 	)
 	(junction
 		(at 270.51 176.53)
@@ -4777,7 +4765,7 @@
 		(uuid "8c93acb5-7001-44a9-b9ac-4bb809ad037d")
 	)
 	(junction
-		(at 53.34 176.53)
+		(at 54.61 176.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8cc1a364-2f4a-4061-8193-b1df5d57c46e")
@@ -4903,12 +4891,6 @@
 		(uuid "99d907c7-c6ec-4a61-b5d2-e03852b0bf20")
 	)
 	(junction
-		(at 93.98 165.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "99e76123-84ee-4e8b-97d6-9f3e0eb4423b")
-	)
-	(junction
 		(at 316.23 186.69)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4931,6 +4913,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9cea1264-99b6-43ce-90c0-151e8239239b")
+	)
+	(junction
+		(at 93.98 166.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9fc1870c-9ffa-40e4-a631-605067f3dce3")
 	)
 	(junction
 		(at 259.08 160.02)
@@ -5269,6 +5257,12 @@
 		(uuid "bd5214d4-5433-468e-9116-fbbbb26d912b")
 	)
 	(junction
+		(at 48.26 176.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "be440155-6b3a-4009-a555-074652f58c62")
+	)
+	(junction
 		(at 270.51 161.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5297,6 +5291,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c31413c3-8b8c-48e0-90d5-6f268dd0c3d3")
+	)
+	(junction
+		(at 78.74 157.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c3594a14-04e0-4bae-8368-b02bbfbcf2f0")
 	)
 	(junction
 		(at 281.94 175.26)
@@ -5365,7 +5365,7 @@
 		(uuid "cab1b46d-8d56-4240-8580-9440ddfb6ad7")
 	)
 	(junction
-		(at 99.06 156.21)
+		(at 99.06 157.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cb012f6f-f0fa-4dfc-83ba-f60d1b8022fb")
@@ -5467,7 +5467,7 @@
 		(uuid "de475b23-8a71-4584-8587-23e042d65894")
 	)
 	(junction
-		(at 58.42 176.53)
+		(at 59.69 176.53)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "de7a3b2f-23af-4936-8dd6-e4147fee99b9")
@@ -5497,16 +5497,10 @@
 		(uuid "e3301759-245a-4e2f-bbaf-1a9db4ab2b26")
 	)
 	(junction
-		(at 99.06 165.1)
+		(at 99.06 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e36979fb-1807-4cd0-ba66-0bac91a3d962")
-	)
-	(junction
-		(at 46.99 191.77)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e3fa4b7c-ef27-4e95-8bac-23cbea3464e9")
 	)
 	(junction
 		(at 246.38 180.34)
@@ -5575,6 +5569,12 @@
 		(uuid "edb92e43-b68d-4f8c-8271-45b873a928ff")
 	)
 	(junction
+		(at 54.61 189.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef39367e-dbec-4682-ac2e-b1188fa8efe5")
+	)
+	(junction
 		(at 293.37 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5591,6 +5591,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f3e81a4a-95b6-43e1-af70-ec193f80c287")
+	)
+	(junction
+		(at 83.82 166.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4eb0de8-c80e-474b-9dcd-820f3283df87")
 	)
 	(junction
 		(at 270.51 53.34)
@@ -5683,7 +5689,7 @@
 		(uuid "fca9cce3-cecf-4554-8423-599fe5516581")
 	)
 	(junction
-		(at 78.74 165.1)
+		(at 78.74 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fd1d7638-fa38-445c-826a-0a0aa58ec1aa")
@@ -5701,7 +5707,7 @@
 		(uuid "fd80a5a0-1896-4536-a067-497d87b12123")
 	)
 	(junction
-		(at 88.9 165.1)
+		(at 88.9 166.37)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fdf76c33-12aa-4273-b100-147920d89dbb")
@@ -5764,7 +5770,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 176.53) (xy 53.34 176.53)
+			(xy 48.26 176.53) (xy 54.61 176.53)
 		)
 		(stroke
 			(width 0)
@@ -5794,13 +5800,23 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 156.21) (xy 99.06 165.1)
+			(xy 99.06 157.48) (xy 99.06 166.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "028592ee-caba-40f2-8fc6-26e0ff68d08c")
+	)
+	(wire
+		(pts
+			(xy 54.61 189.23) (xy 68.58 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02bf3f16-7787-4e82-923e-104b958dafcd")
 	)
 	(wire
 		(pts
@@ -5861,16 +5877,6 @@
 			(type default)
 		)
 		(uuid "05132b6a-f0b2-4858-8cd7-c141db127329")
-	)
-	(wire
-		(pts
-			(xy 88.9 144.78) (xy 88.9 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0594d984-2a58-4ec9-81d8-148f994b9480")
 	)
 	(wire
 		(pts
@@ -5974,7 +5980,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 147.32) (xy 88.9 147.32)
+			(xy 99.06 148.59) (xy 88.9 148.59)
 		)
 		(stroke
 			(width 0)
@@ -6024,7 +6030,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 179.07) (xy 53.34 176.53)
+			(xy 54.61 179.07) (xy 54.61 176.53)
 		)
 		(stroke
 			(width 0)
@@ -6084,23 +6090,13 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 186.69) (xy 46.99 191.77)
+			(xy 48.26 186.69) (xy 48.26 191.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "101fe56d-e63b-4fa6-94fd-9ac4e29455d2")
-	)
-	(wire
-		(pts
-			(xy 46.99 191.77) (xy 68.58 191.77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "10773140-f22a-4779-8cb3-cdb1b6ceee17")
 	)
 	(wire
 		(pts
@@ -6214,7 +6210,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 165.1) (xy 78.74 176.53)
+			(xy 78.74 166.37) (xy 78.74 176.53)
 		)
 		(stroke
 			(width 0)
@@ -6254,7 +6250,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 191.77) (xy 46.99 191.77)
+			(xy 44.45 191.77) (xy 48.26 191.77)
 		)
 		(stroke
 			(width 0)
@@ -6264,7 +6260,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 189.23) (xy 53.34 189.23)
+			(xy 44.45 189.23) (xy 54.61 189.23)
 		)
 		(stroke
 			(width 0)
@@ -6734,7 +6730,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 184.15) (xy 58.42 176.53)
+			(xy 59.69 184.15) (xy 59.69 176.53)
 		)
 		(stroke
 			(width 0)
@@ -6774,7 +6770,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 165.1) (xy 88.9 179.07)
+			(xy 88.9 166.37) (xy 88.9 179.07)
 		)
 		(stroke
 			(width 0)
@@ -6954,7 +6950,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 176.53) (xy 58.42 176.53)
+			(xy 54.61 176.53) (xy 59.69 176.53)
 		)
 		(stroke
 			(width 0)
@@ -7644,7 +7640,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 165.1) (xy 104.14 167.64)
+			(xy 104.14 166.37) (xy 104.14 167.64)
 		)
 		(stroke
 			(width 0)
@@ -7674,7 +7670,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 156.21) (xy 78.74 165.1)
+			(xy 78.74 157.48) (xy 78.74 166.37)
 		)
 		(stroke
 			(width 0)
@@ -7751,16 +7747,6 @@
 			(type default)
 		)
 		(uuid "54d268c4-a7da-4995-acd7-45d9831cc498")
-	)
-	(wire
-		(pts
-			(xy 53.34 172.72) (xy 53.34 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "550e314e-ab0f-4888-8c20-4202a0a9b7f4")
 	)
 	(wire
 		(pts
@@ -7844,23 +7830,13 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 156.21) (xy 83.82 165.1)
+			(xy 83.82 157.48) (xy 83.82 166.37)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "58bdb0c7-6cdb-4375-b37b-75bc78b0c579")
-	)
-	(wire
-		(pts
-			(xy 53.34 189.23) (xy 68.58 189.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "58e1667a-b127-4548-9c4a-4d7406860e57")
 	)
 	(wire
 		(pts
@@ -7971,16 +7947,6 @@
 			(type default)
 		)
 		(uuid "5ec1a877-065c-4366-bc88-0143b5f55cbc")
-	)
-	(wire
-		(pts
-			(xy 167.64 267.97) (xy 168.91 267.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ed97bb1-9dda-44e6-87c9-df2b81cabdc8")
 	)
 	(wire
 		(pts
@@ -8214,16 +8180,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 267.97) (xy 167.64 269.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ad2e8cc-f62c-4667-af7c-c4adfa8a89f2")
-	)
-	(wire
-		(pts
 			(xy 327.66 160.02) (xy 316.23 160.02)
 		)
 		(stroke
@@ -8244,7 +8200,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 156.21) (xy 104.14 165.1)
+			(xy 104.14 157.48) (xy 104.14 166.37)
 		)
 		(stroke
 			(width 0)
@@ -8401,6 +8357,16 @@
 			(type default)
 		)
 		(uuid "6f28fa9b-3a1e-459d-b93a-f345a908b212")
+	)
+	(wire
+		(pts
+			(xy 54.61 199.39) (xy 68.58 199.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ff3dd5a-10d1-41e6-a781-418674969a5d")
 	)
 	(wire
 		(pts
@@ -8684,7 +8650,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 165.1) (xy 93.98 167.64)
+			(xy 93.98 166.37) (xy 93.98 167.64)
 		)
 		(stroke
 			(width 0)
@@ -8704,7 +8670,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 186.69) (xy 53.34 189.23)
+			(xy 54.61 186.69) (xy 54.61 189.23)
 		)
 		(stroke
 			(width 0)
@@ -8774,6 +8740,16 @@
 	)
 	(wire
 		(pts
+			(xy 48.26 191.77) (xy 68.58 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "830a2a88-f090-49eb-9476-29c953801492")
+	)
+	(wire
+		(pts
 			(xy 281.94 222.25) (xy 281.94 220.98)
 		)
 		(stroke
@@ -8814,7 +8790,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 156.21) (xy 93.98 165.1)
+			(xy 93.98 157.48) (xy 93.98 166.37)
 		)
 		(stroke
 			(width 0)
@@ -8894,7 +8870,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 176.53) (xy 99.06 165.1)
+			(xy 99.06 176.53) (xy 99.06 166.37)
 		)
 		(stroke
 			(width 0)
@@ -9064,7 +9040,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 147.32) (xy 99.06 156.21)
+			(xy 99.06 148.59) (xy 99.06 157.48)
 		)
 		(stroke
 			(width 0)
@@ -9124,7 +9100,7 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 179.07) (xy 46.99 176.53)
+			(xy 48.26 179.07) (xy 48.26 176.53)
 		)
 		(stroke
 			(width 0)
@@ -9544,7 +9520,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 184.15) (xy 58.42 184.15)
+			(xy 68.58 184.15) (xy 59.69 184.15)
 		)
 		(stroke
 			(width 0)
@@ -9734,7 +9710,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 165.1) (xy 83.82 167.64)
+			(xy 83.82 166.37) (xy 83.82 167.64)
 		)
 		(stroke
 			(width 0)
@@ -10004,7 +9980,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 176.53) (xy 59.69 176.53)
+			(xy 59.69 176.53) (xy 60.96 176.53)
 		)
 		(stroke
 			(width 0)
@@ -10104,6 +10080,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 200.66) (xy 54.61 199.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc22b171-3f62-42cb-b069-614232217936")
+	)
+	(wire
+		(pts
 			(xy 259.08 160.02) (xy 247.65 160.02)
 		)
 		(stroke
@@ -10174,6 +10160,16 @@
 	)
 	(wire
 		(pts
+			(xy 88.9 144.78) (xy 88.9 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c15124ea-8881-4530-911b-af82cbf31417")
+	)
+	(wire
+		(pts
 			(xy 223.52 144.78) (xy 223.52 160.02)
 		)
 		(stroke
@@ -10191,6 +10187,16 @@
 			(type default)
 		)
 		(uuid "c2ab0c74-ba38-4fc0-b498-69a3a4dd8fbc")
+	)
+	(wire
+		(pts
+			(xy 44.45 176.53) (xy 48.26 176.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2df4088-2dac-4325-8a50-31b2e33fa1cd")
 	)
 	(wire
 		(pts
@@ -10374,7 +10380,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 147.32) (xy 88.9 147.32)
+			(xy 78.74 148.59) (xy 88.9 148.59)
 		)
 		(stroke
 			(width 0)
@@ -10401,16 +10407,6 @@
 			(type default)
 		)
 		(uuid "d049cc19-cd38-40c6-9cba-8457aecc829a")
-	)
-	(wire
-		(pts
-			(xy 54.61 199.39) (xy 68.58 199.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d0874bad-8141-4ec8-bffc-389fa9fd8056")
 	)
 	(wire
 		(pts
@@ -10594,7 +10590,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 147.32) (xy 78.74 156.21)
+			(xy 78.74 148.59) (xy 78.74 157.48)
 		)
 		(stroke
 			(width 0)
@@ -10834,7 +10830,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 156.21) (xy 88.9 165.1)
+			(xy 88.9 157.48) (xy 88.9 166.37)
 		)
 		(stroke
 			(width 0)
@@ -10894,7 +10890,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 207.01) (xy 54.61 210.82)
+			(xy 54.61 208.28) (xy 54.61 210.82)
 		)
 		(stroke
 			(width 0)
@@ -11534,7 +11530,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 147.32) (xy 88.9 156.21)
+			(xy 88.9 148.59) (xy 88.9 157.48)
 		)
 		(stroke
 			(width 0)
@@ -11671,30 +11667,6 @@
 			(type default)
 		)
 		(uuid "fff744ba-74f5-45c9-81c4-947fe5517301")
-	)
-	(global_label "OLED SDA"
-		(shape input)
-		(at 54.61 85.09 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "008d7781-d432-402c-9350-67c9fd088842")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.3115 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 	)
 	(global_label "ROW1"
 		(shape input)
@@ -12008,31 +11980,7 @@
 			)
 		)
 	)
-	(global_label "OLED SCL"
-		(shape input)
-		(at 54.61 87.63 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "30ac1f06-42b6-48dd-a08a-2a1993ccf942")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 42.372 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "RGB SCL"
+	(global_label "SCL"
 		(shape input)
 		(at 54.61 92.71 180)
 		(fields_autoplaced yes)
@@ -12044,7 +11992,7 @@
 		)
 		(uuid "33ef7f70-97e4-4364-95d7-d7808b7de45e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 43.3396 92.71 0)
+			(at 48.1172 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12069,30 +12017,6 @@
 		(uuid "3424ae4b-511c-4a8a-a7f9-a6ba0455544c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 110.9956 232.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "VBUS"
-		(shape input)
-		(at 88.9 144.78 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "35b85c1a-d914-487b-9f1f-d9f5a07e96a5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 88.9 136.8962 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12272,7 +12196,7 @@
 			)
 		)
 	)
-	(global_label "RGB SDA"
+	(global_label "SDA"
 		(shape input)
 		(at 54.61 90.17 180)
 		(fields_autoplaced yes)
@@ -12284,7 +12208,7 @@
 		)
 		(uuid "40f1c579-d2b4-40b3-86db-52174815fab5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 43.2791 90.17 0)
+			(at 48.0567 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12389,30 +12313,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "VBUS"
-		(shape input)
-		(at 168.91 265.43 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "48ec2b1f-81d4-4dd1-b0d1-cadbd480005d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 161.0262 265.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -12536,9 +12436,9 @@
 			)
 		)
 	)
-	(global_label "RGB SCL"
+	(global_label "SCL"
 		(shape input)
-		(at 43.18 191.77 180)
+		(at 44.45 191.77 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12548,7 +12448,7 @@
 		)
 		(uuid "5735e1eb-dff3-465e-922d-aed5469bf939")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 31.9096 191.77 0)
+			(at 37.9572 191.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12824,6 +12724,54 @@
 			)
 		)
 	)
+	(global_label "3V3"
+		(shape input)
+		(at 44.45 176.53 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7043146a-116b-48be-8661-7641bd0f5a31")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 37.9572 176.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "3V3"
+		(shape input)
+		(at 166.37 265.43 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "74a64497-a0c9-4fce-98c2-11b0a98c673c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 159.8772 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "CS4"
 		(shape input)
 		(at 104.14 191.77 0)
@@ -12957,6 +12905,30 @@
 		(uuid "86537617-e8d1-4b66-9880-880a588ffdd7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 117.0433 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "VBUS"
+		(shape input)
+		(at 88.9 144.78 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8809ea4d-0569-4315-98ca-2756435e2b21")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 88.9 136.8962 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13184,30 +13156,6 @@
 			)
 		)
 	)
-	(global_label "3V3"
-		(shape input)
-		(at 53.34 172.72 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "995ca862-cbe5-438d-b5e7-0a44cec4d5e7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 53.34 166.2272 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "SW9"
 		(shape input)
 		(at 104.14 247.65 0)
@@ -13304,9 +13252,9 @@
 			)
 		)
 	)
-	(global_label "OLED SCL"
+	(global_label "SCL"
 		(shape input)
-		(at 168.91 262.89 180)
+		(at 166.37 262.89 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13316,7 +13264,7 @@
 		)
 		(uuid "a4dba7e9-b967-426f-98fe-b9e8309ecec5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 156.672 262.89 0)
+			(at 159.8772 262.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13592,9 +13540,9 @@
 			)
 		)
 	)
-	(global_label "RGB SDB"
+	(global_label "SDB"
 		(shape input)
-		(at 54.61 82.55 180)
+		(at 54.61 87.63 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13604,7 +13552,7 @@
 		)
 		(uuid "bac07d7e-c6c6-42a8-9bd2-55624ebcf7f3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 43.0977 82.55 0)
+			(at 47.8753 87.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13832,9 +13780,9 @@
 			)
 		)
 	)
-	(global_label "RGB SDA"
+	(global_label "SDA"
 		(shape input)
-		(at 43.18 189.23 180)
+		(at 44.45 189.23 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13844,7 +13792,7 @@
 		)
 		(uuid "d20c9131-2347-41aa-90eb-3f01fedacaf7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 31.8491 189.23 0)
+			(at 37.8967 189.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13856,9 +13804,9 @@
 			)
 		)
 	)
-	(global_label "OLED SDA"
+	(global_label "SDA"
 		(shape input)
-		(at 168.91 260.35 180)
+		(at 166.37 260.35 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13868,7 +13816,7 @@
 		)
 		(uuid "d306385f-582e-4d03-964a-cadaad353792")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 156.6115 260.35 0)
+			(at 159.8167 260.35 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14120,7 +14068,7 @@
 			)
 		)
 	)
-	(global_label "RGB SDB"
+	(global_label "SDB"
 		(shape input)
 		(at 44.45 196.85 180)
 		(fields_autoplaced yes)
@@ -14132,7 +14080,7 @@
 		)
 		(uuid "f1e3ed78-e9ae-40e5-ad78-b430c9128997")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 32.9377 196.85 0)
+			(at 37.7153 196.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14414,7 +14362,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
-		(at 173.99 265.43 180)
+		(at 171.45 265.43 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14424,7 +14372,7 @@
 		(dnp no)
 		(uuid "03234fc1-2209-4126-9667-387caec30762")
 		(property "Reference" "J71"
-			(at 173.355 273.05 0)
+			(at 170.815 273.05 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14435,7 +14383,7 @@
 			)
 		)
 		(property "Value" "OLED 128x32"
-			(at 166.116 256.286 0)
+			(at 165.862 256.286 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14445,7 +14393,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 173.99 265.43 0)
+			(at 171.45 265.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14456,7 +14404,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 173.99 265.43 0)
+			(at 171.45 265.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14467,7 +14415,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 173.99 265.43 0)
+			(at 171.45 265.43 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14611,7 +14559,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0a86990b-a078-4cfe-96c9-1e13c83e3c75")
-		(property "Reference" "D50"
+		(property "Reference" "D47"
 			(at 300.99 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -14719,7 +14667,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D50")
+					(reference "D47")
 					(unit 1)
 				)
 			)
@@ -14916,7 +14864,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 167.64 269.24 0)
+		(at 166.37 267.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14927,7 +14875,7 @@
 		(fields_autoplaced yes)
 		(uuid "0e2252b5-acf7-4d6b-987c-1c8a1500986b")
 		(property "Reference" "#PWR03"
-			(at 167.64 275.59 0)
+			(at 166.37 274.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14938,7 +14886,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 167.64 274.32 0)
+			(at 166.37 273.05 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14948,7 +14896,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 269.24 0)
+			(at 166.37 267.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14959,7 +14907,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 269.24 0)
+			(at 166.37 267.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14970,7 +14918,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 167.64 269.24 0)
+			(at 166.37 267.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15003,7 +14951,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0e74815c-71f3-46ce-a304-bec7e084b7d1")
-		(property "Reference" "D53"
+		(property "Reference" "D50"
 			(at 300.99 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -15111,7 +15059,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D53")
+					(reference "D50")
 					(unit 1)
 				)
 			)
@@ -15128,7 +15076,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0ed72c56-2083-49c5-a81a-10819847c3e6")
-		(property "Reference" "D19"
+		(property "Reference" "D16"
 			(at 212.09 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -15236,7 +15184,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D19")
+					(reference "D16")
 					(unit 1)
 				)
 			)
@@ -15519,7 +15467,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 101.6 156.21 90)
+		(at 101.6 157.48 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15529,7 +15477,7 @@
 		(dnp no)
 		(uuid "112920c5-87f1-4f52-ade4-fcd59eb165c7")
 		(property "Reference" "C5"
-			(at 101.6063 151.13 90)
+			(at 101.6063 152.4 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15539,7 +15487,7 @@
 			)
 		)
 		(property "Value" "0.47µF"
-			(at 101.6 152.908 90)
+			(at 101.6 154.178 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15549,7 +15497,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 101.6 156.21 0)
+			(at 101.6 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15560,7 +15508,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 101.6 156.21 0)
+			(at 101.6 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15571,7 +15519,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 101.6 156.21 0)
+			(at 101.6 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15951,7 +15899,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "13b1eb53-42e0-4271-af64-461c878a6071")
-		(property "Reference" "D22"
+		(property "Reference" "D19"
 			(at 224.79 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -16059,7 +16007,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D22")
+					(reference "D19")
 					(unit 1)
 				)
 			)
@@ -16471,7 +16419,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1887f0e1-cd14-43be-b112-888397952993")
-		(property "Reference" "D13"
+		(property "Reference" "D10"
 			(at 199.39 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -16579,7 +16527,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D13")
+					(reference "D10")
 					(unit 1)
 				)
 			)
@@ -16896,7 +16844,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 53.34 182.88 0)
+		(at 54.61 182.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16907,7 +16855,7 @@
 		(fields_autoplaced yes)
 		(uuid "1ad5d456-2465-4cea-ae77-0b468ee93617")
 		(property "Reference" "R12"
-			(at 51.054 182.88 90)
+			(at 52.324 182.88 90)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -16917,7 +16865,7 @@
 			)
 		)
 		(property "Value" "2kΩ"
-			(at 53.34 182.88 90)
+			(at 54.61 182.88 90)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -16927,7 +16875,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 51.562 182.88 90)
+			(at 52.832 182.88 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16938,7 +16886,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 182.88 0)
+			(at 54.61 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16949,7 +16897,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 53.34 182.88 0)
+			(at 54.61 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16960,7 +16908,7 @@
 			)
 		)
 		(property "MPN" "0603WAF4700T5E"
-			(at 53.34 182.88 90)
+			(at 54.61 182.88 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16971,7 +16919,7 @@
 			)
 		)
 		(property "Package" "0603"
-			(at 53.34 182.88 90)
+			(at 54.61 182.88 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17093,7 +17041,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1dcc7cc3-1c0a-4a5f-bf66-d4b7a68ebd3e")
-		(property "Reference" "D26"
+		(property "Reference" "D23"
 			(at 237.49 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -17201,7 +17149,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D26")
+					(reference "D23")
 					(unit 1)
 				)
 			)
@@ -17527,7 +17475,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "20d21fd4-91f1-45c8-b017-8d9c22a7f6d4")
-		(property "Reference" "D64"
+		(property "Reference" "D61"
 			(at 326.39 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -17635,7 +17583,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D64")
+					(reference "D61")
 					(unit 1)
 				)
 			)
@@ -17738,7 +17686,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "262f0a42-e49e-4085-9097-565f5e9c4bb0")
-		(property "Reference" "D47"
+		(property "Reference" "D44"
 			(at 288.29 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -17846,7 +17794,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D47")
+					(reference "D44")
 					(unit 1)
 				)
 			)
@@ -17863,7 +17811,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "268457b7-4f22-43f0-89b7-5d43562eec42")
-		(property "Reference" "D35"
+		(property "Reference" "D32"
 			(at 262.89 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -17971,7 +17919,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D35")
+					(reference "D32")
 					(unit 1)
 				)
 			)
@@ -18538,7 +18486,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2f3df5e3-c7ff-47c2-b70b-04c96726d606")
-		(property "Reference" "D60"
+		(property "Reference" "D57"
 			(at 326.39 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -18646,7 +18594,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D60")
+					(reference "D57")
 					(unit 1)
 				)
 			)
@@ -19332,7 +19280,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "37d136f6-dcc7-49bb-92e8-a27701cbd056")
-		(property "Reference" "D62"
+		(property "Reference" "D59"
 			(at 326.39 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -19440,7 +19388,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D62")
+					(reference "D59")
 					(unit 1)
 				)
 			)
@@ -20059,7 +20007,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 91.44 165.1 90)
+		(at 91.44 166.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20069,7 +20017,7 @@
 		(dnp no)
 		(uuid "3f8f4dc2-cf42-49a7-96d3-5172bff98f8f")
 		(property "Reference" "C8"
-			(at 91.4463 160.02 90)
+			(at 91.4463 161.29 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20079,7 +20027,7 @@
 			)
 		)
 		(property "Value" "0.1µF"
-			(at 91.44 161.798 90)
+			(at 91.44 163.068 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20089,7 +20037,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 91.44 165.1 0)
+			(at 91.44 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20100,7 +20048,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 165.1 0)
+			(at 91.44 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20111,7 +20059,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 91.44 165.1 0)
+			(at 91.44 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20353,7 +20301,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "45d38dde-ab84-4ee5-a1a5-77d6eaab888b")
-		(property "Reference" "D20"
+		(property "Reference" "D17"
 			(at 224.79 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -20461,7 +20409,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D20")
+					(reference "D17")
 					(unit 1)
 				)
 			)
@@ -20478,7 +20426,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "467c3311-4f17-4170-9a14-d0fa79d86206")
-		(property "Reference" "D14"
+		(property "Reference" "D11"
 			(at 199.39 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -20586,7 +20534,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D14")
+					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -20603,7 +20551,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "46ef397f-a8f6-4f21-a28e-c3effbb2abd3")
-		(property "Reference" "D55"
+		(property "Reference" "D52"
 			(at 313.69 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -20711,7 +20659,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D55")
+					(reference "D52")
 					(unit 1)
 				)
 			)
@@ -20728,7 +20676,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "489b893d-b47c-42fe-bc82-b4289948f933")
-		(property "Reference" "D41"
+		(property "Reference" "D38"
 			(at 275.59 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -20836,7 +20784,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D41")
+					(reference "D38")
 					(unit 1)
 				)
 			)
@@ -21128,7 +21076,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "51b114a2-2322-47bd-804c-a3210cba585a")
-		(property "Reference" "D58"
+		(property "Reference" "D55"
 			(at 313.69 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -21236,7 +21184,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D58")
+					(reference "D55")
 					(unit 1)
 				)
 			)
@@ -21253,7 +21201,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "526e99d7-9688-4435-b92f-bb0efa249e94")
-		(property "Reference" "D11"
+		(property "Reference" "D8"
 			(at 199.39 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -21361,7 +21309,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D11")
+					(reference "D8")
 					(unit 1)
 				)
 			)
@@ -21558,7 +21506,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 62.23 176.53 90)
+		(at 63.5 176.53 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -21568,7 +21516,7 @@
 		(dnp no)
 		(uuid "55b4bd22-69f3-4cfb-ba53-b4eb9665f32b")
 		(property "Reference" "C4"
-			(at 62.2363 171.45 90)
+			(at 63.5063 171.45 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21578,7 +21526,7 @@
 			)
 		)
 		(property "Value" "0.47µF"
-			(at 62.23 173.228 90)
+			(at 63.5 173.228 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -21588,7 +21536,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 62.23 176.53 0)
+			(at 63.5 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21599,7 +21547,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 62.23 176.53 0)
+			(at 63.5 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21610,7 +21558,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 62.23 176.53 0)
+			(at 63.5 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -21646,7 +21594,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "562e3d51-5e0d-4c00-8aee-8eae47056f46")
-		(property "Reference" "D8"
+		(property "Reference" "D5"
 			(at 186.69 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -21754,7 +21702,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D8")
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -22261,7 +22209,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5e8578f5-115a-45f2-b879-072deff9539f")
-		(property "Reference" "D45"
+		(property "Reference" "D42"
 			(at 288.29 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -22369,7 +22317,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D45")
+					(reference "D42")
 					(unit 1)
 				)
 			)
@@ -23129,7 +23077,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "683e78ce-e0d5-4583-91a8-ffb547e573d5")
-		(property "Reference" "D34"
+		(property "Reference" "D31"
 			(at 256.54 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -23237,7 +23185,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D34")
+					(reference "D31")
 					(unit 1)
 				)
 			)
@@ -23718,7 +23666,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6cddd0e5-4ce1-4645-8942-3e712467be55")
-		(property "Reference" "D15"
+		(property "Reference" "D12"
 			(at 212.09 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -23826,7 +23774,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D15")
+					(reference "D12")
 					(unit 1)
 				)
 			)
@@ -23843,7 +23791,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6ceabb57-bcb0-4bf8-80ae-b1a1f607f65e")
-		(property "Reference" "D63"
+		(property "Reference" "D60"
 			(at 326.39 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -23951,7 +23899,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D63")
+					(reference "D60")
 					(unit 1)
 				)
 			)
@@ -23968,7 +23916,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "714625d8-95fa-426c-9fe8-41d278e8ecbd")
-		(property "Reference" "D54"
+		(property "Reference" "D51"
 			(at 313.69 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -24076,7 +24024,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D54")
+					(reference "D51")
 					(unit 1)
 				)
 			)
@@ -24179,7 +24127,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7584f70e-2e0c-4ffd-9db4-24c14fb6b4a5")
-		(property "Reference" "D59"
+		(property "Reference" "D56"
 			(at 326.39 46.99 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -24287,7 +24235,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D59")
+					(reference "D56")
 					(unit 1)
 				)
 			)
@@ -24304,7 +24252,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "75a49bb7-6a23-4cf7-ac8b-a89c091a0649")
-		(property "Reference" "D39"
+		(property "Reference" "D36"
 			(at 275.59 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -24412,7 +24360,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D39")
+					(reference "D36")
 					(unit 1)
 				)
 			)
@@ -24593,7 +24541,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7b93e175-83c1-4e06-9604-886b51fb2ed5")
-		(property "Reference" "D51"
+		(property "Reference" "D48"
 			(at 300.99 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -24701,7 +24649,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D51")
+					(reference "D48")
 					(unit 1)
 				)
 			)
@@ -24718,7 +24666,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7c38e797-55f5-4908-a75e-21936a1e5592")
-		(property "Reference" "D29"
+		(property "Reference" "D26"
 			(at 237.49 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -24826,7 +24774,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D29")
+					(reference "D26")
 					(unit 1)
 				)
 			)
@@ -24843,7 +24791,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7cef5915-3d9e-4785-8cee-a15530d4c4e1")
-		(property "Reference" "D32"
+		(property "Reference" "D29"
 			(at 250.19 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -24951,7 +24899,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D32")
+					(reference "D29")
 					(unit 1)
 				)
 			)
@@ -25148,7 +25096,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 46.99 182.88 0)
+		(at 48.26 182.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25159,7 +25107,7 @@
 		(fields_autoplaced yes)
 		(uuid "85bbda12-9c37-4a93-81d7-a009e4379589")
 		(property "Reference" "R11"
-			(at 44.704 182.88 90)
+			(at 45.974 182.88 90)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -25168,8 +25116,8 @@
 				)
 			)
 		)
-		(property "Value" "100kΩ"
-			(at 46.99 182.88 90)
+		(property "Value" "2kΩ"
+			(at 48.26 182.88 90)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -25179,7 +25127,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 45.212 182.88 90)
+			(at 46.482 182.88 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25190,7 +25138,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 46.99 182.88 0)
+			(at 48.26 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25201,7 +25149,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 46.99 182.88 0)
+			(at 48.26 182.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25212,7 +25160,7 @@
 			)
 		)
 		(property "MPN" "0603WAF4700T5E"
-			(at 46.99 182.88 90)
+			(at 48.26 182.88 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25223,7 +25171,7 @@
 			)
 		)
 		(property "Package" "0603"
-			(at 46.99 182.88 90)
+			(at 48.26 182.88 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25336,7 +25284,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 81.28 156.21 90)
+		(at 81.28 157.48 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25346,7 +25294,7 @@
 		(dnp no)
 		(uuid "8659c506-53a4-49a0-b84e-dfbed3655e33")
 		(property "Reference" "C9"
-			(at 81.2863 151.13 90)
+			(at 81.2863 152.4 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25356,7 +25304,7 @@
 			)
 		)
 		(property "Value" "0.47µF"
-			(at 81.28 152.908 90)
+			(at 81.28 154.178 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25366,7 +25314,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 81.28 156.21 0)
+			(at 81.28 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25377,7 +25325,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.28 156.21 0)
+			(at 81.28 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25388,7 +25336,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 81.28 156.21 0)
+			(at 81.28 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25733,7 +25681,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "88e23a28-5310-4d14-94de-c4eb3d5930cd")
-		(property "Reference" "D49"
+		(property "Reference" "D46"
 			(at 300.99 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -25841,7 +25789,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D49")
+					(reference "D46")
 					(unit 1)
 				)
 			)
@@ -25858,7 +25806,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8bf1fa4d-6ec4-48ab-82c6-94993bf8fbb1")
-		(property "Reference" "D18"
+		(property "Reference" "D15"
 			(at 212.09 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -25966,7 +25914,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D18")
+					(reference "D15")
 					(unit 1)
 				)
 			)
@@ -25974,7 +25922,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 54.61 203.2 0)
+		(at 54.61 204.47 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -25985,7 +25933,7 @@
 		(fields_autoplaced yes)
 		(uuid "8c4c37f8-c073-474d-8c07-0917e68b2670")
 		(property "Reference" "R9"
-			(at 52.324 203.2 90)
+			(at 52.324 204.47 90)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -25995,7 +25943,7 @@
 			)
 		)
 		(property "Value" "100kΩ"
-			(at 54.61 203.2 90)
+			(at 54.61 204.47 90)
 			(show_name no)
 			(do_not_autoplace yes)
 			(effects
@@ -26005,7 +25953,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 52.832 203.2 90)
+			(at 52.832 204.47 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26016,7 +25964,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 203.2 0)
+			(at 54.61 204.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26027,7 +25975,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 54.61 203.2 0)
+			(at 54.61 204.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26038,7 +25986,7 @@
 			)
 		)
 		(property "MPN" "0603WAF4700T5E"
-			(at 54.61 203.2 90)
+			(at 54.61 204.47 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26049,7 +25997,7 @@
 			)
 		)
 		(property "Package" "0603"
-			(at 54.61 203.2 90)
+			(at 54.61 204.47 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26343,7 +26291,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8eb23d98-d1de-494c-a9ae-16ba33a300f1")
-		(property "Reference" "D30"
+		(property "Reference" "D27"
 			(at 250.19 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -26451,7 +26399,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D30")
+					(reference "D27")
 					(unit 1)
 				)
 			)
@@ -26674,7 +26622,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "91594acb-9b7f-4e3f-b76e-1c5dc3095cba")
-		(property "Reference" "D57"
+		(property "Reference" "D54"
 			(at 313.69 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -26782,7 +26730,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D57")
+					(reference "D54")
 					(unit 1)
 				)
 			)
@@ -27107,7 +27055,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "941ac9e2-94d2-4dea-9534-2efd796c8c29")
-		(property "Reference" "D43"
+		(property "Reference" "D40"
 			(at 275.59 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -27215,7 +27163,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D43")
+					(reference "D40")
 					(unit 1)
 				)
 			)
@@ -27421,7 +27369,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9611cd3c-9c30-4e4a-bc0a-41d528e94213")
-		(property "Reference" "D46"
+		(property "Reference" "D43"
 			(at 288.29 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -27529,7 +27477,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D46")
+					(reference "D43")
 					(unit 1)
 				)
 			)
@@ -27546,7 +27494,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "974087d5-0ef5-43d9-8ebe-619b91b34d02")
-		(property "Reference" "D38"
+		(property "Reference" "D35"
 			(at 262.89 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -27654,7 +27602,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D38")
+					(reference "D35")
 					(unit 1)
 				)
 			)
@@ -27860,7 +27808,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9c5c4945-9c9e-40ce-996d-770a14309863")
-		(property "Reference" "D52"
+		(property "Reference" "D49"
 			(at 300.99 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -27968,7 +27916,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D52")
+					(reference "D49")
 					(unit 1)
 				)
 			)
@@ -28174,7 +28122,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a096f37a-99a6-4885-a28c-b921e37cc338")
-		(property "Reference" "D21"
+		(property "Reference" "D18"
 			(at 224.79 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -28282,7 +28230,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D21")
+					(reference "D18")
 					(unit 1)
 				)
 			)
@@ -28505,7 +28453,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a835c5cd-735e-4f2c-ac8e-02145686a59b")
-		(property "Reference" "D24"
+		(property "Reference" "D21"
 			(at 224.79 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -28613,7 +28561,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D24")
+					(reference "D21")
 					(unit 1)
 				)
 			)
@@ -29189,7 +29137,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "afd786bb-5615-485c-8b27-829ca4e26efd")
-		(property "Reference" "D31"
+		(property "Reference" "D28"
 			(at 250.19 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -29297,7 +29245,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D31")
+					(reference "D28")
 					(unit 1)
 				)
 			)
@@ -29400,7 +29348,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b3d68bdb-797c-491d-b9d9-dcd5d475ba8a")
-		(property "Reference" "D6"
+		(property "Reference" "D3"
 			(at 186.69 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -29508,7 +29456,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D6")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -29628,7 +29576,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b71c544a-394b-495b-b288-df5016e737a9")
-		(property "Reference" "D23"
+		(property "Reference" "D20"
 			(at 224.79 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -29736,7 +29684,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D23")
+					(reference "D20")
 					(unit 1)
 				)
 			)
@@ -29839,7 +29787,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b961d0f0-3e27-451f-bc88-b583f57be0c3")
-		(property "Reference" "D7"
+		(property "Reference" "D4"
 			(at 186.69 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -29947,7 +29895,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D7")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -30050,7 +29998,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ba62e057-00a4-499a-947d-974edea5066b")
-		(property "Reference" "D27"
+		(property "Reference" "D24"
 			(at 237.49 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -30158,7 +30106,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D27")
+					(reference "D24")
 					(unit 1)
 				)
 			)
@@ -30278,7 +30226,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "be41e334-4e17-4fd1-9ac7-7678850fe3a3")
-		(property "Reference" "D5"
+		(property "Reference" "D2"
 			(at 186.69 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -30386,7 +30334,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D5")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -30403,7 +30351,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c053e5af-afe5-4a12-9ef3-2bdb13379234")
-		(property "Reference" "D56"
+		(property "Reference" "D53"
 			(at 313.69 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -30511,7 +30459,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D56")
+					(reference "D53")
 					(unit 1)
 				)
 			)
@@ -30631,7 +30579,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c6d949c4-12d4-4f2a-a79d-97691b69af63")
-		(property "Reference" "D42"
+		(property "Reference" "D39"
 			(at 275.59 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -30739,7 +30687,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D42")
+					(reference "D39")
 					(unit 1)
 				)
 			)
@@ -30756,7 +30704,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c9b6a8fb-c7be-4dcf-8ffa-bd341fe471c6")
-		(property "Reference" "D37"
+		(property "Reference" "D34"
 			(at 262.89 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -30864,7 +30812,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D37")
+					(reference "D34")
 					(unit 1)
 				)
 			)
@@ -30967,7 +30915,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ca405eae-615c-4be3-8ffc-d06b7e71aefe")
-		(property "Reference" "D9"
+		(property "Reference" "D6"
 			(at 186.69 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -31075,7 +31023,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D9")
+					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -31092,7 +31040,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cd8b8ce1-1669-4386-895e-93b36852b990")
-		(property "Reference" "D28"
+		(property "Reference" "D25"
 			(at 237.49 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -31200,7 +31148,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D28")
+					(reference "D25")
 					(unit 1)
 				)
 			)
@@ -31526,7 +31474,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d39abef0-8296-4a33-8ea8-8a2c97b428f5")
-		(property "Reference" "D48"
+		(property "Reference" "D45"
 			(at 288.29 104.14 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -31634,7 +31582,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D48")
+					(reference "D45")
 					(unit 1)
 				)
 			)
@@ -31720,7 +31668,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 101.6 165.1 90)
+		(at 101.6 166.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -31730,7 +31678,7 @@
 		(dnp no)
 		(uuid "d9793cd7-67f2-4fa6-b32c-e816707e9ff1")
 		(property "Reference" "C6"
-			(at 101.6063 160.02 90)
+			(at 101.6063 161.29 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -31740,7 +31688,7 @@
 			)
 		)
 		(property "Value" "0.1µF"
-			(at 101.6 161.798 90)
+			(at 101.6 163.068 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -31750,7 +31698,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 101.6 165.1 0)
+			(at 101.6 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31761,7 +31709,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 101.6 165.1 0)
+			(at 101.6 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31772,7 +31720,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 101.6 165.1 0)
+			(at 101.6 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31902,7 +31850,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 91.44 156.21 90)
+		(at 91.44 157.48 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -31912,7 +31860,7 @@
 		(dnp no)
 		(uuid "dc359723-2c2d-4850-9a38-52b0f66a5d39")
 		(property "Reference" "C7"
-			(at 91.4463 151.13 90)
+			(at 91.4463 152.4 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -31922,7 +31870,7 @@
 			)
 		)
 		(property "Value" "0.47µF"
-			(at 91.44 152.908 90)
+			(at 91.44 154.178 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -31932,7 +31880,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 91.44 156.21 0)
+			(at 91.44 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31943,7 +31891,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 156.21 0)
+			(at 91.44 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31954,7 +31902,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 91.44 156.21 0)
+			(at 91.44 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31990,7 +31938,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dc78887c-7aca-42cd-b288-f9d55fb2435e")
-		(property "Reference" "D33"
+		(property "Reference" "D30"
 			(at 250.19 92.71 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -32098,7 +32046,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D33")
+					(reference "D30")
 					(unit 1)
 				)
 			)
@@ -32115,7 +32063,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "df5ec490-0e5f-4a75-b4ee-917b992054e0")
-		(property "Reference" "D44"
+		(property "Reference" "D41"
 			(at 288.29 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -32223,7 +32171,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D44")
+					(reference "D41")
 					(unit 1)
 				)
 			)
@@ -32420,7 +32368,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 81.28 165.1 90)
+		(at 81.28 166.37 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -32430,7 +32378,7 @@
 		(dnp no)
 		(uuid "e093cfcc-937b-4e1f-bf29-f376339097eb")
 		(property "Reference" "C10"
-			(at 81.2863 160.02 90)
+			(at 81.2863 161.29 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -32440,7 +32388,7 @@
 			)
 		)
 		(property "Value" "0.1µF"
-			(at 81.28 161.798 90)
+			(at 81.28 163.068 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -32450,7 +32398,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 81.28 165.1 0)
+			(at 81.28 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32461,7 +32409,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.28 165.1 0)
+			(at 81.28 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32472,7 +32420,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 81.28 165.1 0)
+			(at 81.28 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32594,7 +32542,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e13fb699-6585-42b7-bd29-f501bd63f5f2")
-		(property "Reference" "D10"
+		(property "Reference" "D7"
 			(at 199.39 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -32702,7 +32650,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D10")
+					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -32908,7 +32856,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e5e111bd-4857-4609-82db-1fd7dbc0e987")
-		(property "Reference" "D4"
+		(property "Reference" "D1"
 			(at 186.69 46.99 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -33016,7 +32964,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D4")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -33213,7 +33161,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 64.77 176.53 90)
+		(at 66.04 176.53 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -33224,7 +33172,7 @@
 		(fields_autoplaced yes)
 		(uuid "ecc187d4-7f22-4439-9821-116f9a0db362")
 		(property "Reference" "#PWR07"
-			(at 71.12 176.53 0)
+			(at 72.39 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33235,7 +33183,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 68.58 176.5299 90)
+			(at 69.85 176.5299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -33246,7 +33194,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 64.77 176.53 0)
+			(at 66.04 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33257,7 +33205,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 64.77 176.53 0)
+			(at 66.04 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33268,7 +33216,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 64.77 176.53 0)
+			(at 66.04 176.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33403,7 +33351,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "edf35a53-4ecd-4824-8e29-2545ce22efb2")
-		(property "Reference" "D61"
+		(property "Reference" "D58"
 			(at 326.39 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -33511,7 +33459,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D61")
+					(reference "D58")
 					(unit 1)
 				)
 			)
@@ -33923,7 +33871,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f3bea36c-371d-4d16-bf91-706e3b41f9df")
-		(property "Reference" "D17"
+		(property "Reference" "D14"
 			(at 212.09 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -34031,7 +33979,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D17")
+					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -34134,7 +34082,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f50de610-8872-49f8-9d71-a3730881c42f")
-		(property "Reference" "D36"
+		(property "Reference" "D33"
 			(at 262.89 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -34242,7 +34190,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D36")
+					(reference "D33")
 					(unit 1)
 				)
 			)
@@ -34345,7 +34293,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f5c0b2fa-75df-47ce-8229-edea4551387d")
-		(property "Reference" "D12"
+		(property "Reference" "D9"
 			(at 199.39 81.28 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -34453,7 +34401,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D12")
+					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -34762,7 +34710,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f6f02432-21bd-472d-b655-a73761ef85c9")
-		(property "Reference" "D25"
+		(property "Reference" "D22"
 			(at 237.49 58.42 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -34870,7 +34818,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D25")
+					(reference "D22")
 					(unit 1)
 				)
 			)
@@ -35093,7 +35041,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fb0bed0f-6cc2-4948-8a7b-aa4e34936206")
-		(property "Reference" "D40"
+		(property "Reference" "D37"
 			(at 275.59 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -35201,7 +35149,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D40")
+					(reference "D37")
 					(unit 1)
 				)
 			)
@@ -35390,7 +35338,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fd288574-8be8-4d13-8002-d90b440b83fe")
-		(property "Reference" "D16"
+		(property "Reference" "D13"
 			(at 212.09 69.85 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -35498,7 +35446,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "D16")
+					(reference "D13")
 					(unit 1)
 				)
 			)
