@@ -3289,6 +3289,104 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Mechanical:Mechanical_Shape"
+			(exclude_from_sim yes)
+			(in_bom no)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "S"
+				(at 0 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Mechanical_Shape"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Mechanical shape, non-electric, board outlines"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "Mechanical Shape Outline"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "*Shape* *Outline*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Mechanical_Shape_1_1"
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy -1.27 2.54) (xy -2.54 1.27) (xy -2.54 -1.27) (xy -1.27 -2.54) (xy 1.27 -2.54)
+						(xy 2.54 -1.27) (xy 2.54 1.27) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Switch:SW_Push"
 			(pin_numbers
 				(hide yes)
@@ -14220,7 +14318,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 172.72 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -14328,7 +14426,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 207.01 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -14435,7 +14533,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "Krteq:Display_Module"
 			(at 168.91 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -14851,7 +14949,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 207.01 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -15287,7 +15385,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 218.44 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -15498,7 +15596,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 264.16 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -15707,7 +15805,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 218.44 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -15815,7 +15913,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 287.02 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -15923,7 +16021,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 184.15 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -16031,7 +16129,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 252.73 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -16264,7 +16362,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 252.73 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -17217,7 +17315,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 309.88 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -17884,7 +17982,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 321.31 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -18345,7 +18443,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 332.74 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -18556,7 +18654,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 195.58 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -18664,7 +18762,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 195.58 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -18772,7 +18870,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 264.16 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -19108,7 +19206,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 229.87 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -19390,6 +19488,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:Mechanical_Shape")
+		(at 247.65 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "33814759-8e27-452c-b1fd-24d3fb3fb3fd")
+		(property "Reference" "S1"
+			(at 251.46 110.4899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Spacebar_Stabilizer"
+			(at 251.46 113.0299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Krteq:Stabilizer_2U"
+			(at 247.65 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Mechanical shape, non-electric, board outlines"
+			(at 247.65 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "Krteq"
+				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
+					(reference "S1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 316.23 53.34 0)
 		(unit 1)
@@ -19524,7 +19698,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 321.31 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -19632,7 +19806,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 309.88 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -19943,7 +20117,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 241.3 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -20051,7 +20225,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 195.58 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -20159,7 +20333,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 332.74 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -20370,7 +20544,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 287.02 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -20478,7 +20652,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 298.45 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -21393,7 +21567,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 241.3 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -21604,7 +21778,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 275.59 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -21962,7 +22136,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 218.44 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -22825,7 +22999,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 229.87 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -23058,7 +23232,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 344.17 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -23269,7 +23443,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 275.59 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -23377,7 +23551,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 241.3 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -23563,7 +23737,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 241.3 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -23673,7 +23847,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Krteq:Raspberry Pi Pico"
+		(property "Footprint" "Krteq:RaspberryPi_Pico"
 			(at 77.47 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -24014,7 +24188,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 229.87 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -24122,7 +24296,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 218.44 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -24436,7 +24610,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 309.88 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -24919,7 +25093,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 172.72 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -25355,7 +25529,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 184.15 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -25838,7 +26012,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 332.74 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -26151,7 +26325,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 207.01 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -27021,7 +27195,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 252.73 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -27129,7 +27303,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 309.88 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -27237,7 +27411,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 287.02 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -28234,7 +28408,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 184.15 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -28798,7 +28972,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 275.59 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -29031,7 +29205,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 184.15 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -29698,7 +29872,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 172.72 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -29987,7 +30161,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 332.74 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -30426,7 +30600,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 275.59 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -30887,7 +31061,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 229.87 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -31120,7 +31294,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 252.73 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -32059,7 +32233,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 321.31 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -33587,7 +33761,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 195.58 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -33796,7 +33970,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 298.45 203.2 0)
 			(hide yes)
 			(show_name no)
@@ -34132,7 +34306,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 287.02 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -34468,7 +34642,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 264.16 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -34882,7 +35056,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 298.45 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -35424,7 +35598,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 207.01 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -35657,7 +35831,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 298.45 182.88 0)
 			(hide yes)
 			(show_name no)
@@ -36096,7 +36270,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 172.72 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -36660,7 +36834,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 321.31 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -36768,7 +36942,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Krteq:ReverseMount_LED"
 			(at 264.16 181.61 0)
 			(hide yes)
 			(show_name no)

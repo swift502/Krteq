@@ -45,8 +45,8 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 - Adafruit style USB-C breakout board
     - two M2.5 screw holes 15.24mm apart, 2.54mm from the front
-- 128x32 I2C OLED display breakout board
-    - see [datasheet](datasheets/Display.pdf) for expected dimensions
+- 128x32 I2C OLED display module
+    - 38x12mm PCB, SSD1306
 
 > [!WARNING]
 > TODO IMAGE
