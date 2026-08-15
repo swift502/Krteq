@@ -43,8 +43,10 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 ### Breakout boards
 
-- 128x32 OLED display breakout
-- Adafruit style USB-C breakout
+- Adafruit style USB-C breakout board
+    - two M2.5 screw holes 15.24mm apart, 2.54mm from the front
+- 128x32 I2C OLED display breakout board
+    - see [datasheet](datasheets/Display.pdf) for expected dimensions
 
 > [!WARNING]
 > TODO IMAGE
@@ -54,23 +56,23 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 > [!WARNING]
 > TODO Update assembly guide
 
-1. Order pre-assembled PCB from a manufacturer of your choice
 1. Perform the initial firmware flash on the Pico
 1. Solder the Pico onto the PCB
 1. Solder the OLED breakout onto the PCB
 1. Screw the USB breakout to the top case
-1. Solder connecting wires between the USB breakout and the Pico TP pads
+1. Solder connecting wires between the USB breakout and the Pico's TP pads
 1. Attach the 2u stabilizer to the top case
+1. Attach the display cover to the top case
 1. Screw the top case to the bottom case
-1. Install the switches and keycaps
+1. Attach switches and keycaps
 
 And it's done!
 
 ## PCB
 
-The Kicad 10 project can be found in [source/kicad](source/kicad). All parts are SMD. The PCB is intended to be ordered pre-assembled for an easier, although more expensive build process.
+The Kicad 10 project can be found in [source/kicad](source/kicad). All parts are SMD, the PCB is intended to be ordered with pre-assembled SMD components for an easier, although more expensive build process.
 
-To generate fabrication files, open the Kicad project and use an export plugin provided by one of the PCB manufacturers you want to order from. The order process is then highly dependent on the manufacturer.
+To generate fabrication files, open the Kicad project and use an export plugin provided by the PCB manufacturer you want to order from. The order process is then highly dependent on the manufacturer.
 
 ### Footprints ToDo
 
@@ -101,9 +103,9 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 
 ## Case
 
-Case is designed non-destructively in Blender here [source/Krteq.blend](source/Krteq.blend), so it should be fairly easy to modify if needed. STL files for 3D printing can be found in [production/stl](production/stl). Tested with PLA, 0.15mm layer height, 100% infill.
+Case blend file can be found in [source/Krteq.blend](source/Krteq.blend). It's designed non-destructively, so it should be fairly easy to modify if needed. STL files for 3D printing can be found in [production/stl](production/stl). Recommended printing parameters are PLA, 0.15mm layer height and 100% infill.
 
-The top part also has a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
+The plate has a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
 
 ## Firmware
 

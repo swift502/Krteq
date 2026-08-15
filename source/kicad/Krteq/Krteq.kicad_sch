@@ -3607,7 +3607,7 @@
 	)
 	(rectangle
 		(start 140.97 242.57)
-		(end 190.5 281.94)
+		(end 185.42 281.94)
 		(stroke
 			(width 0)
 			(type default)
@@ -12750,7 +12750,7 @@
 	)
 	(global_label "3V3"
 		(shape input)
-		(at 166.37 266.7 180)
+		(at 163.83 266.7 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12760,7 +12760,7 @@
 		)
 		(uuid "74a64497-a0c9-4fce-98c2-11b0a98c673c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 159.8772 266.7 0)
+			(at 157.3372 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13254,7 +13254,7 @@
 	)
 	(global_label "SCL"
 		(shape input)
-		(at 166.37 264.16 180)
+		(at 163.83 264.16 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13264,7 +13264,7 @@
 		)
 		(uuid "a4dba7e9-b967-426f-98fe-b9e8309ecec5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 159.8772 264.16 0)
+			(at 157.3372 264.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13806,7 +13806,7 @@
 	)
 	(global_label "SDA"
 		(shape input)
-		(at 166.37 261.62 180)
+		(at 163.83 261.62 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13816,7 +13816,7 @@
 		)
 		(uuid "d306385f-582e-4d03-964a-cadaad353792")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 159.8167 261.62 0)
+			(at 157.2767 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14406,7 +14406,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
-		(at 171.45 266.7 180)
+		(at 168.91 266.7 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14416,7 +14416,7 @@
 		(dnp no)
 		(uuid "03234fc1-2209-4126-9667-387caec30762")
 		(property "Reference" "J71"
-			(at 165.862 254.762 0)
+			(at 163.322 254.762 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14426,7 +14426,7 @@
 			)
 		)
 		(property "Value" "OLED 128x32"
-			(at 165.862 257.556 0)
+			(at 163.322 257.556 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14436,7 +14436,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 171.45 266.7 0)
+			(at 168.91 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14447,7 +14447,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 266.7 0)
+			(at 168.91 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14458,7 +14458,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 171.45 266.7 0)
+			(at 168.91 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14929,7 +14929,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 166.37 269.24 0)
+		(at 163.83 269.24 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14940,7 +14940,7 @@
 		(fields_autoplaced yes)
 		(uuid "0e2252b5-acf7-4d6b-987c-1c8a1500986b")
 		(property "Reference" "#PWR03"
-			(at 166.37 275.59 0)
+			(at 163.83 275.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14951,7 +14951,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 166.37 274.32 0)
+			(at 163.83 274.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14961,7 +14961,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 166.37 269.24 0)
+			(at 163.83 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14972,7 +14972,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 166.37 269.24 0)
+			(at 163.83 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14983,7 +14983,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 166.37 269.24 0)
+			(at 163.83 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

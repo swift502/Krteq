@@ -86,12 +86,12 @@ class OBJECT_OT_Krteq_export(bpy.types.Operator):
             scene_obj.select_set(False)
 
         context.scene.use_keychron_stab = False
-        export_stl(self, "Top", rotation=(180.0, 0.0, 0.0))
-        export_stl(self, "Bottom", clear_rotation=False)
-        export_stl(self, "LED")
+        export_stl(self, "Case", clear_rotation=False)
+        export_stl(self, "Plate", rotation=(180.0, 0.0, 0.0))
+        export_stl(self, "Display cover", rotation=(180.0, 0.0, 0.0))
 
         context.scene.use_keychron_stab = True
-        export_stl(self, "Top", rotation=(180.0, 0.0, 0.0), suffix="keychron")
+        export_stl(self, "Plate", rotation=(180.0, 0.0, 0.0), suffix="keychron")
 
         context.scene.use_keychron_stab = original_use_keychron
 
