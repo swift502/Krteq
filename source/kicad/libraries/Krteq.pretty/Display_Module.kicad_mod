@@ -6,9 +6,9 @@
 	(descr "128x32 OLED display module")
 	(tags "display oled i2c")
 	(property "Reference" "REF**"
-		(at 17.5 3 0)
+		(at -0.5 -0.81 0)
 		(layer "F.SilkS")
-		(uuid "80ea2194-fae1-4349-a5e5-71441fc600d8")
+		(uuid "a0f7cf4a-7a77-49f2-9e34-1c66d951d4de")
 		(effects
 			(font
 				(size 1 1)
@@ -17,9 +17,9 @@
 		)
 	)
 	(property "Value" "Display_Module"
-		(at 17.5 5 0)
+		(at -0.5 1.19 0)
 		(layer "F.Fab")
-		(uuid "0393e5da-925b-482a-a0a1-380ba6502225")
+		(uuid "53bb7da1-85df-49da-a990-c2d9c6621c30")
 		(effects
 			(font
 				(size 1 1)
@@ -28,10 +28,10 @@
 		)
 	)
 	(property "Datasheet" ""
-		(at 0 0.02 0)
+		(at -18 -3.79 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "a9120dd7-911b-4241-aef2-ff42a6c9013a")
+		(uuid "89ee7db2-f5bc-4997-b846-49ddefda8e97")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -39,10 +39,10 @@
 		)
 	)
 	(property "Description" ""
-		(at 0 0.02 0)
+		(at -18 -3.79 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "3f5e012e-8814-46a4-b473-2310f70325ce")
+		(uuid "67c567ac-374b-4925-ba02-29625186da7a")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -50,10 +50,10 @@
 		)
 	)
 	(property "KiLib_Generator" "connector/pin_header_socket"
-		(at 0 0.02 0)
+		(at -18 -3.79 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "a669199c-3784-45a9-ac5f-50049e70f101")
+		(uuid "ee755715-c746-4cb0-9675-944316decb64")
 		(effects
 			(font
 				(size 1 1)
@@ -63,21 +63,51 @@
 	)
 	(attr through_hole)
 	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start 18.5 -3.31)
+		(end 19.5 -3.31)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "879c9bdd-b490-4283-8c78-4d177c7e9c02")
+	)
+	(fp_line
+		(start 18.5 5.19)
+		(end 19.5 5.19)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "85c3a6f2-769d-41a3-ae80-4d0f35e70f68")
+	)
+	(fp_line
+		(start 19.5 -3.31)
+		(end 19.5 5.19)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.Fab")
+		(uuid "dd46b51e-6c31-411a-862a-9348f91af7b0")
+	)
 	(fp_rect
-		(start -1.5 -2.19)
-		(end 36.5 9.81)
+		(start -19.5 -6)
+		(end 18.5 6)
 		(stroke
 			(width 0.1)
 			(type default)
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "24341d2c-8c0d-43c3-8ea7-d2ab5cd7e15e")
+		(uuid "1c5e9b79-af96-4ab9-aa3c-0314e899ca6d")
 	)
 	(fp_text user "${REFERENCE}"
-		(at 17.5 3 180)
+		(at -0.5 -0.81 180)
 		(layer "F.Fab")
-		(uuid "515b47f1-407d-4058-b525-31855df6fc28")
+		(uuid "d88b5b1b-1a35-4f69-aa6a-d40b04e2bb9c")
 		(effects
 			(font
 				(size 1 1)
@@ -86,41 +116,41 @@
 		)
 	)
 	(pad "1" thru_hole rect
-		(at 0 7.62 180)
+		(at -18 3.81 180)
 		(size 1.7 1.7)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "d75eb56d-be40-4d6c-b1a6-6d8637854ab7")
+		(uuid "14405499-fcff-44a8-bea1-f06c49b1fa07")
 	)
 	(pad "2" thru_hole circle
-		(at 0 5.08 180)
+		(at -18 1.27 180)
 		(size 1.7 1.7)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "d269f74a-7128-40d2-9383-7461ff3c860e")
+		(uuid "b7a15ef0-49ab-4cc7-9840-5cc9df6fad6f")
 	)
 	(pad "3" thru_hole circle
-		(at 0 2.54 180)
+		(at -18 -1.27 180)
 		(size 1.7 1.7)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "3800517c-47a9-476a-9805-07e28407c1e3")
+		(uuid "7ab0a5c1-7322-4472-90d3-013d60417d92")
 	)
 	(pad "4" thru_hole circle
-		(at 0 0 180)
+		(at -18 -3.81 180)
 		(size 1.7 1.7)
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "617232f9-d67b-4f1f-8aae-8cbef27b83c1")
+		(uuid "639c2165-b7a3-40ee-9729-82d66d1bdee2")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/Display_Module.step"
 		(offset
-			(xyz 17.5 -3.8 0.5)
+			(xyz -0.5 0.01 0.5)
 		)
 		(scale
 			(xyz 1 1 1)
