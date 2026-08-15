@@ -92,7 +92,7 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 | Part | Manufacturer Part Number |
 |---|---|
 | Switch diode | 1N4148W |
-| Switch socket | CPG151101S11-2 |
+| Switch socket | TODO |
 | RGB LED | A-SP1513R6GHB1C-A01-2A |
 | RGB driver | IS31FL3733-QFLS4-TR |
 | 0.1µF capacitor | CL05B104KO5NNNC |
