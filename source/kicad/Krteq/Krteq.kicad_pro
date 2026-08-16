@@ -551,10 +551,10 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
-    "annotate_start_num": 1,
+    "annotate_start_num": 102,
     "annotation": {
       "method": 0,
-      "sort_order": 1
+      "sort_order": 0
     },
     "bom_export_filename": "${PROJECTNAME}.csv",
     "bom_fmt_presets": [],
@@ -693,6 +693,14 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -712,7 +720,7 @@
         "uuid": "9e7f33ad-d3b4-42c3-9373-23856f560db6"
       }
     ],
-    "used_designators": "J71,R1-5,R8-12,#PWR3-8,D1-64,U71,S2,C1-7,SW1-64",
+    "used_designators": "J71,R1-5,R8-12,#PWR3-8,D1-161,U71,S1-2,C1-7,SW1-64",
     "variants": []
   },
   "sheets": [

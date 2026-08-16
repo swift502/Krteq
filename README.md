@@ -20,6 +20,9 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 - Tray mount
 - 233mm × 125mm × 30mm
 
+> [!WARNING]
+> TODO Update dimensions
+
 Connecting the keyboard to [usevia.app](https://usevia.app) requires manually uploading the [design file](production/krteq_via.json) in the design tab.
 
 ![](images/2.webp)
@@ -73,19 +76,6 @@ And it's done!
 The Kicad 10 project can be found in [source/kicad](source/kicad). All parts are SMD, the PCB is intended to be ordered with pre-assembled SMD components for an easier, although more expensive build process.
 
 To generate fabrication files, open the Kicad project and use an export plugin provided by the PCB manufacturer you want to order from. The order process is then highly dependent on the manufacturer.
-
-### Footprints ToDo
-
-- switch diode ✓
-- switch socket ✓
-- ks-33 1u ✓
-- rgb led
-
-### 3D models ToDo
-
-- switch socket ✓
-- ks-33 ✓
-- rgb led ✓
 
 ### Suggested BOM
 
