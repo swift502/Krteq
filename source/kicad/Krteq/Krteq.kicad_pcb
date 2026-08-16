@@ -89,7 +89,7 @@
 		)
 		(capping no)
 		(filling no)
-		(grid_origin 124.175 95.925)
+		(grid_origin 219.425 95.925)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -101897,8 +101897,8 @@
 		(uuid "8f90d82f-f657-420d-9cbc-4c9f17bba999")
 	)
 	(gr_circle
-		(center 219.425 95.925)
-		(end 221.925 95.925)
+		(center 219.425 114.975)
+		(end 221.925 114.975)
 		(stroke
 			(width 0.1)
 			(type default)
@@ -102218,8 +102218,8 @@
 		(uuid "e7e328ea-19e2-4179-9496-b4dbe2a21303")
 	)
 	(gr_circle
-		(center 219.425 95.925)
-		(end 220.525 95.925)
+		(center 219.425 114.975)
+		(end 220.525 114.975)
 		(stroke
 			(width 0.05)
 			(type solid)
