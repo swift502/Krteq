@@ -8,7 +8,7 @@
 		(at -2.54 -2.794 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "d87776d9-d2c6-4c0a-9865-5f4626bbc27d")
+		(uuid "62cf74a0-d72a-4189-84f0-b65385675e6a")
 		(effects
 			(font
 				(size 1 1)
@@ -16,10 +16,10 @@
 			)
 		)
 	)
-	(property "Value" "Stabilizer_2U"
+	(property "Value" "2U_Stabilizer"
 		(at 0 11 0)
 		(layer "F.Fab")
-		(uuid "05c73195-894d-4ed5-901a-02f8999d4e82")
+		(uuid "74d35031-b331-4de4-93b4-82f870ed0f6f")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "06040307-1509-4e43-b63e-9f3bd5206ea4")
+		(uuid "57239851-cba0-4132-b45e-961465997dbc")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "61ae9ab4-64ab-4122-93eb-9ec41ac6ae39")
+		(uuid "841fcbcb-d910-4060-a7ec-1fb77f79ca3d")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -64,7 +64,7 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "121ca290-0c4a-4acf-a834-0266e3ab749d")
+		(uuid "fbfe7953-b00e-4f87-9b3e-b08bd7d9758f")
 	)
 	(fp_rect
 		(start 8.9 -6.5)
@@ -75,12 +75,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "61ae6b19-b095-438b-aed3-ccae08ce249c")
+		(uuid "168a3644-f78c-40d8-b6a7-e79cdf431136")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 -11 0)
 		(layer "F.Fab")
-		(uuid "ee67870e-423b-46f4-97f6-496a06728641")
+		(uuid "b03ae7e3-02de-4ee7-be25-34b71c85ec83")
 		(effects
 			(font
 				(size 1 1)
@@ -89,7 +89,7 @@
 		)
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/Stabilizer.step"
+	(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/Stabilizer_2U.step"
 		(offset
 			(xyz 60 0 1.55)
 		)
