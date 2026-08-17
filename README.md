@@ -49,7 +49,6 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 - Adafruit style USB-C breakout board
     - two M2.5 screw holes 15.24mm apart, 2.54mm from the front
 - 128x32 I2C OLED display module
-    - 38x12mm PCB, SSD1306
 
 > [!WARNING]
 > TODO IMAGE
@@ -93,7 +92,9 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 
 ## Case
 
-Case blend file can be found in [source/Krteq.blend](source/Krteq.blend). It's designed non-destructively, so it should be fairly easy to modify if needed. STL files for 3D printing can be found in [production/stl](production/stl). Recommended printing parameters are PLA, 0.15mm layer height and 100% infill.
+Case blend file can be found in [source/Krteq.blend](source/Krteq.blend). It's designed non-destructively, so it should be fairly easy to modify if needed.
+
+STL files for 3D printing can be found in [production/stl](production/stl). Recommended printing parameters are PLA, 0.15mm layer height and 100% infill.
 
 The plate has a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
 

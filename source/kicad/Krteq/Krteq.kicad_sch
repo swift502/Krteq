@@ -3704,6 +3704,18 @@
 		(uuid "917a1730-6f5b-4dc2-a73e-b014d8b6145a")
 	)
 	(rectangle
+		(start 140.97 242.57)
+		(end 198.12 281.94)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "a1d0cd37-69b7-46fb-9af1-2b1851d748be")
+	)
+	(rectangle
 		(start 140.97 15.24)
 		(end 363.22 125.73)
 		(stroke
@@ -3716,8 +3728,8 @@
 		(uuid "a6b6bcb6-63ef-4683-a5ef-3e63e12ea706")
 	)
 	(rectangle
-		(start 140.97 242.57)
-		(end 185.42 281.94)
+		(start 198.12 242.57)
+		(end 236.22 281.94)
 		(stroke
 			(width 0)
 			(type default)
@@ -3772,6 +3784,17 @@
 		)
 		(uuid "8f082516-a8c3-44c6-b89c-405012b0573f")
 	)
+	(text "USB interface"
+		(exclude_from_sim no)
+		(at 146.05 247.65 0)
+		(effects
+			(font
+				(size 2.032 2.032)
+			)
+			(justify left top)
+		)
+		(uuid "a98d26b4-13ce-44fe-910f-45f01e210e62")
+	)
 	(text "Spacebar\nindex hole"
 		(exclude_from_sim no)
 		(at 332.5865 199.624 90)
@@ -3795,7 +3818,7 @@
 	)
 	(text "Display interface"
 		(exclude_from_sim no)
-		(at 146.05 247.65 0)
+		(at 203.2 247.65 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -11836,6 +11859,30 @@
 			)
 		)
 	)
+	(global_label "USB D-"
+		(shape input)
+		(at 184.15 264.16 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0a3fe177-1f0c-4373-8ae3-318172457020")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 173.5448 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "COL5"
 		(shape input)
 		(at 257.81 46.99 90)
@@ -12340,6 +12387,30 @@
 			)
 		)
 	)
+	(global_label "USB VBUS"
+		(shape input)
+		(at 184.15 261.62 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4736ba57-1539-40ac-93dc-343b407a0f3c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 171.4886 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "CS6"
 		(shape input)
 		(at 234.95 143.51 90)
@@ -12436,6 +12507,30 @@
 			)
 		)
 	)
+	(global_label "USB D+"
+		(shape input)
+		(at 154.94 266.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4b8e1354-1e13-4777-86f7-5c6cf2abe2ad")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 165.5452 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "COL4"
 		(shape input)
 		(at 43.18 67.31 180)
@@ -12449,6 +12544,30 @@
 		(uuid "4e6732d9-3d76-4dda-a083-b857501e02a5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 35.3567 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "USB D+"
+		(shape input)
+		(at 184.15 266.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4fe609a0-de30-4666-8870-33a2392ac16c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 173.5448 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12521,6 +12640,30 @@
 		(uuid "56ff55ba-5911-435d-91c9-1bba67652b37")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 112.0237 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "USB D-"
+		(shape input)
+		(at 154.94 264.16 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "57079ea6-e7b4-4bac-af32-1bce643e8418")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 165.5452 264.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12870,7 +13013,7 @@
 	)
 	(global_label "3V3"
 		(shape input)
-		(at 163.83 266.7 180)
+		(at 217.17 266.7 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12880,7 +13023,7 @@
 		)
 		(uuid "74a64497-a0c9-4fce-98c2-11b0a98c673c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.3372 266.7 0)
+			(at 210.6772 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12905,6 +13048,30 @@
 		(uuid "7cb7663b-3a13-4ee6-b1ef-c7f9034238b5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 110.8142 191.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "USB GND"
+		(shape input)
+		(at 154.94 269.24 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7d344063-916c-47ae-ba54-e065fe4a5daf")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 166.5733 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13398,7 +13565,7 @@
 	)
 	(global_label "SCL"
 		(shape input)
-		(at 163.83 264.16 180)
+		(at 217.17 264.16 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13408,7 +13575,7 @@
 		)
 		(uuid "a4dba7e9-b967-426f-98fe-b9e8309ecec5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.3372 264.16 0)
+			(at 210.6772 264.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13878,7 +14045,7 @@
 	)
 	(global_label "SDA"
 		(shape input)
-		(at 163.83 261.62 180)
+		(at 217.17 261.62 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13888,7 +14055,7 @@
 		)
 		(uuid "d306385f-582e-4d03-964a-cadaad353792")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.2767 261.62 0)
+			(at 210.6167 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13897,6 +14064,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "USB VBUS"
+		(shape input)
+		(at 154.94 261.62 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d33b5c2d-6fa9-446c-ab9f-15bd426401db")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 167.6014 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -13969,6 +14160,30 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "USB GND"
+		(shape input)
+		(at 184.15 269.24 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "dd851f4b-649c-4854-a4fd-39c5ac742dbb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 172.5167 269.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -14526,7 +14741,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
-		(at 168.91 266.7 180)
+		(at 222.25 266.7 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -14535,8 +14750,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "03234fc1-2209-4126-9667-387caec30762")
-		(property "Reference" "J71"
-			(at 163.322 254.762 0)
+		(property "Reference" "J3"
+			(at 216.662 254.762 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14546,7 +14761,7 @@
 			)
 		)
 		(property "Value" "OLED 128x32"
-			(at 163.322 257.556 0)
+			(at 216.662 257.556 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14555,8 +14770,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:Display_Module"
-			(at 168.91 266.7 0)
+		(property "Footprint" "Krteq:Interface_1x04_P2.54mm"
+			(at 222.25 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14567,7 +14782,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.91 266.7 0)
+			(at 222.25 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14578,7 +14793,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 168.91 266.7 0)
+			(at 222.25 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14603,7 +14818,7 @@
 		(instances
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "J71")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -15049,7 +15264,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 163.83 269.24 0)
+		(at 217.17 269.24 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -15060,7 +15275,7 @@
 		(fields_autoplaced yes)
 		(uuid "0e2252b5-acf7-4d6b-987c-1c8a1500986b")
 		(property "Reference" "#PWR03"
-			(at 163.83 275.59 0)
+			(at 217.17 275.59 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15071,7 +15286,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 163.83 274.32 0)
+			(at 217.17 274.32 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15081,7 +15296,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 269.24 0)
+			(at 217.17 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15092,7 +15307,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 269.24 0)
+			(at 217.17 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15103,7 +15318,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 163.83 269.24 0)
+			(at 217.17 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23730,6 +23945,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x04_Pin")
+		(at 149.86 266.7 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "68124913-8220-4980-844c-ca35d943d3b8")
+		(property "Reference" "J1"
+			(at 158.242 254.762 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Pico test points"
+			(at 157.734 257.556 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Krteq:Interface_1x04_P2.54mm"
+			(at 149.86 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 149.86 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 149.86 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "def7d68a-8c97-4349-985d-d435eb785dc7")
+		)
+		(pin "3"
+			(uuid "7adfe890-e985-474b-a988-0e7168d3b31c")
+		)
+		(pin "4"
+			(uuid "cc5500c6-ff42-4d78-af93-31bd593750dd")
+		)
+		(pin "1"
+			(uuid "629959a5-4ccc-48ab-9285-a277990610be")
+		)
+		(instances
+			(project "Krteq"
+				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D")
 		(at 254 102.87 90)
 		(unit 1)
@@ -25548,6 +25849,91 @@
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D55")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x04_Pin")
+		(at 189.23 266.7 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7cd7672c-b2f0-4170-94af-250c0d27578a")
+		(property "Reference" "J2"
+			(at 180.594 254.762 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB breakout board"
+			(at 181.102 257.556 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Krteq:Interface_1x04_P2.54mm"
+			(at 189.23 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 189.23 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 189.23 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e25c9221-26d3-4e4c-833b-6deac542748c")
+		)
+		(pin "3"
+			(uuid "ebd48add-c56e-40d9-a54b-b2d23a57ed9f")
+		)
+		(pin "4"
+			(uuid "62e07c99-3063-4723-aada-52877058db8c")
+		)
+		(pin "1"
+			(uuid "c10c0792-1c22-4129-97fb-b21637c3a434")
+		)
+		(instances
+			(project "Krteq"
+				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
+					(reference "J2")
 					(unit 1)
 				)
 			)
