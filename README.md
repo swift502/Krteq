@@ -68,9 +68,9 @@ Finally there's the **Pico**, which we'll be connecting to the USB breakout boar
 1. Place OLED breakout into plate's display slot
 1. Screw the USB breakout to the plate
 1. Solder the Pico onto the PCB
-1. Solder the interfacing wires
-    - between Pico's TP pads and J1
-    - between the USB breakout and J2
+1. Solder interfacing wires:
+    - between the USB breakout and J1
+    - between Pico's test pads and J2
     - between the OLED and J3
 1. Screw the top case to the bottom case
 1. Attach switches and keycaps
