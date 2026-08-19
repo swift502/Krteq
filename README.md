@@ -34,11 +34,12 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 - [PCB](#pcb)
 - [Case](#case)
 - Raspberry Pi Pico
+- Adafruit style USB-C breakout board
+- 128x32 I2C OLED display module
 - 61x Gateron KS-33 switches
 - 61x MX low profile keycaps
 - Gateron 2u low profile plate-mounted stabilizer
-- 6x M2x6 flat head screw
-- 2x M2.5x5 screw
+- 8x M2.5x5 screws
 - Rubber feet
 
 > [!WARNING]
@@ -46,9 +47,13 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 ### Breakout boards
 
-- Adafruit style USB-C breakout board
-    - two M2.5 screw holes 15.24mm apart, 2.54mm from the front
-- 128x32 I2C OLED display module
+Three third party boards are used in the design with varying levels of standardization.
+
+The OLED display is the least standardized, so the PCB cutout is very generous to fit modules with slightly different dimensions. Any OLED roughly equal or less than 38x12mm should fit well, and at most require slight modifications to the display cutout in the top plate.
+
+The USB breakout board is expected to have two M2.5 screw holes 15.24mm apart, 2.54mm from the front edge. Any board with roughly the same screw hole spacing should work.
+
+Finally, there's the Pico which we'll be connecting to the USB breakout board via test pads, so the Pico's USB type is irrelevant.
 
 > [!WARNING]
 > TODO IMAGE
@@ -59,14 +64,26 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 > TODO Update assembly guide
 
 1. Perform the initial firmware flash on the Pico
-1. Solder the Pico onto the PCB
-1. Solder the OLED breakout onto the PCB
-1. Screw the USB breakout to the top case
-1. Solder connecting wires between the USB breakout and the Pico's TP pads
 1. Attach the 2u stabilizer to the top case
-1. Attach the display cover to the top case
+1. Place OLED breakout into plate's display slot
+1. Screw the USB breakout to the plate
+1. Solder the Pico onto the PCB
+1. Solder the interface wires
+    - between Pico's TP pads and J1
+    - between the USB breakout and J2
+    - between the OLED and J3
 1. Screw the top case to the bottom case
 1. Attach switches and keycaps
+1. Call Barack Obama to tell him about your new keyboard
+1. Organize a formal function in Chicago to celebrate the occasion
+1. Invite Barack Obama to the function
+1. Eat shrimp with Barack Obama
+1. Take a picture with Barack Obama
+1. Show Barack Obama the keyboard and explain its features
+1. Watch Barack get bored and leave the function
+1. Cry in the corner because Barack Obama left the function
+1. You should've invited Gabe Newell instead, he would have stayed and played with the keyboard
+1. Lesson learned, next time invite Gabe Newell instead of Barack Obama
 
 And it's done!
 
