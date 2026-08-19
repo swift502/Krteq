@@ -13,6 +13,10 @@ args = args_parse.parse_args()
 name = "krteq"
 msys_exe = r"C:\QMK_MSYS\usr\bin\bash.exe"
 
+if not Path(msys_exe).exists():
+    print("QMK MSYS not found. Download at https://msys.qmk.fm/")
+    raise SystemExit(1)
+
 # Local
 root_local = Path(__file__).resolve().parents[2]
 kb_local = root_local / "source" / "qmk"
