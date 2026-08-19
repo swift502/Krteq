@@ -89,7 +89,7 @@
 		)
 		(capping no)
 		(filling no)
-		(grid_origin 219.425 95.925)
+		(grid_origin 294.725 76.875)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -12569,13 +12569,13 @@
 	(footprint "Krteq:Interface_1x03_P2.54mm"
 		(layer "B.Cu")
 		(uuid "12daa7b2-49bd-4482-bca1-64ffe4d176d8")
-		(at 193.425 79.425 180)
+		(at 193.475 78.875 180)
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Value" "Pico test points"
 			(at 0 2.54 0)
 			(layer "B.Fab")
-			(uuid "af429c48-1605-471a-bd9b-4eda9bc7d729")
+			(uuid "4c771bcb-9f30-4b58-a5c7-80aa17259aeb")
 			(effects
 				(font
 					(size 1 1)
@@ -12588,7 +12588,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "ecdb02d2-1f29-4b4d-8174-2323e2f7d95d")
+			(uuid "ac98a656-7bb2-4b9b-a828-aca781d592ce")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12600,7 +12600,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "356daff9-ec2a-496c-8d81-2921b36f315b")
+			(uuid "cbca94e2-a2ee-48e3-8239-af97b2295307")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12611,7 +12611,7 @@
 		(property "Reference" "J2"
 			(at 0 -7.62 0)
 			(layer "B.SilkS")
-			(uuid "4ec9d803-7e3f-4655-90a6-4f83b8bc34fd")
+			(uuid "5512c236-44a0-4fca-8902-cdf695d6194e")
 			(effects
 				(font
 					(size 1 1)
@@ -46168,13 +46168,13 @@
 	(footprint "Krteq:Interface_1x04_P2.54mm"
 		(layer "B.Cu")
 		(uuid "6d26a276-9a72-4488-8b4d-110689aaa663")
-		(at 245.925 79.385 180)
+		(at 245.475 78.875 180)
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Value" "OLED 128x32"
 			(at 0 2.54 0)
 			(layer "B.Fab")
-			(uuid "8a1889b7-4e00-4278-9eae-3137d43b2ac3")
+			(uuid "b3acd220-d57b-4f50-bc89-cff02d28836b")
 			(effects
 				(font
 					(size 1 1)
@@ -46187,7 +46187,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "7979bcf5-c818-4e5f-a3b1-425f3bee6fb8")
+			(uuid "a736259a-3b69-4d71-912a-d6cccf42381c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -46199,7 +46199,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "c01d160e-ec32-4b01-851a-4da78a55baaf")
+			(uuid "86dc0ebb-b96b-4c45-9516-f09033a33208")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -46210,7 +46210,7 @@
 		(property "Reference" "J3"
 			(at 0 -10.16 0)
 			(layer "B.SilkS")
-			(uuid "754d3ebb-7ec0-43db-9280-5917c2647997")
+			(uuid "01fbab47-2fed-4233-b1ff-be0978fe30a2")
 			(effects
 				(font
 					(size 1 1)
@@ -48334,13 +48334,13 @@
 	(footprint "Krteq:Interface_1x04_P2.54mm"
 		(layer "B.Cu")
 		(uuid "7436c354-bb93-4975-b370-3dd6b965327a")
-		(at 292.425 79.385 180)
+		(at 292.725 78.875 180)
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
 		(property "Reference" "J1"
 			(at 0 -10.16 0)
 			(layer "B.SilkS")
-			(uuid "abe39caa-ed39-4de9-910a-76a9e344d4d1")
+			(uuid "a9a62fd5-0971-4c20-a741-8fb02b295cc0")
 			(effects
 				(font
 					(size 1 1)
@@ -48352,7 +48352,7 @@
 		(property "Value" "USB breakout board"
 			(at 0 2.54 0)
 			(layer "B.Fab")
-			(uuid "a483a147-5673-48a9-9f16-2a5497bd1bba")
+			(uuid "33f3e542-bed6-4d5b-a4b0-a40fa683acc0")
 			(effects
 				(font
 					(size 1 1)
@@ -48365,7 +48365,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "2470a350-9772-4734-992c-86f43150442e")
+			(uuid "723b0e49-9f8e-4b81-8584-933c28ec6501")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -48377,7 +48377,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "cd94f3e9-b34d-4daa-920f-d31b0de0fe8b")
+			(uuid "a3d33fe9-2d31-410e-bbcc-2a85fda0251e")
 			(effects
 				(font
 					(size 1.27 1.27)
