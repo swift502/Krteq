@@ -74,16 +74,6 @@ Finally, there's the Pico which we'll be connecting to the USB breakout board vi
     - between the OLED and J3
 1. Screw the top case to the bottom case
 1. Attach switches and keycaps
-1. Call Barack Obama to tell him about your new keyboard
-1. Organize a formal function in Chicago to celebrate the occasion
-1. Invite Barack Obama to the function
-1. Eat shrimp with Barack Obama
-1. Take a picture with Barack Obama
-1. Show Barack Obama the keyboard and explain its features
-1. Watch Barack get bored and leave the function
-1. Cry in the corner because Barack Obama left the function
-1. You should've invited Gabe Newell instead, he would have stayed and played with the keyboard
-1. Lesson learned, next time invite Gabe Newell instead of Barack Obama
 
 And it's done!
 
