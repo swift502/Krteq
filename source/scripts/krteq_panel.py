@@ -4,7 +4,7 @@ import math
 import bmesh
 from mathutils import Euler
 
-def export_stl(op, coll_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True, suffix=None):
+def export_stl(op, coll_name, clear_rotation=False, add_rotation=(0.0, 0.0, 0.0), suffix=None):
     coll = bpy.data.collections.get(coll_name)
 
     if not coll:
@@ -47,7 +47,7 @@ def export_stl(op, coll_name, rotation=(0.0, 0.0, 0.0), clear_rotation=True, suf
     bpy.context.scene.collection.objects.link(merged_obj)
 
     root_loc, root_rot, root_scale = root_world.decompose()
-    add_rot = Euler([math.radians(r) for r in rotation], 'XYZ').to_quaternion()
+    add_rot = Euler([math.radians(r) for r in add_rotation], 'XYZ').to_quaternion()
     base_rot = Euler((0, 0, 0), 'XYZ').to_quaternion() if clear_rotation else root_rot
 
     merged_obj.location = root_loc
@@ -86,12 +86,11 @@ class OBJECT_OT_Krteq_export(bpy.types.Operator):
             scene_obj.select_set(False)
 
         context.scene.use_keychron_stab = False
-        export_stl(self, "Case", clear_rotation=False)
-        export_stl(self, "Plate", rotation=(180.0, 0.0, 0.0))
-        export_stl(self, "Display cover", rotation=(180.0, 0.0, 0.0))
+        export_stl(self, "Case")
+        export_stl(self, "Plate", clear_rotation=True, add_rotation=(180.0, 0.0, 0.0))
 
         context.scene.use_keychron_stab = True
-        export_stl(self, "Plate", rotation=(180.0, 0.0, 0.0), suffix="keychron")
+        export_stl(self, "Plate", clear_rotation=True, add_rotation=(180.0, 0.0, 0.0), suffix="keychron")
 
         context.scene.use_keychron_stab = original_use_keychron
 
