@@ -13137,30 +13137,6 @@
 			)
 		)
 	)
-	(global_label "3V3"
-		(shape input)
-		(at 217.17 266.7 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "74a64497-a0c9-4fce-98c2-11b0a98c673c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 210.6772 266.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "SDB"
 		(shape input)
 		(at 54.61 59.69 180)
@@ -13350,6 +13326,30 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+	)
+	(global_label "SDA"
+		(shape input)
+		(at 217.17 266.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "850f0c3b-4db1-43f3-8801-c1faf408266f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 210.6167 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)
@@ -14001,6 +14001,30 @@
 			)
 		)
 	)
+	(global_label "3V3"
+		(shape input)
+		(at 217.17 261.62 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bea68bf0-85a8-4255-ac59-3f228840bb37")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 210.6772 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "COL3"
 		(shape input)
 		(at 232.41 46.99 90)
@@ -14158,30 +14182,6 @@
 		(uuid "d20c9131-2347-41aa-90eb-3f01fedacaf7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 37.8967 189.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "SDA"
-		(shape input)
-		(at 217.17 261.62 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d306385f-582e-4d03-964a-cadaad353792")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 210.6167 261.62 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

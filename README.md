@@ -53,7 +53,7 @@ The **OLED display** is the least standardized, so the PCB cutout is very genero
 
 The **USB breakout board** is expected to match the specs of Adafruit's horizontal downstream USB-C breakout board with two M2.5 screw holes 15.24mm apart, 2.54mm from the front edge, and built-in resistors for the CC lines.
 
-Finally there's the **Pico**, which we'll be connecting to the USB breakout board via test pads, so the Pico's USB type is irrelevant.
+Finally there's the **Raspberry Pi Pico**, which we'll be connecting to USB data lines via its test pads.
 
 > [!WARNING]
 > TODO IMAGE

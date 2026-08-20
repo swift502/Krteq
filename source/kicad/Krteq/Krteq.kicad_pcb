@@ -12572,6 +12572,18 @@
 		(at 193.475 78.875 180)
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
+		(property "Reference" "J2"
+			(at 0 -7.62 0)
+			(layer "B.SilkS")
+			(uuid "5512c236-44a0-4fca-8902-cdf695d6194e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property "Value" "Pico test points"
 			(at 0 2.54 0)
 			(layer "B.Fab")
@@ -12596,7 +12608,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x03, script generated"
+		(property "Description" "Generic connector, single row, 01x03"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -12608,10 +12620,11 @@
 				(justify mirror)
 			)
 		)
-		(property "Reference" "J2"
-			(at 0 -7.62 0)
+		(property "KiLib_Generator" "connector/pin_header_socket"
+			(at 0 0 0)
 			(layer "B.SilkS")
-			(uuid "5512c236-44a0-4fca-8902-cdf695d6194e")
+			(hide yes)
+			(uuid "8b230219-ad83-4f24-a40b-bd6438fb4402")
 			(effects
 				(font
 					(size 1 1)
@@ -12624,17 +12637,11 @@
 		(path "/68124913-8220-4980-844c-ca35d943d3b8")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3")
-			)
-		)
-		(attr through_hole)
+		(attr through_hole exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
-			(start -1.27 1.5)
-			(end 1.27 -6.5)
+			(start -1.25 1.25)
+			(end 1.25 -6.33)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -46171,6 +46178,18 @@
 		(at 245.475 78.875 180)
 		(descr "Through hole straight pin header, 1x04, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x04 2.54mm single row")
+		(property "Reference" "J3"
+			(at 0 -10.16 0)
+			(layer "B.SilkS")
+			(uuid "01fbab47-2fed-4233-b1ff-be0978fe30a2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property "Value" "OLED 128x32"
 			(at 0 2.54 0)
 			(layer "B.Fab")
@@ -46195,7 +46214,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
+		(property "Description" "Generic connector, single row, 01x04"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -46207,10 +46226,11 @@
 				(justify mirror)
 			)
 		)
-		(property "Reference" "J3"
-			(at 0 -10.16 0)
+		(property "KiLib_Generator" "connector/pin_header_socket"
+			(at 0 0 0)
 			(layer "B.SilkS")
-			(uuid "01fbab47-2fed-4233-b1ff-be0978fe30a2")
+			(hide yes)
+			(uuid "c78e08ae-c35e-4ca6-b0ab-92447c8d4355")
 			(effects
 				(font
 					(size 1 1)
@@ -46223,17 +46243,11 @@
 		(path "/03234fc1-2209-4126-9667-387caec30762")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4")
-			)
-		)
 		(attr through_hole exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
-			(start -1.27 1.5)
-			(end 1.27 -9)
+			(start -1.25 1.25)
+			(end 1.25 -8.87)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -46323,7 +46337,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "3V3")
+			(net "SDA")
 			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(uuid "be2f4cd8-7293-4a0e-8970-3acca96b81b7")
@@ -46345,7 +46359,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "SDA")
+			(net "3V3")
 			(pinfunction "Pin_4_4")
 			(pintype "passive")
 			(uuid "3e10a0ab-91ea-45ec-8aca-4732b7620261")
@@ -48373,7 +48387,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
+		(property "Description" "Generic connector, single row, 01x04"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -48385,21 +48399,28 @@
 				(justify mirror)
 			)
 		)
+		(property "KiLib_Generator" "connector/pin_header_socket"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "381f9c16-69ef-42d5-a25c-0aaedf754489")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/7cd7672c-b2f0-4170-94af-250c0d27578a")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4")
-			)
-		)
 		(attr through_hole exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
-			(start -1.27 1.5)
-			(end 1.27 -9)
+			(start -1.25 1.25)
+			(end 1.25 -8.87)
 			(stroke
 				(width 0.05)
 				(type solid)
