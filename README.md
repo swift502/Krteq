@@ -107,6 +107,9 @@ The plate has a "keychron" variant, which adjusts stabilizer cutouts for their n
 
 ## Firmware
 
+> [!WARNING]
+> TODO Bump PID
+
 QMK/VIA setup with a few custom features:
 
 - custom `KRT_VOL` keycode for combined volume control
