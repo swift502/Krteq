@@ -89,7 +89,7 @@
 		)
 		(capping no)
 		(filling no)
-		(grid_origin 294.725 76.875)
+		(grid_origin 156.425 87.825)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -96433,7 +96433,7 @@
 	(footprint "Krteq:RaspberryPi_Pico"
 		(layer "B.Cu")
 		(uuid "ec2cde5a-f713-43d5-9dd9-514a9d4125dd")
-		(at 156.425 87.825 90)
+		(at 154.237 87.825 90)
 		(descr "Raspberry Pi Pico")
 		(tags "module usb pcb")
 		(property "Reference" "A1"
