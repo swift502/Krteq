@@ -1,8 +1,8 @@
 {
   "customKeycodes": [
     {
-      "name": "Volume control",
-      "title": "Volume down, up with Shift, mute with Ctrl",
+      "name": "Krteq Volume",
+      "title": "Volume down on press, up with Shift, mute with Ctrl",
       "shortName": "KrtVol"
     }
   ],
