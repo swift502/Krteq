@@ -4,6 +4,11 @@
       "name": "Krteq Volume",
       "title": "Volume Down on press, Volume Up with Shift, Mute with Ctrl",
       "shortName": "KrtVol"
+    },
+    {
+      "name": "Krteq Screen",
+      "title": "Cycle screen modes on press, cycle backwards with Shift, reset to default with Ctrl",
+      "shortName": "KrtScr"
     }
   ],
   "keycodes": ["qmk_rgb_matrix_keycodes"],
