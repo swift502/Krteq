@@ -66,7 +66,7 @@ bool oled_task_kb(void)
     oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
     oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
     oled_write_P(led_state.scroll_lock ? PSTR("ACCENT ") : PSTR("    "), false);
-    oled_write_P(get_highest_layer(layer_state) >= 3 ? PSTR("INPUT LOCK") : PSTR("    "), false);
+    oled_write_P(get_highest_layer(layer_state) >= 4 ? PSTR("INPUT LOCK") : PSTR("    "), false);
     
     return false;
 }
@@ -74,11 +74,9 @@ bool oled_task_kb(void)
 
 const is31fl3733_led_t PROGMEM g_is31fl3733_leds[IS31FL3733_LED_COUNT] = {
     //  R          G          B
-    // Row 0
     {0, SW1_CS1,   SW2_CS1,   SW3_CS1},
     {0, SW10_CS1,  SW11_CS1,  SW12_CS1},
 
-    // Row 1
     {0, SW1_CS2,   SW2_CS2,   SW3_CS2},
     {0, SW4_CS2,   SW5_CS2,   SW6_CS2},
     {0, SW7_CS2,   SW8_CS2,   SW9_CS2},
@@ -92,7 +90,6 @@ const is31fl3733_led_t PROGMEM g_is31fl3733_leds[IS31FL3733_LED_COUNT] = {
     {0, SW7_CS4,   SW8_CS4,   SW9_CS4},
     {0, SW10_CS4,  SW11_CS4,  SW12_CS4},
 
-    // Row 2
     {0, SW1_CS5,   SW2_CS5,   SW3_CS5},
     {0, SW4_CS5,   SW5_CS5,   SW6_CS5},
     {0, SW7_CS5,   SW8_CS5,   SW9_CS5},
@@ -106,7 +103,6 @@ const is31fl3733_led_t PROGMEM g_is31fl3733_leds[IS31FL3733_LED_COUNT] = {
     {0, SW7_CS7,   SW8_CS7,   SW9_CS7},
     {0, SW10_CS7,  SW11_CS7,  SW12_CS7},
 
-    // Row 3
     {0, SW1_CS8,   SW2_CS8,   SW3_CS8},
     {0, SW4_CS8,   SW5_CS8,   SW6_CS8},
     {0, SW7_CS8,   SW8_CS8,   SW9_CS8},
@@ -120,7 +116,6 @@ const is31fl3733_led_t PROGMEM g_is31fl3733_leds[IS31FL3733_LED_COUNT] = {
     {0, SW7_CS10,  SW8_CS10,  SW9_CS10},
     {0, SW10_CS10, SW11_CS10, SW12_CS10},
 
-    // Row 4
     {0, SW1_CS11,  SW2_CS11,  SW3_CS11},
     {0, SW4_CS11,  SW5_CS11,  SW6_CS11},
     {0, SW7_CS11,  SW8_CS11,  SW9_CS11},
@@ -134,7 +129,6 @@ const is31fl3733_led_t PROGMEM g_is31fl3733_leds[IS31FL3733_LED_COUNT] = {
     {0, SW7_CS13,  SW8_CS13,  SW9_CS13},
     {0, SW10_CS13, SW11_CS13, SW12_CS13},
 
-    // Row 5
     {0, SW1_CS14,  SW2_CS14,  SW3_CS14},
     {0, SW4_CS14,  SW5_CS14,  SW6_CS14},
     {0, SW7_CS14,  SW8_CS14,  SW9_CS14},

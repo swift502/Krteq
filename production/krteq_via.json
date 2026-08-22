@@ -6,13 +6,13 @@
       "shortName": "KrtVol"
     }
   ],
-  "keycodes": ["qmk_lighting"],
+  "keycodes": ["qmk_rgb_matrix_keycodes"],
   "matrix": {
     "rows": 6,
     "cols": 12
   },
   "name": "Krteq",
-  "productId": "0x1617",
+  "productId": "0x1618",
   "vendorId": "0x4A42",
   "layouts": {
     "keymap": [
