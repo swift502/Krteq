@@ -36,11 +36,8 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 - 61x Gateron KS-33 switches
 - 61x MX low profile keycaps
 - Gateron 2u low profile plate-mounted stabilizer
-- 8x M2.5x5 screws
+- 8x M2.5x6 screws
 - Rubber feet
-
-> [!WARNING]
-> TODO Verify length of all screws
 
 ### Breakout boards
 
