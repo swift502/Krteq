@@ -38,10 +38,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [2] = LAYOUT_default(
         _______,                                                                                           RM_TOGG,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU,
-        RM_NEXT, RM_HUED, RM_VALU, RM_HUEU, RM_SPDU, _______, _______, _______, _______, KC_PSLS, KC_PAST, KC_PMNS,
-        RM_PREV, RM_SATD, RM_VALD, RM_SATU, RM_SPDD, _______, _______, _______, _______, _______, _______, KC_PPLS,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RSFT(KC_ENT),
-        _______, _______, _______, _______, _______,      _______,     _______, _______, _______, _______, RCTL(KC_ENT)
+        _______, RM_HUED, RM_VALU, RM_HUEU, RM_SATU, _______, _______, _______, _______, KC_PSLS, KC_PAST, KC_PMNS,
+        _______, RM_PREV, RM_VALD, RM_NEXT, RM_SATD, _______, _______, _______, _______, _______, _______, KC_PPLS,
+        RM_SPDU, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RSFT(KC_ENT),
+        RM_SPDD, _______, _______, _______, _______,      _______,     _______, _______, _______, _______, RCTL(KC_ENT)
     ),
     [3] = LAYOUT_default(
         XXXXXXX,                                                                                           XXXXXXX,

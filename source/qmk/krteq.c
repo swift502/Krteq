@@ -50,19 +50,25 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 }
 
 #ifdef OLED_ENABLE
+oled_rotation_t oled_init_kb(oled_rotation_t rotation)
+{
+    return OLED_ROTATION_180;
+}
+
 bool oled_task_kb(void)
 {
+    if (!oled_task_user())
+    {
+        return false;
+    }
+
     led_t led_state = host_keyboard_led_state();
     oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
     oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
     oled_write_P(led_state.scroll_lock ? PSTR("ACCENT ") : PSTR("    "), false);
-
-    if (get_highest_layer(layer_state) >= 3)
-    {
-        oled_write_P(led_state.scroll_lock ? PSTR("INPUT LOCK") : PSTR("    "), false);
-    }
+    oled_write_P(get_highest_layer(layer_state) >= 3 ? PSTR("INPUT LOCK") : PSTR("    "), false);
     
-    return oled_task_user();
+    return false;
 }
 #endif
 
