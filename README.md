@@ -18,10 +18,7 @@ Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning f
 - QMK/VIA compatible
 - 3D printed case with a 7 degree tilt
 - Tray mount
-- 233mm × 125mm × 30mm
-
-> [!WARNING]
-> TODO Update dimensions
+- 233mm × 121mm × 30mm
 
 Connecting the keyboard to [usevia.app](https://usevia.app) requires manually uploading the [design file](production/krteq_via.json) in the design tab.
 
