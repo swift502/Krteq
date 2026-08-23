@@ -226,7 +226,7 @@ const is31fl3733_led_t PROGMEM g_is31fl3733_leds[IS31FL3733_LED_COUNT] = {
     {0, SW7_CS14,  SW8_CS14,  SW9_CS14},
     {0, SW10_CS14, SW11_CS14, SW12_CS14},
     {0, SW1_CS15,  SW2_CS15,  SW3_CS15},
-    //#################################//
+    //################################//
     {0, SW7_CS15,  SW8_CS15,  SW9_CS15},
     {0, SW10_CS15, SW11_CS15, SW12_CS15},
     {0, SW1_CS16,  SW2_CS16,  SW3_CS16},
