@@ -1,34 +1,10 @@
 #include QMK_KEYBOARD_H
 
-#ifdef OLED_ENABLE
-#define WELCOME_LOGO_DURATION 2000
-
-static uint16_t welcome_screen_timer = 0;
-static bool welcome_logo_done = false;
-
-// System screens
-static void screen_welcome_logo(void)
-{
-}
-
-static void screen_input_lock(void)
-{
-}
-
-// User screens
-static void screen_indicators(void)
-{
-    oled_set_cursor(0, 0);
-
-    led_t led_state = host_keyboard_led_state();
-    oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR(""), false);
-    oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR(""), false);
-    oled_write_P(led_state.scroll_lock ? PSTR("ACCENT ") : PSTR(""), false);
-}
-
-static void screen_bongo_cat(void)
-{
-}
+#define LOGO_DURATION 3000
+uint16_t logo_timer;
+bool logo_finished = false;
+int selected_user_screen = 0;
+int last_rendered_screen = -1;
 
 enum user_screens
 {
@@ -43,36 +19,19 @@ enum system_screens
     SYSTEM_SCREEN_INPUT_LOCK
 };
 
-static int8_t selected_user_screen = 0;
-static uint8_t last_rendered_screen = 255;
-
-static void user_screen_reset(void)
+void default_user_screen(void)
 {
     selected_user_screen = 0;
-    oled_clear();
 }
 
-static void user_screen_next(void)
+void shift_user_screen(int shift)
 {
-    selected_user_screen++;
-    if (selected_user_screen >= USER_SCREEN_COUNT) selected_user_screen = 0;
-    oled_clear();
+    selected_user_screen += shift;
+    selected_user_screen %= USER_SCREEN_COUNT;
+    if (selected_user_screen < 0) selected_user_screen += USER_SCREEN_COUNT;
 }
 
-static void user_screen_previous(void)
-{
-    selected_user_screen--;
-    if (selected_user_screen < 0) selected_user_screen = USER_SCREEN_COUNT - 1;
-    oled_clear();
-}
-
-oled_rotation_t oled_init_kb(oled_rotation_t rotation)
-{
-    welcome_screen_timer = timer_read();
-    return oled_init_user(OLED_ROTATION_180);
-}
-
-static void render_screen(uint8_t screen)
+void render_screen(int screen)
 {
     if (screen != last_rendered_screen)
     {
@@ -82,19 +41,28 @@ static void render_screen(uint8_t screen)
 
     switch (screen)
     {
-        case SYSTEM_SCREEN_LOGO:
-            screen_welcome_logo();
-            break;
-        case SYSTEM_SCREEN_INPUT_LOCK:
-            screen_input_lock();
-            break;
         case USER_SCREEN_INDICATORS:
-            screen_indicators();
+            led_t led_state = host_keyboard_led_state();
+            oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
+            oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
+            oled_write_P(led_state.scroll_lock ? PSTR("ACC ") : PSTR("    "), false);
             break;
+
         case USER_SCREEN_BONGO_CAT:
-            screen_bongo_cat();
+            break;
+
+        case SYSTEM_SCREEN_LOGO:
+            break;
+
+        case SYSTEM_SCREEN_INPUT_LOCK:
             break;
     }
+}
+
+oled_rotation_t oled_init_kb(oled_rotation_t rotation)
+{
+    logo_timer = timer_read();
+    return OLED_ROTATION_180;
 }
 
 bool oled_task_kb(void)
@@ -104,15 +72,10 @@ bool oled_task_kb(void)
         return false;
     }
 
-    if (!welcome_logo_done)
-    {
-        welcome_logo_done = timer_elapsed(welcome_screen_timer) > WELCOME_LOGO_DURATION;
-    }
-
-    if (!welcome_logo_done)
+    if (!logo_finished)
     {
         render_screen(SYSTEM_SCREEN_LOGO);
-        
+        logo_finished = timer_elapsed(logo_timer) > LOGO_DURATION;
     }
     else if (get_highest_layer(layer_state) >= 4)
     {
@@ -125,12 +88,35 @@ bool oled_task_kb(void)
 
     return false;
 }
-#endif
 
 bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 {
     uint8_t mods = get_mods();
     bool double_shift = (mods & MOD_MASK_SHIFT) == MOD_MASK_SHIFT;
+
+    switch (keycode)
+    {
+        case KC_B:
+            if (record->event.pressed && double_shift)
+            {
+                tap_code16(QK_BOOTLOADER);
+                return false;
+            }
+            break;
+
+        case KC_C:
+            if (record->event.pressed && double_shift)
+            {
+                tap_code16(QK_CLEAR_EEPROM);
+                return false;
+            }
+            break;
+    }
+
+    if (!process_record_user(keycode, record))
+    {
+        return false;
+    }
 
     switch (keycode)
     {
@@ -156,45 +142,26 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
             }
             return false;
 
-#ifdef OLED_ENABLE
         case KRT_SCR:
             if (record->event.pressed)
             {
                 if (mods & MOD_MASK_CTRL)
                 {
-                    user_screen_reset();
+                    default_user_screen();
                 }
                 else if (mods & MOD_MASK_SHIFT)
                 {
-                    user_screen_previous();
+                    shift_user_screen(-1);
                 }
                 else
                 {
-                    user_screen_next();
+                    shift_user_screen(1);
                 }
-                return false;
             }
-            break;
-#endif
-
-        case KC_B:
-            if (record->event.pressed && double_shift)
-            {
-                tap_code16(QK_BOOTLOADER);
-                return false;
-            }
-            break;
-
-        case KC_C:
-            if (record->event.pressed && double_shift)
-            {
-                tap_code16(QK_CLEAR_EEPROM);
-                return false;
-            }
-            break;
+            return false;
     }
 
-    return process_record_user(keycode, record);
+    return true;
 }
 
 const is31fl3733_led_t PROGMEM g_is31fl3733_leds[IS31FL3733_LED_COUNT] = {
@@ -259,6 +226,7 @@ const is31fl3733_led_t PROGMEM g_is31fl3733_leds[IS31FL3733_LED_COUNT] = {
     {0, SW7_CS14,  SW8_CS14,  SW9_CS14},
     {0, SW10_CS14, SW11_CS14, SW12_CS14},
     {0, SW1_CS15,  SW2_CS15,  SW3_CS15},
+    //################################//
     {0, SW7_CS15,  SW8_CS15,  SW9_CS15},
     {0, SW10_CS15, SW11_CS15, SW12_CS15},
     {0, SW1_CS16,  SW2_CS16,  SW3_CS16},
