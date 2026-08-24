@@ -1,4 +1,5 @@
 #include QMK_KEYBOARD_H
+#include "process_quantum.h"
 
 #define LOGO_DURATION 3000
 uint16_t logo_timer;
@@ -99,16 +100,14 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
         case KC_B:
             if (record->event.pressed && double_shift)
             {
-                tap_code16(QK_BOOTLOADER);
-                return false;
+                return process_quantum(QK_BOOTLOADER, record);
             }
             break;
 
         case KC_C:
             if (record->event.pressed && double_shift)
             {
-                tap_code16(QK_CLEAR_EEPROM);
-                return false;
+                return process_quantum(QK_CLEAR_EEPROM, record);
             }
             break;
     }
