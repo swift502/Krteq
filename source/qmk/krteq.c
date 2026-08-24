@@ -100,14 +100,20 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
         case KC_B:
             if (record->event.pressed && double_shift)
             {
-                return process_quantum(QK_BOOTLOADER, record);
+                if (!process_quantum(QK_BOOTLOADER, record))
+                {
+                    return false;
+                }
             }
             break;
 
         case KC_C:
             if (record->event.pressed && double_shift)
             {
-                return process_quantum(QK_CLEAR_EEPROM, record);
+                if (!process_quantum(QK_CLEAR_EEPROM, record))
+                {
+                    return false;
+                }
             }
             break;
     }
