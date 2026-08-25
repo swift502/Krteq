@@ -104,6 +104,7 @@ The plate has a "keychron" variant, which adjusts stabilizer cutouts for their n
 QMK/VIA setup with a few custom features:
 
 - custom `KRT_VOL` keycode for combined volume control
+- custom `KRT_SCR` keycode for OLED mode switching
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> reverts to the default keymap
 
