@@ -89,7 +89,7 @@
 		)
 		(capping no)
 		(filling no)
-		(grid_origin 156.425 87.825)
+		(grid_origin 105.125 76.875)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -1620,7 +1620,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1632,9 +1632,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1c766bdd-d2e5-49a4-bbc5-6dc2985a5e59")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "128e345b-0365-4083-a463-76af1e179478")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/4e35b47c-bba5-45e3-abc7-8ec1403118c1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3173,7 +3207,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3185,9 +3219,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "50eedcd6-b9b2-4fd2-9b58-589766029277")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4d12dead-f9e3-421b-8595-a3e252c3b887")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/b4e9e13f-c57b-40ee-a16d-8a82d4fce7c9")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4237,7 +4305,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4249,9 +4317,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5ebc3168-e6ea-45a0-97b4-d2eac4d6d265")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "81b75c7f-23e2-4da7-8b97-f36ba70f311d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/8ee27991-e02c-43e2-96c2-4af76ecf0c07")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5790,7 +5892,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5802,9 +5904,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "03b9a64c-90c7-4a5e-8c1a-c34bde7f2260")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e33d1adc-a3b7-4632-9632-06cd805a71a3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/86cc6ead-4d10-40c4-a751-12d720b7dd9e")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8127,7 +8263,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8139,9 +8275,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3a0d6a65-8204-4461-8327-2d8e290d9072")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d0f4be62-e80c-46ec-badb-2d9499c6c83a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/5a5a0d86-2463-4a27-9d46-1203e4750acc")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9680,7 +9850,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9692,9 +9862,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6aa0a1fe-2775-4fbe-a093-c45ce197e2f7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "413f9ba7-4153-47b5-bd17-4987449a7d02")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/1f1ba7ba-36ee-4d23-a245-5f3bee16d2d7")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10565,7 +10769,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10577,9 +10781,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "608741f8-2e63-4228-bd73-a51f47b0921a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fc025696-dd9a-4908-9803-86d28a190575")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/edc3ab07-ae2a-4fb9-a88c-7ce0ccea0a39")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11450,7 +11688,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11462,9 +11700,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f290f8c8-504c-4d9e-9bcd-549bfa0a22db")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "79fe1622-0581-4ace-bc98-9f053e3099ce")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/fad1dfc2-c0c3-4ffe-a2be-ab0e1102c9e5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12953,7 +13225,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12965,9 +13237,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "97763bba-06a0-4714-ab50-c20c7a8641ce")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "697162c0-3a9e-478f-b26b-daa5bb0a5497")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/f1fc7543-d57a-461f-8420-11c4d0a68e59")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13838,7 +14144,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13850,9 +14156,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a74e96e6-f101-4f51-8272-390aedf63b4a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "97f066ae-26f6-4c59-a2a7-48e70ede8e4c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/92c86f19-2ebd-412d-a79c-ac83c3ad118b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15115,7 +15455,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15127,9 +15467,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b4190490-7f1e-4e81-8b23-3a162daf4a81")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1a4572af-7cd4-4663-86d6-57c435fb8648")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/169b220a-c894-4d9c-8acd-14af287b41ca")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -16000,7 +16374,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16012,9 +16386,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ff3fbd3f-e984-4c2f-92fd-13618ba6cf88")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c9d44537-6120-4028-8ec2-04ef43d09379")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/0ad9da19-ccd8-49f3-9ead-b4810c57f30b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18889,7 +19297,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18901,9 +19309,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "44066414-eb43-4daf-adab-950040dcf90d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6f9c7e78-6865-47ad-b561-2213932d5951")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/f6688fe1-6797-413a-b3c8-cb827aadf316")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20878,7 +21320,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20890,9 +21332,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "aca17f2c-7194-4c01-8b14-187f939fc3c1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4731e611-2115-40a9-b871-714c419ec20b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/347a6af0-952b-45b4-b9f2-1a887ddacae9")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23215,7 +23691,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23227,9 +23703,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c1c100e9-63c2-4cda-b821-19078c9d69de")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d8618436-70a5-4ce1-82cb-51b3288690fe")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/f66c2039-6d1d-41ae-9130-533e75823b84")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24100,7 +24610,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24112,9 +24622,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "470301ec-7921-4d26-baee-5a748faa78dc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a45f633c-ebe5-45cf-909a-eff792eadd68")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/e20799c1-1838-4d68-bcf7-f4af2e90939b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24985,7 +25529,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24997,9 +25541,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e19aceee-719f-4513-9caa-04e65ec8d4fc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "954ee9df-c783-4f9e-a673-f62a154cb6bb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/2ffdbb76-93e3-44c2-9bee-9d70fd217f04")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25870,7 +26448,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25882,9 +26460,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0cabedd2-afd9-4a9d-b67c-7852b3cf55e5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6ea8048d-d090-4e14-b985-f5703f2a8d1d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/19f2cc58-b1cb-44ec-bb38-59af0e5f2eda")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -32423,7 +33035,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32435,9 +33047,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5858985f-09df-4974-9d07-2daf53c2c305")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d0e908ce-db50-46f6-a3fb-103e2e581d16")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/60a64a87-047d-4edb-9edd-ea18cf64547f")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -34272,7 +34918,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34284,9 +34930,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "000e26ef-4784-4889-9495-fef3e5bf2ec8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1866b090-63f5-4a0d-99f6-9071e4331e13")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/1f211f56-44b9-4b1e-9310-ea755b9e76a4")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -35709,7 +36389,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35721,9 +36401,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "41a90fcf-57f3-443f-9467-2fb899633d25")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5e6a2aa1-6566-4b6a-b7ad-dbd8e055bcf6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/9076d9ff-7eef-42b0-bcbc-c702bdc10b0c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -37262,7 +37976,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37274,9 +37988,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4a51ac8b-410e-4d8b-bb6e-5c6061fbc030")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "36ec5939-d0cb-4d2f-9c87-485b2d841633")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/88320b7c-2fbb-407a-af1f-98aed6554fff")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -38147,7 +38895,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38159,9 +38907,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "16e7804a-59cf-4062-a565-518a7a1bae84")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fa1f2992-400a-4495-bc8d-ea91f36f06dd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/ae436308-1176-4924-9b03-c53d1881672c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -39032,7 +39814,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39044,9 +39826,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4d75ccaa-c851-4aa1-a2fb-2f7faefe59df")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "497fc840-630b-417b-b6ef-4b4d47fb435d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/a3185c1b-ae60-4a22-8d36-329f0f7bdbc4")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -40096,7 +40912,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -40108,9 +40924,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "dd11a3ae-4f07-49ba-8de6-b7cf5b2f7cb8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "098abf12-06c1-43bd-b817-82b2677afe79")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/aed2e4d2-7878-4bb1-aa36-aeadf08d9f12")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -42317,7 +43167,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -42329,9 +43179,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "db40ed0c-1fc3-4ba9-91cf-4559820c4af8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "318a5fb6-a20b-4e04-b85d-f8a971967b2b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/301ddd53-0579-4536-8857-0cfa7d702337")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -45509,7 +46393,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -45521,9 +46405,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "bea2fbac-c6ad-4e87-81fc-c9156a904613")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8005efea-4d03-4b4d-aeec-f74e3fe09d07")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/e81c9abc-5efb-4a1e-bf22-4f56e3fdaeda")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -48033,7 +48951,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48045,9 +48963,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "770d6214-58a9-4291-864c-03eb203d1d36")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f7cc71db-9f17-464d-b1df-c6111724145e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/28af075b-fdf0-4a5d-bb16-e4650567c044")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -49194,7 +50146,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -49206,9 +50158,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3d0a7e8e-fdd2-4aa1-b393-75157c8a1f2f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0e3e547b-a448-4c37-a52c-a81d9c9059d8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/fdf1008d-832f-43ab-86da-64d31bf84fae")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -50079,7 +51065,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -50091,9 +51077,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d1964e53-91f2-4e31-b835-9d25fedbd567")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3025dcd0-d2c2-41fe-9b16-e6ee26e25d2f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/dfdb00ee-a43c-41bd-a5d2-7fac1f275ec8")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -52300,7 +53320,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -52312,9 +53332,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f6dc5c25-5212-4f61-a551-2ff3dd291358")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "79c25e8a-89bc-4030-8941-f771027d5234")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/95f22d83-56f6-4d93-8d9e-32d53ad8d610")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -53185,7 +54239,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -53197,9 +54251,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "06dcdc03-27cd-4524-856d-6c3384de6d5e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "bea09e27-0573-4bcb-8883-d854c088e17a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/ce72d5d0-1724-4625-87fe-be87b2c5a87f")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -54070,7 +55158,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -54082,9 +55170,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d19b65d9-ae9d-4d20-8d6b-2a7c874e428a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b8390117-4a4e-4630-bbf6-ca649004f5e7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/6ad67768-55cb-4cfb-8194-32658297db35")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -55899,7 +57021,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -55911,9 +57033,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "512ce194-1a89-4bc5-aca0-58bf85596ca6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "314a2410-255a-4723-a63a-f461284f09c2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/1fb88d1e-8315-468c-ae2e-a74294576711")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -57176,7 +58332,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -57188,9 +58344,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "529a3180-507f-4f78-a33c-d181a7768630")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ea11e6fb-88ee-4868-9059-6400adfd5963")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/9e87255c-de1e-4625-9f4c-2565304ca36c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -58337,7 +59527,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -58349,9 +59539,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c8b529b1-339c-4390-837e-68f845fc4440")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fb0b9daf-a824-483c-9784-bbf5ed9ba0c6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/874f9a8b-1373-4185-aebd-a77655751dc5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -59222,7 +60446,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -59234,9 +60458,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a2f1e407-5590-424f-a959-1ab49e81d504")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5590386a-471d-4b44-9c91-14fa8b1842ad")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/93bc01a3-7479-4ca0-86dc-a0d3b22b25d0")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -60659,7 +61917,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -60671,9 +61929,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ef6a57d0-d3f6-43f9-afe1-8054b7c72be4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7a6c6972-614e-4629-b663-92aab23800f7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/8382c429-a03b-45b6-9e79-a1e31f91f7e5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -61544,7 +62836,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -61556,9 +62848,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0f1f951a-f0b6-4e93-b098-36bbf572c57b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "eaa7baf6-058a-48d3-b850-489ef510942c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/2a4637bd-e9e3-47c3-ba2e-e8a9b4dbdc2b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -62821,7 +64147,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62833,9 +64159,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "902fa409-5025-4502-92e9-4407150b88ef")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "895406a6-1819-45ed-b9df-435df362211e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/6a8a640c-1902-4162-b695-1bd281cd8058")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -64490,7 +65850,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -64502,9 +65862,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ee4e49f3-3f4e-45a5-bc66-66b3a795e920")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5477f80a-9274-41af-b53b-8560c2e8cab0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/ce05fb90-42e1-49f6-921d-e1100a54e2a5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -66884,7 +68278,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -66896,9 +68290,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6bdbd8a1-3d66-4f55-9c98-0326b1e28fbf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f76d08a8-b478-4e4a-988a-317a0cd31cd3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/93ca3729-92e7-406d-8896-ac0446d2fd85")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -68713,7 +70141,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -68725,9 +70153,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8cea4415-dc16-4f12-af14-c6b99431e503")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0c6cf7cd-cc7b-4a0d-b16e-e7ba6ece8aee")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/43952e30-eeeb-4a7a-bac3-eef59ae4cdd7")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -70978,7 +72440,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -70990,9 +72452,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "40f74bfc-f49e-48f0-b4ab-459289b418d2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0d6d0919-1cfa-44c8-92ce-3c4b4384ead8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/ac3cc8ae-1580-47e7-acc7-a9bad18fbbeb")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -72255,7 +73751,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -72267,9 +73763,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "30efbbca-6608-41d3-bfcc-c8e1b1b8ca2e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "965c6078-daf9-43b4-9a43-a7966d3352f5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/45cc0bf6-3600-4ff4-80ff-a2772d7c56e0")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -73705,7 +75235,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -73717,9 +75247,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "50a1a843-11c7-46c4-8125-39502877c43e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1fb10272-62b2-439c-8b3e-6cb7ef8c279d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/1821ce80-01bc-4754-9f05-8471e0a1df75")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -74982,7 +76546,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -74994,9 +76558,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "addddfe3-2cb6-4f68-9989-feb5da901d5c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4092deee-8b76-4b47-bffc-da88e9da172a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/baaa03d6-6200-4169-b357-f9416d7d9787")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -76651,7 +78249,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -76663,9 +78261,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "11863daf-9dc9-4af9-a0d2-55d3998dbe61")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2aed5fa8-3882-4662-894d-77038c323e91")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/d10e7418-693f-4729-8785-0f10388bcfe6")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -78872,7 +80504,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -78884,9 +80516,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7e9b72de-f9ee-4f59-b8c7-498d90f46d1b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2b6e33dc-cf1b-48cf-a268-5e9dbb76857a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/54894214-554f-496c-a5f8-7a42bcf7f1fc")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -79757,7 +81423,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -79769,9 +81435,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "574a273a-3edb-4484-8d82-3d8a3f60fc68")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8b016946-bbef-47f6-93d1-28f48bcbc18c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/179f2595-7dbe-4420-aba6-3365fd583a9d")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -81310,7 +83010,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -81322,9 +83022,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "90a57d2e-c0b8-402d-b020-a847fb26d1e1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7d75c2ce-72d4-448b-846b-777a39e4cae9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/3d2f90a5-c927-4128-be33-3e8b0010c13b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -83023,7 +84757,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -83035,9 +84769,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ffd31daa-775a-47cc-8b55-177b4ebec0cd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "309a3e11-4431-492b-8410-d4c3d9e65f09")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/f108d448-7651-4cc0-9d97-f8d724bac4ff")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -83908,7 +85676,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -83920,9 +85688,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "be74f471-6230-4a9f-b774-6e9957d7b136")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "45cfdfbe-3cb9-46f4-89c3-840b356607fc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/c1fde9ff-fa63-4000-9563-f69bede447ee")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -85577,7 +87379,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -85589,9 +87391,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0a84dc08-40ab-44fd-82f8-82f77f22bcff")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b7dc0b3d-7e2a-485a-9250-fdf3924cd852")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/9a9ee287-ab69-4a1f-95c9-74e2029181f1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -88363,7 +90199,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -88375,9 +90211,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cd9fe0cf-745d-4154-8e93-13bac14b2cc9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "65bec0d2-1aa2-490d-a77a-cd9f4f372b3b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/107c0a22-ea02-4cbd-9aa4-eaa16b486eb9")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -90211,7 +92081,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -90223,9 +92093,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c6aef9f8-1811-422b-803c-9c6c70e3e590")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e96e0dc9-5053-419e-8a96-cef83ec90242")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/fa361133-6e66-4ca8-90c7-c8845d4fd108")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -91488,7 +93392,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -91500,9 +93404,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b314f4e4-05be-4a14-9a2c-9efd44a29467")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e60da106-6c7d-4c70-b561-1b089542ecf4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/dc2cd2c5-83a3-4008-94fe-18aa484ce23e")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -92925,7 +94863,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -92937,9 +94875,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0dfa3a26-8805-402e-8827-17457310bd37")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "97a04dbf-80ba-41a1-aeb0-bd0b095f6987")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/f00241dd-13b6-4567-80a3-9f894ea0c403")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -95370,7 +97342,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "COL2")
+			(net "unconnected-(A1-GPIO12-Pad16)")
 			(pinfunction "GPIO12_16")
 			(pintype "bidirectional")
 			(uuid "35c121eb-c700-4a7d-bc51-c3a80e55ef4d")
@@ -95621,7 +97593,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(A1-GPIO27_ADC1-Pad32)")
+			(net "COL2")
 			(pinfunction "GPIO27_ADC1_32")
 			(pintype "bidirectional")
 			(uuid "c332c9a5-4ffb-438e-8862-de32d18574cb")
@@ -96562,7 +98534,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -96574,9 +98546,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "86b17836-d444-4fe9-a893-8a3c07c65000")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "25880fb7-076f-4aee-8a6f-ccc9acd2c061")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/19ce64a7-160e-4b31-aa4d-75ffd8947e73")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -98288,7 +100294,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -98300,9 +100306,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2968c136-754c-4c96-a138-9e13baff5a3d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8eb8df0e-9da9-48c7-a1e3-dcbfb8a7757c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/199748e7-b4e7-403c-95be-4cf3d3c55e36")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -99173,7 +101213,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -99185,9 +101225,43 @@
 				)
 			)
 		)
+		(property "MPN" "KS-2P02B01-02"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e0330541-d01b-4563-a34d-1769a6471ed8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6b8432a1-e0b5-4fa5-b78c-7bf669f5b47f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/a55f8f16-70ef-4ebc-9b4f-d08be663152a")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -100752,6 +102826,1142 @@
 		(size 1)
 		(layer "F.Fab")
 		(uuid "a0475298-35e4-42aa-8b9d-8ce5e1c4ac7d")
+	)
+	(segment
+		(start 145.1125 107.306346)
+		(end 146.436997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D5-A)")
+		(uuid "2d641bee-e907-4dea-be1d-86e981d01bc8")
+	)
+	(segment
+		(start 145.1125 110.15)
+		(end 145.1125 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D5-A)")
+		(uuid "387f0d09-b6db-46ed-903c-af3814fd9220")
+	)
+	(segment
+		(start 278.4625 167.3)
+		(end 278.4625 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D48-A)")
+		(uuid "852d7797-17aa-47e8-a2bc-4085ef956bbc")
+	)
+	(segment
+		(start 278.4625 164.456346)
+		(end 279.786997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D48-A)")
+		(uuid "9b9d5406-010e-40d0-9828-dfeb415d8f08")
+	)
+	(segment
+		(start 278.4625 129.2)
+		(end 278.4625 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D24-A)")
+		(uuid "b8275d7a-c07e-4650-bfde-68167ef6df0b")
+	)
+	(segment
+		(start 278.4625 126.356346)
+		(end 279.786997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D24-A)")
+		(uuid "d3c82f4b-f76a-4821-9e86-f446f0a55540")
+	)
+	(segment
+		(start 278.4625 110.15)
+		(end 278.4625 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D12-A)")
+		(uuid "47fe8d5c-dcf6-40e8-ab17-87b0b1d2e1ca")
+	)
+	(segment
+		(start 278.4625 107.306346)
+		(end 279.786997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D12-A)")
+		(uuid "af7605c1-cc46-4c17-b980-a2ca3a91ba99")
+	)
+	(segment
+		(start 291.9375 111.2)
+		(end 291.9375 187.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL9")
+		(uuid "72c9a00d-750c-4fa6-9397-068669c2006a")
+	)
+	(segment
+		(start 316.5625 126.356346)
+		(end 317.886997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D26-A)")
+		(uuid "92ec82dc-5bf3-4be7-b60d-440b7d18c0ff")
+	)
+	(segment
+		(start 316.5625 129.2)
+		(end 316.5625 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D26-A)")
+		(uuid "c7e76863-4e00-4407-8d78-2e6ba8f296b6")
+	)
+	(segment
+		(start 107.0125 110.15)
+		(end 107.0125 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D3-A)")
+		(uuid "5e07e8d3-75cf-4bf0-a287-509f49f8c1cc")
+	)
+	(segment
+		(start 107.0125 107.306346)
+		(end 108.336997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D3-A)")
+		(uuid "cc815a7f-4dcc-4f3f-9f54-ad7ee9e00feb")
+	)
+	(segment
+		(start 120.4875 88.5545)
+		(end 130.107 78.935)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL0")
+		(uuid "3a113e2b-3a9c-4191-938b-12f981e24ff3")
+	)
+	(segment
+		(start 120.4875 92.15)
+		(end 120.4875 88.5545)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL0")
+		(uuid "a6e67b32-dede-4516-8704-6d21c1169217")
+	)
+	(segment
+		(start 120.4875 92.15)
+		(end 120.4875 187.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL0")
+		(uuid "d59be33d-a529-46b7-aaf0-acfcb21336c7")
+	)
+	(segment
+		(start 202.2625 110.15)
+		(end 202.2625 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D8-A)")
+		(uuid "5fcd20ea-4b96-43a4-a67a-f3ccc3107f4c")
+	)
+	(segment
+		(start 202.2625 107.306346)
+		(end 203.586997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D8-A)")
+		(uuid "c8ca3697-ead5-468c-96b6-0cc672509a29")
+	)
+	(segment
+		(start 215.7375 111.2)
+		(end 215.7375 168.35)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL5")
+		(uuid "ee64bf0f-6606-4581-aeb7-6b9d226eb404")
+	)
+	(segment
+		(start 316.5625 164.456346)
+		(end 317.886997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D50-A)")
+		(uuid "433d29cf-dc00-4231-97e1-55d383fdf0d1")
+	)
+	(segment
+		(start 316.5625 167.3)
+		(end 316.5625 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D50-A)")
+		(uuid "67bfedc7-3643-4047-b877-a55579dac188")
+	)
+	(segment
+		(start 126.0625 183.506346)
+		(end 127.386997 182.181849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D52-A)")
+		(uuid "6b5ae03c-7fef-4886-b093-ed6a233da1dd")
+	)
+	(segment
+		(start 126.0625 186.35)
+		(end 126.0625 183.506346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D52-A)")
+		(uuid "e1e088d9-8c15-4be1-89c7-248c7baf8e3c")
+	)
+	(segment
+		(start 139.5375 111.2)
+		(end 139.5375 98.5255)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL1")
+		(uuid "43660121-fec6-4889-9eb0-00656813efdb")
+	)
+	(segment
+		(start 139.5375 98.5255)
+		(end 137.727 96.715)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL1")
+		(uuid "483b538e-dd72-4ad7-92aa-1251cf61faf3")
+	)
+	(segment
+		(start 139.5375 111.2)
+		(end 139.5375 187.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL1")
+		(uuid "e4219953-9349-497b-9ceb-cf4fe23695a9")
+	)
+	(segment
+		(start 259.4125 107.306346)
+		(end 260.736997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D11-A)")
+		(uuid "7f6c5fd9-c328-4ff2-bd0a-0288324a5776")
+	)
+	(segment
+		(start 259.4125 110.15)
+		(end 259.4125 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D11-A)")
+		(uuid "cf474b46-22c4-4fcb-a3df-22c2d41f9afe")
+	)
+	(segment
+		(start 164.1625 129.2)
+		(end 164.1625 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D18-A)")
+		(uuid "22108329-cd59-4fd0-82bb-d86475de6a3f")
+	)
+	(segment
+		(start 164.1625 126.356346)
+		(end 165.486997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D18-A)")
+		(uuid "beca9cb2-1278-412b-b90e-9fe607dde074")
+	)
+	(segment
+		(start 297.5125 148.25)
+		(end 297.5125 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D37-A)")
+		(uuid "44596c80-ce3a-4c79-b6d6-9c37bf53b263")
+	)
+	(segment
+		(start 297.5125 145.406346)
+		(end 298.836997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D37-A)")
+		(uuid "92d967db-fcbb-4ab1-a23c-be80a5c672d9")
+	)
+	(segment
+		(start 278.4625 145.406346)
+		(end 279.786997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D36-A)")
+		(uuid "603dd374-2bcf-4a5b-8663-11b4516fa71b")
+	)
+	(segment
+		(start 278.4625 148.25)
+		(end 278.4625 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D36-A)")
+		(uuid "84b8944f-9004-4c0d-b47d-bfcc32a48e80")
+	)
+	(segment
+		(start 240.3625 167.3)
+		(end 240.3625 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D46-A)")
+		(uuid "5c9432e3-6569-4a5d-913b-5498faa721db")
+	)
+	(segment
+		(start 240.3625 164.456346)
+		(end 241.686997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D46-A)")
+		(uuid "c943e16c-1baa-4304-89e7-baac6c14640d")
+	)
+	(segment
+		(start 259.4125 126.356346)
+		(end 260.736997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D23-A)")
+		(uuid "7385e458-5954-406a-9a28-a2b602aa331c")
+	)
+	(segment
+		(start 259.4125 129.2)
+		(end 259.4125 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D23-A)")
+		(uuid "d4be92b1-a4dd-457a-be35-d3c346338069")
+	)
+	(segment
+		(start 272.8875 111.2)
+		(end 272.8875 187.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL8")
+		(uuid "62fb3472-ba69-443a-836a-3776a75fbb24")
+	)
+	(segment
+		(start 126.0625 107.306346)
+		(end 127.386997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D4-A)")
+		(uuid "7fdc7dc1-fc6d-427b-9bcd-84f43efe61f3")
+	)
+	(segment
+		(start 126.0625 110.15)
+		(end 126.0625 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D4-A)")
+		(uuid "c88299e8-3c09-4654-8fe5-3ac511017335")
+	)
+	(segment
+		(start 310.9875 111.2)
+		(end 310.9875 187.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL10")
+		(uuid "7ff1563f-f71c-4e24-b8db-2f72331ed335")
+	)
+	(segment
+		(start 126.0625 167.3)
+		(end 126.0625 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D40-A)")
+		(uuid "099e0a7b-16c4-46cd-bc43-62959855621c")
+	)
+	(segment
+		(start 126.0625 164.456346)
+		(end 127.386997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D40-A)")
+		(uuid "7582072f-c092-4cbc-853a-61dbc664dace")
+	)
+	(segment
+		(start 221.3125 126.356346)
+		(end 222.636997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D21-A)")
+		(uuid "5029a326-69fd-4a6d-870b-3ef5b029f272")
+	)
+	(segment
+		(start 221.3125 129.2)
+		(end 221.3125 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D21-A)")
+		(uuid "8d9682ed-a3ce-4038-b400-976bda8fc96d")
+	)
+	(segment
+		(start 234.7875 111.2)
+		(end 234.7875 168.35)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL6")
+		(uuid "421b191f-9225-439f-817c-75cf5a3cc577")
+	)
+	(segment
+		(start 227.759375 173.315625)
+		(end 225.2625 175.8125)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL6")
+		(uuid "4bad7345-b513-4b90-9500-ac21ddaf948e")
+	)
+	(segment
+		(start 234.7875 168.35)
+		(end 229.821875 173.315625)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL6")
+		(uuid "813d73b7-b874-4b1e-b0c7-f94e093803c7")
+	)
+	(segment
+		(start 225.2625 175.8125)
+		(end 225.2625 187.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL6")
+		(uuid "8e4af175-50e4-4f5b-91ed-16378540173b")
+	)
+	(segment
+		(start 229.821875 173.315625)
+		(end 227.759375 173.315625)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL6")
+		(uuid "9eb7546a-038a-4a3c-836f-e4f790236ccd")
+	)
+	(segment
+		(start 202.2625 167.3)
+		(end 202.2625 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D44-A)")
+		(uuid "93ab2a2e-fc29-46cc-9641-4d0b85a4fbda")
+	)
+	(segment
+		(start 202.2625 164.456346)
+		(end 203.586997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D44-A)")
+		(uuid "eff90da2-bf1a-4fa2-8a4d-787795f408f6")
+	)
+	(segment
+		(start 183.2125 167.3)
+		(end 183.2125 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D43-A)")
+		(uuid "04345ce5-545f-49b1-bdd2-3e243392ff5f")
+	)
+	(segment
+		(start 183.2125 164.456346)
+		(end 184.536997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D43-A)")
+		(uuid "07da3c0b-d3e6-4dd3-bdea-9d4ff8659619")
+	)
+	(segment
+		(start 196.6875 111.2)
+		(end 196.6875 187.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL4")
+		(uuid "aaf77ab3-27f2-4696-89c1-8e3856c8a6a4")
+	)
+	(segment
+		(start 145.1125 129.2)
+		(end 145.1125 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D17-A)")
+		(uuid "830b70b7-5e40-4755-8280-7529adbf6c86")
+	)
+	(segment
+		(start 145.1125 126.356346)
+		(end 146.436997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D17-A)")
+		(uuid "f0414841-84d6-4d02-94b3-3e07a6a14c05")
+	)
+	(segment
+		(start 107.0125 126.356346)
+		(end 108.336997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D15-A)")
+		(uuid "d801d711-68ec-4879-92a6-7c08d047b1fd")
+	)
+	(segment
+		(start 107.0125 129.2)
+		(end 107.0125 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D15-A)")
+		(uuid "ed5a623f-1e4b-450e-9223-7c9c268a1788")
+	)
+	(segment
+		(start 297.5125 110.15)
+		(end 297.5125 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D13-A)")
+		(uuid "096893e8-8fc3-431d-a127-474dd2f5ce8c")
+	)
+	(segment
+		(start 297.5125 107.306346)
+		(end 298.836997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D13-A)")
+		(uuid "3ae63510-08a5-41a8-9164-769de383a847")
+	)
+	(segment
+		(start 259.4125 148.25)
+		(end 259.4125 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D35-A)")
+		(uuid "9b36205b-5b87-4139-9253-26892d8824a3")
+	)
+	(segment
+		(start 259.4125 145.406346)
+		(end 260.736997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D35-A)")
+		(uuid "dfd78b68-628b-43bc-9bd2-a4b270303594")
+	)
+	(segment
+		(start 240.3625 110.15)
+		(end 240.3625 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D10-A)")
+		(uuid "3e7c06a2-1a40-4369-ab2a-b2c40be06412")
+	)
+	(segment
+		(start 240.3625 107.306346)
+		(end 241.686997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D10-A)")
+		(uuid "d3dffa4d-79b4-4a48-b47a-fd777a153fb0")
+	)
+	(segment
+		(start 145.1125 186.35)
+		(end 145.1125 183.506346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D53-A)")
+		(uuid "1afe4c7f-1651-41bc-8369-c33855962c40")
+	)
+	(segment
+		(start 145.1125 183.506346)
+		(end 146.436997 182.181849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D53-A)")
+		(uuid "43241420-1519-486f-9dce-43b1bec839ac")
+	)
+	(segment
+		(start 107.0125 186.35)
+		(end 107.0125 183.506346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D51-A)")
+		(uuid "616ced7e-7d5f-4ec3-a67c-c405b11adec2")
+	)
+	(segment
+		(start 107.0125 183.506346)
+		(end 108.336997 182.181849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D51-A)")
+		(uuid "dabc2ccb-fc5d-4845-872d-f61d80f93a57")
+	)
+	(segment
+		(start 158.5875 111.2)
+		(end 158.5875 187.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL2")
+		(uuid "0de43cf9-21ea-4841-9e1a-2cddf2ddb088")
+	)
+	(segment
+		(start 158.5875 111.2)
+		(end 158.5875 97.2555)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL2")
+		(uuid "bf22fc09-d7f1-4d65-874a-f24d633a0e5a")
+	)
+	(segment
+		(start 158.5875 97.2555)
+		(end 158.047 96.715)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL2")
+		(uuid "e10a5fa3-7aba-450a-892f-deaef10ab15d")
+	)
+	(segment
+		(start 183.2125 110.15)
+		(end 183.2125 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D7-A)")
+		(uuid "2eff057a-7975-4464-9f48-03219e1bd562")
+	)
+	(segment
+		(start 183.2125 107.306346)
+		(end 184.536997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D7-A)")
+		(uuid "3823cf42-4c64-4052-9009-61085c1308e6")
+	)
+	(segment
+		(start 145.1125 164.456346)
+		(end 146.436997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D41-A)")
+		(uuid "7725d692-749a-41d5-8ef4-ab74bda78476")
+	)
+	(segment
+		(start 145.1125 167.3)
+		(end 145.1125 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D41-A)")
+		(uuid "dcf8564c-d48b-4e25-a85f-9b07e6a0eefc")
+	)
+	(segment
+		(start 126.0625 126.356346)
+		(end 127.386997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D16-A)")
+		(uuid "17e1f879-480f-4a3c-89c3-4e7a22c390ae")
+	)
+	(segment
+		(start 126.0625 129.2)
+		(end 126.0625 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D16-A)")
+		(uuid "5f77dc40-55ea-4dfe-a62b-0ed1a3da54a1")
+	)
+	(segment
+		(start 164.1625 186.35)
+		(end 164.1625 183.506346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D54-A)")
+		(uuid "33544561-97dd-4cba-a079-67b6c1b6bad8")
+	)
+	(segment
+		(start 164.1625 183.506346)
+		(end 165.486997 182.181849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D54-A)")
+		(uuid "dbec0d6f-27a2-4e07-9646-676ad2e43d06")
+	)
+	(segment
+		(start 240.3625 145.406346)
+		(end 241.686997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D34-A)")
+		(uuid "63b171fe-9985-4581-aa53-5e96cd25fb4c")
+	)
+	(segment
+		(start 240.3625 148.25)
+		(end 240.3625 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D34-A)")
+		(uuid "69e98e28-a0f9-4474-bc38-51fcddbeb7a9")
+	)
+	(segment
+		(start 253.8375 111.2)
+		(end 253.8375 187.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL7")
+		(uuid "9fffdad0-9622-4eef-9c25-5c3204f9c558")
+	)
+	(segment
+		(start 259.4125 183.506346)
+		(end 260.736997 182.181849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D58-A)")
+		(uuid "09390334-3b15-42fd-b02d-a7b2485f95a8")
+	)
+	(segment
+		(start 259.4125 186.35)
+		(end 259.4125 183.506346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D58-A)")
+		(uuid "7f9d6f85-609f-4eb6-a95c-89794e0906ce")
+	)
+	(segment
+		(start 221.3125 145.406346)
+		(end 222.636997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D33-A)")
+		(uuid "74bc350c-87f3-4773-a1b7-0f93c0945c1e")
+	)
+	(segment
+		(start 221.3125 148.25)
+		(end 221.3125 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D33-A)")
+		(uuid "ec895966-decf-4cad-9edb-9eb47007dd34")
+	)
+	(segment
+		(start 177.6375 111.2)
+		(end 177.6375 187.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL3")
+		(uuid "04051c25-d6ff-48d3-a6ca-ca34180e6249")
+	)
+	(segment
+		(start 183.2125 183.506346)
+		(end 184.536997 182.181849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D55-A)")
+		(uuid "40bf6db0-4dd4-4385-9ca7-01a0b4ff7b13")
+	)
+	(segment
+		(start 183.2125 186.35)
+		(end 183.2125 183.506346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D55-A)")
+		(uuid "d9cb63c6-4c86-402c-b329-7d9694d387c3")
+	)
+	(segment
+		(start 107.0125 145.406346)
+		(end 108.336997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D27-A)")
+		(uuid "68cec31f-a06c-4df0-9d3a-849de6962b21")
+	)
+	(segment
+		(start 107.0125 148.25)
+		(end 107.0125 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D27-A)")
+		(uuid "e8d3733e-da78-45bb-86e6-f3435133ff2c")
+	)
+	(segment
+		(start 240.3625 129.2)
+		(end 240.3625 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D22-A)")
+		(uuid "a0c53939-4d20-40e9-846a-3d9cea207f52")
+	)
+	(segment
+		(start 240.3625 126.356346)
+		(end 241.686997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D22-A)")
+		(uuid "bc9d616a-9061-4662-b42b-7189f9a90544")
+	)
+	(segment
+		(start 107.0125 88.256346)
+		(end 108.336997 86.931849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D1-A)")
+		(uuid "67368369-e750-4d52-ad51-51dd45710791")
+	)
+	(segment
+		(start 107.0125 91.1)
+		(end 107.0125 88.256346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D1-A)")
+		(uuid "e3d96eff-2931-4a90-866c-10f9ef413d90")
+	)
+	(segment
+		(start 297.5125 164.456346)
+		(end 298.836997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D49-A)")
+		(uuid "80f9996b-b1b7-471f-9910-7be5b70c198a")
+	)
+	(segment
+		(start 297.5125 167.3)
+		(end 297.5125 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D49-A)")
+		(uuid "b2f02480-fc14-446e-b63f-22058eae93aa")
+	)
+	(segment
+		(start 316.5625 110.15)
+		(end 316.5625 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D14-A)")
+		(uuid "a67909ae-22dc-40c6-95b1-9f4e0a2fb64f")
+	)
+	(segment
+		(start 316.5625 107.306346)
+		(end 317.886997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D14-A)")
+		(uuid "b02f35dd-9bfd-4e7f-ade5-42e46a65f623")
+	)
+	(segment
+		(start 330.0375 111.2)
+		(end 330.0375 187.4)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "COL11")
+		(uuid "58c8ad38-e001-4799-bdb5-c098cb93b243")
+	)
+	(segment
+		(start 202.2625 148.25)
+		(end 202.2625 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D32-A)")
+		(uuid "5ef5488c-be9a-4d3f-aae2-6facad4807c1")
+	)
+	(segment
+		(start 202.2625 145.406346)
+		(end 203.586997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D32-A)")
+		(uuid "d1bf19a8-fc28-4f06-9895-9aee7a253dd3")
+	)
+	(segment
+		(start 211.7875 183.506346)
+		(end 213.111997 182.181849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D56-A)")
+		(uuid "1e8897ab-1ecd-48ef-9958-395ffa9d3383")
+	)
+	(segment
+		(start 211.7875 186.35)
+		(end 211.7875 183.506346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D56-A)")
+		(uuid "2c519112-cc8a-46b8-975f-b515b0bf4267")
+	)
+	(segment
+		(start 316.5625 183.506346)
+		(end 317.886997 182.181849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D61-A)")
+		(uuid "12122a24-82aa-4873-8781-58c703074b42")
+	)
+	(segment
+		(start 316.5625 186.35)
+		(end 316.5625 183.506346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D61-A)")
+		(uuid "973888dc-cd24-440a-97a7-deaedb900a81")
+	)
+	(segment
+		(start 297.5125 186.35)
+		(end 297.5125 183.506346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D60-A)")
+		(uuid "7616166a-0ac9-494e-88f9-2ddf4608330f")
+	)
+	(segment
+		(start 297.5125 183.506346)
+		(end 298.836997 182.181849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D60-A)")
+		(uuid "80adbc9e-866a-4d0a-8eaf-a36bb88404cd")
+	)
+	(segment
+		(start 316.5625 145.406346)
+		(end 317.886997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D38-A)")
+		(uuid "75bfce2b-7d38-46aa-ac34-5df6f035718f")
+	)
+	(segment
+		(start 316.5625 148.25)
+		(end 316.5625 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D38-A)")
+		(uuid "f43edb63-e442-4346-bf0b-754da491f8b5")
+	)
+	(segment
+		(start 240.3625 183.506346)
+		(end 241.686997 182.181849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D57-A)")
+		(uuid "4ee3c5ca-5049-4aa5-a42e-ef38f211785e")
+	)
+	(segment
+		(start 240.3625 186.35)
+		(end 240.3625 183.506346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D57-A)")
+		(uuid "b5fcfc1a-80b5-450f-9dfd-714bf9c3d8f8")
+	)
+	(segment
+		(start 221.3125 110.15)
+		(end 221.3125 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D9-A)")
+		(uuid "1cb47859-2e17-4e98-b96d-4928defbabf9")
+	)
+	(segment
+		(start 221.3125 107.306346)
+		(end 222.636997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D9-A)")
+		(uuid "d92bdc33-cd0d-4284-a68d-63bcd0feb56a")
+	)
+	(segment
+		(start 126.0625 145.406346)
+		(end 127.386997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D28-A)")
+		(uuid "0790c9f5-5bee-4922-a470-7923d3ed190b")
+	)
+	(segment
+		(start 126.0625 148.25)
+		(end 126.0625 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D28-A)")
+		(uuid "89049eae-103b-49b7-b510-2cf57380c03e")
+	)
+	(segment
+		(start 164.1625 167.3)
+		(end 164.1625 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D42-A)")
+		(uuid "0e8041df-21ae-4eea-b52b-4625d52e70a0")
+	)
+	(segment
+		(start 164.1625 164.456346)
+		(end 165.486997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D42-A)")
+		(uuid "fc3d0a23-19f2-4f9e-a9e2-756f371e37d9")
+	)
+	(segment
+		(start 202.2625 129.2)
+		(end 202.2625 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D20-A)")
+		(uuid "60aef71b-329f-47b7-b74c-d7cf2a44e399")
+	)
+	(segment
+		(start 202.2625 126.356346)
+		(end 203.586997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D20-A)")
+		(uuid "7bef237f-cbbc-47d8-b43c-c8fa581aa316")
+	)
+	(segment
+		(start 259.4125 167.3)
+		(end 259.4125 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D47-A)")
+		(uuid "0902680a-5485-4671-8e51-62376f433daf")
+	)
+	(segment
+		(start 259.4125 164.456346)
+		(end 260.736997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D47-A)")
+		(uuid "4cc236b2-dfcc-4cb8-ad57-3a1d20db4f5a")
+	)
+	(segment
+		(start 164.1625 145.406346)
+		(end 165.486997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D30-A)")
+		(uuid "00ddba36-6418-4a07-9f3d-8849689592c1")
+	)
+	(segment
+		(start 164.1625 148.25)
+		(end 164.1625 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D30-A)")
+		(uuid "d88462d2-24f5-4961-9009-c9753305b295")
+	)
+	(segment
+		(start 145.1125 148.25)
+		(end 145.1125 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D29-A)")
+		(uuid "8e2d02c8-186d-44ce-b23e-855a3aa22848")
+	)
+	(segment
+		(start 145.1125 145.406346)
+		(end 146.436997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D29-A)")
+		(uuid "b3a9718b-61f8-43e6-a456-0b7cc5704075")
+	)
+	(segment
+		(start 107.0125 167.3)
+		(end 107.0125 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D39-A)")
+		(uuid "109767c1-a003-477a-9e5d-4ff32244de02")
+	)
+	(segment
+		(start 107.0125 164.456346)
+		(end 108.336997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D39-A)")
+		(uuid "e7749c77-4182-48e2-9aa1-1b06e4421f73")
+	)
+	(segment
+		(start 221.3125 164.456346)
+		(end 222.636997 163.131849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D45-A)")
+		(uuid "2ecb6f74-f155-4db8-b5ed-f1915a4892df")
+	)
+	(segment
+		(start 221.3125 167.3)
+		(end 221.3125 164.456346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D45-A)")
+		(uuid "5a8a8783-0ba2-492c-a08b-005c01e36e7c")
+	)
+	(segment
+		(start 183.2125 145.406346)
+		(end 184.536997 144.081849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D31-A)")
+		(uuid "bad7207d-3fcd-4ac1-a9e2-cd9a80d20408")
+	)
+	(segment
+		(start 183.2125 148.25)
+		(end 183.2125 145.406346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D31-A)")
+		(uuid "bf449b85-fea8-46fa-8766-85d44353f946")
+	)
+	(segment
+		(start 183.2125 126.356346)
+		(end 184.536997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D19-A)")
+		(uuid "4472f0c2-cfa9-4228-8b73-f59362424613")
+	)
+	(segment
+		(start 183.2125 129.2)
+		(end 183.2125 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D19-A)")
+		(uuid "9f5b5aae-9d4c-48f3-a488-a26a9f785201")
+	)
+	(segment
+		(start 278.4625 183.506346)
+		(end 279.786997 182.181849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D59-A)")
+		(uuid "5de0284b-dee1-4a2c-8c39-b89f77330f72")
+	)
+	(segment
+		(start 278.4625 186.35)
+		(end 278.4625 183.506346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D59-A)")
+		(uuid "b40b0cb3-1c73-4f27-8e77-ac2a1352842f")
+	)
+	(segment
+		(start 164.1625 107.306346)
+		(end 165.486997 105.981849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D6-A)")
+		(uuid "af3938d1-6006-4238-9177-12e849f6e879")
+	)
+	(segment
+		(start 164.1625 110.15)
+		(end 164.1625 107.306346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D6-A)")
+		(uuid "e393d888-2709-493d-89ea-a1d52992a7e4")
+	)
+	(segment
+		(start 297.5125 126.356346)
+		(end 298.836997 125.031849)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D25-A)")
+		(uuid "5873d1a3-356f-4969-9d75-0be08078217b")
+	)
+	(segment
+		(start 297.5125 129.2)
+		(end 297.5125 126.356346)
+		(width 0.2)
+		(layer "B.Cu")
+		(net "Net-(D25-A)")
+		(uuid "756b0111-dbbe-4483-8fcf-eb3f817e0765")
 	)
 	(zone
 		(net "GND")
