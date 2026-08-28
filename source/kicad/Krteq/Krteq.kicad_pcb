@@ -1620,7 +1620,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1632,43 +1632,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "75d9a1f8-98f1-4853-993e-8b6e15bd1dc0")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "4e48860a-7373-4ede-966e-c6502ea464a1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/4e35b47c-bba5-45e3-abc7-8ec1403118c1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1822,7 +1788,7 @@
 			(uuid "8826c46b-e717-4ff7-be6e-f01bb9c370a9")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -1842,8 +1808,8 @@
 			(uuid "5d433a7d-1239-44ca-baf0-12033e36a4b9")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -1853,7 +1819,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -2211,7 +2177,7 @@
 			(uuid "30685b86-e1a3-48ea-b2e1-7d73bcc50397")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -2231,8 +2197,8 @@
 			(uuid "08905d8a-037b-4640-9f38-cc0ac6305914")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -2242,7 +2208,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -3207,7 +3173,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3219,43 +3185,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "aaba177b-5718-4062-8d3d-d6b915408693")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "635b2644-41c7-4546-90dd-51959ea43b0a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/b4e9e13f-c57b-40ee-a16d-8a82d4fce7c9")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3409,7 +3341,7 @@
 			(uuid "6e8b5af9-6878-44a6-aa5d-68a97f575817")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -3429,8 +3361,8 @@
 			(uuid "6a06807f-f01d-47fa-bb56-e723a52e2b1f")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -3440,7 +3372,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -3798,7 +3730,7 @@
 			(uuid "1db2462e-b1fc-41d7-b841-4fcf9600864c")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -3818,8 +3750,8 @@
 			(uuid "3f3d8b2e-af8b-4d35-ab5c-c9f85e1511c9")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -3829,7 +3761,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -4305,7 +4237,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4317,43 +4249,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9dba216b-ea4b-4c9c-a439-9d4292eae27b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "81bccb41-7219-4c03-89b5-3875a8a03ae7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/8ee27991-e02c-43e2-96c2-4af76ecf0c07")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4507,7 +4405,7 @@
 			(uuid "50eed9be-c3c4-48f0-bf49-0065dadd6fc3")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -4527,8 +4425,8 @@
 			(uuid "0c9a9a19-ad12-4fa0-938c-d25c9c3a26d3")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -4538,7 +4436,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -4896,7 +4794,7 @@
 			(uuid "cc81e3f1-055d-4e05-b9c8-905558975174")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -4916,8 +4814,8 @@
 			(uuid "2082a96d-15e1-441f-ac83-47298a22a22c")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -4927,7 +4825,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -5892,7 +5790,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5904,43 +5802,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f9048a4d-da16-4a10-b539-cf856f7980b9")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "756385af-8097-459b-8de9-fb245784a733")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/86cc6ead-4d10-40c4-a751-12d720b7dd9e")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6094,7 +5958,7 @@
 			(uuid "5656e4d8-be9d-4d84-93e2-6fd8cc85e8d8")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -6114,8 +5978,8 @@
 			(uuid "15ffc317-b90f-49c7-ba68-3f1145e3b7d2")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -6125,7 +5989,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -6483,7 +6347,7 @@
 			(uuid "3dc90252-013c-4a72-821b-99721c4429e9")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -6503,8 +6367,8 @@
 			(uuid "cdd6eddd-78db-431b-8119-9ffb03f790b3")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -6514,7 +6378,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -8263,7 +8127,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8275,43 +8139,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "d9a2f286-fc61-4274-bf8c-aeb8e4ecda7e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "8a88ccd4-d150-42b3-baf4-710bae4fa5e7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/5a5a0d86-2463-4a27-9d46-1203e4750acc")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8465,7 +8295,7 @@
 			(uuid "ce2c63a9-f168-42d2-8115-66933111aa30")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -8485,8 +8315,8 @@
 			(uuid "e101ee1d-1cf4-4bbb-b7e7-e61202d76af8")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -8496,7 +8326,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -8854,7 +8684,7 @@
 			(uuid "dba9169f-aa24-49b9-acc9-8f4b3f974146")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -8874,8 +8704,8 @@
 			(uuid "3a92d18d-87a5-4431-a3aa-ebabf1e03cdf")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -8885,7 +8715,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -9850,7 +9680,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9862,43 +9692,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "ddfe9021-ceff-4bf5-a1f9-7f2cca58937c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "6d84b647-e0d3-4ff8-82b2-1defadeaad83")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/1f1ba7ba-36ee-4d23-a245-5f3bee16d2d7")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10052,7 +9848,7 @@
 			(uuid "fac7cf56-ba45-40e7-9053-da9ec85bb758")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -10072,8 +9868,8 @@
 			(uuid "8f238a7b-e645-49c6-8d4c-f7380f27c3d1")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -10083,7 +9879,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -10441,7 +10237,7 @@
 			(uuid "df8c8ff1-6d03-4739-afa6-67d15ccc13d7")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -10461,8 +10257,8 @@
 			(uuid "800f36c2-7e22-4490-a533-635720603d05")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -10472,7 +10268,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -10769,7 +10565,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10781,43 +10577,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a0ea2917-9da1-4b49-9014-4cdee2f3e209")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "53d8bb84-360a-4850-9917-6700bbd8459c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/edc3ab07-ae2a-4fb9-a88c-7ce0ccea0a39")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10971,7 +10733,7 @@
 			(uuid "d1dd73e0-dce8-4a1f-a7e3-9cb15053134b")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -10991,8 +10753,8 @@
 			(uuid "d5937cf0-6a10-4898-a407-26c591458031")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -11002,7 +10764,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -11360,7 +11122,7 @@
 			(uuid "ce347104-ef52-4e7b-8850-7a02dea09e1c")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -11380,8 +11142,8 @@
 			(uuid "78f48200-44ed-4339-8761-2e27cb31470f")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -11391,7 +11153,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -11688,7 +11450,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11700,43 +11462,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "7db4d076-76c9-412e-893e-4ca306af877e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "7c461f8b-7013-4f69-8bd7-2c795928c1c4")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/fad1dfc2-c0c3-4ffe-a2be-ab0e1102c9e5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11890,7 +11618,7 @@
 			(uuid "e790c387-3881-463d-9396-efdf70a2751f")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -11910,8 +11638,8 @@
 			(uuid "de7637fa-37e9-46b9-9c49-636309e29de8")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -11921,7 +11649,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -12279,7 +12007,7 @@
 			(uuid "c40ec36c-2dd7-4cf5-8383-04ccba2ce317")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -12299,8 +12027,8 @@
 			(uuid "c123e7cb-7477-430c-8fa2-27da7d9e8521")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -12310,7 +12038,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -13225,7 +12953,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13237,43 +12965,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "751aca14-60cf-49a9-816a-d34aae9358a1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "e4be00a1-56fc-4ab1-a0f5-6c8960b76748")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/f1fc7543-d57a-461f-8420-11c4d0a68e59")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13427,7 +13121,7 @@
 			(uuid "7dfbce3c-74fe-4f6a-b5fb-03c5ed8b58fa")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -13447,8 +13141,8 @@
 			(uuid "f698304f-164f-4150-9272-4b8e70901ab0")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -13458,7 +13152,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -13816,7 +13510,7 @@
 			(uuid "56011c11-07ee-4fbd-a9c6-4f6d517881cc")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -13836,8 +13530,8 @@
 			(uuid "af93130b-50c8-40c4-8006-9a2320e2e018")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -13847,7 +13541,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -14144,7 +13838,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14156,43 +13850,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "7ed08741-2e92-418d-80c2-dd25e9e4c7b9")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "8a920d8a-c472-4b19-b10e-2c63bc1f1623")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/92c86f19-2ebd-412d-a79c-ac83c3ad118b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14346,7 +14006,7 @@
 			(uuid "ef9b77fb-fd01-4db5-b006-8eaadce67da3")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -14366,8 +14026,8 @@
 			(uuid "86bb9310-a4cb-42d7-a5a8-2427b6320ac9")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -14377,7 +14037,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -14735,7 +14395,7 @@
 			(uuid "53ab178d-ac84-46fc-967b-e22d99640372")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -14755,8 +14415,8 @@
 			(uuid "81538f02-020e-4773-910c-0f2f22e99421")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -14766,7 +14426,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -15455,7 +15115,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15467,43 +15127,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a7fc76fd-89e0-4be6-a674-0ab9fa548a67")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "581607e2-ebfb-4f30-8c28-7030a052344a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/169b220a-c894-4d9c-8acd-14af287b41ca")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15657,7 +15283,7 @@
 			(uuid "ea72c2fe-5c6b-400d-a938-32fb228b30f0")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -15677,8 +15303,8 @@
 			(uuid "fd3698ef-4e5a-4fd3-9f28-75b918efff57")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -15688,7 +15314,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -16046,7 +15672,7 @@
 			(uuid "c4057f7f-7434-4d43-8b3d-b6de54a1573d")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -16066,8 +15692,8 @@
 			(uuid "e18ef948-0a75-4a46-bd52-0f9668733bbe")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -16077,7 +15703,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -16374,7 +16000,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16386,43 +16012,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "29c60a2c-4468-4e89-a0cd-2b89de2d3c40")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "6939b8a3-b7bc-4220-a26e-a7776767e34a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/0ad9da19-ccd8-49f3-9ead-b4810c57f30b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -16576,7 +16168,7 @@
 			(uuid "44b493cd-ed6f-484d-8148-f3ad96368982")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -16596,8 +16188,8 @@
 			(uuid "b9b6f778-7a17-4278-8f75-0918b1d1c28f")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -16607,7 +16199,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -16965,7 +16557,7 @@
 			(uuid "2b3880c8-e578-40f2-b16e-b855ef2c5d7b")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -16985,8 +16577,8 @@
 			(uuid "782a2880-b088-4523-97fc-ff21c03a389a")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -16996,7 +16588,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -19297,7 +18889,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19309,43 +18901,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "e4b71174-9918-4952-9829-e47a81450c9a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "b37e373f-d366-49e5-bdfd-34f59104e946")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/f6688fe1-6797-413a-b3c8-cb827aadf316")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -19499,7 +19057,7 @@
 			(uuid "c5270d9e-55d1-4e43-bcb8-11901b102671")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -19519,8 +19077,8 @@
 			(uuid "423b7191-8044-415d-bc56-f7c912b92c09")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -19530,7 +19088,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -19888,7 +19446,7 @@
 			(uuid "6ffc190b-23d7-47c2-aac2-7baf41e07faf")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -19908,8 +19466,8 @@
 			(uuid "427df90f-3ec8-49c7-8dca-0c21253eab57")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -19919,7 +19477,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -21320,7 +20878,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21332,43 +20890,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "251aaeac-5fb9-41c6-88b0-6349565b873c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "7aee4829-725c-4090-8d0d-470c00b3883a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/347a6af0-952b-45b4-b9f2-1a887ddacae9")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21522,7 +21046,7 @@
 			(uuid "772f2c9f-1a99-4d97-805f-1ce7a16f4f64")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -21542,8 +21066,8 @@
 			(uuid "c71e28da-ac5a-4263-81fc-fd22f1cf9252")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -21553,7 +21077,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -21911,7 +21435,7 @@
 			(uuid "19bab33a-6f7f-40aa-a61e-eaa9c0de383d")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -21931,8 +21455,8 @@
 			(uuid "1f756e14-e32a-48a7-85eb-daf14b8db5dc")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -21942,7 +21466,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -23691,7 +23215,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23703,43 +23227,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "7573bd67-23c0-4007-b15e-fba103636b39")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "0b594ae5-06c8-4d80-9da2-1b1bb5d54b9a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/f66c2039-6d1d-41ae-9130-533e75823b84")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23893,7 +23383,7 @@
 			(uuid "299e2a83-f8ce-44ef-9f70-c3c2572de32e")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -23913,8 +23403,8 @@
 			(uuid "ea4e5e97-9c75-4234-a991-dda06cb5cccb")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -23924,7 +23414,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -24282,7 +23772,7 @@
 			(uuid "ac05d141-5f41-4b85-8aed-a78fda18a284")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -24302,8 +23792,8 @@
 			(uuid "f560964a-7ae7-44a8-82b3-57580b8095a1")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -24313,7 +23803,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -24610,7 +24100,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24622,43 +24112,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "835279cb-b2fa-4f60-99f2-c386a51226b7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "bc4b87a2-a01a-4feb-a333-940e172b0ec6")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/e20799c1-1838-4d68-bcf7-f4af2e90939b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24812,7 +24268,7 @@
 			(uuid "5f41e59d-78a9-49d7-8d18-d4a074880459")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -24832,8 +24288,8 @@
 			(uuid "5ce50533-74f4-4f5b-8b2e-aa37b1bad935")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -24843,7 +24299,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -25201,7 +24657,7 @@
 			(uuid "93d7f39b-3211-40f9-aa93-f0b367167a80")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -25221,8 +24677,8 @@
 			(uuid "70dafc1a-90d7-4823-80cc-e76e8cc0e9d8")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -25232,7 +24688,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -25529,7 +24985,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25541,43 +24997,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "934ef501-a513-4d7d-b84f-3175af8ced55")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9ab57d17-982f-4ab3-854e-b1f74c3ffe0b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/2ffdbb76-93e3-44c2-9bee-9d70fd217f04")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25731,7 +25153,7 @@
 			(uuid "5511aa8b-b56d-4324-bf90-ece0ea6c73a1")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -25751,8 +25173,8 @@
 			(uuid "f7fdbf4e-1fdb-4323-bf7e-e4a9290a8e73")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -25762,7 +25184,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -26120,7 +25542,7 @@
 			(uuid "452dfc43-f222-47ad-be8a-bb7983b01824")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -26140,8 +25562,8 @@
 			(uuid "ec45e7a2-0e13-4965-9de5-d02760e836b2")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -26151,7 +25573,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -26448,7 +25870,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26460,43 +25882,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "fc76618e-8628-41c4-9992-e3faa8190af8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a5d1e140-7cac-4b51-aa6f-e5a4aae709fb")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/19f2cc58-b1cb-44ec-bb38-59af0e5f2eda")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26650,7 +26038,7 @@
 			(uuid "69519d13-2310-4d89-95bf-6c2edef4258e")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -26670,8 +26058,8 @@
 			(uuid "54662072-7ecc-4687-b79a-c092947ef135")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -26681,7 +26069,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -27039,7 +26427,7 @@
 			(uuid "ba111c01-38e2-4983-b1ab-d8cb2c430bef")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -27059,8 +26447,8 @@
 			(uuid "634adef7-7376-45c6-b2e2-e63b1f1a7b32")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -27070,7 +26458,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -33035,7 +32423,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -33047,43 +32435,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "6e6fe039-0cde-4192-b15e-f31eb756933d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "fe5e6be4-2f3a-42f3-8b54-da8f0a68e8a4")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/60a64a87-047d-4edb-9edd-ea18cf64547f")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -33237,7 +32591,7 @@
 			(uuid "2e2c0db1-666f-421e-b3f4-149507bbe5f2")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -33257,8 +32611,8 @@
 			(uuid "622fc261-61a2-43a8-b265-51c4355625b8")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -33268,7 +32622,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -33626,7 +32980,7 @@
 			(uuid "a9baf139-9657-437c-b669-9e2dc996f767")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -33646,8 +33000,8 @@
 			(uuid "92757e64-64ba-45df-9174-aa2fed85b579")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -33657,7 +33011,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -34918,7 +34272,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34930,43 +34284,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "611fe72d-675c-4b5c-93db-68c11a0f6ac3")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "d28c3e4b-847b-42ae-b4e9-191c6398edaf")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/1f211f56-44b9-4b1e-9310-ea755b9e76a4")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -35120,7 +34440,7 @@
 			(uuid "ba366bd8-bd0f-48ab-a02e-844637e65f77")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -35140,8 +34460,8 @@
 			(uuid "b2500dd3-3cc4-4e07-b7a4-f9e68f29babb")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -35151,7 +34471,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -35509,7 +34829,7 @@
 			(uuid "c5dd6ae6-c2ba-45b9-8f7d-187329d1683b")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -35529,8 +34849,8 @@
 			(uuid "e931489f-0758-4ce1-83e2-2f6217d5b3d9")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -35540,7 +34860,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -36389,7 +35709,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36401,43 +35721,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "7a31d230-2897-4f6b-a871-e7d13880fed1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "26223557-b03d-4da0-b2ab-c4eccd8672b2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/9076d9ff-7eef-42b0-bcbc-c702bdc10b0c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -36591,7 +35877,7 @@
 			(uuid "ae619408-96c3-441a-8f0c-8478f323bf99")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -36611,8 +35897,8 @@
 			(uuid "6e8b0abf-5c66-4d00-86da-8cc0f49fc90e")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -36622,7 +35908,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -36980,7 +36266,7 @@
 			(uuid "6b6a4455-080b-4d59-b3b9-e1f5f3c856ad")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -37000,8 +36286,8 @@
 			(uuid "9809b696-8079-496d-81fe-19c3ecfd9358")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -37011,7 +36297,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -37976,7 +37262,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37988,43 +37274,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "6df63778-2754-464f-b8a3-16d7fb8e8bb0")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "b6843e88-9102-4f6d-ad0c-b4494a148934")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/88320b7c-2fbb-407a-af1f-98aed6554fff")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -38178,7 +37430,7 @@
 			(uuid "2fb69a65-4594-421c-b1ee-99e26e2c26ad")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -38198,8 +37450,8 @@
 			(uuid "21fbe1f9-42e7-42c5-b408-bc99caf47db4")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -38209,7 +37461,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -38567,7 +37819,7 @@
 			(uuid "0020059a-f7ea-447e-8d9f-8550b673af12")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -38587,8 +37839,8 @@
 			(uuid "d9f659c3-d6aa-4a58-9e27-ee6ae7404e61")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -38598,7 +37850,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -38895,7 +38147,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38907,43 +38159,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "8775120b-1ccc-4ab4-834c-5ffc96ecf5c2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "d886710e-2343-4267-9b71-e9dfcfce3ffb")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/ae436308-1176-4924-9b03-c53d1881672c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -39097,7 +38315,7 @@
 			(uuid "0746a2b4-b824-4067-8024-65446422041e")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -39117,8 +38335,8 @@
 			(uuid "10a65c31-107c-46df-a55a-cc72a4925823")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -39128,7 +38346,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -39486,7 +38704,7 @@
 			(uuid "4d08f0cd-d516-4893-82db-185c71fa1f58")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -39506,8 +38724,8 @@
 			(uuid "778ff93c-3a38-480e-9947-b08a760200a0")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -39517,7 +38735,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -39814,7 +39032,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39826,43 +39044,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "01889e0a-5d80-4504-804d-a931275ee62d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9d297426-1eee-41c2-9130-782af5776225")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/a3185c1b-ae60-4a22-8d36-329f0f7bdbc4")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -40016,7 +39200,7 @@
 			(uuid "8f5c9833-a11f-498c-b86a-125de048d156")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -40036,8 +39220,8 @@
 			(uuid "c7851802-d02c-46d8-b059-00871e026f58")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -40047,7 +39231,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -40405,7 +39589,7 @@
 			(uuid "4ebbd3ea-c963-496d-815b-525a01189e53")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -40425,8 +39609,8 @@
 			(uuid "6984f7c9-cf4d-40eb-badf-e0ffdd5a85dc")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -40436,7 +39620,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -40912,7 +40096,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -40924,43 +40108,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "07c47a6b-6880-468e-aa1d-b11a42bc5a2d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "29c538c7-88c6-46f6-836b-e527f9ab5ffc")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/aed2e4d2-7878-4bb1-aa36-aeadf08d9f12")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -41114,7 +40264,7 @@
 			(uuid "bedbd2c3-ee1f-4aa6-a8b5-cb743bdcae74")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -41134,8 +40284,8 @@
 			(uuid "6fbc332f-c45e-4f91-b82a-91510a8795a8")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -41145,7 +40295,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -41503,7 +40653,7 @@
 			(uuid "a4a5fc25-e37a-49a5-b67c-64acc7cbdc04")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -41523,8 +40673,8 @@
 			(uuid "ba29cf3e-a0ab-4279-8a56-5a3ca1af174a")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -41534,7 +40684,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -43167,7 +42317,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -43179,43 +42329,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a82d5fb0-e9a8-4210-bd18-2de295af0a44")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "175f963a-ddce-4edf-a5af-2694c07eb08a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/301ddd53-0579-4536-8857-0cfa7d702337")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -43369,7 +42485,7 @@
 			(uuid "7c080b8d-33b8-44e7-a6c5-cdde64e5f486")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -43389,8 +42505,8 @@
 			(uuid "2eca074d-f903-4a34-ba24-0606bc1c085a")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -43400,7 +42516,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -43758,7 +42874,7 @@
 			(uuid "a037c4e2-b9ee-494e-8d14-ab7894ab1802")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -43778,8 +42894,8 @@
 			(uuid "c5cdf7e9-7a00-4411-8cd8-9f881f6fec6f")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -43789,7 +42905,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -46393,7 +45509,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -46405,43 +45521,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "3fc64c2e-762f-4b02-a7bb-3222ef28969c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "3a5e86a7-1137-46f3-b73f-07515ad1d4ac")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/e81c9abc-5efb-4a1e-bf22-4f56e3fdaeda")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -46595,7 +45677,7 @@
 			(uuid "f1b6206d-5d08-4d18-975d-b21e912ba8ac")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -46615,8 +45697,8 @@
 			(uuid "fa4e9d4d-9d66-4117-ad2c-bd8a81aee448")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -46626,7 +45708,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -46984,7 +46066,7 @@
 			(uuid "e8f9beab-896e-42aa-ba91-eba9f9396a2e")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -47004,8 +46086,8 @@
 			(uuid "e1bd8af2-e13b-47b8-9d37-743c3f6d47a5")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -47015,7 +46097,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -48951,7 +48033,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -48963,43 +48045,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "ff69c951-4b99-4320-a134-66707786be0d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f2546fc2-cb9f-4cce-9983-2ebe5fa6ef55")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/28af075b-fdf0-4a5d-bb16-e4650567c044")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -49153,7 +48201,7 @@
 			(uuid "7548c9b4-9a07-4b89-bf74-70f75357bd90")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -49173,8 +48221,8 @@
 			(uuid "19afe449-cd6d-4751-97fd-82dca50fe7b9")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -49184,7 +48232,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -49542,7 +48590,7 @@
 			(uuid "b7854a91-437a-43d4-89df-6f5e1f025526")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -49562,8 +48610,8 @@
 			(uuid "1407f4aa-2211-498f-ac3d-6d47da06a36a")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -49573,7 +48621,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -50146,7 +49194,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -50158,43 +49206,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "01afa919-4b12-41a0-8d5f-70fd33888430")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "c82e9315-2fc7-4c16-bb3b-34211d693d85")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/fdf1008d-832f-43ab-86da-64d31bf84fae")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -50348,7 +49362,7 @@
 			(uuid "0e90e021-affc-4f14-923e-dad35a08dfc1")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -50368,8 +49382,8 @@
 			(uuid "e4064b50-a56f-466f-92dc-16f4bbe2e20c")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -50379,7 +49393,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -50737,7 +49751,7 @@
 			(uuid "60a5e25e-62e8-4848-868d-8a64cb798c3e")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -50757,8 +49771,8 @@
 			(uuid "54d9a509-8a84-4eda-80b9-3a8462e6025e")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -50768,7 +49782,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -51065,7 +50079,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -51077,43 +50091,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "ac5eefe4-4819-44f5-a945-93e95f793a3c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "0a32db31-31e7-4b3d-808d-5341c8491c50")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/dfdb00ee-a43c-41bd-a5d2-7fac1f275ec8")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -51267,7 +50247,7 @@
 			(uuid "06224c8e-9bdd-4a16-93d3-e618fe55a22f")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -51287,8 +50267,8 @@
 			(uuid "90a90225-03fb-4127-8490-d4675e0b8713")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -51298,7 +50278,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -51656,7 +50636,7 @@
 			(uuid "4984e10f-c7c2-4fb8-8bbb-806874fa2f8c")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -51676,8 +50656,8 @@
 			(uuid "5bf222ce-d87e-4945-bbb0-084fb88f14da")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -51687,7 +50667,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -53320,7 +52300,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -53332,43 +52312,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9b16a2c6-cdbe-465a-aeb3-111f9db5865a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a867094e-5400-4efe-b722-74e88cc0745c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/95f22d83-56f6-4d93-8d9e-32d53ad8d610")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -53522,7 +52468,7 @@
 			(uuid "6b3f16e6-ef80-44f2-a2bc-09aa9c6fef2d")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -53542,8 +52488,8 @@
 			(uuid "8cce34ea-6b9e-4542-9c7f-85022b1f4fcb")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -53553,7 +52499,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -53911,7 +52857,7 @@
 			(uuid "49e5991a-be44-4000-b28e-df5637a215c3")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -53931,8 +52877,8 @@
 			(uuid "b3b1a5c4-16d1-44d5-afb7-109ef81a1fae")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -53942,7 +52888,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -54239,7 +53185,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -54251,43 +53197,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "7b677595-7e96-4772-b36e-31162d0e7112")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "22cefd2d-e3a0-4c06-b3e0-7f16d4c086c2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/ce72d5d0-1724-4625-87fe-be87b2c5a87f")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -54441,7 +53353,7 @@
 			(uuid "cbed8230-5e20-42a6-abc3-a16492b025ea")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -54461,8 +53373,8 @@
 			(uuid "04c00500-1f86-469e-9d2b-6ba07f2c17e5")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -54472,7 +53384,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -54830,7 +53742,7 @@
 			(uuid "73f4b1c8-2635-4fb1-b593-2f73130b3b7e")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -54850,8 +53762,8 @@
 			(uuid "e8661c3d-0b4b-4dc8-8b63-37c878854e9c")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -54861,7 +53773,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -55158,7 +54070,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -55170,43 +54082,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f2f622cc-a351-4a32-8061-1f763ad84c5e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "3e616ce9-2d30-4595-b1b8-06a5bdf9202d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/6ad67768-55cb-4cfb-8194-32658297db35")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -55360,7 +54238,7 @@
 			(uuid "68c0b40d-f3e3-4e76-9716-3753ec85be8d")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -55380,8 +54258,8 @@
 			(uuid "0e57d619-b06b-447e-a6dd-026d2b2a16fc")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -55391,7 +54269,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -55749,7 +54627,7 @@
 			(uuid "ed2158d1-7d6e-4d55-82f4-02f0abfb1868")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -55769,8 +54647,8 @@
 			(uuid "4f909be2-c70a-4ed5-a225-daee4cd7bfa3")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -55780,7 +54658,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -57021,7 +55899,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -57033,43 +55911,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "93ec3d71-826f-4e10-bd51-12919d923bb6")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "fb52dede-6c2f-48f2-b3f2-c371bf8cdfc5")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/1fb88d1e-8315-468c-ae2e-a74294576711")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -57223,7 +56067,7 @@
 			(uuid "c7bb9f1b-9c10-4aac-89c4-5c375e2b348f")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -57243,8 +56087,8 @@
 			(uuid "43a1ba5b-cd06-4484-bcb1-ecba7c52d1d8")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -57254,7 +56098,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -57612,7 +56456,7 @@
 			(uuid "6fcead51-9b4a-4697-aa00-74ae102160cf")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -57632,8 +56476,8 @@
 			(uuid "735971e0-b208-4d20-8b56-be839a1c82a4")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -57643,7 +56487,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -58332,7 +57176,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -58344,43 +57188,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "c7b44fb1-55ba-457f-8ead-75233e80d54c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "2273d093-7488-4de8-8c20-23e6701ea3f5")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/9e87255c-de1e-4625-9f4c-2565304ca36c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -58534,7 +57344,7 @@
 			(uuid "9d9cede4-fecb-4071-b1c5-3d3e53d1f05c")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -58554,8 +57364,8 @@
 			(uuid "33b60d93-5315-4fcd-af8c-6b9097db129d")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -58565,7 +57375,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -58923,7 +57733,7 @@
 			(uuid "999da889-2836-441a-88ed-13d4cf48953e")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -58943,8 +57753,8 @@
 			(uuid "1550e76b-fe87-43d1-ac9c-825c040b86cb")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -58954,7 +57764,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -59527,7 +58337,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -59539,43 +58349,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "350cb5d5-5589-4861-9dcc-89109e779230")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "fd23626b-974c-4689-905a-50d510fa3027")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/874f9a8b-1373-4185-aebd-a77655751dc5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -59729,7 +58505,7 @@
 			(uuid "966c03a2-cfff-4eee-9c62-b6f3e3af28f4")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -59749,8 +58525,8 @@
 			(uuid "4612877e-df94-4f3e-970c-bd50b32563e9")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -59760,7 +58536,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -60118,7 +58894,7 @@
 			(uuid "7016f49d-02c0-4335-9915-39c1c36751f9")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -60138,8 +58914,8 @@
 			(uuid "018a6afa-88d9-4a13-a46f-c1e4b9d65506")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -60149,7 +58925,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -60446,7 +59222,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -60458,43 +59234,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "06661cf9-b5cd-4729-afc0-01a46b61f0c1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "552225cb-8792-4a64-b518-3bb6ec29841e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/93bc01a3-7479-4ca0-86dc-a0d3b22b25d0")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -60648,7 +59390,7 @@
 			(uuid "2b25207f-0ee0-45a9-8976-5afa4c6c22df")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -60668,8 +59410,8 @@
 			(uuid "9a39fec5-d0fb-42bb-aa2f-28db5461d643")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -60679,7 +59421,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -61037,7 +59779,7 @@
 			(uuid "56f68d28-7b43-43a2-a1f9-53347a11adcd")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -61057,8 +59799,8 @@
 			(uuid "9f0be0b9-ac24-4706-a72e-df4a36b63a62")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -61068,7 +59810,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -61917,7 +60659,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -61929,43 +60671,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "1883eb87-768a-48bb-8e21-f413c3f04c98")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9985ad60-96ba-48f6-81ed-b9af7630aa34")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/8382c429-a03b-45b6-9e79-a1e31f91f7e5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -62119,7 +60827,7 @@
 			(uuid "f689b437-922d-44da-bee2-c6b50a24866b")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -62139,8 +60847,8 @@
 			(uuid "b0d49ec2-1415-4da4-aaeb-2dd94c9db94e")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -62150,7 +60858,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -62508,7 +61216,7 @@
 			(uuid "f72ef921-63fc-4b43-9bf8-5edadc83f5d7")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -62528,8 +61236,8 @@
 			(uuid "1ca3bc43-28ec-413c-8492-8d15b7a14bb8")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -62539,7 +61247,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -62836,7 +61544,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62848,43 +61556,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "d6ed1929-7605-41a7-8910-89ee9de3d3b0")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f0409b7e-5a7d-40fe-a77e-cdb9e4b4b40b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/2a4637bd-e9e3-47c3-ba2e-e8a9b4dbdc2b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -63038,7 +61712,7 @@
 			(uuid "e3540755-8254-4ed9-9838-fa2647759bc0")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -63058,8 +61732,8 @@
 			(uuid "502ce441-05c8-400a-9f15-3aa38ad69517")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -63069,7 +61743,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -63427,7 +62101,7 @@
 			(uuid "7c864235-6733-4ffe-98e5-a610292939ec")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -63447,8 +62121,8 @@
 			(uuid "9a9f3c40-29ad-4907-acc3-95218deb9c18")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -63458,7 +62132,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -64147,7 +62821,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -64159,43 +62833,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "907ec04c-716b-409c-878d-7fd17f6dba15")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "7e144e2a-45cb-4dd6-b4dd-532de80eaca9")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/6a8a640c-1902-4162-b695-1bd281cd8058")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -64349,7 +62989,7 @@
 			(uuid "92600327-aa1b-47a8-bd6e-d197a87b4f1b")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -64369,8 +63009,8 @@
 			(uuid "cff2138f-40fc-4ae2-993d-a43288f87811")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -64380,7 +63020,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -64738,7 +63378,7 @@
 			(uuid "8a5a1df0-8497-4576-8d96-3ea42d810040")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -64758,8 +63398,8 @@
 			(uuid "cd78d070-9057-4454-935e-9355517472e2")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -64769,7 +63409,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -65850,7 +64490,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -65862,43 +64502,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f627f4bd-cf0c-4e54-aea9-3fc7a625037c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "54595ddb-7a4c-4a87-bc69-bcb838c8c0eb")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/ce05fb90-42e1-49f6-921d-e1100a54e2a5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -66052,7 +64658,7 @@
 			(uuid "cd08a1b8-d968-4527-b942-9b81cf27a72e")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -66072,8 +64678,8 @@
 			(uuid "fde0f003-b95f-491b-b77d-861ed7650804")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -66083,7 +64689,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -66441,7 +65047,7 @@
 			(uuid "57e092be-0a6b-4cd1-adca-788379f5f677")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -66461,8 +65067,8 @@
 			(uuid "95275361-a775-4e27-b9e9-4484b446725e")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -66472,7 +65078,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -68278,7 +66884,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -68290,43 +66896,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "dc1f75f2-e553-40de-b2ba-c7134bebfeaa")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "1b0bc400-a460-419b-9139-b99ac91ed70c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/93ca3729-92e7-406d-8896-ac0446d2fd85")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -68480,7 +67052,7 @@
 			(uuid "98706c50-06cc-41c2-9bbd-3f3cea9530d8")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -68500,8 +67072,8 @@
 			(uuid "f3c77878-8e39-4e30-8ddd-428712c1579d")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -68511,7 +67083,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -68869,7 +67441,7 @@
 			(uuid "9702f6b3-40d3-4165-b9e7-9bcdafa5d915")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -68889,8 +67461,8 @@
 			(uuid "7f7d97f5-6759-4876-82da-245961b6264e")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -68900,7 +67472,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -70141,7 +68713,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -70153,43 +68725,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "aa6dd3e1-7c7e-4aca-95a0-758f803334dd")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "85c8672b-b36c-464a-8d64-49fde665a2fa")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/43952e30-eeeb-4a7a-bac3-eef59ae4cdd7")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -70343,7 +68881,7 @@
 			(uuid "a314c804-1728-4f50-8fe5-9da880c550ce")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -70363,8 +68901,8 @@
 			(uuid "7c9da333-3265-4b59-b524-7dd915a90a48")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -70374,7 +68912,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -70732,7 +69270,7 @@
 			(uuid "b9870c41-620b-4a8b-8f45-f47e83137eed")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -70752,8 +69290,8 @@
 			(uuid "c4b78528-a45d-429d-b7ef-0abe4e8df086")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -70763,7 +69301,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -72440,7 +70978,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -72452,43 +70990,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "08585041-8f27-4aa7-b5a7-1dc17b8186df")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "6fb26126-7614-4518-88b1-a214d7a16c92")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/ac3cc8ae-1580-47e7-acc7-a9bad18fbbeb")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -72642,7 +71146,7 @@
 			(uuid "d3223356-fb10-488a-9f13-62b0bd25b864")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -72662,8 +71166,8 @@
 			(uuid "ce2b0d8b-4b71-4a7e-a6b2-324885a496d9")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -72673,7 +71177,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -73031,7 +71535,7 @@
 			(uuid "ad7d3873-dccc-4e8d-8b76-af817d5dd617")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -73051,8 +71555,8 @@
 			(uuid "80738d49-4fe1-40e6-9315-f32f5c014951")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -73062,7 +71566,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -73751,7 +72255,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -73763,43 +72267,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "96b6b41a-bbaf-4722-a059-352ca25ec6db")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "8305349b-8b7c-43e9-ad44-118e54c78ed7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/45cc0bf6-3600-4ff4-80ff-a2772d7c56e0")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -73953,7 +72423,7 @@
 			(uuid "ecb14823-1e13-48c0-905e-25582cd050aa")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -73973,8 +72443,8 @@
 			(uuid "abada269-4c75-48c6-b5c6-93a87b2292aa")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -73984,7 +72454,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -74342,7 +72812,7 @@
 			(uuid "6f65d266-b835-4306-849c-a33ea4a07baa")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -74362,8 +72832,8 @@
 			(uuid "04d378cc-13ed-41f4-8b1b-1ad6612879f6")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -74373,7 +72843,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -75235,7 +73705,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -75247,43 +73717,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "6ab9fa23-da8d-4f83-9d6e-5aa5dddf0140")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "3c144681-393e-4999-b1f1-ab99864b3896")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/1821ce80-01bc-4754-9f05-8471e0a1df75")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -75437,7 +73873,7 @@
 			(uuid "5a181486-8f6b-4916-abb5-924a813f1e83")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -75457,8 +73893,8 @@
 			(uuid "a8df4271-dd9f-4210-adff-e224a2c1a0ce")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -75468,7 +73904,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -75826,7 +74262,7 @@
 			(uuid "5cf72a0a-b6de-482e-aabe-7fda97ba71aa")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -75846,8 +74282,8 @@
 			(uuid "80fa7f1d-6cf7-4dc6-9d02-e026049e57aa")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -75857,7 +74293,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -76546,7 +74982,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -76558,43 +74994,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "1d0494ce-9f79-4a42-b162-bf447b3f9bd7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9fbb48c2-3ba1-4b2f-a287-71b153dd6d92")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/baaa03d6-6200-4169-b357-f9416d7d9787")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -76748,7 +75150,7 @@
 			(uuid "4e9992fb-547e-44f6-96df-b5057fcd702d")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -76768,8 +75170,8 @@
 			(uuid "53d2ceaa-8ba8-44c0-8b97-ebe4a431065a")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -76779,7 +75181,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -77137,7 +75539,7 @@
 			(uuid "5a4233a6-09ae-483d-b5a6-5f8d6687e379")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -77157,8 +75559,8 @@
 			(uuid "ea587556-43cc-43d9-b998-9434e3704555")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -77168,7 +75570,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -78249,7 +76651,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -78261,43 +76663,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "6b5a2e61-161d-43bb-9744-7432d67f90fe")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "99fad648-cdb5-4689-82c4-49091db0bd6a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/d10e7418-693f-4729-8785-0f10388bcfe6")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -78451,7 +76819,7 @@
 			(uuid "40f166db-5926-491b-bb7b-685f3abb54a7")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -78471,8 +76839,8 @@
 			(uuid "a6bf5674-fc89-46e1-a6ef-6b0cfe1b10e5")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -78482,7 +76850,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -78840,7 +77208,7 @@
 			(uuid "f6a462f0-ce84-4f01-bb27-e1538baa30bc")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -78860,8 +77228,8 @@
 			(uuid "f609ded6-05d5-4ab5-bd52-305781b38b04")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -78871,7 +77239,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -80504,7 +78872,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -80516,43 +78884,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9ac1dd55-5916-4307-b2d6-a4db2f2cbeae")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a01d3566-d293-471b-a52d-4cd88dd26a3b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/54894214-554f-496c-a5f8-7a42bcf7f1fc")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -80706,7 +79040,7 @@
 			(uuid "1ebb031e-43e2-4185-85ef-57df6716ab26")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -80726,8 +79060,8 @@
 			(uuid "4b99d659-1e59-40ec-8e8c-917fe864a362")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -80737,7 +79071,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -81095,7 +79429,7 @@
 			(uuid "e699a4b8-db54-40da-9e1f-b45204e02fd2")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -81115,8 +79449,8 @@
 			(uuid "f0acee9b-d30d-47b1-90fc-84fc7df064d8")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -81126,7 +79460,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -81423,7 +79757,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -81435,43 +79769,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "8172f773-3b54-4a2b-8c76-f5a711d2c5d4")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "2294482a-9c21-4267-a270-d435b029c231")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/179f2595-7dbe-4420-aba6-3365fd583a9d")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -81625,7 +79925,7 @@
 			(uuid "c31283d1-5bb7-495b-8309-c0da848da70f")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -81645,8 +79945,8 @@
 			(uuid "87e720ec-fc3f-488d-8ad7-33a254d87bc9")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -81656,7 +79956,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -82014,7 +80314,7 @@
 			(uuid "11bc7c2a-8d3c-4b82-8da7-d7fa258720ad")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -82034,8 +80334,8 @@
 			(uuid "2bb21759-40aa-499c-b0a8-41d7a375e88e")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -82045,7 +80345,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -83010,7 +81310,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -83022,43 +81322,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "d3492a4c-7858-4667-920e-5bdf9cb3aefe")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "52979fe4-3a34-41dd-a365-bbfb039ad167")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/3d2f90a5-c927-4128-be33-3e8b0010c13b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -83212,7 +81478,7 @@
 			(uuid "734c91c1-cc12-4365-b80a-61b225958afd")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -83232,8 +81498,8 @@
 			(uuid "981762ae-d779-48cc-89f0-2ed12a27c68c")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -83243,7 +81509,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -83601,7 +81867,7 @@
 			(uuid "eb106a2f-6928-46ce-acd9-a737917c0b80")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -83621,8 +81887,8 @@
 			(uuid "6aa621f0-e7f7-4e5b-92f5-dae86c2d20db")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -83632,7 +81898,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -84757,7 +83023,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -84769,43 +83035,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "b3d28487-b49b-49d7-85d8-5c9dddd40768")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "3e8d6e9d-4728-41c9-a6e7-992d7a706f18")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/f108d448-7651-4cc0-9d97-f8d724bac4ff")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -84959,7 +83191,7 @@
 			(uuid "4061dc5c-9287-412c-8ded-7757527847d7")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -84979,8 +83211,8 @@
 			(uuid "f47af8a2-8ad2-4210-a5ab-5bc368353869")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -84990,7 +83222,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -85348,7 +83580,7 @@
 			(uuid "f36c30f9-748b-49be-b370-e38670d9d12e")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -85368,8 +83600,8 @@
 			(uuid "fbed21ba-11d6-41c6-b423-b9811f8b4972")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -85379,7 +83611,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -85676,7 +83908,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -85688,43 +83920,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "79d4bc38-dba9-4a88-bd77-2a4116201300")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "11b55c0b-bc80-4640-b02b-f13ce2e28044")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/c1fde9ff-fa63-4000-9563-f69bede447ee")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -85878,7 +84076,7 @@
 			(uuid "77b281c2-7b87-410c-a1f5-91cec17bf7e5")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -85898,8 +84096,8 @@
 			(uuid "d57ad1ea-9695-4818-a5a3-9bc5ab0e42c7")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -85909,7 +84107,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -86267,7 +84465,7 @@
 			(uuid "e8a92d55-dacb-4d93-a504-048b005d7c52")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -86287,8 +84485,8 @@
 			(uuid "c879bb44-c6bf-4e26-b774-3e6d8757b4ff")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -86298,7 +84496,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -87379,7 +85577,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -87391,43 +85589,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "ca7a5049-edde-4601-943c-9bdf830c5646")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "15b1f7a1-aaa8-4750-9a71-1725c877570b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/9a9ee287-ab69-4a1f-95c9-74e2029181f1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -87581,7 +85745,7 @@
 			(uuid "cfa8a4e1-7120-499c-99e8-ad27ed02f797")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -87601,8 +85765,8 @@
 			(uuid "0e98e54d-edf4-4a2e-8c7c-e899b11673f2")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -87612,7 +85776,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -87970,7 +86134,7 @@
 			(uuid "92b1af1e-b17c-4253-96f3-9cc8af3cce9a")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -87990,8 +86154,8 @@
 			(uuid "f4aff7b7-c859-44ee-8013-78bd0c8f6489")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -88001,7 +86165,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -90199,7 +88363,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -90211,43 +88375,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "3cd029dd-77aa-419a-93cc-acfdc31f9a0a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "5947815d-79a8-41ff-b12e-a6e55c7619b6")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/107c0a22-ea02-4cbd-9aa4-eaa16b486eb9")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -90401,7 +88531,7 @@
 			(uuid "33f319e1-8f47-4732-af51-5f43624a39a1")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -90421,8 +88551,8 @@
 			(uuid "bd5ae613-3ebf-411f-a1c7-963de8b690d1")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -90432,7 +88562,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -90790,7 +88920,7 @@
 			(uuid "1c186367-1e97-4660-9635-68e97f3a7eda")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -90810,8 +88940,8 @@
 			(uuid "21efcfde-bf29-469e-8311-e9c20348c6a9")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -90821,7 +88951,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -92081,7 +90211,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -92093,43 +90223,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "8695a73e-4e5e-4b1b-a415-6fae747bff67")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "0896550d-b86a-442e-b9de-6f56672c83d5")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/fa361133-6e66-4ca8-90c7-c8845d4fd108")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -92283,7 +90379,7 @@
 			(uuid "b49fd231-3543-421e-b63b-d371f5cdb5d0")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -92303,8 +90399,8 @@
 			(uuid "ea701367-313c-4414-867e-8b9d978758f2")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -92314,7 +90410,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -92672,7 +90768,7 @@
 			(uuid "db8fa718-84de-4cdd-bb53-b730905c5f9a")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -92692,8 +90788,8 @@
 			(uuid "5d982ad5-87f5-480d-87b2-537d230d957b")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -92703,7 +90799,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -93392,7 +91488,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -93404,43 +91500,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "054a7bf3-b97c-4e3b-b7a8-fdc5e7f9a81f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "a976203c-3b00-497f-8528-f9feeb581c35")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/dc2cd2c5-83a3-4008-94fe-18aa484ce23e")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -93594,7 +91656,7 @@
 			(uuid "1d02af25-90cc-46e8-8f79-ce67e71a6475")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -93614,8 +91676,8 @@
 			(uuid "46fbe911-d965-4a6d-a230-234fedfe80a1")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -93625,7 +91687,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -93983,7 +92045,7 @@
 			(uuid "48a4594c-09ec-430e-a29d-2dde1e858640")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -94003,8 +92065,8 @@
 			(uuid "336edb6b-8f83-43af-bf58-4051b4f864d0")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -94014,7 +92076,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -94863,7 +92925,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -94875,43 +92937,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "84203df3-1ea5-4f02-a0a5-ca34753c753e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "bff6e8fa-790e-49a8-8662-59e5cf09a6dc")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/f00241dd-13b6-4567-80a3-9f894ea0c403")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -95065,7 +93093,7 @@
 			(uuid "41eda877-07ae-44ce-bef9-81265f2fd5e1")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -95085,8 +93113,8 @@
 			(uuid "e5a37c16-f2ef-483c-adb7-084e56918946")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -95096,7 +93124,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -95454,7 +93482,7 @@
 			(uuid "23992903-5b01-4c86-8a32-f57867fbe60c")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -95474,8 +93502,8 @@
 			(uuid "9b77720f-1368-498f-b9c7-fe623dbac543")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -95485,7 +93513,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -98534,7 +96562,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -98546,43 +96574,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "7b241365-42f1-4995-8d15-972165c6eae2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "f13b5507-ea12-496d-9e48-5be34f6f26d1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/19ce64a7-160e-4b31-aa4d-75ffd8947e73")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -98736,7 +96730,7 @@
 			(uuid "be11d585-8e34-49ed-aa32-c3c791cfff78")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -98756,8 +96750,8 @@
 			(uuid "85aaff7c-dc3f-4139-9231-3b26058e5928")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -98767,7 +96761,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -99125,7 +97119,7 @@
 			(uuid "469b7663-803a-42d1-9233-3c06034bc2df")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -99145,8 +97139,8 @@
 			(uuid "22b3296e-2cfa-46ed-b15f-49dae68339a0")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -99156,7 +97150,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -100294,7 +98288,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -100306,43 +98300,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "812e76ec-a2e2-471b-8089-9b4721665abd")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "281450e2-c9c2-4f3b-a36c-ee14a85265a3")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/199748e7-b4e7-403c-95be-4cf3d3c55e36")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -100496,7 +98456,7 @@
 			(uuid "f9a6f36a-d287-4aae-91bc-2cda585e4b60")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -100516,8 +98476,8 @@
 			(uuid "b6f7cb3a-566f-45df-90f1-4a0da49d6ae5")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -100527,7 +98487,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -100885,7 +98845,7 @@
 			(uuid "62cac947-f288-44f3-95a2-140cac7ea85b")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -100905,8 +98865,8 @@
 			(uuid "2ba37ebf-783b-4f60-a8b0-7c22e0c1a0f3")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -100916,7 +98876,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -101213,7 +99173,7 @@
 				)
 			)
 		)
-		(property "Description" "Mechanical keyboard hotswap socket"
+		(property "Description" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -101225,43 +99185,9 @@
 				)
 			)
 		)
-		(property "MPN" "KS-2P02B01-02"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "57ea8a53-a17b-42dd-8e00-9d1c5d6b5023")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Package" "SMD"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "b5807861-cfe4-4cb7-aae1-7c90dfc79b78")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
 		(path "/a55f8f16-70ef-4ebc-9b4f-d08be663152a")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -101415,7 +99341,7 @@
 			(uuid "bbc2c95a-2c0f-410a-846d-16ce6dabb04c")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.15)
@@ -101435,8 +99361,8 @@
 			(uuid "50358a1d-b1de-4e41-8e41-5ea5c6d7d4f6")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -101446,7 +99372,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.15)
 				(type solid)
@@ -101804,7 +99730,7 @@
 			(uuid "a667af83-9148-4973-8977-41e23fec7d69")
 		)
 		(fp_line
-			(start 0.975 -7.725)
+			(start 0.975 -7.125)
 			(end 0.975 -7.925)
 			(stroke
 				(width 0.1)
@@ -101824,8 +99750,8 @@
 			(uuid "ffe943a7-0152-409e-badd-6a9588cfc45b")
 		)
 		(fp_line
-			(start -0.525 -7.725)
-			(end 0.975 -7.725)
+			(start -0.525 -7.125)
+			(end 0.975 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -101835,7 +99761,7 @@
 		)
 		(fp_line
 			(start -0.525 -7.925)
-			(end -0.525 -7.725)
+			(end -0.525 -7.125)
 			(stroke
 				(width 0.1)
 				(type solid)
