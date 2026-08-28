@@ -54,22 +54,25 @@ Finally the **Raspberry Pi Pico**, which we'll be connecting to USB data lines v
 
 ### Assembly
 
-> [!WARNING]
-> TODO Update assembly guide
+#### PCB
 
-1. Perform the initial firmware flash on the Pico
-1. Attach the 2u stabilizer to the top case
-1. Place OLED breakout into plate's display slot
-1. Screw the USB breakout to the plate
-1. Solder the Pico onto the PCB
-1. Solder interfacing wires:
-    - between the USB breakout and J1
-    - between Pico's test pads and J2
-    - between the OLED and J3
-1. Screw the top case to the bottom case
-1. Attach switches and keycaps
+- Perform the initial firmware flash on the Pico
+- Solder the Pico onto the PCB
+- Solder the PCB wire ends to the J1, J2 and J3 interfaces
 
-And it's done!
+#### Plate
+
+- Attach the 2u stabilizer to the plate
+- Screw the USB breakout to the plate
+- Place OLED breakout into plate's display slot
+
+#### Final assembly
+
+- Connect the plate to the PCB by pushing switches through them
+- Solder component wire ends to the respective breakout boards
+- Screw the top case to the bottom case
+
+Put on some keycaps and it's done!
 
 ## PCB
 
