@@ -5160,6 +5160,12 @@
 		(uuid "88b66ad4-f11b-489a-b7d6-ebbbcc7b3c5c")
 	)
 	(junction
+		(at 59.69 212.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "88f002c3-a066-43fa-9837-f2ff82044d33")
+	)
+	(junction
 		(at 236.22 226.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8495,6 +8501,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 213.36) (xy 59.69 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "696dc9ad-c50d-4df0-afe0-fff5e62dd581")
+	)
+	(wire
+		(pts
 			(xy 270.51 194.31) (xy 259.08 194.31)
 		)
 		(stroke
@@ -9335,7 +9351,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 207.01) (xy 48.26 209.55)
+			(xy 48.26 207.01) (xy 48.26 208.28)
 		)
 		(stroke
 			(width 0)
@@ -11395,7 +11411,7 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 208.28) (xy 54.61 210.82)
+			(xy 54.61 208.28) (xy 54.61 209.55)
 		)
 		(stroke
 			(width 0)
@@ -11432,16 +11448,6 @@
 			(type default)
 		)
 		(uuid "e4ff4d99-1fef-4d6a-a12c-04c3d22854f8")
-	)
-	(wire
-		(pts
-			(xy 48.26 209.55) (xy 59.69 209.55)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5461d22-e5fa-4836-aba5-bb598a28e09d")
 	)
 	(wire
 		(pts
@@ -12141,6 +12147,30 @@
 			)
 		)
 	)
+	(global_label "ROW3"
+		(shape input)
+		(at 100.33 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "065a46b3-6e67-4499-86c9-3806410ce093")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 108.5766 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "CS1"
 		(shape input)
 		(at 177.8 143.51 90)
@@ -12178,6 +12208,54 @@
 		(uuid "0a3fe177-1f0c-4373-8ae3-318172457020")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 165.1824 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "VBUS"
+		(shape input)
+		(at 156.21 269.24 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0a423eb9-f21c-4d9f-b388-46ef89aaf373")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 164.0938 269.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "ROW4"
+		(shape input)
+		(at 100.33 72.39 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1365daba-147b-4a78-83da-f010e51c94ee")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 108.5766 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12285,30 +12363,6 @@
 			)
 		)
 	)
-	(global_label "DATA+"
-		(shape input)
-		(at 185.42 264.16 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2245b996-9889-432f-afd6-fd5676a3f192")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 176.4476 264.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
 	(global_label "CS2"
 		(shape input)
 		(at 189.23 143.51 90)
@@ -12402,30 +12456,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-	)
-	(global_label "VBUS"
-		(shape input)
-		(at 156.21 261.62 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2e921840-1c02-402c-af2a-3cee2e316562")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 164.0938 261.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 	)
@@ -12597,30 +12627,6 @@
 			)
 		)
 	)
-	(global_label "ROW5"
-		(shape input)
-		(at 100.33 72.39 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "44356362-5cce-4819-b97d-0af6e44002b1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 108.5766 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "COL9"
 		(shape input)
 		(at 308.61 46.99 90)
@@ -12778,30 +12784,6 @@
 		(uuid "4a6041a6-ed5c-48ec-9c5f-97b5aa74cf5e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 257.81 136.8358 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "ROW2"
-		(shape input)
-		(at 100.33 64.77 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4e380a4b-07ea-4068-8620-f5ada7748843")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 108.5766 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13018,6 +13000,30 @@
 		(uuid "5e2c82d1-42a7-4bbc-8ed1-8e00269e8bfc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 171.5448 106.7594 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "3V3"
+		(shape input)
+		(at 217.17 269.24 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6271a3ea-b917-40d6-8031-ef3711833048")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 210.6772 269.24 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13389,6 +13395,30 @@
 			)
 		)
 	)
+	(global_label "ROW2"
+		(shape input)
+		(at 100.33 67.31 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8419d281-b639-4fb6-af7c-622180c0adf4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 108.5766 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "SDA"
 		(shape input)
 		(at 217.17 266.7 180)
@@ -13482,30 +13512,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-	)
-	(global_label "ROW4"
-		(shape input)
-		(at 100.33 69.85 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9021daad-f247-40f1-8e60-19a075941d8a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 108.5766 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 	)
@@ -13773,6 +13779,30 @@
 			)
 		)
 	)
+	(global_label "DATA+"
+		(shape input)
+		(at 185.42 266.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a3d291e7-dec5-4204-a237-b4e3abaf144f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 176.4476 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "SCL"
 		(shape input)
 		(at 217.17 264.16 180)
@@ -14013,30 +14043,6 @@
 			)
 		)
 	)
-	(global_label "ROW3"
-		(shape input)
-		(at 100.33 67.31 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b78c9c33-d39e-4e0c-b38f-367e08dceb77")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 108.5766 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "COL1"
 		(shape input)
 		(at 100.33 62.23 0)
@@ -14058,30 +14064,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "3V3"
-		(shape input)
-		(at 217.17 261.62 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "bea68bf0-85a8-4255-ac59-3f228840bb37")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 210.6772 261.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -14493,6 +14475,54 @@
 			)
 		)
 	)
+	(global_label "ROW5"
+		(shape input)
+		(at 100.33 87.63 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ea0772d8-6d52-40a9-aa64-33b3d44cacd2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 108.5766 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "DATA-"
+		(shape input)
+		(at 185.42 269.24 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ed70d772-cd64-426d-8bc6-2812f85e0e88")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 176.4476 269.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "COL4"
 		(shape input)
 		(at 54.61 80.01 180)
@@ -14554,30 +14584,6 @@
 		(uuid "f1e3ed78-e9ae-40e5-ad78-b430c9128997")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 37.7153 196.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "DATA-"
-		(shape input)
-		(at 185.42 266.7 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f2513e6b-7062-4e3c-a9bc-484f0276e9da")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 176.4476 266.7 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15467,84 +15473,6 @@
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D117")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 217.17 269.24 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0e2252b5-acf7-4d6b-987c-1c8a1500986b")
-		(property "Reference" "#PWR03"
-			(at 217.17 275.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 217.17 274.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 217.17 269.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 217.17 269.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 217.17 269.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6a5fb388-2af3-42be-98f5-09f01a551109")
-		)
-		(instances
-			(project "Krteq"
-				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -16545,85 +16473,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 156.21 269.24 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "128497f5-5305-4dc9-adab-8bd715a135ab")
-		(property "Reference" "#PWR05"
-			(at 156.21 275.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 156.21 274.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 156.21 269.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 156.21 269.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 156.21 269.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a89d5383-f6fc-4996-9bbd-78b53fa0e985")
-		)
-		(instances
-			(project "Krteq"
-				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED_ABGR")
 		(at 264.16 220.98 0)
 		(unit 1)
@@ -17062,85 +16911,6 @@
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "SW11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 185.42 269.24 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "17724fd1-b6a4-4f78-a916-902223c3634d")
-		(property "Reference" "#PWR06"
-			(at 185.42 275.59 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 185.42 274.32 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 185.42 269.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 185.42 269.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 185.42 269.24 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "5762e257-db76-4e09-a994-a3f20e03e675")
-		)
-		(instances
-			(project "Krteq"
-				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -22925,6 +22695,84 @@
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 59.69 213.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "58ee54e4-ebce-4e73-9c18-773d9ce090b6")
+		(property "Reference" "#PWR013"
+			(at 59.69 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 59.69 218.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 59.69 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 59.69 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "82dc6060-1822-4154-8ef8-49c56731f7aa")
+		)
+		(instances
+			(project "Krteq"
+				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -29606,6 +29454,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 48.26 208.28 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9ae5fff8-8d28-4ba7-b763-53c59097b723")
+		(property "Reference" "#PWR012"
+			(at 48.26 214.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 48.26 213.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 48.26 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1a329c00-2529-48ef-aeb7-baff9bec5561")
+		)
+		(instances
+			(project "Krteq"
+				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED_ABGR")
 		(at 287.02 200.66 0)
 		(unit 1)
@@ -30826,7 +30752,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 54.61 210.82 0)
+		(at 54.61 209.55 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -30837,7 +30763,7 @@
 		(fields_autoplaced yes)
 		(uuid "ad802414-f709-41aa-8d8f-2efeec1ae8eb")
 		(property "Reference" "#PWR08"
-			(at 54.61 217.17 0)
+			(at 54.61 215.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30848,7 +30774,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 54.61 215.9 0)
+			(at 54.61 214.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -30858,7 +30784,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 54.61 210.82 0)
+			(at 54.61 209.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30869,7 +30795,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 210.82 0)
+			(at 54.61 209.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30880,7 +30806,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 54.61 210.82 0)
+			(at 54.61 209.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31905,6 +31831,84 @@
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D124")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 185.42 264.16 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b86676a8-4349-463c-bda5-e8acdce56fd4")
+		(property "Reference" "#PWR06"
+			(at 179.07 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 180.594 264.16 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 185.42 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 185.42 264.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7c63b29d-0582-4bf5-843e-5156fa8698dc")
+		)
+		(instances
+			(project "Krteq"
+				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -33845,6 +33849,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 217.17 261.62 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d4025088-e7fc-47af-a9fd-efbaf536d438")
+		(property "Reference" "#PWR03"
+			(at 210.82 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 212.09 261.62 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 217.17 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 217.17 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "03fd262b-fa54-4e25-9867-c221ee36b0c4")
+		)
+		(instances
+			(project "Krteq"
+				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
+					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 101.6 166.37 90)
 		(unit 1)
@@ -34269,6 +34350,86 @@
 			(project "Krteq"
 				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
 					(reference "D44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 156.21 261.62 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "de4a4d8b-8f32-4c28-b763-5d36be70a9c3")
+		(property "Reference" "#PWR05"
+			(at 162.56 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 261.6199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 156.21 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 156.21 261.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f5a45939-29c7-4134-b793-1953ba6f38dc")
+		)
+		(instances
+			(project "Krteq"
+				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
