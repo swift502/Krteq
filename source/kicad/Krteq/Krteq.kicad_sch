@@ -4434,6 +4434,12 @@
 		(uuid "2835b671-13b1-4e90-b51e-d503a285e751")
 	)
 	(junction
+		(at 78.74 148.59)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "284895bc-19ea-443a-857e-c1c9c28b7ae6")
+	)
+	(junction
 		(at 298.45 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6608,6 +6614,16 @@
 			(type default)
 		)
 		(uuid "153425e5-3f72-4ea0-bebf-6774c15e515e")
+	)
+	(wire
+		(pts
+			(xy 78.74 148.59) (xy 72.39 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1558a447-8b31-40b4-a03c-cfd94dae02bf")
 	)
 	(wire
 		(pts
@@ -10698,6 +10714,16 @@
 			(type default)
 		)
 		(uuid "c3964237-4608-4117-bd10-c2d9a8e40a7b")
+	)
+	(wire
+		(pts
+			(xy 72.39 148.59) (xy 72.39 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3a59349-1588-4383-8a6e-30bd47d513a1")
 	)
 	(wire
 		(pts
@@ -16078,7 +16104,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 101.6 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -20998,7 +21024,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 91.44 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -21042,7 +21068,7 @@
 				)
 			)
 		)
-		(property "Package" "0402"
+		(property "Package" "0603"
 			(at 91.44 166.37 90)
 			(hide yes)
 			(show_name no)
@@ -22585,7 +22611,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 63.5 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -26809,7 +26835,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 81.28 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -33106,6 +33132,109 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 72.39 153.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cb28ebdb-275c-48a4-8c91-e6637317f513")
+		(property "Reference" "C8"
+			(at 69.596 152.146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "22µF/10V"
+			(at 69.596 154.94 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 72.39 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 72.39 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "CL21A226MAYNNNE"
+			(at 72.39 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Package" "0805"
+			(at 72.39 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "55054b88-9ee2-4f33-8d0d-871ffef4dcfa")
+		)
+		(pin "1"
+			(uuid "b509794a-ceb1-4890-9bae-cb61cf9c7746")
+		)
+		(instances
+			(project "Krteq"
+				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D")
 		(at 234.95 91.44 90)
 		(unit 1)
@@ -34006,6 +34135,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 72.39 156.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d7cd4c23-a152-46a7-9d55-5799795477ed")
+		(property "Reference" "#PWR014"
+			(at 72.39 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 72.39 161.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 72.39 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 72.39 156.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9bfc58ab-96be-4385-b53a-319a15f872b2")
+		)
+		(instances
+			(project "Krteq"
+				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 101.6 166.37 90)
 		(unit 1)
@@ -34036,7 +34243,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 101.6 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -34080,7 +34287,7 @@
 				)
 			)
 		)
-		(property "Package" "0402"
+		(property "Package" "0603"
 			(at 101.6 166.37 90)
 			(hide yes)
 			(show_name no)
@@ -34240,7 +34447,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 91.44 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -34802,7 +35009,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_01005_0402Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 81.28 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -34846,7 +35053,7 @@
 				)
 			)
 		)
-		(property "Package" "0402"
+		(property "Package" "0603"
 			(at 81.28 166.37 90)
 			(hide yes)
 			(show_name no)

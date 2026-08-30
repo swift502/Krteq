@@ -82,17 +82,18 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 
 ### Suggested BOM
 
-| Part | Manufacturer Part Number |
-|---|---|
-| Switch diode | 1N4148W |
-| Switch socket | KS-2P02B01-02 |
-| RGB LED | A-SP1513R6GHB1C-A01-2A |
-| RGB driver | IS31FL3733-QFLS4-TR |
-| 0.1µF capacitor | CL05B104KO5NNNC |
-| 0.47µF capacitor | CL10B474KA8NNNC |
-| 2kΩ resistor | 0603WAF2001T5E |
-| 20kΩ resistor | 0603WAF2002T5E |
-| 100kΩ resistor | 0603WAF1003T5E |
+| Part | Package | Manufacturer Part Number |
+|---|---|---|
+| Switch diode | SOD-123 | 1N4148W |
+| Switch socket | SMD | KS-2P02B01-02 |
+| RGB LED | SMD-4P,3.2x1.3mm | A-SP1513R6GHB1C-A01-2A |
+| RGB driver | QFN-48-EP(6x6) | IS31FL3733-QFLS4-TR |
+| 0.1µF capacitor | 0402 | CL05B104KO5NNNC |
+| 0.47µF capacitor | 0603 | CL10B474KA8NNNC |
+| 22µF/10V capacitor | 0805 | CL21A226MAYNNNE |
+| 2kΩ resistor | 0603 | 0603WAF2001T5E |
+| 20kΩ resistor | 0603 | 0603WAF2002T5E |
+| 100kΩ resistor | 0603 | 0603WAF1003T5E |
 
 ## Case
 
