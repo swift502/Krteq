@@ -72,7 +72,7 @@ Finally the **Raspberry Pi Pico**, which we'll be connecting to USB data lines v
 - Solder component wire ends to the respective breakout boards
 - Screw the top case to the bottom case
 
-Put on some keycaps and it's done!
+Put on some keycaps and you're done!
 
 ## PCB
 
@@ -108,7 +108,7 @@ The plate has a "keychron" variant, which adjusts stabilizer cutouts for their n
 QMK/VIA setup with a few custom features:
 
 - custom `KRT_VOL` keycode for combined volume control
-- custom `KRT_SCR` keycode for OLED mode switching
+- custom `KRT_SCR` keycode for OLED control
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> reverts to the default keymap
 
