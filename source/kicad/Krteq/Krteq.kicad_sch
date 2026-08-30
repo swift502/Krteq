@@ -16104,7 +16104,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 101.6 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -16148,7 +16148,7 @@
 				)
 			)
 		)
-		(property "Package" "0402"
+		(property "Package" "0603"
 			(at 101.6 157.48 90)
 			(hide yes)
 			(show_name no)
@@ -21024,7 +21024,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 91.44 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -21068,7 +21068,7 @@
 				)
 			)
 		)
-		(property "Package" "0603"
+		(property "Package" "0402"
 			(at 91.44 166.37 90)
 			(hide yes)
 			(show_name no)
@@ -22611,7 +22611,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 63.5 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -22655,7 +22655,7 @@
 				)
 			)
 		)
-		(property "Package" "0402"
+		(property "Package" "0603"
 			(at 63.5 176.53 90)
 			(hide yes)
 			(show_name no)
@@ -26835,7 +26835,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 81.28 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -26879,7 +26879,7 @@
 				)
 			)
 		)
-		(property "Package" "0402"
+		(property "Package" "0603"
 			(at 81.28 157.48 90)
 			(hide yes)
 			(show_name no)
@@ -34243,7 +34243,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 101.6 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -34287,7 +34287,7 @@
 				)
 			)
 		)
-		(property "Package" "0603"
+		(property "Package" "0402"
 			(at 101.6 166.37 90)
 			(hide yes)
 			(show_name no)
@@ -34447,7 +34447,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 91.44 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -34491,7 +34491,7 @@
 				)
 			)
 		)
-		(property "Package" "0402"
+		(property "Package" "0603"
 			(at 91.44 157.48 90)
 			(hide yes)
 			(show_name no)
@@ -35009,7 +35009,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 81.28 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -35053,7 +35053,7 @@
 				)
 			)
 		)
-		(property "Package" "0603"
+		(property "Package" "0402"
 			(at 81.28 166.37 90)
 			(hide yes)
 			(show_name no)
