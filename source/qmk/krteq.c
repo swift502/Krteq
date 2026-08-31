@@ -101,9 +101,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
             if (record->event.pressed && double_shift)
             {
                 if (!process_quantum(QK_BOOTLOADER, record))
-                {
                     return false;
-                }
             }
             break;
 
@@ -111,17 +109,13 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
             if (record->event.pressed && double_shift)
             {
                 if (!process_quantum(QK_CLEAR_EEPROM, record))
-                {
                     return false;
-                }
             }
             break;
     }
 
     if (!process_record_user(keycode, record))
-    {
         return false;
-    }
 
     switch (keycode)
     {
