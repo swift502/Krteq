@@ -15,8 +15,8 @@
     "maintainer": "swift502",
     "manufacturer": "swift502",
     "matrix_pins": {
-        "cols": ["GP3", "GP4", "GP5", "GP6", "GP7", "GP22", "GP26", "GP27", "GP28", "GP21", "GP16", "GP17"],
-        "rows": ["GP18", "GP19", "GP12", "GP11", "GP10", "GP9"]
+        "cols": ["GP15", "GP18", "GP26", "GP28", "GP10", "GP11", "GP12", "GP13", "GP14", "GP3", "GP4", "GP5"],
+        "rows": ["GP16", "GP17", "GP19", "GP20", "GP21", "GP27"]
     },
     "processor": "RP2040",
     "qmk": {
