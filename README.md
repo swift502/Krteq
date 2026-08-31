@@ -46,8 +46,6 @@ The **OLED display module** is expected to be a 128x32 I2C OLED screen. These sc
 
 The **USB breakout board** is expected to match the specs of the Adafruit USB-C breakout board with two M2.5 screw holes 15.24mm apart, 2.54mm from the front edge, and built-in resistors for the CC lines.
 
-Finally, the **Raspberry Pi Pico** will be connected to USB data lines via its test pads, so it needs to be soldered upside down to expose those pads. Pay close attention to the pin guides printed on the PCB to ensure correct orientation while soldering.
-
 > [!WARNING]
 > TODO IMAGE
 
