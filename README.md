@@ -42,11 +42,11 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 ### Breakout boards
 
-The **OLED display** is expected to be a 128x32 I2C OLED screen. These screens are not very standardized, so the PCB cutout is very generous to fit modules with slightly different dimensions. Any OLED roughly equal or less than 38x12mm should fit, and at most require slight modifications to the display cutout in the top plate.
+The **OLED display module** is expected to be a 128x32 I2C OLED screen. These screens are not very standardized, so the PCB cutout is very generous to fit modules with slightly different dimensions. Any OLED roughly equal or less than 38x12mm should fit, and at most require slight modifications to the display cutout in the top plate.
 
 The **USB breakout board** is expected to match the specs of the Adafruit USB-C breakout board with two M2.5 screw holes 15.24mm apart, 2.54mm from the front edge, and built-in resistors for the CC lines.
 
-Finally the **Raspberry Pi Pico**, which we'll be connecting to USB data lines via its test pads, so it needs to be soldered upside down to expose those pads. Pay close attention to the pin guides printed on the PCB to ensure correct orientation while soldering.
+The **Raspberry Pi Pico** will be connected to USB data lines via its test pads, so it needs to be soldered upside down to expose those pads. Pay close attention to the pin guides printed on the PCB to ensure correct orientation while soldering.
 
 > [!WARNING]
 > TODO IMAGE
