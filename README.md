@@ -31,23 +31,22 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 - [PCB](#pcb)
 - [Case](#case)
 - [Keycaps](#keycaps)
-- 61x Gateron KS-33 switches
+- 61x Gateron KS-33 switch
+- Gateron 2u low profile plate-mounted stabilizer
 - Raspberry Pi Pico
 - USB-C breakout board
-- 128x32 I2C OLED display module
-- Gateron 2u low profile plate-mounted stabilizer
-- 8x M2.5x6 screws
+- OLED display module
+- 11x connecting wire
+- 8x M2.5x6 screw
 - Rubber feet
 
 ### Breakout boards
 
-Three third party boards are used in the design with varying levels of standardization.
-
-The **OLED display** is the least standardized, so the PCB cutout is very generous to fit modules with slightly different dimensions. Any OLED roughly equal or less than 38x12mm should fit well, and at most require slight modifications to the display cutout in the top plate.
+The **OLED display** is expected to be a 128x32 I2C OLED screen. These screens are not very standardized, so the PCB cutout is very generous to fit modules with slightly different dimensions. Any OLED roughly equal or less than 38x12mm should fit, and at most require slight modifications to the display cutout in the top plate.
 
 The **USB breakout board** is expected to match the specs of the Adafruit USB-C breakout board with two M2.5 screw holes 15.24mm apart, 2.54mm from the front edge, and built-in resistors for the CC lines.
 
-Finally the **Raspberry Pi Pico**, which we'll be connecting to USB data lines via its test pads.
+Finally the **Raspberry Pi Pico**, which we'll be connecting to USB data lines via its test pads, so it needs to be soldered upside down to expose those pads. Pay close attention to the pin guides printed on the PCB to ensure correct orientation while soldering.
 
 > [!WARNING]
 > TODO IMAGE
