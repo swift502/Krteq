@@ -30,11 +30,11 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 - [PCB](#pcb)
 - [Case](#case)
-- Raspberry Pi Pico
-- Adafruit style USB-C breakout board
-- 128x32 I2C OLED display module
+- [Keycaps](#keycaps)
 - 61x Gateron KS-33 switches
-- 61x MX low profile keycaps
+- Raspberry Pi Pico
+- USB-C breakout board
+- 128x32 I2C OLED display module
 - Gateron 2u low profile plate-mounted stabilizer
 - 8x M2.5x6 screws
 - Rubber feet
@@ -103,12 +103,19 @@ STL files for 3D printing can be found in [production/stl](production/stl). Reco
 
 The plate has a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
 
+## Keycaps
+
+You'll need 61 low profile MX compatible keycaps, either solid or shine-through.
+
+- 60x 1u keycap
+- 1x 2u keycap for the spacebar
+
 ## Firmware
 
 QMK/VIA setup with a few custom features:
 
 - custom `KRT_VOL` keycode for combined volume control
-- custom `KRT_SCR` keycode for OLED control
+- custom `KRT_SCR` keycode for combined screen control
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> reverts to the default keymap
 
