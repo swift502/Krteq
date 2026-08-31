@@ -50,12 +50,15 @@ void render_screen(int screen)
             break;
 
         case USER_SCREEN_BONGO_CAT:
+            oled_write_P(PSTR("Bongo cat"), false);
             break;
 
         case SYSTEM_SCREEN_LOGO:
+            oled_write_P(PSTR("Logo"), false);
             break;
 
         case SYSTEM_SCREEN_INPUT_LOCK:
+            oled_write_P(PSTR("Input lock"), false);
             break;
     }
 }
