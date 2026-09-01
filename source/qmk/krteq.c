@@ -35,8 +35,14 @@ void render_screen(int screen)
     {
         oled_clear();
         last_rendered_screen = screen;
+
+        // Init
+        switch (screen)
+        {
+        }
     }
 
+    // Update
     switch (screen)
     {
         case USER_SCREEN_INDICATORS:
