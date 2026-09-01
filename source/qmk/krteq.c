@@ -7,16 +7,13 @@ bool logo_finished = false;
 int selected_user_screen = 0;
 int last_rendered_screen = -1;
 
-enum user_screens
+enum screens
 {
     USER_SCREEN_INDICATORS,
     USER_SCREEN_BONGO_CAT,
-    USER_SCREEN_COUNT
-};
+    USER_SCREEN_COUNT,
 
-enum system_screens
-{
-    SYSTEM_SCREEN_LOGO = 100,
+    SYSTEM_SCREEN_LOGO,
     SYSTEM_SCREEN_INPUT_LOCK
 };
 
