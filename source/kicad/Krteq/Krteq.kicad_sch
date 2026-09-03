@@ -15121,7 +15121,7 @@
 				)
 			)
 		)
-		(property "Value" "Resistor 20kΩ"
+		(property "Value" "20kΩ"
 			(at 63.5 207.01 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -16226,7 +16226,7 @@
 				)
 			)
 		)
-		(property "Value" "Capacitor 0.47µF"
+		(property "Value" "0.47µF"
 			(at 101.6 154.178 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17890,7 +17890,7 @@
 				)
 			)
 		)
-		(property "Value" "Resistor 2kΩ"
+		(property "Value" "2kΩ"
 			(at 54.61 182.88 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -20275,7 +20275,7 @@
 				)
 			)
 		)
-		(property "Value" "Resistor 100kΩ"
+		(property "Value" "100kΩ"
 			(at 48.26 203.2 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -21630,7 +21630,7 @@
 				)
 			)
 		)
-		(property "Value" "Capacitor 0.1µF"
+		(property "Value" "0.1µF"
 			(at 91.44 163.068 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -23371,7 +23371,7 @@
 				)
 			)
 		)
-		(property "Value" "Capacitor 0.47µF"
+		(property "Value" "0.47µF"
 			(at 63.5 173.228 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27727,7 +27727,7 @@
 				)
 			)
 		)
-		(property "Value" "Resistor 2kΩ"
+		(property "Value" "2kΩ"
 			(at 48.26 182.88 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -27958,7 +27958,7 @@
 				)
 			)
 		)
-		(property "Value" "Capacitor 0.47µF"
+		(property "Value" "0.47µF"
 			(at 81.28 154.178 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28685,7 +28685,7 @@
 				)
 			)
 		)
-		(property "Value" "Resistor 100kΩ"
+		(property "Value" "100kΩ"
 			(at 54.61 204.47 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -34891,7 +34891,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Capacitor 22µF/10V"
+		(property "Value" "22µF/10V"
 			(at 69.596 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -36048,7 +36048,7 @@
 				)
 			)
 		)
-		(property "Value" "Capacitor 0.1µF"
+		(property "Value" "0.1µF"
 			(at 101.6 163.068 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -36274,7 +36274,7 @@
 				)
 			)
 		)
-		(property "Value" "Capacitor 0.47µF"
+		(property "Value" "0.47µF"
 			(at 91.44 154.178 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -36891,7 +36891,7 @@
 				)
 			)
 		)
-		(property "Value" "Capacitor 0.1µF"
+		(property "Value" "0.1µF"
 			(at 81.28 163.068 90)
 			(show_name no)
 			(do_not_autoplace no)

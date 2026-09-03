@@ -3283,7 +3283,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Resistor 20kΩ"
+		(property "Value" "20kΩ"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "e0315d82-f742-4fdc-961f-6575c29ce115")
@@ -13091,7 +13091,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Capacitor 22µF/10V"
+		(property "Value" "22µF/10V"
 			(at 0 -1.68 0)
 			(layer "B.Fab")
 			(uuid "f6b80453-a038-4654-afc8-8a0354cf23c0")
@@ -13574,7 +13574,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Resistor 100kΩ"
+		(property "Value" "100kΩ"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "863d37cf-f711-43c7-a1e9-fa4b27613e6d")
@@ -31932,7 +31932,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Capacitor 0.47µF"
+		(property "Value" "0.47µF"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "e9aef740-ec50-400f-910b-2046aea529ce")
@@ -32705,7 +32705,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Capacitor 0.47µF"
+		(property "Value" "0.47µF"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "6b13fecb-69a3-4257-a7af-87a9ed91a314")
@@ -34000,7 +34000,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Capacitor 0.47µF"
+		(property "Value" "0.47µF"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "99be4df7-9075-4aec-9a6c-90e02d76c653")
@@ -35954,7 +35954,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Resistor 2kΩ"
+		(property "Value" "2kΩ"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "c9af0b16-1847-4789-88c8-a8070c362a4b")
@@ -42093,7 +42093,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Resistor 2kΩ"
+		(property "Value" "2kΩ"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "9ea0d402-8934-4bf6-9edd-d9be5c2ed96f")
@@ -70224,7 +70224,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Capacitor 0.47µF"
+		(property "Value" "0.47µF"
 			(at 0 -1.43 180)
 			(layer "B.Fab")
 			(uuid "0dcb04ff-7095-4290-b4a7-82cf356a8643")
@@ -77401,7 +77401,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Capacitor 0.1µF"
+		(property "Value" "0.1µF"
 			(at 0 -1.16 0)
 			(layer "B.Fab")
 			(uuid "6179cc3d-bee8-45a9-a6b7-2216cbb83500")
@@ -90968,7 +90968,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Capacitor 0.1µF"
+		(property "Value" "0.1µF"
 			(at 0 -1.16 180)
 			(layer "B.Fab")
 			(uuid "7d80e771-1dbd-42b5-9b74-095877da6668")
@@ -93893,7 +93893,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Resistor 100kΩ"
+		(property "Value" "100kΩ"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "aae3296d-ac02-4baa-980f-10c29b2a07ff")
@@ -102721,7 +102721,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Capacitor 0.1µF"
+		(property "Value" "0.1µF"
 			(at 0 -1.16 0)
 			(layer "B.Fab")
 			(uuid "4b35265b-9cb1-4b8d-b077-8c26bcae3d7a")
