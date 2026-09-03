@@ -145,7 +145,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "cd98beba-5689-4653-a813-f4d9998bf168")
@@ -2059,7 +2059,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "c0be32ce-8e69-4bb3-a855-eb42760c6546")
@@ -4816,7 +4816,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "fc3b371e-0295-4760-b91e-37cecd07c89a")
@@ -6446,7 +6446,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "6f4e7401-31ac-4ac8-8589-f07a23918206")
@@ -9822,7 +9822,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "7824b9df-0465-454a-a969-a83c274c0672")
@@ -13284,7 +13284,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "b34e6e01-da80-44c9-8757-c600d1746b25")
@@ -17909,7 +17909,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "3379c057-3a90-4145-805d-3cf4cfa2d595")
@@ -18199,7 +18199,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "53ce8116-d612-4312-a5be-ef90e43e58e4")
@@ -18489,7 +18489,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "a86885a0-4759-4b48-ad86-0396b5c83e8b")
@@ -20931,7 +20931,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "9b1e7ade-1807-4092-81a0-acd2de675cef")
@@ -21221,7 +21221,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "05a27007-8efd-48ea-b8ce-f793f4c6c559")
@@ -21511,7 +21511,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "dba3691f-06ea-43eb-98bb-0574feae7a33")
@@ -21801,7 +21801,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "6548d1eb-3c1f-45e4-bb52-321f2ddcdc87")
@@ -23025,7 +23025,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "8ffdf2ca-b4e9-41ef-8fc8-b803052a0215")
@@ -28269,7 +28269,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "83db931c-74ee-4627-9537-b0a5d3f1f65b")
@@ -30366,7 +30366,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "7296ca17-3d01-419a-acd5-74894e582676")
@@ -30656,7 +30656,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "253e5f18-f612-4774-8816-757a730f5c82")
@@ -30946,7 +30946,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "bab2c4ae-a941-49ba-84bc-3711073780e1")
@@ -31236,7 +31236,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "ae120274-4d2f-4f96-ac5d-c0f041eb8f24")
@@ -32125,7 +32125,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "743d625f-2a72-4298-bddd-ada31e20c641")
@@ -32415,7 +32415,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "1ce119c3-5eb9-476f-a6a6-aa18bc3c0737")
@@ -32898,7 +32898,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "aecdc02b-65a4-4e4e-a0c1-22c6984393e5")
@@ -35533,7 +35533,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "6989c03a-6341-4dbc-b09a-8450f6cc38e2")
@@ -35823,7 +35823,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Spacebar_Stabilizer"
+		(property "Value" "Spacebar Stabilizer"
 			(at 0 -11 0)
 			(layer "B.Fab")
 			(uuid "dffa0e52-a8ed-4077-9f49-1696a05cc4eb")
@@ -37081,7 +37081,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "2e9eedf2-3cea-4932-b333-92e38434a156")
@@ -37371,7 +37371,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "cae092e0-748f-4619-a22f-9e022365a689")
@@ -38595,7 +38595,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "9d535444-ef93-4feb-8d4e-dfd8fdb580a9")
@@ -43220,7 +43220,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "7e678bac-7d5f-4375-83c7-b98952b108a0")
@@ -43510,7 +43510,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "770d2caa-547c-4ffd-988b-66ebb2247352")
@@ -45952,7 +45952,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "8d004fe7-d43e-4bfe-860b-2d1d256f9c87")
@@ -46242,7 +46242,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "b23d2938-6ce2-4435-ba03-584cc5243a3a")
@@ -49697,7 +49697,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "c9d0062f-8d94-4e49-ab62-ea43775ba5bb")
@@ -50581,6 +50581,19 @@
 		(uuid "75aa10d6-55a6-4336-80b5-d6b8de76bcb6")
 		(at 219.425 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
+		(property "Reference" "SW56"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "ee220327-52d5-4bf5-9402-fef34de9bdcf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
 		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
@@ -50605,7 +50618,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -50615,19 +50628,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW56"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "ee220327-52d5-4bf5-9402-fef34de9bdcf")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -50675,6 +50675,12 @@
 		(path "/28af075b-fdf0-4a5d-bb16-e4650567c044")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -51522,7 +51528,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "ca368b19-13c8-4005-aa4e-9c1c58b8dc8c")
@@ -54086,7 +54092,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "ccd37bdd-e5d4-4829-8c02-0489022384be")
@@ -54376,7 +54382,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "e9552cf3-73e0-49b3-81ea-fc85e7d9f286")
@@ -57874,7 +57880,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "7f92c270-dc54-4892-9016-a2fccd968748")
@@ -58164,7 +58170,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "9fa73e01-b1c9-4698-b6e4-3a0f466374ff")
@@ -61134,7 +61140,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "cd50fb1d-c3b5-4dd6-9d2a-4d0659a86a2a")
@@ -63292,7 +63298,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "43d1ee4a-9077-444b-bee0-07ec4cb8ccf9")
@@ -63582,7 +63588,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "d6cf684e-be7c-499e-aad2-a9b849763bb4")
@@ -68826,7 +68832,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "69bdf855-9d9b-48d7-a02b-4db6bf209b2e")
@@ -69116,7 +69122,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "b4a452a1-786e-4af4-be96-2377e4dba33a")
@@ -71345,7 +71351,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "1f601328-13d9-437a-98fb-7acc74caa8f8")
@@ -71635,7 +71641,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "ea4122cd-9131-41fd-8547-d10700230417")
@@ -73265,7 +73271,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "dcb373a5-0aad-420c-85fa-17ee9047b41c")
@@ -73555,7 +73561,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "6958d717-b04e-46fc-bab7-b039668828c5")
@@ -73845,7 +73851,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "f3b8fd57-2a65-4ec6-a63a-7514500f2f10")
@@ -74135,7 +74141,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "b9ebd823-dac1-4d62-ab28-afdcc28fc753")
@@ -74425,7 +74431,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "2f460811-56ea-4e4b-89aa-bd3309673317")
@@ -81608,7 +81614,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "afed837d-ce95-4434-ba87-ae488e947dc2")
@@ -82304,7 +82310,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "f8f65714-e0a5-41d6-8ebe-6b5a5a66a166")
@@ -85274,7 +85280,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "c60eca1f-9555-40f8-81ac-0df1cec09d43")
@@ -86478,7 +86484,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "09fc6c60-3586-4294-8295-c06fc281bcc0")
@@ -86768,7 +86774,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "dec80a6e-df5d-43d3-a386-9fb14051b672")
@@ -87058,7 +87064,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "1ce58f73-e730-4187-9f57-7da80b49e219")
@@ -91155,7 +91161,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "73fa2729-26e9-41b9-9b2f-d9fa757af4ee")
@@ -92663,7 +92669,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "b508d349-a4ea-4d94-929d-1ee93afd45f5")
@@ -97166,7 +97172,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "5435db38-7f53-4a2d-8a91-284ea0abd071")
@@ -97456,7 +97462,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "26a58b5f-07e2-4c36-9b2d-885db6ebb7ab")
@@ -99086,7 +99092,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "4e4dd442-4347-486b-ae6f-1907aa45410d")
@@ -101201,7 +101207,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "b1bcb016-281d-410a-be4f-142ba2d7106a")
@@ -102425,7 +102431,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "LED_ABGR"
+		(property "Value" "Reverse Mount LED ABGR"
 			(at 0 -2.4 0)
 			(layer "B.Fab")
 			(uuid "22ffa95f-8c65-463b-87d6-a733cf68cba9")
