@@ -14852,6 +14852,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 184.15 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 184.15 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "17c74f4a-e855-4286-be91-3ebdc2dba44b")
 		)
@@ -14960,6 +14982,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 218.44 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 218.44 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "6412b27a-a064-43d7-8319-0b8ca122aae0")
 		)
@@ -14987,7 +15031,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -15035,6 +15079,28 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04"
+			(at 222.25 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 222.25 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" "DNP"
 			(at 222.25 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -15143,6 +15209,28 @@
 			)
 		)
 		(property "Package" "0603"
+			(at 63.5 207.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 63.5 207.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 63.5 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -15278,6 +15366,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 298.45 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 298.45 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0381c033-96ed-417d-93e3-f96773519f47")
 		)
@@ -15381,6 +15491,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 240.03 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 240.03 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "547e6ca5-eb41-4067-ba1e-7109cadbaa36")
 		)
@@ -15473,6 +15605,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 218.44 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 218.44 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 218.44 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -15614,6 +15768,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 298.45 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 298.45 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8694ba2b-a940-467f-a993-66f951837855")
 		)
@@ -15739,6 +15915,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 209.55 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 209.55 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5d59ef4d-0959-48dd-af37-bbba2fcff62a")
 		)
@@ -15831,6 +16029,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 229.87 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 229.87 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 229.87 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -15950,6 +16170,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 227.33 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 227.33 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3cd1455e-d605-4501-bcb0-62622e5d3979")
 		)
@@ -16042,6 +16284,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 275.59 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 275.59 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 275.59 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -16159,6 +16423,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 101.6 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 101.6 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "9d15a035-0316-4c24-b8e6-46ae699b6d1b")
 		)
@@ -16251,6 +16537,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 229.87 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 229.87 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 229.87 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -16369,6 +16677,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 298.45 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 298.45 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "9817a69c-30b4-4543-aba1-ecace0dcf8ef")
 		)
@@ -16477,6 +16807,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 195.58 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 195.58 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "3bb89b1f-c74d-4bae-8593-6ad74857af93")
 		)
@@ -16575,6 +16927,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 264.16 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 264.16 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 264.16 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -16716,6 +17090,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 222.25 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 222.25 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4af9a7a4-a784-4283-97cd-d494b59d3b78")
 		)
@@ -16808,6 +17204,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 264.16 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 264.16 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 264.16 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -16927,6 +17345,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 290.83 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 290.83 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "60baf29a-a212-4518-881a-b0715574798d")
 		)
@@ -17030,6 +17470,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 214.63 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 214.63 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "11dbcfb0-bd3b-4a3e-b4dd-82e7ab19d9f2")
 		)
@@ -17123,6 +17585,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 316.23 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 316.23 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 316.23 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -17258,6 +17742,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 196.85 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 196.85 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2ae9429a-6a1a-4642-a88e-960388abd9fd")
 		)
@@ -17351,6 +17857,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 227.33 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 227.33 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 227.33 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -17464,6 +17992,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 214.63 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 214.63 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b7af397f-68dc-4209-86cd-00d7c47f3bc9")
 		)
@@ -17567,6 +18117,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 240.03 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 240.03 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "634fbdf5-e4af-429d-9266-a64b4bdf73b3")
 		)
@@ -17659,6 +18231,28 @@
 			)
 		)
 		(property "Package" "0603"
+			(at 54.61 182.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 54.61 182.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 54.61 182.88 90)
 			(hide yes)
 			(show_name no)
@@ -17851,6 +18445,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 321.31 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 321.31 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "91f42b23-a2ca-43b5-aea9-e8f302a2601d")
 		)
@@ -17982,6 +18598,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 234.95 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 234.95 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "70c90fa0-0537-402f-a37d-e4c5513a1282")
 		)
@@ -18075,6 +18713,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 290.83 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 290.83 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 290.83 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -18188,6 +18848,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 265.43 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 265.43 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "19e0fcbb-6a2f-4082-95d3-5eeae0e1d8ea")
 		)
@@ -18281,6 +18963,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 252.73 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 252.73 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 252.73 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -18416,6 +19120,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 323.85 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 323.85 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "13a6ce93-8c96-4e9c-928a-8209a68bb930")
 		)
@@ -18531,6 +19257,28 @@
 			)
 		)
 		(property "Package" "SOD-123"
+			(at 285.75 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 285.75 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 285.75 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -18666,6 +19414,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 260.35 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 260.35 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ce0d735b-0ea8-49a3-9a59-7dbc0e07b2a0")
 		)
@@ -18769,6 +19539,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 259.08 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 259.08 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c388647a-5457-4ff0-93c9-3baca6eb913e")
 		)
@@ -18861,6 +19653,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 344.17 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 344.17 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 344.17 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -18980,6 +19794,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 252.73 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 252.73 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "52c0db45-abbb-487e-85a3-45fe18581f33")
 		)
@@ -19072,6 +19908,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 207.01 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 207.01 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 207.01 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -19190,6 +20048,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 207.01 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 207.01 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "33ae7b14-4391-4a62-bb39-7b1c48adeafc")
 		)
@@ -19288,6 +20168,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 275.59 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 275.59 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 275.59 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -19429,6 +20331,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 323.85 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 323.85 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "aaa558d9-94d3-4d3a-a5bf-bc7bbf9694d6")
 		)
@@ -19532,6 +20456,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 303.53 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 303.53 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4667644d-4faf-491c-9bfc-c7d099d0fabe")
 		)
@@ -19624,6 +20570,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 241.3 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 241.3 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 241.3 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -19743,6 +20711,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 328.93 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 328.93 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "927ef77f-538b-4923-a36e-e046a834362b")
 		)
@@ -19845,6 +20835,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 48.26 203.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 48.26 203.2 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f890a43a-ad0a-4594-8f76-3b33a23f23ba")
 		)
@@ -19866,7 +20878,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -19917,6 +20929,28 @@
 			)
 		)
 		(property "Description" "Mechanical shape, non-electric, board outlines"
+			(at 254 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 254 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" "DNP"
 			(at 254 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -20014,6 +21048,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 316.23 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 316.23 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 316.23 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -20126,6 +21182,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 332.74 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 332.74 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "0871b5b2-4bbd-4231-a958-edcb760e93f0")
 		)
@@ -20224,6 +21302,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 321.31 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 321.31 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 321.31 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -20355,6 +21455,28 @@
 			)
 		)
 		(property "Package" "SOD-123"
+			(at 323.85 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 323.85 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 323.85 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -20545,6 +21667,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 252.73 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 252.73 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "88e35b09-7762-4540-b7c0-8eefce077e93")
 		)
@@ -20643,6 +21787,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 207.01 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 207.01 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 207.01 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -20762,6 +21928,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 328.93 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 328.93 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b48d5305-c3fe-4697-9bbc-3b8ee504c29a")
 		)
@@ -20854,6 +22042,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 298.45 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 298.45 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 298.45 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -20972,6 +22182,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 309.88 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 309.88 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "847f803b-c1d9-495e-81c9-438486162af0")
 		)
@@ -21069,6 +22301,28 @@
 			)
 		)
 		(property "Package" "0402"
+			(at 91.44 166.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 91.44 166.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 91.44 166.37 90)
 			(hide yes)
 			(show_name no)
@@ -21182,6 +22436,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 316.23 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 316.23 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "07c0c7d9-87a6-4f10-be39-5da267fcb75f")
 		)
@@ -21275,6 +22551,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 227.33 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 227.33 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 227.33 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -21410,6 +22708,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 222.25 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 222.25 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "97cc8cf6-fa94-4e95-a1da-e5b4478aa9bd")
 		)
@@ -21525,6 +22845,28 @@
 			)
 		)
 		(property "Package" "SOD-123"
+			(at 196.85 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 196.85 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 196.85 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -21660,6 +23002,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 311.15 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 311.15 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "53ff7832-9285-4974-a436-f937dd33fcc4")
 		)
@@ -21785,6 +23149,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 273.05 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 273.05 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f4fca7aa-51d5-44bd-9b8e-195628a8bb52")
 		)
@@ -21877,6 +23263,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 252.73 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 252.73 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 252.73 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -21996,6 +23404,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 303.53 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 303.53 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c63a6467-c0f7-4b32-b847-ccc470a8149d")
 		)
@@ -22088,6 +23518,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 287.02 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 287.02 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 287.02 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -22229,6 +23681,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 311.15 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 311.15 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9a4559c5-6f06-416f-93c5-d4c2e3324995")
 		)
@@ -22354,6 +23828,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 196.85 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 196.85 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5525eaed-9bc5-4e5b-ae38-a10a8120926d")
 		)
@@ -22446,6 +23942,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 229.87 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 229.87 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 229.87 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -22565,6 +24083,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 240.03 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 240.03 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "43b29419-5b63-4ae2-8448-cd3512901992")
 		)
@@ -22656,6 +24196,28 @@
 			)
 		)
 		(property "Package" "0603"
+			(at 63.5 176.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 63.5 176.53 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 63.5 176.53 90)
 			(hide yes)
 			(show_name no)
@@ -22781,6 +24343,28 @@
 			)
 		)
 		(property "Package" "SOD-123"
+			(at 184.15 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 184.15 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 184.15 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -22972,6 +24556,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 303.53 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 303.53 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2d46fe79-0e23-4e5a-a42c-9e4098356b61")
 		)
@@ -23066,6 +24672,28 @@
 			)
 		)
 		(property "Package" "QFN-48-EP(6x6)"
+			(at 86.36 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 86.36 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 86.36 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -23397,6 +25025,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 241.3 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 241.3 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "dc4f60d7-c39c-4237-bcbf-243c591c0a23")
 		)
@@ -23528,6 +25178,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 285.75 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 285.75 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4c2e19e4-5a6b-489f-9e21-84b585c703d9")
 		)
@@ -23621,6 +25293,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 278.13 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 278.13 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 278.13 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -23733,6 +25427,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 287.02 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 287.02 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "e6db8a2a-fc9b-4d37-9241-2e2c6b747281")
 		)
@@ -23831,6 +25547,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 252.73 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 252.73 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 252.73 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -24027,6 +25765,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 252.73 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 252.73 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "7e81d5f2-b809-453d-8eb6-4c192d9dbfb8")
 		)
@@ -24054,7 +25814,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -24127,6 +25887,28 @@
 			)
 		)
 		(property "Package" ""
+			(at 77.47 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 77.47 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" "DNP"
 			(at 77.47 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -24272,7 +26054,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -24320,6 +26102,28 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03"
+			(at 190.5 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 190.5 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" "DNP"
 			(at 190.5 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -24458,6 +26262,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 254 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 254 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8f9aa8ab-cb7e-4b61-878f-fde152aef78d")
 		)
@@ -24550,6 +26376,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 241.3 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 241.3 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 241.3 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -24658,6 +26506,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 229.87 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 229.87 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 229.87 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -24777,6 +26647,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 227.33 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 227.33 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4b5465b9-ca58-4dcc-a96c-e98865f23034")
 		)
@@ -24880,6 +26772,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 201.93 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 201.93 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "02fead6d-0899-461f-9e7d-30c929d84e6d")
 		)
@@ -24972,6 +26886,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 321.31 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 321.31 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 321.31 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -25113,6 +27049,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 209.55 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 209.55 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8ae87dab-c2ef-43fd-969d-0e2c66d1424f")
 		)
@@ -25228,6 +27186,28 @@
 			)
 		)
 		(property "Package" "SOD-123"
+			(at 323.85 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 323.85 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 323.85 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -25363,6 +27343,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 311.15 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 311.15 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "98ddcded-0aee-4f8c-8bd7-5baecb9922da")
 		)
@@ -25455,6 +27457,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 184.15 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 184.15 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 184.15 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -25596,6 +27620,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 323.85 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 323.85 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8bcf0ba2-7d39-45e1-85a9-4d30cae9769c")
 		)
@@ -25711,6 +27757,28 @@
 			)
 		)
 		(property "Package" "SOD-123"
+			(at 273.05 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 273.05 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 273.05 57.15 90)
 			(hide yes)
 			(show_name no)
@@ -25901,6 +27969,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 195.58 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 195.58 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "4ff9eed5-1b2c-4aea-a181-849f9c7ae9fc")
 		)
@@ -26022,6 +28112,28 @@
 			)
 		)
 		(property "Package" "SOD-123"
+			(at 298.45 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 298.45 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 298.45 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -26157,6 +28269,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 234.95 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 234.95 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6743d057-351c-40ff-b2a6-3b1740b3c241")
 		)
@@ -26179,7 +28313,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
+		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -26227,6 +28361,28 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04"
+			(at 151.13 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 151.13 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" "DNP"
 			(at 151.13 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -26368,6 +28524,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 247.65 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 247.65 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c0afb676-93da-43a7-bb68-6b9748a323fa")
 		)
@@ -26460,6 +28638,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 344.17 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 344.17 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 344.17 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -26579,6 +28779,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 290.83 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 290.83 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0ef016b1-858b-4238-8e8d-90b8520abd2e")
 		)
@@ -26681,6 +28903,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 48.26 182.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 48.26 182.88 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5c141925-e851-44fd-a2c0-dcfd46c6eed9")
 		)
@@ -26773,6 +29017,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 218.44 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 218.44 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 218.44 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -26890,6 +29156,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 81.28 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 81.28 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "eb640ba1-f257-4078-a2f6-62433ce5fdbb")
 		)
@@ -26983,6 +29271,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 201.93 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 201.93 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 201.93 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -27096,6 +29406,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 290.83 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 290.83 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a950a9c3-fcf9-4fea-bc6f-e76e5ee1549a")
 		)
@@ -27189,6 +29521,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 278.13 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 278.13 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 278.13 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -27324,6 +29678,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 298.45 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 298.45 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b9e84ea8-a097-4bd4-8e5a-c3d2acb6b266")
 		)
@@ -27449,6 +29825,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 209.55 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 209.55 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "91691297-a56c-47df-bc44-089c00de0884")
 		)
@@ -27551,6 +29949,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 54.61 204.47 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 54.61 204.47 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f8ed05c1-adc2-455d-bc8e-77cb4d8921b3")
 		)
@@ -27643,6 +30063,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 264.16 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 264.16 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 264.16 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -27761,6 +30203,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 321.31 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 321.31 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "86cb1987-2e46-43e7-91b8-b197152086d0")
 		)
@@ -27859,6 +30323,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 298.45 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 298.45 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 298.45 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -28000,6 +30486,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 247.65 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 247.65 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a72160e3-19d1-40a3-81d9-751444f5e67c")
 		)
@@ -28103,6 +30611,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 252.73 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 252.73 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0c04a8c6-be18-4c6b-b966-d72bc59b268f")
 		)
@@ -28196,6 +30726,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 227.33 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 227.33 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 227.33 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -28331,6 +30883,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 311.15 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 311.15 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "80cd5d45-e7ad-4b04-a892-1d013f226e68")
 		)
@@ -28424,6 +30998,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 265.43 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 265.43 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 265.43 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -28537,6 +31133,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 278.13 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 278.13 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "afb36c80-13e5-4b45-871a-1ecf02bf6d8d")
 		)
@@ -28629,6 +31247,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 189.23 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 189.23 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 189.23 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -28764,6 +31404,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 273.05 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 273.05 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1048ab3b-c370-4b3c-be7e-2cfddc425bb3")
 		)
@@ -28856,6 +31518,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 195.58 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 195.58 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 195.58 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -28965,6 +31649,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 278.13 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 278.13 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 278.13 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -29100,6 +31806,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 285.75 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 285.75 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6fe0b907-dd89-4419-b9a0-c53972b80649")
 		)
@@ -29192,6 +31920,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 172.72 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 172.72 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 172.72 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -29333,6 +32083,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 260.35 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 260.35 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7f4d3395-8535-4ed2-8693-54ba0a78a2cf")
 		)
@@ -29436,6 +32208,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 303.53 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 303.53 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "52e7ae8c-d0fc-4f6c-8edd-f150a9fd5d0f")
 		)
@@ -29528,6 +32322,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 344.17 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 344.17 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 344.17 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -29724,6 +32540,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 287.02 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 287.02 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "46548030-bf40-49a2-9b40-296caae14786")
 		)
@@ -29855,6 +32693,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 298.45 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 298.45 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7bac64d0-121a-4920-89bd-86749719ea07")
 		)
@@ -29947,6 +32807,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 195.58 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 195.58 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 195.58 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -30056,6 +32938,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 240.03 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 240.03 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 240.03 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -30191,6 +33095,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 222.25 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 222.25 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "aaa18120-fcc2-4c72-a6d9-9f3490583cb3")
 		)
@@ -30283,6 +33209,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 332.74 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 332.74 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 332.74 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -30402,6 +33350,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 278.13 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 278.13 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f81a0f91-afb8-44d4-8881-a91ad66e5a45")
 		)
@@ -30495,6 +33465,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 214.63 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 214.63 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 214.63 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -30630,6 +33622,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 222.25 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 222.25 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "37712429-2a35-4f5e-b4ef-5c1d07a85ed2")
 		)
@@ -30722,6 +33736,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 184.15 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 184.15 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 184.15 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -30831,6 +33867,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 265.43 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 265.43 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 265.43 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -31021,6 +34079,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 344.17 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 344.17 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "3"
 			(uuid "dd87ea2c-b9c3-4789-ac64-cce78c2a9342")
 		)
@@ -31130,6 +34210,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 189.23 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 189.23 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "16217bdc-3565-4ef9-b479-7140b7f36e30")
 		)
@@ -31223,6 +34325,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 189.23 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 189.23 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 189.23 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -31358,6 +34482,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 247.65 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 247.65 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "51a9535e-eeee-45a7-8b82-9513cb13d86a")
 		)
@@ -31450,6 +34596,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 287.02 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 287.02 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 287.02 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -31591,6 +34759,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 184.15 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 184.15 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "90c491b6-42cd-46ac-abb7-69ff38dcce82")
 		)
@@ -31684,6 +34874,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 189.23 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 189.23 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 189.23 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -31819,6 +35031,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 222.25 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 222.25 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "08cc5b7e-f343-4411-a075-025bf3827c1f")
 		)
@@ -31911,6 +35145,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 241.3 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 241.3 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 241.3 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -32052,6 +35308,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 184.15 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 184.15 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b31ab466-e5c1-4c42-8fd9-d0536413b93e")
 		)
@@ -32144,6 +35422,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 264.16 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 264.16 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 264.16 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -32285,6 +35585,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 234.95 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 234.95 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "eaeb0004-6b79-4372-afbe-f81c755ecf1d")
 		)
@@ -32378,6 +35700,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 303.53 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 303.53 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 303.53 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -32513,6 +35857,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 184.15 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 184.15 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2afbfc57-b0c8-44c8-aaaf-93b60010d25a")
 		)
@@ -32638,6 +36004,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 311.15 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 311.15 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "930ef75e-e8dc-4642-94e4-b0dd3cba5ff3")
 		)
@@ -32731,6 +36119,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 240.03 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 240.03 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 240.03 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -32866,6 +36276,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 273.05 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 273.05 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "cc0e2f7f-1d89-4c13-a90f-15e07294c20b")
 		)
@@ -32981,6 +36413,28 @@
 			)
 		)
 		(property "Package" "SOD-123"
+			(at 260.35 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 260.35 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 260.35 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -33116,6 +36570,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 184.15 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 184.15 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1345a399-b121-43da-9104-9d39d76481d6")
 		)
@@ -33209,6 +36685,28 @@
 			)
 		)
 		(property "Package" "0805"
+			(at 72.39 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 72.39 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 72.39 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -33334,6 +36832,28 @@
 			)
 		)
 		(property "Package" "SOD-123"
+			(at 234.95 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 234.95 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 234.95 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -33525,6 +37045,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 252.73 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 252.73 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1917eb6b-842e-41bf-91dc-61fafe5ccbfc")
 		)
@@ -33617,6 +37159,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 172.72 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 172.72 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 172.72 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -33736,6 +37300,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 265.43 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 265.43 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "017160ef-3ed9-4cc0-9904-3226a9a62d0e")
 		)
@@ -33829,6 +37415,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 201.93 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 201.93 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 201.93 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -33954,6 +37562,28 @@
 			)
 		)
 		(property "Package" "SOD-123"
+			(at 285.75 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 285.75 102.87 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 285.75 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -34298,6 +37928,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 101.6 166.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 101.6 166.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "eae1a78e-0eee-410f-bf3d-40081ec554f3")
 		)
@@ -34401,6 +38053,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 316.23 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 316.23 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d3f0441e-0d43-4ba7-b564-7a4bdc6279ea")
 		)
@@ -34492,6 +38166,28 @@
 			)
 		)
 		(property "Package" "0603"
+			(at 91.44 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 91.44 157.48 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 91.44 157.48 90)
 			(hide yes)
 			(show_name no)
@@ -34627,6 +38323,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 247.65 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 247.65 91.44 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e55fdf41-27ac-49ab-9581-1ff6fd612fb5")
 		)
@@ -34752,6 +38470,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 285.75 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 285.75 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d796f062-d256-47ef-97a4-c3d81abdace9")
 		)
@@ -34855,6 +38595,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 328.93 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 328.93 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8e74b43d-b0a5-4968-a9cb-6f6d5ed120b8")
 		)
@@ -34947,6 +38709,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 207.01 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 207.01 219.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 207.01 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -35064,6 +38848,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 81.28 166.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 81.28 166.37 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b8ef4be6-5990-4cbb-a360-aa4a427ec186")
 		)
@@ -35156,6 +38962,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 309.88 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 309.88 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 309.88 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -35297,6 +39125,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 196.85 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 196.85 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "47338b66-edc6-483f-857b-faebb8e3549f")
 		)
@@ -35400,6 +39250,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 214.63 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 214.63 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ad491020-2f33-41c8-807d-af2fe567ba3a")
 		)
@@ -35492,6 +39364,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 298.45 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 298.45 199.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 298.45 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -35633,6 +39527,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 184.15 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 184.15 45.72 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "29d5d4a2-c790-4858-9bb5-7907150c1ab2")
 		)
@@ -35736,6 +39652,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 328.93 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 328.93 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "48ff2896-4e68-4a74-8a06-d1e78a18def5")
 		)
@@ -35828,6 +39766,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 275.59 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 275.59 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 275.59 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -36025,6 +39985,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 201.93 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 201.93 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d3a4d484-71e3-4ba5-bd8d-6b5d6b7b47dd")
 		)
@@ -36150,6 +40132,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 323.85 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 323.85 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "685a32c0-1430-4b40-a51f-c327fa9e28dc")
 		)
@@ -36242,6 +40246,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 309.88 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 309.88 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 309.88 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -36361,6 +40387,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 328.93 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 328.93 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "167f51df-e21a-42f1-959f-00a64f9b0461")
 		)
@@ -36464,6 +40512,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 214.63 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 214.63 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "74249c60-b97f-4a31-aab2-cd49acd33c86")
 		)
@@ -36557,6 +40627,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 201.93 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 201.93 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 201.93 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -36692,6 +40784,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 209.55 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 209.55 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d49c50a3-dc8a-4486-a8dc-1d3fbc7b163b")
 		)
@@ -36784,6 +40898,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 218.44 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 218.44 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 218.44 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -36925,6 +41061,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 260.35 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 260.35 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e65b89f3-e665-42a4-b361-17c75dff00be")
 		)
@@ -37017,6 +41175,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 309.88 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 309.88 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 309.88 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -37158,6 +41338,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 196.85 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 196.85 80.01 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "04481c65-1415-47b8-8bfe-b569ee693c4f")
 		)
@@ -37251,6 +41453,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 189.23 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 189.23 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 189.23 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -37364,6 +41588,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 189.23 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 189.23 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "289bc38f-b60f-4b9f-935e-7881aa77e2a6")
 		)
@@ -37456,6 +41702,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 184.15 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 184.15 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 184.15 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -37597,6 +41865,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 234.95 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 234.95 57.15 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5d72d5b3-4562-4608-8a66-5968a2aa531c")
 		)
@@ -37700,6 +41990,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 328.93 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 328.93 87.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5e81c042-6be2-43a6-95bc-704a599cdbdc")
 		)
@@ -37793,6 +42105,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 316.23 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 316.23 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 316.23 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -37928,6 +42262,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 273.05 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 273.05 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5e263678-8ab8-41ea-9522-696e8f661473")
 		)
@@ -38020,6 +42376,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 332.74 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 332.74 160.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 332.74 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -38128,6 +42506,28 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 275.59 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 275.59 179.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 275.59 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -38269,6 +42669,28 @@
 				)
 			)
 		)
+		(property "Customer Note" ""
+			(at 209.55 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 209.55 68.58 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c9a30283-e136-49fb-9c0f-d8cd64c510f2")
 		)
@@ -38362,6 +42784,28 @@
 			)
 		)
 		(property "Package" "SMD"
+			(at 290.83 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Customer Note" ""
+			(at 290.83 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Procurement Type" ""
 			(at 290.83 76.2 0)
 			(hide yes)
 			(show_name no)

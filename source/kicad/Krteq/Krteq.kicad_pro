@@ -573,30 +573,54 @@
       "fields_ordered": [
         {
           "group_by": false,
-          "label": "Reference",
+          "label": "S/N",
           "name": "Reference",
           "show": true
         },
         {
           "group_by": true,
-          "label": "Value",
+          "label": "Designator",
           "name": "Value",
           "show": true
         },
         {
-          "group_by": true,
+          "group_by": false,
+          "label": "Quantity",
+          "name": "${QUANTITY}",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer Part Number",
+          "name": "MPN",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Package",
+          "name": "Package",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Procurement Type",
+          "name": "Procurement Type",
+          "show": true
+        },
+        {
+          "group_by": false,
           "label": "Footprint",
           "name": "Footprint",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
           "label": "Description",
           "name": "Description",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
           "show": false
@@ -627,33 +651,21 @@
         },
         {
           "group_by": false,
-          "label": "MPN",
-          "name": "MPN",
+          "label": "Customer Note",
+          "name": "Customer Note",
           "show": true
         },
         {
           "group_by": false,
-          "label": "Package",
-          "name": "Package",
-          "show": true
-        },
-        {
-          "group_by": false,
-          "label": "Qty",
-          "name": "${QUANTITY}",
-          "show": true
-        },
-        {
-          "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
-          "group_by": true,
+          "group_by": false,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
+          "show": false
         }
       ],
       "filter_string": "",
