@@ -213,6 +213,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b7de2ce3-d3be-4c41-8649-9df5d09f60ad")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/8e048bb8-8afb-4763-861d-44c9d7f29770")
 		(sheetname "/")
@@ -421,7 +435,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "3d630629-2d91-45bc-88e5-30a9880ff610")
@@ -509,6 +523,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "0e660b62-3d96-4a0b-946e-46c5b066c23e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fd75b55f-aeb1-4744-971d-2d877f447078")
 			(effects
 				(font
 					(size 1 1)
@@ -813,7 +841,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "59937bc4-6212-4377-a9fb-ea52d3788db0")
@@ -901,6 +929,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "6b2d2619-80d6-4e9c-a9d3-18eae968a2e5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "51034035-86fb-4915-b9c4-9eff19161269")
 			(effects
 				(font
 					(size 1 1)
@@ -1205,7 +1247,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "a30b06fd-c554-4a5b-994f-8974e1e54189")
@@ -1293,6 +1335,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "30712ff6-6f81-4a6b-bd98-bfb8da5e2435")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6ed8427d-fbec-48fe-ab6b-26a80b088223")
 			(effects
 				(font
 					(size 1 1)
@@ -1597,7 +1653,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "b8ee3541-989f-4d4c-8eb1-e439e4c52281")
@@ -1685,6 +1741,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "fe801af2-dba3-4df8-b75e-abed984016b6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3b2ba233-633f-4691-9f56-832616c72dbd")
 			(effects
 				(font
 					(size 1 1)
@@ -2057,6 +2127,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d3b39128-8ae0-4b0f-9a8e-9f367c5976ee")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/96cf45f4-1af0-4b60-b690-919ac7b65f20")
 		(sheetname "/")
@@ -2252,7 +2336,20 @@
 		(uuid "04c514fa-1bbd-4240-9f3a-7a5a168ac42c")
 		(at 114.65 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW3"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "3f8bc368-d22a-40d9-aaff-863420086f47")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -2276,7 +2373,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2286,19 +2383,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW3"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "3f8bc368-d22a-40d9-aaff-863420086f47")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -2329,9 +2413,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d82140b2-a43a-4fbf-bb14-bd8087105b6d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/b4e9e13f-c57b-40ee-a16d-8a82d4fce7c9")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3179,7 +3283,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "20kΩ"
+		(property "Value" "Resistor 20kΩ"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "e0315d82-f742-4fdc-961f-6575c29ce115")
@@ -3215,7 +3319,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "0603WAF4700T5E"
+		(property "MPN" "0603WAF2002T5E"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -3235,6 +3339,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "43947add-df2d-4b09-bc5a-0933c2720fbd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f9f5591a-aad8-47c6-b59e-d3bc0f7772bb")
 			(effects
 				(font
 					(size 1 1)
@@ -3345,7 +3463,20 @@
 		(uuid "063205f8-1466-4b68-81cc-a63202104a73")
 		(at 209.9 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW8"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "5412977f-4277-4bae-81d5-696b226c1b56")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -3369,7 +3500,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3379,19 +3510,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW8"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "5412977f-4277-4bae-81d5-696b226c1b56")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -3422,9 +3540,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0953b927-68dd-4e9e-8c91-4ee9152391d2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/8ee27991-e02c-43e2-96c2-4af76ecf0c07")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4272,7 +4410,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "b9b86489-5d34-4db1-b4f9-488e248911ea")
@@ -4360,6 +4498,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "73d0d8b0-2389-48f7-8175-91270d4477fb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d367be41-b228-4f0f-94a1-68bd5ece9289")
 			(effects
 				(font
 					(size 1 1)
@@ -4732,6 +4884,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e2448226-8566-49e1-a163-adc27b083815")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ce6ea20d-f42d-4d44-9f91-0da282d74433")
 		(sheetname "/")
@@ -4927,7 +5093,20 @@
 		(uuid "0b6ef6b7-242c-42dd-ac34-8a294b0b2dc1")
 		(at 133.7 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW52"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "39d060b2-6b21-4211-a535-3b649db27dd7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -4951,7 +5130,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4961,19 +5140,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW52"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "39d060b2-6b21-4211-a535-3b649db27dd7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -5004,9 +5170,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a545cb6a-2718-4e63-a35b-1d48528874a8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/86cc6ead-4d10-40c4-a751-12d720b7dd9e")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5854,7 +6040,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "cb2893b7-d71e-4a13-a4cc-1b5972e6fd1b")
@@ -5942,6 +6128,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "67389c13-5137-40b7-be33-c5a32df50c06")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d754c9c6-d74f-4cf8-9571-084b3bd52ed4")
 			(effects
 				(font
 					(size 1 1)
@@ -6314,6 +6514,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "898a15b1-35ba-4aa5-842d-d8235c4c5cdf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/6ba543ce-1df7-4aea-96f5-3a479c203596")
 		(sheetname "/")
@@ -6522,7 +6736,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "acb03dc5-204d-41fc-9e01-8335878997d5")
@@ -6610,6 +6824,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "3a6d3c65-a353-4e32-93fc-d4de38ac1201")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "231b3d70-440d-4e70-bf8e-8216f3b9aab9")
 			(effects
 				(font
 					(size 1 1)
@@ -6914,7 +7142,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "fb58e852-df74-4913-9c3a-adf004e49492")
@@ -7002,6 +7230,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "b52e973f-14b8-47b2-bc65-80f780896bc9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "076bbc1c-70ef-42b6-9177-79ad6c39cc4d")
 			(effects
 				(font
 					(size 1 1)
@@ -7293,7 +7535,20 @@
 		(uuid "0dfa27d3-0be4-46b5-b3e5-cf8ca2f559b7")
 		(at 286.1 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW12"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "c9ae7acf-62d0-4f92-8739-31492bb04ad7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -7317,7 +7572,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7327,19 +7582,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW12"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "c9ae7acf-62d0-4f92-8739-31492bb04ad7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -7370,9 +7612,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "96c713af-b712-4113-b268-1e76fda59b05")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/4e35b47c-bba5-45e3-abc7-8ec1403118c1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8207,7 +8469,20 @@
 		(uuid "0e6491a5-fe91-423c-9bd3-7ebdbd92074e")
 		(at 286.1 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW36"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "a2d57462-e5d0-4b5d-9ade-eae4dec407b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -8231,7 +8506,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8241,19 +8516,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW36"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "a2d57462-e5d0-4b5d-9ade-eae4dec407b8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -8284,9 +8546,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0ba882b2-159e-4971-bfa4-343daa425cd3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/5a5a0d86-2463-4a27-9d46-1203e4750acc")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9134,7 +9416,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "396d3f9a-2256-4ec5-8791-96a9f95d3672")
@@ -9222,6 +9504,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ce5acaa6-b8dd-4a80-8234-ab5f8d31cbc7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ee7e5379-a49e-467c-a354-f17d7e93d3fe")
 			(effects
 				(font
 					(size 1 1)
@@ -9594,6 +9890,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "dd70a404-dc6b-49b8-9378-79eef9db219e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/69521731-b292-484f-be74-39b9a8837efe")
 		(sheetname "/")
@@ -9789,7 +10099,20 @@
 		(uuid "10185d43-4183-4e30-a4a4-b148eb1d02b6")
 		(at 267.05 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW23"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "8a82c6b7-5108-46d3-a7ba-8472fd41b3b2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -9813,7 +10136,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9823,19 +10146,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW23"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "8a82c6b7-5108-46d3-a7ba-8472fd41b3b2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -9866,9 +10176,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3f07f973-5765-4be3-8eb1-5e9577e96ec9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/1f1ba7ba-36ee-4d23-a245-5f3bee16d2d7")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10703,7 +11033,20 @@
 		(uuid "11b721a0-df2b-4a5c-bc8a-7d13a79182fe")
 		(at 133.7 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW4"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "9e5c5c71-efc3-49b4-985a-57769b69ecea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -10727,7 +11070,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10737,19 +11080,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW4"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "9e5c5c71-efc3-49b4-985a-57769b69ecea")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -10780,9 +11110,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7590b8b4-f250-4599-a10f-4d0637523c4b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/edc3ab07-ae2a-4fb9-a88c-7ce0ccea0a39")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11617,7 +11967,20 @@
 		(uuid "124d74a7-dd5a-41df-9400-5d1fa489983c")
 		(at 305.15 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW37"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "ee7a84bc-9019-4639-959b-1858c51d6e2a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -11641,7 +12004,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11651,19 +12014,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW37"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "ee7a84bc-9019-4639-959b-1858c51d6e2a")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -11694,9 +12044,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "337da670-f3e5-43ec-9518-ca3264341bb4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/fad1dfc2-c0c3-4ffe-a2be-ab0e1102c9e5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12580,6 +12950,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" "DNP"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "14639afe-b8ee-4961-8f37-cda249618a22")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/68124913-8220-4980-844c-ca35d943d3b8")
 		(sheetname "/")
@@ -12590,7 +12974,7 @@
 				(pins "1" "2" "3")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -1.25 1.25)
@@ -12707,7 +13091,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "22µF/10V"
+		(property "Value" "Capacitor 22µF/10V"
 			(at 0 -1.68 0)
 			(layer "B.Fab")
 			(uuid "f6b80453-a038-4654-afc8-8a0354cf23c0")
@@ -12763,6 +13147,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "4ac9c917-a295-4c64-9b1a-8d1febd4ac65")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "42e5313b-616a-435b-908f-1a799dba1147")
 			(effects
 				(font
 					(size 1 1)
@@ -12946,6 +13344,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "e7e9c386-c5e8-417f-ace0-9727063fdf83")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "947876b0-e055-4f8c-9a2c-e2dfad1dc5ff")
 			(effects
 				(font
 					(size 1 1)
@@ -13162,7 +13574,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100kΩ"
+		(property "Value" "Resistor 100kΩ"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "863d37cf-f711-43c7-a1e9-fa4b27613e6d")
@@ -13198,7 +13610,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "0603WAF4700T5E"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -13218,6 +13630,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "b14f181b-4f6e-4711-a76a-53c272139327")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8a971877-d9b1-4e57-9684-9c4374c34793")
 			(effects
 				(font
 					(size 1 1)
@@ -13328,7 +13754,20 @@
 		(uuid "1a36bb77-c4e2-4301-8acc-971b835eed75")
 		(at 133.7 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW40"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "013f7854-7628-4b92-b570-a1789ebb25f0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -13352,7 +13791,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13362,19 +13801,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW40"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "013f7854-7628-4b92-b570-a1789ebb25f0")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -13405,9 +13831,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "bd14105f-ebda-4b6b-8351-8f2cc6e51467")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/f1fc7543-d57a-461f-8420-11c4d0a68e59")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14242,7 +14688,20 @@
 		(uuid "1a72e9a9-c26a-48e3-962f-f315850070f7")
 		(at 228.95 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW21"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "57b5dceb-5d46-4aff-9cc4-2dbc2c762ac5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -14266,7 +14725,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14276,19 +14735,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW21"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "57b5dceb-5d46-4aff-9cc4-2dbc2c762ac5")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -14319,9 +14765,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "32451dc7-05e2-4440-bb63-e194a447037a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/92c86f19-2ebd-412d-a79c-ac83c3ad118b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15169,7 +15635,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "b07bdd18-d1e8-417f-a82f-a8f958127c6c")
@@ -15257,6 +15723,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "3a2a5436-bc95-41b0-9899-dac5ea48605e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d666e3d9-e456-4c22-931c-aa3b35c1060b")
 			(effects
 				(font
 					(size 1 1)
@@ -15548,7 +16028,20 @@
 		(uuid "1b5fbc17-d38f-4941-96bc-258d95a60144")
 		(at 267.05 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW11"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "b8c25761-0828-46d0-af53-22b831841eb3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -15572,7 +16065,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15582,19 +16075,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW11"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "b8c25761-0828-46d0-af53-22b831841eb3")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -15625,9 +16105,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6ae88afc-dec0-451e-b57a-be2184fee987")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/169b220a-c894-4d9c-8acd-14af287b41ca")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -16462,7 +16962,20 @@
 		(uuid "20bb1b51-033a-462f-aa48-ac2637385d24")
 		(at 190.85 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW43"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "bfd038a6-8e6f-487f-988b-ae1bc40137e6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -16486,7 +16999,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16496,19 +17009,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW43"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "bfd038a6-8e6f-487f-988b-ae1bc40137e6")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -16539,9 +17039,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "addf02e5-21bf-4405-91c9-4e3888a8c63f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/0ad9da19-ccd8-49f3-9ead-b4810c57f30b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17457,6 +17977,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7c9407da-35c8-41f8-a697-a80f2ef309d0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/85cfeae9-c026-422b-be5d-071d6b83db0c")
 		(sheetname "/")
@@ -17725,6 +18259,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "e90b43f3-9211-41a0-8c0c-6138b2d2be91")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c573c616-bbed-40d4-854e-ee92d3293cae")
 			(effects
 				(font
 					(size 1 1)
@@ -18009,6 +18557,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "63f014a0-aafa-4e64-810b-b7379ee7b49e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/5182cb05-6fe2-4f68-abaa-b1cec40f3087")
 		(sheetname "/")
@@ -18217,7 +18779,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "666504b7-c782-4d42-b25a-77957c49d159")
@@ -18305,6 +18867,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "a0fd6770-6cff-4e8e-b080-a031ae91e830")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f16644d9-f730-4530-b471-c6c584480184")
 			(effects
 				(font
 					(size 1 1)
@@ -18609,7 +19185,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "96b6e44c-f990-47ed-abff-cae21efed33e")
@@ -18697,6 +19273,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "0e7e4c02-ec62-4650-bab1-1371b61114bd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6d844f13-b6a0-4e55-b100-92fec0feb920")
 			(effects
 				(font
 					(size 1 1)
@@ -19001,7 +19591,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "36e5144f-ca65-4dd0-bf4f-05329231ec60")
@@ -19089,6 +19679,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "6b144a0f-2437-4ace-b615-5aa56030358c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cef21cb2-a84e-49a4-9f44-44f03ebe4c4a")
 			(effects
 				(font
 					(size 1 1)
@@ -19380,7 +19984,20 @@
 		(uuid "2df82be2-71ab-4f7f-a3ae-c4d6595b33fd")
 		(at 114.65 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW15"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "766c1077-d58c-47b0-b0a5-19605caa50af")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -19404,7 +20021,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19414,19 +20031,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW15"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "766c1077-d58c-47b0-b0a5-19605caa50af")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -19457,9 +20061,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f591f18c-f473-4d6a-a0df-949bb03fcb07")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/f6688fe1-6797-413a-b3c8-cb827aadf316")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20375,6 +20999,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cb6a0a96-bb78-490b-b1f1-97c742ca9e2f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/00ac18ad-bc6c-4bf6-bbea-8ed65bcbe567")
 		(sheetname "/")
@@ -20643,6 +21281,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "515fc351-4a39-4f98-9fed-8aafe1f36368")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a387aed3-1891-4d02-8d0c-f84e1c2907fe")
 			(effects
 				(font
 					(size 1 1)
@@ -20927,6 +21579,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b24ff676-8945-4696-9bb0-d22dee7d19cf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/610c6ff1-9b21-4270-8028-2cb02154d420")
 		(sheetname "/")
@@ -21203,6 +21869,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "340e26de-2cc5-4417-8422-ffe49912ca40")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/9ae1036e-c0c7-4317-ba62-37f0e1f87e20")
 		(sheetname "/")
@@ -21398,7 +22078,20 @@
 		(uuid "33d22919-5b62-4fba-b4e2-cf1f82bb3d3e")
 		(at 305.15 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW13"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "b2e442c3-0746-4342-b841-8c11d732ff5f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -21422,7 +22115,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21432,19 +22125,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW13"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "b2e442c3-0746-4342-b841-8c11d732ff5f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -21475,9 +22155,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c5ad8e37-29d2-4847-b975-622189cdaa23")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/347a6af0-952b-45b4-b9f2-1a887ddacae9")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22393,6 +23093,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0e73c477-9be3-4a79-938c-8256aa02b076")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/018c3d12-89dc-4a90-bb5d-dab81fc89889")
 		(sheetname "/")
@@ -22601,7 +23315,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "04ebee2c-182d-4dd2-85fd-ed33f9ad009a")
@@ -22689,6 +23403,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "b7897be0-b480-40cb-afbf-04b9ce4fa2fe")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "77a80647-eaff-4cf0-b148-615f9bb2e5e5")
 			(effects
 				(font
 					(size 1 1)
@@ -22993,7 +23721,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "1613e744-9580-4c56-88ac-f1528a2f800b")
@@ -23081,6 +23809,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "c3ebb888-a076-4c3f-ba83-c0e77f188564")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "07bcc593-e283-44dd-a06d-95e064cae6b4")
 			(effects
 				(font
 					(size 1 1)
@@ -23385,7 +24127,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "1f021383-962b-4d2b-9a2b-5a708c4f310b")
@@ -23473,6 +24215,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "9ac72969-36f6-47d7-bf9e-6a1402242481")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "84c0af43-8f8f-4830-a22c-2b6bcb5cb441")
 			(effects
 				(font
 					(size 1 1)
@@ -23764,7 +24520,20 @@
 		(uuid "3938d932-4468-41df-b73d-1880f1b3d40e")
 		(at 114.65 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW51"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "5ddcf2d5-a45f-43d2-8d1d-8e25e28566ad")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -23788,7 +24557,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -23798,19 +24567,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW51"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "5ddcf2d5-a45f-43d2-8d1d-8e25e28566ad")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -23841,9 +24597,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "57345709-a249-452c-99a2-1fe7d8904b01")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/f66c2039-6d1d-41ae-9130-533e75823b84")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -24678,7 +25454,20 @@
 		(uuid "395a9a47-0866-4245-9edc-1ce1fcc026c4")
 		(at 152.75 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW53"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "8d1e6ee9-8b9d-4bbe-a90a-69f75f8519b6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -24702,7 +25491,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24712,19 +25501,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW53"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "8d1e6ee9-8b9d-4bbe-a90a-69f75f8519b6")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -24755,9 +25531,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d390f40b-aecf-4e3a-ab57-f168ad17564a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/e20799c1-1838-4d68-bcf7-f4af2e90939b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -25592,7 +26388,20 @@
 		(uuid "398616df-b560-47ad-a1b3-247430eee8a7")
 		(at 286.1 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW24"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "f70e3184-3c8c-4a00-8be6-e67abcad34f9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -25616,7 +26425,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25626,19 +26435,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW24"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "f70e3184-3c8c-4a00-8be6-e67abcad34f9")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -25669,9 +26465,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "404a891b-d26e-4693-be40-aeb7b897a1ae")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/2ffdbb76-93e3-44c2-9bee-9d70fd217f04")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -26506,7 +27322,20 @@
 		(uuid "3a8e0572-fa0c-4ceb-9afd-1a4bfca6df6f")
 		(at 190.85 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW7"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "31fbfaa3-3698-4cd9-b7b6-836a80f0c9b3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -26530,7 +27359,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26540,19 +27369,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW7"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "31fbfaa3-3698-4cd9-b7b6-836a80f0c9b3")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -26583,9 +27399,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cd5ff77e-32d1-4894-86d6-1067bedf8754")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/19f2cc58-b1cb-44ec-bb38-59af0e5f2eda")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -27501,6 +28337,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "51cb48dc-9e97-43b0-9a35-522a13195d63")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/b02bf5e0-3c74-4300-bef2-9a50a7c1db5b")
 		(sheetname "/")
@@ -27765,6 +28615,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "a94c8e86-0c2f-47f1-83f2-bbcca0409008")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "653dfadb-65f3-484d-8787-681667b53871")
 			(effects
 				(font
 					(size 1 1)
@@ -28690,7 +29554,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "0807fd10-eb7f-4014-9b7d-62b58b252dac")
@@ -28778,6 +29642,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f3cb4797-f1aa-4d75-93ad-cd5abe6ee26d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "775d5e30-4a32-4ed7-981b-39274fa00d9e")
 			(effects
 				(font
 					(size 1 1)
@@ -29082,7 +29960,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "cb13a841-4dd0-48aa-a249-8bf9dd4dcc7b")
@@ -29170,6 +30048,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "5e1455ee-0f24-419d-9f5f-8dcf8331cf57")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0990c174-cae5-4815-b30a-48bb912108b7")
 			(effects
 				(font
 					(size 1 1)
@@ -29542,6 +30434,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6bd2d421-c9fc-405a-8ebb-88e8ac517921")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/a18ff9ef-b835-4e11-9548-21cda6ff19d5")
 		(sheetname "/")
@@ -29810,6 +30716,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "c878735d-3bf1-4296-a92b-16bd5ce0f103")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6d9e1636-be4b-4a31-8c77-b7df172ddb0e")
 			(effects
 				(font
 					(size 1 1)
@@ -30094,6 +31014,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b6fd57f3-dd99-49ba-abee-98927cc99881")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/13a6a814-23e3-46f1-9ee9-e97923cdb263")
 		(sheetname "/")
@@ -30370,6 +31304,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ca206762-4848-4817-bcfd-a45d72a82903")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/f5733096-c4cf-4332-885f-00f8d613e237")
 		(sheetname "/")
@@ -30578,7 +31526,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "24b81158-4f8b-41d4-9c9f-6b379f3772db")
@@ -30666,6 +31614,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "6efadb52-dbe9-407a-bd39-64021f1bbbb5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9d8cfe61-be6b-4413-a0cc-537443e842fd")
 			(effects
 				(font
 					(size 1 1)
@@ -30970,7 +31932,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "0.47µF"
+		(property "Value" "Capacitor 0.47µF"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "e9aef740-ec50-400f-910b-2046aea529ce")
@@ -31026,6 +31988,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8bd8a6cf-b247-4244-b9a7-80ee94fca244")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fc864954-498e-4a77-81c7-89d634e430cb")
 			(effects
 				(font
 					(size 1 1)
@@ -31209,6 +32185,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "4149dadb-bca3-4122-b1ce-145f92f0d4cb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f6815928-a64d-4fb5-bcb5-e941c90e879a")
 			(effects
 				(font
 					(size 1 1)
@@ -31493,6 +32483,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f0fda0c9-507e-4486-b443-280630b6246f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/788f339c-c354-41fc-9aff-4f3c7109ef83")
 		(sheetname "/")
@@ -31701,7 +32705,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "0.47µF"
+		(property "Value" "Capacitor 0.47µF"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "6b13fecb-69a3-4257-a7af-87a9ed91a314")
@@ -31757,6 +32761,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "7b4b829b-cddd-4238-b1f3-2a8dce44d64c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7eb54629-fdf8-4dc0-a8ef-d74d9f1da52d")
 			(effects
 				(font
 					(size 1 1)
@@ -31940,6 +32958,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "1fa5b7c8-0459-42ea-87b4-381be19c9c78")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "03382420-a91c-46ba-987b-630a86b1d1ce")
 			(effects
 				(font
 					(size 1 1)
@@ -32156,7 +33188,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "4366105d-a1d3-43dc-8289-71d93b56c2e0")
@@ -32244,6 +33276,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "be4078a4-3eee-4152-9fdc-9f8f8791ae90")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9dc591ea-6ce8-4b31-ac3e-186fcdb677a4")
 			(effects
 				(font
 					(size 1 1)
@@ -32548,7 +33594,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "72c0c0c2-e52b-464d-8c7f-f8b8f55f7ed9")
@@ -32636,6 +33682,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "35e142f6-88ae-4eee-8a03-0ef222ead599")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "64806c0e-ef71-4fbb-8f5a-020ae4e8f375")
 			(effects
 				(font
 					(size 1 1)
@@ -32940,7 +34000,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "0.47µF"
+		(property "Value" "Capacitor 0.47µF"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "99be4df7-9075-4aec-9a6c-90e02d76c653")
@@ -32996,6 +34056,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "56d5e521-464d-463c-9b0c-b1307c7adce6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2ddb6da0-14e3-467f-8e7a-461fbf9d9d08")
 			(effects
 				(font
 					(size 1 1)
@@ -33106,7 +34180,20 @@
 		(uuid "528d0dff-8b23-430d-891a-4e9fd382649d")
 		(at 248 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW34"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "d5802432-9c4c-47b6-bbdb-f97d0c15eafb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -33130,7 +34217,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -33140,19 +34227,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW34"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "d5802432-9c4c-47b6-bbdb-f97d0c15eafb")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -33183,9 +34257,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a1b6c4e0-fd1a-4735-a5d0-bad0553e60fa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/60a64a87-047d-4edb-9edd-ea18cf64547f")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -34033,7 +35127,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "c0698a7b-aff6-49c0-9a84-cbeaae2f31d8")
@@ -34121,6 +35215,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "0298d9ea-163e-48b3-a038-2a989c5fd335")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "dad7ca8b-7629-4a6a-bbc4-5775ad47a5be")
 			(effects
 				(font
 					(size 1 1)
@@ -34493,6 +35601,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a1160f42-39b8-4abc-8280-b90f14fae403")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/8e7b9355-e68a-40c4-be92-037d4835cdef")
 		(sheetname "/")
@@ -34741,6 +35863,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" "DNP"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4786f338-b0e1-4eb8-a696-54f82cda5d9e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "*Shape* *Outline*")
 		(path "/33814759-8e27-452c-b1fd-24d3fb3fb3fd")
 		(sheetname "/")
@@ -34751,7 +35887,7 @@
 				(pins)
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start 8.9 6.5)
@@ -34818,7 +35954,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "2kΩ"
+		(property "Value" "Resistor 2kΩ"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "c9af0b16-1847-4789-88c8-a8070c362a4b")
@@ -34854,7 +35990,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "0603WAF4700T5E"
+		(property "MPN" "0603WAF2001T5E"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -34874,6 +36010,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "475e1e18-ab39-40ed-ba01-a1f1f9e9fb7b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5fb6ecc9-60f3-4220-bdf8-259795dce1b3")
 			(effects
 				(font
 					(size 1 1)
@@ -34984,7 +36134,20 @@
 		(uuid "5ee0380b-68a9-470c-8724-bd964273efd0")
 		(at 228.95 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW33"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "ac9dcae4-7ab5-471f-b24f-a81ac47c3811")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -35008,7 +36171,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35018,19 +36181,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW33"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "ac9dcae4-7ab5-471f-b24f-a81ac47c3811")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -35061,9 +36211,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "61bff016-8487-47a7-a05a-d1c8df1d722b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/1f211f56-44b9-4b1e-9310-ea755b9e76a4")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -35979,6 +37149,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2849edac-baf6-4bb2-843d-dc499bb6ace0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/9b4652fb-a214-4002-a3f1-0552413b88cd")
 		(sheetname "/")
@@ -36255,6 +37439,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "87718a28-742a-4193-aacd-1ccddad94b08")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/390e8fda-3c7e-43e2-8fae-472db1fa9a73")
 		(sheetname "/")
@@ -36450,7 +37648,20 @@
 		(uuid "60a566db-e749-4c84-80b3-329ddcdd1c01")
 		(at 171.8 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW54"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "da3bfdb0-2fc4-4776-97f0-73465cc99789")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -36474,7 +37685,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36484,19 +37695,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW54"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "da3bfdb0-2fc4-4776-97f0-73465cc99789")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -36527,9 +37725,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "321b42b6-01f2-40f0-a214-299344b004d4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/9076d9ff-7eef-42b0-bcbc-c702bdc10b0c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -37445,6 +38663,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "daab49a4-1fb9-4afd-b48f-b7d761d03b56")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/37b8b8e0-55ae-4d84-af3d-ef686af9c888")
 		(sheetname "/")
@@ -37653,7 +38885,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "ba0929b7-b77d-4a07-be77-e4525f4ef067")
@@ -37741,6 +38973,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "289c1fdc-b499-497b-acb3-56387ffc7fd4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "49f5a9e8-7209-4ae9-9c89-07a913155e2a")
 			(effects
 				(font
 					(size 1 1)
@@ -38032,7 +39278,20 @@
 		(uuid "661ae15f-5a61-4ad5-8d51-3ce34ef4d5d4")
 		(at 248 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW10"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "f1d60075-15ee-4ab7-92f0-1b349403f14c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -38056,7 +39315,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38066,19 +39325,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW10"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "f1d60075-15ee-4ab7-92f0-1b349403f14c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -38109,9 +39355,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b4039532-44ac-4671-87e1-abd630a57899")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/88320b7c-2fbb-407a-af1f-98aed6554fff")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -38946,7 +40212,20 @@
 		(uuid "66c2b99f-e226-4b55-a950-6dbfa7038179")
 		(at 114.65 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW27"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "0ba3a38c-18d2-4ace-b462-b39b1cd0ffa2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -38970,7 +40249,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38980,19 +40259,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW27"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "0ba3a38c-18d2-4ace-b462-b39b1cd0ffa2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -39023,9 +40289,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f06c9ad5-f1fc-4963-90b4-7f2f9c1d6904")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/ae436308-1176-4924-9b03-c53d1881672c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -39860,7 +41146,20 @@
 		(uuid "66e2541e-acaf-4c12-832e-25b90a90c221")
 		(at 248 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW22"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "958ce470-0521-47c4-9ac7-eeefe28ab9cc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -39884,7 +41183,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39894,19 +41193,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW22"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "958ce470-0521-47c4-9ac7-eeefe28ab9cc")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -39937,9 +41223,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4da30986-8160-4b08-80b0-20586a780234")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/a3185c1b-ae60-4a22-8d36-329f0f7bdbc4")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -40787,7 +42093,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "2kΩ"
+		(property "Value" "Resistor 2kΩ"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "9ea0d402-8934-4bf6-9edd-d9be5c2ed96f")
@@ -40823,7 +42129,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "0603WAF4700T5E"
+		(property "MPN" "0603WAF2001T5E"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -40843,6 +42149,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d863a1fd-ab97-4e7a-9267-2ca8abcfd8ac")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8f4ad067-f763-4eec-b758-4b13599f95fa")
 			(effects
 				(font
 					(size 1 1)
@@ -40953,7 +42273,20 @@
 		(uuid "67bb6c43-9fd3-40e2-95e7-7980843c875f")
 		(at 114.65 86.4 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW1"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "48013891-3836-4816-9e2a-c70b6f9b2767")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -40977,7 +42310,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -40987,19 +42320,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW1"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "48013891-3836-4816-9e2a-c70b6f9b2767")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -41030,9 +42350,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1659fbc8-76f5-44be-8551-e5eef651520a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/aed2e4d2-7878-4bb1-aa36-aeadf08d9f12")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -41948,6 +43288,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fe2c0698-74b5-42c5-b495-7818fb79087b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/390c826c-fc83-4e79-a554-b1bb759787d0")
 		(sheetname "/")
@@ -42224,6 +43578,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "39075888-9987-42b2-8f0b-6aa57bb6c7d4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/1184ca44-aa7a-4b75-a538-567595edaed3")
 		(sheetname "/")
@@ -42432,7 +43800,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "2e06397a-9cfc-4c89-b803-128566dad631")
@@ -42520,6 +43888,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "57c106c7-9cd0-4b02-ab7a-6914450493ef")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9fdc3a11-c94a-485e-93a9-c356d0e1a516")
 			(effects
 				(font
 					(size 1 1)
@@ -42824,7 +44206,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "c8ac59ea-14a7-4a4b-b6ae-0d0f3a46e4b6")
@@ -42912,6 +44294,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "71648b9e-d6e9-49f9-8d1c-296a5d82bb0b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e7270047-766a-4a34-bac4-dac3892eb3c8")
 			(effects
 				(font
 					(size 1 1)
@@ -43203,7 +44599,20 @@
 		(uuid "69ebdcca-be97-40e7-a852-8fb557272297")
 		(at 324.2 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW14"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "09e67783-08a8-470c-86da-27338b2fb0f3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -43227,7 +44636,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -43237,19 +44646,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW14"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "09e67783-08a8-470c-86da-27338b2fb0f3")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -43280,9 +44676,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a7bc40cb-ca12-49d0-ab9f-5e962d6926ec")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/301ddd53-0579-4536-8857-0cfa7d702337")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -44130,7 +45546,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "3bde6062-dffa-44f9-9908-64a4040d964a")
@@ -44218,6 +45634,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "85d7fb90-6e17-4307-b301-b74350430a67")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1f252ca8-cd4e-44d8-8a7d-7e45c7e5f879")
 			(effects
 				(font
 					(size 1 1)
@@ -44590,6 +46020,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7b7c456c-ed9c-4ba4-8fbd-8818fc2b34ae")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/60acee82-0afd-4fd1-ba8e-e357451469ba")
 		(sheetname "/")
@@ -44866,6 +46310,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ab9ae8b0-4cdf-42fd-9c14-9bdd9d0288cc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/114ef921-7d52-4d66-9b22-17b282d6f188")
 		(sheetname "/")
@@ -45074,7 +46532,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "4c4cf46f-0dee-4e26-a7c0-c30dbc8f2c53")
@@ -45162,6 +46620,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f49395e2-a499-4449-8d9d-8275cfc32a11")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "79b0bb8c-4767-4773-b67e-a0f3d9a3ad74")
 			(effects
 				(font
 					(size 1 1)
@@ -45466,7 +46938,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "6e0b2d4f-918f-404f-8dfc-892daba7d74b")
@@ -45554,6 +47026,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "e976b91e-141e-4c63-bb03-48061e12d249")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "934b6ea2-97c1-4803-9fca-ee7d1adf7947")
 			(effects
 				(font
 					(size 1 1)
@@ -45858,7 +47344,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "587dd450-ebde-4fea-865b-a5ec323b114b")
@@ -45946,6 +47432,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "79b31aea-6ba9-4a16-917e-cd3d58dbb6eb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "08613d7d-c16c-4eac-932d-694a1b9e9aee")
 			(effects
 				(font
 					(size 1 1)
@@ -46286,6 +47786,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" "DNP"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cfcac97d-e2c2-4c3b-a839-cb74d82fa9dd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/03234fc1-2209-4126-9667-387caec30762")
 		(sheetname "/")
@@ -46296,7 +47810,7 @@
 				(pins "1" "2" "3" "4")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -1.25 1.25)
@@ -46424,7 +47938,20 @@
 		(uuid "6d836d6a-bcf4-4f2c-81f9-ce38b50cf155")
 		(at 324.2 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW61"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "fcabfb1f-3798-4049-952a-2ef402db223e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -46448,7 +47975,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -46458,19 +47985,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW61"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "fcabfb1f-3798-4049-952a-2ef402db223e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -46501,9 +48015,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8c341e5a-2cb5-475b-9f1a-681a49de3ae3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/e81c9abc-5efb-4a1e-bf22-4f56e3fdaeda")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -47351,7 +48885,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "13114488-6969-43d8-9894-00ba1327bceb")
@@ -47439,6 +48973,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "536b8856-5fc8-4e9c-860c-5da9096d5022")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "df0e75fe-051e-43ac-b9c4-2c6bfce4844e")
 			(effects
 				(font
 					(size 1 1)
@@ -47743,7 +49291,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "9982233c-4adf-466f-a927-552229a7f95a")
@@ -47831,6 +49379,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "e2f1922d-dfca-4652-b26d-12c246eb69f7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7a38adb2-e214-4b28-bdfb-3f43ab16fcc0")
 			(effects
 				(font
 					(size 1 1)
@@ -48203,6 +49765,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "48a04bd1-002d-4f1b-a306-b39808d7daf9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/fcb38770-8c40-425c-a34a-ddbe729210a2")
 		(sheetname "/")
@@ -48447,6 +50023,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" "DNP"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1f2a5815-e65a-4ae1-a97d-18f27d4828e4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "Connector*:*_1x??_*")
 		(path "/7cd7672c-b2f0-4170-94af-250c0d27578a")
 		(sheetname "/")
@@ -48457,7 +50047,7 @@
 				(pins "1" "2" "3" "4")
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -1.25 1.25)
@@ -48598,7 +50188,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "9741caaa-2f74-4aaf-abeb-f3870739b56a")
@@ -48686,6 +50276,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "a8fd7b90-ebc2-44f4-b3c0-f1550b2b4501")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ef458a7e-fa77-4994-977d-92bbf2c86147")
 			(effects
 				(font
 					(size 1 1)
@@ -48977,7 +50581,20 @@
 		(uuid "75aa10d6-55a6-4336-80b5-d6b8de76bcb6")
 		(at 219.425 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW56"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "ee220327-52d5-4bf5-9402-fef34de9bdcf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -49001,7 +50618,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -49011,19 +50628,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW56"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "ee220327-52d5-4bf5-9402-fef34de9bdcf")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -49054,9 +50658,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7416dfcd-8c31-4970-8943-527225eea565")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/28af075b-fdf0-4a5d-bb16-e4650567c044")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -49972,6 +51596,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "82b92ae1-0428-432b-a49d-e63ca48026e4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/8ca50711-9ff1-444d-ab6c-142821a34299")
 		(sheetname "/")
@@ -50167,7 +51805,20 @@
 		(uuid "77cd840a-4f22-4b15-8d32-2d288bdfee40")
 		(at 267.05 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW35"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "320e2feb-e723-4378-9435-b945fe08a779")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -50191,7 +51842,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -50201,19 +51852,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW35"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "320e2feb-e723-4378-9435-b945fe08a779")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -50244,9 +51882,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "779e6111-979e-49e8-ae1f-223fa0c7b32e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/fdf1008d-832f-43ab-86da-64d31bf84fae")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -51081,7 +52739,20 @@
 		(uuid "79876bbb-dffd-4cd0-842b-6189745ad097")
 		(at 324.2 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW26"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "32ca2fdc-62ab-4870-97b3-5619f7dd8b34")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -51105,7 +52776,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -51115,19 +52786,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW26"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "32ca2fdc-62ab-4870-97b3-5619f7dd8b34")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -51158,9 +52816,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5bfde8af-b2ef-4e86-aeff-d899e3686fef")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/dfdb00ee-a43c-41bd-a5d2-7fac1f275ec8")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -52008,7 +53686,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "e3f268ee-4a9b-4be8-b315-7fd7e715d50d")
@@ -52096,6 +53774,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "2f29c0af-5c53-440b-a917-c19649614a02")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3e201593-5092-49a8-b519-6a261d200b15")
 			(effects
 				(font
 					(size 1 1)
@@ -52468,6 +54160,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4bb5a2eb-259f-4fa5-b211-a2f195c06df1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/2e17ed08-92b1-4ffd-b120-45e6d65e4afd")
 		(sheetname "/")
@@ -52744,6 +54450,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b1b6f5b1-d899-4895-a135-67cf373fbaaa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/547d0d26-011f-4bcf-b290-711bed170130")
 		(sheetname "/")
@@ -52952,7 +54672,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "912f9a22-6299-4b95-a956-297f6599194a")
@@ -53040,6 +54760,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ab0a72d5-1592-4e26-90f1-4c7357e2fc13")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7186c88a-c7f7-40c0-9b8b-712e7e1abac0")
 			(effects
 				(font
 					(size 1 1)
@@ -53331,7 +55065,20 @@
 		(uuid "7e26cf73-ca73-4c19-a277-2b6a72768755")
 		(at 248 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW46"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "34d07e4d-6e7d-4e9f-9159-7c73f6f75bf2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -53355,7 +55102,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -53365,19 +55112,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW46"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "34d07e4d-6e7d-4e9f-9159-7c73f6f75bf2")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -53408,9 +55142,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "19fb4ca7-7cb5-4516-b660-28d198711cdb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/95f22d83-56f6-4d93-8d9e-32d53ad8d610")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -54245,7 +55999,20 @@
 		(uuid "7fc74d94-8889-41e3-80d1-10ff3cf7be20")
 		(at 228.95 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW9"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "d64ed5a6-ce86-4db4-9755-b1758d390318")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -54269,7 +56036,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -54279,19 +56046,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW9"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "d64ed5a6-ce86-4db4-9755-b1758d390318")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -54322,9 +56076,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e1391572-7fd9-42a0-87b3-8ab679181a14")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/ce72d5d0-1724-4625-87fe-be87b2c5a87f")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -55159,7 +56933,20 @@
 		(uuid "82049f1f-0d7b-408c-99ce-8bdfcce46a52")
 		(at 133.7 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW28"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "0291d2d1-cf51-4ecd-b9e8-e9dc06ee133f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -55183,7 +56970,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -55193,19 +56980,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW28"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "0291d2d1-cf51-4ecd-b9e8-e9dc06ee133f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -55236,9 +57010,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c245bd98-ee85-430e-96fd-97ec802c8ea0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/6ad67768-55cb-4cfb-8194-32658297db35")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -56154,6 +57948,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "79bfea26-1fc5-4dd4-87f1-017242fd0e13")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/49dc7eb2-3cfc-4597-8a2c-14edef3050a6")
 		(sheetname "/")
@@ -56430,6 +58238,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "44f8f824-06fc-42a0-830d-3079a62a43a7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/1cf8d7cc-bb94-441e-9863-3a482fd83669")
 		(sheetname "/")
@@ -56638,7 +58460,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "aae45e49-900a-4463-9e9c-0485f9d9472f")
@@ -56726,6 +58548,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "bcc6cf4d-764a-4ef2-867f-8180c8bd7a99")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2702a08c-152f-4f17-9e36-571826331aa1")
 			(effects
 				(font
 					(size 1 1)
@@ -57017,7 +58853,20 @@
 		(uuid "895a0929-308e-407f-975d-991b6bcc4016")
 		(at 209.9 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW20"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "ee088cdd-8327-4f42-ac10-d0ed3cd9e67c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -57041,7 +58890,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -57051,19 +58900,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW20"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "ee088cdd-8327-4f42-ac10-d0ed3cd9e67c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -57094,9 +58930,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ba7a874a-69b7-4f94-846b-9896b13da1b5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/1fb88d1e-8315-468c-ae2e-a74294576711")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -57944,7 +59800,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "8042e9e4-50f7-4988-9017-816cbf984d0d")
@@ -58032,6 +59888,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "6880aa05-7ee3-43ac-9e87-8265b3df3de4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "65b3adfb-7a8a-42bf-89e4-98f7d78e0ea2")
 			(effects
 				(font
 					(size 1 1)
@@ -58323,7 +60193,20 @@
 		(uuid "8b3e18e1-33a6-442e-8f06-89dd348c1402")
 		(at 190.85 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW55"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "5674325b-26d4-471a-a447-c998feef6733")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -58347,7 +60230,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -58357,19 +60240,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW55"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "5674325b-26d4-471a-a447-c998feef6733")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -58400,9 +60270,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ed774436-8626-48f2-81ae-17933b45eec3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/9e87255c-de1e-4625-9f4c-2565304ca36c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -59318,6 +61208,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "303cf480-7788-466f-ab63-fe1a701fb598")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/64c7ed47-2e21-4092-bbc9-ba8fa6996f6b")
 		(sheetname "/")
@@ -59513,7 +61417,20 @@
 		(uuid "8c580bb3-ab85-4962-8e81-866afb5a0b52")
 		(at 267.05 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW58"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "43c02a02-3888-448f-a5d6-0e2159800475")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -59537,7 +61454,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -59547,19 +61464,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW58"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "43c02a02-3888-448f-a5d6-0e2159800475")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -59590,9 +61494,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f956b896-bd43-4f49-9bba-de1d4fd14054")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/874f9a8b-1373-4185-aebd-a77655751dc5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -60427,7 +62351,20 @@
 		(uuid "8e7f7ff8-8300-43aa-8755-00e016a6d1a7")
 		(at 248 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW57"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "2c2fa954-201f-49e9-9a73-1c6baa920d1d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -60451,7 +62388,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -60461,19 +62398,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW57"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "2c2fa954-201f-49e9-9a73-1c6baa920d1d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -60504,9 +62428,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "da1e5844-76e1-462b-bccd-a4ce6be0badd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/93bc01a3-7479-4ca0-86dc-a0d3b22b25d0")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -61422,6 +63366,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "13ae24a4-87e5-4f32-acbb-6675f1a194b9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/e0ac8401-5c19-42cd-9674-06e6696f8ebe")
 		(sheetname "/")
@@ -61698,6 +63656,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1627d03d-a019-4fec-9bb2-1036b93c145c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ee748a80-b554-4931-82ea-673b3eebdbb1")
 		(sheetname "/")
@@ -61893,7 +63865,20 @@
 		(uuid "93d70eba-89f8-47f6-83b0-0facffcdf4c2")
 		(at 267.05 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW47"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "5abb872e-36fa-49a3-997a-6a65f468ccb7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -61917,7 +63902,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -61927,19 +63912,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW47"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "5abb872e-36fa-49a3-997a-6a65f468ccb7")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -61970,9 +63942,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a86e0790-ca52-4002-8ce5-c63c92d494e1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/8382c429-a03b-45b6-9e79-a1e31f91f7e5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -62807,7 +64799,20 @@
 		(uuid "94c99a6b-5cea-42bc-9118-fb17b8efe398")
 		(at 209.9 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW44"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "fce0784e-495c-4b10-bb77-8c5c9b4b4d51")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -62831,7 +64836,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -62841,19 +64846,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW44"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "fce0784e-495c-4b10-bb77-8c5c9b4b4d51")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -62884,9 +64876,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "be973f4f-511f-49c4-b57e-2fef40d568ec")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/2a4637bd-e9e3-47c3-ba2e-e8a9b4dbdc2b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -63734,7 +65746,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "47a95466-e41b-43b2-9f41-f2b2422fb307")
@@ -63822,6 +65834,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "35237f0f-928f-40a5-b430-9865aceaf66f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2ae09a27-32ca-49af-9c16-4c3a68dabdd8")
 			(effects
 				(font
 					(size 1 1)
@@ -64113,7 +66139,20 @@
 		(uuid "96185f76-c971-4964-8725-55190f5a3c70")
 		(at 171.8 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW30"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "4b76b688-1c0a-459f-88c6-5c793094d99f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -64137,7 +66176,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -64147,19 +66186,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW30"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "4b76b688-1c0a-459f-88c6-5c793094d99f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -64190,9 +66216,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8e01fe8d-275d-4a69-87cf-bcc8f186e711")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/6a8a640c-1902-4162-b695-1bd281cd8058")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -65040,7 +67086,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "9f9d2239-83e0-4ee6-b132-b90d20aedf8e")
@@ -65128,6 +67174,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "2b765368-e6c5-4a71-9824-815b6a41062b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "86f741ba-bfc0-4f1b-9666-543778d9d26c")
 			(effects
 				(font
 					(size 1 1)
@@ -65432,7 +67492,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "10a2e0f8-c256-4f26-a18b-90b1f435c366")
@@ -65520,6 +67580,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "08fe432a-a4db-4580-bd39-6061d93ff344")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f6a9879a-36eb-4e99-ba0d-98d5067bbb6b")
 			(effects
 				(font
 					(size 1 1)
@@ -65811,7 +67885,20 @@
 		(uuid "9b6fa98a-ba51-41fc-b138-22c9a0488259")
 		(at 209.9 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW32"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "8f572e33-6581-489e-8e67-b46f20d22349")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -65835,7 +67922,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -65845,19 +67932,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW32"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "8f572e33-6581-489e-8e67-b46f20d22349")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -65888,9 +67962,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4a5da7f8-203b-4ff9-873e-d9313480f455")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/ce05fb90-42e1-49f6-921d-e1100a54e2a5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -66806,6 +68900,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0e3dc873-c71b-4abd-aace-9a6e4fa51b46")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/15eb8d3f-0536-4772-9916-2e435ee95045")
 		(sheetname "/")
@@ -67082,6 +69190,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fade97ca-8a04-4057-868f-6ef68a01e1d5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/e0390359-6e6d-4f00-aa41-17cf53820b8c")
 		(sheetname "/")
@@ -67290,7 +69412,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "2d8d89e6-8312-41e5-a0f5-c204a896a154")
@@ -67378,6 +69500,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "3ec1fd80-7e41-4f8b-a0ab-0d4f8ee952ba")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "765edb5f-91cc-4804-97de-0b911748fe3c")
 			(effects
 				(font
 					(size 1 1)
@@ -67682,7 +69818,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "9621dc9b-8973-46de-a758-c6ad719e544f")
@@ -67770,6 +69906,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "92cd4fb3-1d69-4e23-bb5e-fce0634dc002")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fcb73b7c-46d4-4347-915c-b2f5e9377753")
 			(effects
 				(font
 					(size 1 1)
@@ -68074,7 +70224,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "0.47µF"
+		(property "Value" "Capacitor 0.47µF"
 			(at 0 -1.43 180)
 			(layer "B.Fab")
 			(uuid "0dcb04ff-7095-4290-b4a7-82cf356a8643")
@@ -68130,6 +70280,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "b346329a-a142-4661-8a8a-c2f5a9f5ba0d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "77519d12-b63b-44b9-9b95-bbfd5ad07256")
 			(effects
 				(font
 					(size 1 1)
@@ -68240,7 +70404,20 @@
 		(uuid "a3d86aa3-9b83-4961-ab9a-a3e8fe7bdf55")
 		(at 114.65 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW39"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "b76a2bef-40f9-4ca0-8172-5373ddc21a2e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -68264,7 +70441,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -68274,19 +70451,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW39"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "b76a2bef-40f9-4ca0-8172-5373ddc21a2e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -68317,9 +70481,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "423c5c1d-2ea3-40a5-94ca-419d8e840608")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/93ca3729-92e7-406d-8896-ac0446d2fd85")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -69235,6 +71419,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "38456189-9a5f-4aad-8d51-f5232ce48d24")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/3d6201ef-afe7-4503-8091-56adba81d4c5")
 		(sheetname "/")
@@ -69511,6 +71709,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ed90750f-1bbd-4fe4-bfea-2ad836930c34")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/10abf206-7ae6-48d7-8c7c-a31570af5f5a")
 		(sheetname "/")
@@ -69719,7 +71931,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "8e88a3b4-ca4c-44db-8545-3118c300d664")
@@ -69807,6 +72019,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8f907a1f-9801-4064-8967-ca5f2233b782")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "27e519c5-ca77-4bd9-9520-b6e72d01117c")
 			(effects
 				(font
 					(size 1 1)
@@ -70098,7 +72324,20 @@
 		(uuid "a8ff90ca-8e18-48f2-a0a2-aac0c6d416ad")
 		(at 305.15 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW60"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "1da0c403-c65f-45a4-9064-76888236d3a4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -70122,7 +72361,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -70132,19 +72371,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW60"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "1da0c403-c65f-45a4-9064-76888236d3a4")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -70175,9 +72401,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e02c9ce8-793d-4e1d-b8ab-604b87241a8e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/43952e30-eeeb-4a7a-bac3-eef59ae4cdd7")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -71093,6 +73339,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9e9f6f30-648e-4b85-88b1-0462535f6b36")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/f6e6d6c3-cb1b-45a6-861a-d5913ccd380a")
 		(sheetname "/")
@@ -71361,6 +73621,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "7d622d5c-56f8-4f7a-b122-be8cb688d70d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2d9a5b7b-a771-4dd0-b6b9-67e97f3ea64a")
 			(effects
 				(font
 					(size 1 1)
@@ -71645,6 +73919,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4b1cc936-2bad-4e86-9fb2-760d0ff20918")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/7eba852f-8607-460e-a0d2-3ac7352d244b")
 		(sheetname "/")
@@ -71913,6 +74201,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "e16b63e8-01b3-41c7-8a51-979931b17200")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c093b1dc-33ac-41b3-bbb1-73667c1479f9")
 			(effects
 				(font
 					(size 1 1)
@@ -72197,6 +74499,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "547a11ff-cd81-488c-8d1b-aabe56ad37f1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/0c2dea78-fc93-4909-8a28-e4f1002552e3")
 		(sheetname "/")
@@ -72392,7 +74708,20 @@
 		(uuid "b07cea5e-4957-4424-8b1d-0bb285711974")
 		(at 228.95 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW45"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "e02455f5-c03d-430c-b598-b2dea68d9d27")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -72416,7 +74745,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -72426,19 +74755,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW45"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "e02455f5-c03d-430c-b598-b2dea68d9d27")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -72469,9 +74785,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2df5b961-ff48-4c94-81e0-c4683cc5135c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/ac3cc8ae-1580-47e7-acc7-a9bad18fbbeb")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -73319,7 +75655,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "04babad3-47a7-43f5-a7ca-8da72d6f4114")
@@ -73407,6 +75743,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "3206f001-5fe1-42b8-a476-f8aa79cdcdf1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6879b833-a8a1-43e7-8bf6-fad5670fe40f")
 			(effects
 				(font
 					(size 1 1)
@@ -73698,7 +76048,20 @@
 		(uuid "b254bdc5-e426-4650-84e1-e30d90e9a2da")
 		(at 171.8 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW18"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "64434628-08d3-4117-96ce-cb14b2c0347f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -73722,7 +76085,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -73732,19 +76095,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW18"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "64434628-08d3-4117-96ce-cb14b2c0347f")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -73775,9 +76125,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d478048b-d494-47d3-a16f-7cb021d16934")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/45cc0bf6-3600-4ff4-80ff-a2772d7c56e0")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -74625,7 +76995,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "9baaf220-f1e3-4f04-92f7-7643301ab25f")
@@ -74713,6 +77083,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "2f6519c9-ba9d-45b2-b07c-c80c07342818")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "72211be6-ac53-4322-9e46-de3af0f1464c")
 			(effects
 				(font
 					(size 1 1)
@@ -75017,7 +77401,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "0.1µF"
+		(property "Value" "Capacitor 0.1µF"
 			(at 0 -1.16 0)
 			(layer "B.Fab")
 			(uuid "6179cc3d-bee8-45a9-a6b7-2216cbb83500")
@@ -75073,6 +77457,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "db20f562-5166-4307-a83a-7322d995523e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2eeaee5c-1e0f-4cbf-b9a6-45260b9efca2")
 			(effects
 				(font
 					(size 1 1)
@@ -75183,7 +77581,20 @@
 		(uuid "b7585f0d-9e1a-4801-bd72-2c2bb3d2e67d")
 		(at 305.15 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW49"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "ad989557-c9d6-4573-af49-e60d3a7bafba")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -75207,7 +77618,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -75217,19 +77628,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW49"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "ad989557-c9d6-4573-af49-e60d3a7bafba")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -75260,9 +77658,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "338a6c12-a677-4115-bf62-7092ec217b92")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/1821ce80-01bc-4754-9f05-8471e0a1df75")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -76110,7 +78528,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "165db0cb-4215-45d4-95af-dc3e2b4d1512")
@@ -76198,6 +78616,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "3ad27f36-adf6-4752-bd77-305d36bc23ce")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ca2fb0b3-7dfd-4c17-9902-adb2d152ddf6")
 			(effects
 				(font
 					(size 1 1)
@@ -76489,7 +78921,20 @@
 		(uuid "b79ca0ef-9a8d-4e32-8d57-0028391b1195")
 		(at 286.1 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW48"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "ccb1e6e5-c76c-4aef-b24e-596c3d1d7e7c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -76513,7 +78958,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -76523,19 +78968,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW48"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "ccb1e6e5-c76c-4aef-b24e-596c3d1d7e7c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -76566,9 +78998,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a131b805-8318-449a-92f5-32ee0d09194d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/baaa03d6-6200-4169-b357-f9416d7d9787")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -77416,7 +79868,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "51725cde-ef3e-449b-9d33-c1978f4ee080")
@@ -77504,6 +79956,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8d507fe2-5d7f-4d29-82b0-9cde2f39340e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9a22b5a8-8a60-47cb-ae99-51334056713b")
 			(effects
 				(font
 					(size 1 1)
@@ -77808,7 +80274,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "5be9ebf2-a078-4991-8d5f-9caf51b561ad")
@@ -77896,6 +80362,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "efbaecd7-bc2c-4f45-85ef-a9e0b6d3a9ce")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "457ab541-b089-4b06-a8b5-e43d8c70c756")
 			(effects
 				(font
 					(size 1 1)
@@ -78187,7 +80667,20 @@
 		(uuid "beb10dc8-9455-4df8-a3ab-b64db1c9dbcd")
 		(at 133.7 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW16"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "9efa8bb3-260b-4679-a24a-69b2232ef3e8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -78211,7 +80704,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -78221,19 +80714,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW16"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "9efa8bb3-260b-4679-a24a-69b2232ef3e8")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -78264,9 +80744,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b2c222d2-5b41-4b08-b932-932497ce9235")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/d10e7418-693f-4729-8785-0f10388bcfe6")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -79182,6 +81682,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "54d21d16-76cc-49d9-9f4f-de346f8e2d97")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/30156bf1-8da5-430e-9955-3cca537c8798")
 		(sheetname "/")
@@ -79390,7 +81904,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 0)
 			(layer "B.Fab")
 			(uuid "bea92f88-e567-4a70-977d-c4b3a4e24fa1")
@@ -79478,6 +81992,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "b2b14cb4-c3ae-4268-8d11-f62e11e05546")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8680a5b2-95c2-4dda-90bf-b77945a49fa7")
 			(effects
 				(font
 					(size 1 1)
@@ -79850,6 +82378,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6ad21f77-1e6a-4181-b9a0-8d1d9e71c28d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/b82a2109-f2e8-4a93-b6ea-132c489bc63f")
 		(sheetname "/")
@@ -80058,7 +82600,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "0bffd3dc-efdf-4a98-bc44-bca14ed4ae1b")
@@ -80146,6 +82688,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "6a45fcdb-e131-4cd9-b064-ea6df20d03ea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "525c2592-60e0-4f6c-9053-426239baff71")
 			(effects
 				(font
 					(size 1 1)
@@ -80437,7 +82993,20 @@
 		(uuid "c6c07d8f-7797-4a86-98cb-fdada9c7a664")
 		(at 190.85 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW19"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "2cd421cc-c2b7-467c-8fa0-a4fbd6dd90a6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -80461,7 +83030,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -80471,19 +83040,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW19"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "2cd421cc-c2b7-467c-8fa0-a4fbd6dd90a6")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -80514,9 +83070,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "038a8d75-d682-43ef-8751-c492281cf2e5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/54894214-554f-496c-a5f8-7a42bcf7f1fc")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -81351,7 +83927,20 @@
 		(uuid "c85dddb1-244e-4520-b2a6-379b3f411397")
 		(at 152.75 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW5"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "4255bcb4-49b2-4d45-aa59-6bead0fa0241")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -81375,7 +83964,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -81385,19 +83974,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW5"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "4255bcb4-49b2-4d45-aa59-6bead0fa0241")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -81428,9 +84004,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0c02666b-ba8e-4426-944d-7aaa0c095eea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/179f2595-7dbe-4420-aba6-3365fd583a9d")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -82278,7 +84874,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "24ba6bd8-cc1b-4dbb-87db-3540afdd925d")
@@ -82366,6 +84962,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "be04acbf-d94b-4d61-b327-fc503e8d0335")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b72ed326-5e5f-4ee2-a1f2-7e29595c1718")
 			(effects
 				(font
 					(size 1 1)
@@ -82738,6 +85348,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6030cb82-a51c-48cd-a79f-d83d375b996c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/e3fa51a2-2953-4ddf-b05f-02bc65cba9b5")
 		(sheetname "/")
@@ -82933,7 +85557,20 @@
 		(uuid "cd3bab5d-7801-4bf0-aba4-c4fbcdadee1e")
 		(at 324.2 86.4 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW2"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "0342beb1-76ce-42a5-9173-1c4e18ce7b31")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -82957,7 +85594,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -82967,19 +85604,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW2"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "0342beb1-76ce-42a5-9173-1c4e18ce7b31")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -83010,9 +85634,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1e24e4f6-0bb5-492a-aaba-cb5e0d1ce099")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/3d2f90a5-c927-4128-be33-3e8b0010c13b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -83908,6 +86552,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5048e06d-fd5e-4ebf-980e-708396d3f293")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/3e0945d3-3ccd-47bf-b160-25df1eab3802")
 		(sheetname "/")
@@ -84176,6 +86834,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "72927a94-ffc3-4af8-b402-c482bdad9b90")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a4546c96-7825-41e9-8103-41676b4b8723")
 			(effects
 				(font
 					(size 1 1)
@@ -84460,6 +87132,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "023369cf-94dc-4b27-81da-b019a96cb29f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/949b6e0e-59db-4ac9-b42d-23a368366a2e")
 		(sheetname "/")
@@ -84655,7 +87341,20 @@
 		(uuid "d3f8b09c-348e-4c94-be54-38cfa45ba114")
 		(at 152.75 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW29"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "df473b1e-6e09-4f7b-a89d-0aa4187ed23c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -84679,7 +87378,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -84689,19 +87388,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW29"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "df473b1e-6e09-4f7b-a89d-0aa4187ed23c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -84732,9 +87418,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c728584b-7004-4067-b371-155ee96f3264")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/f108d448-7651-4cc0-9d97-f8d724bac4ff")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -85569,7 +88275,20 @@
 		(uuid "d415868a-c2cf-43b7-b813-67f26c893f49")
 		(at 190.85 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW31"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "f8c7bd6a-19f9-402c-8a85-6525723955f1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -85593,7 +88312,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -85603,19 +88322,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW31"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "f8c7bd6a-19f9-402c-8a85-6525723955f1")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -85646,9 +88352,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d4332017-724b-465f-8219-8509c7faa1be")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/c1fde9ff-fa63-4000-9563-f69bede447ee")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -86496,7 +89222,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "8959b894-c861-4015-bd44-ad52b60b5968")
@@ -86584,6 +89310,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "98cf28b4-acc1-4b68-9432-6eea731e4d40")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "516f1907-7121-43fe-88c7-12a6d862ff05")
 			(effects
 				(font
 					(size 1 1)
@@ -86888,7 +89628,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "d3fc1ddd-c455-4dc9-80d5-5b039665ed45")
@@ -86976,6 +89716,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "7d9645fa-407b-4717-a686-e791468116f2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "40c3c03a-d2f6-4db1-86ce-41564782274b")
 			(effects
 				(font
 					(size 1 1)
@@ -87267,7 +90021,20 @@
 		(uuid "d73330d5-0a69-4b70-8aad-0300c219e305")
 		(at 286.1 181.65 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW59"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "f6acf6af-0d12-4401-a072-82eeef01aee6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -87291,7 +90058,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -87301,19 +90068,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW59"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "f6acf6af-0d12-4401-a072-82eeef01aee6")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -87344,9 +90098,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ba73bc07-9a71-48e6-8bcd-3f385115a021")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/9a9ee287-ab69-4a1f-95c9-74e2029181f1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -88194,7 +90968,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "0.1µF"
+		(property "Value" "Capacitor 0.1µF"
 			(at 0 -1.16 180)
 			(layer "B.Fab")
 			(uuid "7d80e771-1dbd-42b5-9b74-095877da6668")
@@ -88250,6 +91024,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "56b13aba-c016-4abb-920e-080a5b7d7ee8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "358cb6a2-7fc2-42bd-876f-c0d97101673f")
 			(effects
 				(font
 					(size 1 1)
@@ -88433,6 +91221,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "57b1739d-9557-495a-93db-6176a4e971b0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "666ad257-0efd-4e08-93d9-c5885b4b925a")
 			(effects
 				(font
 					(size 1 1)
@@ -88649,7 +91451,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "47a27a55-ad7d-4e7a-bbef-5640bfcbaacd")
@@ -88737,6 +91539,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "db7384d0-e708-47bd-b17c-4a880e226007")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "676cee42-b06f-425d-ab9d-6d8a3406db22")
 			(effects
 				(font
 					(size 1 1)
@@ -89041,7 +91857,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "2fa7c3c8-3093-4007-a97a-eba11047d112")
@@ -89129,6 +91945,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d744fccf-6b00-49b5-8ece-a7565a283357")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fbe5c7c9-6e5f-4836-9f4a-f3f17f310644")
 			(effects
 				(font
 					(size 1 1)
@@ -89433,7 +92263,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "f673d35a-be79-43a8-8727-3a5097f5a3b3")
@@ -89521,6 +92351,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "539aeebf-4d3a-4352-81f9-7f5b8fdbad82")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2361dff1-5a4c-454f-86ce-5d5adf20e701")
 			(effects
 				(font
 					(size 1 1)
@@ -89893,6 +92737,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5faea2cd-7409-409f-b6b7-41893ff323da")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/2e4ce7c5-59c8-47f3-8624-f832c865beb7")
 		(sheetname "/")
@@ -90088,7 +92946,20 @@
 		(uuid "dfcf0518-b146-4f91-8bf6-a2aa4ceb7363")
 		(at 171.8 105.45 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW6"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "a1c8341f-c4bd-443c-8d17-0ad164c72113")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -90112,7 +92983,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -90122,19 +92993,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW6"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "a1c8341f-c4bd-443c-8d17-0ad164c72113")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -90165,9 +93023,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c8d3734c-3faa-4b94-8929-caf8460468a8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/107c0a22-ea02-4cbd-9aa4-eaa16b486eb9")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -91015,7 +93893,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "100kΩ"
+		(property "Value" "Resistor 100kΩ"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "aae3296d-ac02-4baa-980f-10c29b2a07ff")
@@ -91051,7 +93929,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "0603WAF4700T5E"
+		(property "MPN" "0603WAF1003T5E"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -91071,6 +93949,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "79fb00df-5488-4a2b-a767-c793f1c024fc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "48dcf22a-1b93-4903-9f42-16fb192807c7")
 			(effects
 				(font
 					(size 1 1)
@@ -91194,7 +94086,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "fb1d708a-7164-4690-b8ea-d85cc56fc31c")
@@ -91282,6 +94174,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "d0a4c1e9-88c9-4257-8ff7-ccf00ee0868a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4e2bc71a-c8b4-4d6e-b1f2-ee365af1705f")
 			(effects
 				(font
 					(size 1 1)
@@ -91586,7 +94492,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "5fc8c4eb-ac2a-47da-8530-a3549cc5bf8e")
@@ -91674,6 +94580,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f1a6c41a-5c68-4395-83dc-abdf1016f04c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "33ea574f-8759-4c0b-a502-52d9379814e9")
 			(effects
 				(font
 					(size 1 1)
@@ -91965,7 +94885,20 @@
 		(uuid "e6052bc9-5cc1-4338-b5f4-92706aca70f4")
 		(at 324.2 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW50"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "5f64898b-abdb-48c2-9ef9-eac5f4ad5b8e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -91989,7 +94922,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -91999,19 +94932,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW50"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "5f64898b-abdb-48c2-9ef9-eac5f4ad5b8e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -92042,9 +94962,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5474047b-b46b-4285-9842-0deacc1b0ae1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/fa361133-6e66-4ca8-90c7-c8845d4fd108")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -92892,7 +95832,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "421409f3-29b5-40fc-bd57-d9bf1b7068ce")
@@ -92980,6 +95920,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "e06d91b8-8c87-42fd-b234-f37a9da530a7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "948f8856-068e-4623-a071-73d391cecf05")
 			(effects
 				(font
 					(size 1 1)
@@ -93271,7 +96225,20 @@
 		(uuid "e91bfdaa-49e1-47b9-a793-fa6df7ed8a6e")
 		(at 305.15 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW25"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "9facaf57-d710-4c70-b25c-9f48efd1687c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -93295,7 +96262,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -93305,19 +96272,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW25"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "9facaf57-d710-4c70-b25c-9f48efd1687c")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -93348,9 +96302,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "403d8b58-e3ef-4fa7-bceb-c42b9011a9fa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/dc2cd2c5-83a3-4008-94fe-18aa484ce23e")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -94266,6 +97240,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "629c5a74-2b51-42ff-913d-cfed2d06ebf8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/68e6e80f-6619-466f-9527-87f2c1c53436")
 		(sheetname "/")
@@ -94542,6 +97530,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "67116b81-421e-4602-91bc-9c9ed7629890")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ea86eaa1-4f1c-4807-8912-29355610f989")
 		(sheetname "/")
@@ -94737,7 +97739,20 @@
 		(uuid "eabd908b-e383-40dd-98f4-5f29ab68f2cd")
 		(at 324.2 143.55 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW38"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "56d3dc6a-3451-4f4a-8a96-212356598195")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -94761,7 +97776,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -94771,19 +97786,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW38"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "56d3dc6a-3451-4f4a-8a96-212356598195")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -94814,9 +97816,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "226ba179-6c58-4c4d-9093-38a9f273e9ed")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/f00241dd-13b6-4567-80a3-9f894ea0c403")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -95664,7 +98686,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "122353b4-398d-47a8-8925-b46df9c4e742")
@@ -95752,6 +98774,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "22273028-6251-4769-9322-ef6ae69c4a5d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ef5d57c7-7f20-4e86-9f22-64d329b5d9b3")
 			(effects
 				(font
 					(size 1 1)
@@ -96124,6 +99160,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f9c4d68c-e87f-42b8-8ccb-98944a0f0f43")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/f4622b50-2c0a-4553-bd04-c64d65bc119b")
 		(sheetname "/")
@@ -96332,7 +99382,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "RaspberryPi_Pico"
+		(property "Value" "Raspberry Pi Pico"
 			(at 0 -27.94 270)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -96399,6 +99449,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" "DNP"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "530a52c5-a489-41df-902a-025e4105b14a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "RaspberryPi?Pico?Common* RaspberryPi?Pico?SMD*")
 		(path "/67d0df73-90db-42e3-9f64-940cbdfc43b5")
 		(sheetname "/")
@@ -96412,7 +99476,7 @@
 				)
 			)
 		)
-		(attr through_hole exclude_from_bom)
+		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 10 -25.61)
@@ -97737,7 +100801,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "2c3a936d-026a-4b69-b558-0147276bfa86")
@@ -97825,6 +100889,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "89fd67d2-cbfd-4b9c-9cd1-b8d60f16021f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b6135b4f-2300-46d5-86c6-10f718aa4040")
 			(effects
 				(font
 					(size 1 1)
@@ -98197,6 +101275,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c65354b6-5ce2-4a9a-9a8e-2a420c070da5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/0f8fc85c-9709-4fce-9eb7-7ec0be3bac0c")
 		(sheetname "/")
@@ -98392,7 +101484,20 @@
 		(uuid "eddfc395-11e3-4d4c-af54-aff8215c83cf")
 		(at 152.75 124.5 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW17"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "bc8cb1e3-b55e-40ab-8d19-5a99bdfd099d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -98416,7 +101521,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -98426,19 +101531,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW17"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "bc8cb1e3-b55e-40ab-8d19-5a99bdfd099d")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -98469,9 +101561,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "20010ce1-4e4f-419a-b95e-497b9a97c468")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/19ce64a7-160e-4b31-aa4d-75ffd8947e73")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -99387,6 +102499,20 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "edf9b051-ef08-4903-93b8-2805639e1998")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/2e674431-a013-487a-9a6b-5c10b721f28a")
 		(sheetname "/")
@@ -99595,7 +102721,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "0.1µF"
+		(property "Value" "Capacitor 0.1µF"
 			(at 0 -1.16 0)
 			(layer "B.Fab")
 			(uuid "4b35265b-9cb1-4b8d-b077-8c26bcae3d7a")
@@ -99651,6 +102777,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "9b7ca79e-8751-414d-964c-e3cb8268044f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f7828b01-16c7-413e-9d04-d1a326da6ddd")
 			(effects
 				(font
 					(size 1 1)
@@ -99774,7 +102914,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 0 -2.1 90)
 			(layer "B.Fab")
 			(uuid "70a2a96b-23bc-4e25-9914-8fd6fab061d3")
@@ -99862,6 +103002,20 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "6daad34b-68f4-4d03-9aaa-f8ab0f83545c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fd9c29cd-dd8c-43df-809e-0c4312b3144c")
 			(effects
 				(font
 					(size 1 1)
@@ -100153,7 +103307,20 @@
 		(uuid "f8483573-1b24-47bb-9039-19a1a291658c")
 		(at 171.8 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW42"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "aba03b87-3501-4c67-8126-7b8490588ac0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -100177,7 +103344,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -100187,19 +103354,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW42"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "aba03b87-3501-4c67-8126-7b8490588ac0")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -100230,9 +103384,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "27f4fc91-d276-4273-8b53-934a7334a0b6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/199748e7-b4e7-403c-95be-4cf3d3c55e36")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -101067,7 +104241,20 @@
 		(uuid "f95f001e-1c6a-4f84-abe3-07f774bf7dfc")
 		(at 152.75 162.6 180)
 		(descr "Gateron KS-33 switch and hotswap socket")
-		(property "Value" "Switch"
+		(property "Reference" "SW41"
+			(at -5.25 -2.25 0)
+			(unlocked yes)
+			(layer "B.SilkS")
+			(uuid "a4c47af6-b010-4d27-9462-376b93ffadc6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify bottom mirror)
+			)
+		)
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 0 5.9 0)
 			(layer "Dwgs.User")
 			(hide yes)
@@ -101091,7 +104278,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mechanical keyboard hotswap socket"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -101101,19 +104288,6 @@
 				(font
 					(size 1.27 1.27)
 				)
-			)
-		)
-		(property "Reference" "SW41"
-			(at -5.25 -2.25 0)
-			(unlocked yes)
-			(layer "B.SilkS")
-			(uuid "a4c47af6-b010-4d27-9462-376b93ffadc6")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify bottom mirror)
 			)
 		)
 		(property "MPN" "KS-2P02B01-02"
@@ -101144,9 +104318,29 @@
 				(justify mirror)
 			)
 		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4d04087e-df8c-4743-acb2-aa52923dcc78")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(path "/a55f8f16-70ef-4ebc-9b4f-d08be663152a")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line

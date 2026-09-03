@@ -14852,17 +14852,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 184.15 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 184.15 219.71 0)
 			(hide yes)
@@ -14982,17 +14971,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 218.44 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 218.44 220.98 0)
 			(hide yes)
@@ -15089,17 +15067,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 222.25 266.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" "DNP"
 			(at 222.25 266.7 0)
 			(hide yes)
@@ -15154,7 +15121,7 @@
 				)
 			)
 		)
-		(property "Value" "20kΩ"
+		(property "Value" "Resistor 20kΩ"
 			(at 63.5 207.01 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -15197,7 +15164,7 @@
 				)
 			)
 		)
-		(property "MPN" "0603WAF4700T5E"
+		(property "MPN" "0603WAF2002T5E"
 			(at 63.5 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -15209,17 +15176,6 @@
 			)
 		)
 		(property "Package" "0603"
-			(at 63.5 207.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 63.5 207.01 90)
 			(hide yes)
 			(show_name no)
@@ -15278,7 +15234,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 300.99 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -15366,17 +15322,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 298.45 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 298.45 68.58 90)
 			(hide yes)
@@ -15425,7 +15370,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 240.03 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -15481,17 +15426,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 240.03 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 240.03 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -15615,17 +15549,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 218.44 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 218.44 200.66 0)
 			(hide yes)
@@ -15680,7 +15603,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 300.99 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -15768,17 +15691,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 298.45 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 298.45 102.87 90)
 			(hide yes)
@@ -15827,7 +15739,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 212.09 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -15905,17 +15817,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 209.55 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 209.55 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -16039,17 +15940,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 229.87 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 229.87 179.07 0)
 			(hide yes)
@@ -16104,7 +15994,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 227.33 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -16160,17 +16050,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 227.33 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 227.33 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -16294,17 +16173,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 275.59 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 275.59 219.71 0)
 			(hide yes)
@@ -16358,7 +16226,7 @@
 				)
 			)
 		)
-		(property "Value" "0.47µF"
+		(property "Value" "Capacitor 0.47µF"
 			(at 101.6 154.178 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16413,17 +16281,6 @@
 			)
 		)
 		(property "Package" "0603"
-			(at 101.6 157.48 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 101.6 157.48 90)
 			(hide yes)
 			(show_name no)
@@ -16537,17 +16394,6 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
-			(at 229.87 199.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 229.87 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -16677,17 +16523,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 298.45 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 298.45 179.07 0)
 			(hide yes)
@@ -16797,17 +16632,6 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
-			(at 195.58 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 195.58 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -16937,17 +16761,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 264.16 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 264.16 220.98 0)
 			(hide yes)
@@ -17002,7 +16815,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 224.79 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -17080,17 +16893,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 222.25 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 222.25 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -17214,17 +17016,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 264.16 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 264.16 180.34 0)
 			(hide yes)
@@ -17279,7 +17070,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 290.83 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -17345,17 +17136,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 290.83 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 290.83 53.34 0)
 			(hide yes)
@@ -17404,7 +17184,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 214.63 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -17470,17 +17250,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 214.63 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 214.63 53.34 0)
 			(hide yes)
@@ -17529,7 +17298,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 316.23 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -17595,17 +17364,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 316.23 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 316.23 87.63 0)
 			(hide yes)
@@ -17654,7 +17412,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 199.39 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -17742,17 +17500,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 196.85 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 196.85 91.44 90)
 			(hide yes)
@@ -17801,7 +17548,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 227.33 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -17867,17 +17614,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 227.33 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 227.33 87.63 0)
 			(hide yes)
@@ -17926,7 +17662,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 214.63 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -17992,17 +17728,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 214.63 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 214.63 64.77 0)
 			(hide yes)
@@ -18051,7 +17776,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 240.03 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -18117,17 +17842,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 240.03 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 240.03 53.34 0)
 			(hide yes)
@@ -18176,7 +17890,7 @@
 				)
 			)
 		)
-		(property "Value" "2kΩ"
+		(property "Value" "Resistor 2kΩ"
 			(at 54.61 182.88 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -18219,7 +17933,7 @@
 				)
 			)
 		)
-		(property "MPN" "0603WAF4700T5E"
+		(property "MPN" "0603WAF2001T5E"
 			(at 54.61 182.88 90)
 			(hide yes)
 			(show_name no)
@@ -18231,17 +17945,6 @@
 			)
 		)
 		(property "Package" "0603"
-			(at 54.61 182.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 54.61 182.88 90)
 			(hide yes)
 			(show_name no)
@@ -18445,17 +18148,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 321.31 199.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 321.31 199.39 0)
 			(hide yes)
@@ -18510,7 +18202,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 237.49 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -18598,17 +18290,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 234.95 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 234.95 68.58 90)
 			(hide yes)
@@ -18657,7 +18338,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 290.83 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -18723,17 +18404,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 290.83 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 290.83 64.77 0)
 			(hide yes)
@@ -18782,7 +18452,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 265.43 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -18848,17 +18518,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 265.43 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 265.43 76.2 0)
 			(hide yes)
@@ -18907,7 +18566,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 252.73 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -18973,17 +18632,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 252.73 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 252.73 64.77 0)
 			(hide yes)
@@ -19032,7 +18680,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 326.39 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -19120,17 +18768,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 323.85 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 323.85 102.87 90)
 			(hide yes)
@@ -19179,7 +18816,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 288.29 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -19267,17 +18904,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 285.75 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 285.75 91.44 90)
 			(hide yes)
@@ -19326,7 +18952,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 262.89 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -19414,17 +19040,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 260.35 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 260.35 57.15 90)
 			(hide yes)
@@ -19473,7 +19088,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 259.08 100.584 0)
 			(hide yes)
 			(show_name no)
@@ -19529,17 +19144,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 259.08 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 259.08 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -19663,17 +19267,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 344.17 199.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 344.17 199.39 0)
 			(hide yes)
@@ -19728,7 +19321,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 252.73 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -19784,17 +19377,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 252.73 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 252.73 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -19908,17 +19490,6 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
-			(at 207.01 199.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 207.01 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -20048,17 +19619,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 207.01 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 207.01 158.75 0)
 			(hide yes)
@@ -20178,17 +19738,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 275.59 199.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 275.59 199.39 0)
 			(hide yes)
@@ -20243,7 +19792,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 326.39 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -20331,17 +19880,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 323.85 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 323.85 57.15 90)
 			(hide yes)
@@ -20390,7 +19928,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 303.53 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -20446,17 +19984,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 303.53 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 303.53 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -20580,17 +20107,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 241.3 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 241.3 200.66 0)
 			(hide yes)
@@ -20645,7 +20161,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 328.93 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -20711,17 +20227,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 328.93 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 328.93 53.34 0)
 			(hide yes)
@@ -20770,7 +20275,7 @@
 				)
 			)
 		)
-		(property "Value" "100kΩ"
+		(property "Value" "Resistor 100kΩ"
 			(at 48.26 203.2 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -20813,7 +20318,7 @@
 				)
 			)
 		)
-		(property "MPN" "0603WAF4700T5E"
+		(property "MPN" "0603WAF1003T5E"
 			(at 48.26 203.2 90)
 			(hide yes)
 			(show_name no)
@@ -20825,17 +20330,6 @@
 			)
 		)
 		(property "Package" "0603"
-			(at 48.26 203.2 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 48.26 203.2 90)
 			(hide yes)
 			(show_name no)
@@ -20939,17 +20433,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 254 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" "DNP"
 			(at 254 111.76 0)
 			(hide yes)
@@ -20992,7 +20475,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 316.23 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -21048,17 +20531,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 316.23 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 316.23 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -21172,17 +20644,6 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
-			(at 332.74 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 332.74 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -21312,17 +20773,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 321.31 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 321.31 158.75 0)
 			(hide yes)
@@ -21377,7 +20827,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 326.39 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -21455,17 +20905,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 323.85 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 323.85 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -21667,17 +21106,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 252.73 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 252.73 219.71 0)
 			(hide yes)
@@ -21797,17 +21225,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 207.01 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 207.01 179.07 0)
 			(hide yes)
@@ -21862,7 +21279,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 328.93 43.434 0)
 			(hide yes)
 			(show_name no)
@@ -21918,17 +21335,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 328.93 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 328.93 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -22042,17 +21448,6 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
-			(at 298.45 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 298.45 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -22182,17 +21577,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 309.88 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 309.88 160.02 0)
 			(hide yes)
@@ -22246,7 +21630,7 @@
 				)
 			)
 		)
-		(property "Value" "0.1µF"
+		(property "Value" "Capacitor 0.1µF"
 			(at 91.44 163.068 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -22311,17 +21695,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 91.44 166.37 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 91.44 166.37 90)
 			(hide yes)
@@ -22370,7 +21743,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 316.23 100.584 0)
 			(hide yes)
 			(show_name no)
@@ -22436,17 +21809,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 316.23 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 316.23 99.06 0)
 			(hide yes)
@@ -22495,7 +21857,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 227.33 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -22561,17 +21923,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 227.33 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 227.33 64.77 0)
 			(hide yes)
@@ -22620,7 +21971,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 224.79 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -22708,17 +22059,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 222.25 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 222.25 57.15 90)
 			(hide yes)
@@ -22767,7 +22107,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 199.39 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -22855,17 +22195,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 196.85 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 196.85 102.87 90)
 			(hide yes)
@@ -22914,7 +22243,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 313.69 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -23002,17 +22331,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 311.15 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 311.15 68.58 90)
 			(hide yes)
@@ -23061,7 +22379,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 275.59 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -23139,17 +22457,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 273.05 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 273.05 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -23273,17 +22580,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 252.73 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 252.73 179.07 0)
 			(hide yes)
@@ -23338,7 +22634,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 303.53 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -23394,17 +22690,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 303.53 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 303.53 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -23528,17 +22813,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 287.02 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 287.02 180.34 0)
 			(hide yes)
@@ -23593,7 +22867,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 313.69 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -23681,17 +22955,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 311.15 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 311.15 102.87 90)
 			(hide yes)
@@ -23740,7 +23003,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 199.39 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -23818,17 +23081,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 196.85 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 196.85 68.58 90)
 			(hide yes)
 			(show_name no)
@@ -23952,17 +23204,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 229.87 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 229.87 219.71 0)
 			(hide yes)
@@ -24017,7 +23258,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 240.03 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -24083,17 +23324,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 240.03 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 240.03 64.77 0)
 			(hide yes)
@@ -24141,7 +23371,7 @@
 				)
 			)
 		)
-		(property "Value" "0.47µF"
+		(property "Value" "Capacitor 0.47µF"
 			(at 63.5 173.228 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24206,17 +23436,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 63.5 176.53 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 63.5 176.53 90)
 			(hide yes)
@@ -24265,7 +23484,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 186.69 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -24343,17 +23562,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 184.15 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 184.15 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -24490,7 +23698,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 303.53 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -24546,17 +23754,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 303.53 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 303.53 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -24672,17 +23869,6 @@
 			)
 		)
 		(property "Package" "QFN-48-EP(6x6)"
-			(at 86.36 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 86.36 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -25025,17 +24211,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 241.3 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 241.3 220.98 0)
 			(hide yes)
@@ -25090,7 +24265,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 288.29 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -25178,17 +24353,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 285.75 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 285.75 68.58 90)
 			(hide yes)
@@ -25237,7 +24401,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 278.13 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -25293,17 +24457,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 278.13 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 278.13 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -25427,17 +24580,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 287.02 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 287.02 220.98 0)
 			(hide yes)
@@ -25547,17 +24689,6 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
-			(at 252.73 199.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 252.73 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -25765,17 +24896,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 252.73 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 252.73 158.75 0)
 			(hide yes)
@@ -25831,7 +24951,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "RaspberryPi_Pico"
+		(property "Value" "Raspberry Pi Pico"
 			(at 79.6133 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25887,17 +25007,6 @@
 			)
 		)
 		(property "Package" ""
-			(at 77.47 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 77.47 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -26112,17 +25221,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 190.5 266.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" "DNP"
 			(at 190.5 266.7 0)
 			(hide yes)
@@ -26174,7 +25272,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 256.54 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -26252,17 +25350,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 254 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 254 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -26376,17 +25463,6 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
-			(at 241.3 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 241.3 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -26516,17 +25592,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 229.87 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 229.87 158.75 0)
 			(hide yes)
@@ -26581,7 +25646,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 227.33 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -26647,17 +25712,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 227.33 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 227.33 76.2 0)
 			(hide yes)
@@ -26706,7 +25760,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 201.93 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -26762,17 +25816,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 201.93 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 201.93 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -26896,17 +25939,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 321.31 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 321.31 219.71 0)
 			(hide yes)
@@ -26961,7 +25993,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 212.09 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -27049,17 +26081,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 209.55 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 209.55 57.15 90)
 			(hide yes)
@@ -27108,7 +26129,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 326.39 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -27196,17 +26217,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 323.85 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 323.85 91.44 90)
 			(hide yes)
@@ -27255,7 +26265,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 313.69 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -27333,17 +26343,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 311.15 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 311.15 57.15 90)
 			(hide yes)
 			(show_name no)
@@ -27467,17 +26466,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 184.15 199.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 184.15 199.39 0)
 			(hide yes)
@@ -27532,7 +26520,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 326.39 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -27620,17 +26608,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 323.85 45.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 323.85 45.72 90)
 			(hide yes)
@@ -27679,7 +26656,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 275.59 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -27757,17 +26734,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 273.05 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 273.05 57.15 90)
 			(hide yes)
 			(show_name no)
@@ -27969,17 +26935,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 195.58 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 195.58 180.34 0)
 			(hide yes)
@@ -28034,7 +26989,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 300.99 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -28122,17 +27077,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 298.45 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 298.45 80.01 90)
 			(hide yes)
@@ -28181,7 +27125,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 237.49 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -28259,17 +27203,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 234.95 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 234.95 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -28371,17 +27304,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 151.13 266.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" "DNP"
 			(at 151.13 266.7 0)
 			(hide yes)
@@ -28436,7 +27358,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 250.19 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -28514,17 +27436,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 247.65 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 247.65 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -28648,17 +27559,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 344.17 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 344.17 158.75 0)
 			(hide yes)
@@ -28713,7 +27613,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 290.83 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -28779,17 +27679,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 290.83 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 290.83 87.63 0)
 			(hide yes)
@@ -28838,7 +27727,7 @@
 				)
 			)
 		)
-		(property "Value" "2kΩ"
+		(property "Value" "Resistor 2kΩ"
 			(at 48.26 182.88 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -28881,7 +27770,7 @@
 				)
 			)
 		)
-		(property "MPN" "0603WAF4700T5E"
+		(property "MPN" "0603WAF2001T5E"
 			(at 48.26 182.88 90)
 			(hide yes)
 			(show_name no)
@@ -28893,17 +27782,6 @@
 			)
 		)
 		(property "Package" "0603"
-			(at 48.26 182.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 48.26 182.88 90)
 			(hide yes)
 			(show_name no)
@@ -29027,17 +27905,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 218.44 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 218.44 180.34 0)
 			(hide yes)
@@ -29091,7 +27958,7 @@
 				)
 			)
 		)
-		(property "Value" "0.47µF"
+		(property "Value" "Capacitor 0.47µF"
 			(at 81.28 154.178 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29156,17 +28023,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 81.28 157.48 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 81.28 157.48 90)
 			(hide yes)
@@ -29215,7 +28071,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 201.93 100.584 0)
 			(hide yes)
 			(show_name no)
@@ -29281,17 +28137,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 201.93 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 201.93 99.06 0)
 			(hide yes)
@@ -29340,7 +28185,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 290.83 100.584 0)
 			(hide yes)
 			(show_name no)
@@ -29406,17 +28251,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 290.83 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 290.83 99.06 0)
 			(hide yes)
@@ -29465,7 +28299,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 278.13 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -29531,17 +28365,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 278.13 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 278.13 53.34 0)
 			(hide yes)
@@ -29590,7 +28413,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 300.99 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -29678,17 +28501,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 298.45 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 298.45 57.15 90)
 			(hide yes)
@@ -29737,7 +28549,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 212.09 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -29825,17 +28637,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 209.55 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 209.55 91.44 90)
 			(hide yes)
@@ -29884,7 +28685,7 @@
 				)
 			)
 		)
-		(property "Value" "100kΩ"
+		(property "Value" "Resistor 100kΩ"
 			(at 54.61 204.47 90)
 			(show_name no)
 			(do_not_autoplace yes)
@@ -29927,7 +28728,7 @@
 				)
 			)
 		)
-		(property "MPN" "0603WAF4700T5E"
+		(property "MPN" "0603WAF1003T5E"
 			(at 54.61 204.47 90)
 			(hide yes)
 			(show_name no)
@@ -29939,17 +28740,6 @@
 			)
 		)
 		(property "Package" "0603"
-			(at 54.61 204.47 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 54.61 204.47 90)
 			(hide yes)
 			(show_name no)
@@ -30063,17 +28853,6 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
-			(at 264.16 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 264.16 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -30203,17 +28982,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 321.31 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 321.31 179.07 0)
 			(hide yes)
@@ -30333,17 +29101,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 298.45 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 298.45 219.71 0)
 			(hide yes)
@@ -30398,7 +29155,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 250.19 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -30486,17 +29243,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 247.65 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 247.65 57.15 90)
 			(hide yes)
@@ -30545,7 +29291,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 252.73 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -30611,17 +29357,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 252.73 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 252.73 53.34 0)
 			(hide yes)
@@ -30670,7 +29405,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 227.33 100.584 0)
 			(hide yes)
 			(show_name no)
@@ -30736,17 +29471,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 227.33 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 227.33 99.06 0)
 			(hide yes)
@@ -30795,7 +29519,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 313.69 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -30883,17 +29607,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 311.15 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 311.15 91.44 90)
 			(hide yes)
@@ -30942,7 +29655,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 265.43 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -31008,17 +29721,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 265.43 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 265.43 64.77 0)
 			(hide yes)
@@ -31067,7 +29769,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 278.13 100.584 0)
 			(hide yes)
 			(show_name no)
@@ -31133,17 +29835,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 278.13 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 278.13 99.06 0)
 			(hide yes)
@@ -31191,7 +29882,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 189.23 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -31257,17 +29948,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 189.23 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 189.23 87.63 0)
 			(hide yes)
@@ -31316,7 +29996,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 275.59 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -31394,17 +30074,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 273.05 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 273.05 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -31528,17 +30197,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 195.58 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 195.58 220.98 0)
 			(hide yes)
@@ -31593,7 +30251,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 278.13 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -31659,17 +30317,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 278.13 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 278.13 87.63 0)
 			(hide yes)
@@ -31718,7 +30365,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 288.29 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -31796,17 +30443,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 285.75 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 285.75 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -31930,17 +30566,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 172.72 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 172.72 160.02 0)
 			(hide yes)
@@ -31995,7 +30620,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 262.89 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -32083,17 +30708,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 260.35 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 260.35 91.44 90)
 			(hide yes)
@@ -32142,7 +30756,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 303.53 100.584 0)
 			(hide yes)
 			(show_name no)
@@ -32198,17 +30812,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 303.53 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 303.53 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -32322,17 +30925,6 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
-			(at 344.17 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 344.17 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -32540,17 +31132,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 287.02 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 287.02 200.66 0)
 			(hide yes)
@@ -32605,7 +31186,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 300.99 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -32683,17 +31264,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 298.45 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 298.45 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -32817,17 +31387,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 195.58 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 195.58 200.66 0)
 			(hide yes)
@@ -32882,7 +31441,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 240.03 100.584 0)
 			(hide yes)
 			(show_name no)
@@ -32948,17 +31507,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 240.03 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 240.03 99.06 0)
 			(hide yes)
@@ -33007,7 +31555,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 224.79 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -33085,17 +31633,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 222.25 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 222.25 68.58 90)
 			(hide yes)
 			(show_name no)
@@ -33219,17 +31756,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 332.74 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 332.74 200.66 0)
 			(hide yes)
@@ -33284,7 +31810,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 278.13 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -33350,17 +31876,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 278.13 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 278.13 64.77 0)
 			(hide yes)
@@ -33409,7 +31924,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 214.63 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -33475,17 +31990,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 214.63 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 214.63 87.63 0)
 			(hide yes)
@@ -33534,7 +32038,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 224.79 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -33612,17 +32116,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 222.25 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 222.25 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -33746,17 +32239,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 184.15 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 184.15 179.07 0)
 			(hide yes)
@@ -33811,7 +32293,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 265.43 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -33867,17 +32349,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 265.43 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 265.43 87.63 0)
 			(hide yes)
 			(show_name no)
@@ -34079,17 +32550,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 344.17 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 344.17 179.07 0)
 			(hide yes)
@@ -34144,7 +32604,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 189.23 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -34210,17 +32670,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 189.23 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 189.23 76.2 0)
 			(hide yes)
@@ -34269,7 +32718,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 189.23 43.434 0)
 			(hide yes)
 			(show_name no)
@@ -34335,17 +32784,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 189.23 41.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 189.23 41.91 0)
 			(hide yes)
@@ -34394,7 +32832,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 250.19 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -34472,17 +32910,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 247.65 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 247.65 68.58 90)
 			(hide yes)
 			(show_name no)
@@ -34606,17 +33033,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 287.02 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 287.02 160.02 0)
 			(hide yes)
@@ -34671,7 +33087,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 186.69 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -34759,17 +33175,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 184.15 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 184.15 68.58 90)
 			(hide yes)
@@ -34818,7 +33223,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 189.23 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -34884,17 +33289,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 189.23 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 189.23 53.34 0)
 			(hide yes)
@@ -34943,7 +33337,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 224.79 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -35021,17 +33415,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 222.25 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 222.25 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -35155,17 +33538,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 241.3 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 241.3 180.34 0)
 			(hide yes)
@@ -35220,7 +33592,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 186.69 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -35298,17 +33670,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 184.15 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 184.15 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -35432,17 +33793,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 264.16 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 264.16 200.66 0)
 			(hide yes)
@@ -35497,7 +33847,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 237.49 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -35585,17 +33935,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 234.95 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 234.95 80.01 90)
 			(hide yes)
@@ -35644,7 +33983,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 303.53 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -35710,17 +34049,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 303.53 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 303.53 87.63 0)
 			(hide yes)
@@ -35769,7 +34097,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 186.69 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -35857,17 +34185,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 184.15 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 184.15 57.15 90)
 			(hide yes)
@@ -35916,7 +34233,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 313.69 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -36004,17 +34321,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 311.15 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 311.15 80.01 90)
 			(hide yes)
@@ -36063,7 +34369,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 240.03 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -36129,17 +34435,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 240.03 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 240.03 76.2 0)
 			(hide yes)
@@ -36188,7 +34483,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 275.59 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -36276,17 +34571,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 273.05 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 273.05 91.44 90)
 			(hide yes)
@@ -36335,7 +34619,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 262.89 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -36423,17 +34707,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 260.35 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 260.35 80.01 90)
 			(hide yes)
@@ -36482,7 +34755,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 186.69 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -36570,17 +34843,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 184.15 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 184.15 102.87 90)
 			(hide yes)
@@ -36629,7 +34891,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "22µF/10V"
+		(property "Value" "Capacitor 22µF/10V"
 			(at 69.596 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -36695,17 +34957,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 72.39 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 72.39 153.67 0)
 			(hide yes)
@@ -36754,7 +35005,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 237.49 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -36832,17 +35083,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 234.95 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 234.95 91.44 90)
 			(hide yes)
 			(show_name no)
@@ -36979,7 +35219,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 252.73 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -37035,17 +35275,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 252.73 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 252.73 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -37169,17 +35398,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 172.72 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 172.72 220.98 0)
 			(hide yes)
@@ -37234,7 +35452,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 265.43 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -37300,17 +35518,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 265.43 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 265.43 53.34 0)
 			(hide yes)
@@ -37359,7 +35566,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 201.93 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -37425,17 +35632,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 201.93 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 201.93 64.77 0)
 			(hide yes)
@@ -37484,7 +35680,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 288.29 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -37562,17 +35758,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 285.75 102.87 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 285.75 102.87 90)
 			(hide yes)
 			(show_name no)
@@ -37863,7 +36048,7 @@
 				)
 			)
 		)
-		(property "Value" "0.1µF"
+		(property "Value" "Capacitor 0.1µF"
 			(at 101.6 163.068 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -37928,17 +36113,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 101.6 166.37 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 101.6 166.37 90)
 			(hide yes)
@@ -37987,7 +36161,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 316.23 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -38053,17 +36227,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 316.23 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 316.23 64.77 0)
 			(hide yes)
@@ -38111,7 +36274,7 @@
 				)
 			)
 		)
-		(property "Value" "0.47µF"
+		(property "Value" "Capacitor 0.47µF"
 			(at 91.44 154.178 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -38176,17 +36339,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 91.44 157.48 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 91.44 157.48 90)
 			(hide yes)
@@ -38235,7 +36387,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 250.19 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -38323,17 +36475,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 247.65 91.44 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 247.65 91.44 90)
 			(hide yes)
@@ -38382,7 +36523,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 288.29 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -38470,17 +36611,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 285.75 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 285.75 57.15 90)
 			(hide yes)
@@ -38529,7 +36659,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 328.93 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -38585,17 +36715,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 328.93 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 328.93 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -38719,17 +36838,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 207.01 219.71 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 207.01 219.71 0)
 			(hide yes)
@@ -38783,7 +36891,7 @@
 				)
 			)
 		)
-		(property "Value" "0.1µF"
+		(property "Value" "Capacitor 0.1µF"
 			(at 81.28 163.068 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -38838,17 +36946,6 @@
 			)
 		)
 		(property "Package" "0402"
-			(at 81.28 166.37 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 81.28 166.37 90)
 			(hide yes)
 			(show_name no)
@@ -38972,17 +37069,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 309.88 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 309.88 200.66 0)
 			(hide yes)
@@ -39037,7 +37123,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 199.39 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -39125,17 +37211,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 196.85 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 196.85 57.15 90)
 			(hide yes)
@@ -39184,7 +37259,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 214.63 100.584 0)
 			(hide yes)
 			(show_name no)
@@ -39240,17 +37315,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 214.63 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 214.63 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -39374,17 +37438,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 298.45 199.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 298.45 199.39 0)
 			(hide yes)
@@ -39439,7 +37492,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 186.69 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -39527,17 +37580,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 184.15 45.72 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 184.15 45.72 90)
 			(hide yes)
@@ -39586,7 +37628,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 328.93 100.584 0)
 			(hide yes)
 			(show_name no)
@@ -39642,17 +37684,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 328.93 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 328.93 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -39766,17 +37797,6 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
-			(at 275.59 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 275.59 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -39919,7 +37939,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 201.93 54.864 0)
 			(hide yes)
 			(show_name no)
@@ -39985,17 +38005,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 201.93 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 201.93 53.34 0)
 			(hide yes)
@@ -40044,7 +38053,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 326.39 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -40122,17 +38131,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 323.85 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 323.85 68.58 90)
 			(hide yes)
 			(show_name no)
@@ -40256,17 +38254,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 309.88 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 309.88 220.98 0)
 			(hide yes)
@@ -40321,7 +38308,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 328.93 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -40387,17 +38374,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 328.93 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 328.93 76.2 0)
 			(hide yes)
@@ -40446,7 +38422,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 214.63 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -40512,17 +38488,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 214.63 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 214.63 76.2 0)
 			(hide yes)
@@ -40571,7 +38536,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 201.93 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -40637,17 +38602,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 201.93 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 201.93 87.63 0)
 			(hide yes)
@@ -40696,7 +38650,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 212.09 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -40774,17 +38728,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 209.55 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 209.55 80.01 90)
 			(hide yes)
 			(show_name no)
@@ -40908,17 +38851,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 218.44 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 218.44 160.02 0)
 			(hide yes)
@@ -40973,7 +38905,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 262.89 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -41051,17 +38983,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 260.35 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 260.35 68.58 90)
 			(hide yes)
 			(show_name no)
@@ -41185,17 +39106,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 309.88 180.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 309.88 180.34 0)
 			(hide yes)
@@ -41250,7 +39160,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 199.39 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -41338,17 +39248,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 196.85 80.01 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 196.85 80.01 90)
 			(hide yes)
@@ -41397,7 +39296,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 189.23 66.294 0)
 			(hide yes)
 			(show_name no)
@@ -41463,17 +39362,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 189.23 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 189.23 64.77 0)
 			(hide yes)
@@ -41522,7 +39410,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 189.23 100.584 0)
 			(hide yes)
 			(show_name no)
@@ -41578,17 +39466,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 189.23 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 189.23 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -41712,17 +39589,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 184.15 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 184.15 158.75 0)
 			(hide yes)
@@ -41777,7 +39643,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 237.49 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -41865,17 +39731,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 234.95 57.15 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 234.95 57.15 90)
 			(hide yes)
@@ -41924,7 +39779,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 328.93 89.154 0)
 			(hide yes)
 			(show_name no)
@@ -41990,17 +39845,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 328.93 87.63 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 328.93 87.63 0)
 			(hide yes)
@@ -42049,7 +39893,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 316.23 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -42115,17 +39959,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 316.23 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 316.23 76.2 0)
 			(hide yes)
@@ -42174,7 +40007,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 275.59 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -42252,17 +40085,6 @@
 			)
 		)
 		(property "Package" "SOD-123"
-			(at 273.05 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 273.05 68.58 90)
 			(hide yes)
 			(show_name no)
@@ -42376,17 +40198,6 @@
 			)
 		)
 		(property "Package" "SMD-4P,3.2x1.3mm"
-			(at 332.74 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 332.74 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -42516,17 +40327,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 275.59 179.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 275.59 179.07 0)
 			(hide yes)
@@ -42581,7 +40381,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "Diode"
+		(property "Value" "Switch Diode"
 			(at 212.09 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -42669,17 +40469,6 @@
 				)
 			)
 		)
-		(property "Customer Note" ""
-			(at 209.55 68.58 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(property "Procurement Type" ""
 			(at 209.55 68.58 90)
 			(hide yes)
@@ -42728,7 +40517,7 @@
 				)
 			)
 		)
-		(property "Value" "Switch"
+		(property "Value" "GATERON Low Profile Switch Hot-swap Socket"
 			(at 290.83 77.724 0)
 			(hide yes)
 			(show_name no)
@@ -42784,17 +40573,6 @@
 			)
 		)
 		(property "Package" "SMD"
-			(at 290.83 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Customer Note" ""
 			(at 290.83 76.2 0)
 			(hide yes)
 			(show_name no)

@@ -573,14 +573,8 @@
       "fields_ordered": [
         {
           "group_by": false,
-          "label": "S/N",
-          "name": "Reference",
-          "show": true
-        },
-        {
-          "group_by": true,
           "label": "Designator",
-          "name": "Value",
+          "name": "Reference",
           "show": true
         },
         {
@@ -599,12 +593,18 @@
           "group_by": false,
           "label": "Package",
           "name": "Package",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "Procurement Type",
           "name": "Procurement Type",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Customer Note",
+          "name": "Value",
           "show": true
         },
         {
@@ -648,12 +648,6 @@
           "label": "Sim.Device",
           "name": "Sim.Device",
           "show": false
-        },
-        {
-          "group_by": false,
-          "label": "Customer Note",
-          "name": "Customer Note",
-          "show": true
         },
         {
           "group_by": false,
