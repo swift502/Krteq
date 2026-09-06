@@ -23813,7 +23813,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "IS31FL3733-QF"
+		(property "Value" "LED Driver"
 			(at 91.0433 262.89 0)
 			(show_name no)
 			(do_not_autoplace no)

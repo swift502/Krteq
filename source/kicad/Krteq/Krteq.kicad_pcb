@@ -28559,7 +28559,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "IS31FL3733-QF"
+		(property "Value" "LED Driver"
 			(at 0 -4.3 0)
 			(layer "B.Fab")
 			(uuid "46248eb0-95a6-47a7-991c-0a771b18eecf")
