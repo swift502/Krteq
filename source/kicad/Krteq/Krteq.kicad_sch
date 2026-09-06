@@ -23824,7 +23824,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DFN_QFN:QFN-48-1EP_6x6mm_P0.4mm_EP4.4x4.4mm"
+		(property "Footprint" "Krteq:QFN-48_6x6mm"
 			(at 86.36 219.71 0)
 			(hide yes)
 			(show_name no)
