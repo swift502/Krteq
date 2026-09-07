@@ -29050,6 +29050,18 @@
 			(layer "B.Fab")
 			(uuid "b8520e44-726b-4f70-9420-d14b5c45043c")
 		)
+		(fp_text user "1.86mm via spacing"
+			(at 4 0 90)
+			(unlocked yes)
+			(layer "Dwgs.User")
+			(uuid "18ebbd32-c745-461c-a908-e4e9983e9203")
+			(effects
+				(font
+					(size 0.3 0.3)
+					(thickness 0.05)
+				)
+			)
+		)
 		(fp_text user "${REFERENCE}"
 			(at 0 0 0)
 			(layer "B.Fab")
@@ -29060,18 +29072,6 @@
 					(thickness 0.15)
 				)
 				(justify mirror)
-			)
-		)
-		(fp_text user "1.86mm via spacing"
-			(at 4 0 90)
-			(unlocked yes)
-			(layer "User.1")
-			(uuid "18ebbd32-c745-461c-a908-e4e9983e9203")
-			(effects
-				(font
-					(size 0.3 0.3)
-					(thickness 0.05)
-				)
 			)
 		)
 		(pad "" smd roundrect
