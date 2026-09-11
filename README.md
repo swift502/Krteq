@@ -111,8 +111,7 @@ You'll need 61 low profile MX compatible keycaps, either solid or shine-through.
 
 QMK/VIA setup with a few custom features:
 
-- custom `KRT_VOL` keycode for combined volume control
-- custom `KRT_SCR` keycode for combined screen control
+- custom keycodes for screen, RGB and volume control
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> reverts to the default keymap
 

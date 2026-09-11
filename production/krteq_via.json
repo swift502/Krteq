@@ -9,9 +9,15 @@
       "name": "Krteq Screen",
       "title": "Cycle screen modes on press, cycle backwards with Shift, reset to default with Ctrl",
       "shortName": "KrtScr"
+    },
+    {
+      "name": "Krteq RGB",
+      "title": "Cycle RGB modes on press, cycle backwards with Shift, reset to default with Ctrl",
+      "shortName": "KrtRgb"
     }
   ],
   "keycodes": ["qmk_rgb_matrix_keycodes"],
+  "menus": ["qmk_rgb_matrix"],
   "matrix": {
     "rows": 6,
     "cols": 12

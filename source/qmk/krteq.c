@@ -164,6 +164,24 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
                 }
             }
             return false;
+
+        case KRT_RGB:
+            if (record->event.pressed)
+            {
+                if (mods & MOD_MASK_CTRL)
+                {
+                    rgb_matrix_mode(RGB_MATRIX_DEFAULT_MODE);
+                }
+                else if (mods & MOD_MASK_SHIFT)
+                {
+                    rgb_matrix_step_reverse();
+                }
+                else
+                {
+                    rgb_matrix_step();
+                }
+            }
+            return false;
     }
 
     return true;
