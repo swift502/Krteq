@@ -30,13 +30,19 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 - [PCB](#pcb)
 - [Case](#case)
-- [Keycaps](#keycaps)
+- Keycaps
 - 61x Gateron KS-33 switch
 - Gateron 2u low profile plate-mounted stabilizer
+
+<!-- -->
+
 - Raspberry Pi Pico
 - USB-C breakout board
 - OLED display module
-- 11x connecting wire
+
+<!-- -->
+
+- 11x short wire
 - 6x M2x6 screw
 - 2x M2.5x6 screw
 - Rubber feet
@@ -45,32 +51,23 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 The **USB-C breakout board** is expected to match the specs of the Adafruit USB-C breakout board with two M2.5 screw holes 15.24mm apart, 2.54mm from the front edge, and built-in resistors for the CC lines.
 
-The **OLED display module** is expected to be a 128x32 I2C OLED screen. These screens are not very standardized, so the PCB cutout is very generous to fit modules with slightly different dimensions. Any OLED roughly equal or less than 38x12mm should fit, and at most require slight modifications to the display cutout in the plate.
+The **OLED display module** is expected to be a 128x32 I2C OLED screen. These screens are not very standardized, so the PCB cutout is generous to fit modules with slightly different dimensions. Any OLED roughly equal or less than 38x12mm should fit, and at most require slight modifications to the display cutout in the plate.
 
 > [!WARNING]
 > TODO IMAGE
 
 ### Assembly
 
-#### PCB
-
-- Perform the initial firmware flash on the Pico
-- Solder the Pico onto the PCB
-- Solder the PCB wire ends to the J1, J2 and J3 interfaces
-
-#### Plate
-
-- Attach the 2u stabilizer to the plate
-- Screw the USB breakout to the plate
-- Place OLED breakout into plate's display slot
-
-#### Final assembly
-
-- Connect the plate to the PCB by pushing switches through them
-- Solder component wire ends to the respective breakout boards
-- Screw the plate to the case
-
-Put on some keycaps and you're done!
+1. Perform the initial firmware flash on the Pico
+1. Solder the Pico onto the PCB
+1. Solder the PCB wire ends to the J1, J2 and J3 interfaces
+1. Attach the 2u stabilizer to the plate
+1. Screw the USB breakout to the plate
+1. Place OLED breakout into plate's display slot
+1. Connect the plate to the PCB by pushing switches through them
+1. Solder component wire ends to the respective breakout boards
+1. Screw the plate to the case
+1. Put the keycaps on and you're done!
 
 ## PCB
 
@@ -100,13 +97,6 @@ Case blend file can be found in [source/Krteq.blend](source/Krteq.blend). It's d
 STL files for 3D printing can be found in [production/stl](production/stl). Recommended printing parameters are PLA, 0.15mm layer height and 100% infill.
 
 The plate has a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
-
-## Keycaps
-
-You'll need 61 low profile MX compatible keycaps, either solid or shine-through.
-
-- 60x 1u keycap
-- 1x 2u keycap for the spacebar
 
 ## Firmware
 
