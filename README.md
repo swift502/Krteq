@@ -61,9 +61,9 @@ The **OLED display module** is expected to be a 128x32 I2C OLED screen. These sc
 1. Perform the initial firmware flash on the Pico
 1. Solder the Pico onto the PCB
 1. Solder the PCB wire ends to the J1, J2 and J3 interfaces
-1. Attach the 2u stabilizer to the plate
-1. Screw the USB breakout to the plate
-1. Place OLED breakout into plate's display slot
+1. Attach the stabilizer to the plate
+1. Screw the USB board to the plate
+1. Place the OLED module into plate's display slot
 1. Connect the plate to the PCB by pushing switches through them
 1. Solder component wire ends to the respective breakout boards
 1. Screw the plate to the case
