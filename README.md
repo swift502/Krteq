@@ -37,7 +37,8 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 - USB-C breakout board
 - OLED display module
 - 11x connecting wire
-- 8x M2.5x6 screw
+- 6x M2x6 screw
+- 2x M2.5x6 screw
 - Rubber feet
 
 ### Breakout boards
