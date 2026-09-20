@@ -67,7 +67,7 @@ The **OLED display module** is expected to be a 128x32 I2C OLED screen. These sc
 1. Connect the plate to the PCB by pushing switches through them
 1. Solder component wire ends to the respective breakout boards
 1. Screw the plate to the case
-1. Put the keycaps on and you're done!
+1. Put some keycaps on and you're done!
 
 ## PCB
 
