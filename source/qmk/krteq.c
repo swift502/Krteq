@@ -1,5 +1,6 @@
 #include QMK_KEYBOARD_H
 #include "process_quantum.h"
+#include OLED_FONT_H
 
 #define LOGO_DURATION 3000
 uint16_t logo_timer;
@@ -29,9 +30,50 @@ void shift_user_screen(int shift)
     if (selected_user_screen < 0) selected_user_screen += USER_SCREEN_COUNT;
 }
 
+#define INDICATOR_PADDING_X 5
+#define INDICATOR_PADDING_Y 3
+#define INDICATOR_HEIGHT (OLED_FONT_HEIGHT + INDICATOR_PADDING_Y * 2)
+#define INDICATOR_TOP ((OLED_DISPLAY_HEIGHT - INDICATOR_HEIGHT) / 2)
+#define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
+
+// Glyphs are drawn manually because the character grid can't be centered vertically
+void render_indicator(uint8_t x, const char *label, bool enabled)
+{
+    uint8_t width = strlen(label) * OLED_FONT_WIDTH;
+    uint8_t left = x - INDICATOR_PADDING_X;
+    uint8_t total = width + INDICATOR_PADDING_X * 2;
+    uint32_t box = enabled ? (((uint32_t)1 << INDICATOR_HEIGHT) - 1) << INDICATOR_TOP : 0;
+
+    for (uint8_t i = 0; i < total; i++)
+    {
+        uint32_t column = box;
+
+        // Rounded corner illusion
+        if (i == 0 || i == total - 1)
+        {
+            column &= ~(((uint32_t)1 << INDICATOR_TOP) | ((uint32_t)1 << (INDICATOR_TOP + INDICATOR_HEIGHT - 1)));
+        }
+
+        if (i >= INDICATOR_PADDING_X && i < INDICATOR_PADDING_X + width)
+        {
+            uint8_t text = i - INDICATOR_PADDING_X;
+            uint8_t glyph = pgm_read_byte(&font[(label[text / OLED_FONT_WIDTH] - OLED_FONT_START) * OLED_FONT_WIDTH + text % OLED_FONT_WIDTH]);
+            uint32_t bits = (uint32_t)glyph << (INDICATOR_TOP + INDICATOR_PADDING_Y);
+            column = enabled ? column & ~bits : column | bits;
+        }
+
+        for (uint8_t page = 0; page < OLED_PAGES; page++)
+        {
+            oled_write_raw_byte(column >> (page * 8), page * OLED_DISPLAY_WIDTH + left + i);
+        }
+    }
+}
+
 void render_screen(int screen)
 {
-    if (screen != last_rendered_screen)
+    bool init = screen != last_rendered_screen;
+
+    if (init)
     {
         oled_clear();
         last_rendered_screen = screen;
@@ -46,11 +88,18 @@ void render_screen(int screen)
     switch (screen)
     {
         case USER_SCREEN_INDICATORS:
+        {
+            static uint8_t last_leds;
             led_t led_state = host_keyboard_led_state();
-            oled_write_P(led_state.num_lock ? PSTR("NUM ") : PSTR("    "), false);
-            oled_write_P(led_state.caps_lock ? PSTR("CAP ") : PSTR("    "), false);
-            oled_write_P(led_state.scroll_lock ? PSTR("ACC ") : PSTR("    "), false);
+            if (init || led_state.raw != last_leds)
+            {
+                last_leds = led_state.raw;
+                render_indicator(12, "NUM", led_state.num_lock);
+                render_indicator(55, "CAP", led_state.caps_lock);
+                render_indicator(98, "ACC", led_state.scroll_lock);
+            }
             break;
+        }
 
         case USER_SCREEN_BONGO_CAT:
             oled_write_P(PSTR("Bongo cat"), false);
