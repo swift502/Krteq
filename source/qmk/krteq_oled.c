@@ -324,9 +324,30 @@ static void logo_update(void)
 // Input lock screen
 //==============================================================================
 
+#define INPUT_LOCK_TEXT "Input lock"
+#define INPUT_LOCK_ICON_X 23
+#define INPUT_LOCK_ICON_Y 5
+#define INPUT_LOCK_TEXT_X 74
+#define INPUT_LOCK_TEXT_Y 12
+
+static const uint8_t input_lock_image[] = {
+#embed "bitmaps/lock.bmp"
+};
+
+static bool input_lock_redraw;
+
+static void input_lock_init(void)
+{
+    input_lock_redraw = true;
+}
+
 static void input_lock_update(void)
 {
-    oled_write_P(PSTR("Input lock"), false);
+    if (!input_lock_redraw) return;
+    input_lock_redraw = false;
+
+    draw_image(input_lock_image, INPUT_LOCK_ICON_X, INPUT_LOCK_ICON_Y);
+    draw_text(INPUT_LOCK_TEXT_X, INPUT_LOCK_TEXT_Y, INPUT_LOCK_TEXT);
 }
 
 //==============================================================================
@@ -342,9 +363,10 @@ static void render_screen(int screen)
 
         switch (screen)
         {
-            case USER_SCREEN_INDICATORS: indicators_init(); break;
-            case USER_SCREEN_BONGO_CAT:  bongo_cat_init();  break;
-            case SYSTEM_SCREEN_LOGO:     logo_init();       break;
+            case USER_SCREEN_INDICATORS:   indicators_init(); break;
+            case USER_SCREEN_BONGO_CAT:    bongo_cat_init();  break;
+            case SYSTEM_SCREEN_LOGO:       logo_init();       break;
+            case SYSTEM_SCREEN_INPUT_LOCK: input_lock_init(); break;
         }
     }
 
