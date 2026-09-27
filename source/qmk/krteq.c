@@ -56,22 +56,21 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
             return false;
 
         case KRT_SCR:
-            // Screens now switch automatically
-            // if (record->event.pressed)
-            // {
-            //     if (mods & MOD_MASK_CTRL)
-            //     {
-            //         default_user_screen();
-            //     }
-            //     else if (mods & MOD_MASK_SHIFT)
-            //     {
-            //         shift_user_screen(-1);
-            //     }
-            //     else
-            //     {
-            //         shift_user_screen(1);
-            //     }
-            // }
+            if (record->event.pressed)
+            {
+                if (mods & MOD_MASK_CTRL)
+                {
+                    default_user_screen();
+                }
+                else if (mods & MOD_MASK_SHIFT)
+                {
+                    shift_user_screen(-1);
+                }
+                else
+                {
+                    shift_user_screen(1);
+                }
+            }
             return false;
 
         case KRT_RGB:

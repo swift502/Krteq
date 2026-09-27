@@ -2,6 +2,7 @@
 #include OLED_FONT_H
 
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
+#define INDICATORS_LAYER 1
 #define INPUT_LOCK_LAYER 4
 
 enum screens
@@ -175,7 +176,6 @@ static void indicators_update(void)
 #define BONGO_HITS_MAX 999999
 #define BONGO_RAISED_DURATION 50
 #define BONGO_DOWN_DURATION 150
-#define BONGO_TIMEOUT 10000
 
 enum bongo_paw_states
 {
@@ -200,29 +200,10 @@ static const uint8_t bongo_paw_x[BONGO_PAW_COUNT] = { BONGO_PAW_LEFT_X, BONGO_PA
 
 static uint32_t bongo_hits;
 static uint16_t bongo_last_keycode;
-static uint16_t bongo_timer;
 static uint16_t bongo_paw_timer[BONGO_PAW_COUNT];
 static uint8_t bongo_paw_state[BONGO_PAW_COUNT];
 static uint8_t bongo_paw;
-static bool bongo_visible;
 static bool bongo_redraw;
-
-// Letters, digits, punctuation and the keypad, skipping enter, escape, backspace and tab
-static bool is_printing_keycode(uint16_t keycode)
-{
-    if (keycode == KC_KP_ENTER) return false;
-
-    return (keycode >= KC_A && keycode <= KC_0)
-        || (keycode >= KC_SPACE && keycode <= KC_SLASH)
-        || (keycode >= KC_KP_SLASH && keycode <= KC_KP_DOT);
-}
-
-// Guarded by bongo_visible so the elapsed check cannot wrap back into range
-static bool bongo_cat_active(void)
-{
-    if (bongo_visible && timer_elapsed(bongo_timer) > BONGO_TIMEOUT) bongo_visible = false;
-    return bongo_visible;
-}
 
 // Every strike starts raised so the paw is always seen coming down
 void bongo_key_event(uint16_t keycode, bool pressed)
@@ -230,10 +211,6 @@ void bongo_key_event(uint16_t keycode, bool pressed)
     if (!pressed) return;
 
     if (bongo_hits <= BONGO_HITS_MAX) bongo_hits++;
-
-    // Non-printing keys keep the cat alive but cannot summon it
-    if (is_printing_keycode(keycode)) bongo_visible = true;
-    if (bongo_visible) bongo_timer = timer_read();
 
     if (keycode != bongo_last_keycode) bongo_paw ^= 1;
     bongo_last_keycode = keycode;
@@ -379,26 +356,6 @@ static void render_screen(int screen)
     }
 }
 
-bool led_update_kb(led_t led_state)
-{
-    // QMK also calls this on layer actions, so the change has to be detected here
-    static uint8_t last_leds;
-    if (led_state.raw != last_leds)
-    {
-        last_leds = led_state.raw;
-        bongo_visible = false;
-    }
-
-    return led_update_user(led_state);
-}
-
-layer_state_t layer_state_set_kb(layer_state_t state)
-{
-    // QMK also reaches led_update_kb on layer actions, but not by contract
-    bongo_visible = false;
-    return layer_state_set_user(state);
-}
-
 oled_rotation_t oled_init_kb(oled_rotation_t rotation)
 {
     return OLED_ROTATION_180;
@@ -411,17 +368,24 @@ bool oled_task_kb(void)
         return false;
     }
 
+    uint8_t layer = get_highest_layer(layer_state);
+
     if (!logo_finished)
     {
         render_screen(SYSTEM_SCREEN_LOGO);
     }
-    else if (get_highest_layer(layer_state) >= INPUT_LOCK_LAYER)
+    else if (layer >= INPUT_LOCK_LAYER)
     {
         render_screen(SYSTEM_SCREEN_INPUT_LOCK);
     }
+    else if (layer == INDICATORS_LAYER)
+    {
+        // Layer 1 temporarily takes over the user selected screen
+        render_screen(USER_SCREEN_INDICATORS);
+    }
     else
     {
-        render_screen(bongo_cat_active() ? USER_SCREEN_BONGO_CAT : USER_SCREEN_INDICATORS);
+        render_screen(selected_user_screen);
     }
 
     return false;
