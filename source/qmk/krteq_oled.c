@@ -66,8 +66,10 @@ static void draw_image(const uint8_t *image, uint8_t x, uint8_t y)
     }
 }
 
-static void draw_text(uint8_t x, uint8_t y, const char *text)
+static void draw_text(uint8_t center_x, uint8_t y, const char *text)
 {
+    uint8_t x = center_x - strlen(text) * OLED_FONT_WIDTH / 2;
+
     for (uint8_t i = 0; text[i]; i++)
     {
         for (uint8_t ix = 0; ix < OLED_FONT_WIDTH; ix++)
@@ -82,15 +84,15 @@ static void draw_text(uint8_t x, uint8_t y, const char *text)
     }
 }
 
-static void draw_number(uint8_t center_x, uint8_t y, uint16_t value)
+static void draw_number(uint8_t center_x, uint8_t y, uint32_t value)
 {
-    char text[6];
+    char text[11];
     char *digit = text + sizeof(text) - 1;
 
     *digit = '\0';
     do *--digit = '0' + value % 10; while (value /= 10);
 
-    draw_text(center_x - strlen(digit) * OLED_FONT_WIDTH / 2, y, digit);
+    draw_text(center_x, y, digit);
 }
 
 //==============================================================================
@@ -164,12 +166,22 @@ static void indicators_update(void)
 
 #define BONGO_CAT_X 65
 #define BONGO_CAT_Y 0
+#define BONGO_PAW_COUNT 2
 #define BONGO_PAW_LEFT_X 44
 #define BONGO_PAW_RIGHT_X 93
 #define BONGO_PAW_Y 12
 #define BONGO_HITS_X (BONGO_PAW_LEFT_X / 2)
 #define BONGO_HITS_Y ((OLED_DISPLAY_HEIGHT - OLED_FONT_HEIGHT) / 2)
-#define BONGO_PAW_DURATION 150
+#define BONGO_HITS_MAX 999999
+#define BONGO_RAISED_DURATION 50
+#define BONGO_DOWN_DURATION 150
+
+enum bongo_paw_states
+{
+    BONGO_PAW_IDLE,
+    BONGO_PAW_RAISED,
+    BONGO_PAW_DOWN
+};
 
 static const uint8_t bongo_cat_image[] = {
 #embed "bitmaps/bongo_cat.bmp"
@@ -183,26 +195,53 @@ static const uint8_t bongo_paw_down_image[] = {
 #embed "bitmaps/bongo_paw_down.bmp"
 };
 
-static uint16_t bongo_hits;
-static uint16_t bongo_paw_timer;
-static bool bongo_right_paw;
-static bool bongo_paw_down;
+static const uint8_t bongo_paw_x[BONGO_PAW_COUNT] = { BONGO_PAW_LEFT_X, BONGO_PAW_RIGHT_X };
+
+static uint32_t bongo_hits;
+static uint16_t bongo_last_keycode;
+static uint16_t bongo_paw_timer[BONGO_PAW_COUNT];
+static uint8_t bongo_paw_state[BONGO_PAW_COUNT];
+static uint8_t bongo_paw;
 static bool bongo_redraw;
 
-void bongo_key_event(bool pressed)
+// Every strike starts raised so the paw is always seen coming down
+void bongo_key_event(uint16_t keycode, bool pressed)
 {
     if (!pressed) return;
 
-    bongo_hits++;
-    bongo_right_paw = !bongo_right_paw;
-    bongo_paw_timer = timer_read();
-    bongo_paw_down = true;
+    if (bongo_hits <= BONGO_HITS_MAX) bongo_hits++;
+    if (keycode != bongo_last_keycode) bongo_paw ^= 1;
+    bongo_last_keycode = keycode;
+
+    // Restarting an already raised paw would starve its strike under fast repeats
+    if (bongo_paw_state[bongo_paw] == BONGO_PAW_RAISED) return;
+
+    bongo_paw_state[bongo_paw] = BONGO_PAW_RAISED;
+    bongo_paw_timer[bongo_paw] = timer_read();
     bongo_redraw = true;
 }
 
-static const uint8_t *bongo_paw_image(bool right)
+// Idle paws never read the timer, so it cannot wrap back into range
+static void advance_paw(uint8_t paw)
 {
-    return bongo_paw_down && bongo_right_paw == right ? bongo_paw_down_image : bongo_paw_up_image;
+    switch (bongo_paw_state[paw])
+    {
+        case BONGO_PAW_RAISED:
+            if (timer_elapsed(bongo_paw_timer[paw]) < BONGO_RAISED_DURATION) return;
+            bongo_paw_state[paw] = BONGO_PAW_DOWN;
+            break;
+
+        case BONGO_PAW_DOWN:
+            if (timer_elapsed(bongo_paw_timer[paw]) < BONGO_DOWN_DURATION) return;
+            bongo_paw_state[paw] = BONGO_PAW_IDLE;
+            break;
+
+        default:
+            return;
+    }
+
+    bongo_paw_timer[paw] = timer_read();
+    bongo_redraw = true;
 }
 
 static void bongo_cat_init(void)
@@ -212,21 +251,28 @@ static void bongo_cat_init(void)
 
 static void bongo_cat_update(void)
 {
-    // Guarded by bongo_paw_down so the elapsed check cannot wrap back into range
-    if (bongo_paw_down && timer_elapsed(bongo_paw_timer) > BONGO_PAW_DURATION)
-    {
-        bongo_paw_down = false;
-        bongo_redraw = true;
-    }
+    for (uint8_t paw = 0; paw < BONGO_PAW_COUNT; paw++) advance_paw(paw);
 
     if (!bongo_redraw) return;
     bongo_redraw = false;
 
     oled_clear();
     draw_image(bongo_cat_image, BONGO_CAT_X, BONGO_CAT_Y);
-    draw_image(bongo_paw_image(false), BONGO_PAW_LEFT_X, BONGO_PAW_Y);
-    draw_image(bongo_paw_image(true), BONGO_PAW_RIGHT_X, BONGO_PAW_Y);
-    draw_number(BONGO_HITS_X, BONGO_HITS_Y, bongo_hits);
+
+    for (uint8_t paw = 0; paw < BONGO_PAW_COUNT; paw++)
+    {
+        bool down = bongo_paw_state[paw] == BONGO_PAW_DOWN;
+        draw_image(down ? bongo_paw_down_image : bongo_paw_up_image, bongo_paw_x[paw], BONGO_PAW_Y);
+    }
+
+    if (bongo_hits > BONGO_HITS_MAX)
+    {
+        draw_text(BONGO_HITS_X, BONGO_HITS_Y, "999999+");
+    }
+    else
+    {
+        draw_number(BONGO_HITS_X, BONGO_HITS_Y, bongo_hits);
+    }
 }
 
 //==============================================================================
