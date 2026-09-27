@@ -175,7 +175,7 @@ static void indicators_update(void)
 #define BONGO_HITS_MAX 999999
 #define BONGO_RAISED_DURATION 50
 #define BONGO_DOWN_DURATION 150
-#define BONGO_TIMEOUT 5000
+#define BONGO_TIMEOUT 10000
 
 enum bongo_paw_states
 {
@@ -207,10 +207,14 @@ static uint8_t bongo_paw;
 static bool bongo_visible;
 static bool bongo_redraw;
 
-// Letters and digits, then space and punctuation, skipping enter, escape, backspace and tab
+// Letters, digits, punctuation and the keypad, skipping enter, escape, backspace and tab
 static bool is_printing_keycode(uint16_t keycode)
 {
-    return (keycode >= KC_A && keycode <= KC_0) || (keycode >= KC_SPACE && keycode <= KC_SLASH);
+    if (keycode == KC_KP_ENTER) return false;
+
+    return (keycode >= KC_A && keycode <= KC_0)
+        || (keycode >= KC_SPACE && keycode <= KC_SLASH)
+        || (keycode >= KC_KP_SLASH && keycode <= KC_KP_DOT);
 }
 
 // Guarded by bongo_visible so the elapsed check cannot wrap back into range
@@ -355,9 +359,22 @@ static void render_screen(int screen)
 
 bool led_update_kb(led_t led_state)
 {
-    // An indicator change takes the screen back from the cat
-    bongo_visible = false;
+    // QMK also calls this on layer actions, so the change has to be detected here
+    static uint8_t last_leds;
+    if (led_state.raw != last_leds)
+    {
+        last_leds = led_state.raw;
+        bongo_visible = false;
+    }
+
     return led_update_user(led_state);
+}
+
+layer_state_t layer_state_set_kb(layer_state_t state)
+{
+    // QMK also reaches led_update_kb on layer actions, but not by contract
+    bongo_visible = false;
+    return layer_state_set_user(state);
 }
 
 oled_rotation_t oled_init_kb(oled_rotation_t rotation)
