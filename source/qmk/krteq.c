@@ -4,6 +4,8 @@
 
 bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 {
+    bongo_key_event(record->event.pressed);
+
     uint8_t mods = get_mods();
     bool double_shift = (mods & MOD_MASK_SHIFT) == MOD_MASK_SHIFT;
 

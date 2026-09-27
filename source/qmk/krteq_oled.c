@@ -30,6 +30,70 @@ void shift_user_screen(int shift)
 }
 
 //==============================================================================
+// Drawing
+//==============================================================================
+
+// Indexed BMP palette: 0 = black, 1 = white, 2 = transparent
+#define IMAGE_TRANSPARENT 2
+
+// BMP header fields are unaligned little endian, so they must be read byte-wise
+static uint32_t image_field(const uint8_t *image, uint8_t offset, uint8_t size)
+{
+    uint32_t value = 0;
+    while (size--) value |= (uint32_t)image[offset + size] << (size * 8);
+    return value;
+}
+
+static void draw_image(const uint8_t *image, uint8_t x, uint8_t y)
+{
+    uint16_t pixels = image_field(image, 0x0A, 4);
+    uint8_t width   = image_field(image, 0x12, 4);
+    uint8_t height  = image_field(image, 0x16, 4);
+    uint8_t depth   = image_field(image, 0x1C, 2);
+    uint8_t stride  = (width * depth + 31) / 32 * 4;
+
+    for (uint8_t iy = 0; iy < height; iy++)
+    {
+        // BMP rows are stored bottom-up
+        const uint8_t *row = image + pixels + (height - 1 - iy) * stride;
+
+        for (uint8_t ix = 0; ix < width; ix++)
+        {
+            uint16_t bit = ix * depth;
+            uint8_t pixel = (row[bit / 8] >> (8 - depth - bit % 8)) & ((1 << depth) - 1);
+            if (pixel != IMAGE_TRANSPARENT) oled_write_pixel(x + ix, y + iy, pixel);
+        }
+    }
+}
+
+static void draw_text(uint8_t x, uint8_t y, const char *text)
+{
+    for (uint8_t i = 0; text[i]; i++)
+    {
+        for (uint8_t ix = 0; ix < OLED_FONT_WIDTH; ix++)
+        {
+            uint8_t glyph = pgm_read_byte(&font[(text[i] - OLED_FONT_START) * OLED_FONT_WIDTH + ix]);
+
+            for (uint8_t iy = 0; iy < OLED_FONT_HEIGHT; iy++)
+            {
+                oled_write_pixel(x + i * OLED_FONT_WIDTH + ix, y + iy, glyph >> iy & 1);
+            }
+        }
+    }
+}
+
+static void draw_number(uint8_t center_x, uint8_t y, uint16_t value)
+{
+    char text[6];
+    char *digit = text + sizeof(text) - 1;
+
+    *digit = '\0';
+    do *--digit = '0' + value % 10; while (value /= 10);
+
+    draw_text(center_x - strlen(digit) * OLED_FONT_WIDTH / 2, y, digit);
+}
+
+//==============================================================================
 // Indicators screen
 //==============================================================================
 
@@ -98,9 +162,71 @@ static void indicators_update(void)
 // Bongo cat screen
 //==============================================================================
 
+#define BONGO_CAT_X 65
+#define BONGO_CAT_Y 0
+#define BONGO_PAW_LEFT_X 44
+#define BONGO_PAW_RIGHT_X 93
+#define BONGO_PAW_Y 12
+#define BONGO_HITS_X (BONGO_PAW_LEFT_X / 2)
+#define BONGO_HITS_Y ((OLED_DISPLAY_HEIGHT - OLED_FONT_HEIGHT) / 2)
+#define BONGO_PAW_DURATION 150
+
+static const uint8_t bongo_cat_image[] = {
+#embed "bitmaps/bongo_cat.bmp"
+};
+
+static const uint8_t bongo_paw_up_image[] = {
+#embed "bitmaps/bongo_paw_up.bmp"
+};
+
+static const uint8_t bongo_paw_down_image[] = {
+#embed "bitmaps/bongo_paw_down.bmp"
+};
+
+static uint16_t bongo_hits;
+static uint16_t bongo_paw_timer;
+static bool bongo_right_paw;
+static bool bongo_paw_down;
+static bool bongo_redraw;
+
+void bongo_key_event(bool pressed)
+{
+    if (!pressed) return;
+
+    bongo_hits++;
+    bongo_right_paw = !bongo_right_paw;
+    bongo_paw_timer = timer_read();
+    bongo_paw_down = true;
+    bongo_redraw = true;
+}
+
+static const uint8_t *bongo_paw_image(bool right)
+{
+    return bongo_paw_down && bongo_right_paw == right ? bongo_paw_down_image : bongo_paw_up_image;
+}
+
+static void bongo_cat_init(void)
+{
+    bongo_redraw = true;
+}
+
 static void bongo_cat_update(void)
 {
-    oled_write_P(PSTR("Bongo cat"), false);
+    // Guarded by bongo_paw_down so the elapsed check cannot wrap back into range
+    if (bongo_paw_down && timer_elapsed(bongo_paw_timer) > BONGO_PAW_DURATION)
+    {
+        bongo_paw_down = false;
+        bongo_redraw = true;
+    }
+
+    if (!bongo_redraw) return;
+    bongo_redraw = false;
+
+    oled_clear();
+    draw_image(bongo_cat_image, BONGO_CAT_X, BONGO_CAT_Y);
+    draw_image(bongo_paw_image(false), BONGO_PAW_LEFT_X, BONGO_PAW_Y);
+    draw_image(bongo_paw_image(true), BONGO_PAW_RIGHT_X, BONGO_PAW_Y);
+    draw_number(BONGO_HITS_X, BONGO_HITS_Y, bongo_hits);
 }
 
 //==============================================================================
@@ -146,6 +272,7 @@ static void render_screen(int screen)
         switch (screen)
         {
             case USER_SCREEN_INDICATORS: indicators_init(); break;
+            case USER_SCREEN_BONGO_CAT:  bongo_cat_init();  break;
             case SYSTEM_SCREEN_LOGO:     logo_init();       break;
         }
     }
