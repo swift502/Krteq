@@ -1,11 +1,8 @@
 #include "krteq_oled.h"
 #include OLED_FONT_H
 
-#define LOGO_DURATION 3000
-uint16_t logo_timer;
-bool logo_finished = false;
-int selected_user_screen = 0;
-int last_rendered_screen = -1;
+#define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
+#define INPUT_LOCK_LAYER 4
 
 enum screens
 {
@@ -16,6 +13,9 @@ enum screens
     SYSTEM_SCREEN_LOGO,
     SYSTEM_SCREEN_INPUT_LOCK
 };
+
+static int selected_user_screen = 0;
+static int last_rendered_screen = -1;
 
 void default_user_screen(void)
 {
@@ -29,13 +29,22 @@ void shift_user_screen(int shift)
     if (selected_user_screen < 0) selected_user_screen += USER_SCREEN_COUNT;
 }
 
+//==============================================================================
+// Indicators screen
+//==============================================================================
+
 #define INDICATOR_PADDING_X 5
 #define INDICATOR_PADDING_Y 3
 #define INDICATOR_HEIGHT (OLED_FONT_HEIGHT + INDICATOR_PADDING_Y * 2)
 #define INDICATOR_TOP ((OLED_DISPLAY_HEIGHT - INDICATOR_HEIGHT) / 2)
-#define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
+#define INDICATOR_NUM_X 12
+#define INDICATOR_CAP_X 55
+#define INDICATOR_ACC_X 98
 
-void render_indicator(uint8_t x, const char *label, bool enabled)
+static uint8_t indicator_leds;
+static bool indicator_redraw;
+
+static void render_indicator(uint8_t x, const char *label, bool enabled)
 {
     uint8_t width = strlen(label) * OLED_FONT_WIDTH;
     uint8_t left = x - INDICATOR_PADDING_X;
@@ -67,55 +76,91 @@ void render_indicator(uint8_t x, const char *label, bool enabled)
     }
 }
 
-void render_screen(int screen)
+static void indicators_init(void)
 {
-    bool init = screen != last_rendered_screen;
+    indicator_redraw = true;
+}
 
-    if (init)
+static void indicators_update(void)
+{
+    led_t leds = host_keyboard_led_state();
+    if (!indicator_redraw && leds.raw == indicator_leds) return;
+
+    indicator_redraw = false;
+    indicator_leds = leds.raw;
+
+    render_indicator(INDICATOR_NUM_X, "NUM", leds.num_lock);
+    render_indicator(INDICATOR_CAP_X, "CAP", leds.caps_lock);
+    render_indicator(INDICATOR_ACC_X, "ACC", leds.scroll_lock);
+}
+
+//==============================================================================
+// Bongo cat screen
+//==============================================================================
+
+static void bongo_cat_update(void)
+{
+    oled_write_P(PSTR("Bongo cat"), false);
+}
+
+//==============================================================================
+// Logo screen
+//==============================================================================
+
+#define LOGO_DURATION 3000
+
+static uint16_t logo_timer;
+static bool logo_finished = false;
+
+static void logo_init(void)
+{
+    logo_timer = timer_read();
+}
+
+static void logo_update(void)
+{
+    oled_write_P(PSTR("Logo"), false);
+    logo_finished = timer_elapsed(logo_timer) > LOGO_DURATION;
+}
+
+//==============================================================================
+// Input lock screen
+//==============================================================================
+
+static void input_lock_update(void)
+{
+    oled_write_P(PSTR("Input lock"), false);
+}
+
+//==============================================================================
+// Screen dispatch
+//==============================================================================
+
+static void render_screen(int screen)
+{
+    if (screen != last_rendered_screen)
     {
-        oled_clear();
         last_rendered_screen = screen;
+        oled_clear();
 
-        // Init
         switch (screen)
         {
+            case USER_SCREEN_INDICATORS: indicators_init(); break;
+            case SYSTEM_SCREEN_LOGO:     logo_init();       break;
         }
     }
 
-    // Update
     switch (screen)
     {
-        case USER_SCREEN_INDICATORS:
-        {
-            static uint8_t last_leds;
-            led_t led_state = host_keyboard_led_state();
-            if (init || led_state.raw != last_leds)
-            {
-                last_leds = led_state.raw;
-                render_indicator(12, "NUM", led_state.num_lock);
-                render_indicator(55, "CAP", led_state.caps_lock);
-                render_indicator(98, "ACC", led_state.scroll_lock);
-            }
-            break;
-        }
-
-        case USER_SCREEN_BONGO_CAT:
-            oled_write_P(PSTR("Bongo cat"), false);
-            break;
-
-        case SYSTEM_SCREEN_LOGO:
-            oled_write_P(PSTR("Logo"), false);
-            break;
-
-        case SYSTEM_SCREEN_INPUT_LOCK:
-            oled_write_P(PSTR("Input lock"), false);
-            break;
+        case USER_SCREEN_INDICATORS:   indicators_update(); break;
+        case USER_SCREEN_BONGO_CAT:    bongo_cat_update();  break;
+        case SYSTEM_SCREEN_LOGO:       logo_update();       break;
+        case SYSTEM_SCREEN_INPUT_LOCK: input_lock_update(); break;
     }
 }
 
 oled_rotation_t oled_init_kb(oled_rotation_t rotation)
 {
-    logo_timer = timer_read();
     return OLED_ROTATION_180;
 }
 
@@ -129,9 +174,8 @@ bool oled_task_kb(void)
     if (!logo_finished)
     {
         render_screen(SYSTEM_SCREEN_LOGO);
-        logo_finished = timer_elapsed(logo_timer) > LOGO_DURATION;
     }
-    else if (get_highest_layer(layer_state) >= 4)
+    else if (get_highest_layer(layer_state) >= INPUT_LOCK_LAYER)
     {
         render_screen(SYSTEM_SCREEN_INPUT_LOCK);
     }
