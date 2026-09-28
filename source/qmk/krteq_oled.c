@@ -834,7 +834,7 @@ static void screen_select_update(void)
 #define INPUT_LOCK_TEXT "Input lock"
 
 static const uint8_t input_lock_image[] = {
-#embed "bitmaps/lock.bmp"
+#embed "bitmaps/input_lock.bmp"
 };
 
 static bool input_lock_redraw;
@@ -859,15 +859,24 @@ static void input_lock_update(void)
 #define SHUTDOWN_BOOTLOADER_TEXT "Bootloader"
 #define SHUTDOWN_REBOOT_TEXT "Rebooting"
 
-static const uint8_t shutdown_image[] = {
-#embed "bitmaps/wrench.bmp"
+static const uint8_t bootloader_image[] = {
+#embed "bitmaps/bootloader.bmp"
+};
+
+static const uint8_t restart_image[] = {
+#embed "bitmaps/restart.bmp"
 };
 
 // The keyboard stops running right after this, so the screen is flushed here and now
 void render_shutdown_screen(bool jump_to_bootloader)
 {
     oled_clear();
-    draw_icon_text(shutdown_image, jump_to_bootloader ? SHUTDOWN_BOOTLOADER_TEXT : SHUTDOWN_REBOOT_TEXT);
+
+    if (jump_to_bootloader)
+        draw_icon_text(bootloader_image, SHUTDOWN_BOOTLOADER_TEXT);
+    else
+        draw_icon_text(restart_image, SHUTDOWN_REBOOT_TEXT);
+
     oled_render_dirty(true);
 }
 
