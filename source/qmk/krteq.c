@@ -112,6 +112,15 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
     return true;
 }
 
+layer_state_t layer_state_set_kb(layer_state_t state)
+{
+    state = layer_state_set_user(state);
+
+    if (get_highest_layer(state) == 0) commit_user_screen();
+
+    return state;
+}
+
 const is31fl3733_led_t PROGMEM g_is31fl3733_leds[IS31FL3733_LED_COUNT] = {
     {0, SW11_CS14, SW12_CS14, SW10_CS14},
     {0, SW1_CS14, SW2_CS14, SW9_CS14},
