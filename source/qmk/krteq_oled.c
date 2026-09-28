@@ -71,7 +71,13 @@ static void draw_image(const uint8_t *image, uint8_t x, uint8_t y)
     }
 }
 
-static void draw_text(uint8_t center_x, uint8_t y, const char *text)
+// One vertical slice of a glyph, with bit 0 at the top
+static uint8_t font_column(char character, uint8_t column)
+{
+    return pgm_read_byte(&font[(character - OLED_FONT_START) * OLED_FONT_WIDTH + column]);
+}
+
+static void draw_text(uint8_t center_x, uint8_t y, const char *text, bool inverted)
 {
     uint8_t x = center_x - strlen(text) * OLED_FONT_WIDTH / 2;
 
@@ -79,12 +85,25 @@ static void draw_text(uint8_t center_x, uint8_t y, const char *text)
     {
         for (uint8_t ix = 0; ix < OLED_FONT_WIDTH; ix++)
         {
-            uint8_t glyph = pgm_read_byte(&font[(text[i] - OLED_FONT_START) * OLED_FONT_WIDTH + ix]);
+            uint8_t glyph = font_column(text[i], ix);
 
             for (uint8_t iy = 0; iy < OLED_FONT_HEIGHT; iy++)
             {
-                oled_write_pixel(x + i * OLED_FONT_WIDTH + ix, y + iy, glyph >> iy & 1);
+                oled_write_pixel(x + i * OLED_FONT_WIDTH + ix, y + iy, (glyph >> iy & 1) != inverted);
             }
+        }
+    }
+}
+
+// Corner pixels are left out to round the box off
+static void draw_box(uint8_t left, uint8_t top, uint8_t width, uint8_t height, bool filled)
+{
+    for (uint8_t iy = 0; iy < height; iy++)
+    {
+        for (uint8_t ix = 0; ix < width; ix++)
+        {
+            if ((ix == 0 || ix == width - 1) && (iy == 0 || iy == height - 1)) continue;
+            oled_write_pixel(left + ix, top + iy, filled);
         }
     }
 }
@@ -97,7 +116,7 @@ static void draw_number(uint8_t center_x, uint8_t y, uint32_t value)
     *digit = '\0';
     do *--digit = '0' + value % 10; while (value /= 10);
 
-    draw_text(center_x, y, digit);
+    draw_text(center_x, y, digit, false);
 }
 
 //==============================================================================
@@ -154,33 +173,9 @@ static bool indicator_redraw;
 static void render_indicator(uint8_t x, const char *label, bool enabled)
 {
     uint8_t width = strlen(label) * OLED_FONT_WIDTH;
-    uint8_t left = x - INDICATOR_PADDING_X;
-    uint8_t total = width + INDICATOR_PADDING_X * 2;
-    uint32_t box = enabled ? (((uint32_t)1 << INDICATOR_HEIGHT) - 1) << INDICATOR_TOP : 0;
 
-    for (uint8_t i = 0; i < total; i++)
-    {
-        uint32_t column = box;
-
-        // Rounded corners
-        if (i == 0 || i == total - 1)
-        {
-            column &= ~(((uint32_t)1 << INDICATOR_TOP) | ((uint32_t)1 << (INDICATOR_TOP + INDICATOR_HEIGHT - 1)));
-        }
-
-        if (i >= INDICATOR_PADDING_X && i < INDICATOR_PADDING_X + width)
-        {
-            uint8_t text = i - INDICATOR_PADDING_X;
-            uint8_t glyph = pgm_read_byte(&font[(label[text / OLED_FONT_WIDTH] - OLED_FONT_START) * OLED_FONT_WIDTH + text % OLED_FONT_WIDTH]);
-            uint32_t bits = (uint32_t)glyph << (INDICATOR_TOP + INDICATOR_PADDING_Y);
-            column = enabled ? column & ~bits : column | bits;
-        }
-
-        for (uint8_t page = 0; page < OLED_PAGES; page++)
-        {
-            oled_write_raw_byte(column >> (page * 8), page * OLED_DISPLAY_WIDTH + left + i);
-        }
-    }
+    draw_box(x - INDICATOR_PADDING_X, INDICATOR_TOP, width + INDICATOR_PADDING_X * 2, INDICATOR_HEIGHT, enabled);
+    draw_text(x + width / 2, INDICATOR_TOP + INDICATOR_PADDING_Y, label, enabled);
 }
 
 static void indicators_init(void)
@@ -313,7 +308,7 @@ static void bongo_cat_update(void)
 
     if (bongo_hits > BONGO_HITS_MAX)
     {
-        draw_text(BONGO_HITS_X, BONGO_HITS_Y, "999999+");
+        draw_text(BONGO_HITS_X, BONGO_HITS_Y, "999999+", false);
     }
     else
     {
@@ -430,6 +425,9 @@ static void ripple_update(void)
 //==============================================================================
 
 #define LIFE_FRAME_DURATION 100
+#define LIFE_SLICES 6
+#define LIFE_SLICE_DURATION (LIFE_FRAME_DURATION / LIFE_SLICES)
+#define LIFE_SLICE_ROWS (LIFE_HEIGHT / LIFE_SLICES)
 #define LIFE_IDLE_DURATION 5000
 #define LIFE_MARGIN_X 6
 #define LIFE_MARGIN_Y 8
@@ -440,31 +438,47 @@ static void ripple_update(void)
 
 // A whole page of vertical margin keeps the visible window byte aligned with the display
 _Static_assert(LIFE_MARGIN_Y % 8 == 0, "The life margin must be a whole number of pages tall");
+_Static_assert(LIFE_HEIGHT % LIFE_SLICES == 0, "Every slice must cover the same number of rows");
 
 static uint8_t life_cells[LIFE_BYTES];
 static uint8_t life_next[LIFE_BYTES];
 static uint16_t life_timer;
 static uint16_t life_idle_timer;
+static uint8_t life_slice;
 
 static bool life_inside(int16_t x, int16_t y)
 {
     return x >= 0 && x < LIFE_WIDTH && y >= 0 && y < LIFE_HEIGHT;
 }
 
+static uint16_t life_index(int16_t x, int16_t y)
+{
+    return y / 8 * LIFE_WIDTH + x;
+}
+
 // The grid extends past the screen, so patterns leave view before hitting a wall
 static bool life_cell(int16_t x, int16_t y)
 {
     if (!life_inside(x, y)) return false;
-    return life_cells[y / 8 * LIFE_WIDTH + x] >> (y % 8) & 1;
+    return life_cells[life_index(x, y)] >> (y % 8) & 1;
 }
 
 static void life_set_cell(uint8_t *cells, int16_t x, int16_t y, bool alive)
 {
     if (!life_inside(x, y)) return;
+
+    uint16_t index = life_index(x, y);
     uint8_t mask = 1 << (y % 8);
 
-    if (alive) cells[y / 8 * LIFE_WIDTH + x] |= mask;
-    else cells[y / 8 * LIFE_WIDTH + x] &= ~mask;
+    if (alive) cells[index] |= mask;
+    else cells[index] &= ~mask;
+}
+
+// Written to both buffers so a cell still lands whole partway through a generation
+static void life_add_cell(int16_t x, int16_t y)
+{
+    life_set_cell(life_cells, x, y, true);
+    life_set_cell(life_next, x, y, true);
 }
 
 // A pair of 3x3 rings, which collapse into a spreading burst of life
@@ -481,7 +495,7 @@ static void life_key_event(keypos_t key, bool pressed)
         {
             for (int8_t dx = -1; dx <= 1; dx++)
             {
-                if (dx || dy) life_set_cell(life_cells, x + LIFE_MARGIN_X + side * 2 + dx, y + LIFE_MARGIN_Y + dy, true);
+                if (dx || dy) life_add_cell(x + LIFE_MARGIN_X + side * 2 + dx, y + LIFE_MARGIN_Y + dy);
             }
         }
     }
@@ -502,7 +516,7 @@ static void life_spawn_glider(void)
         for (uint8_t column = 0; column < 3; column++)
         {
             if (!(life_glider[row] >> (2 - column) & 1)) continue;
-            life_set_cell(life_cells, x + (rightward ? column : 2 - column), y + (downward ? row : 2 - row), true);
+            life_add_cell(x + (rightward ? column : 2 - column), y + (downward ? row : 2 - row));
         }
     }
 }
@@ -530,17 +544,13 @@ static void life_init(void)
 
 static void life_update(void)
 {
-    if (timer_elapsed(life_timer) < LIFE_FRAME_DURATION) return;
+    if (timer_elapsed(life_timer) < LIFE_SLICE_DURATION) return;
     life_timer = timer_read();
 
-    // Idle hands get a glider drifting in from off screen
-    if (timer_elapsed(life_idle_timer) > LIFE_IDLE_DURATION)
-    {
-        life_idle_timer = timer_read();
-        life_spawn_glider();
-    }
+    // One generation is spread over several slices, so no single pass stalls the keyboard
+    uint8_t first = life_slice * LIFE_SLICE_ROWS;
 
-    for (uint8_t y = 0; y < LIFE_HEIGHT; y++)
+    for (uint8_t y = first; y < first + LIFE_SLICE_ROWS; y++)
     {
         for (uint8_t x = 0; x < LIFE_WIDTH; x++)
         {
@@ -558,7 +568,17 @@ static void life_update(void)
         }
     }
 
+    if (++life_slice < LIFE_SLICES) return;
+    life_slice = 0;
+
     memcpy(life_cells, life_next, sizeof(life_cells));
+
+    // Idle hands get a glider drifting in from off screen
+    if (timer_elapsed(life_idle_timer) > LIFE_IDLE_DURATION)
+    {
+        life_idle_timer = timer_read();
+        life_spawn_glider();
+    }
 
     life_draw();
 }
@@ -639,7 +659,7 @@ static void screen_select_update(void)
         draw_square(SELECT_SQUARE_LEFT + screen * SELECT_SQUARE_PITCH, SELECT_SQUARE_Y, screen == selected_user_screen);
     }
 
-    draw_text(OLED_DISPLAY_WIDTH / 2, SELECT_NAME_Y, select_names[selected_user_screen]);
+    draw_text(OLED_DISPLAY_WIDTH / 2, SELECT_NAME_Y, select_names[selected_user_screen], false);
 }
 
 //==============================================================================
@@ -669,7 +689,7 @@ static void input_lock_update(void)
     input_lock_redraw = false;
 
     draw_image(input_lock_image, INPUT_LOCK_ICON_X, INPUT_LOCK_ICON_Y);
-    draw_text(INPUT_LOCK_TEXT_X, INPUT_LOCK_TEXT_Y, INPUT_LOCK_TEXT);
+    draw_text(INPUT_LOCK_TEXT_X, INPUT_LOCK_TEXT_Y, INPUT_LOCK_TEXT, false);
 }
 
 //==============================================================================
