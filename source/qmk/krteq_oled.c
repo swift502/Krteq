@@ -487,6 +487,12 @@ static void life_update(void)
 //==============================================================================
 
 #define LOGO_DURATION 3000
+#define LOGO_X 20
+#define LOGO_Y 2
+
+static const uint8_t logo_image[] = {
+#embed "bitmaps/logo.bmp"
+};
 
 static uint16_t logo_timer;
 static bool logo_finished = false;
@@ -494,11 +500,11 @@ static bool logo_finished = false;
 static void logo_init(void)
 {
     logo_timer = timer_read();
+    draw_image(logo_image, LOGO_X, LOGO_Y);
 }
 
 static void logo_update(void)
 {
-    oled_write_P(PSTR("Logo"), false);
     logo_finished = timer_elapsed(logo_timer) > LOGO_DURATION;
 }
 
@@ -509,7 +515,7 @@ static void logo_update(void)
 #define SELECT_SQUARE_SIZE 7
 #define SELECT_SQUARE_GAP 4
 #define SELECT_SQUARE_Y 6
-#define SELECT_NAME_Y (SELECT_SQUARE_Y + SELECT_SQUARE_SIZE + SELECT_SQUARE_GAP)wd
+#define SELECT_NAME_Y (SELECT_SQUARE_Y + SELECT_SQUARE_SIZE + SELECT_SQUARE_GAP)
 #define SELECT_SQUARE_PITCH (SELECT_SQUARE_SIZE + SELECT_SQUARE_GAP)
 #define SELECT_SQUARE_LEFT ((OLED_DISPLAY_WIDTH - (USER_SCREEN_COUNT * SELECT_SQUARE_PITCH - SELECT_SQUARE_GAP)) / 2)
 
