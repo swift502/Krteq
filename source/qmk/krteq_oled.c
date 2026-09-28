@@ -9,8 +9,8 @@ enum screens
 {
     USER_SCREEN_INDICATORS,
     USER_SCREEN_BONGO_CAT,
-    USER_SCREEN_RIPPLE,
     USER_SCREEN_LIFE,
+    USER_SCREEN_RIPPLE,
     USER_SCREEN_COUNT,
 
     SYSTEM_SCREEN_LOGO,
@@ -318,11 +318,8 @@ static int16_t ripple_heights[2][RIPPLE_CELLS];
 static uint8_t ripple_front;
 static uint16_t ripple_timer;
 
-static void ripple_key_event(keypos_t key, bool pressed)
+static void ripple_drop(int16_t x, int16_t y)
 {
-    uint8_t x, y;
-    if (!pressed || !key_position(key, &x, &y)) return;
-
     for (int8_t dy = -RIPPLE_DROP_RADIUS; dy <= RIPPLE_DROP_RADIUS; dy++)
     {
         for (int8_t dx = -RIPPLE_DROP_RADIUS; dx <= RIPPLE_DROP_RADIUS; dx++)
@@ -337,6 +334,14 @@ static void ripple_key_event(keypos_t key, bool pressed)
             ripple_heights[ripple_front][drop_y * OLED_DISPLAY_WIDTH + drop_x] = RIPPLE_DROP_HEIGHT;
         }
     }
+}
+
+static void ripple_key_event(keypos_t key, bool pressed)
+{
+    uint8_t x, y;
+    if (!pressed || !key_position(key, &x, &y)) return;
+
+    ripple_drop(x, y);
 }
 
 static void ripple_draw(void)
@@ -359,10 +364,21 @@ static void ripple_draw(void)
     }
 }
 
+static bool ripple_blank(void)
+{
+    for (uint16_t cell = 0; cell < RIPPLE_CELLS; cell++)
+    {
+        if (ripple_heights[ripple_front][cell] > RIPPLE_CREST) return false;
+    }
+
+    return true;
+}
+
 // The water keeps running while other screens are shown, so entering only redraws it
 static void ripple_init(void)
 {
     ripple_timer = timer_read();
+    if (ripple_blank()) ripple_drop(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
     ripple_draw();
 }
 
@@ -401,18 +417,21 @@ static uint8_t life_cells[LIFE_BYTES];
 static uint8_t life_next[LIFE_BYTES];
 static uint16_t life_timer;
 
-// The world is a torus, so gliders leaving one edge return on the other
+static bool life_inside(int16_t x, int16_t y)
+{
+    return x >= 0 && x < OLED_DISPLAY_WIDTH && y >= 0 && y < OLED_DISPLAY_HEIGHT;
+}
+
+// Everything beyond the screen edges counts as dead, so the world has real walls
 static bool life_cell(int16_t x, int16_t y)
 {
-    x = (x + OLED_DISPLAY_WIDTH) % OLED_DISPLAY_WIDTH;
-    y = (y + OLED_DISPLAY_HEIGHT) % OLED_DISPLAY_HEIGHT;
+    if (!life_inside(x, y)) return false;
     return life_cells[y / 8 * OLED_DISPLAY_WIDTH + x] >> (y % 8) & 1;
 }
 
 static void life_set_cell(uint8_t *cells, int16_t x, int16_t y, bool alive)
 {
-    x = (x + OLED_DISPLAY_WIDTH) % OLED_DISPLAY_WIDTH;
-    y = (y + OLED_DISPLAY_HEIGHT) % OLED_DISPLAY_HEIGHT;
+    if (!life_inside(x, y)) return;
     uint8_t mask = 1 << (y % 8);
 
     if (alive) cells[y / 8 * OLED_DISPLAY_WIDTH + x] |= mask;
@@ -420,11 +439,8 @@ static void life_set_cell(uint8_t *cells, int16_t x, int16_t y, bool alive)
 }
 
 // A pair of 3x3 rings, which collapse into a spreading burst of life
-static void life_key_event(keypos_t key, bool pressed)
+static void life_bomb(int16_t x, int16_t y)
 {
-    uint8_t x, y;
-    if (!pressed || !key_position(key, &x, &y)) return;
-
     for (int8_t side = -1; side <= 1; side += 2)
     {
         for (int8_t dy = -1; dy <= 1; dy++)
@@ -437,15 +453,34 @@ static void life_key_event(keypos_t key, bool pressed)
     }
 }
 
+static void life_key_event(keypos_t key, bool pressed)
+{
+    uint8_t x, y;
+    if (!pressed || !key_position(key, &x, &y)) return;
+
+    life_bomb(x, y);
+}
+
 static void life_draw(void)
 {
     for (uint16_t i = 0; i < LIFE_BYTES; i++) oled_write_raw_byte(life_cells[i], i);
+}
+
+static bool life_extinct(void)
+{
+    for (uint16_t i = 0; i < LIFE_BYTES; i++)
+    {
+        if (life_cells[i]) return false;
+    }
+
+    return true;
 }
 
 // The colony keeps living while other screens are shown, so entering only redraws it
 static void life_init(void)
 {
     life_timer = timer_read();
+    if (life_extinct()) life_bomb(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
     life_draw();
 }
 
@@ -534,6 +569,10 @@ static void input_lock_update(void)
 // The simulations only run while drawn, so they must only be disturbed while drawn too
 void oled_key_event(uint16_t keycode, keypos_t key, bool pressed)
 {
+    // Keys that drive the screens themselves must not disturb their contents
+    if (keycode == KRT_SCR) return;
+    if (IS_QK_MOMENTARY(keycode)) return;
+
     if (pressed) bongo_count_hit();
 
     switch (last_rendered_screen)
