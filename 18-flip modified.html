@@ -56,7 +56,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		<option value = "4" selected>4x</option>
 		<option value = "8">8x</option>
 	</select> Grid Resolution &nbsp;
-	<input type = "range" min = "0.05" max = "2" step = "0.05" value = "0.3" class = "slider" oninput = "setRenderThreshold(parseFloat(this.value))"> Surface Threshold <span id = "thresholdValue">0.30</span> &nbsp;
+	<input type = "range" min = "1" max = "6" step = "1" value = "2" class = "slider" oninput = "setRenderRadius(parseInt(this.value))"> Blur Radius <span id = "radiusValue">2</span> &nbsp;
+	<input type = "range" min = "0.05" max = "2" step = "0.05" value = "0.15" class = "slider" oninput = "setRenderThreshold(parseFloat(this.value))"> Surface Threshold <span id = "thresholdValue">0.15</span> &nbsp;
 	<input type = "checkbox" checked onclick = "scene.compensateDrift = !scene.compensateDrift">Compensate Drift &nbsp;
 	<input type = "checkbox" checked onclick = "scene.separateParticles = !scene.separateParticles">Separate Particles &nbsp;
 	PIC
@@ -97,19 +98,22 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 	var SCATTER_WEIGHT = 256;
 
+	// the divisor in the pressure solve is a face count, so reciprocals come from a table
+	var INV_S = [0.0, 1.0, 0.5, 1.0 / 3.0, 0.25];
+
 	// sliding-window sum: 1 add + 1 subtract per cell, so the cost never depends on `r`.
 	// Edges replicate, otherwise the shrinking window would thin the water out at the walls.
-	function boxBlurLine(src, dst, base, count, stride, r) 
+	function boxBlurLine(src, srcBase, srcStride, dst, dstBase, dstStride, count, r) 
 	{
 		var last = count - 1;
 		if (r > last)
 			r = last;
 
-		var sum = src[base] * (r + 1);
+		var sum = src[srcBase] * (r + 1);
 		for (var i = 1; i <= r; i++)
-			sum += src[base + i * stride];
+			sum += src[srcBase + i * srcStride];
 
-		dst[base] = sum;
+		dst[dstBase] = sum;
 
 		for (var i = 1; i < count; i++) {
 			var add = i + r;
@@ -117,8 +121,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			var sub = i - r - 1;
 			if (sub < 0) sub = 0;
 
-			sum += src[base + add * stride] - src[base + sub * stride];
-			dst[base + i * stride] = sum;
+			sum += src[srcBase + add * srcStride] - src[srcBase + sub * srcStride];
+			dst[dstBase + i * dstStride] = sum;
 		}
 	}
 
@@ -143,9 +147,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			this.prevV = new Float32Array(this.fNumCells);
 			this.cellType = new Int32Array(this.fNumCells);
 
+			// per-face "has a non-air cell on either side", rebuilt once per frame
+			this.uValid = new Float32Array(this.fNumCells);
+			this.vValid = new Float32Array(this.fNumCells);
+
+			// compacted list of solvable cells, so the iteration loop is dense and branch-free
+			this.pressureCells = new Int32Array(this.fNumCells);
+			this.pressureScale = new Float32Array(this.fNumCells);
+			this.pressureDrift = new Float32Array(this.fNumCells);
+			this.pressureFaces = new Float32Array(4 * this.fNumCells);
+			this.numPressureCells = 0;
+
 			// render grid
 
-			this.renderThreshold = 0.3;
+			this.renderThreshold = 0.15;
+			this.renderRadius = 2;
 			this.setRenderScale(4);
 
 			// particles
@@ -393,6 +409,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 					if (this.cellType[cellNr] == AIR_CELL)
 						this.cellType[cellNr] = FLUID_CELL;
 				}
+
+				for (var i = 0; i < this.fNumX; i++) {
+					for (var j = 0; j < this.fNumY; j++) {
+						var c = i * n + j;
+						var notAir = this.cellType[c] != AIR_CELL;
+						this.uValid[c] = notAir || (i > 0 && this.cellType[c - n] != AIR_CELL) ? 1.0 : 0.0;
+						this.vValid[c] = notAir || (j > 0 && this.cellType[c - 1] != AIR_CELL) ? 1.0 : 0.0;
+					}
+				}
 			}
 
 			for (var component = 0; component < 2; component++) {
@@ -403,6 +428,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 				var f = component == 0 ? this.u : this.v;
 				var prevF = component == 0 ? this.prevU : this.prevV;
 				var d = component == 0 ? this.du : this.dv;
+				var valid = component == 0 ? this.uValid : this.vValid;
 
 				for (var i = 0; i < this.numParticles; i++) {
 					var x = this.particlePos[2 * i];
@@ -440,11 +466,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 						f[nr3] += pv * d3;  d[nr3] += d3;
 					}
 					else {
-						var offset = component == 0 ? n : 1;
-						var valid0 = this.cellType[nr0] != AIR_CELL || this.cellType[nr0 - offset] != AIR_CELL ? 1.0 : 0.0;
-						var valid1 = this.cellType[nr1] != AIR_CELL || this.cellType[nr1 - offset] != AIR_CELL ? 1.0 : 0.0;
-						var valid2 = this.cellType[nr2] != AIR_CELL || this.cellType[nr2 - offset] != AIR_CELL ? 1.0 : 0.0;
-						var valid3 = this.cellType[nr3] != AIR_CELL || this.cellType[nr3 - offset] != AIR_CELL ? 1.0 : 0.0;
+						var valid0 = valid[nr0];
+						var valid1 = valid[nr1];
+						var valid2 = valid[nr2];
+						var valid3 = valid[nr3];
 
 						var v = this.particleVel[2 * i + component];
 						var d = valid0 * d0 + valid1 * d1 + valid2 * d2 + valid3 * d3;
@@ -482,52 +507,90 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			}
 		}
 
+		// cell types, face weights and the drift term are all constant across the iterations,
+		// so gather them once into dense arrays
+		buildPressureCells(overRelaxation, compensateDrift) 
+		{
+			var n = this.fNumY;
+			var cells = this.pressureCells;
+			var scale = this.pressureScale;
+			var drift = this.pressureDrift;
+			var faces = this.pressureFaces;
+
+			var driftOn = compensateDrift && this.particleRestDensity > 0.0;
+			var count = 0;
+
+			for (var i = 1; i < this.fNumX - 1; i++) {
+				for (var j = 1; j < this.fNumY - 1; j++) {
+
+					var center = i * n + j;
+					if (this.cellType[center] != FLUID_CELL)
+						continue;
+
+					var sx0 = this.cellType[center - n] == SOLID_CELL ? 0.0 : 1.0;
+					var sx1 = this.cellType[center + n] == SOLID_CELL ? 0.0 : 1.0;
+					var sy0 = this.cellType[center - 1] == SOLID_CELL ? 0.0 : 1.0;
+					var sy1 = this.cellType[center + 1] == SOLID_CELL ? 0.0 : 1.0;
+					var s = sx0 + sx1 + sy0 + sy1;
+					if (s == 0.0)
+						continue;
+
+					var b = 4 * count;
+					faces[b] = sx0;
+					faces[b + 1] = sx1;
+					faces[b + 2] = sy0;
+					faces[b + 3] = sy1;
+
+					cells[count] = center;
+					scale[count] = overRelaxation * INV_S[s];
+
+					var compression = 0.0;
+					if (driftOn) {
+						compression = this.particleDensity[center] - this.particleRestDensity;
+						if (compression < 0.0)
+							compression = 0.0;
+					}
+					drift[count] = compression;
+
+					count++;
+				}
+			}
+
+			this.numPressureCells = count;
+		}
+
 		solveIncompressibility(numIters, overRelaxation, compensateDrift = true) {
 
 			this.prevU.set(this.u);
 			this.prevV.set(this.v);
 
+			this.buildPressureCells(overRelaxation, compensateDrift);
+
 			var n = this.fNumY;
+			var count = this.numPressureCells;
+			var cells = this.pressureCells;
+			var scale = this.pressureScale;
+			var drift = this.pressureDrift;
+			var faces = this.pressureFaces;
+			var u = this.u;
+			var v = this.v;
 
 			for (var iter = 0; iter < numIters; iter++) {
 
-				for (var i = 1; i < this.fNumX-1; i++) {
-					for (var j = 1; j < this.fNumY-1; j++) {
+				for (var k = 0; k < count; k++) {
 
-						if (this.cellType[i*n + j] != FLUID_CELL)
-							continue;
+					var center = cells[k];
+					var right = center + n;
+					var top = center + 1;
 
-						var center = i * n + j;
-						var left = (i - 1) * n + j;
-						var right = (i + 1) * n + j;
-						var bottom = i * n + j - 1;
-						var top = i * n + j + 1;
+					var div = u[right] - u[center] + v[top] - v[center] - drift[k];
+					var p = -div * scale[k];
 
-						var sx0 = this.cellType[left] == SOLID_CELL ? 0.0 : 1.0;
-						var sx1 = this.cellType[right] == SOLID_CELL ? 0.0 : 1.0;
-						var sy0 = this.cellType[bottom] == SOLID_CELL ? 0.0 : 1.0;
-						var sy1 = this.cellType[top] == SOLID_CELL ? 0.0 : 1.0;
-						var s = sx0 + sx1 + sy0 + sy1;
-						if (s == 0.0)
-							continue;
-
-						var div = this.u[right] - this.u[center] + 
-							this.v[top] - this.v[center];
-
-						if (this.particleRestDensity > 0.0 && compensateDrift) {
-							var compression = this.particleDensity[i*n + j] - this.particleRestDensity;
-							if (compression > 0.0)
-								div = div - compression;
-						}
-
-						var p = -div / s;
-						p *= overRelaxation;
-
-						this.u[center] -= sx0 * p;
-						this.u[right] += sx1 * p;
-						this.v[center] -= sy0 * p;
-						this.v[top] += sy1 * p;
-					}
+					var b = 4 * k;
+					u[center] -= faces[b] * p;
+					u[right] += faces[b + 1] * p;
+					v[center] -= faces[b + 2] * p;
+					v[top] += faces[b + 3] * p;
 				}
 			}
 		}
@@ -542,7 +605,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			this.rNumCells = this.rNumX * this.rNumY;
 			this.rh = this.h / scale;
 			this.renderAcc = new Int32Array(this.rNumCells);
-			this.renderTmp = new Int32Array(this.rNumCells);
+			this.renderLine = new Int32Array(Math.max(this.rNumX, this.rNumY));
 			this.renderFill = new Float32Array(this.rNumCells);
 		}
 
@@ -553,36 +616,65 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			var W = this.rNumX;
 			var H = this.rNumY;
 			var acc = this.renderAcc;
-			var tmp = this.renderTmp;
+			var line = this.renderLine;
 
 			acc.fill(0);
 
+			// the wall ring is outside the drawn region, so never sample or blur it
+			var loX = this.renderScale;
+			var hiX = W - this.renderScale - 1;
+			var loY = this.renderScale;
+			var hiY = H - this.renderScale - 1;
+
 			var rInv = 1.0 / this.rh;
+
+			var minX = hiX, maxX = loX, minY = hiY, maxY = loY;
 
 			for (var i = 0; i < this.numParticles; i++) {
 				var cx = this.particlePos[2 * i] * rInv | 0;
 				var cy = this.particlePos[2 * i + 1] * rInv | 0;
 
-				if (cx < 0) cx = 0; else if (cx >= W) cx = W - 1;
-				if (cy < 0) cy = 0; else if (cy >= H) cy = H - 1;
+				if (cx < loX) cx = loX; else if (cx > hiX) cx = hiX;
+				if (cy < loY) cy = loY; else if (cy > hiY) cy = hiY;
+
+				if (cx < minX) minX = cx;
+				if (cx > maxX) maxX = cx;
+				if (cy < minY) minY = cy;
+				if (cy > maxY) maxY = cy;
 
 				acc[cx * H + cy] += SCATTER_WEIGHT;
 			}
 
+			var g = this.renderFill;
+
+			if (maxX < minX) {
+				g.fill(0.0);
+				return;
+			}
+
 			var pr = this.particleRadius;
-			// blur wide enough to span a particle, which is what fuses neighbours together
-			var radius = Math.round(1.5 * pr * rInv);
-			if (radius < 1)
-				radius = 1;
+			var radius = this.renderRadius;
+
+			// two box passes reach 2r, so grow the dirty box by that much before blurring
+			var reach = 2 * radius;
+			minX -= reach; if (minX < loX) minX = loX;
+			maxX += reach; if (maxX > hiX) maxX = hiX;
+			minY -= reach; if (minY < loY) minY = loY;
+			maxY += reach; if (maxY > hiY) maxY = hiY;
+
+			var spanX = maxX - minX + 1;
+			var spanY = maxY - minY + 1;
 
 			// two passes per axis give a tent kernel, which merges blobs far more evenly than a box
-			for (var cx = 0; cx < W; cx++) {
-				boxBlurLine(acc, tmp, cx * H, H, 1, radius);
-				boxBlurLine(tmp, acc, cx * H, H, 1, radius);
+			for (var cx = minX; cx <= maxX; cx++) {
+				var base = cx * H + minY;
+				boxBlurLine(acc, base, 1, line, 0, 1, spanY, radius);
+				boxBlurLine(line, 0, 1, acc, base, 1, spanY, radius);
 			}
-			for (var cy = 0; cy < H; cy++) {
-				boxBlurLine(acc, tmp, cy, W, H, radius);
-				boxBlurLine(tmp, acc, cy, W, H, radius);
+			for (var cy = minY; cy <= maxY; cy++) {
+				var base = minX * H + cy;
+				boxBlurLine(acc, base, H, line, 0, 1, spanX, radius);
+				boxBlurLine(line, 0, 1, acc, base, H, spanX, radius);
 			}
 
 			// particles per cell at full packing, so the threshold means the same at every resolution
@@ -590,8 +682,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			var window = 2 * radius + 1;
 			var gain = window * window * window * window;
 			var t = Math.max(1, Math.round(this.renderThreshold * refCount * SCATTER_WEIGHT * gain));
-
-			var g = this.renderFill;
 
 			for (var i = 0; i < this.rNumCells; i++)
 				g[i] = acc[i] >= t ? 1.0 : 0.0;
@@ -620,8 +710,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		gravityY : -9.81,
 		dt : 1.0 / 30.0,
 		flipRatio : 0.9,
-		numPressureIters : 50,
-		numParticleIters : 2,
+		numPressureIters : 15,
+		numParticleIters : 1,
 		overRelaxation : 1.9,
 		compensateDrift : true,
 		separateParticles : true,
@@ -864,6 +954,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		scene.fluid.renderThreshold = threshold;
 		scene.fluid.updateRenderGrid();
 		document.getElementById('thresholdValue').textContent = threshold.toFixed(2);
+	}
+
+	function setRenderRadius(radius) 
+	{
+		scene.fluid.renderRadius = radius;
+		scene.fluid.updateRenderGrid();
+		document.getElementById('radiusValue').textContent = radius;
 	}
 
 	var gravityMagnitude = 9.81;
