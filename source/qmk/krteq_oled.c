@@ -22,9 +22,25 @@ enum screens
 static int selected_user_screen = 0;
 static int last_rendered_screen = -1;
 
+static void save_user_screen(void)
+{
+    uint8_t screen = selected_user_screen;
+    eeconfig_update_kb_datablock(&screen, 0, sizeof(screen));
+}
+
+void load_user_screen(void)
+{
+    uint8_t screen = 0;
+    eeconfig_read_kb_datablock(&screen, 0, sizeof(screen));
+
+    // A stale block from an older layout could name a screen that no longer exists
+    if (screen < USER_SCREEN_COUNT) selected_user_screen = screen;
+}
+
 void default_user_screen(void)
 {
     selected_user_screen = 0;
+    save_user_screen();
 }
 
 void shift_user_screen(int shift)
@@ -32,6 +48,7 @@ void shift_user_screen(int shift)
     selected_user_screen += shift;
     selected_user_screen %= USER_SCREEN_COUNT;
     if (selected_user_screen < 0) selected_user_screen += USER_SCREEN_COUNT;
+    save_user_screen();
 }
 
 //==============================================================================

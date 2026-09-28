@@ -2,6 +2,12 @@
 #include "process_quantum.h"
 #include "krteq_oled.h"
 
+void keyboard_post_init_kb(void)
+{
+    load_user_screen();
+    keyboard_post_init_user();
+}
+
 bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 {
     oled_key_event(keycode, record->event.key, record->event.pressed);
