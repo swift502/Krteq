@@ -120,6 +120,23 @@ static bool key_position(keypos_t key, uint8_t *x, uint8_t *y)
 }
 
 //==============================================================================
+// Random
+//==============================================================================
+
+static uint16_t random_value(void)
+{
+    static uint16_t state;
+
+    // Seeded on first use, so the screens differ from one power up to the next
+    if (!state) state = timer_read() | 1;
+
+    state ^= state << 7;
+    state ^= state >> 9;
+    state ^= state << 8;
+    return state;
+}
+
+//==============================================================================
 // Indicators screen
 //==============================================================================
 
@@ -309,6 +326,7 @@ static void bongo_cat_update(void)
 //==============================================================================
 
 #define RIPPLE_FRAME_DURATION 33
+#define RIPPLE_IDLE_DURATION 15000
 #define RIPPLE_DAMPING 6 // Waves lose one part in 2^n of their height per frame
 #define RIPPLE_DROP_RADIUS 2
 #define RIPPLE_DROP_HEIGHT 1200
@@ -319,12 +337,10 @@ static void bongo_cat_update(void)
 static int16_t ripple_heights[2][RIPPLE_CELLS];
 static uint8_t ripple_front;
 static uint16_t ripple_timer;
+static uint16_t ripple_idle_timer;
 
-static void ripple_key_event(keypos_t key, bool pressed)
+static void ripple_drop(int16_t x, int16_t y)
 {
-    uint8_t x, y;
-    if (!pressed || !key_position(key, &x, &y)) return;
-
     for (int8_t dy = -RIPPLE_DROP_RADIUS; dy <= RIPPLE_DROP_RADIUS; dy++)
     {
         for (int8_t dx = -RIPPLE_DROP_RADIUS; dx <= RIPPLE_DROP_RADIUS; dx++)
@@ -339,6 +355,15 @@ static void ripple_key_event(keypos_t key, bool pressed)
             ripple_heights[ripple_front][drop_y * OLED_DISPLAY_WIDTH + drop_x] = RIPPLE_DROP_HEIGHT;
         }
     }
+}
+
+static void ripple_key_event(keypos_t key, bool pressed)
+{
+    uint8_t x, y;
+    if (!pressed || !key_position(key, &x, &y)) return;
+
+    ripple_idle_timer = timer_read();
+    ripple_drop(x, y);
 }
 
 static void ripple_draw(void)
@@ -365,6 +390,7 @@ static void ripple_draw(void)
 static void ripple_init(void)
 {
     ripple_timer = timer_read();
+    ripple_idle_timer = timer_read();
     ripple_draw();
 }
 
@@ -372,6 +398,13 @@ static void ripple_update(void)
 {
     if (timer_elapsed(ripple_timer) < RIPPLE_FRAME_DURATION) return;
     ripple_timer = timer_read();
+
+    // Idle hands get a drop of their own somewhere on the surface
+    if (timer_elapsed(ripple_idle_timer) > RIPPLE_IDLE_DURATION)
+    {
+        ripple_idle_timer = timer_read();
+        ripple_drop(1 + random_value() % (OLED_DISPLAY_WIDTH - 2), 1 + random_value() % (OLED_DISPLAY_HEIGHT - 2));
+    }
 
     const int16_t *previous = ripple_heights[ripple_front];
     int16_t *current = ripple_heights[ripple_front ^= 1];
@@ -397,22 +430,32 @@ static void ripple_update(void)
 //==============================================================================
 
 #define LIFE_FRAME_DURATION 100
-#define LIFE_BYTES (OLED_PAGES * OLED_DISPLAY_WIDTH)
+#define LIFE_IDLE_DURATION 5000
+#define LIFE_MARGIN_X 6
+#define LIFE_MARGIN_Y 8
+#define LIFE_GLIDER_Y 2
+#define LIFE_WIDTH (OLED_DISPLAY_WIDTH + LIFE_MARGIN_X * 2)
+#define LIFE_HEIGHT (OLED_DISPLAY_HEIGHT + LIFE_MARGIN_Y * 2)
+#define LIFE_BYTES (LIFE_HEIGHT / 8 * LIFE_WIDTH)
+
+// A whole page of vertical margin keeps the visible window byte aligned with the display
+_Static_assert(LIFE_MARGIN_Y % 8 == 0, "The life margin must be a whole number of pages tall");
 
 static uint8_t life_cells[LIFE_BYTES];
 static uint8_t life_next[LIFE_BYTES];
 static uint16_t life_timer;
+static uint16_t life_idle_timer;
 
 static bool life_inside(int16_t x, int16_t y)
 {
-    return x >= 0 && x < OLED_DISPLAY_WIDTH && y >= 0 && y < OLED_DISPLAY_HEIGHT;
+    return x >= 0 && x < LIFE_WIDTH && y >= 0 && y < LIFE_HEIGHT;
 }
 
-// Everything beyond the screen edges counts as dead, so the world has real walls
+// The grid extends past the screen, so patterns leave view before hitting a wall
 static bool life_cell(int16_t x, int16_t y)
 {
     if (!life_inside(x, y)) return false;
-    return life_cells[y / 8 * OLED_DISPLAY_WIDTH + x] >> (y % 8) & 1;
+    return life_cells[y / 8 * LIFE_WIDTH + x] >> (y % 8) & 1;
 }
 
 static void life_set_cell(uint8_t *cells, int16_t x, int16_t y, bool alive)
@@ -420,8 +463,8 @@ static void life_set_cell(uint8_t *cells, int16_t x, int16_t y, bool alive)
     if (!life_inside(x, y)) return;
     uint8_t mask = 1 << (y % 8);
 
-    if (alive) cells[y / 8 * OLED_DISPLAY_WIDTH + x] |= mask;
-    else cells[y / 8 * OLED_DISPLAY_WIDTH + x] &= ~mask;
+    if (alive) cells[y / 8 * LIFE_WIDTH + x] |= mask;
+    else cells[y / 8 * LIFE_WIDTH + x] &= ~mask;
 }
 
 // A pair of 3x3 rings, which collapse into a spreading burst of life
@@ -430,27 +473,58 @@ static void life_key_event(keypos_t key, bool pressed)
     uint8_t x, y;
     if (!pressed || !key_position(key, &x, &y)) return;
 
+    life_idle_timer = timer_read();
+
     for (int8_t side = -1; side <= 1; side += 2)
     {
         for (int8_t dy = -1; dy <= 1; dy++)
         {
             for (int8_t dx = -1; dx <= 1; dx++)
             {
-                if (dx || dy) life_set_cell(life_cells, x + side * 2 + dx, y + dy, true);
+                if (dx || dy) life_set_cell(life_cells, x + LIFE_MARGIN_X + side * 2 + dx, y + LIFE_MARGIN_Y + dy, true);
             }
+        }
+    }
+}
+
+// Glider heading down and right, mirrored into the other three diagonals
+static const uint8_t life_glider[3] = { 0b010, 0b001, 0b111 };
+
+static void life_spawn_glider(void)
+{
+    bool downward = random_value() & 1;
+    bool rightward = random_value() & 1;
+    uint8_t x = 1 + random_value() % (LIFE_WIDTH - 5);
+    uint8_t y = downward ? LIFE_GLIDER_Y : LIFE_HEIGHT - 3 - LIFE_GLIDER_Y;
+
+    for (uint8_t row = 0; row < 3; row++)
+    {
+        for (uint8_t column = 0; column < 3; column++)
+        {
+            if (!(life_glider[row] >> (2 - column) & 1)) continue;
+            life_set_cell(life_cells, x + (rightward ? column : 2 - column), y + (downward ? row : 2 - row), true);
         }
     }
 }
 
 static void life_draw(void)
 {
-    for (uint16_t i = 0; i < LIFE_BYTES; i++) oled_write_raw_byte(life_cells[i], i);
+    for (uint8_t page = 0; page < OLED_PAGES; page++)
+    {
+        const uint8_t *row = life_cells + (page + LIFE_MARGIN_Y / 8) * LIFE_WIDTH + LIFE_MARGIN_X;
+
+        for (uint8_t x = 0; x < OLED_DISPLAY_WIDTH; x++)
+        {
+            oled_write_raw_byte(row[x], page * OLED_DISPLAY_WIDTH + x);
+        }
+    }
 }
 
 // The colony keeps living while other screens are shown, so entering only redraws it
 static void life_init(void)
 {
     life_timer = timer_read();
+    life_idle_timer = timer_read();
     life_draw();
 }
 
@@ -459,9 +533,16 @@ static void life_update(void)
     if (timer_elapsed(life_timer) < LIFE_FRAME_DURATION) return;
     life_timer = timer_read();
 
-    for (uint8_t y = 0; y < OLED_DISPLAY_HEIGHT; y++)
+    // Idle hands get a glider drifting in from off screen
+    if (timer_elapsed(life_idle_timer) > LIFE_IDLE_DURATION)
     {
-        for (uint8_t x = 0; x < OLED_DISPLAY_WIDTH; x++)
+        life_idle_timer = timer_read();
+        life_spawn_glider();
+    }
+
+    for (uint8_t y = 0; y < LIFE_HEIGHT; y++)
+    {
+        for (uint8_t x = 0; x < LIFE_WIDTH; x++)
         {
             uint8_t neighbours = 0;
 
