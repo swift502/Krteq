@@ -9,6 +9,8 @@ enum screens
 {
     USER_SCREEN_INDICATORS,
     USER_SCREEN_BONGO_CAT,
+    USER_SCREEN_RIPPLE,
+    USER_SCREEN_LIFE,
     USER_SCREEN_COUNT,
 
     SYSTEM_SCREEN_LOGO,
@@ -94,6 +96,25 @@ static void draw_number(uint8_t center_x, uint8_t y, uint32_t value)
     do *--digit = '0' + value % 10; while (value /= 10);
 
     draw_text(center_x, y, digit);
+}
+
+//==============================================================================
+// Key positions
+//==============================================================================
+
+// Span of the physical key coordinates declared by the RGB matrix layout
+#define KEY_SPACE_WIDTH 224
+#define KEY_SPACE_HEIGHT 64
+
+// Projects the physical location of a key onto the screen
+static bool key_position(keypos_t key, uint8_t *x, uint8_t *y)
+{
+    uint8_t led = g_led_config.matrix_co[key.row][key.col];
+    if (led == NO_LED) return false;
+
+    *x = (uint16_t)g_led_config.point[led].x * (OLED_DISPLAY_WIDTH - 1) / KEY_SPACE_WIDTH;
+    *y = (uint16_t)g_led_config.point[led].y * (OLED_DISPLAY_HEIGHT - 1) / KEY_SPACE_HEIGHT;
+    return true;
 }
 
 //==============================================================================
@@ -205,12 +226,16 @@ static uint8_t bongo_paw_state[BONGO_PAW_COUNT];
 static uint8_t bongo_paw;
 static bool bongo_redraw;
 
+// The tally counts every key, even while another screen is drawn
+static void bongo_count_hit(void)
+{
+    if (bongo_hits <= BONGO_HITS_MAX) bongo_hits++;
+}
+
 // Every strike starts raised so the paw is always seen coming down
-void bongo_key_event(uint16_t keycode, bool pressed)
+static void bongo_key_event(uint16_t keycode, bool pressed)
 {
     if (!pressed) return;
-
-    if (bongo_hits <= BONGO_HITS_MAX) bongo_hits++;
 
     if (keycode != bongo_last_keycode) bongo_paw ^= 1;
     bongo_last_keycode = keycode;
@@ -278,6 +303,181 @@ static void bongo_cat_update(void)
 }
 
 //==============================================================================
+// Ripple screen
+//==============================================================================
+
+#define RIPPLE_FRAME_DURATION 33
+#define RIPPLE_DAMPING 6 // Waves lose one part in 2^n of their height per frame
+#define RIPPLE_DROP_RADIUS 2
+#define RIPPLE_DROP_HEIGHT 1200
+#define RIPPLE_CREST 60 // Height that lights a pixel
+
+#define RIPPLE_CELLS (OLED_DISPLAY_WIDTH * OLED_DISPLAY_HEIGHT)
+
+static int16_t ripple_heights[2][RIPPLE_CELLS];
+static uint8_t ripple_front;
+static uint16_t ripple_timer;
+
+static void ripple_key_event(keypos_t key, bool pressed)
+{
+    uint8_t x, y;
+    if (!pressed || !key_position(key, &x, &y)) return;
+
+    for (int8_t dy = -RIPPLE_DROP_RADIUS; dy <= RIPPLE_DROP_RADIUS; dy++)
+    {
+        for (int8_t dx = -RIPPLE_DROP_RADIUS; dx <= RIPPLE_DROP_RADIUS; dx++)
+        {
+            int16_t drop_x = x + dx;
+            int16_t drop_y = y + dy;
+
+            if (dx * dx + dy * dy > RIPPLE_DROP_RADIUS * RIPPLE_DROP_RADIUS) continue;
+            if (drop_x < 1 || drop_x >= OLED_DISPLAY_WIDTH - 1) continue;
+            if (drop_y < 1 || drop_y >= OLED_DISPLAY_HEIGHT - 1) continue;
+
+            ripple_heights[ripple_front][drop_y * OLED_DISPLAY_WIDTH + drop_x] = RIPPLE_DROP_HEIGHT;
+        }
+    }
+}
+
+static void ripple_draw(void)
+{
+    const int16_t *heights = ripple_heights[ripple_front];
+
+    for (uint8_t page = 0; page < OLED_PAGES; page++)
+    {
+        for (uint8_t x = 0; x < OLED_DISPLAY_WIDTH; x++)
+        {
+            uint8_t column = 0;
+
+            for (uint8_t bit = 0; bit < 8; bit++)
+            {
+                if (heights[(page * 8 + bit) * OLED_DISPLAY_WIDTH + x] > RIPPLE_CREST) column |= 1 << bit;
+            }
+
+            oled_write_raw_byte(column, page * OLED_DISPLAY_WIDTH + x);
+        }
+    }
+}
+
+// The water keeps running while other screens are shown, so entering only redraws it
+static void ripple_init(void)
+{
+    ripple_timer = timer_read();
+    ripple_draw();
+}
+
+static void ripple_update(void)
+{
+    if (timer_elapsed(ripple_timer) < RIPPLE_FRAME_DURATION) return;
+    ripple_timer = timer_read();
+
+    const int16_t *previous = ripple_heights[ripple_front];
+    int16_t *current = ripple_heights[ripple_front ^= 1];
+
+    // Wave equation over a still border, so the screen edges reflect
+    for (uint8_t y = 1; y < OLED_DISPLAY_HEIGHT - 1; y++)
+    {
+        for (uint8_t x = 1; x < OLED_DISPLAY_WIDTH - 1; x++)
+        {
+            uint16_t cell = y * OLED_DISPLAY_WIDTH + x;
+            int16_t height = (previous[cell - 1] + previous[cell + 1] +
+                              previous[cell - OLED_DISPLAY_WIDTH] + previous[cell + OLED_DISPLAY_WIDTH]) / 2 - current[cell];
+
+            current[cell] = height - (height >> RIPPLE_DAMPING);
+        }
+    }
+
+    ripple_draw();
+}
+
+//==============================================================================
+// Game of life screen
+//==============================================================================
+
+#define LIFE_FRAME_DURATION 120
+#define LIFE_BYTES (OLED_PAGES * OLED_DISPLAY_WIDTH)
+
+static uint8_t life_cells[LIFE_BYTES];
+static uint8_t life_next[LIFE_BYTES];
+static uint16_t life_timer;
+
+// The world is a torus, so gliders leaving one edge return on the other
+static bool life_cell(int16_t x, int16_t y)
+{
+    x = (x + OLED_DISPLAY_WIDTH) % OLED_DISPLAY_WIDTH;
+    y = (y + OLED_DISPLAY_HEIGHT) % OLED_DISPLAY_HEIGHT;
+    return life_cells[y / 8 * OLED_DISPLAY_WIDTH + x] >> (y % 8) & 1;
+}
+
+static void life_set_cell(uint8_t *cells, int16_t x, int16_t y, bool alive)
+{
+    x = (x + OLED_DISPLAY_WIDTH) % OLED_DISPLAY_WIDTH;
+    y = (y + OLED_DISPLAY_HEIGHT) % OLED_DISPLAY_HEIGHT;
+    uint8_t mask = 1 << (y % 8);
+
+    if (alive) cells[y / 8 * OLED_DISPLAY_WIDTH + x] |= mask;
+    else cells[y / 8 * OLED_DISPLAY_WIDTH + x] &= ~mask;
+}
+
+// A pair of 3x3 rings, which collapse into a spreading burst of life
+static void life_key_event(keypos_t key, bool pressed)
+{
+    uint8_t x, y;
+    if (!pressed || !key_position(key, &x, &y)) return;
+
+    for (int8_t side = -1; side <= 1; side += 2)
+    {
+        for (int8_t dy = -1; dy <= 1; dy++)
+        {
+            for (int8_t dx = -1; dx <= 1; dx++)
+            {
+                if (dx || dy) life_set_cell(life_cells, x + side * 2 + dx, y + dy, true);
+            }
+        }
+    }
+}
+
+static void life_draw(void)
+{
+    for (uint16_t i = 0; i < LIFE_BYTES; i++) oled_write_raw_byte(life_cells[i], i);
+}
+
+// The colony keeps living while other screens are shown, so entering only redraws it
+static void life_init(void)
+{
+    life_timer = timer_read();
+    life_draw();
+}
+
+static void life_update(void)
+{
+    if (timer_elapsed(life_timer) < LIFE_FRAME_DURATION) return;
+    life_timer = timer_read();
+
+    for (uint8_t y = 0; y < OLED_DISPLAY_HEIGHT; y++)
+    {
+        for (uint8_t x = 0; x < OLED_DISPLAY_WIDTH; x++)
+        {
+            uint8_t neighbours = 0;
+
+            for (int8_t dy = -1; dy <= 1; dy++)
+            {
+                for (int8_t dx = -1; dx <= 1; dx++)
+                {
+                    if (dx || dy) neighbours += life_cell(x + dx, y + dy);
+                }
+            }
+
+            life_set_cell(life_next, x, y, neighbours == 3 || (neighbours == 2 && life_cell(x, y)));
+        }
+    }
+
+    memcpy(life_cells, life_next, sizeof(life_cells));
+
+    life_draw();
+}
+
+//==============================================================================
 // Logo screen
 //==============================================================================
 
@@ -331,6 +531,19 @@ static void input_lock_update(void)
 // Screen dispatch
 //==============================================================================
 
+// The simulations only run while drawn, so they must only be disturbed while drawn too
+void oled_key_event(uint16_t keycode, keypos_t key, bool pressed)
+{
+    if (pressed) bongo_count_hit();
+
+    switch (last_rendered_screen)
+    {
+        case USER_SCREEN_BONGO_CAT: bongo_key_event(keycode, pressed); break;
+        case USER_SCREEN_RIPPLE:    ripple_key_event(key, pressed);    break;
+        case USER_SCREEN_LIFE:      life_key_event(key, pressed);      break;
+    }
+}
+
 static void render_screen(int screen)
 {
     if (screen != last_rendered_screen)
@@ -342,6 +555,8 @@ static void render_screen(int screen)
         {
             case USER_SCREEN_INDICATORS:   indicators_init(); break;
             case USER_SCREEN_BONGO_CAT:    bongo_cat_init();  break;
+            case USER_SCREEN_RIPPLE:       ripple_init();     break;
+            case USER_SCREEN_LIFE:         life_init();       break;
             case SYSTEM_SCREEN_LOGO:       logo_init();       break;
             case SYSTEM_SCREEN_INPUT_LOCK: input_lock_init(); break;
         }
@@ -351,6 +566,8 @@ static void render_screen(int screen)
     {
         case USER_SCREEN_INDICATORS:   indicators_update(); break;
         case USER_SCREEN_BONGO_CAT:    bongo_cat_update();  break;
+        case USER_SCREEN_RIPPLE:       ripple_update();     break;
+        case USER_SCREEN_LIFE:         life_update();       break;
         case SYSTEM_SCREEN_LOGO:       logo_update();       break;
         case SYSTEM_SCREEN_INPUT_LOCK: input_lock_update(); break;
     }
