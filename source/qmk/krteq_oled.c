@@ -127,9 +127,9 @@ static bool key_position(keypos_t key, uint8_t *x, uint8_t *y)
 #define INDICATOR_PADDING_Y 3
 #define INDICATOR_HEIGHT (OLED_FONT_HEIGHT + INDICATOR_PADDING_Y * 2)
 #define INDICATOR_TOP ((OLED_DISPLAY_HEIGHT - INDICATOR_HEIGHT) / 2)
-#define INDICATOR_NUM_X 12
+#define INDICATOR_NUM_X 13
 #define INDICATOR_CAP_X 55
-#define INDICATOR_ACC_X 98
+#define INDICATOR_ACC_X 97
 
 static uint8_t indicator_leds;
 static bool indicator_redraw;
@@ -396,7 +396,7 @@ static void ripple_update(void)
 // Game of life screen
 //==============================================================================
 
-#define LIFE_FRAME_DURATION 120
+#define LIFE_FRAME_DURATION 100
 #define LIFE_BYTES (OLED_PAGES * OLED_DISPLAY_WIDTH)
 
 static uint8_t life_cells[LIFE_BYTES];
