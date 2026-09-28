@@ -8,6 +8,17 @@ void keyboard_post_init_kb(void)
     keyboard_post_init_user();
 }
 
+bool shutdown_kb(bool jump_to_bootloader)
+{
+    if (!shutdown_user(jump_to_bootloader))
+    {
+        return false;
+    }
+
+    render_shutdown_screen(jump_to_bootloader);
+    return true;
+}
+
 bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 {
     oled_key_event(keycode, record->event.key, record->event.pressed);

@@ -125,6 +125,22 @@ static void draw_box(uint8_t left, uint8_t top, uint8_t width, uint8_t height, b
     }
 }
 
+// Icon and label are centered together, so the pair shifts with the length of the label
+#define ICON_WIDTH 16
+#define ICON_HEIGHT 16
+#define ICON_TEXT_GAP 7
+#define ICON_Y 7
+#define ICON_TEXT_Y ((OLED_DISPLAY_HEIGHT - OLED_FONT_HEIGHT) / 2)
+
+static void draw_icon_text(const uint8_t *image, const char *text)
+{
+    uint8_t text_width = strlen(text) * OLED_FONT_WIDTH;
+    uint8_t left = (OLED_DISPLAY_WIDTH - (ICON_WIDTH + ICON_TEXT_GAP + text_width)) / 2;
+
+    draw_image(image, left, ICON_Y);
+    draw_text(left + ICON_WIDTH + ICON_TEXT_GAP + text_width / 2, ICON_TEXT_Y, text, false);
+}
+
 static void draw_number(uint8_t center_x, uint8_t y, uint32_t value)
 {
     char text[11];
@@ -401,8 +417,18 @@ static void ripple_draw(void)
 // The water keeps running while other screens are shown, so entering only redraws it
 static void ripple_init(void)
 {
+    static bool seeded;
+
     ripple_timer = timer_read();
     ripple_idle_timer = timer_read();
+
+    // The first visit finds still water, so it gets a drop to look at
+    if (!seeded)
+    {
+        seeded = true;
+        ripple_drop(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
+    }
+
     ripple_draw();
 }
 
@@ -499,23 +525,27 @@ static void life_add_cell(int16_t x, int16_t y)
 }
 
 // A pair of 3x3 rings, which collapse into a spreading burst of life
-static void life_key_event(keypos_t key, bool pressed)
+static void life_bomb(int16_t x, int16_t y)
 {
-    uint8_t x, y;
-    if (!pressed || !key_position(key, &x, &y)) return;
-
-    life_idle_timer = timer_read();
-
     for (int8_t side = -1; side <= 1; side += 2)
     {
         for (int8_t dy = -1; dy <= 1; dy++)
         {
             for (int8_t dx = -1; dx <= 1; dx++)
             {
-                if (dx || dy) life_add_cell(x + LIFE_MARGIN_X + side * 2 + dx, y + LIFE_MARGIN_Y + dy);
+                if (dx || dy) life_add_cell(x + side * 2 + dx, y + dy);
             }
         }
     }
+}
+
+static void life_key_event(keypos_t key, bool pressed)
+{
+    uint8_t x, y;
+    if (!pressed || !key_position(key, &x, &y)) return;
+
+    life_idle_timer = timer_read();
+    life_bomb(x + LIFE_MARGIN_X, y + LIFE_MARGIN_Y);
 }
 
 // Glider heading down and right, mirrored into the other three diagonals
@@ -554,8 +584,18 @@ static void life_draw(void)
 // The colony keeps living while other screens are shown, so entering only redraws it
 static void life_init(void)
 {
+    static bool seeded;
+
     life_timer = timer_read();
     life_idle_timer = timer_read();
+
+    // The first visit finds an empty grid, so it gets a burst to grow from
+    if (!seeded)
+    {
+        seeded = true;
+        life_bomb(LIFE_WIDTH / 2, LIFE_HEIGHT / 2);
+    }
+
     life_draw();
 }
 
@@ -684,10 +724,6 @@ static void screen_select_update(void)
 //==============================================================================
 
 #define INPUT_LOCK_TEXT "Input lock"
-#define INPUT_LOCK_ICON_X 23
-#define INPUT_LOCK_ICON_Y 5
-#define INPUT_LOCK_TEXT_X 74
-#define INPUT_LOCK_TEXT_Y 12
 
 static const uint8_t input_lock_image[] = {
 #embed "bitmaps/lock.bmp"
@@ -705,8 +741,26 @@ static void input_lock_update(void)
     if (!input_lock_redraw) return;
     input_lock_redraw = false;
 
-    draw_image(input_lock_image, INPUT_LOCK_ICON_X, INPUT_LOCK_ICON_Y);
-    draw_text(INPUT_LOCK_TEXT_X, INPUT_LOCK_TEXT_Y, INPUT_LOCK_TEXT, false);
+    draw_icon_text(input_lock_image, INPUT_LOCK_TEXT);
+}
+
+//==============================================================================
+// Shutdown screen
+//==============================================================================
+
+#define SHUTDOWN_BOOTLOADER_TEXT "Bootloader"
+#define SHUTDOWN_REBOOT_TEXT "Rebooting"
+
+static const uint8_t shutdown_image[] = {
+#embed "bitmaps/wrench.bmp"
+};
+
+// The keyboard stops running right after this, so the screen is flushed here and now
+void render_shutdown_screen(bool jump_to_bootloader)
+{
+    oled_clear();
+    draw_icon_text(shutdown_image, jump_to_bootloader ? SHUTDOWN_BOOTLOADER_TEXT : SHUTDOWN_REBOOT_TEXT);
+    oled_render_dirty(true);
 }
 
 //==============================================================================
