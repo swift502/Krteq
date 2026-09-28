@@ -106,8 +106,8 @@
     "rgb_matrix": {
         "default": {
             "hue": 24,
-            "sat": 207,
-            "val": 63
+            "sat": 175,
+            "val": 79
         },
         "driver": "is31fl3733",
         "layout": [

@@ -1,4 +1,5 @@
 #include "krteq_oled.h"
+#include "version.h"
 #include OLED_FONT_H
 
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
@@ -12,6 +13,7 @@ enum screens
     USER_SCREEN_BONGO_CAT,
     USER_SCREEN_LIFE,
     USER_SCREEN_RIPPLE,
+    USER_SCREEN_SYSTEM_INFO,
     USER_SCREEN_COUNT,
 
     SYSTEM_SCREEN_LOGO,
@@ -94,10 +96,8 @@ static uint8_t font_column(char character, uint8_t column)
     return pgm_read_byte(&font[(character - OLED_FONT_START) * OLED_FONT_WIDTH + column]);
 }
 
-static void draw_text(uint8_t center_x, uint8_t y, const char *text, bool inverted)
+static void draw_text_at(uint8_t x, uint8_t y, const char *text, bool inverted)
 {
-    uint8_t x = center_x - strlen(text) * OLED_FONT_WIDTH / 2;
-
     for (uint8_t i = 0; text[i]; i++)
     {
         for (uint8_t ix = 0; ix < OLED_FONT_WIDTH; ix++)
@@ -110,6 +110,11 @@ static void draw_text(uint8_t center_x, uint8_t y, const char *text, bool invert
             }
         }
     }
+}
+
+static void draw_text(uint8_t center_x, uint8_t y, const char *text, bool inverted)
+{
+    draw_text_at(center_x - strlen(text) * OLED_FONT_WIDTH / 2, y, text, inverted);
 }
 
 // Corner pixels are left out to round the box off
@@ -150,6 +155,19 @@ static void draw_number(uint8_t center_x, uint8_t y, uint32_t value)
     do *--digit = '0' + value % 10; while (value /= 10);
 
     draw_text(center_x, y, digit, false);
+}
+
+// Writes the decimal value without a terminator, padded with zeros up to the given width
+static char *print_number(char *out, uint32_t value, uint8_t width)
+{
+    char digits[10];
+    uint8_t count = 0;
+
+    do digits[count++] = '0' + value % 10; while (value /= 10);
+    while (count < width) digits[count++] = '0';
+
+    while (count) *out++ = digits[--count];
+    return out;
 }
 
 //==============================================================================
@@ -641,6 +659,88 @@ static void life_update(void)
 }
 
 //==============================================================================
+// System info screen
+//==============================================================================
+
+#define INFO_INTERVAL 1000
+#define INFO_ROW_HEIGHT 8
+#define INFO_BUILD_DATE_LENGTH 10 // QMK_BUILDDATE also carries a time, which is just noise here
+
+_Static_assert(OLED_DISPLAY_HEIGHT / INFO_ROW_HEIGHT >= 4, "The system info screen needs four rows of text");
+
+static uint16_t info_timer;
+static bool info_redraw;
+
+// DEVICE_VER packs the keyboard.json version as BCD, two digits of major and one each of the rest
+static void print_device_version(char *out)
+{
+    *out++ = 'v';
+    out = print_number(out, (DEVICE_VER >> 12 & 0xF) * 10 + (DEVICE_VER >> 8 & 0xF), 1);
+    *out++ = '.';
+    out = print_number(out, DEVICE_VER >> 4 & 0xF, 1);
+    *out++ = '.';
+    out = print_number(out, DEVICE_VER & 0xF, 1);
+    *out = '\0';
+}
+
+static void print_uptime(char *out)
+{
+    uint32_t seconds = timer_read32() / 1000;
+
+    if (seconds >= 24 * 60 * 60)
+    {
+        out = print_number(out, seconds / (24 * 60 * 60), 1);
+        *out++ = 'd';
+        *out++ = ' ';
+    }
+
+    out = print_number(out, seconds / (60 * 60) % 24, 2);
+    *out++ = ':';
+    out = print_number(out, seconds / 60 % 60, 2);
+    *out++ = ':';
+    out = print_number(out, seconds % 60, 2);
+    *out = '\0';
+}
+
+static void render_info_row(uint8_t row, const char *label, const char *value)
+{
+    uint8_t y = row * INFO_ROW_HEIGHT;
+    uint8_t width = strlen(value) * OLED_FONT_WIDTH;
+
+    draw_text_at(0, y, label, false);
+    draw_text_at(width < OLED_DISPLAY_WIDTH ? OLED_DISPLAY_WIDTH - width : 0, y, value, false);
+}
+
+static void system_info_init(void)
+{
+    info_redraw = true;
+}
+
+static void system_info_update(void)
+{
+    if (!info_redraw && timer_elapsed(info_timer) < INFO_INTERVAL) return;
+
+    info_redraw = false;
+    info_timer = timer_read();
+
+    char device_version[12];
+    print_device_version(device_version);
+
+    char uptime[16];
+    print_uptime(uptime);
+
+    char build_date[INFO_BUILD_DATE_LENGTH + 1];
+    memcpy(build_date, QMK_BUILDDATE, INFO_BUILD_DATE_LENGTH);
+    build_date[INFO_BUILD_DATE_LENGTH] = '\0';
+
+    oled_clear();
+    render_info_row(0, PRODUCT, device_version);
+    render_info_row(1, "Uptime", uptime);
+    render_info_row(2, "QMK", QMK_VERSION);
+    render_info_row(3, "Built", build_date);
+}
+
+//==============================================================================
 // Logo screen
 //==============================================================================
 
@@ -677,7 +777,7 @@ static void logo_update(void)
 #define SELECT_SQUARE_PITCH (SELECT_SQUARE_SIZE + SELECT_SQUARE_GAP)
 #define SELECT_SQUARE_LEFT ((OLED_DISPLAY_WIDTH - (USER_SCREEN_COUNT * SELECT_SQUARE_PITCH - SELECT_SQUARE_GAP)) / 2)
 
-static const char *const select_names[] = { "Indicators", "Bongo cat", "Game of life", "Waves" };
+static const char *const select_names[] = { "Indicators", "Bongo cat", "Game of life", "Waves", "System info" };
 
 _Static_assert(ARRAY_SIZE(select_names) == USER_SCREEN_COUNT, "Every user screen needs a name");
 _Static_assert(USER_SCREEN_COUNT * SELECT_SQUARE_PITCH - SELECT_SQUARE_GAP <= OLED_DISPLAY_WIDTH, "Too many user screens to fit a row of squares");
@@ -797,6 +897,7 @@ static void render_screen(int screen)
             case USER_SCREEN_BONGO_CAT:    bongo_cat_init();     break;
             case USER_SCREEN_LIFE:         life_init();          break;
             case USER_SCREEN_RIPPLE:       ripple_init();        break;
+            case USER_SCREEN_SYSTEM_INFO:  system_info_init();   break;
             case SYSTEM_SCREEN_LOGO:       logo_init();          break;
             case SYSTEM_SCREEN_SELECT:     screen_select_init(); break;
             case SYSTEM_SCREEN_INPUT_LOCK: input_lock_init();    break;
@@ -809,6 +910,7 @@ static void render_screen(int screen)
         case USER_SCREEN_BONGO_CAT:    bongo_cat_update();     break;
         case USER_SCREEN_LIFE:         life_update();          break;
         case USER_SCREEN_RIPPLE:       ripple_update();        break;
+        case USER_SCREEN_SYSTEM_INFO:  system_info_update();   break;
         case SYSTEM_SCREEN_LOGO:       logo_update();          break;
         case SYSTEM_SCREEN_SELECT:     screen_select_update(); break;
         case SYSTEM_SCREEN_INPUT_LOCK: input_lock_update();    break;
