@@ -3,6 +3,7 @@
 
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
 #define INDICATORS_LAYER 1
+#define SCREEN_SELECT_LAYER 2
 #define INPUT_LOCK_LAYER 4
 
 enum screens
@@ -14,6 +15,7 @@ enum screens
     USER_SCREEN_COUNT,
 
     SYSTEM_SCREEN_LOGO,
+    SYSTEM_SCREEN_SELECT,
     SYSTEM_SCREEN_INPUT_LOCK
 };
 
@@ -318,8 +320,11 @@ static int16_t ripple_heights[2][RIPPLE_CELLS];
 static uint8_t ripple_front;
 static uint16_t ripple_timer;
 
-static void ripple_drop(int16_t x, int16_t y)
+static void ripple_key_event(keypos_t key, bool pressed)
 {
+    uint8_t x, y;
+    if (!pressed || !key_position(key, &x, &y)) return;
+
     for (int8_t dy = -RIPPLE_DROP_RADIUS; dy <= RIPPLE_DROP_RADIUS; dy++)
     {
         for (int8_t dx = -RIPPLE_DROP_RADIUS; dx <= RIPPLE_DROP_RADIUS; dx++)
@@ -334,14 +339,6 @@ static void ripple_drop(int16_t x, int16_t y)
             ripple_heights[ripple_front][drop_y * OLED_DISPLAY_WIDTH + drop_x] = RIPPLE_DROP_HEIGHT;
         }
     }
-}
-
-static void ripple_key_event(keypos_t key, bool pressed)
-{
-    uint8_t x, y;
-    if (!pressed || !key_position(key, &x, &y)) return;
-
-    ripple_drop(x, y);
 }
 
 static void ripple_draw(void)
@@ -364,21 +361,10 @@ static void ripple_draw(void)
     }
 }
 
-static bool ripple_blank(void)
-{
-    for (uint16_t cell = 0; cell < RIPPLE_CELLS; cell++)
-    {
-        if (ripple_heights[ripple_front][cell] > RIPPLE_CREST) return false;
-    }
-
-    return true;
-}
-
 // The water keeps running while other screens are shown, so entering only redraws it
 static void ripple_init(void)
 {
     ripple_timer = timer_read();
-    if (ripple_blank()) ripple_drop(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
     ripple_draw();
 }
 
@@ -439,8 +425,11 @@ static void life_set_cell(uint8_t *cells, int16_t x, int16_t y, bool alive)
 }
 
 // A pair of 3x3 rings, which collapse into a spreading burst of life
-static void life_bomb(int16_t x, int16_t y)
+static void life_key_event(keypos_t key, bool pressed)
 {
+    uint8_t x, y;
+    if (!pressed || !key_position(key, &x, &y)) return;
+
     for (int8_t side = -1; side <= 1; side += 2)
     {
         for (int8_t dy = -1; dy <= 1; dy++)
@@ -453,34 +442,15 @@ static void life_bomb(int16_t x, int16_t y)
     }
 }
 
-static void life_key_event(keypos_t key, bool pressed)
-{
-    uint8_t x, y;
-    if (!pressed || !key_position(key, &x, &y)) return;
-
-    life_bomb(x, y);
-}
-
 static void life_draw(void)
 {
     for (uint16_t i = 0; i < LIFE_BYTES; i++) oled_write_raw_byte(life_cells[i], i);
-}
-
-static bool life_extinct(void)
-{
-    for (uint16_t i = 0; i < LIFE_BYTES; i++)
-    {
-        if (life_cells[i]) return false;
-    }
-
-    return true;
 }
 
 // The colony keeps living while other screens are shown, so entering only redraws it
 static void life_init(void)
 {
     life_timer = timer_read();
-    if (life_extinct()) life_bomb(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
     life_draw();
 }
 
@@ -533,6 +503,59 @@ static void logo_update(void)
 }
 
 //==============================================================================
+// Screen select screen
+//==============================================================================
+
+#define SELECT_SQUARE_SIZE 7
+#define SELECT_SQUARE_GAP 4
+#define SELECT_SQUARE_Y 6
+#define SELECT_NAME_Y (SELECT_SQUARE_Y + SELECT_SQUARE_SIZE + SELECT_SQUARE_GAP)wd
+#define SELECT_SQUARE_PITCH (SELECT_SQUARE_SIZE + SELECT_SQUARE_GAP)
+#define SELECT_SQUARE_LEFT ((OLED_DISPLAY_WIDTH - (USER_SCREEN_COUNT * SELECT_SQUARE_PITCH - SELECT_SQUARE_GAP)) / 2)
+
+static const char *const select_names[] = { "Indicators", "Bongo cat", "Game of life", "Waves" };
+
+_Static_assert(ARRAY_SIZE(select_names) == USER_SCREEN_COUNT, "Every user screen needs a name");
+_Static_assert(USER_SCREEN_COUNT * SELECT_SQUARE_PITCH - SELECT_SQUARE_GAP <= OLED_DISPLAY_WIDTH, "Too many user screens to fit a row of squares");
+
+static int select_shown_screen;
+static bool select_redraw;
+
+static void draw_square(uint8_t x, uint8_t y, bool filled)
+{
+    for (uint8_t iy = 0; iy < SELECT_SQUARE_SIZE; iy++)
+    {
+        for (uint8_t ix = 0; ix < SELECT_SQUARE_SIZE; ix++)
+        {
+            bool edge = ix == 0 || iy == 0 || ix == SELECT_SQUARE_SIZE - 1 || iy == SELECT_SQUARE_SIZE - 1;
+            oled_write_pixel(x + ix, y + iy, filled || edge);
+        }
+    }
+}
+
+static void screen_select_init(void)
+{
+    select_redraw = true;
+}
+
+static void screen_select_update(void)
+{
+    if (!select_redraw && select_shown_screen == selected_user_screen) return;
+
+    select_redraw = false;
+    select_shown_screen = selected_user_screen;
+
+    oled_clear();
+
+    for (uint8_t screen = 0; screen < USER_SCREEN_COUNT; screen++)
+    {
+        draw_square(SELECT_SQUARE_LEFT + screen * SELECT_SQUARE_PITCH, SELECT_SQUARE_Y, screen == selected_user_screen);
+    }
+
+    draw_text(OLED_DISPLAY_WIDTH / 2, SELECT_NAME_Y, select_names[selected_user_screen]);
+}
+
+//==============================================================================
 // Input lock screen
 //==============================================================================
 
@@ -569,17 +592,17 @@ static void input_lock_update(void)
 // The simulations only run while drawn, so they must only be disturbed while drawn too
 void oled_key_event(uint16_t keycode, keypos_t key, bool pressed)
 {
+    if (pressed) bongo_count_hit();
+
     // Keys that drive the screens themselves must not disturb their contents
     if (keycode == KRT_SCR) return;
     if (IS_QK_MOMENTARY(keycode)) return;
 
-    if (pressed) bongo_count_hit();
-
     switch (last_rendered_screen)
     {
         case USER_SCREEN_BONGO_CAT: bongo_key_event(keycode, pressed); break;
-        case USER_SCREEN_RIPPLE:    ripple_key_event(key, pressed);    break;
         case USER_SCREEN_LIFE:      life_key_event(key, pressed);      break;
+        case USER_SCREEN_RIPPLE:    ripple_key_event(key, pressed);    break;
     }
 }
 
@@ -592,23 +615,25 @@ static void render_screen(int screen)
 
         switch (screen)
         {
-            case USER_SCREEN_INDICATORS:   indicators_init(); break;
-            case USER_SCREEN_BONGO_CAT:    bongo_cat_init();  break;
-            case USER_SCREEN_RIPPLE:       ripple_init();     break;
-            case USER_SCREEN_LIFE:         life_init();       break;
-            case SYSTEM_SCREEN_LOGO:       logo_init();       break;
-            case SYSTEM_SCREEN_INPUT_LOCK: input_lock_init(); break;
+            case USER_SCREEN_INDICATORS:   indicators_init();    break;
+            case USER_SCREEN_BONGO_CAT:    bongo_cat_init();     break;
+            case USER_SCREEN_LIFE:         life_init();          break;
+            case USER_SCREEN_RIPPLE:       ripple_init();        break;
+            case SYSTEM_SCREEN_LOGO:       logo_init();          break;
+            case SYSTEM_SCREEN_SELECT:     screen_select_init(); break;
+            case SYSTEM_SCREEN_INPUT_LOCK: input_lock_init();    break;
         }
     }
 
     switch (screen)
     {
-        case USER_SCREEN_INDICATORS:   indicators_update(); break;
-        case USER_SCREEN_BONGO_CAT:    bongo_cat_update();  break;
-        case USER_SCREEN_RIPPLE:       ripple_update();     break;
-        case USER_SCREEN_LIFE:         life_update();       break;
-        case SYSTEM_SCREEN_LOGO:       logo_update();       break;
-        case SYSTEM_SCREEN_INPUT_LOCK: input_lock_update(); break;
+        case USER_SCREEN_INDICATORS:   indicators_update();    break;
+        case USER_SCREEN_BONGO_CAT:    bongo_cat_update();     break;
+        case USER_SCREEN_LIFE:         life_update();          break;
+        case USER_SCREEN_RIPPLE:       ripple_update();        break;
+        case SYSTEM_SCREEN_LOGO:       logo_update();          break;
+        case SYSTEM_SCREEN_SELECT:     screen_select_update(); break;
+        case SYSTEM_SCREEN_INPUT_LOCK: input_lock_update();    break;
     }
 }
 
@@ -638,6 +663,10 @@ bool oled_task_kb(void)
     {
         // Layer 1 temporarily takes over the user selected screen
         render_screen(USER_SCREEN_INDICATORS);
+    }
+    else if (layer == SCREEN_SELECT_LAYER)
+    {
+        render_screen(SYSTEM_SCREEN_SELECT);
     }
     else
     {
