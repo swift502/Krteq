@@ -22,7 +22,6 @@ enum screens
 };
 
 static int selected_user_screen = 0;
-static int persistent_user_screen = 0;
 static int last_rendered_screen = -1;
 
 void load_user_screen(void)
@@ -31,21 +30,14 @@ void load_user_screen(void)
     eeconfig_read_kb_datablock(&screen, 0, sizeof(screen));
 
     // A stale block from an older layout could name a screen that no longer exists
-    if (screen < USER_SCREEN_COUNT)
-    {
-        selected_user_screen   = screen;
-        persistent_user_screen = screen;
-    }
+    if (screen < USER_SCREEN_COUNT) selected_user_screen = screen;
 }
 
 // Screens are only picked on the select layer, so leaving it is the one moment worth a write
 void commit_user_screen(void)
 {
-    if (persistent_user_screen == selected_user_screen) return;
-
-    persistent_user_screen = selected_user_screen;
-
-    uint8_t screen = persistent_user_screen;
+    // QMK skips the write when the stored value is unchanged
+    uint8_t screen = selected_user_screen;
     eeconfig_update_kb_datablock(&screen, 0, sizeof(screen));
 }
 
