@@ -34,9 +34,8 @@ void load_user_screen(void)
 }
 
 // Screens are only picked on the select layer, so leaving it is the one moment worth a write
-void commit_user_screen(void)
+void save_user_screen(void)
 {
-    // QMK skips the write when the stored value is unchanged
     uint8_t screen = selected_user_screen;
     eeconfig_update_kb_datablock(&screen, 0, sizeof(screen));
 }

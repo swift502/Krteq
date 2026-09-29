@@ -116,7 +116,7 @@ layer_state_t layer_state_set_kb(layer_state_t state)
 {
     state = layer_state_set_user(state);
 
-    if (get_highest_layer(state) == 0) commit_user_screen();
+    if (get_highest_layer(state) == 0) save_user_screen();
 
     return state;
 }
