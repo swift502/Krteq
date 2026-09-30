@@ -6,11 +6,9 @@
 #define IS31FL3733_SDB_PIN GP2
 
 #define OLED_BRIGHTNESS 0
-#define OLED_TIMEOUT 0
-
-// One byte holding the user selected screen
-#define EECONFIG_KB_DATA_SIZE 1
-
-// Additional brightness settings
 #define OLED_PRE_CHARGE_PERIOD 0x11 // 0xF1 (default), 0x91, 0x51, 0x31, 0x11
 #define OLED_VCOM_DETECT 0x00 // 0x30, 0x20 (default), 0x00
+#define OLED_TIMEOUT 0
+
+// One byte holds the screen selection
+#define EECONFIG_KB_DATA_SIZE 1
