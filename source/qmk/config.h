@@ -10,5 +10,6 @@
 #define OLED_VCOM_DETECT 0x00 // 0x30, 0x20 (default), 0x00
 #define OLED_TIMEOUT 0
 
-// One byte holds the screen selection
+// Persistent memory
+// - Screen selection: 1 byte
 #define EECONFIG_KB_DATA_SIZE 1
