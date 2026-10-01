@@ -85,9 +85,7 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 | RGB driver | QFN-48-EP(6x6) | IS31FL3733-QFLS4-TR |
 | 0.1µF capacitor | 0402 | CL05B104KO5NNNC |
 | 0.47µF capacitor | 0603 | CL10B474KA8NNNC |
-| 22µF/10V capacitor | 0805 | CL21A226MAYNNNE |
-CP_EIA-3216-18_Kemet-A
-T520V476M016ATE045
+| 22µF/10V capacitor | CASE-A-3216-18(mm) | T520A226M010ATE080 |
 | 2kΩ resistor | 0603 | 0603WAF2001T5E |
 | 20kΩ resistor | 0603 | 0603WAF2002T5E |
 | 100kΩ resistor | 0603 | 0603WAF1003T5E |
