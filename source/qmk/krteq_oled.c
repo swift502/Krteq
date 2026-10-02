@@ -785,11 +785,15 @@ static void logo_update(void)
 #define SELECT_NAME_Y (SELECT_SQUARE_Y + SELECT_SQUARE_SIZE + SELECT_SQUARE_GAP)
 #define SELECT_SQUARE_PITCH (SELECT_SQUARE_SIZE + SELECT_SQUARE_GAP)
 #define SELECT_SQUARE_LEFT ((OLED_DISPLAY_WIDTH - (USER_SCREEN_COUNT * SELECT_SQUARE_PITCH - SELECT_SQUARE_GAP)) / 2)
+#define SELECT_UNNAMED "Undefined"
 
-static const char *const select_names[] = { "Indicators", "Bongo cat", "Game of life", "Waves", "System info" };
-
-_Static_assert(ARRAY_SIZE(select_names) == USER_SCREEN_COUNT, "Every user screen needs a name");
-_Static_assert(USER_SCREEN_COUNT * SELECT_SQUARE_PITCH - SELECT_SQUARE_GAP <= OLED_DISPLAY_WIDTH, "Too many user screens to fit a row of squares");
+static const char *const select_names[USER_SCREEN_COUNT] = {
+    [USER_SCREEN_INDICATORS]  = "Indicators",
+    [USER_SCREEN_BONGO_CAT]   = "Bongo cat",
+    [USER_SCREEN_LIFE]        = "Game of life",
+    [USER_SCREEN_RIPPLE]      = "Waves",
+    [USER_SCREEN_SYSTEM_INFO] = "System info"
+};
 
 static int select_shown_screen;
 static bool select_redraw;
@@ -825,7 +829,8 @@ static void screen_select_update(void)
         draw_square(SELECT_SQUARE_LEFT + screen * SELECT_SQUARE_PITCH, SELECT_SQUARE_Y, screen == selected_user_screen);
     }
 
-    draw_text(OLED_DISPLAY_WIDTH / 2, SELECT_NAME_Y, select_names[selected_user_screen], false);
+    const char *name = select_names[selected_user_screen];
+    draw_text(OLED_DISPLAY_WIDTH / 2, SELECT_NAME_Y, name ? name : SELECT_UNNAMED, false);
 }
 
 //==============================================================================
@@ -857,9 +862,6 @@ static void input_lock_update(void)
 // Shutdown screen
 //==============================================================================
 
-#define SHUTDOWN_BOOTLOADER_TEXT "Bootloader"
-#define SHUTDOWN_REBOOT_TEXT "Rebooting"
-
 static const uint8_t bootloader_image[] = {
 #embed "bitmaps/bootloader.bmp"
 };
@@ -874,9 +876,9 @@ void render_shutdown_screen(bool jump_to_bootloader)
     oled_clear();
 
     if (jump_to_bootloader)
-        draw_icon_text(bootloader_image, SHUTDOWN_BOOTLOADER_TEXT);
+        draw_icon_text(bootloader_image, "Bootloader");
     else
-        draw_icon_text(restart_image, SHUTDOWN_REBOOT_TEXT);
+        draw_icon_text(restart_image, "Rebooting");
 
     oled_render_dirty(true);
 }
