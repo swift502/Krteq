@@ -106,10 +106,11 @@
     "rgb_matrix": {
         "default": {
             "hue": 24,
-            "sat": 159,
+            "sat": 191,
             "val": 79
         },
         "driver": "is31fl3733",
+        "sleep": true,
         "layout": [
             {"matrix": [0, 0], "x": 0, "y": 0, "flags": 4},
             {"matrix": [0, 11], "x": 224, "y": 0, "flags": 4},

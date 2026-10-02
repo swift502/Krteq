@@ -8,3 +8,5 @@ enum keyboard_keycodes
     KRT_SCR,
     KRT_RGB
 };
+
+bool is_host_asleep(void);

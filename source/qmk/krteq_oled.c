@@ -5,7 +5,7 @@
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
 #define INDICATORS_LAYER 1
 #define INPUT_LOCK_LAYER 4
-#define SCREEN_SELECT_DURATION 3000
+#define SCREEN_SELECT_DURATION 2000
 
 enum screens
 {
@@ -734,8 +734,21 @@ static void system_info_update(void)
     memcpy(build_date, QMK_BUILDDATE, INFO_BUILD_DATE_LENGTH);
     build_date[INFO_BUILD_DATE_LENGTH] = '\0';
 
+    // char hsv[16];
+    // char *out = hsv;
+    // *out++ = 'H';
+    // out = print_number(out, rgb_matrix_get_hue(), 1);
+    // *out++ = ' ';
+    // *out++ = 'S';
+    // out = print_number(out, rgb_matrix_get_sat(), 1);
+    // *out++ = ' ';
+    // *out++ = 'V';
+    // out = print_number(out, rgb_matrix_get_val(), 1);
+    // *out = '\0';
+
     oled_clear();
     render_info_row(0, PRODUCT, device_version);
+    // render_info_row(0, "RGB", hsv);
     render_info_row(1, "Uptime", uptime);
     render_info_row(2, "QMK", QMK_VERSION);
     render_info_row(3, "Built", build_date);
@@ -765,6 +778,14 @@ static void logo_init(void)
 static void logo_update(void)
 {
     logo_finished = timer_elapsed(logo_timer) > LOGO_DURATION;
+}
+
+void restart_logo(void)
+{
+    logo_finished = false;
+
+    // Re-entering the logo screen is what restarts its timer
+    last_rendered_screen = -1;
 }
 
 //==============================================================================
@@ -935,6 +956,16 @@ bool oled_task_kb(void)
 {
     if (!oled_task_user())
     {
+        return false;
+    }
+
+    // OLED_TIMEOUT is compiled out, so the display has to be held off here
+    if (is_host_asleep())
+    {
+        if (is_oled_on()) oled_off();
+
+        // Static screens only draw on change, so force a full redraw once the display returns
+        last_rendered_screen = -1;
         return false;
     }
 
