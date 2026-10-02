@@ -390,6 +390,7 @@ static int16_t ripple_heights[2][RIPPLE_CELLS];
 static uint8_t ripple_front;
 static uint16_t ripple_timer;
 static uint16_t ripple_idle_timer;
+static bool ripple_seeded;
 
 static void ripple_drop(int16_t x, int16_t y)
 {
@@ -440,14 +441,12 @@ static void ripple_draw(void)
 
 static void ripple_init(void)
 {
-    static bool seeded;
-
     ripple_timer = timer_read();
     ripple_idle_timer = timer_read();
 
-    if (!seeded)
+    if (!ripple_seeded)
     {
-        seeded = true;
+        ripple_seeded = true;
         ripple_drop(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
     }
 
@@ -510,6 +509,7 @@ static uint8_t life_next[LIFE_BYTES];
 static uint16_t life_timer;
 static uint16_t life_idle_timer;
 static uint8_t life_slice;
+static bool life_seeded;
 
 static bool life_inside(int16_t x, int16_t y)
 {
@@ -546,7 +546,13 @@ static void life_add_cell(int16_t x, int16_t y)
     life_set_cell(life_next, x, y, true);
 }
 
-static void life_bomb(int16_t x, int16_t y)
+enum bomb_shapes
+{
+    BOMB_SHAPE_HORIZONTAL,
+    BOMB_SHAPE_VERTICAL
+};
+
+static void life_bomb(int16_t x, int16_t y, uint8_t shape)
 {
     for (int8_t side = -1; side <= 1; side += 2)
     {
@@ -554,7 +560,13 @@ static void life_bomb(int16_t x, int16_t y)
         {
             for (int8_t dx = -1; dx <= 1; dx++)
             {
-                if (dx || dy) life_add_cell(x + side * 2 + dx, y + dy);
+                if (!dx && !dy) continue;
+
+                switch (shape)
+                {
+                    case BOMB_SHAPE_HORIZONTAL: life_add_cell(x + side * 2 + dx, y + dy); break;
+                    case BOMB_SHAPE_VERTICAL:   life_add_cell(x + dx, y + side * 2 + dy); break;
+                }
             }
         }
     }
@@ -566,7 +578,7 @@ static void life_key_event(keypos_t key, bool pressed)
     if (!pressed || !key_position(key, &x, &y)) return;
 
     life_idle_timer = timer_read();
-    life_bomb(x + LIFE_MARGIN_X, y + LIFE_MARGIN_Y);
+    life_bomb(x + LIFE_MARGIN_X, y + LIFE_MARGIN_Y, BOMB_SHAPE_HORIZONTAL);
 }
 
 // Glider heading down and right, mirrored into the other three diagonals
@@ -604,15 +616,13 @@ static void life_draw(void)
 
 static void life_init(void)
 {
-    static bool seeded;
-
     life_timer = timer_read();
     life_idle_timer = timer_read();
 
-    if (!seeded)
+    if (!life_seeded)
     {
-        seeded = true;
-        life_bomb(LIFE_WIDTH / 2, LIFE_HEIGHT / 2);
+        life_seeded = true;
+        life_bomb(LIFE_WIDTH / 2, LIFE_HEIGHT / 2, BOMB_SHAPE_VERTICAL);
     }
 
     life_draw();
@@ -778,14 +788,6 @@ static void logo_init(void)
 static void logo_update(void)
 {
     logo_finished = timer_elapsed(logo_timer) > LOGO_DURATION;
-}
-
-void restart_logo(void)
-{
-    logo_finished = false;
-
-    // Re-entering the logo screen is what restarts its timer
-    last_rendered_screen = -1;
 }
 
 //==============================================================================
@@ -989,4 +991,31 @@ bool oled_task_kb(void)
     }
 
     return false;
+}
+
+void oled_restart(void)
+{
+    oled_clear();
+    oled_render_dirty(true);
+
+    // Logo
+    logo_finished = false;
+    last_rendered_screen = -1;
+
+    // Bongo Cat
+    bongo_hits = 0;
+    bongo_last_keycode = 0;
+    bongo_paw = 0;
+    memset(bongo_paw_state, BONGO_PAW_IDLE, sizeof(bongo_paw_state));
+
+    // Life
+    memset(life_cells, 0, sizeof(life_cells));
+    memset(life_next, 0, sizeof(life_next));
+    life_slice = 0;
+    life_seeded = false;
+
+    // Ripple
+    memset(ripple_heights, 0, sizeof(ripple_heights));
+    ripple_front = 0;
+    ripple_seeded = false;
 }

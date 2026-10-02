@@ -9,8 +9,10 @@ void suspend_power_down_kb(void)
     // https://github.com/ChibiOS/ChibiOS-Contrib/pull/453
     (void)usb_lld_get_frame_number(&USB_DRIVER);
 
-    oled_clear();
-    oled_render_dirty(true);
+    if (is_oled_on())
+    {
+        oled_restart();
+    }
 
     suspend_power_down_user();
 }
@@ -24,12 +26,6 @@ bool shutdown_kb(bool jump_to_bootloader)
 
     render_shutdown_screen(jump_to_bootloader);
     return true;
-}
-
-void suspend_wakeup_init_kb(void)
-{
-    restart_logo();
-    suspend_wakeup_init_user();
 }
 
 bool process_record_kb(uint16_t keycode, keyrecord_t *record)
