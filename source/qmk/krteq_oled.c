@@ -35,7 +35,6 @@ static void load_user_screen(void)
     if (screen < USER_SCREEN_COUNT) selected_user_screen = screen;
 }
 
-// Written once the selection settles, so cycling through screens costs a single write
 static void save_user_screen(void)
 {
     uint8_t screen = selected_user_screen;
@@ -206,7 +205,6 @@ static uint16_t random_value(void)
 {
     static uint16_t state;
 
-    // Seeded on first use, so the screens differ from one power up to the next
     if (!state) state = timer_read() | 1;
 
     state ^= state << 7;
@@ -322,7 +320,6 @@ static void bongo_key_event(uint16_t keycode, bool pressed)
     bongo_redraw = true;
 }
 
-// Idle paws never read the timer, so it cannot wrap back into range
 static void advance_paw(uint8_t paw)
 {
     switch (bongo_paw_state[paw])
@@ -441,7 +438,6 @@ static void ripple_draw(void)
     }
 }
 
-// The water keeps running while other screens are shown, so entering only redraws it
 static void ripple_init(void)
 {
     static bool seeded;
@@ -449,7 +445,6 @@ static void ripple_init(void)
     ripple_timer = timer_read();
     ripple_idle_timer = timer_read();
 
-    // The first visit finds still water, so it gets a drop to look at
     if (!seeded)
     {
         seeded = true;
@@ -551,7 +546,6 @@ static void life_add_cell(int16_t x, int16_t y)
     life_set_cell(life_next, x, y, true);
 }
 
-// A pair of 3x3 rings, which collapse into a spreading burst of life
 static void life_bomb(int16_t x, int16_t y)
 {
     for (int8_t side = -1; side <= 1; side += 2)
@@ -608,7 +602,6 @@ static void life_draw(void)
     }
 }
 
-// The colony keeps living while other screens are shown, so entering only redraws it
 static void life_init(void)
 {
     static bool seeded;
@@ -616,7 +609,6 @@ static void life_init(void)
     life_timer = timer_read();
     life_idle_timer = timer_read();
 
-    // The first visit finds an empty grid, so it gets a burst to grow from
     if (!seeded)
     {
         seeded = true;
@@ -657,7 +649,7 @@ static void life_update(void)
 
     memcpy(life_cells, life_next, sizeof(life_cells));
 
-    // Idle hands get a glider drifting in from off screen
+    // Spawn gliders on inactivity
     if (timer_elapsed(life_idle_timer) > LIFE_IDLE_DURATION)
     {
         life_idle_timer = timer_read();
@@ -837,8 +829,6 @@ static void screen_select_update(void)
 // Input lock screen
 //==============================================================================
 
-#define INPUT_LOCK_TEXT "Input lock"
-
 static const uint8_t input_lock_image[] = {
 #embed "bitmaps/input_lock.bmp"
 };
@@ -855,7 +845,7 @@ static void input_lock_update(void)
     if (!input_lock_redraw) return;
     input_lock_redraw = false;
 
-    draw_icon_text(input_lock_image, INPUT_LOCK_TEXT);
+    draw_icon_text(input_lock_image, "Input lock");
 }
 
 //==============================================================================
@@ -870,7 +860,6 @@ static const uint8_t restart_image[] = {
 #embed "bitmaps/restart.bmp"
 };
 
-// The keyboard stops running right after this, so the screen is flushed here and now
 void render_shutdown_screen(bool jump_to_bootloader)
 {
     oled_clear();
@@ -887,7 +876,6 @@ void render_shutdown_screen(bool jump_to_bootloader)
 // Screen dispatch
 //==============================================================================
 
-// The simulations only run while drawn, so they must only be disturbed while drawn too
 void oled_key_event(uint16_t keycode, keypos_t key, bool pressed)
 {
     if (pressed) bongo_count_hit();
@@ -972,7 +960,6 @@ bool oled_task_kb(void)
     }
     else if (layer == INDICATORS_LAYER)
     {
-        // Layer 1 temporarily takes over the user selected screen
         render_screen(USER_SCREEN_INDICATORS);
     }
     else
