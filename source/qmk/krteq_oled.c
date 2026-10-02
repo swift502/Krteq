@@ -26,7 +26,7 @@ static int last_rendered_screen = -1;
 static bool selecting;
 static uint16_t select_timer;
 
-void load_user_screen(void)
+static void load_user_screen(void)
 {
     uint8_t screen = 0;
     eeconfig_read_kb_datablock(&screen, 0, sizeof(screen));
@@ -937,6 +937,7 @@ static void render_screen(int screen)
 
 oled_rotation_t oled_init_kb(oled_rotation_t rotation)
 {
+    load_user_screen();
     return OLED_ROTATION_180;
 }
 

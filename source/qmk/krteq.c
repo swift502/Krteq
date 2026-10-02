@@ -2,12 +2,6 @@
 #include "process_quantum.h"
 #include "krteq_oled.h"
 
-void keyboard_post_init_kb(void)
-{
-    load_user_screen();
-    keyboard_post_init_user();
-}
-
 bool shutdown_kb(bool jump_to_bootloader)
 {
     if (!shutdown_user(jump_to_bootloader))
