@@ -959,16 +959,6 @@ bool oled_task_kb(void)
         return false;
     }
 
-    // OLED_TIMEOUT is compiled out, so the display has to be held off here
-    if (is_host_asleep())
-    {
-        if (is_oled_on()) oled_off();
-
-        // Static screens only draw on change, so force a full redraw once the display returns
-        last_rendered_screen = -1;
-        return false;
-    }
-
     uint8_t layer = get_highest_layer(layer_state);
 
     if (selecting && timer_elapsed(select_timer) >= SCREEN_SELECT_DURATION)

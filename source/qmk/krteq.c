@@ -3,41 +3,13 @@
 #include "usb_main.h"
 #include "krteq_oled.h"
 
-#define FRAME_STALL_TIMEOUT 100
-
-static bool host_asleep;
-
-bool is_host_asleep(void)
+void suspend_power_down_kb(void)
 {
-    return host_asleep;
-}
+    // Clears the SOF flag latched by the last frame before suspend. Remote wakeup enables the SOF
+    // interrupt, so a stale flag fires it at once and fakes a host resume while the PC is off.
+    (void)usb_lld_get_frame_number(&USB_DRIVER);
 
-// A key press can pull the board out of USB suspend while the PC is off, but the host then sends no frames
-void housekeeping_task_kb(void)
-{
-    static uint16_t last_frame;
-    static uint32_t frame_timer;
-
-    uint16_t frame = usb_lld_get_frame_number(&USB_DRIVER);
-    if (frame != last_frame)
-    {
-        last_frame = frame;
-        frame_timer = timer_read32();
-    }
-
-    bool asleep = timer_elapsed32(frame_timer) >= FRAME_STALL_TIMEOUT;
-    if (asleep != host_asleep)
-    {
-        host_asleep = asleep;
-        rgb_matrix_set_suspend_state(asleep);
-
-        if (asleep)
-            oled_off();
-        else
-            restart_logo();
-    }
-
-    housekeeping_task_user();
+    suspend_power_down_user();
 }
 
 bool shutdown_kb(bool jump_to_bootloader)
