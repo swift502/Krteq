@@ -7,7 +7,10 @@ void suspend_power_down_kb(void)
 {
     // Clears the SOF flag latched by the last frame before suspend. Remote wakeup enables the SOF
     // interrupt, so a stale flag fires it at once and fakes a host resume while the PC is off.
-    (void)usb_lld_get_frame_number(&USB_DRIVER);
+    // (void)usb_lld_get_frame_number(&USB_DRIVER);
+
+    oled_clear();
+    oled_render_dirty(true);
 
     suspend_power_down_user();
 }
