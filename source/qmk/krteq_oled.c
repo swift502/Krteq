@@ -4,8 +4,8 @@
 
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
 #define INDICATORS_LAYER 1
-#define SCREEN_SELECT_LAYER 2
 #define INPUT_LOCK_LAYER 4
+#define SCREEN_SELECT_DURATION 3000
 
 enum screens
 {
@@ -23,6 +23,8 @@ enum screens
 
 static int selected_user_screen = 0;
 static int last_rendered_screen = -1;
+static bool selecting;
+static uint16_t select_timer;
 
 void load_user_screen(void)
 {
@@ -33,16 +35,23 @@ void load_user_screen(void)
     if (screen < USER_SCREEN_COUNT) selected_user_screen = screen;
 }
 
-// Screens are only picked on the select layer, so leaving it is the one moment worth a write
-void save_user_screen(void)
+// Written once the selection settles, so cycling through screens costs a single write
+static void save_user_screen(void)
 {
     uint8_t screen = selected_user_screen;
     eeconfig_update_kb_datablock(&screen, 0, sizeof(screen));
 }
 
+static void start_selecting(void)
+{
+    selecting = true;
+    select_timer = timer_read();
+}
+
 void default_user_screen(void)
 {
     selected_user_screen = 0;
+    start_selecting();
 }
 
 void shift_user_screen(int shift)
@@ -50,6 +59,7 @@ void shift_user_screen(int shift)
     selected_user_screen += shift;
     selected_user_screen %= USER_SCREEN_COUNT;
     if (selected_user_screen < 0) selected_user_screen += USER_SCREEN_COUNT;
+    start_selecting();
 }
 
 //==============================================================================
@@ -939,6 +949,12 @@ bool oled_task_kb(void)
 
     uint8_t layer = get_highest_layer(layer_state);
 
+    if (selecting && timer_elapsed(select_timer) >= SCREEN_SELECT_DURATION)
+    {
+        selecting = false;
+        save_user_screen();
+    }
+
     if (!logo_finished)
     {
         render_screen(SYSTEM_SCREEN_LOGO);
@@ -947,14 +963,14 @@ bool oled_task_kb(void)
     {
         render_screen(SYSTEM_SCREEN_INPUT_LOCK);
     }
+    else if (selecting)
+    {
+        render_screen(SYSTEM_SCREEN_SELECT);
+    }
     else if (layer == INDICATORS_LAYER)
     {
         // Layer 1 temporarily takes over the user selected screen
         render_screen(USER_SCREEN_INDICATORS);
-    }
-    else if (layer == SCREEN_SELECT_LAYER)
-    {
-        render_screen(SYSTEM_SCREEN_SELECT);
     }
     else
     {
