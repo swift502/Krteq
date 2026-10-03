@@ -30,8 +30,6 @@ bool shutdown_kb(bool jump_to_bootloader)
 
 bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 {
-    oled_key_event(keycode, record->event.key, record->event.pressed);
-
     uint8_t mods = get_mods();
     bool double_shift = (mods & MOD_MASK_SHIFT) == MOD_MASK_SHIFT;
 
@@ -53,6 +51,8 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
             }
             break;
     }
+
+    oled_key_event(keycode, record->event.key, record->event.pressed);
 
     if (!process_record_user(keycode, record))
         return false;
