@@ -139,19 +139,18 @@ static void draw_box(uint8_t left, uint8_t top, uint8_t width, uint8_t height, b
 }
 
 // Icon and label are centered together, so the pair shifts with the length of the label
-#define ICON_WIDTH 16
-#define ICON_HEIGHT 16
-#define ICON_TEXT_GAP 7
-#define ICON_Y 7
+#define ICON_SIZE 14
+#define ICON_TEXT_GAP 6
+#define ICON_Y 8
 #define ICON_TEXT_Y ((OLED_DISPLAY_HEIGHT - OLED_FONT_HEIGHT) / 2)
 
 static void draw_icon_text(const uint8_t *image, const char *text)
 {
     uint8_t text_width = strlen(text) * OLED_FONT_WIDTH;
-    uint8_t left = (OLED_DISPLAY_WIDTH - (ICON_WIDTH + ICON_TEXT_GAP + text_width)) / 2;
+    uint8_t left = (OLED_DISPLAY_WIDTH - (ICON_SIZE + ICON_TEXT_GAP + text_width)) / 2;
 
     draw_image(image, left, ICON_Y);
-    draw_text(left + ICON_WIDTH + ICON_TEXT_GAP + text_width / 2, ICON_TEXT_Y, text, false);
+    draw_text(left + ICON_SIZE + ICON_TEXT_GAP + text_width / 2, ICON_TEXT_Y, text, false);
 }
 
 static void draw_number(uint8_t center_x, uint8_t y, uint32_t value)
