@@ -5,7 +5,7 @@
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
 #define INDICATORS_LAYER 1
 #define INPUT_LOCK_LAYER 4
-#define SCREEN_SELECT_DURATION 2000
+#define SCREEN_SELECT_DURATION 1000
 
 enum screens
 {
@@ -268,12 +268,18 @@ static void indicators_update(void)
 #define BONGO_HITS_MAX 999999
 #define BONGO_RAISED_DURATION 50
 #define BONGO_DOWN_DURATION 150
+#define BONGO_BLINK_MIN_DELAY 1000
+#define BONGO_BLINK_MAX_DELAY 5000
+#define BONGO_BLINK_DURATION 100
+#define BONGO_SLEEP_DELAY 10000
+#define BONGO_ZZ_X 56
+#define BONGO_ZZ_Y 2
 
 enum bongo_paw_states
 {
     BONGO_PAW_IDLE,
     BONGO_PAW_RAISED,
-    BONGO_PAW_DOWN
+    BONGO_PAW_HIT
 };
 
 static const uint8_t bongo_cat_image[] = {
@@ -284,8 +290,20 @@ static const uint8_t bongo_paw_up_image[] = {
 #embed "bitmaps/bongo_paw_up.bmp"
 };
 
+static const uint8_t bongo_paw_hit_image[] = {
+#embed "bitmaps/bongo_paw_hit.bmp"
+};
+
+static const uint8_t bongo_cat_sleep_image[] = {
+#embed "bitmaps/bongo_cat_sleep.bmp"
+};
+
 static const uint8_t bongo_paw_down_image[] = {
 #embed "bitmaps/bongo_paw_down.bmp"
+};
+
+static const uint8_t bongo_cat_zz_image[] = {
+#embed "bitmaps/bongo_cat_zz.bmp"
 };
 
 static const uint8_t bongo_paw_x[BONGO_PAW_COUNT] = { BONGO_PAW_LEFT_X, BONGO_PAW_RIGHT_X };
@@ -296,6 +314,26 @@ static uint16_t bongo_paw_timer[BONGO_PAW_COUNT];
 static uint8_t bongo_paw_state[BONGO_PAW_COUNT];
 static uint8_t bongo_paw;
 static bool bongo_redraw;
+static uint16_t bongo_idle_timer;
+static uint16_t bongo_blink_timer;
+static uint16_t bongo_blink_delay;
+static bool bongo_blinking;
+static bool bongo_sleeping;
+
+static void bongo_schedule_blink(void)
+{
+    bongo_blinking = false;
+    bongo_blink_timer = timer_read();
+    bongo_blink_delay = BONGO_BLINK_MIN_DELAY + random_value() % (BONGO_BLINK_MAX_DELAY - BONGO_BLINK_MIN_DELAY + 1);
+}
+
+static void bongo_wake(void)
+{
+    if (bongo_sleeping || bongo_blinking) bongo_redraw = true;
+    bongo_sleeping = false;
+    bongo_idle_timer = timer_read();
+    bongo_schedule_blink();
+}
 
 // The tally counts every key, even while another screen is drawn
 static void bongo_count_hit(void)
@@ -307,6 +345,8 @@ static void bongo_count_hit(void)
 static void bongo_key_event(uint16_t keycode, bool pressed)
 {
     if (!pressed) return;
+
+    bongo_wake();
 
     if (keycode != bongo_last_keycode) bongo_paw ^= 1;
     bongo_last_keycode = keycode;
@@ -325,10 +365,10 @@ static void advance_paw(uint8_t paw)
     {
         case BONGO_PAW_RAISED:
             if (timer_elapsed(bongo_paw_timer[paw]) < BONGO_RAISED_DURATION) return;
-            bongo_paw_state[paw] = BONGO_PAW_DOWN;
+            bongo_paw_state[paw] = BONGO_PAW_HIT;
             break;
 
-        case BONGO_PAW_DOWN:
+        case BONGO_PAW_HIT:
             if (timer_elapsed(bongo_paw_timer[paw]) < BONGO_DOWN_DURATION) return;
             bongo_paw_state[paw] = BONGO_PAW_IDLE;
             break;
@@ -341,26 +381,71 @@ static void advance_paw(uint8_t paw)
     bongo_redraw = true;
 }
 
+// Blinking only fills quiet moments, so any paw movement pushes the next blink back
+static void advance_idle(void)
+{
+    if (bongo_sleeping) return;
+
+    // Latched, since the 16 bit idle timer would wrap back into looking awake
+    if (timer_elapsed(bongo_idle_timer) >= BONGO_SLEEP_DELAY)
+    {
+        bongo_sleeping = true;
+        bongo_blinking = false;
+        bongo_redraw = true;
+        return;
+    }
+
+    for (uint8_t paw = 0; paw < BONGO_PAW_COUNT; paw++)
+    {
+        if (bongo_paw_state[paw] != BONGO_PAW_IDLE)
+        {
+            bongo_blink_timer = timer_read();
+            return;
+        }
+    }
+
+    if (bongo_blinking)
+    {
+        if (timer_elapsed(bongo_blink_timer) < BONGO_BLINK_DURATION) return;
+        bongo_schedule_blink();
+    }
+    else
+    {
+        if (timer_elapsed(bongo_blink_timer) < bongo_blink_delay) return;
+        bongo_blinking = true;
+        bongo_blink_timer = timer_read();
+    }
+
+    bongo_redraw = true;
+}
+
 static void bongo_cat_init(void)
 {
     bongo_redraw = true;
+    bongo_wake();
 }
 
 static void bongo_cat_update(void)
 {
     for (uint8_t paw = 0; paw < BONGO_PAW_COUNT; paw++) advance_paw(paw);
+    advance_idle();
 
     if (!bongo_redraw) return;
     bongo_redraw = false;
 
     oled_clear();
-    draw_image(bongo_cat_image, BONGO_CAT_X, BONGO_CAT_Y);
+    draw_image(bongo_sleeping || bongo_blinking ? bongo_cat_sleep_image : bongo_cat_image, BONGO_CAT_X, BONGO_CAT_Y);
 
     for (uint8_t paw = 0; paw < BONGO_PAW_COUNT; paw++)
     {
-        bool down = bongo_paw_state[paw] == BONGO_PAW_DOWN;
-        draw_image(down ? bongo_paw_down_image : bongo_paw_up_image, bongo_paw_x[paw], BONGO_PAW_Y);
+        const uint8_t *image = bongo_paw_up_image;
+        if (bongo_sleeping) image = bongo_paw_down_image;
+        else if (bongo_paw_state[paw] == BONGO_PAW_HIT) image = bongo_paw_hit_image;
+
+        draw_image(image, bongo_paw_x[paw], BONGO_PAW_Y);
     }
+
+    if (bongo_sleeping) draw_image(bongo_cat_zz_image, BONGO_ZZ_X, BONGO_ZZ_Y);
 
     if (bongo_hits > BONGO_HITS_MAX)
     {
