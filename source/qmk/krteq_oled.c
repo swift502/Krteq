@@ -7,6 +7,10 @@
 #define INPUT_LOCK_LAYER 4
 #define SCREEN_SELECT_DURATION 1000
 
+// Offsets into the keyboard datablock, sized by EECONFIG_KB_DATA_SIZE
+#define DATA_SCREEN_OFFSET 0
+#define DATA_BONGO_HITS_OFFSET 1
+
 enum screens
 {
     USER_SCREEN_INDICATORS,
@@ -21,7 +25,8 @@ enum screens
     SYSTEM_SCREEN_INPUT_LOCK
 };
 
-static int selected_user_screen = 0;
+static int current_user_screen = 0;
+static int selected_user_screen;
 static int last_rendered_screen = -1;
 static bool selecting;
 static uint16_t select_timer;
@@ -29,36 +34,38 @@ static uint16_t select_timer;
 static void load_user_screen(void)
 {
     uint8_t screen = 0;
-    eeconfig_read_kb_datablock(&screen, 0, sizeof(screen));
+    eeconfig_read_kb_datablock(&screen, DATA_SCREEN_OFFSET, sizeof(screen));
 
     // A stale block from an older layout could name a screen that no longer exists
-    if (screen < USER_SCREEN_COUNT) selected_user_screen = screen;
+    if (screen < USER_SCREEN_COUNT) current_user_screen = screen;
 }
 
 static void save_user_screen(void)
 {
-    uint8_t screen = selected_user_screen;
-    eeconfig_update_kb_datablock(&screen, 0, sizeof(screen));
+    uint8_t screen = current_user_screen;
+    eeconfig_update_kb_datablock(&screen, DATA_SCREEN_OFFSET, sizeof(screen));
 }
 
+// A fresh selection starts from the screen in use
 static void start_selecting(void)
 {
+    if (!selecting) selected_user_screen = current_user_screen;
     selecting = true;
     select_timer = timer_read();
 }
 
 void default_user_screen(void)
 {
-    selected_user_screen = 0;
     start_selecting();
+    selected_user_screen = 0;
 }
 
 void shift_user_screen(int shift)
 {
+    start_selecting();
     selected_user_screen += shift;
     selected_user_screen %= USER_SCREEN_COUNT;
     if (selected_user_screen < 0) selected_user_screen += USER_SCREEN_COUNT;
-    start_selecting();
 }
 
 //==============================================================================
@@ -265,13 +272,20 @@ static void indicators_update(void)
 #define BONGO_PAW_Y 12
 #define BONGO_HITS_X (BONGO_PAW_LEFT_X / 2)
 #define BONGO_HITS_Y ((OLED_DISPLAY_HEIGHT - OLED_FONT_HEIGHT) / 2)
-#define BONGO_HITS_MAX 999999
+#define BONGO_TROPHY_HITS 1000000 // Set to 10 to debug trophy layout
+#define BONGO_TROPHY_WIDTH 10
+#define BONGO_TROPHY_HEIGHT 8
+#define BONGO_TROPHY_GAP 1
+#define BONGO_TROPHY_ROW_HEIGHT (BONGO_TROPHY_HEIGHT > OLED_FONT_HEIGHT ? BONGO_TROPHY_HEIGHT : OLED_FONT_HEIGHT)
+#define BONGO_TROPHY_Y (OLED_DISPLAY_HEIGHT - BONGO_TROPHY_HEIGHT)
+#define BONGO_TROPHY_TEXT_Y (OLED_DISPLAY_HEIGHT - OLED_FONT_HEIGHT + 1) // Glyphs leave their bottom row blank
+#define BONGO_TROPHY_HITS_Y ((OLED_DISPLAY_HEIGHT - BONGO_TROPHY_ROW_HEIGHT - OLED_FONT_HEIGHT) / 2)
 #define BONGO_RAISED_DURATION 50
 #define BONGO_DOWN_DURATION 150
 #define BONGO_BLINK_MIN_DELAY 1000
 #define BONGO_BLINK_MAX_DELAY 5000
 #define BONGO_BLINK_DURATION 100
-#define BONGO_SLEEP_DELAY 10000
+#define BONGO_SLEEP_DELAY 60000
 #define BONGO_ZZ_X 56
 #define BONGO_ZZ_Y 2
 
@@ -306,15 +320,20 @@ static const uint8_t bongo_cat_zz_image[] = {
 #embed "bitmaps/bongo_cat_zz.bmp"
 };
 
+static const uint8_t bongo_trophy_image[] = {
+#embed "bitmaps/trophy.bmp"
+};
+
 static const uint8_t bongo_paw_x[BONGO_PAW_COUNT] = { BONGO_PAW_LEFT_X, BONGO_PAW_RIGHT_X };
 
 static uint32_t bongo_hits;
+static uint32_t bongo_saved_hits;
 static uint16_t bongo_last_keycode;
 static uint16_t bongo_paw_timer[BONGO_PAW_COUNT];
 static uint8_t bongo_paw_state[BONGO_PAW_COUNT];
 static uint8_t bongo_paw;
 static bool bongo_redraw;
-static uint16_t bongo_idle_timer;
+static uint32_t bongo_sleep_timer;
 static uint16_t bongo_blink_timer;
 static uint16_t bongo_blink_delay;
 static bool bongo_blinking;
@@ -331,14 +350,22 @@ static void bongo_wake(void)
 {
     if (bongo_sleeping || bongo_blinking) bongo_redraw = true;
     bongo_sleeping = false;
-    bongo_idle_timer = timer_read();
+    bongo_sleep_timer = timer_read32();
     bongo_schedule_blink();
 }
 
-// The tally counts every key, even while another screen is drawn
-static void bongo_count_hit(void)
+static void bongo_load_hits(void)
 {
-    if (bongo_hits <= BONGO_HITS_MAX) bongo_hits++;
+    eeconfig_read_kb_datablock(&bongo_hits, DATA_BONGO_HITS_OFFSET, sizeof(bongo_hits));
+    bongo_saved_hits = bongo_hits;
+}
+
+static void bongo_save_hits(void)
+{
+    if (bongo_hits == bongo_saved_hits) return;
+
+    bongo_saved_hits = bongo_hits;
+    eeconfig_update_kb_datablock(&bongo_hits, DATA_BONGO_HITS_OFFSET, sizeof(bongo_hits));
 }
 
 // Every strike starts raised so the paw is always seen coming down
@@ -346,6 +373,7 @@ static void bongo_key_event(uint16_t keycode, bool pressed)
 {
     if (!pressed) return;
 
+    if (bongo_hits < UINT32_MAX) bongo_hits++;
     bongo_wake();
 
     if (keycode != bongo_last_keycode) bongo_paw ^= 1;
@@ -386,12 +414,13 @@ static void advance_idle(void)
 {
     if (bongo_sleeping) return;
 
-    // Latched, since the 16 bit idle timer would wrap back into looking awake
-    if (timer_elapsed(bongo_idle_timer) >= BONGO_SLEEP_DELAY)
+    // Latched until the next hit wakes the cat
+    if (timer_elapsed32(bongo_sleep_timer) >= BONGO_SLEEP_DELAY)
     {
         bongo_sleeping = true;
         bongo_blinking = false;
         bongo_redraw = true;
+        bongo_save_hits();
         return;
     }
 
@@ -419,10 +448,26 @@ static void advance_idle(void)
     bongo_redraw = true;
 }
 
+static void draw_trophies(uint32_t trophies)
+{
+    char text[12];
+    char *end = print_number(text, trophies, 1);
+    *end++ = 'x';
+    *end = '\0';
+
+    uint8_t text_width = strlen(text) * OLED_FONT_WIDTH;
+    uint8_t left = BONGO_HITS_X - (text_width + BONGO_TROPHY_GAP + BONGO_TROPHY_WIDTH) / 2;
+
+    draw_text_at(left, BONGO_TROPHY_TEXT_Y, text, false);
+    draw_image(bongo_trophy_image, left + text_width + BONGO_TROPHY_GAP, BONGO_TROPHY_Y);
+}
+
+// Animations in flight are dropped, since their 16 bit timers may have wrapped while hidden
 static void bongo_cat_init(void)
 {
+    memset(bongo_paw_state, BONGO_PAW_IDLE, sizeof(bongo_paw_state));
+    bongo_schedule_blink();
     bongo_redraw = true;
-    bongo_wake();
 }
 
 static void bongo_cat_update(void)
@@ -447,14 +492,39 @@ static void bongo_cat_update(void)
 
     if (bongo_sleeping) draw_image(bongo_cat_zz_image, BONGO_ZZ_X, BONGO_ZZ_Y);
 
-    if (bongo_hits > BONGO_HITS_MAX)
+    uint32_t trophies = bongo_hits / BONGO_TROPHY_HITS;
+    uint32_t shown = trophies ? bongo_hits % BONGO_TROPHY_HITS : bongo_hits;
+
+    if (trophies)
     {
-        draw_text(BONGO_HITS_X, BONGO_HITS_Y, "999999+", false);
+        draw_number(BONGO_HITS_X, BONGO_TROPHY_HITS_Y, shown);
+        draw_trophies(trophies);
     }
     else
     {
-        draw_number(BONGO_HITS_X, BONGO_HITS_Y, bongo_hits);
+        draw_number(BONGO_HITS_X, BONGO_HITS_Y, shown);
     }
+}
+
+// Sleep carries over between selections, an awake cat starts a fresh sleep countdown
+static void bongo_cat_enter(void)
+{
+    bongo_sleep_timer = timer_read32();
+}
+
+static void bongo_cat_exit(void)
+{
+    bongo_save_hits();
+}
+
+// The hit count is persistent and survives the reset
+static void bongo_cat_reset(void)
+{
+    bongo_last_keycode = 0;
+    bongo_paw = 0;
+    memset(bongo_paw_state, BONGO_PAW_IDLE, sizeof(bongo_paw_state));
+    bongo_sleeping = false;
+    bongo_blinking = false;
 }
 
 //==============================================================================
@@ -526,14 +596,6 @@ static void ripple_draw(void)
 static void ripple_init(void)
 {
     ripple_timer = timer_read();
-    ripple_idle_timer = timer_read();
-
-    if (!ripple_seeded)
-    {
-        ripple_seeded = true;
-        ripple_drop(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
-    }
-
     ripple_draw();
 }
 
@@ -566,6 +628,24 @@ static void ripple_update(void)
     }
 
     ripple_draw();
+}
+
+static void ripple_enter(void)
+{
+    ripple_idle_timer = timer_read();
+
+    if (!ripple_seeded)
+    {
+        ripple_seeded = true;
+        ripple_drop(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
+    }
+}
+
+static void ripple_reset(void)
+{
+    memset(ripple_heights, 0, sizeof(ripple_heights));
+    ripple_front = 0;
+    ripple_seeded = false;
 }
 
 //==============================================================================
@@ -701,14 +781,6 @@ static void life_draw(void)
 static void life_init(void)
 {
     life_timer = timer_read();
-    life_idle_timer = timer_read();
-
-    if (!life_seeded)
-    {
-        life_seeded = true;
-        life_bomb(LIFE_WIDTH / 2, LIFE_HEIGHT / 2, BOMB_SHAPE_VERTICAL);
-    }
-
     life_draw();
 }
 
@@ -751,6 +823,25 @@ static void life_update(void)
     }
 
     life_draw();
+}
+
+static void life_enter(void)
+{
+    life_idle_timer = timer_read();
+
+    if (!life_seeded)
+    {
+        life_seeded = true;
+        life_bomb(LIFE_WIDTH / 2, LIFE_HEIGHT / 2, BOMB_SHAPE_VERTICAL);
+    }
+}
+
+static void life_reset(void)
+{
+    memset(life_cells, 0, sizeof(life_cells));
+    memset(life_next, 0, sizeof(life_next));
+    life_slice = 0;
+    life_seeded = false;
 }
 
 //==============================================================================
@@ -861,6 +952,11 @@ static void logo_update(void)
     logo_finished = timer_elapsed(logo_timer) > LOGO_DURATION;
 }
 
+static void logo_reset(void)
+{
+    logo_finished = false;
+}
+
 //==============================================================================
 // Screen select screen
 //==============================================================================
@@ -956,6 +1052,7 @@ static const uint8_t restart_image[] = {
 
 void render_shutdown_screen(bool jump_to_bootloader)
 {
+    bongo_save_hits();
     oled_clear();
 
     if (jump_to_bootloader)
@@ -972,8 +1069,6 @@ void render_shutdown_screen(bool jump_to_bootloader)
 
 void oled_key_event(uint16_t keycode, keypos_t key, bool pressed)
 {
-    if (pressed) bongo_count_hit();
-
     // Keys that drive the screens themselves must not disturb their contents
     if (keycode == KRT_SCR) return;
     if (IS_QK_MOMENTARY(keycode)) return;
@@ -986,6 +1081,26 @@ void oled_key_event(uint16_t keycode, keypos_t key, bool pressed)
     }
 }
 
+// Logic and state of a user screen, unaffected by overlays drawn on top of it
+static void enter_user_screen(int screen)
+{
+    switch (screen)
+    {
+        case USER_SCREEN_BONGO_CAT: bongo_cat_enter(); break;
+        case USER_SCREEN_LIFE:      life_enter();      break;
+        case USER_SCREEN_RIPPLE:    ripple_enter();    break;
+    }
+}
+
+static void exit_user_screen(int screen)
+{
+    switch (screen)
+    {
+        case USER_SCREEN_BONGO_CAT: bongo_cat_exit(); break;
+    }
+}
+
+// Drawing only, runs whenever the displayed screen changes, overlays included
 static void render_screen(int screen)
 {
     if (screen != last_rendered_screen)
@@ -1022,6 +1137,8 @@ static void render_screen(int screen)
 oled_rotation_t oled_init_kb(oled_rotation_t rotation)
 {
     load_user_screen();
+    bongo_load_hits();
+    enter_user_screen(current_user_screen);
     return OLED_ROTATION_180;
 }
 
@@ -1037,7 +1154,14 @@ bool oled_task_kb(void)
     if (selecting && timer_elapsed(select_timer) >= SCREEN_SELECT_DURATION)
     {
         selecting = false;
-        save_user_screen();
+
+        if (selected_user_screen != current_user_screen)
+        {
+            exit_user_screen(current_user_screen);
+            current_user_screen = selected_user_screen;
+            save_user_screen();
+            enter_user_screen(current_user_screen);
+        }
     }
 
     if (!logo_finished)
@@ -1058,7 +1182,7 @@ bool oled_task_kb(void)
     }
     else
     {
-        render_screen(selected_user_screen);
+        render_screen(current_user_screen);
     }
 
     return false;
@@ -1066,27 +1190,16 @@ bool oled_task_kb(void)
 
 void oled_restart(void)
 {
+    exit_user_screen(current_user_screen);
+
     oled_clear();
     oled_render_dirty(true);
-
-    // Logo
-    logo_finished = false;
     last_rendered_screen = -1;
 
-    // Bongo Cat
-    bongo_hits = 0;
-    bongo_last_keycode = 0;
-    bongo_paw = 0;
-    memset(bongo_paw_state, BONGO_PAW_IDLE, sizeof(bongo_paw_state));
+    logo_reset();
+    bongo_cat_reset();
+    life_reset();
+    ripple_reset();
 
-    // Life
-    memset(life_cells, 0, sizeof(life_cells));
-    memset(life_next, 0, sizeof(life_next));
-    life_slice = 0;
-    life_seeded = false;
-
-    // Ripple
-    memset(ripple_heights, 0, sizeof(ripple_heights));
-    ripple_front = 0;
-    ripple_seeded = false;
+    enter_user_screen(current_user_screen);
 }

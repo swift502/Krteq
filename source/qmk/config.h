@@ -12,4 +12,5 @@
 
 // Persistent memory
 // - Screen selection: 1 byte
-#define EECONFIG_KB_DATA_SIZE 1
+// - Bongo cat hits: 4 bytes
+#define EECONFIG_KB_DATA_SIZE 5
