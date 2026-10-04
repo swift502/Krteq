@@ -744,21 +744,8 @@ static void system_info_update(void)
     memcpy(build_date, QMK_BUILDDATE, INFO_BUILD_DATE_LENGTH);
     build_date[INFO_BUILD_DATE_LENGTH] = '\0';
 
-    // char hsv[16];
-    // char *out = hsv;
-    // *out++ = 'H';
-    // out = print_number(out, rgb_matrix_get_hue(), 1);
-    // *out++ = ' ';
-    // *out++ = 'S';
-    // out = print_number(out, rgb_matrix_get_sat(), 1);
-    // *out++ = ' ';
-    // *out++ = 'V';
-    // out = print_number(out, rgb_matrix_get_val(), 1);
-    // *out = '\0';
-
     oled_clear();
     render_info_row(0, PRODUCT, device_version);
-    // render_info_row(0, "RGB", hsv);
     render_info_row(1, "Uptime", uptime);
     render_info_row(2, "QMK", QMK_VERSION);
     render_info_row(3, "Built", build_date);
