@@ -22,7 +22,8 @@ enum screens
 
     SYSTEM_SCREEN_LOGO,
     SYSTEM_SCREEN_SELECT,
-    SYSTEM_SCREEN_INPUT_LOCK
+    SYSTEM_SCREEN_INPUT_LOCK,
+    SYSTEM_SCREEN_RGB
 };
 
 static int current_user_screen = 0;
@@ -854,6 +855,24 @@ static void print_device_version(char *out)
     *out = '\0';
 }
 
+static uint16_t bcd_value(uint16_t bcd)
+{
+    uint16_t value = 0;
+    for (int8_t shift = 12; shift >= 0; shift -= 4) value = value * 10 + (bcd >> shift & 0xF);
+    return value;
+}
+
+// QMK_VERSION_BCD packs major and minor into a byte each and patch into the low half
+static void print_qmk_version(char *out)
+{
+    out = print_number(out, bcd_value(QMK_VERSION_BCD >> 24 & 0xFF), 1);
+    *out++ = '.';
+    out = print_number(out, bcd_value(QMK_VERSION_BCD >> 16 & 0xFF), 1);
+    *out++ = '.';
+    out = print_number(out, bcd_value(QMK_VERSION_BCD & 0xFFFF), 1);
+    *out = '\0';
+}
+
 static void print_uptime(char *out)
 {
     uint32_t seconds = timer_read32() / 1000;
@@ -904,10 +923,13 @@ static void system_info_update(void)
     memcpy(build_date, QMK_BUILDDATE, INFO_BUILD_DATE_LENGTH);
     build_date[INFO_BUILD_DATE_LENGTH] = '\0';
 
+    char qmk_version[16];
+    print_qmk_version(qmk_version);
+
     oled_clear();
     render_info_row(0, PRODUCT, device_version);
     render_info_row(1, "Uptime", uptime);
-    render_info_row(2, "QMK", QMK_VERSION);
+    render_info_row(2, "QMK", qmk_version);
     render_info_row(3, "Built", build_date);
 }
 
@@ -1024,6 +1046,147 @@ static void input_lock_update(void)
 }
 
 //==============================================================================
+// RGB status screen
+//==============================================================================
+
+#define RGB_STATUS_DURATION 3000
+#define RGB_TITLE_Y 4
+#define RGB_CONTENT_Y 20
+#define RGB_BAR_WIDTH OLED_DISPLAY_WIDTH
+#define RGB_BAR_HEIGHT 7 // Matches the lit rows of a glyph
+#define RGB_BAR_PADDING 2
+
+enum rgb_status_components
+{
+    RGB_STATUS_NONE = -1,
+    RGB_STATUS_POWER,
+    RGB_STATUS_EFFECT,
+    RGB_STATUS_HUE,
+    RGB_STATUS_SATURATION,
+    RGB_STATUS_BRIGHTNESS,
+    RGB_STATUS_SPEED
+};
+
+// Effects missing here fall back to their number, see the animations in keyboard.json
+static const char *const rgb_effect_names[RGB_MATRIX_EFFECT_MAX] = {
+    [RGB_MATRIX_SOLID_COLOR]              = "Solid color",
+    [RGB_MATRIX_STARLIGHT_SMOOTH]         = "Starlight",
+    [RGB_MATRIX_RIVERFLOW]                = "Riverflow",
+    [RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE] = "Reactive wide"
+};
+
+static rgb_config_t rgb_status_config;
+static uint16_t rgb_status_timer;
+static int8_t rgb_status_component;
+static bool rgb_status_showing;
+static bool rgb_status_redraw;
+
+static void rgb_status_show(int8_t component)
+{
+    // The config loaded at boot is not a change
+    if (!logo_finished) return;
+
+    rgb_status_component = component;
+    rgb_status_showing = true;
+    rgb_status_timer = timer_read();
+    rgb_status_redraw = true;
+}
+
+// Keys show their component even at a limit, where the config does not change
+static int8_t rgb_key_component(uint16_t keycode)
+{
+    switch (keycode)
+    {
+        case RM_TOGG:                     return RGB_STATUS_POWER;
+        case RM_NEXT: case RM_PREV:
+        case KRT_RGB:                     return RGB_STATUS_EFFECT;
+        case RM_HUEU: case RM_HUED:       return RGB_STATUS_HUE;
+        case RM_SATU: case RM_SATD:       return RGB_STATUS_SATURATION;
+        case RM_VALU: case RM_VALD:       return RGB_STATUS_BRIGHTNESS;
+        case RM_SPDU: case RM_SPDD:       return RGB_STATUS_SPEED;
+        default:                          return RGB_STATUS_NONE;
+    }
+}
+
+// Polls the config so changes from VIA and EEPROM resets are caught too
+static void rgb_status_poll(void)
+{
+    if (rgb_status_showing && timer_elapsed(rgb_status_timer) >= RGB_STATUS_DURATION) rgb_status_showing = false;
+
+    rgb_config_t config = rgb_matrix_config;
+    if (config.raw == rgb_status_config.raw) return;
+
+    rgb_config_t previous = rgb_status_config;
+    rgb_status_config = config;
+
+    if      (config.enable != previous.enable) rgb_status_show(RGB_STATUS_POWER);
+    else if (config.mode   != previous.mode)   rgb_status_show(RGB_STATUS_EFFECT);
+    else if (config.hsv.h  != previous.hsv.h)  rgb_status_show(RGB_STATUS_HUE);
+    else if (config.hsv.s  != previous.hsv.s)  rgb_status_show(RGB_STATUS_SATURATION);
+    else if (config.hsv.v  != previous.hsv.v)  rgb_status_show(RGB_STATUS_BRIGHTNESS);
+    else if (config.speed  != previous.speed)  rgb_status_show(RGB_STATUS_SPEED);
+}
+
+static void draw_slider(const char *title, uint8_t value, uint8_t maximum)
+{
+    uint8_t fill = (uint16_t)value * (RGB_BAR_WIDTH - RGB_BAR_PADDING * 2) / maximum;
+
+    for (uint8_t iy = 0; iy < RGB_BAR_HEIGHT; iy++)
+    {
+        for (uint8_t ix = 0; ix < RGB_BAR_WIDTH; ix++)
+        {
+            bool edge = ix == 0 || iy == 0 || ix == RGB_BAR_WIDTH - 1 || iy == RGB_BAR_HEIGHT - 1;
+            bool filled = ix >= RGB_BAR_PADDING && ix < RGB_BAR_PADDING + fill &&
+                          iy >= RGB_BAR_PADDING && iy < RGB_BAR_HEIGHT - RGB_BAR_PADDING;
+
+            oled_write_pixel(ix, RGB_CONTENT_Y + iy, edge || filled);
+        }
+    }
+
+    char text[4];
+    *print_number(text, value, 1) = '\0';
+
+    draw_text_at(0, RGB_TITLE_Y, title, false);
+    draw_text_at(OLED_DISPLAY_WIDTH - strlen(text) * OLED_FONT_WIDTH, RGB_TITLE_Y, text, false);
+}
+
+static void draw_labelled(const char *title, const char *text)
+{
+    draw_text(OLED_DISPLAY_WIDTH / 2, RGB_TITLE_Y, title, false);
+    draw_text(OLED_DISPLAY_WIDTH / 2, RGB_CONTENT_Y, text, false);
+}
+
+static void rgb_status_init(void)
+{
+    rgb_status_redraw = true;
+}
+
+static void rgb_status_update(void)
+{
+    if (!rgb_status_redraw) return;
+    rgb_status_redraw = false;
+
+    uint8_t mode = rgb_matrix_get_mode();
+    const char *name = mode < RGB_MATRIX_EFFECT_MAX ? rgb_effect_names[mode] : NULL;
+    hsv_t hsv = rgb_matrix_get_hsv();
+
+    char number[4];
+    *print_number(number, mode, 1) = '\0';
+
+    oled_clear();
+
+    switch (rgb_status_component)
+    {
+        case RGB_STATUS_POWER:      draw_labelled("RGB", rgb_matrix_is_enabled() ? "Enabled" : "Disabled");          break;
+        case RGB_STATUS_EFFECT:     draw_labelled("RGB Effect", name ? name : number);                     break;
+        case RGB_STATUS_HUE:        draw_slider("RGB Hue", hsv.h, UINT8_MAX);                              break;
+        case RGB_STATUS_SATURATION: draw_slider("RGB Saturation", hsv.s, UINT8_MAX);                       break;
+        case RGB_STATUS_BRIGHTNESS: draw_slider("RGB Brightness", hsv.v, RGB_MATRIX_MAXIMUM_BRIGHTNESS);   break;
+        case RGB_STATUS_SPEED:      draw_slider("RGB Speed", rgb_matrix_get_speed(), UINT8_MAX);            break;
+    }
+}
+
+//==============================================================================
 // Shutdown screen
 //==============================================================================
 
@@ -1058,6 +1221,13 @@ void oled_key_event(uint16_t keycode, keypos_t key, bool pressed)
     if (keycode == KRT_SCR) return;
     if (IS_QK_MOMENTARY(keycode)) return;
 
+    int8_t component = rgb_key_component(keycode);
+    if (component != RGB_STATUS_NONE)
+    {
+        if (pressed) rgb_status_show(component);
+        return;
+    }
+
     switch (last_rendered_screen)
     {
         case USER_SCREEN_BONGO_CAT: bongo_key_event(keycode, pressed); break;
@@ -1083,6 +1253,7 @@ static void render_screen(int screen)
             case SYSTEM_SCREEN_LOGO:       logo_init();          break;
             case SYSTEM_SCREEN_SELECT:     screen_select_init(); break;
             case SYSTEM_SCREEN_INPUT_LOCK: input_lock_init();    break;
+            case SYSTEM_SCREEN_RGB:        rgb_status_init();    break;
         }
     }
 
@@ -1096,6 +1267,7 @@ static void render_screen(int screen)
         case SYSTEM_SCREEN_LOGO:       logo_update();          break;
         case SYSTEM_SCREEN_SELECT:     screen_select_update(); break;
         case SYSTEM_SCREEN_INPUT_LOCK: input_lock_update();    break;
+        case SYSTEM_SCREEN_RGB:        rgb_status_update();    break;
     }
 }
 
@@ -1127,17 +1299,23 @@ bool oled_task_kb(void)
         }
     }
 
+    rgb_status_poll();
+
     if (!logo_finished)
     {
         render_screen(SYSTEM_SCREEN_LOGO);
     }
-    else if (layer >= INPUT_LOCK_LAYER)
+    else if (rgb_status_showing)
     {
-        render_screen(SYSTEM_SCREEN_INPUT_LOCK);
+        render_screen(SYSTEM_SCREEN_RGB);
     }
     else if (selecting)
     {
         render_screen(SYSTEM_SCREEN_SELECT);
+    }
+    else if (layer >= INPUT_LOCK_LAYER)
+    {
+        render_screen(SYSTEM_SCREEN_INPUT_LOCK);
     }
     else if (layer == INDICATORS_LAYER)
     {
