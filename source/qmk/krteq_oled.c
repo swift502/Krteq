@@ -31,6 +31,7 @@ static int selected_user_screen;
 static int last_rendered_screen = -1;
 static bool selecting;
 static uint16_t select_timer;
+static bool rgb_status_showing;
 
 static void load_user_screen(void)
 {
@@ -53,6 +54,7 @@ static void start_selecting(void)
     if (!selecting) selected_user_screen = current_user_screen;
     selecting = true;
     select_timer = timer_read();
+    rgb_status_showing = false;
 }
 
 void default_user_screen(void)
@@ -970,8 +972,8 @@ static void logo_reset(void)
 
 #define SELECT_SQUARE_SIZE 7
 #define SELECT_SQUARE_GAP 4
-#define SELECT_SQUARE_Y 6
-#define SELECT_NAME_Y (SELECT_SQUARE_Y + SELECT_SQUARE_SIZE + SELECT_SQUARE_GAP)
+#define SELECT_SQUARE_Y 4
+#define SELECT_NAME_Y 20
 #define SELECT_SQUARE_PITCH (SELECT_SQUARE_SIZE + SELECT_SQUARE_GAP)
 #define SELECT_SQUARE_LEFT ((OLED_DISPLAY_WIDTH - (USER_SCREEN_COUNT * SELECT_SQUARE_PITCH - SELECT_SQUARE_GAP)) / 2)
 #define SELECT_UNNAMED "Undefined"
@@ -1069,16 +1071,14 @@ enum rgb_status_components
 
 // Effects missing here fall back to their number, see the animations in keyboard.json
 static const char *const rgb_effect_names[RGB_MATRIX_EFFECT_MAX] = {
-    [RGB_MATRIX_SOLID_COLOR]              = "Solid color",
-    [RGB_MATRIX_STARLIGHT_SMOOTH]         = "Starlight",
-    [RGB_MATRIX_RIVERFLOW]                = "Riverflow",
-    [RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE] = "Reactive wide"
+    [RGB_MATRIX_SOLID_COLOR]          = "Solid color",
+    [RGB_MATRIX_RIVERFLOW]            = "Riverflow",
+    [RGB_MATRIX_SOLID_REACTIVE_CROSS] = "Reactive cross"
 };
 
 static rgb_config_t rgb_status_config;
 static uint16_t rgb_status_timer;
 static int8_t rgb_status_component;
-static bool rgb_status_showing;
 static bool rgb_status_redraw;
 
 static void rgb_status_show(int8_t component)
@@ -1173,12 +1173,18 @@ static void rgb_status_update(void)
     char number[4];
     *print_number(number, mode, 1) = '\0';
 
+    // Mode 0 is RGB_MATRIX_NONE, so effects are already numbered from 1
+    char effect_title[20] = "RGB Effect ";
+    char *out = print_number(effect_title + strlen(effect_title), mode, 1);
+    *out++ = '/';
+    *print_number(out, RGB_MATRIX_EFFECT_MAX - 1, 1) = '\0';
+
     oled_clear();
 
     switch (rgb_status_component)
     {
         case RGB_STATUS_POWER:      draw_labelled("RGB", rgb_matrix_is_enabled() ? "Enabled" : "Disabled");          break;
-        case RGB_STATUS_EFFECT:     draw_labelled("RGB Effect", name ? name : number);                     break;
+        case RGB_STATUS_EFFECT:     draw_labelled(effect_title, name ? name : number);                      break;
         case RGB_STATUS_HUE:        draw_slider("RGB Hue", hsv.h, UINT8_MAX);                              break;
         case RGB_STATUS_SATURATION: draw_slider("RGB Saturation", hsv.s, UINT8_MAX);                       break;
         case RGB_STATUS_BRIGHTNESS: draw_slider("RGB Brightness", hsv.v, RGB_MATRIX_MAXIMUM_BRIGHTNESS);   break;
@@ -1278,6 +1284,16 @@ oled_rotation_t oled_init_kb(oled_rotation_t rotation)
     return OLED_ROTATION_180;
 }
 
+// Screen forced by the active layer, or -1 when the user screen shows through
+static int layer_overlay(void)
+{
+    uint8_t layer = get_highest_layer(layer_state);
+
+    if (layer >= INPUT_LOCK_LAYER) return SYSTEM_SCREEN_INPUT_LOCK;
+    if (layer == INDICATORS_LAYER) return USER_SCREEN_INDICATORS;
+    return -1;
+}
+
 bool oled_task_kb(void)
 {
     if (!oled_task_user())
@@ -1285,9 +1301,12 @@ bool oled_task_kb(void)
         return false;
     }
 
-    uint8_t layer = get_highest_layer(layer_state);
+    static int previous_overlay = -1;
+    int overlay = layer_overlay();
+    bool interrupted = overlay >= 0 && overlay != previous_overlay;
+    previous_overlay = overlay;
 
-    if (selecting && timer_elapsed(select_timer) >= SCREEN_SELECT_DURATION)
+    if (selecting && (interrupted || timer_elapsed(select_timer) >= SCREEN_SELECT_DURATION))
     {
         selecting = false;
 
@@ -1298,6 +1317,8 @@ bool oled_task_kb(void)
             save_user_screen();
         }
     }
+
+    if (interrupted) rgb_status_showing = false;
 
     rgb_status_poll();
 
@@ -1313,13 +1334,9 @@ bool oled_task_kb(void)
     {
         render_screen(SYSTEM_SCREEN_SELECT);
     }
-    else if (layer >= INPUT_LOCK_LAYER)
+    else if (overlay >= 0)
     {
-        render_screen(SYSTEM_SCREEN_INPUT_LOCK);
-    }
-    else if (layer == INDICATORS_LAYER)
-    {
-        render_screen(USER_SCREEN_INDICATORS);
+        render_screen(overlay);
     }
     else
     {

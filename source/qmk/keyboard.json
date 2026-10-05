@@ -105,9 +105,8 @@
     },
     "rgb_matrix": {
         "animations": {
-            "starlight_smooth": true,
             "riverflow": true,
-            "solid_reactive_multiwide": true
+            "solid_reactive_cross": true
         },
         "default": {
             "animation": "solid_color",

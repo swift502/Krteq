@@ -10,6 +10,8 @@
 #define OLED_VCOM_DETECT 0x00 // 0x30, 0x20 (default), 0x00
 #define OLED_TIMEOUT 0
 
+#define RGB_TRIGGER_ON_KEYDOWN
+
 // Persistent memory
 // - Screen selection: 1 byte
 // - Bongo cat hits: 4 bytes
