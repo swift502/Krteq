@@ -2,7 +2,6 @@
 
 #define SE_LEFT MT(MOD_LSFT, KC_ENT)
 #define SE_RGHT MT(MOD_RSFT, KC_ENT)
-#define ALT_CTL LALT(KC_LCTL)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
@@ -34,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_INS,  _______, KC_UP,   _______, KC_PGUP, KC_P7,   KC_P8,   KC_P9,   _______, _______, _______, _______,
         KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_P4,   KC_P5,   KC_P6,   _______, KC_LBRC, KC_RBRC, KC_BSLS,
         SE_LEFT, KC_BSLS, _______, _______, _______, KC_P1,   KC_P2,   KC_P3,   _______, _______, _______, _______,
-        ALT_CTL, _______, _______, _______, _______,      KC_P0,       KC_PDOT, KC_HOME, _______, _______, KC_END
+        KC_SCRL, _______, _______, _______, _______,      KC_P0,       KC_PDOT, KC_HOME, _______, _______, KC_END
     ),
     [2] = LAYOUT_default(
         KRT_SCR,                                                                                           RM_TOGG,
