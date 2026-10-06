@@ -16,6 +16,7 @@ enum screens
     USER_SCREEN_BONGO_CAT,
     USER_SCREEN_LIFE,
     USER_SCREEN_RIPPLE,
+    USER_SCREEN_CIRCLES,
     USER_SCREEN_SYSTEM_INFO,
     USER_SCREEN_COUNT,
 
@@ -606,6 +607,254 @@ static void ripple_reset(void)
 }
 
 //==============================================================================
+// Circles screen
+//==============================================================================
+
+#define CIRCLES_FRAME_DURATION RIPPLE_FRAME_DURATION
+#define CIRCLES_IDLE_DURATION 15000
+#define CIRCLES_SHIFT 8 // Positions and velocities are fixed point pixels with this many fractional bits
+#define CIRCLES_ONE (1 << CIRCLES_SHIFT)
+#define CIRCLES_GRAVITY 24
+#define CIRCLES_RESTITUTION 230 // Velocity kept per bounce, out of CIRCLES_ONE
+#define CIRCLES_KICK 5120
+#define CIRCLES_KICK_SOFTENING 16 // Squared pixels, tames kicks right on top of a circle
+
+struct circle
+{
+    int32_t x;
+    int32_t y;
+    int32_t vx;
+    int32_t vy;
+    uint8_t radius;
+};
+
+static const uint8_t circles_radii[] = { 3, 3, 3, 4, 4, 5, 6, 7, 8, 10 };
+
+#define CIRCLES_COUNT ARRAY_SIZE(circles_radii)
+
+static struct circle circles[CIRCLES_COUNT];
+static uint8_t circles_frame[OLED_PAGES * OLED_DISPLAY_WIDTH];
+static uint16_t circles_timer;
+static uint16_t circles_idle_timer;
+static bool circles_seeded;
+
+static uint32_t square_root(uint32_t value)
+{
+    uint32_t root = 0;
+
+    for (uint32_t bit = 1ul << 30; bit; bit >>= 2)
+    {
+        if (value >= root + bit)
+        {
+            value -= root + bit;
+            root = (root >> 1) + bit;
+        }
+        else
+        {
+            root >>= 1;
+        }
+    }
+
+    return root;
+}
+
+static int16_t circles_pixel(int32_t position)
+{
+    return (position + CIRCLES_ONE / 2) >> CIRCLES_SHIFT;
+}
+
+static void circles_seed(void)
+{
+    for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
+    {
+        struct circle *circle = &circles[i];
+        uint8_t radius = circles_radii[i];
+
+        circle->radius = radius;
+        circle->x = (int32_t)(radius + random_value() % (OLED_DISPLAY_WIDTH - radius * 2)) << CIRCLES_SHIFT;
+        circle->y = (int32_t)(radius + random_value() % (OLED_DISPLAY_HEIGHT - radius * 2)) << CIRCLES_SHIFT;
+        circle->vx = 0;
+        circle->vy = 0;
+    }
+}
+
+// Blasts every circle sideways away from the point and always upwards, fading with distance
+// Most keys sit above the resting circles, so a plain radial push would only pin them to the floor
+static void circles_kick(uint8_t x, uint8_t y)
+{
+    for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
+    {
+        struct circle *circle = &circles[i];
+        int16_t dx = circles_pixel(circle->x) - x;
+        int16_t dy = circles_pixel(circle->y) - y;
+        int16_t reach = (dx < 0 ? -dx : dx) + (dy < 0 ? -dy : dy) + 1;
+        int32_t falloff = dx * dx + dy * dy + CIRCLES_KICK_SOFTENING;
+
+        circle->vx += dx * CIRCLES_KICK / falloff;
+        circle->vy -= reach * CIRCLES_KICK / falloff;
+    }
+}
+
+static void circles_key_event(keypos_t key, bool pressed)
+{
+    uint8_t x, y;
+    if (!pressed || !key_position(key, &x, &y)) return;
+
+    circles_idle_timer = timer_read();
+    circles_kick(x, y);
+}
+
+static void circles_wall(int32_t *position, int32_t *velocity, int32_t low, int32_t high)
+{
+    if (*position < low)
+    {
+        *position = low;
+        if (*velocity < 0) *velocity = -*velocity * CIRCLES_RESTITUTION >> CIRCLES_SHIFT;
+    }
+    else if (*position > high)
+    {
+        *position = high;
+        if (*velocity > 0) *velocity = -*velocity * CIRCLES_RESTITUTION >> CIRCLES_SHIFT;
+    }
+}
+
+// Mass goes with area, so each circle gives way by the other's share of the total
+static void circles_collide(struct circle *a, struct circle *b)
+{
+    int32_t dx = b->x - a->x;
+    int32_t dy = b->y - a->y;
+    int32_t reach = (int32_t)(a->radius + b->radius) << CIRCLES_SHIFT;
+
+    if (dx >= reach || dx <= -reach || dy >= reach || dy <= -reach) return;
+
+    int32_t distance_squared = dx * dx + dy * dy;
+    if (distance_squared >= reach * reach) return;
+
+    int32_t distance = square_root(distance_squared);
+
+    // Coincident centres have no normal of their own, so pick one
+    if (!distance)
+    {
+        dx = 1;
+        distance = 1;
+    }
+
+    int32_t nx = dx * CIRCLES_ONE / distance;
+    int32_t ny = dy * CIRCLES_ONE / distance;
+    int32_t mass_a = a->radius * a->radius;
+    int32_t mass_b = b->radius * b->radius;
+    int32_t total = mass_a + mass_b;
+
+    int32_t overlap = reach - distance;
+    int32_t push_a = overlap * mass_b / total;
+    int32_t push_b = overlap - push_a;
+
+    a->x -= nx * push_a >> CIRCLES_SHIFT;
+    a->y -= ny * push_a >> CIRCLES_SHIFT;
+    b->x += nx * push_b >> CIRCLES_SHIFT;
+    b->y += ny * push_b >> CIRCLES_SHIFT;
+
+    int32_t closing = ((a->vx - b->vx) * nx + (a->vy - b->vy) * ny) >> CIRCLES_SHIFT;
+    if (closing <= 0) return;
+
+    int32_t impulse = closing * (CIRCLES_ONE + CIRCLES_RESTITUTION) >> CIRCLES_SHIFT;
+    int32_t kick_a = impulse * mass_b / total;
+    int32_t kick_b = impulse - kick_a;
+
+    a->vx -= nx * kick_a >> CIRCLES_SHIFT;
+    a->vy -= ny * kick_a >> CIRCLES_SHIFT;
+    b->vx += nx * kick_b >> CIRCLES_SHIFT;
+    b->vy += ny * kick_b >> CIRCLES_SHIFT;
+}
+
+static void circles_plot(int16_t x, int16_t y)
+{
+    if (x < 0 || x >= OLED_DISPLAY_WIDTH || y < 0 || y >= OLED_DISPLAY_HEIGHT) return;
+    circles_frame[y / 8 * OLED_DISPLAY_WIDTH + x] |= 1 << (y % 8);
+}
+
+static void circles_draw(void)
+{
+    memset(circles_frame, 0, sizeof(circles_frame));
+
+    for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
+    {
+        int16_t x = circles_pixel(circles[i].x);
+        int16_t y = circles_pixel(circles[i].y);
+        int16_t radius = circles[i].radius;
+
+        // Pixels within half a pixel of the radius, r - 0.5 < d <= r + 0.5 squared and rounded
+        for (int16_t dy = -radius; dy <= radius; dy++)
+        {
+            for (int16_t dx = -radius; dx <= radius; dx++)
+            {
+                int16_t distance_squared = dx * dx + dy * dy;
+                if (distance_squared > radius * radius - radius && distance_squared <= radius * radius + radius) circles_plot(x + dx, y + dy);
+            }
+        }
+    }
+
+    for (uint16_t i = 0; i < sizeof(circles_frame); i++) oled_write_raw_byte(circles_frame[i], i);
+}
+
+static void circles_init(void)
+{
+    circles_timer = timer_read();
+    circles_idle_timer = timer_read();
+
+    if (!circles_seeded)
+    {
+        circles_seeded = true;
+        circles_seed();
+    }
+
+    circles_draw();
+}
+
+static void circles_update(void)
+{
+    if (timer_elapsed(circles_timer) < CIRCLES_FRAME_DURATION) return;
+    circles_timer = timer_read();
+
+    if (timer_elapsed(circles_idle_timer) > CIRCLES_IDLE_DURATION)
+    {
+        circles_idle_timer = timer_read();
+        circles_kick(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT);
+    }
+
+    for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
+    {
+        struct circle *circle = &circles[i];
+
+        circle->vy += CIRCLES_GRAVITY;
+        circle->x += circle->vx;
+        circle->y += circle->vy;
+    }
+
+    for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
+    {
+        for (uint8_t j = i + 1; j < CIRCLES_COUNT; j++) circles_collide(&circles[i], &circles[j]);
+    }
+
+    // Walls go last so no circle is ever drawn off screen
+    for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
+    {
+        struct circle *circle = &circles[i];
+        int32_t radius = circle->radius;
+
+        circles_wall(&circle->x, &circle->vx, radius << CIRCLES_SHIFT, (OLED_DISPLAY_WIDTH - 1 - radius) << CIRCLES_SHIFT);
+        circles_wall(&circle->y, &circle->vy, radius << CIRCLES_SHIFT, (OLED_DISPLAY_HEIGHT - 1 - radius) << CIRCLES_SHIFT);
+    }
+
+    circles_draw();
+}
+
+static void circles_reset(void)
+{
+    circles_seeded = false;
+}
+
+//==============================================================================
 // Game of life screen
 //==============================================================================
 
@@ -970,6 +1219,7 @@ static const char *const select_names[USER_SCREEN_COUNT] = {
     [USER_SCREEN_BONGO_CAT]   = "Bongo cat",
     [USER_SCREEN_LIFE]        = "Game of life",
     [USER_SCREEN_RIPPLE]      = "Waves",
+    [USER_SCREEN_CIRCLES]     = "Ball pit",
     [USER_SCREEN_SYSTEM_INFO] = "System info"
 };
 
@@ -1201,6 +1451,7 @@ void oled_key_event(uint16_t keycode, keypos_t key, bool pressed)
         case USER_SCREEN_BONGO_CAT: bongo_key_event(keycode, pressed); break;
         case USER_SCREEN_LIFE:      life_key_event(key, pressed);      break;
         case USER_SCREEN_RIPPLE:    ripple_key_event(key, pressed);    break;
+        case USER_SCREEN_CIRCLES:   circles_key_event(key, pressed);   break;
     }
 }
 
@@ -1217,6 +1468,7 @@ static void render_screen(int screen)
             case USER_SCREEN_BONGO_CAT: bongo_cat_init(); break;
             case USER_SCREEN_LIFE:      life_init();      break;
             case USER_SCREEN_RIPPLE:    ripple_init();    break;
+            case USER_SCREEN_CIRCLES:   circles_init();   break;
             case SYSTEM_SCREEN_LOGO:    logo_init();      break;
         }
     }
@@ -1227,6 +1479,7 @@ static void render_screen(int screen)
         case USER_SCREEN_BONGO_CAT:    bongo_cat_update();     break;
         case USER_SCREEN_LIFE:         life_update();          break;
         case USER_SCREEN_RIPPLE:       ripple_update();        break;
+        case USER_SCREEN_CIRCLES:      circles_update();       break;
         case USER_SCREEN_SYSTEM_INFO:  system_info_update();   break;
         case SYSTEM_SCREEN_LOGO:       logo_update();          break;
         case SYSTEM_SCREEN_SELECT:     screen_select_update(); break;
@@ -1292,4 +1545,5 @@ void oled_restart(void)
     bongo_cat_reset();
     life_reset();
     ripple_reset();
+    circles_reset();
 }
