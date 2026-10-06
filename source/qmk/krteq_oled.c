@@ -5,7 +5,6 @@
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
 #define INDICATORS_LAYER 1
 #define INPUT_LOCK_LAYER 4
-#define SCREEN_SELECT_DURATION 1000
 
 // Offsets into the keyboard datablock, sized by EECONFIG_KB_DATA_SIZE
 #define DATA_SCREEN_OFFSET 0
@@ -29,9 +28,6 @@ enum screens
 static int current_user_screen = 0;
 static int selected_user_screen;
 static int last_rendered_screen = -1;
-static bool selecting;
-static uint16_t select_timer;
-static bool rgb_status_showing;
 
 static void load_user_screen(void)
 {
@@ -46,29 +42,6 @@ static void save_user_screen(void)
 {
     uint8_t screen = current_user_screen;
     eeconfig_update_kb_datablock(&screen, DATA_SCREEN_OFFSET, sizeof(screen));
-}
-
-// A fresh selection starts from the screen in use
-static void start_selecting(void)
-{
-    if (!selecting) selected_user_screen = current_user_screen;
-    selecting = true;
-    select_timer = timer_read();
-    rgb_status_showing = false;
-}
-
-void default_user_screen(void)
-{
-    start_selecting();
-    selected_user_screen = 0;
-}
-
-void shift_user_screen(int shift)
-{
-    start_selecting();
-    selected_user_screen += shift;
-    selected_user_screen %= USER_SCREEN_COUNT;
-    if (selected_user_screen < 0) selected_user_screen += USER_SCREEN_COUNT;
 }
 
 //==============================================================================
@@ -967,9 +940,39 @@ static void logo_reset(void)
 }
 
 //==============================================================================
+// Overlays
+//==============================================================================
+
+// Short lived screen shown over the user screen, closing itself once its time is up
+static int overlay = -1;
+static uint16_t overlay_timer;
+
+// A selection is kept however it ends, timed out or cut short
+static void close_overlay(void)
+{
+    if (overlay == SYSTEM_SCREEN_SELECT && selected_user_screen != current_user_screen)
+    {
+        bongo_save_hits();
+        current_user_screen = selected_user_screen;
+        save_user_screen();
+    }
+
+    overlay = -1;
+}
+
+static void open_overlay(int screen)
+{
+    if (overlay != screen) close_overlay();
+
+    overlay = screen;
+    overlay_timer = timer_read();
+}
+
+//==============================================================================
 // Screen select screen
 //==============================================================================
 
+#define SELECT_DURATION 1000
 #define SELECT_SQUARE_SIZE 7
 #define SELECT_SQUARE_GAP 4
 #define SELECT_SQUARE_Y 4
@@ -988,6 +991,27 @@ static const char *const select_names[USER_SCREEN_COUNT] = {
 
 static int select_shown_screen;
 static bool select_redraw;
+
+// A fresh selection starts from the screen in use
+static void start_selecting(void)
+{
+    if (overlay != SYSTEM_SCREEN_SELECT) selected_user_screen = current_user_screen;
+    open_overlay(SYSTEM_SCREEN_SELECT);
+}
+
+void default_user_screen(void)
+{
+    start_selecting();
+    selected_user_screen = 0;
+}
+
+void shift_user_screen(int shift)
+{
+    start_selecting();
+    selected_user_screen += shift;
+    selected_user_screen %= USER_SCREEN_COUNT;
+    if (selected_user_screen < 0) selected_user_screen += USER_SCREEN_COUNT;
+}
 
 static void draw_square(uint8_t x, uint8_t y, bool filled)
 {
@@ -1008,6 +1032,12 @@ static void screen_select_init(void)
 
 static void screen_select_update(void)
 {
+    if (timer_elapsed(overlay_timer) >= SELECT_DURATION)
+    {
+        close_overlay();
+        return;
+    }
+
     if (!select_redraw && select_shown_screen == selected_user_screen) return;
 
     select_redraw = false;
@@ -1076,23 +1106,16 @@ static const char *const rgb_effect_names[RGB_MATRIX_EFFECT_MAX] = {
     [RGB_MATRIX_SOLID_REACTIVE_CROSS] = "Reactive cross"
 };
 
-static rgb_config_t rgb_status_config;
-static uint16_t rgb_status_timer;
 static int8_t rgb_status_component;
 static bool rgb_status_redraw;
 
 static void rgb_status_show(int8_t component)
 {
-    // The config loaded at boot is not a change
-    if (!logo_finished) return;
-
     rgb_status_component = component;
-    rgb_status_showing = true;
-    rgb_status_timer = timer_read();
     rgb_status_redraw = true;
+    open_overlay(SYSTEM_SCREEN_RGB);
 }
 
-// Keys show their component even at a limit, where the config does not change
 static int8_t rgb_key_component(uint16_t keycode)
 {
     switch (keycode)
@@ -1106,25 +1129,6 @@ static int8_t rgb_key_component(uint16_t keycode)
         case RM_SPDU: case RM_SPDD:       return RGB_STATUS_SPEED;
         default:                          return RGB_STATUS_NONE;
     }
-}
-
-// Polls the config so changes from VIA and EEPROM resets are caught too
-static void rgb_status_poll(void)
-{
-    if (rgb_status_showing && timer_elapsed(rgb_status_timer) >= RGB_STATUS_DURATION) rgb_status_showing = false;
-
-    rgb_config_t config = rgb_matrix_config;
-    if (config.raw == rgb_status_config.raw) return;
-
-    rgb_config_t previous = rgb_status_config;
-    rgb_status_config = config;
-
-    if      (config.enable != previous.enable) rgb_status_show(RGB_STATUS_POWER);
-    else if (config.mode   != previous.mode)   rgb_status_show(RGB_STATUS_EFFECT);
-    else if (config.hsv.h  != previous.hsv.h)  rgb_status_show(RGB_STATUS_HUE);
-    else if (config.hsv.s  != previous.hsv.s)  rgb_status_show(RGB_STATUS_SATURATION);
-    else if (config.hsv.v  != previous.hsv.v)  rgb_status_show(RGB_STATUS_BRIGHTNESS);
-    else if (config.speed  != previous.speed)  rgb_status_show(RGB_STATUS_SPEED);
 }
 
 static void draw_slider(const char *title, uint8_t value, uint8_t maximum)
@@ -1163,6 +1167,12 @@ static void rgb_status_init(void)
 
 static void rgb_status_update(void)
 {
+    if (timer_elapsed(overlay_timer) >= RGB_STATUS_DURATION)
+    {
+        close_overlay();
+        return;
+    }
+
     if (!rgb_status_redraw) return;
     rgb_status_redraw = false;
 
@@ -1284,16 +1294,6 @@ oled_rotation_t oled_init_kb(oled_rotation_t rotation)
     return OLED_ROTATION_180;
 }
 
-// Screen forced by the active layer, or -1 when the user screen shows through
-static int layer_overlay(void)
-{
-    uint8_t layer = get_highest_layer(layer_state);
-
-    if (layer >= INPUT_LOCK_LAYER) return SYSTEM_SCREEN_INPUT_LOCK;
-    if (layer == INDICATORS_LAYER) return USER_SCREEN_INDICATORS;
-    return -1;
-}
-
 bool oled_task_kb(void)
 {
     if (!oled_task_user())
@@ -1301,48 +1301,34 @@ bool oled_task_kb(void)
         return false;
     }
 
-    static int previous_overlay = -1;
-    int overlay = layer_overlay();
-    bool interrupted = overlay >= 0 && overlay != previous_overlay;
-    previous_overlay = overlay;
-
-    if (selecting && (interrupted || timer_elapsed(select_timer) >= SCREEN_SELECT_DURATION))
-    {
-        selecting = false;
-
-        if (selected_user_screen != current_user_screen)
-        {
-            bongo_save_hits();
-            current_user_screen = selected_user_screen;
-            save_user_screen();
-        }
-    }
-
-    if (interrupted) rgb_status_showing = false;
-
-    rgb_status_poll();
+    uint8_t layer = get_highest_layer(layer_state);
+    int screen;
 
     if (!logo_finished)
     {
-        render_screen(SYSTEM_SCREEN_LOGO);
+        screen = SYSTEM_SCREEN_LOGO;
     }
-    else if (rgb_status_showing)
+    else if (layer >= INPUT_LOCK_LAYER)
     {
-        render_screen(SYSTEM_SCREEN_RGB);
+        screen = SYSTEM_SCREEN_INPUT_LOCK;
     }
-    else if (selecting)
+    else if (layer == INDICATORS_LAYER)
     {
-        render_screen(SYSTEM_SCREEN_SELECT);
+        screen = USER_SCREEN_INDICATORS;
     }
     else if (overlay >= 0)
     {
-        render_screen(overlay);
+        screen = overlay;
     }
     else
     {
-        render_screen(current_user_screen);
+        screen = current_user_screen;
     }
 
+    // An overlay outranked by another screen is cut short rather than left waiting underneath
+    if (overlay >= 0 && screen != overlay) close_overlay();
+
+    render_screen(screen);
     return false;
 }
 
