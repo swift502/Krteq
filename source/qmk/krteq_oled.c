@@ -28,6 +28,7 @@ enum screens
 static int current_user_screen = 0;
 static int selected_user_screen;
 static int last_rendered_screen = -1;
+static bool screen_redraw; // Set on a screen switch or by events, cleared by the screen once drawn
 
 static void load_user_screen(void)
 {
@@ -108,17 +109,22 @@ static void draw_text(uint8_t center_x, uint8_t y, const char *text, bool invert
     draw_text_at(center_x - strlen(text) * OLED_FONT_WIDTH / 2, y, text, inverted);
 }
 
-// Corner pixels are left out to round the box off
-static void draw_box(uint8_t left, uint8_t top, uint8_t width, uint8_t height, bool filled)
+static void fill_rect(uint8_t left, uint8_t top, uint8_t width, uint8_t height, bool on)
 {
     for (uint8_t iy = 0; iy < height; iy++)
     {
         for (uint8_t ix = 0; ix < width; ix++)
         {
-            if ((ix == 0 || ix == width - 1) && (iy == 0 || iy == height - 1)) continue;
-            oled_write_pixel(left + ix, top + iy, filled);
+            oled_write_pixel(left + ix, top + iy, on);
         }
     }
+}
+
+// Two overlapping rects leave the corner pixels out to round the box off
+static void draw_box(uint8_t left, uint8_t top, uint8_t width, uint8_t height, bool filled)
+{
+    fill_rect(left + 1, top, width - 2, height, filled);
+    fill_rect(left, top + 1, width, height - 2, filled);
 }
 
 // Icon and label are centered together, so the pair shifts with the length of the label
@@ -136,18 +142,7 @@ static void draw_icon_text(const uint8_t *image, const char *text)
     draw_text(left + ICON_SIZE + ICON_TEXT_GAP + text_width / 2, ICON_TEXT_Y, text, false);
 }
 
-static void draw_number(uint8_t center_x, uint8_t y, uint32_t value)
-{
-    char text[11];
-    char *digit = text + sizeof(text) - 1;
-
-    *digit = '\0';
-    do *--digit = '0' + value % 10; while (value /= 10);
-
-    draw_text(center_x, y, digit, false);
-}
-
-// Writes the decimal value without a terminator, padded with zeros up to the given width
+// Writes the decimal value padded with zeros up to the given width, returning the terminator so writes can chain on
 static char *print_number(char *out, uint32_t value, uint8_t width)
 {
     char digits[10];
@@ -157,7 +152,15 @@ static char *print_number(char *out, uint32_t value, uint8_t width)
     while (count < width) digits[count++] = '0';
 
     while (count) *out++ = digits[--count];
+    *out = '\0';
     return out;
+}
+
+static void draw_number(uint8_t center_x, uint8_t y, uint32_t value)
+{
+    char text[11];
+    print_number(text, value, 1);
+    draw_text(center_x, y, text, false);
 }
 
 //==============================================================================
@@ -208,7 +211,6 @@ static uint16_t random_value(void)
 #define INDICATOR_ACC_X 97
 
 static uint8_t indicator_leds;
-static bool indicator_redraw;
 
 static void render_indicator(uint8_t x, const char *label, bool enabled)
 {
@@ -218,17 +220,12 @@ static void render_indicator(uint8_t x, const char *label, bool enabled)
     draw_text(x + width / 2, INDICATOR_TOP + INDICATOR_PADDING_Y, label, enabled);
 }
 
-static void indicators_init(void)
-{
-    indicator_redraw = true;
-}
-
 static void indicators_update(void)
 {
     led_t leds = host_keyboard_led_state();
-    if (!indicator_redraw && leds.raw == indicator_leds) return;
+    if (!screen_redraw && leds.raw == indicator_leds) return;
 
-    indicator_redraw = false;
+    screen_redraw = false;
     indicator_leds = leds.raw;
 
     render_indicator(INDICATOR_NUM_X, "NUM", leds.num_lock);
@@ -308,7 +305,6 @@ static uint16_t bongo_last_keycode;
 static uint16_t bongo_paw_timer[BONGO_PAW_COUNT];
 static uint8_t bongo_paw_state[BONGO_PAW_COUNT];
 static uint8_t bongo_paw;
-static bool bongo_redraw;
 static uint32_t bongo_sleep_timer;
 static uint16_t bongo_blink_timer;
 static uint16_t bongo_blink_delay;
@@ -324,7 +320,7 @@ static void bongo_schedule_blink(void)
 
 static void bongo_wake(void)
 {
-    if (bongo_sleeping || bongo_blinking) bongo_redraw = true;
+    if (bongo_sleeping || bongo_blinking) screen_redraw = true;
     bongo_sleeping = false;
     bongo_sleep_timer = timer_read32();
     bongo_schedule_blink();
@@ -360,7 +356,7 @@ static void bongo_key_event(uint16_t keycode, bool pressed)
 
     bongo_paw_state[bongo_paw] = BONGO_PAW_RAISED;
     bongo_paw_timer[bongo_paw] = timer_read();
-    bongo_redraw = true;
+    screen_redraw = true;
 }
 
 static void advance_paw(uint8_t paw)
@@ -382,7 +378,7 @@ static void advance_paw(uint8_t paw)
     }
 
     bongo_paw_timer[paw] = timer_read();
-    bongo_redraw = true;
+    screen_redraw = true;
 }
 
 // Blinking only fills quiet moments, so any paw movement pushes the next blink back
@@ -395,7 +391,7 @@ static void advance_idle(void)
     {
         bongo_sleeping = true;
         bongo_blinking = false;
-        bongo_redraw = true;
+        screen_redraw = true;
         bongo_save_hits();
         return;
     }
@@ -421,15 +417,13 @@ static void advance_idle(void)
         bongo_blink_timer = timer_read();
     }
 
-    bongo_redraw = true;
+    screen_redraw = true;
 }
 
 static void draw_trophies(uint32_t trophies)
 {
     char text[12];
-    char *end = print_number(text, trophies, 1);
-    *end++ = 'x';
-    *end = '\0';
+    strcpy(print_number(text, trophies, 1), "x");
 
     uint8_t text_width = strlen(text) * OLED_FONT_WIDTH;
     uint8_t left = BONGO_HITS_X - (text_width + BONGO_TROPHY_GAP + BONGO_TROPHY_WIDTH) / 2;
@@ -445,7 +439,6 @@ static void bongo_cat_init(void)
     memset(bongo_paw_state, BONGO_PAW_IDLE, sizeof(bongo_paw_state));
     bongo_schedule_blink();
     bongo_sleep_timer = timer_read32();
-    bongo_redraw = true;
 }
 
 static void bongo_cat_update(void)
@@ -453,8 +446,8 @@ static void bongo_cat_update(void)
     for (uint8_t paw = 0; paw < BONGO_PAW_COUNT; paw++) advance_paw(paw);
     advance_idle();
 
-    if (!bongo_redraw) return;
-    bongo_redraw = false;
+    if (!screen_redraw) return;
+    screen_redraw = false;
 
     oled_clear();
     draw_image(bongo_sleeping || bongo_blinking ? bongo_cat_sleep_image : bongo_cat_image, BONGO_CAT_X, BONGO_CAT_Y);
@@ -816,7 +809,6 @@ static void life_reset(void)
 _Static_assert(OLED_DISPLAY_HEIGHT / INFO_ROW_HEIGHT >= 4, "The system info screen needs four rows of text");
 
 static uint16_t info_timer;
-static bool info_redraw;
 
 // DEVICE_VER packs the keyboard.json version as BCD, two digits of major and one each of the rest
 static void print_device_version(char *out)
@@ -826,8 +818,7 @@ static void print_device_version(char *out)
     *out++ = '.';
     out = print_number(out, DEVICE_VER >> 4 & 0xF, 1);
     *out++ = '.';
-    out = print_number(out, DEVICE_VER & 0xF, 1);
-    *out = '\0';
+    print_number(out, DEVICE_VER & 0xF, 1);
 }
 
 static uint16_t bcd_value(uint16_t bcd)
@@ -844,8 +835,7 @@ static void print_qmk_version(char *out)
     *out++ = '.';
     out = print_number(out, bcd_value(QMK_VERSION_BCD >> 16 & 0xFF), 1);
     *out++ = '.';
-    out = print_number(out, bcd_value(QMK_VERSION_BCD & 0xFFFF), 1);
-    *out = '\0';
+    print_number(out, bcd_value(QMK_VERSION_BCD & 0xFFFF), 1);
 }
 
 static void print_uptime(char *out)
@@ -863,8 +853,7 @@ static void print_uptime(char *out)
     *out++ = ':';
     out = print_number(out, seconds / 60 % 60, 2);
     *out++ = ':';
-    out = print_number(out, seconds % 60, 2);
-    *out = '\0';
+    print_number(out, seconds % 60, 2);
 }
 
 static void render_info_row(uint8_t row, const char *label, const char *value)
@@ -876,16 +865,11 @@ static void render_info_row(uint8_t row, const char *label, const char *value)
     draw_text_at(width < OLED_DISPLAY_WIDTH ? OLED_DISPLAY_WIDTH - width : 0, y, value, false);
 }
 
-static void system_info_init(void)
-{
-    info_redraw = true;
-}
-
 static void system_info_update(void)
 {
-    if (!info_redraw && timer_elapsed(info_timer) < INFO_INTERVAL) return;
+    if (!screen_redraw && timer_elapsed(info_timer) < INFO_INTERVAL) return;
 
-    info_redraw = false;
+    screen_redraw = false;
     info_timer = timer_read();
 
     char device_version[12];
@@ -989,14 +973,12 @@ static const char *const select_names[USER_SCREEN_COUNT] = {
     [USER_SCREEN_SYSTEM_INFO] = "System info"
 };
 
-static int select_shown_screen;
-static bool select_redraw;
-
 // A fresh selection starts from the screen in use
 static void start_selecting(void)
 {
     if (overlay != SYSTEM_SCREEN_SELECT) selected_user_screen = current_user_screen;
     open_overlay(SYSTEM_SCREEN_SELECT);
+    screen_redraw = true;
 }
 
 void default_user_screen(void)
@@ -1015,19 +997,8 @@ void shift_user_screen(int shift)
 
 static void draw_square(uint8_t x, uint8_t y, bool filled)
 {
-    for (uint8_t iy = 0; iy < SELECT_SQUARE_SIZE; iy++)
-    {
-        for (uint8_t ix = 0; ix < SELECT_SQUARE_SIZE; ix++)
-        {
-            bool edge = ix == 0 || iy == 0 || ix == SELECT_SQUARE_SIZE - 1 || iy == SELECT_SQUARE_SIZE - 1;
-            oled_write_pixel(x + ix, y + iy, filled || edge);
-        }
-    }
-}
-
-static void screen_select_init(void)
-{
-    select_redraw = true;
+    fill_rect(x, y, SELECT_SQUARE_SIZE, SELECT_SQUARE_SIZE, true);
+    if (!filled) fill_rect(x + 1, y + 1, SELECT_SQUARE_SIZE - 2, SELECT_SQUARE_SIZE - 2, false);
 }
 
 static void screen_select_update(void)
@@ -1038,10 +1009,8 @@ static void screen_select_update(void)
         return;
     }
 
-    if (!select_redraw && select_shown_screen == selected_user_screen) return;
-
-    select_redraw = false;
-    select_shown_screen = selected_user_screen;
+    if (!screen_redraw) return;
+    screen_redraw = false;
 
     oled_clear();
 
@@ -1062,17 +1031,10 @@ static const uint8_t input_lock_image[] = {
 #embed "bitmaps/input_lock.bmp"
 };
 
-static bool input_lock_redraw;
-
-static void input_lock_init(void)
-{
-    input_lock_redraw = true;
-}
-
 static void input_lock_update(void)
 {
-    if (!input_lock_redraw) return;
-    input_lock_redraw = false;
+    if (!screen_redraw) return;
+    screen_redraw = false;
 
     draw_icon_text(input_lock_image, "Input lock");
 }
@@ -1107,13 +1069,12 @@ static const char *const rgb_effect_names[RGB_MATRIX_EFFECT_MAX] = {
 };
 
 static int8_t rgb_status_component;
-static bool rgb_status_redraw;
 
 static void rgb_status_show(int8_t component)
 {
     rgb_status_component = component;
-    rgb_status_redraw = true;
     open_overlay(SYSTEM_SCREEN_RGB);
+    screen_redraw = true;
 }
 
 static int8_t rgb_key_component(uint16_t keycode)
@@ -1135,20 +1096,12 @@ static void draw_slider(const char *title, uint8_t value, uint8_t maximum)
 {
     uint8_t fill = (uint16_t)value * (RGB_BAR_WIDTH - RGB_BAR_PADDING * 2) / maximum;
 
-    for (uint8_t iy = 0; iy < RGB_BAR_HEIGHT; iy++)
-    {
-        for (uint8_t ix = 0; ix < RGB_BAR_WIDTH; ix++)
-        {
-            bool edge = ix == 0 || iy == 0 || ix == RGB_BAR_WIDTH - 1 || iy == RGB_BAR_HEIGHT - 1;
-            bool filled = ix >= RGB_BAR_PADDING && ix < RGB_BAR_PADDING + fill &&
-                          iy >= RGB_BAR_PADDING && iy < RGB_BAR_HEIGHT - RGB_BAR_PADDING;
-
-            oled_write_pixel(ix, RGB_CONTENT_Y + iy, edge || filled);
-        }
-    }
+    fill_rect(0, RGB_CONTENT_Y, RGB_BAR_WIDTH, RGB_BAR_HEIGHT, true);
+    fill_rect(1, RGB_CONTENT_Y + 1, RGB_BAR_WIDTH - 2, RGB_BAR_HEIGHT - 2, false);
+    fill_rect(RGB_BAR_PADDING, RGB_CONTENT_Y + RGB_BAR_PADDING, fill, RGB_BAR_HEIGHT - RGB_BAR_PADDING * 2, true);
 
     char text[4];
-    *print_number(text, value, 1) = '\0';
+    print_number(text, value, 1);
 
     draw_text_at(0, RGB_TITLE_Y, title, false);
     draw_text_at(OLED_DISPLAY_WIDTH - strlen(text) * OLED_FONT_WIDTH, RGB_TITLE_Y, text, false);
@@ -1160,11 +1113,6 @@ static void draw_labelled(const char *title, const char *text)
     draw_text(OLED_DISPLAY_WIDTH / 2, RGB_CONTENT_Y, text, false);
 }
 
-static void rgb_status_init(void)
-{
-    rgb_status_redraw = true;
-}
-
 static void rgb_status_update(void)
 {
     if (timer_elapsed(overlay_timer) >= RGB_STATUS_DURATION)
@@ -1173,21 +1121,21 @@ static void rgb_status_update(void)
         return;
     }
 
-    if (!rgb_status_redraw) return;
-    rgb_status_redraw = false;
+    if (!screen_redraw) return;
+    screen_redraw = false;
 
     uint8_t mode = rgb_matrix_get_mode();
     const char *name = mode < RGB_MATRIX_EFFECT_MAX ? rgb_effect_names[mode] : NULL;
     hsv_t hsv = rgb_matrix_get_hsv();
 
     char number[4];
-    *print_number(number, mode, 1) = '\0';
+    print_number(number, mode, 1);
 
     // Mode 0 is RGB_MATRIX_NONE, so effects are already numbered from 1
     char effect_title[20] = "RGB Effect ";
     char *out = print_number(effect_title + strlen(effect_title), mode, 1);
     *out++ = '/';
-    *print_number(out, RGB_MATRIX_EFFECT_MAX - 1, 1) = '\0';
+    print_number(out, RGB_MATRIX_EFFECT_MAX - 1, 1);
 
     oled_clear();
 
@@ -1257,19 +1205,15 @@ static void render_screen(int screen)
     if (screen != last_rendered_screen)
     {
         last_rendered_screen = screen;
+        screen_redraw = true;
         oled_clear();
 
         switch (screen)
         {
-            case USER_SCREEN_INDICATORS:   indicators_init();    break;
-            case USER_SCREEN_BONGO_CAT:    bongo_cat_init();     break;
-            case USER_SCREEN_LIFE:         life_init();          break;
-            case USER_SCREEN_RIPPLE:       ripple_init();        break;
-            case USER_SCREEN_SYSTEM_INFO:  system_info_init();   break;
-            case SYSTEM_SCREEN_LOGO:       logo_init();          break;
-            case SYSTEM_SCREEN_SELECT:     screen_select_init(); break;
-            case SYSTEM_SCREEN_INPUT_LOCK: input_lock_init();    break;
-            case SYSTEM_SCREEN_RGB:        rgb_status_init();    break;
+            case USER_SCREEN_BONGO_CAT: bongo_cat_init(); break;
+            case USER_SCREEN_LIFE:      life_init();      break;
+            case USER_SCREEN_RIPPLE:    ripple_init();    break;
+            case SYSTEM_SCREEN_LOGO:    logo_init();      break;
         }
     }
 
