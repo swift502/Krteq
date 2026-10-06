@@ -1168,9 +1168,13 @@ void render_shutdown_screen(bool jump_to_bootloader)
     oled_clear();
 
     if (jump_to_bootloader)
+    {
         draw_icon_text(bootloader_image, "Bootloader");
+    }
     else
+    {
         draw_icon_text(restart_image, "Rebooting");
+    }
 
     oled_render_dirty(true);
 }
