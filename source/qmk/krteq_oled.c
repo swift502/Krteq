@@ -290,12 +290,12 @@ static const uint8_t bongo_paw_down_image[] = {
 #embed "bitmaps/bongo_paw_down.bmp"
 };
 
-static const uint8_t bongo_cat_zz_image[] = {
-#embed "bitmaps/bongo_cat_zz.bmp"
+static const uint8_t bongo_zz_image[] = {
+#embed "bitmaps/bongo_zz.bmp"
 };
 
 static const uint8_t bongo_trophy_image[] = {
-#embed "bitmaps/trophy.bmp"
+#embed "bitmaps/bongo_trophy.bmp"
 };
 
 static const uint8_t bongo_paw_x[BONGO_PAW_COUNT] = { BONGO_PAW_LEFT_X, BONGO_PAW_RIGHT_X };
@@ -462,7 +462,7 @@ static void bongo_cat_update(void)
         draw_image(image, bongo_paw_x[paw], BONGO_PAW_Y);
     }
 
-    if (bongo_sleeping) draw_image(bongo_cat_zz_image, BONGO_ZZ_X, BONGO_ZZ_Y);
+    if (bongo_sleeping) draw_image(bongo_zz_image, BONGO_ZZ_X, BONGO_ZZ_Y);
 
     uint32_t trophies = bongo_hits / BONGO_TROPHY_HITS;
     uint32_t shown = trophies ? bongo_hits % BONGO_TROPHY_HITS : bongo_hits;
