@@ -1,5 +1,10 @@
 ![](images/1.webp)
 
+TODO
+
+- Use the B variant of IS31FL3733
+- Move the OLED display down by few mm
+
 # Krteq
 
 [![](https://img.shields.io/badge/PCB-blue)](#pcb)
