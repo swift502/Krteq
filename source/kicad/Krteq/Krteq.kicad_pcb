@@ -171,7 +171,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -185,10 +185,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9f26513f-9233-41bd-a1df-66e935ea1444")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a386eacc-6f4d-44c3-bc48-8d42e5f22dd6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4123ca6c-9190-46a4-88a1-ce4b922c1b16")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/8e048bb8-8afb-4763-861d-44c9d7f29770")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2067,7 +2115,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -2081,10 +2129,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fec208a0-6283-4919-acad-76da959b6382")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "beeacb7e-fd76-4def-b940-c973dc809aee")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c95cf487-5849-40b9-b363-138066f1a18c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/96cf45f4-1af0-4b60-b690-919ac7b65f20")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4806,7 +4902,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -4820,10 +4916,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "78e8d087-f437-4412-bd22-7ee53b16f834")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2d57abe0-43eb-4a33-a190-b5d41221d06e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "05395bb0-d004-4311-9697-6d9f885d9f09")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ce6ea20d-f42d-4d44-9f91-0da282d74433")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6418,7 +6562,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -6432,10 +6576,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0d0375e7-6a4c-4e3c-8a53-fb019c377d42")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2e5af0ab-01ee-4c0a-ba57-25a2e18e1b33")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2995caa2-fe65-4065-bf7e-001ebc5a1b61")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/6ba543ce-1df7-4aea-96f5-3a479c203596")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9776,7 +9968,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -9790,10 +9982,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fb77e86c-fef5-4cde-a1d2-762b66ffd863")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "938a22eb-f1fb-44ce-8f80-27106a01c5da")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c13496cc-19d9-40f2-8774-004513098e2b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/69521731-b292-484f-be74-39b9a8837efe")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12849,7 +13089,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x03"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -12861,11 +13101,12 @@
 				(justify mirror)
 			)
 		)
-		(property "KiLib_Generator" "connector/pin_header_socket"
-			(at 0 0 0)
-			(layer "B.SilkS")
+		(property "Procurement Type" "DNP"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
 			(hide yes)
-			(uuid "6e2c6ef5-16e7-4ba3-9973-4905af01c6df")
+			(uuid "654bd6d7-fe69-4ea7-a946-db14a8d09626")
 			(effects
 				(font
 					(size 1 1)
@@ -12878,6 +13119,12 @@
 		(path "/68124913-8220-4980-844c-ca35d943d3b8")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
@@ -13019,7 +13266,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Polarized capacitor, small symbol"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -13031,11 +13278,40 @@
 				(justify mirror)
 			)
 		)
-		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
-			(at 0 0 0)
-			(layer "B.SilkS")
+		(property "MPN" "CL21A226MAYNNNE"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
 			(hide yes)
-			(uuid "84ac5672-0fdc-422b-8251-188e1922a338")
+			(uuid "6a30951e-56fe-4af0-b3c6-907261ec4031")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "0805"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "24f81a15-eb49-4140-a5af-4e2fb0c58b1a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1657cf2e-ee0a-4f07-b392-390cbe24d52b")
 			(effects
 				(font
 					(size 1 1)
@@ -13048,6 +13324,12 @@
 		(path "/cb28ebdb-275c-48a4-8c91-e6637317f513")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13281,7 +13563,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -13295,10 +13577,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3a060dbf-04ba-48f2-83b9-79ceaec8289e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0f05f11e-de64-4f5e-bdb5-4196879ed216")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "bcb7a6f9-2733-452c-a661-79fa001b85bb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/5db91326-bc5d-4852-baeb-a98d8dff3521")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -17888,7 +18218,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -17902,10 +18232,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f137efbe-8d91-4266-b8ff-cee5b2a9e474")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9ee51e73-339e-48c9-9a94-87f393c3e839")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c0ebb26a-d74b-4b85-9db2-04554456c75a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/85cfeae9-c026-422b-be5d-071d6b83db0c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18160,7 +18538,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -18174,10 +18552,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "fc21a1ab-71b5-461d-8db7-867b9803cadb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "dd465d27-b428-4047-aac5-5018291b9351")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "780fb2a5-f407-4c3c-b62b-865f42a51c06")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/28fa194d-6aa3-485e-956f-8a274a2b1580")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18432,7 +18858,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -18446,10 +18872,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e2a4e051-2141-4b32-a2f5-6f399b6913bc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e03b39bb-0e83-458b-aea5-81634a035f91")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a7f30f4c-7aa7-4d69-a4b4-d10688a1b433")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/5182cb05-6fe2-4f68-abaa-b1cec40f3087")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -20856,7 +21330,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -20870,10 +21344,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "806a6714-7986-4162-8f8b-bb3ea50a22a3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0075c56d-eb2c-4968-8d52-437064094632")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c72bb71c-350c-4f3d-a4ee-eb35df63bad4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/00ac18ad-bc6c-4bf6-bbea-8ed65bcbe567")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21128,7 +21650,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -21142,10 +21664,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "749c2eb8-c200-4e65-bbce-835b7afdbd8f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "90cb3592-4490-40a9-a8fc-5eeee7e3dbe3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "48025539-dabb-47a2-82b1-791192b21716")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/b9de7003-7407-49d4-bd10-d4db4ab318c1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21400,7 +21970,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -21414,10 +21984,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "000464a3-e73c-4ef2-8636-bbc00caeac61")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "288de84e-9501-42ba-9d43-6f45113d2d09")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6fa4852a-7bc9-41c8-ba75-963dec8257d1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/610c6ff1-9b21-4270-8028-2cb02154d420")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21672,7 +22290,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -21686,10 +22304,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4373cdc4-91dd-4706-a5ff-f31e04fb64c9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ae953d21-5fd1-4061-bc50-b0d77d63acfa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a3e78f7e-da33-49af-861b-6b35573637ef")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/9ae1036e-c0c7-4317-ba62-37f0e1f87e20")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -22878,7 +23544,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -22892,10 +23558,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0d8134f4-70e5-43bc-8c2e-42517e5dc1eb")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2e51a5b6-15fa-4b44-b637-68ec51d112be")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9d3464ab-d990-4048-bfc2-fa5dbc1f1cf4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/018c3d12-89dc-4a90-bb5d-dab81fc89889")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -28104,7 +28818,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -28118,10 +28832,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "874f5eb5-6538-425b-a3e4-9908600babc6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cbe4ce26-4e55-4cf0-b7b5-58c44ad5e16e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "03fb5e7a-885c-49b3-b98c-d0582c8ebd90")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/b02bf5e0-3c74-4300-bef2-9a50a7c1db5b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -28386,20 +29148,7 @@
 				(justify mirror)
 			)
 		)
-		(property "KiLib_Generator" "package/no_lead"
-			(at 0 0 0)
-			(layer "B.SilkS")
-			(hide yes)
-			(uuid "2a44b419-9073-4b40-85d5-2e6a078880c5")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "MPN" "IS31FL3733-QFLS4-TR"
+		(property "MPN" "IS31FL3733B-QFLS4-TR"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -30361,7 +31110,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -30375,10 +31124,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4b23ceb2-f026-4bc6-aebd-b9fa50df8062")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1dd3aca6-6358-435b-b525-bc8d52918b1e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c12f437e-3fa9-46ec-b67e-56329f7ef1e2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/a18ff9ef-b835-4e11-9548-21cda6ff19d5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -30633,7 +31430,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -30647,10 +31444,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7d127536-188b-4dd2-b0b6-642fd840a4a6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1dff5b0d-015d-410c-b615-bc2434f09338")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f67d4a70-9b7f-4d18-9ca9-794fc5abf16d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/356c6855-c9ea-48ff-a478-6f96e986f481")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -30905,7 +31750,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -30919,10 +31764,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d0cc01ca-861c-45f4-961d-9da2f42b4aa5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "587c5158-1c5a-4b5f-85c9-7539fb67cf56")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f1231e30-207c-48a9-8b46-90b46a08e343")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/13a6a814-23e3-46f1-9ee9-e97923cdb263")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -31177,7 +32070,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -31191,10 +32084,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "55a96df7-dd74-46fe-a7ba-a41346bf4f7f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cac2ff5e-3400-4bae-b3ca-175e1d0a834a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4b3ce92a-aecd-47cd-bac2-a1d155abd07e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/f5733096-c4cf-4332-885f-00f8d613e237")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -32048,7 +32989,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -32062,10 +33003,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "796687c7-d163-47b9-81a0-8c932fcd1057")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c13f50ba-1a39-49b9-a762-563937209db4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "57545df4-927a-49f5-98ec-6f3032ec078d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/aa34cdcc-836c-4be7-8e5a-434867988560")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -32320,7 +33309,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -32334,10 +33323,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4f9ce758-c0f8-4256-b293-e799c149051b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b0af6b7f-c3be-40e7-97cd-1e008cc3e146")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0dd64be5-5b5b-43ed-ba3e-a688d8a8e5a9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/788f339c-c354-41fc-9aff-4f3c7109ef83")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -32785,7 +33822,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -32799,10 +33836,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "573b5154-6672-4b79-afa9-d55382ecc840")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4cdec5b5-4ac1-4b97-9780-109536b3b96b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f25aa19c-a605-4e27-9fc1-6944007479fa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/74591d3e-1dcb-47fa-85e1-baace134a4a1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -35402,7 +36487,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -35416,10 +36501,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cf51d156-1656-4011-b942-a210b09b468c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1086c243-5260-41a3-9631-eade68678c61")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9f1443dc-0cda-4f9e-a662-538ce96346a5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/8e7b9355-e68a-40c4-be92-037d4835cdef")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -36932,7 +38065,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -36946,10 +38079,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "15621408-4454-4289-9ef4-c966fb277e4b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "32c10aff-83f7-4601-b3b0-4eec744de250")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5b8e227a-6a03-4981-9324-bbf620d71a2c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/9b4652fb-a214-4002-a3f1-0552413b88cd")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -37204,7 +38385,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -37218,10 +38399,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "39815e89-9275-4261-8fe5-86770abd875b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "928cc786-4059-4726-a16c-e9247d37329b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c52b131e-9c1d-498f-a72a-0d18f0f06667")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/390e8fda-3c7e-43e2-8fae-472db1fa9a73")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -38410,7 +39639,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -38424,10 +39653,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7bd15c69-2a51-4b83-a69e-f8e6945bbb78")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1896bb3b-0636-47e1-acd5-ada4b0ae2f78")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c925dc69-a794-4afa-9926-8b8daeb042a6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/37b8b8e0-55ae-4d84-af3d-ef686af9c888")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -43017,7 +44294,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -43031,10 +44308,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a82beedb-66d2-4121-8405-162dcb20c32a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d6ca2288-e86b-4ae5-a8b3-911e217a4af7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "028722ec-d875-4d14-9083-23529c55466e")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/390c826c-fc83-4e79-a554-b1bb759787d0")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -43289,7 +44614,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -43303,10 +44628,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "beb2d74c-b38a-4b20-b490-db7c157dc1b2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6e41fb80-988a-4f92-9fc4-dda9f7562ba1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "672c8029-d383-4b24-b563-acd33b8ac0f8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/1184ca44-aa7a-4b75-a538-567595edaed3")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -45713,7 +47086,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -45727,10 +47100,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "688fe6b4-4330-42a5-ad0f-dc46cb1f85ea")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "40ca28a2-39f0-4e5a-9c2a-6f4bca77b2df")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "aca7d30b-519e-4b0c-9c7a-b668b2bffc25")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/60acee82-0afd-4fd1-ba8e-e357451469ba")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -45985,7 +47406,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -45999,10 +47420,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d71696d4-b8b7-41a1-b5c9-b65a23b0aed1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4a334c39-78be-4020-8e4d-4ff7de87619a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "54c5e471-5136-4c11-ab6f-07da900e65e8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/114ef921-7d52-4d66-9b22-17b282d6f188")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -47474,7 +48943,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x04"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -47486,11 +48955,12 @@
 				(justify mirror)
 			)
 		)
-		(property "KiLib_Generator" "connector/pin_header_socket"
-			(at 0 0 0)
-			(layer "B.SilkS")
+		(property "Procurement Type" "DNP"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
 			(hide yes)
-			(uuid "5c4d6944-5508-43be-831f-6b5fdce40f5f")
+			(uuid "2beda45f-8365-4296-bde2-fae637dfd36a")
 			(effects
 				(font
 					(size 1 1)
@@ -47503,6 +48973,12 @@
 		(path "/03234fc1-2209-4126-9667-387caec30762")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
@@ -49416,7 +50892,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -49430,10 +50906,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9f541e56-ed17-418b-863b-75e70313cf21")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6aaa8099-05ae-493a-b0ce-19b74f36db25")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cb3cfd10-acaf-4396-b56d-9a725008eee5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/fcb38770-8c40-425c-a34a-ddbe729210a2")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -49687,7 +51211,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Generic connector, single row, 01x04"
 			(at 0 0 270)
 			(layer "B.Fab")
 			(hide yes)
@@ -49699,11 +51223,12 @@
 				(justify mirror)
 			)
 		)
-		(property "KiLib_Generator" "connector/pin_header_socket"
-			(at 0 0 270)
-			(layer "B.SilkS")
+		(property "Procurement Type" "DNP"
+			(at 0 0 90)
+			(unlocked yes)
+			(layer "B.Fab")
 			(hide yes)
-			(uuid "ae53dd8c-056c-4ef6-8fc0-ef6fa441e508")
+			(uuid "f277ff16-c496-4e72-a510-6f60e076eded")
 			(effects
 				(font
 					(size 1 1)
@@ -49716,6 +51241,12 @@
 		(path "/7cd7672c-b2f0-4170-94af-250c0d27578a")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
@@ -51223,7 +52754,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -51237,10 +52768,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9b41b344-8138-47a7-b32f-a4a476177583")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "741ded50-2d7e-48a1-ab93-223c12aa8376")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "aa5ab7f9-771f-4e0b-a6b8-209219e198bc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/8ca50711-9ff1-444d-ab6c-142821a34299")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -53769,7 +55348,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -53783,10 +55362,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "492afe57-424a-46e6-a2cc-b61c59ef28b1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ed690d1c-93ee-4522-8a20-157ff3f6a7b8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "97c03f0e-5013-4e17-b1a1-905c6c34b0b5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/2e17ed08-92b1-4ffd-b120-45e6d65e4afd")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -54041,7 +55668,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -54055,10 +55682,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ac75ad16-da0a-4edd-a686-f1ad54ee3f69")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "97a79c39-ba82-4b33-8860-9ea80f221270")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2126052b-18a2-4ff7-af7f-02b9ebcb2bd1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/547d0d26-011f-4bcf-b290-711bed170130")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -57521,7 +59196,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -57535,10 +59210,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d619a2b4-1ff4-48ba-af02-364063687e54")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2a6c0608-9aea-4742-8281-a2e1ac302e9b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "99ff7286-6ec9-452c-81ba-e3f71a27da26")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/49dc7eb2-3cfc-4597-8a2c-14edef3050a6")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -57793,7 +59516,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -57807,10 +59530,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "def2dd8f-74e1-4223-a333-9344bd90dc04")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "781588d3-b5ca-4044-a978-cfc172eb30d2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5af3d27a-c88e-4d1b-9870-283ebc0471e0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/1cf8d7cc-bb94-441e-9863-3a482fd83669")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -60745,7 +62516,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -60759,10 +62530,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4f2c1e20-0014-4999-84d0-8eb8adefcb6d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "631a100e-7cf7-42e6-bb86-0960a65acccf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8fccc3b2-8fbd-438f-abeb-98ea18101318")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/64c7ed47-2e21-4092-bbc9-ba8fa6996f6b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -62885,7 +64704,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -62899,10 +64718,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "db7ee3b8-8cdd-4898-afb4-55a232f824a7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9ac7b770-4615-4464-92db-3649e3ffaa9c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2cbf0b16-2cac-4aa4-8155-165817183fd2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/e0ac8401-5c19-42cd-9674-06e6696f8ebe")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -63157,7 +65024,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -63171,10 +65038,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f03f5604-8885-4dd9-b7f1-e20725e28558")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "eebeb8a6-9683-4551-904a-2b7d57d332aa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "13ff7ede-43bb-455c-8d62-fd8473efff95")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ee748a80-b554-4931-82ea-673b3eebdbb1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -68383,7 +70298,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -68397,10 +70312,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0d34736f-757e-4169-9748-bab4efeaeb4d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2ef3ebca-9141-45ca-9d8d-59db1ea3b9d9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "95e8eba5-bfd8-4736-8946-bc61d93eacfd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/15eb8d3f-0536-4772-9916-2e435ee95045")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -68655,7 +70618,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -68669,10 +70632,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4445f2e0-bb5b-4090-9302-221999ece561")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7e959cdb-9e2b-4173-a305-b3bc6a3e5a09")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "bcbfaa82-aa0a-4cca-b0db-b7249d81e331")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/e0390359-6e6d-4f00-aa41-17cf53820b8c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -70866,7 +72877,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -70880,10 +72891,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "37db967d-7ea9-47b4-a4c2-8527ba1aebef")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e4fa6d5a-8216-4d5d-8033-a22492d399f0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "14a5f1da-9d87-4a30-8003-c69c46078a74")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/3d6201ef-afe7-4503-8091-56adba81d4c5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -71138,7 +73197,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -71152,10 +73211,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d38d8e25-c412-4ae5-a583-01f69be27a58")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0e7011bd-9c46-4d59-97e5-41e36ce8ee13")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5ab92d06-2bd5-485f-b089-a05d74c02f3a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/10abf206-7ae6-48d7-8c7c-a31570af5f5a")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -72750,7 +74857,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -72764,10 +74871,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b19ded05-d558-4a27-92f8-49a8784d59c9")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "43dcbd08-d2ef-43cd-8cfa-84fce2ea1790")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4347238b-11fd-49ea-8c31-66ce6a63f68a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/f6e6d6c3-cb1b-45a6-861a-d5913ccd380a")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -73022,7 +75177,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -73036,10 +75191,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1b3c4b29-1303-4086-950c-6a4ec6f15cdf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "bab56205-a48a-4e38-a3d8-bf33f55172cf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "d00dc203-f1c5-4683-bd15-26b6985ab759")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/11e75500-fff0-4c8f-b508-310b484a899c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -73294,7 +75497,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -73308,10 +75511,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c96f95d1-92fd-4407-98eb-f323958466f0")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2729226a-8669-4008-877c-ef82eb7a8ced")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "61196071-d467-433d-b372-df6aaf0f59d4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/7eba852f-8607-460e-a0d2-3ac7352d244b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -73566,7 +75817,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -73580,10 +75831,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1e441b3b-e27c-4dfa-9699-8ecdc90adc37")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "81c4a943-b94d-41f7-97ed-831fdf59e3aa")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4f88e097-3d2d-42d8-89d4-9d1f6867d506")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/9de304f8-f5c2-4932-8c1e-4634d024d5cb")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -73838,7 +76137,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -73852,10 +76151,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "89dd4cd0-5053-4077-a203-56eb730e89d8")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a7d03caa-c6bb-413b-936e-1deeeed9f1c3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e490d6aa-c68f-4616-8fd0-d3107692eda3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/0c2dea78-fc93-4909-8a28-e4f1002552e3")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -81003,7 +83350,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -81017,10 +83364,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "7d6027b6-cbf5-4679-8282-1beeb2fccfc7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "049bb6a4-2eaa-4399-a91c-c384e25f5d60")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "046933d3-c397-491a-a496-ad12d4ee35db")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/30156bf1-8da5-430e-9955-3cca537c8798")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -81681,7 +84076,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -81695,10 +84090,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "60fd5254-569f-44d4-861b-24cf43ec2dba")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "49ff55e2-c505-4cfd-8ef7-112975344096")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1ba7fa75-add7-4b34-8fb0-d751635f7b70")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/b82a2109-f2e8-4a93-b6ea-132c489bc63f")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -84633,7 +87076,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -84647,10 +87090,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "c18afffc-0994-4663-af62-dbc39bc80b94")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4428f713-eb6d-4ef9-83eb-6d4553502b82")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "f2da3033-9064-46aa-8ddf-4cd2fe165416")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/e3fa51a2-2953-4ddf-b05f-02bc65cba9b5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -85829,7 +88320,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -85843,10 +88334,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "53247748-4d65-4a42-bb49-663a603db115")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a559997b-7d80-4d8b-a9f5-0e9f0f59bd07")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8554b3f2-6e67-4389-87f3-4d241038db03")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/3e0945d3-3ccd-47bf-b160-25df1eab3802")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -86101,7 +88640,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -86115,10 +88654,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "b6e37d62-224c-4709-af97-f18ca4c66078")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0e202009-ba4d-4248-a6cf-850d983e6b25")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "633bc225-7eff-40c1-b9fe-bdff02f89a66")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/fbb88e44-16ff-4ff1-b5b0-8edd090dddb2")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -86373,7 +88960,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -86387,10 +88974,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "ab6e6dfc-8011-4f0e-bc25-c7982d1d0938")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "57e2e11b-0e88-4783-8877-1c988dadc01d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "230a4627-9218-4c6f-8d3a-5ea4d61c5450")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/949b6e0e-59db-4ac9-b42d-23a368366a2e")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -90452,7 +93087,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -90466,10 +93101,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0d301d88-6180-4971-8956-f1e2bc436e02")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "745bdb4a-ef7e-4ad6-a781-be2959f058e1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8d295803-c975-4b9a-b80d-2b6e3c92a8fd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ade9c372-81ff-4b45-8c07-afca19a54cae")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -91942,7 +94625,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -91956,10 +94639,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0b810f27-4105-45d9-9667-a9284c0e4bb1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "22bb7fed-d170-4ea1-b463-e0965fc644bc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cc0c74b7-9de5-4eb1-b2ce-a4ac483ae648")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/2e4ce7c5-59c8-47f3-8624-f832c865beb7")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -96427,7 +99158,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -96441,10 +99172,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "5a58ca31-b432-41c4-a844-8ae6e3b24292")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2a671ed5-0dbf-4a7a-b43a-dcc4f67907fe")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "2ae81d9f-a298-458c-8be8-ec84d6808f8d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/68e6e80f-6619-466f-9527-87f2c1c53436")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -96699,7 +99478,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -96713,10 +99492,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "e6903e15-a572-4894-b26c-224b5915facd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "0423839e-bd4a-4e88-99c4-2bac4e0272f4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "80f7d50e-f22c-4035-a80c-a518860eb1c5")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/ea86eaa1-4f1c-4807-8912-29355610f989")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -98311,7 +101138,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -98325,10 +101152,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "4aa0ac00-c6f1-4bd6-963b-919558662a34")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "72fb70df-f25f-4f90-986e-3bce037b0e4f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "241de21d-62ef-45e9-b862-2645b7054dc2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/f4622b50-2c0a-4553-bd04-c64d65bc119b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -100408,7 +103283,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -100422,10 +103297,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3fc2c73f-7d83-45db-b444-b573b4238c67")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "acc4686c-96f7-4f17-a298-42e96fbeb932")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "a817ae7b-7d8a-4b83-b0dc-4a22a1394032")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/0f8fc85c-9709-4fce-9eb7-7ec0be3bac0c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -101614,7 +104537,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RGB LED, anode/blue/green/red"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -101628,10 +104551,58 @@
 				(justify mirror)
 			)
 		)
+		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "03cb0dc3-5e0b-4edb-8742-6b2154888e56")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Package" "SMD-4P,3.2x1.3mm"
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "9f06e93a-8cc4-40f3-9274-2eefde64c09f")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "Procurement Type" ""
+			(at 0 0 180)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "81042282-fc14-4bb1-a6ea-cb2c868d253a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
 		(property ki_fp_filters "LED* LED_SMD:* LED_THT:*")
 		(path "/2e674431-a013-487a-9a6b-5c10b721f28a")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "3" "2" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
