@@ -13,6 +13,6 @@
 #define RGB_TRIGGER_ON_KEYDOWN
 
 // Persistent memory
-// - Screen selection: 1 byte
-// - Bongo cat hits: 4 bytes
+// - Screen selection: 1 byte (uint8_t)
+// - Bongo cat hits: 4 bytes (uint32_t)
 #define EECONFIG_KB_DATA_SIZE 5
