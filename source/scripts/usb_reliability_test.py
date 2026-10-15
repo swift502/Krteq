@@ -1,149 +1,124 @@
-"""USB link reliability test for a QMK/VIA keyboard.
+"""USB link reliability test for the Krteq raw HID interface.
 
-Sends packets to the raw HID interface and verifies the echo. VIA replies to any
-unrecognized command id with the same buffer, only byte 0 replaced by 0xFF, so
-this works without any firmware changes.
+Sends random packets and verifies the echo. VIA replies to any unknown command
+id with the same buffer, only byte 0 replaced by 0xFF, so no firmware changes
+are needed.
 
 Requires: pip install hidapi
 """
 
-import argparse
+import json
 import os
 import statistics
-import sys
 import time
+from collections import Counter
+from pathlib import Path
 
-try:
-    import hid
-except ImportError:
-    print("Missing dependency. Run: pip install hidapi")
-    raise SystemExit(1)
+import hid
 
-# VIA raw HID interface
+# Config
+DURATION_S = 30
+INTERVAL_MS = 5
+TIMEOUT_MS = 1000
+
+# VIA raw HID
 USAGE_PAGE = 0xFF60
 USAGE = 0x61
 REPORT_SIZE = 32
+PING_ID = 0xAA  # Not implemented by VIA, so it gets echoed
+ECHO_ID = 0xFF
 
-# Any command id VIA doesn't implement, so the packet is echoed back
-PING_ID = 0xAA
-UNHANDLED_ID = 0xFF
-
-args_parse = argparse.ArgumentParser(description=__doc__)
-args_parse.add_argument("--vid", type=lambda v: int(v, 0), default=0x4A42)
-args_parse.add_argument("--pid", type=lambda v: int(v, 0), default=0x1617)
-args_parse.add_argument("--duration", type=float, default=30.0, help="test length in seconds")
-args_parse.add_argument("--interval", type=float, default=5.0, help="delay between packets in ms, 0 for max rate")
-args_parse.add_argument("--timeout", type=float, default=1000.0, help="reply timeout in ms")
-args = args_parse.parse_args()
+keyboard_json = Path(__file__).resolve().parents[1] / "qmk" / "keyboard.json"
+usb = json.loads(keyboard_json.read_text())["usb"]
+VID = int(usb["vid"], 16)
+PID = int(usb["pid"], 16)
 
 
-def find_device(vid, pid):
-    for info in hid.enumerate(vid, pid):
-        if info.get("usage_page") == USAGE_PAGE and info.get("usage") == USAGE:
-            return info["path"]
+def log(message):
+    print(f"\n[{time.strftime('%H:%M:%S')}] {message}")
+
+
+def ms_since(start):
+    return (time.perf_counter() - start) * 1000
+
+
+def connect():
+    for info in hid.enumerate(VID, PID):
+        if info["usage_page"] == USAGE_PAGE and info["usage"] == USAGE:
+            dev = hid.device()
+            dev.open_path(info["path"])
+            return dev
     return None
 
 
-def open_device(path):
-    # hidapi exposes two incompatible APIs depending on the package build
-    if hasattr(hid, "Device"):
-        return hid.Device(path=path)
-    dev = hid.device()
-    dev.open_path(path)
-    return dev
+def reconnect(deadline):
+    while time.perf_counter() < deadline:
+        time.sleep(0.25)
+        try:
+            if dev := connect():
+                return dev
+        except OSError:
+            pass
+    return None
 
 
-def ping(dev, seq, timeout_ms):
+def ping(dev, seq):
     payload = bytes([PING_ID]) + seq.to_bytes(4, "big") + os.urandom(REPORT_SIZE - 5)
-
     start = time.perf_counter()
-    dev.write(b"\x00" + payload)  # leading report id, required on Windows
+    dev.write(b"\x00" + payload)  # Leading report id, required on Windows
 
-    while True:
-        remaining = timeout_ms - (time.perf_counter() - start) * 1000
-        if remaining <= 0:
-            return "timeout", None
-
-        reply = bytes(dev.read(REPORT_SIZE, int(remaining)) or b"")
-        elapsed = (time.perf_counter() - start) * 1000
-
+    while (remaining := TIMEOUT_MS - ms_since(start)) > 0:
+        reply = bytes(dev.read(REPORT_SIZE, int(remaining)))
         if not reply:
-            return "timeout", None
-        if len(reply) != REPORT_SIZE or reply[0] != UNHANDLED_ID:
-            return "malformed", elapsed
-        if reply[1:5] != payload[1:5]:
-            continue  # stale reply from an earlier packet, keep waiting
-        if reply[5:] != payload[5:]:
-            return "corrupt", elapsed
+            break
+        if len(reply) != REPORT_SIZE or reply[0] != ECHO_ID:
+            return "malformed", None
+        if reply[1:5] == payload[1:5]:  # Otherwise a stale reply to an earlier packet
+            return ("ok" if reply[5:] == payload[5:] else "corrupt"), ms_since(start)
 
-        return "ok", elapsed
+    return "timeout", None
 
 
-path = find_device(args.vid, args.pid)
-if path is None:
-    print(f"No raw HID interface found for {args.vid:#06x}:{args.pid:#06x}.")
-    print("Check the keyboard is connected and that VIA/raw HID is enabled in the firmware.")
-    raise SystemExit(1)
+dev = connect()
+if dev is None:
+    raise SystemExit(f"No raw HID interface found for {VID:#06x}:{PID:#06x}. Is the keyboard connected with VIA enabled?")
 
-dev = open_device(path)
-print(f"Connected to {args.vid:#06x}:{args.pid:#06x}, testing for {args.duration:g}s. Ctrl+C to stop early.\n")
+print(f"Connected to {VID:#06x}:{PID:#06x}, testing for {DURATION_S}s. Ctrl+C to stop early.")
 
+counts = Counter()
 latencies = []
-counts = {"ok": 0, "timeout": 0, "corrupt": 0, "malformed": 0}
 drops = 0
 seq = 0
-deadline = time.perf_counter() + args.duration
+deadline = time.perf_counter() + DURATION_S
 
 try:
-    while time.perf_counter() < deadline:
-        seq = (seq + 1) & 0xFFFFFFFF
-
+    while dev and time.perf_counter() < deadline:
+        seq += 1
         try:
-            result, elapsed = ping(dev, seq, args.timeout)
+            result, latency = ping(dev, seq)
         except (OSError, ValueError) as e:
-            # The device vanished mid-transfer, which is itself a hard failure
+            log(f"Link dropped: {e}")
             drops += 1
-            print(f"\n[{time.strftime('%H:%M:%S')}] Link dropped: {e}")
-
-            try:
-                dev.close()
-            except Exception:
-                pass
-
-            dev = None
-            while dev is None and time.perf_counter() < deadline:
-                time.sleep(0.25)
-                path = find_device(args.vid, args.pid)
-                if path is not None:
-                    try:
-                        dev = open_device(path)
-                    except OSError:
-                        dev = None
-
-            if dev is None:
-                break
-
-            print(f"[{time.strftime('%H:%M:%S')}] Reconnected\n")
+            dev.close()
+            if dev := reconnect(deadline):
+                log("Reconnected")
             continue
 
         counts[result] += 1
         if result == "ok":
-            latencies.append(elapsed)
+            latencies.append(latency)
         else:
-            print(f"\n[{time.strftime('%H:%M:%S')}] Packet {seq}: {result}")
+            log(f"Packet {seq}: {result}")
 
-        total = sum(counts.values())
-        if total % 20 == 0:
+        if seq % 20 == 0:
             avg = statistics.fmean(latencies) if latencies else 0
-            sys.stdout.write(f"\rsent {total}  ok {counts['ok']}  avg {avg:6.2f} ms")
-            sys.stdout.flush()
+            print(f"\rsent {counts.total()}  ok {counts['ok']}  avg {avg:6.2f} ms", end="", flush=True)
 
-        if args.interval > 0:
-            time.sleep(args.interval / 1000)
+        time.sleep(INTERVAL_MS / 1000)
 except KeyboardInterrupt:
     pass
 
-total = sum(counts.values())
+total = counts.total()
 failed = total - counts["ok"]
 
 print("\n")
@@ -158,14 +133,11 @@ if total:
     print(f"Failure rate      {failed / total * 100:.3f} %")
 
 if latencies:
-    ordered = sorted(latencies)
+    latencies.sort()
     print()
-    print(f"Latency min       {ordered[0]:.2f} ms")
-    print(f"Latency median    {statistics.median(ordered):.2f} ms")
-    print(f"Latency p99       {ordered[min(len(ordered) - 1, int(len(ordered) * 0.99))]:.2f} ms")
-    print(f"Latency max       {ordered[-1]:.2f} ms")
+    print(f"Latency min       {latencies[0]:.2f} ms")
+    print(f"Latency median    {statistics.median(latencies):.2f} ms")
+    print(f"Latency p99       {latencies[int((len(latencies) - 1) * 0.99)]:.2f} ms")
+    print(f"Latency max       {latencies[-1]:.2f} ms")
 
-if failed == 0 and drops == 0:
-    print("\nLink looks healthy.")
-else:
-    print("\nLink errors detected.")
+print("\nLink looks healthy." if failed == 0 and drops == 0 else "\nLink errors detected.")
