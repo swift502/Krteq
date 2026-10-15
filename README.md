@@ -125,6 +125,51 @@ For the initial flash, hold the BOOTSEL button while connecting the Pico to a co
 
 Once flashed, you can trigger the bootloader mode again by simply pressing the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
 
+### OLED screens
+
+The <kbd>KRT_SCR</kbd> key cycles through a list of screens, with <kbd>Shift</kbd> cycling backwards and <kbd>Ctrl</kbd> jumping to the first one. A keymap can replace the list by defining `user_screens` in its `keymap.c`. This is the default list:
+
+```c
+const krteq_screen_t *const user_screens[] = {
+    &krteq_screen_indicators,
+    &krteq_screen_bongo_cat,
+    &krteq_screen_game_of_life,
+    &krteq_screen_waves,
+    &krteq_screen_ball_pit,
+    &krteq_screen_system_info
+};
+```
+
+Built-in screens can be removed, reordered or mixed with custom ones, which are a `krteq_screen_t` with a name and any of the optional callbacks:
+
+```c
+static void hello_init(void)
+{
+    // Called on a cleared display whenever the screen comes into view
+    oled_write_P(PSTR("Hello world"), false);
+}
+
+static const krteq_screen_t hello_screen = {
+    .name      = "Hello",    // Shown in the screen selector
+    .init      = hello_init,
+    .update    = NULL,       // Called every OLED task while the screen is shown
+    .key_event = NULL,       // void (uint16_t keycode, keypos_t keypos, bool pressed)
+    .reset     = NULL        // Called when the display restarts, such as on suspend
+};
+
+const krteq_screen_t *const user_screens[] = {
+    &krteq_screen_indicators,
+    &krteq_screen_bongo_cat,
+    &krteq_screen_game_of_life,
+    &krteq_screen_waves,
+    &krteq_screen_ball_pit,
+    &krteq_screen_system_info,
+    &hello_screen
+};
+```
+
+Custom screens draw with the regular [QMK OLED API](https://docs.qmk.fm/features/oled_driver). The first screen in the list is the default, and the list can hold up to 255 screens. Some screens are always handled by the firmware, whatever the list says: the boot logo, the input lock, the RGB status overlay, and the indicators screen while layer 1 is held.
+
 ## Documentation
 
 ### QMK

@@ -10,34 +10,32 @@
 #define DATA_SCREEN_OFFSET 0
 #define DATA_BONGO_HITS_OFFSET 1
 
-enum screens
-{
-    USER_SCREEN_INDICATORS,
-    USER_SCREEN_BONGO_CAT,
-    USER_SCREEN_LIFE,
-    USER_SCREEN_RIPPLE,
-    USER_SCREEN_CIRCLES,
-    USER_SCREEN_SYSTEM_INFO,
-    USER_SCREEN_COUNT,
-
-    SYSTEM_SCREEN_LOGO,
-    SYSTEM_SCREEN_SELECT,
-    SYSTEM_SCREEN_INPUT_LOCK,
-    SYSTEM_SCREEN_RGB
-};
-
 static int current_user_screen = 0;
 static int selected_user_screen;
-static int last_rendered_screen = -1;
+static const krteq_screen_t *last_rendered_screen = NULL;
 static bool screen_redraw; // Set on a screen switch or by events, cleared by the screen once drawn
+
+static uint8_t user_screen_count(void)
+{
+    uint8_t count = 0;
+    while (count < KRTEQ_MAX_SCREENS && user_screens[count]) count++;
+    return count;
+}
+
+// An empty keymap list falls back to the indicators
+static const krteq_screen_t *get_user_screen(int index)
+{
+    if (user_screen_count() == 0) return &krteq_screen_indicators;
+    return user_screens[index];
+}
 
 static void load_user_screen(void)
 {
     uint8_t screen = 0;
     eeconfig_read_kb_datablock(&screen, DATA_SCREEN_OFFSET, sizeof(screen));
 
-    // A stale block from an older layout could name a screen that no longer exists
-    if (screen < USER_SCREEN_COUNT) current_user_screen = screen;
+    // A stale block from an older layout or keymap could name a screen that no longer exists
+    if (screen < user_screen_count()) current_user_screen = screen;
 }
 
 static void save_user_screen(void)
@@ -164,6 +162,28 @@ static void draw_number(uint8_t center_x, uint8_t y, uint32_t value)
     draw_text(center_x, y, text, false);
 }
 
+// Title over a line of content, shared by the overlays
+#define TITLE_Y 4
+#define CONTENT_Y 20
+#define UNNAMED "Undefined"
+
+static void draw_labelled(const char *title, const char *text)
+{
+    draw_text(OLED_DISPLAY_WIDTH / 2, TITLE_Y, title, false);
+    draw_text(OLED_DISPLAY_WIDTH / 2, CONTENT_Y, text, false);
+}
+
+// Numbered item over its name, such as "Screen 3" over "Bongo cat"
+static void draw_numbered(const char *label, uint32_t number, const char *name)
+{
+    char title[24];
+    char *out = stpcpy(title, label);
+    *out++ = ' ';
+    print_number(out, number, 1);
+
+    draw_labelled(title, name ? name : UNNAMED);
+}
+
 //==============================================================================
 // Key positions
 //==============================================================================
@@ -173,9 +193,9 @@ static void draw_number(uint8_t center_x, uint8_t y, uint32_t value)
 #define KEY_SPACE_HEIGHT 64
 
 // Projects the physical location of a key onto the screen
-static bool key_position(keypos_t key, uint8_t *x, uint8_t *y)
+static bool key_position(keypos_t keypos, uint8_t *x, uint8_t *y)
 {
-    uint8_t led = g_led_config.matrix_co[key.row][key.col];
+    uint8_t led = g_led_config.matrix_co[keypos.row][keypos.col];
     if (led == NO_LED) return false;
 
     *x = (uint16_t)g_led_config.point[led].x * (OLED_DISPLAY_WIDTH - 1) / KEY_SPACE_WIDTH;
@@ -233,6 +253,11 @@ static void indicators_update(void)
     render_indicator(INDICATOR_CAP_X, "CAP", leds.caps_lock);
     render_indicator(INDICATOR_ACC_X, "ACC", leds.scroll_lock);
 }
+
+const krteq_screen_t krteq_screen_indicators = {
+    .name   = "Indicators",
+    .update = indicators_update
+};
 
 //==============================================================================
 // Bongo cat screen
@@ -342,7 +367,7 @@ static void bongo_save_hits(void)
 }
 
 // Every strike starts raised so the paw is always seen coming down
-static void bongo_key_event(uint16_t keycode, bool pressed)
+static void bongo_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
 {
     if (!pressed) return;
 
@@ -488,6 +513,14 @@ static void bongo_cat_reset(void)
     bongo_blinking = false;
 }
 
+const krteq_screen_t krteq_screen_bongo_cat = {
+    .name      = "Bongo cat",
+    .init      = bongo_cat_init,
+    .update    = bongo_cat_update,
+    .key_event = bongo_key_event,
+    .reset     = bongo_cat_reset
+};
+
 //==============================================================================
 // Ripple screen
 //==============================================================================
@@ -525,10 +558,10 @@ static void ripple_drop(int16_t x, int16_t y)
     }
 }
 
-static void ripple_key_event(keypos_t key, bool pressed)
+static void ripple_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
 {
     uint8_t x, y;
-    if (!pressed || !key_position(key, &x, &y)) return;
+    if (!pressed || !key_position(keypos, &x, &y)) return;
 
     ripple_idle_timer = timer_read();
     ripple_drop(x, y);
@@ -605,6 +638,14 @@ static void ripple_reset(void)
     ripple_front = 0;
     ripple_seeded = false;
 }
+
+const krteq_screen_t krteq_screen_waves = {
+    .name      = "Waves",
+    .init      = ripple_init,
+    .update    = ripple_update,
+    .key_event = ripple_key_event,
+    .reset     = ripple_reset
+};
 
 //==============================================================================
 // Circles screen
@@ -695,10 +736,10 @@ static void circles_kick(uint8_t x, uint8_t y)
     }
 }
 
-static void circles_key_event(keypos_t key, bool pressed)
+static void circles_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
 {
     uint8_t x, y;
-    if (!pressed || !key_position(key, &x, &y)) return;
+    if (!pressed || !key_position(keypos, &x, &y)) return;
 
     circles_idle_timer = timer_read();
     circles_kick(x, y);
@@ -854,6 +895,14 @@ static void circles_reset(void)
     circles_seeded = false;
 }
 
+const krteq_screen_t krteq_screen_ball_pit = {
+    .name      = "Ball pit",
+    .init      = circles_init,
+    .update    = circles_update,
+    .key_event = circles_key_event,
+    .reset     = circles_reset
+};
+
 //==============================================================================
 // Game of life screen
 //==============================================================================
@@ -942,10 +991,10 @@ static void life_bomb(int16_t x, int16_t y, uint8_t shape)
     }
 }
 
-static void life_key_event(keypos_t key, bool pressed)
+static void life_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
 {
     uint8_t x, y;
-    if (!pressed || !key_position(key, &x, &y)) return;
+    if (!pressed || !key_position(keypos, &x, &y)) return;
 
     life_idle_timer = timer_read();
     life_bomb(x + LIFE_MARGIN_X, y + LIFE_MARGIN_Y, BOMB_SHAPE_HORIZONTAL);
@@ -1047,6 +1096,14 @@ static void life_reset(void)
     life_seeded = false;
 }
 
+const krteq_screen_t krteq_screen_game_of_life = {
+    .name      = "Game of life",
+    .init      = life_init,
+    .update    = life_update,
+    .key_event = life_key_event,
+    .reset     = life_reset
+};
+
 //==============================================================================
 // System info screen
 //==============================================================================
@@ -1141,6 +1198,11 @@ static void system_info_update(void)
     render_info_row(3, "Built", build_date);
 }
 
+const krteq_screen_t krteq_screen_system_info = {
+    .name   = "System info",
+    .update = system_info_update
+};
+
 //==============================================================================
 // Logo screen
 //==============================================================================
@@ -1172,28 +1234,37 @@ static void logo_reset(void)
     logo_finished = false;
 }
 
+static const krteq_screen_t system_screen_logo = {
+    .init   = logo_init,
+    .update = logo_update,
+    .reset  = logo_reset
+};
+
 //==============================================================================
 // Overlays
 //==============================================================================
 
+// Defined in the screen select section, which in turn builds on the overlays
+static const krteq_screen_t system_screen_select;
+
 // Short lived screen shown over the user screen, closing itself once its time is up
-static int overlay = -1;
+static const krteq_screen_t *overlay = NULL;
 static uint16_t overlay_timer;
 
 // A selection is kept however it ends, timed out or cut short
 static void close_overlay(void)
 {
-    if (overlay == SYSTEM_SCREEN_SELECT && selected_user_screen != current_user_screen)
+    if (overlay == &system_screen_select && selected_user_screen != current_user_screen)
     {
         bongo_save_hits();
         current_user_screen = selected_user_screen;
         save_user_screen();
     }
 
-    overlay = -1;
+    overlay = NULL;
 }
 
-static void open_overlay(int screen)
+static void open_overlay(const krteq_screen_t *screen)
 {
     if (overlay != screen) close_overlay();
 
@@ -1206,28 +1277,12 @@ static void open_overlay(int screen)
 //==============================================================================
 
 #define SELECT_DURATION 1000
-#define SELECT_SQUARE_SIZE 7
-#define SELECT_SQUARE_GAP 4
-#define SELECT_SQUARE_Y 4
-#define SELECT_NAME_Y 20
-#define SELECT_SQUARE_PITCH (SELECT_SQUARE_SIZE + SELECT_SQUARE_GAP)
-#define SELECT_SQUARE_LEFT ((OLED_DISPLAY_WIDTH - (USER_SCREEN_COUNT * SELECT_SQUARE_PITCH - SELECT_SQUARE_GAP)) / 2)
-#define SELECT_UNNAMED "Undefined"
-
-static const char *const select_names[USER_SCREEN_COUNT] = {
-    [USER_SCREEN_INDICATORS]  = "Indicators",
-    [USER_SCREEN_BONGO_CAT]   = "Bongo cat",
-    [USER_SCREEN_LIFE]        = "Game of life",
-    [USER_SCREEN_RIPPLE]      = "Waves",
-    [USER_SCREEN_CIRCLES]     = "Ball pit",
-    [USER_SCREEN_SYSTEM_INFO] = "System info"
-};
 
 // A fresh selection starts from the screen in use
 static void start_selecting(void)
 {
-    if (overlay != SYSTEM_SCREEN_SELECT) selected_user_screen = current_user_screen;
-    open_overlay(SYSTEM_SCREEN_SELECT);
+    if (overlay != &system_screen_select) selected_user_screen = current_user_screen;
+    open_overlay(&system_screen_select);
     screen_redraw = true;
 }
 
@@ -1240,15 +1295,13 @@ void default_user_screen(void)
 void shift_user_screen(int shift)
 {
     start_selecting();
-    selected_user_screen += shift;
-    selected_user_screen %= USER_SCREEN_COUNT;
-    if (selected_user_screen < 0) selected_user_screen += USER_SCREEN_COUNT;
-}
 
-static void draw_square(uint8_t x, uint8_t y, bool filled)
-{
-    fill_rect(x, y, SELECT_SQUARE_SIZE, SELECT_SQUARE_SIZE, true);
-    if (!filled) fill_rect(x + 1, y + 1, SELECT_SQUARE_SIZE - 2, SELECT_SQUARE_SIZE - 2, false);
+    uint8_t count = user_screen_count();
+    if (count == 0) return;
+
+    selected_user_screen += shift;
+    selected_user_screen %= count;
+    if (selected_user_screen < 0) selected_user_screen += count;
 }
 
 static void screen_select_update(void)
@@ -1263,15 +1316,12 @@ static void screen_select_update(void)
     screen_redraw = false;
 
     oled_clear();
-
-    for (uint8_t screen = 0; screen < USER_SCREEN_COUNT; screen++)
-    {
-        draw_square(SELECT_SQUARE_LEFT + screen * SELECT_SQUARE_PITCH, SELECT_SQUARE_Y, screen == selected_user_screen);
-    }
-
-    const char *name = select_names[selected_user_screen];
-    draw_text(OLED_DISPLAY_WIDTH / 2, SELECT_NAME_Y, name ? name : SELECT_UNNAMED, false);
+    draw_numbered("Screen", selected_user_screen + 1, get_user_screen(selected_user_screen)->name);
 }
+
+static const krteq_screen_t system_screen_select = {
+    .update = screen_select_update
+};
 
 //==============================================================================
 // Input lock screen
@@ -1289,16 +1339,21 @@ static void input_lock_update(void)
     draw_icon_text(input_lock_image, "Input lock");
 }
 
+static const krteq_screen_t system_screen_input_lock = {
+    .update = input_lock_update
+};
+
 //==============================================================================
 // RGB status screen
 //==============================================================================
 
 #define RGB_STATUS_DURATION 3000
-#define RGB_TITLE_Y 4
-#define RGB_CONTENT_Y 20
 #define RGB_BAR_WIDTH OLED_DISPLAY_WIDTH
 #define RGB_BAR_HEIGHT 7 // Matches the lit rows of a glyph
 #define RGB_BAR_PADDING 2
+
+// Defined at the end of this section
+static const krteq_screen_t system_screen_rgb;
 
 enum rgb_status_components
 {
@@ -1311,7 +1366,7 @@ enum rgb_status_components
     RGB_STATUS_SPEED
 };
 
-// Effects missing here fall back to their number, see the animations in keyboard.json
+// Effects missing here show as unnamed, see the animations in keyboard.json
 static const char *const rgb_effect_names[RGB_MATRIX_EFFECT_MAX] = {
     [RGB_MATRIX_SOLID_COLOR]          = "Solid color",
     [RGB_MATRIX_RIVERFLOW]            = "Riverflow",
@@ -1323,7 +1378,7 @@ static int8_t rgb_status_component;
 static void rgb_status_show(int8_t component)
 {
     rgb_status_component = component;
-    open_overlay(SYSTEM_SCREEN_RGB);
+    open_overlay(&system_screen_rgb);
     screen_redraw = true;
 }
 
@@ -1346,21 +1401,15 @@ static void draw_slider(const char *title, uint8_t value, uint8_t maximum)
 {
     uint8_t fill = (uint16_t)value * (RGB_BAR_WIDTH - RGB_BAR_PADDING * 2) / maximum;
 
-    fill_rect(0, RGB_CONTENT_Y, RGB_BAR_WIDTH, RGB_BAR_HEIGHT, true);
-    fill_rect(1, RGB_CONTENT_Y + 1, RGB_BAR_WIDTH - 2, RGB_BAR_HEIGHT - 2, false);
-    fill_rect(RGB_BAR_PADDING, RGB_CONTENT_Y + RGB_BAR_PADDING, fill, RGB_BAR_HEIGHT - RGB_BAR_PADDING * 2, true);
+    fill_rect(0, CONTENT_Y, RGB_BAR_WIDTH, RGB_BAR_HEIGHT, true);
+    fill_rect(1, CONTENT_Y + 1, RGB_BAR_WIDTH - 2, RGB_BAR_HEIGHT - 2, false);
+    fill_rect(RGB_BAR_PADDING, CONTENT_Y + RGB_BAR_PADDING, fill, RGB_BAR_HEIGHT - RGB_BAR_PADDING * 2, true);
 
     char text[4];
     print_number(text, value, 1);
 
-    draw_text_at(0, RGB_TITLE_Y, title, false);
-    draw_text_at(OLED_DISPLAY_WIDTH - strlen(text) * OLED_FONT_WIDTH, RGB_TITLE_Y, text, false);
-}
-
-static void draw_labelled(const char *title, const char *text)
-{
-    draw_text(OLED_DISPLAY_WIDTH / 2, RGB_TITLE_Y, title, false);
-    draw_text(OLED_DISPLAY_WIDTH / 2, RGB_CONTENT_Y, text, false);
+    draw_text_at(0, TITLE_Y, title, false);
+    draw_text_at(OLED_DISPLAY_WIDTH - strlen(text) * OLED_FONT_WIDTH, TITLE_Y, text, false);
 }
 
 static void rgb_status_update(void)
@@ -1378,27 +1427,23 @@ static void rgb_status_update(void)
     const char *name = mode < RGB_MATRIX_EFFECT_MAX ? rgb_effect_names[mode] : NULL;
     hsv_t hsv = rgb_matrix_get_hsv();
 
-    char number[4];
-    print_number(number, mode, 1);
-
-    // Mode 0 is RGB_MATRIX_NONE, so effects are already numbered from 1
-    char effect_title[20] = "RGB Effect ";
-    char *out = print_number(effect_title + strlen(effect_title), mode, 1);
-    *out++ = '/';
-    print_number(out, RGB_MATRIX_EFFECT_MAX - 1, 1);
-
     oled_clear();
 
+    // Mode 0 is RGB_MATRIX_NONE, so effects are already numbered from 1
     switch (rgb_status_component)
     {
         case RGB_STATUS_POWER:      draw_labelled("RGB", rgb_matrix_is_enabled() ? "Enabled" : "Disabled");          break;
-        case RGB_STATUS_EFFECT:     draw_labelled(effect_title, name ? name : number);                      break;
+        case RGB_STATUS_EFFECT:     draw_numbered("Effect", mode, name);                                    break;
         case RGB_STATUS_HUE:        draw_slider("RGB Hue", hsv.h, UINT8_MAX);                              break;
         case RGB_STATUS_SATURATION: draw_slider("RGB Saturation", hsv.s, UINT8_MAX);                       break;
         case RGB_STATUS_BRIGHTNESS: draw_slider("RGB Brightness", hsv.v, RGB_MATRIX_MAXIMUM_BRIGHTNESS);   break;
         case RGB_STATUS_SPEED:      draw_slider("RGB Speed", rgb_matrix_get_speed(), UINT8_MAX);            break;
     }
 }
+
+static const krteq_screen_t system_screen_rgb = {
+    .update = rgb_status_update
+};
 
 //==============================================================================
 // Shutdown screen
@@ -1433,7 +1478,23 @@ void render_shutdown_screen(bool jump_to_bootloader)
 // Screen dispatch
 //==============================================================================
 
-void oled_key_event(uint16_t keycode, keypos_t key, bool pressed)
+__attribute__((weak)) const krteq_screen_t *const user_screens[] = {
+    &krteq_screen_indicators,
+    &krteq_screen_bongo_cat,
+    &krteq_screen_game_of_life,
+    &krteq_screen_waves,
+    &krteq_screen_ball_pit,
+    &krteq_screen_system_info
+};
+
+static const krteq_screen_t *const system_screens[] = {
+    &system_screen_logo,
+    &system_screen_select,
+    &system_screen_input_lock,
+    &system_screen_rgb
+};
+
+void oled_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
 {
     // Keys that drive the screens themselves must not disturb their contents
     if (keycode == KRT_SCR) return;
@@ -1446,16 +1507,13 @@ void oled_key_event(uint16_t keycode, keypos_t key, bool pressed)
         return;
     }
 
-    switch (last_rendered_screen)
+    if (last_rendered_screen && last_rendered_screen->key_event)
     {
-        case USER_SCREEN_BONGO_CAT: bongo_key_event(keycode, pressed); break;
-        case USER_SCREEN_LIFE:      life_key_event(key, pressed);      break;
-        case USER_SCREEN_RIPPLE:    ripple_key_event(key, pressed);    break;
-        case USER_SCREEN_CIRCLES:   circles_key_event(key, pressed);   break;
+        last_rendered_screen->key_event(keycode, keypos, pressed);
     }
 }
 
-static void render_screen(int screen)
+static void render_screen(const krteq_screen_t *screen)
 {
     if (screen != last_rendered_screen)
     {
@@ -1463,29 +1521,10 @@ static void render_screen(int screen)
         screen_redraw = true;
         oled_clear();
 
-        switch (screen)
-        {
-            case USER_SCREEN_BONGO_CAT: bongo_cat_init(); break;
-            case USER_SCREEN_LIFE:      life_init();      break;
-            case USER_SCREEN_RIPPLE:    ripple_init();    break;
-            case USER_SCREEN_CIRCLES:   circles_init();   break;
-            case SYSTEM_SCREEN_LOGO:    logo_init();      break;
-        }
+        if (screen->init) screen->init();
     }
 
-    switch (screen)
-    {
-        case USER_SCREEN_INDICATORS:   indicators_update();    break;
-        case USER_SCREEN_BONGO_CAT:    bongo_cat_update();     break;
-        case USER_SCREEN_LIFE:         life_update();          break;
-        case USER_SCREEN_RIPPLE:       ripple_update();        break;
-        case USER_SCREEN_CIRCLES:      circles_update();       break;
-        case USER_SCREEN_SYSTEM_INFO:  system_info_update();   break;
-        case SYSTEM_SCREEN_LOGO:       logo_update();          break;
-        case SYSTEM_SCREEN_SELECT:     screen_select_update(); break;
-        case SYSTEM_SCREEN_INPUT_LOCK: input_lock_update();    break;
-        case SYSTEM_SCREEN_RGB:        rgb_status_update();    break;
-    }
+    if (screen->update) screen->update();
 }
 
 oled_rotation_t oled_init_kb(oled_rotation_t rotation)
@@ -1503,31 +1542,31 @@ bool oled_task_kb(void)
     }
 
     uint8_t layer = get_highest_layer(layer_state);
-    int screen;
+    const krteq_screen_t *screen;
 
     if (!logo_finished)
     {
-        screen = SYSTEM_SCREEN_LOGO;
+        screen = &system_screen_logo;
     }
     else if (layer >= INPUT_LOCK_LAYER)
     {
-        screen = SYSTEM_SCREEN_INPUT_LOCK;
+        screen = &system_screen_input_lock;
     }
     else if (layer == INDICATORS_LAYER)
     {
-        screen = USER_SCREEN_INDICATORS;
+        screen = &krteq_screen_indicators;
     }
-    else if (overlay >= 0)
+    else if (overlay)
     {
         screen = overlay;
     }
     else
     {
-        screen = current_user_screen;
+        screen = get_user_screen(current_user_screen);
     }
 
     // An overlay outranked by another screen is cut short rather than left waiting underneath
-    if (overlay >= 0 && screen != overlay) close_overlay();
+    if (overlay && screen != overlay) close_overlay();
 
     render_screen(screen);
     return false;
@@ -1539,11 +1578,16 @@ void oled_restart(void)
 
     oled_clear();
     oled_render_dirty(true);
-    last_rendered_screen = -1;
+    last_rendered_screen = NULL;
 
-    logo_reset();
-    bongo_cat_reset();
-    life_reset();
-    ripple_reset();
-    circles_reset();
+    // Screens left out of the list are never shown, so they have nothing to reset
+    for (uint8_t screen = 0; screen < ARRAY_SIZE(system_screens); screen++)
+    {
+        if (system_screens[screen]->reset) system_screens[screen]->reset();
+    }
+
+    for (uint8_t screen = 0; screen < user_screen_count(); screen++)
+    {
+        if (user_screens[screen]->reset) user_screens[screen]->reset();
+    }
 }
