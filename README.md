@@ -114,7 +114,7 @@ QMK/VIA setup with a few custom features:
 
 In QMK, user keymaps can completely override oled rendering via `oled_task_user()`.
 
-However, Krteq also exposes its custom screen system, where user screens are accessed by pressing the `KRT_SCR` keycode. Hooking into this system is preferred as it ensures that other system screen features continue to work properly.
+However, Krteq also exposes its custom screen system, where screen interaction is done via the `KRT_SCR` keycode. Hooking into this system is preferred as it ensures that other system screen features continue to work properly.
 
 Here's a minimal example of a custom screen definition in a user keymap:
 
