@@ -522,53 +522,53 @@ const krteq_screen_t krteq_screen_bongo_cat = {
 };
 
 //==============================================================================
-// Ripple screen
+// Waves screen
 //==============================================================================
 
-#define RIPPLE_FRAME_DURATION 33
-#define RIPPLE_IDLE_DURATION 15000
-#define RIPPLE_DAMPING 6 // Waves lose one part in 2^n of their height per frame
-#define RIPPLE_DROP_RADIUS 2
-#define RIPPLE_DROP_HEIGHT 1200
-#define RIPPLE_CREST 60 // Height that lights a pixel
+#define WAVE_FRAME_DURATION 33
+#define WAVE_IDLE_DURATION 15000
+#define WAVE_DAMPING 6 // Waves lose one part in 2^n of their height per frame
+#define WAVE_DROP_RADIUS 2
+#define WAVE_DROP_HEIGHT 1200
+#define WAVE_CREST 60 // Height that lights a pixel
 
-#define RIPPLE_CELLS (OLED_DISPLAY_WIDTH * OLED_DISPLAY_HEIGHT)
+#define WAVE_CELLS (OLED_DISPLAY_WIDTH * OLED_DISPLAY_HEIGHT)
 
-static int16_t ripple_heights[2][RIPPLE_CELLS];
-static uint8_t ripple_front;
-static uint16_t ripple_timer;
-static uint16_t ripple_idle_timer;
-static bool ripple_seeded;
+static int16_t wave_heights[2][WAVE_CELLS];
+static uint8_t wave_front;
+static uint16_t wave_timer;
+static uint16_t wave_idle_timer;
+static bool wave_seeded;
 
-static void ripple_drop(int16_t x, int16_t y)
+static void wave_drop(int16_t x, int16_t y)
 {
-    for (int8_t dy = -RIPPLE_DROP_RADIUS; dy <= RIPPLE_DROP_RADIUS; dy++)
+    for (int8_t dy = -WAVE_DROP_RADIUS; dy <= WAVE_DROP_RADIUS; dy++)
     {
-        for (int8_t dx = -RIPPLE_DROP_RADIUS; dx <= RIPPLE_DROP_RADIUS; dx++)
+        for (int8_t dx = -WAVE_DROP_RADIUS; dx <= WAVE_DROP_RADIUS; dx++)
         {
             int16_t drop_x = x + dx;
             int16_t drop_y = y + dy;
 
-            if (dx * dx + dy * dy > RIPPLE_DROP_RADIUS * RIPPLE_DROP_RADIUS) continue;
+            if (dx * dx + dy * dy > WAVE_DROP_RADIUS * WAVE_DROP_RADIUS) continue;
             if (drop_x < 1 || drop_x >= OLED_DISPLAY_WIDTH - 1) continue;
             if (drop_y < 1 || drop_y >= OLED_DISPLAY_HEIGHT - 1) continue;
 
-            ripple_heights[ripple_front][drop_y * OLED_DISPLAY_WIDTH + drop_x] = RIPPLE_DROP_HEIGHT;
+            wave_heights[wave_front][drop_y * OLED_DISPLAY_WIDTH + drop_x] = WAVE_DROP_HEIGHT;
         }
     }
 }
 
-static void ripple_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
+static void wave_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
     if (!pressed) return;
 
-    ripple_idle_timer = timer_read();
-    ripple_drop(x, y);
+    wave_idle_timer = timer_read();
+    wave_drop(x, y);
 }
 
-static void ripple_draw(void)
+static void wave_draw(void)
 {
-    const int16_t *heights = ripple_heights[ripple_front];
+    const int16_t *heights = wave_heights[wave_front];
 
     for (uint8_t page = 0; page < OLED_PAGES; page++)
     {
@@ -578,7 +578,7 @@ static void ripple_draw(void)
 
             for (uint8_t bit = 0; bit < 8; bit++)
             {
-                if (heights[(page * 8 + bit) * OLED_DISPLAY_WIDTH + x] > RIPPLE_CREST) column |= 1 << bit;
+                if (heights[(page * 8 + bit) * OLED_DISPLAY_WIDTH + x] > WAVE_CREST) column |= 1 << bit;
             }
 
             oled_write_raw_byte(column, page * OLED_DISPLAY_WIDTH + x);
@@ -586,34 +586,34 @@ static void ripple_draw(void)
     }
 }
 
-static void ripple_start(void)
+static void wave_start(void)
 {
-    ripple_timer = timer_read();
-    ripple_idle_timer = timer_read();
+    wave_timer = timer_read();
+    wave_idle_timer = timer_read();
 
-    if (!ripple_seeded)
+    if (!wave_seeded)
     {
-        ripple_seeded = true;
-        ripple_drop(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
+        wave_seeded = true;
+        wave_drop(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
     }
 
-    ripple_draw();
+    wave_draw();
 }
 
-static void ripple_update(void)
+static void wave_update(void)
 {
-    if (timer_elapsed(ripple_timer) < RIPPLE_FRAME_DURATION) return;
-    ripple_timer = timer_read();
+    if (timer_elapsed(wave_timer) < WAVE_FRAME_DURATION) return;
+    wave_timer = timer_read();
 
     // Idle hands get a drop of their own somewhere on the surface
-    if (timer_elapsed(ripple_idle_timer) > RIPPLE_IDLE_DURATION)
+    if (timer_elapsed(wave_idle_timer) > WAVE_IDLE_DURATION)
     {
-        ripple_idle_timer = timer_read();
-        ripple_drop(1 + random_value() % (OLED_DISPLAY_WIDTH - 2), 1 + random_value() % (OLED_DISPLAY_HEIGHT - 2));
+        wave_idle_timer = timer_read();
+        wave_drop(1 + random_value() % (OLED_DISPLAY_WIDTH - 2), 1 + random_value() % (OLED_DISPLAY_HEIGHT - 2));
     }
 
-    const int16_t *previous = ripple_heights[ripple_front];
-    int16_t *current = ripple_heights[ripple_front ^= 1];
+    const int16_t *previous = wave_heights[wave_front];
+    int16_t *current = wave_heights[wave_front ^= 1];
 
     // Wave equation over a still border, so the screen edges reflect
     for (uint8_t y = 1; y < OLED_DISPLAY_HEIGHT - 1; y++)
@@ -624,33 +624,33 @@ static void ripple_update(void)
             int16_t height = (previous[cell - 1] + previous[cell + 1] +
                               previous[cell - OLED_DISPLAY_WIDTH] + previous[cell + OLED_DISPLAY_WIDTH]) / 2 - current[cell];
 
-            current[cell] = height - (height >> RIPPLE_DAMPING);
+            current[cell] = height - (height >> WAVE_DAMPING);
         }
     }
 
-    ripple_draw();
+    wave_draw();
 }
 
-static void ripple_reset(void)
+static void wave_reset(void)
 {
-    memset(ripple_heights, 0, sizeof(ripple_heights));
-    ripple_front = 0;
-    ripple_seeded = false;
+    memset(wave_heights, 0, sizeof(wave_heights));
+    wave_front = 0;
+    wave_seeded = false;
 }
 
 const krteq_screen_t krteq_screen_waves = {
     .name      = "Waves",
-    .start     = ripple_start,
-    .update    = ripple_update,
-    .key_event = ripple_key_event,
-    .reset     = ripple_reset
+    .start     = wave_start,
+    .update    = wave_update,
+    .key_event = wave_key_event,
+    .reset     = wave_reset
 };
 
 //==============================================================================
 // Circles screen
 //==============================================================================
 
-#define CIRCLES_FRAME_DURATION RIPPLE_FRAME_DURATION
+#define CIRCLES_FRAME_DURATION WAVE_FRAME_DURATION
 #define CIRCLES_IDLE_DURATION 15000
 #define CIRCLES_SHIFT 8 // Positions and velocities are fixed point pixels with this many fractional bits
 #define CIRCLES_ONE (1 << CIRCLES_SHIFT)
