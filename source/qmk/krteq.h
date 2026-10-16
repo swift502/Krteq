@@ -12,7 +12,7 @@ enum keyboard_keycodes
 typedef struct
 {
     const char *name;
-    void (*init)(void);
+    void (*start)(void);
     void (*update)(void);
     void (*key_event)(uint16_t keycode, uint8_t x, uint8_t y, bool pressed);
     void (*reset)(void);

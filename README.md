@@ -136,16 +136,18 @@ User keymaps can completely override oled rendering via `oled_task_user()`, but 
 You can hook into this built-in screen system and create a custom screen. Here's a minimal example of a custom screen definition in a user keymap:
 
 ```c
-static void hello_init(void)
+static void custom_start(void)
 {
     oled_write_P(PSTR("Hello world"), false);
 }
 
+// Create a new screen instance
 static const krteq_screen_t custom_screen = {
-    .name      = "Custom screen",
-    .init      = hello_init,
+    .name = "Custom screen",
+    .start = custom_start,
 };
 
+// Override the list of user screens
 const krteq_screen_t *const user_screens[] = {
     &custom_screen
 };
@@ -156,7 +158,7 @@ All fields of `krteq_screen_t` are optional, unset callbacks are simply skipped:
 | Property     | Type                                                                   | Description |
 | ------------ | ---------------------------------------------------------------------- | ----------- |
 | `.name`      | `string`                                                               | Display name |
-| `.init`      | `void init(void)`                                                      | Initialize screen state and initial draw |
+| `.start`     | `void start(void)`                                                     | Initialize screen state and initial draw |
 | `.update`    | `void update(void)`                                                    | Refresh of the screen every OLED task cycle |
 | `.key_event` | `void key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)` | Key press event, `keycode` is a QMK keycode (`KC_A`, `KC_SPC`), `x` (0-127) and `y` (0-31) are normalized screen coordinates of the pressed key relative to their physical position on the keyboard |
 | `.reset`     | `void reset(void)`                                                     | Screen state reset |
