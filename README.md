@@ -8,7 +8,7 @@
 
 An extended 5x12 keyboard with 2 extra keys. Intended for ortho layouts with a shifted number row, allowing for the placement of the delete and tilde keys above their usual spots.
 
-Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning from its lessons to make a design that's easier to build, more maintainable, better encapsulated and overall a more complete product.
+Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning from its lessons to make a design that's more feature complete, better encapsulated and overall a more complete product.
 
 ### Features
 
@@ -42,8 +42,8 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 
 <!-- -->
 
-- 11x short wire
-- 6x M2x6 screw
+- 11x connecting wire
+- 6x M2x8 screw
 - 2x M2.5x6 screw
 - Rubber feet
 
@@ -53,8 +53,7 @@ The **USB-C breakout board** is expected to match the specs of the Adafruit USB-
 
 The **OLED display module** is expected to be a 128x32 I2C OLED screen. These screens are not very standardized, so the PCB cutout is generous to fit modules with slightly different dimensions. Any OLED roughly equal or less than 38x12mm should fit, and at most require slight modifications to the display cutout in the plate.
 
-> [!WARNING]
-> TODO IMAGE
+![](images/modules.webp)
 
 ### Assembly
 
@@ -112,9 +111,9 @@ QMK/VIA setup with a few custom features:
 
 ### Adding custom OLED screens
 
-In QMK, user keymaps can completely override oled rendering via `oled_task_user()`.
+In QMK, user keymaps can completely override oled rendering via `oled_task_user()`. However, Krteq also exposes its custom screen system, where screen interaction is done via the `KRT_SCR` keycode. Hooking into this system is preferred as it ensures that other built-in system screen features continue to work properly.
 
-However, Krteq also exposes its custom screen system, where screen interaction is done via the `KRT_SCR` keycode. Hooking into this system is preferred as it ensures that other system screen features continue to work properly.
+![](images/oled.webp)
 
 Here's a minimal example of a custom screen definition in a user keymap:
 
