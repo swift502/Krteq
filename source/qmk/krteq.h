@@ -14,7 +14,7 @@ typedef struct
     const char *name;
     void (*init)(void);
     void (*update)(void);
-    void (*key_event)(uint16_t keycode, keypos_t keypos, bool pressed);
+    void (*key_event)(uint16_t keycode, uint8_t x, uint8_t y, bool pressed);
     void (*reset)(void);
 } krteq_screen_t;
 

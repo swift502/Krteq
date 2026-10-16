@@ -367,7 +367,7 @@ static void bongo_save_hits(void)
 }
 
 // Every strike starts raised so the paw is always seen coming down
-static void bongo_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
+static void bongo_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
     if (!pressed) return;
 
@@ -558,10 +558,9 @@ static void ripple_drop(int16_t x, int16_t y)
     }
 }
 
-static void ripple_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
+static void ripple_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
-    uint8_t x, y;
-    if (!pressed || !key_position(keypos, &x, &y)) return;
+    if (!pressed) return;
 
     ripple_idle_timer = timer_read();
     ripple_drop(x, y);
@@ -736,10 +735,9 @@ static void circles_kick(uint8_t x, uint8_t y)
     }
 }
 
-static void circles_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
+static void circles_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
-    uint8_t x, y;
-    if (!pressed || !key_position(keypos, &x, &y)) return;
+    if (!pressed) return;
 
     circles_idle_timer = timer_read();
     circles_kick(x, y);
@@ -991,10 +989,9 @@ static void life_bomb(int16_t x, int16_t y, uint8_t shape)
     }
 }
 
-static void life_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
+static void life_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
-    uint8_t x, y;
-    if (!pressed || !key_position(keypos, &x, &y)) return;
+    if (!pressed) return;
 
     life_idle_timer = timer_read();
     life_bomb(x + LIFE_MARGIN_X, y + LIFE_MARGIN_Y, BOMB_SHAPE_HORIZONTAL);
@@ -1507,9 +1504,12 @@ void oled_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
         return;
     }
 
+    uint8_t x, y;
+    if (!key_position(keypos, &x, &y)) return;
+
     if (last_rendered_screen && last_rendered_screen->key_event)
     {
-        last_rendered_screen->key_event(keycode, keypos, pressed);
+        last_rendered_screen->key_event(keycode, x, y, pressed);
     }
 }
 

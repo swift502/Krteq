@@ -94,7 +94,11 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 
 Case blend file can be found in [source/Krteq.blend](source/Krteq.blend). It's designed non-destructively, so it should be fairly easy to modify if needed.
 
-STL files for 3D printing can be found in [production/stl](production/stl). Recommended printing parameters are PLA, 0.15mm layer height and 100% infill.
+STL files for 3D printing can be found in [production/stl](production/stl). Recommended printing parameters are:
+
+- PLA
+- 100% infill
+- 0.15mm layer height
 
 The plate has a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
 
@@ -102,7 +106,7 @@ The plate has a "keychron" variant, which adjusts stabilizer cutouts for their n
 
 QMK/VIA setup with a few custom features:
 
-- custom keycodes for screen, RGB and volume control
+- custom keycodes for volume, screen and RGB control
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> reverts to the default keymap
 
@@ -125,9 +129,39 @@ For the initial flash, hold the BOOTSEL button while connecting the Pico to a co
 
 Once flashed, you can trigger the bootloader mode again by simply pressing the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
 
-### OLED screens
+### Adding custom OLED screens
 
-The <kbd>KRT_SCR</kbd> key cycles through a list of screens, with <kbd>Shift</kbd> cycling backwards and <kbd>Ctrl</kbd> jumping to the first one. A keymap can replace the list by defining `user_screens` in its `keymap.c`. This is the default list:
+User keymaps can completely override oled rendering via `oled_task_user()`, but Krteq exposes a modular screen system, where screens are accessed using the `KRT_SCR` keycode.
+
+You can hook into this built-in screen system and create a custom screen. Here's a minimal example of a custom screen definition in a user keymap:
+
+```c
+static void hello_init(void)
+{
+    oled_write_P(PSTR("Hello world"), false);
+}
+
+static const krteq_screen_t custom_screen = {
+    .name      = "Custom screen",
+    .init      = hello_init,
+};
+
+const krteq_screen_t *const user_screens[] = {
+    &custom_screen
+};
+```
+
+All fields of `krteq_screen_t` are optional, unset callbacks are simply skipped:
+
+| Property     | Type                                                                   | Description |
+| ------------ | ---------------------------------------------------------------------- | ----------- |
+| `.name`      | `string`                                                               | Display name |
+| `.init`      | `void init(void)`                                                      | Initialize screen state and initial draw |
+| `.update`    | `void update(void)`                                                    | Refresh of the screen every OLED task cycle |
+| `.key_event` | `void key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)` | Key press event, `keycode` is a QMK keycode (`KC_A`, `KC_SPC`), `x` (0-127) and `y` (0-31) are normalized screen coordinates of the pressed key relative to their physical position on the keyboard |
+| `.reset`     | `void reset(void)`                                                     | Screen state reset |
+
+You can combine custom screens with the built-in ones. The default screen configuration looks like this. You can reshuffle it, remove some of the screens and add your own.
 
 ```c
 const krteq_screen_t *const user_screens[] = {
@@ -140,35 +174,7 @@ const krteq_screen_t *const user_screens[] = {
 };
 ```
 
-Built-in screens can be removed, reordered or mixed with custom ones, which are a `krteq_screen_t` with a name and any of the optional callbacks:
-
-```c
-static void hello_init(void)
-{
-    // Called on a cleared display whenever the screen comes into view
-    oled_write_P(PSTR("Hello world"), false);
-}
-
-static const krteq_screen_t hello_screen = {
-    .name      = "Hello",    // Shown in the screen selector
-    .init      = hello_init,
-    .update    = NULL,       // Called every OLED task while the screen is shown
-    .key_event = NULL,       // void (uint16_t keycode, keypos_t keypos, bool pressed)
-    .reset     = NULL        // Called when the display restarts, such as on suspend
-};
-
-const krteq_screen_t *const user_screens[] = {
-    &krteq_screen_indicators,
-    &krteq_screen_bongo_cat,
-    &krteq_screen_game_of_life,
-    &krteq_screen_waves,
-    &krteq_screen_ball_pit,
-    &krteq_screen_system_info,
-    &hello_screen
-};
-```
-
-Custom screens draw with the regular [QMK OLED API](https://docs.qmk.fm/features/oled_driver). The first screen in the list is the default, and the list can hold up to 255 screens. Some screens are always handled by the firmware, whatever the list says: the boot logo, the input lock, the RGB status overlay, and the indicators screen while layer 1 is held.
+Hooking into the built-in screen system is recommended as it ensures that other system features such as the boot logo, input lock and RGB overlays continue to work properly.
 
 ## Documentation
 
