@@ -110,30 +110,11 @@ QMK/VIA setup with a few custom features:
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> reverts to the default keymap
 
-### Compiling (Windows)
-
-Install:
-
-- Python: https://www.python.org/
-- MSYS: https://msys.qmk.fm
-
-Run the compile script:
-
-```sh
-python source/scripts/qmk_compile.py
-```
-
-### Flashing (Windows)
-
-For the initial flash, hold the BOOTSEL button while connecting the Pico to a computer to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) over to it.
-
-Once flashed, you can trigger the bootloader mode again by simply pressing the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
-
 ### Adding custom OLED screens
 
 In QMK, user keymaps can completely override oled rendering via `oled_task_user()`.
 
-However, Krteq also exposes its custom screen system, where user screens are accessed via the `KRT_SCR` keycode. Hooking into this system is preferred as it ensures that other system screen features continue to work properly.
+However, Krteq also exposes its custom screen system, where user screens are accessed by pressing the `KRT_SCR` keycode. Hooking into this system is preferred as it ensures that other system screen features continue to work properly.
 
 Here's a minimal example of a custom screen definition in a user keymap:
 
@@ -155,7 +136,7 @@ const krteq_screen_t *const user_screens[] = {
 };
 ```
 
-Here's a table of all fields and callbacks available for screens to implement:
+Here's a table of fields and callbacks available for screens to implement:
 
 | Property     | Description |
 | ------------ | ----------- |
@@ -165,7 +146,7 @@ Here's a table of all fields and callbacks available for screens to implement:
 | `.key_event` | Key press event |
 | `.reset`     | Screen state reset |
 
-You can combine custom screens with the built-in ones. The default screen configuration looks like this. You can reshuffle it, remove some of the screens and add your own.
+You can combine custom screens with the built-in ones. The default screen list looks like this. You can reshuffle it, remove some of the screens and add your own.
 
 ```c
 const krteq_screen_t *const user_screens[] = {
@@ -177,6 +158,25 @@ const krteq_screen_t *const user_screens[] = {
     &krteq_screen_system_info
 };
 ```
+
+### Compiling (Windows)
+
+Install:
+
+- Python: https://www.python.org/
+- MSYS: https://msys.qmk.fm
+
+Run the compile script:
+
+```sh
+python source/scripts/qmk_compile.py
+```
+
+### Flashing (Windows)
+
+For the initial flash, hold the BOOTSEL button while connecting the Pico to a computer to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) over to it.
+
+Once flashed, you can trigger the bootloader mode again by simply pressing the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
 
 ## Documentation
 
