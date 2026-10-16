@@ -1,33 +1,61 @@
 #include QMK_KEYBOARD_H
-#include "hal.h"
+#include "process_quantum.h"
+#include "usb_main.h"
+#include "krteq_oled.h"
 
-// PWM0 A - GP0 (Num Lock)
-// PWM0 B - GP1 (Caps Lock)
-static PWMConfig pwm0_cfg = {
-    .frequency = 1000000,
-    .period = 511,
-    .callback = NULL,
-    .channels = {
-        {PWM_OUTPUT_ACTIVE_HIGH, NULL},
-        {PWM_OUTPUT_ACTIVE_HIGH, NULL}
-    }
-};
+void suspend_power_down_kb(void)
+{
+    // ChibiOS bug workaround, remove when/if the source fix ever makes it to QMK
+    // https://github.com/ChibiOS/ChibiOS-Contrib/pull/453
+    (void)usb_lld_get_frame_number(&USB_DRIVER);
 
-// PWM1 A - GP2 (Scroll Lock)
-static PWMConfig pwm1_cfg = {
-    .frequency = 1000000,
-    .period = 511,        
-    .callback = NULL,
-    .channels = {
-        {PWM_OUTPUT_ACTIVE_HIGH, NULL},
-        {PWM_OUTPUT_DISABLED, NULL}
+    if (is_oled_on())
+    {
+        oled_restart();
     }
-};
+
+    suspend_power_down_user();
+}
+
+bool shutdown_kb(bool jump_to_bootloader)
+{
+    if (!shutdown_user(jump_to_bootloader))
+    {
+        return false;
+    }
+
+    render_shutdown_screen(jump_to_bootloader);
+    return true;
+}
 
 bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 {
     uint8_t mods = get_mods();
     bool double_shift = (mods & MOD_MASK_SHIFT) == MOD_MASK_SHIFT;
+
+    switch (keycode)
+    {
+        case KC_B:
+            if (record->event.pressed && double_shift)
+            {
+                process_quantum(QK_BOOTLOADER, record);
+                return false;
+            }
+            break;
+
+        case KC_C:
+            if (record->event.pressed && double_shift)
+            {
+                process_quantum(QK_CLEAR_EEPROM, record);
+                return false;
+            }
+            break;
+    }
+
+    oled_key_event(keycode, record->event.key, record->event.pressed);
+
+    if (!process_record_user(keycode, record))
+        return false;
 
     switch (keycode)
     {
@@ -53,54 +81,111 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
             }
             return false;
 
-        case KC_B:
-            if (record->event.pressed && double_shift)
+        case KRT_SCR:
+            if (record->event.pressed)
             {
-                reset_keyboard();
-                return false;
+                if (mods & MOD_MASK_CTRL)
+                {
+                    default_user_screen();
+                }
+                else if (mods & MOD_MASK_SHIFT)
+                {
+                    shift_user_screen(-1);
+                }
+                else
+                {
+                    shift_user_screen(1);
+                }
             }
-            break;
+            return false;
 
-        case KC_C:
-            if (record->event.pressed && double_shift)
+        case KRT_RGB:
+            if (record->event.pressed)
             {
-                eeconfig_disable();
-                soft_reset_keyboard();
-                return false;
+                if (mods & MOD_MASK_CTRL)
+                {
+                    rgb_matrix_mode(RGB_MATRIX_DEFAULT_MODE);
+                }
+                else if (mods & MOD_MASK_SHIFT)
+                {
+                    rgb_matrix_step_reverse();
+                }
+                else
+                {
+                    rgb_matrix_step();
+                }
             }
-            break;
+            return false;
     }
 
-    return process_record_user(keycode, record);
+    return true;
 }
 
-void keyboard_post_init_kb(void)
-{
-    // 2.19.2. Function Select (PWM)
-    // https://pip-assets.raspberrypi.com/categories/814-rp2040/documents/RP-008371-DS-1-rp2040-datasheet.pdf?disposition=inline
-    palSetLineMode(GP0, PAL_MODE_ALTERNATE(4));
-    palSetLineMode(GP1, PAL_MODE_ALTERNATE(4));
-    palSetLineMode(GP2, PAL_MODE_ALTERNATE(4));
+const is31fl3733_led_t PROGMEM g_is31fl3733_leds[IS31FL3733_LED_COUNT] = {
+    {0, SW11_CS14, SW12_CS14, SW10_CS14},
+    {0, SW1_CS14, SW2_CS14, SW9_CS14},
 
-    pwmStart(&PWMD0, &pwm0_cfg);
-    pwmStart(&PWMD1, &pwm1_cfg);
+    {0, SW11_CS15, SW12_CS15, SW10_CS15},
+    {0, SW7_CS15, SW8_CS15, SW6_CS15},
+    {0, SW4_CS15, SW5_CS15, SW3_CS15},
+    {0, SW1_CS15, SW2_CS15, SW9_CS15},
+    {0, SW11_CS16, SW12_CS16, SW10_CS16},
+    {0, SW7_CS16, SW8_CS16, SW6_CS16},
+    {0, SW4_CS16, SW5_CS16, SW3_CS16},
+    {0, SW1_CS16, SW2_CS16, SW9_CS16},
+    {0, SW11_CS9, SW12_CS9, SW10_CS9},
+    {0, SW7_CS9, SW8_CS9, SW6_CS9},
+    {0, SW4_CS9, SW5_CS9, SW3_CS9},
+    {0, SW1_CS9, SW2_CS9, SW9_CS9},
 
-    // Initialize off
-    pwmEnableChannel(&PWMD0, 0, 0);
-    pwmEnableChannel(&PWMD0, 1, 0);
-    pwmEnableChannel(&PWMD1, 0, 0);
-}
+    {0, SW11_CS8, SW12_CS8, SW10_CS8},
+    {0, SW7_CS8, SW8_CS8, SW6_CS8},
+    {0, SW4_CS8, SW5_CS8, SW3_CS8},
+    {0, SW1_CS8, SW2_CS8, SW9_CS8},
+    {0, SW11_CS13, SW12_CS13, SW10_CS13},
+    {0, SW7_CS13, SW8_CS13, SW6_CS13},
+    {0, SW4_CS13, SW5_CS13, SW3_CS13},
+    {0, SW1_CS13, SW2_CS13, SW9_CS13},
+    {0, SW11_CS1, SW12_CS1, SW10_CS1},
+    {0, SW7_CS1, SW8_CS1, SW6_CS1},
+    {0, SW4_CS1, SW5_CS1, SW3_CS1},
+    {0, SW1_CS1, SW2_CS1, SW9_CS1},
 
-bool led_update_kb(led_t led_state)
-{
-    bool res = led_update_user(led_state);
+    {0, SW11_CS2, SW12_CS2, SW10_CS2},
+    {0, SW7_CS2, SW8_CS2, SW6_CS2},
+    {0, SW4_CS2, SW5_CS2, SW3_CS2},
+    {0, SW1_CS2, SW2_CS2, SW9_CS2},
+    {0, SW11_CS12, SW12_CS12, SW10_CS12},
+    {0, SW7_CS12, SW8_CS12, SW6_CS12},
+    {0, SW4_CS12, SW5_CS12, SW3_CS12},
+    {0, SW1_CS12, SW2_CS12, SW9_CS12},
+    {0, SW11_CS5, SW12_CS5, SW10_CS5},
+    {0, SW7_CS5, SW8_CS5, SW6_CS5},
+    {0, SW4_CS5, SW5_CS5, SW3_CS5},
+    {0, SW1_CS5, SW2_CS5, SW9_CS5},
 
-    if (res)
-    {
-        pwmEnableChannel(&PWMD0, 0, led_state.num_lock ? 1 : 0);
-        pwmEnableChannel(&PWMD0, 1, led_state.caps_lock ? 1 : 0);
-        pwmEnableChannel(&PWMD1, 0, led_state.scroll_lock ? 1 : 0);
-    }
+    {0, SW11_CS3, SW12_CS3, SW10_CS3},
+    {0, SW7_CS3, SW8_CS3, SW6_CS3},
+    {0, SW4_CS3, SW5_CS3, SW3_CS3},
+    {0, SW1_CS3, SW2_CS3, SW9_CS3},
+    {0, SW11_CS11, SW12_CS11, SW10_CS11},
+    {0, SW7_CS11, SW8_CS11, SW6_CS11},
+    {0, SW4_CS11, SW5_CS11, SW3_CS11},
+    {0, SW1_CS11, SW2_CS11, SW9_CS11},
+    {0, SW11_CS6, SW12_CS6, SW10_CS6},
+    {0, SW7_CS6, SW8_CS6, SW6_CS6},
+    {0, SW4_CS6, SW5_CS6, SW3_CS6},
+    {0, SW1_CS6, SW2_CS6, SW9_CS6},
 
-    return res;
-}
+    {0, SW11_CS4, SW12_CS4, SW10_CS4},
+    {0, SW7_CS4, SW8_CS4, SW6_CS4},
+    {0, SW4_CS4, SW5_CS4, SW3_CS4},
+    {0, SW1_CS4, SW2_CS4, SW9_CS4},
+    {0, SW11_CS10, SW12_CS10, SW10_CS10},
+    {0, SW4_CS10, SW5_CS10, SW3_CS10},
+    {0, SW1_CS10, SW2_CS10, SW9_CS10},
+    {0, SW11_CS7, SW12_CS7, SW10_CS7},
+    {0, SW7_CS7, SW8_CS7, SW6_CS7},
+    {0, SW4_CS7, SW5_CS7, SW3_CS7},
+    {0, SW1_CS7, SW2_CS7, SW9_CS7},
+};

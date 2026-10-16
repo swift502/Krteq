@@ -8,61 +8,156 @@
 
 An extended 5x12 keyboard with 2 extra keys. Intended for ortho layouts with a shifted number row, allowing for the placement of the delete and tilde keys above their usual spots.
 
-Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning from its lessons to make a design that's easier to build, more maintainable, better encapsulated and overall a more complete product.
+Krteq is a successor to [Krtkus](https://github.com/swift502/Krtkus), learning from its lessons to make a design that's more feature complete, better encapsulated and overall a more complete product.
 
 ### Features
 
 - Low profile
 - Hotswap
-- White backlight (only breathing effect)
+- RGB backlight
 - QMK/VIA compatible
-- Gateron KS-33B (GLP 3.0) switches
 - 3D printed case with a 7 degree tilt
-- Tray mount PCB, integrated plate
-- 233mm × 125mm × 30mm
+- Tray mount
+- 233mm × 121mm × 30mm
 
 Connecting the keyboard to [usevia.app](https://usevia.app) requires manually uploading the [design file](production/krteq_via.json) in the design tab.
 
 ![](images/2.webp)
 
+## Build guide
+
+### Parts
+
+- [PCB](#pcb)
+- [Case](#case)
+- Keycaps
+- 61x Gateron KS-33 switch
+- Gateron 2u low profile plate-mounted stabilizer
+
+<!-- -->
+
+- Raspberry Pi Pico
+- USB-C breakout board
+- OLED display module
+
+<!-- -->
+
+- 11x connecting wire
+- 6x M2x8 screw
+- 2x M2.5x6 screw
+- Rubber feet
+
+### Breakout boards
+
+The **USB-C breakout board** is expected to match the specs of the Adafruit USB-C breakout board with two M2.5 screw holes 15.24mm apart, 2.54mm from the front edge, and built-in resistors for the CC lines.
+
+The **OLED display module** is expected to be a 128x32 I2C OLED screen. These screens are not very standardized, so the PCB cutout is generous to fit modules with slightly different dimensions. Any OLED roughly equal or less than 38x12mm should fit, and at most require slight modifications to the display cutout in the plate.
+
+![](images/modules.webp)
+
+### Assembly
+
+1. Perform the initial firmware flash on the Pico
+1. Solder the Pico onto the PCB
+1. Solder the PCB wire ends to the J1, J2 and J3 interfaces
+1. Attach the stabilizer to the plate
+1. Screw the USB board to the plate
+1. Place the OLED module into plate's display slot
+1. Connect the plate to the PCB by pushing switches through them
+1. Solder component wire ends to the respective breakout boards
+1. Screw the plate to the case
+1. Put some keycaps on and you're done!
+
 ## PCB
 
-The Kicad 10 project can be found in [source/kicad](source/kicad). All parts are SMD. The PCB is intended to be ordered pre-assembled for an easier, although more expensive build process.
+The Kicad 10 project can be found in [source/kicad](source/kicad). All parts are SMD, the PCB is intended to be ordered with pre-assembled SMD components for an easier, although more expensive build process.
 
-To generate fabrication files, open the Kicad project and use an export plugin provided by one of the PCB manufacturers you want to order from. The order process is then highly dependent on the manufacturer.
-
-Suggested resistor values correspond to max safe LED brightness, which is later adjusted using software. Backlight intensity is controlled by QMK's backlight system, and indicator brightness is adjustable via custom PWM code.
+To generate fabrication files, open the Kicad project and use an export plugin provided by the PCB manufacturer you want to order from. The order process is then highly dependent on the manufacturer.
 
 ### Suggested BOM
 
-| Part | Manufacturer Part Number |
-|---|---|
-| Switch Diode | 1N4148W |
-| Backlight LED | MHT151WDT |
-| GSD NMOS | HX2302A |
-| R82Ω | 0603WAF820JT5E |
-| R330Ω | 0603WAF3300T5E |
-| R470Ω | 0603WAF4700T5E |
-| R10kΩ | 0603WAF1002T5E |
-| Switch socket | CPG151101S11-16 |
+| Part | Package | Manufacturer Part Number |
+|---|---|---|
+| Switch diode | SOD-123 | 1N4148W |
+| Switch socket | SMD | KS-2P02B01-02 |
+| RGB LED | SMD-4P,3.2x1.3mm | A-SP1513R6GHB1C-A01-2A |
+| RGB driver | QFN-48-EP(6x6) | IS31FL3733B-QFLS4-TR |
+| 0.1µF capacitor | 0402 | CL05B104KO5NNNC |
+| 0.47µF capacitor | 0603 | CL10B474KA8NNNC |
+| 22µF/10V capacitor | CASE-A-3216-18(mm) | T520A226M010ATE080 |
+| 2kΩ resistor | 0603 | 0603WAF2001T5E |
+| 20kΩ resistor | 0603 | 0603WAF2002T5E |
+| 100kΩ resistor | 0603 | 0603WAF1003T5E |
 
 ## Case
 
-Case is designed non-destructively in Blender here [source/Krteq.blend](source/Krteq.blend), so it should be fairly easy to modify if needed. STL files for 3D printing can be found in [production/stl](production/stl). Tested with PLA, 0.15mm layer height, 100% infill.
+Case blend file can be found in [source/Krteq.blend](source/Krteq.blend). It's designed non-destructively, so it should be fairly easy to modify if needed.
 
-You'll need to print at least 3 files. Top and bottom in one or two colors, and the LED cover strip using transparent filament.
+STL files for 3D printing can be found in [production/stl](production/stl). Recommended printing parameters are:
 
-The top part also has a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
+- PLA
+- 100% infill
+- 0.15mm layer height
+
+The plate has a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
 
 ## Firmware
 
-A pre-compiled firmware file can be found here [production/krteq_firmware.uf2](production/krteq_firmware.uf2).
-
 QMK/VIA setup with a few custom features:
 
-- custom `KRT_VOL` keycode for combined volume control
+- custom keycodes for volume, screen and RGB control
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> reverts to the default keymap
+
+### Adding custom OLED screens
+
+In QMK, user keymaps can completely override oled rendering via `oled_task_user()`. However, Krteq also exposes its custom screen system, where screen interaction is done via the `KRT_SCR` keycode. Hooking into this system is preferred as it ensures that other built-in system screen features continue to work properly.
+
+![](images/oled.webp)
+
+Here's a minimal example of a custom screen definition in a user keymap:
+
+```c
+// 1. Create draw function
+static void my_screen_start(void)
+{
+    oled_write_P(PSTR("Hello world"), false);
+}
+
+// 2. Construct screen instance
+static const krteq_screen_t my_screen = {
+    .name = "Custom screen",
+    .start = my_screen_start,
+};
+
+// 3. Override built-in screen list
+const krteq_screen_t *const user_screens[] = {
+    &my_screen
+};
+```
+
+Here's a table of fields and callbacks available for screens to implement:
+
+| Property     | Description |
+| ------------ | ----------- |
+| `.name`      | Display name string |
+| `.start`     | Screen state init and first draw |
+| `.update`    | Refresh every OLED task cycle |
+| `.key_event` | Key press event |
+| `.reset`     | Screen state reset |
+
+You can combine custom screens with the built-in ones. You can reshuffle them, remove some and add your own. The built-in screen list goes as follows:
+
+```c
+const krteq_screen_t *const user_screens[] = {
+    &krteq_screen_indicators,
+    &krteq_screen_bongo_cat,
+    &krteq_screen_game_of_life,
+    &krteq_screen_waves,
+    &krteq_screen_ball_pit,
+    &krteq_screen_system_info
+};
+```
 
 ### Compiling (Windows)
 
@@ -83,59 +178,6 @@ For the initial flash, hold the BOOTSEL button while connecting the Pico to a co
 
 Once flashed, you can trigger the bootloader mode again by simply pressing the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
 
-## Build guide
-
-### Parts
-
-- [PCB](#pcb)
-- [Case](#case)
-- Raspberry Pi Pico
-- 30cm (1ft) USB panel-mount extension cable
-- 61x Gateron KS-33B (GLP 3.0) switches
-- 61x MX low profile keycaps
-- Gateron 2u low profile plate-mounted stabilizer
-- 3x M2x6 flat head screw
-- Rubber feet
-
-### Assembly
-
-[![](images/build.webp)](https://youtu.be/iH0en77GBfo)
-
-Assuming you get the PCB pre-assembled, the only thing left to solder is the MCU. I recommend using a socket header for easy Pico replacement, but it can obviously be soldered directly as well.
-
-1. Install the Pico onto the PCB (socketed or soldered)
-2. Attach the indicator LED cover strip to the top case
-3. Attach the 2u stabilizer to the top case
-4. Push the corner switches through the top case and into the PCB sockets to hold the two parts together
-5. Screw the panel mount cable to the case cutout and connect the other end to the Pico
-
-> [!IMPORTANT]
-> Now is your last chance to perform the initial [firmware flash](#flashing-windows). After this point the BOOTSEL button won't be accessible. I also recommend plugging the keyboard in and testing basic functionality. If you find an issue, it's still very easy to test connectivity or swap out the Pico.
-
-6. Slide the top assembly into the bottom case rails
-7. Screw the top and bottom cases together
-8. Install the remaining switches and keycaps
-
-And you're done!
-
-## QnA
-
-### Why the unusual KS-33B switches?
-
-The idea was that ordering a pre-assembled PCB will be faster, cheaper and long-term more viable if it involves regular hotswap sockets, since they're always in stock and available in cheaper off-brand variants, unlike the Gateron low profile hotswap sockets, which are much less common. The fact that they also support regular MX switches is a nice bonus.
-
-### So is this board compatible with high profile switches?
-
-Footprint-wise, yes, but a compatible high-profile top case variant would have to be made, and I have no idea if the low profile stabilizer would be compatible with regular keycaps. So there's a few concerns, but theoretically it's possible.
-
-### Why no RGB?
-
-The simple backlighting was a lot safer and easier to implement. But now that I've confirmed it works, I'd love to implement proper RGB with all effects for the next revision.
-
-### Who needs scroll lock?
-
-I really wanted an LED for my custom letter accent input method. I wanted it to be an actual compose LED, which would be supported by QMK, but unfortunately not Windows. So ultimately the third LED ended up being a regular scroll lock. I use it as an indicator for my custom accent input method, but generally like it as a general purpose LED that can be used for custom functionality via AHK scripts.
-
 ## Documentation
 
 ### QMK
@@ -143,16 +185,5 @@ I really wanted an LED for my custom letter accent input method. I wanted it to 
 - Info.json: https://docs.qmk.fm/reference_info_json
 - Keycodes: https://docs.qmk.fm/keycodes
 - Default keymap: https://docs.qmk.fm/configurator_default_keymaps
-- Backlight: https://docs.qmk.fm/features/backlight
-
-### Kicad
-
-Switch grid reference table:
-
-| Grid | Size |
-| --- | --- |
-| Switch 1 | 19.05 |
-| Switch 1/4 | 4.7625 |
-| Switch 1/16 | 1.190625 |
-| Switch 1/32 | 0.5953125 |
-| Switch 1/64 | 0.29765625 |
+- RGB matrix: https://docs.qmk.fm/features/rgb_matrix
+- OLED: https://docs.qmk.fm/features/oled_driver

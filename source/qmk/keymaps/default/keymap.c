@@ -28,19 +28,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, KC_LGUI, KRT_VOL, KC_LALT, MO(1),        KC_SPC,      MO(2),   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
     ),
     [1] = LAYOUT_default(
-        KC_MPLY,                                                                                           KC_NUM,
+        TG(4),                                                                                             KC_NUM,
         KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
         KC_INS,  _______, KC_UP,   _______, KC_PGUP, KC_P7,   KC_P8,   KC_P9,   _______, _______, _______, _______,
         KC_CAPS, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_P4,   KC_P5,   KC_P6,   _______, KC_LBRC, KC_RBRC, KC_BSLS,
         SE_LEFT, KC_BSLS, _______, _______, _______, KC_P1,   KC_P2,   KC_P3,   _______, _______, _______, _______,
-        _______, _______, _______, _______, _______,      KC_P0,       KC_PDOT, KC_HOME, _______, _______, KC_END
+        KC_SCRL, _______, _______, _______, _______,      KC_P0,       KC_PDOT, KC_HOME, _______, _______, KC_END
     ),
     [2] = LAYOUT_default(
-        BL_BRTG,                                                                                           BL_TOGG,
+        KRT_SCR,                                                                                           RM_TOGG,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU,
-        _______, _______, BL_UP,   _______, _______, _______, _______, _______, _______, KC_PSLS, KC_PAST, KC_PMNS,
-        _______, _______, BL_DOWN, _______, _______, _______, _______, _______, _______, _______, _______, KC_PPLS,
+        KRT_RGB, RM_SATD, RM_VALU, RM_SATU, RM_SPDU, _______, _______, _______, _______, KC_PSLS, KC_PAST, KC_PMNS,
+        _______, RM_HUED, RM_VALD, RM_HUEU, RM_SPDD, _______, _______, _______, _______, _______, _______, KC_PPLS,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RSFT(KC_ENT),
         _______, _______, _______, _______, _______,      _______,     _______, _______, _______, _______, RCTL(KC_ENT)
+    ),
+    [3] = LAYOUT_default(
+        _______,                                                                                           _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______,      _______,     _______, _______, _______, _______, _______
+    ),
+    [4] = LAYOUT_default(
+        XXXXXXX,                                                                                           XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, MO(5),        XXXXXXX,     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    ),
+    [5] = LAYOUT_default(
+        TG(4),                                                                                             _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______,      _______,     _______, _______, _______, _______, _______
     )
 };

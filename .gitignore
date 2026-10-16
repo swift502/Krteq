@@ -6,5 +6,5 @@ source/kicad/**/*/production
 source/kicad/**/*/database
 source/kicad/**/*/nextpcb
 source/kicad/**/*/jlcpcb
-~*.lck
+source/kicad/**/*/~*.lck
 __pycache__/

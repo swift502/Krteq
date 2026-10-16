@@ -1,4 +1,5 @@
 import argparse
+import ctypes
 import os
 import shutil
 import subprocess
@@ -12,6 +13,10 @@ args = args_parse.parse_args()
 # Config
 name = "krteq"
 msys_exe = r"C:\QMK_MSYS\usr\bin\bash.exe"
+
+if not Path(msys_exe).exists():
+    print("QMK MSYS not found. Download at https://msys.qmk.fm/")
+    raise SystemExit(1)
 
 # Local
 root_local = Path(__file__).resolve().parents[2]
@@ -43,8 +48,17 @@ if args.clean: command += " --clean"
 args = [msys_exe, "--login", "-c", command]
 
 # Run
+# Get current console mode to restore it after running MSYS
+kernel32 = ctypes.windll.kernel32
+console = kernel32.GetStdHandle(-11)
+console_mode = ctypes.c_uint32()
+kernel32.GetConsoleMode(console, ctypes.byref(console_mode))
+
 print()
-subprocess.run(args, env=env, check=True)
+try:
+    subprocess.run(args, env=env, check=True)
+finally:
+    kernel32.SetConsoleMode(console, console_mode)
 print()
 
 # Retrieve bin file
