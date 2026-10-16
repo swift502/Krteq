@@ -143,7 +143,7 @@ Here's a table of fields and callbacks available for screens to implement:
 | ------------ | ----------- |
 | `.name`      | Display name string |
 | `.start`     | Screen state init and first draw |
-| `.update`    | Refresh call every OLED task cycle |
+| `.update`    | Refresh every OLED task cycle |
 | `.key_event` | Key press event |
 | `.reset`     | Screen state reset |
 
