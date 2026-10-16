@@ -131,9 +131,11 @@ Once flashed, you can trigger the bootloader mode again by simply pressing the <
 
 ### Adding custom OLED screens
 
-User keymaps can completely override oled rendering via `oled_task_user()`, but Krteq exposes a modular screen system, where screens are accessed using the `KRT_SCR` keycode.
+In QMK, user keymaps can completely override oled rendering via `oled_task_user()`.
 
-You can hook into this built-in screen system and create a custom screen. Here's a minimal example of a custom screen definition in a user keymap:
+However, Krteq also exposes its custom screen system, where user screens are accessed via the `KRT_SCR` keycode. Hooking into this system is preferred as it ensures that other system screen features continue to work properly.
+
+Here's a minimal example of a custom screen definition in a user keymap:
 
 ```c
 static void custom_start(void)
@@ -153,15 +155,15 @@ const krteq_screen_t *const user_screens[] = {
 };
 ```
 
-All fields of `krteq_screen_t` are optional, unset callbacks are simply skipped:
+Here's a table of all fields and callbacks available for screens to implement:
 
-| Property     | Type                                                                   | Description |
-| ------------ | ---------------------------------------------------------------------- | ----------- |
-| `.name`      | `string`                                                               | Display name |
-| `.start`     | `void start(void)`                                                     | Initialize screen state and initial draw |
-| `.update`    | `void update(void)`                                                    | Refresh of the screen every OLED task cycle |
-| `.key_event` | `void key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)` | Key press event, `keycode` is a QMK keycode (`KC_A`, `KC_SPC`), `x` (0-127) and `y` (0-31) are normalized screen coordinates of the pressed key relative to their physical position on the keyboard |
-| `.reset`     | `void reset(void)`                                                     | Screen state reset |
+| Property     | Description |
+| ------------ | ----------- |
+| `.name`      | Display name string |
+| `.start`     | Screen state init and first draw |
+| `.update`    | Refresh call every OLED task cycle |
+| `.key_event` | Key press event |
+| `.reset`     | Screen state reset |
 
 You can combine custom screens with the built-in ones. The default screen configuration looks like this. You can reshuffle it, remove some of the screens and add your own.
 
@@ -175,8 +177,6 @@ const krteq_screen_t *const user_screens[] = {
     &krteq_screen_system_info
 };
 ```
-
-Hooking into the built-in screen system is recommended as it ensures that other system features such as the boot logo, input lock and RGB overlays continue to work properly.
 
 ## Documentation
 
