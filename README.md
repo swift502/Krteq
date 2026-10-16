@@ -124,13 +124,13 @@ static void custom_start(void)
     oled_write_P(PSTR("Hello world"), false);
 }
 
-// Create a new screen instance
+// Construct screen instance
 static const krteq_screen_t custom_screen = {
     .name = "Custom screen",
     .start = custom_start,
 };
 
-// Override the list of user screens
+// Override built-in screen list
 const krteq_screen_t *const user_screens[] = {
     &custom_screen
 };
