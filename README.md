@@ -146,7 +146,7 @@ Here's a table of fields and callbacks available for screens to implement:
 | `.key_event` | Key press event |
 | `.reset`     | Screen state reset |
 
-You can combine custom screens with the built-in ones. You can reshuffle it, remove some of the screens and add your own. The built-in screen list goes as follows:
+You can combine custom screens with the built-in ones. You can reshuffle them, remove some and add your own. The built-in screen list goes as follows:
 
 ```c
 const krteq_screen_t *const user_screens[] = {
