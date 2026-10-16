@@ -118,7 +118,7 @@ In QMK, user keymaps can completely override oled rendering via `oled_task_user(
 Here's a minimal example of a custom screen definition in a user keymap:
 
 ```c
-// 1. Create draw function
+// 1. Create custom render function
 static void my_screen_start(void)
 {
     oled_write_P(PSTR("Hello world"), false);
