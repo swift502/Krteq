@@ -119,7 +119,7 @@ However, Krteq also exposes its custom screen system, where user screens are acc
 Here's a minimal example of a custom screen definition in a user keymap:
 
 ```c
-static void custom_start(void)
+static void draw(void)
 {
     oled_write_P(PSTR("Hello world"), false);
 }
@@ -127,7 +127,7 @@ static void custom_start(void)
 // Construct screen instance
 static const krteq_screen_t custom_screen = {
     .name = "Custom screen",
-    .start = custom_start,
+    .start = draw,
 };
 
 // Override built-in screen list
