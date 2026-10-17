@@ -117,7 +117,7 @@ Here's a minimal example of a custom screen definition in a user keymap:
 
 ```c
 // 1. Create custom render function
-static void my_screen_start(void)
+static void my_screen_show(void)
 {
     oled_write_P(PSTR("Hello world"), false);
 }
@@ -125,7 +125,7 @@ static void my_screen_start(void)
 // 2. Construct screen instance
 static const krteq_screen_t my_screen = {
     .name = "Custom screen",
-    .start = my_screen_start,
+    .show = my_screen_show,
 };
 
 // 3. Override built-in screen list
@@ -139,10 +139,12 @@ Here's a table of fields and callbacks available for screens to implement:
 | Property     | Description |
 | ------------ | ----------- |
 | `.name`      | Display name string |
-| `.start`     | Screen state init and first draw |
-| `.update`    | Refresh every OLED task cycle |
+| `.show`      | Runs once every time screen is shown |
+| `.update`    | Refresh on every OLED task cycle |
 | `.key_event` | Key press event |
 | `.reset`     | Screen state reset |
+
+
 
 You can combine custom screens with the built-in ones. You can reshuffle them, remove some and add your own. The built-in screen list goes as follows:
 

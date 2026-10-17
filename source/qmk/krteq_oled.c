@@ -568,7 +568,7 @@ static void draw_trophies(uint32_t trophies)
 
 // Animations in flight are dropped, since their 16 bit timers may have wrapped while hidden
 // Sleep carries over, an awake cat starts a fresh sleep countdown
-static void bongo_cat_start(void)
+static void bongo_cat_show(void)
 {
     memset(bongo_paw_state, BONGO_PAW_IDLE, sizeof(bongo_paw_state));
     bongo_schedule_blink();
@@ -623,7 +623,7 @@ static void bongo_cat_reset(void)
 
 const krteq_screen_t krteq_screen_bongo_cat = {
     .name      = "Bongo cat",
-    .start     = bongo_cat_start,
+    .show      = bongo_cat_show,
     .update    = bongo_cat_update,
     .key_event = bongo_key_event,
     .reset     = bongo_cat_reset
@@ -698,7 +698,7 @@ static void wave_draw(void)
     }
 }
 
-static void wave_start(void)
+static void wave_show(void)
 {
     wave_timer = timer_read();
     wave_idle_timer = timer_read();
@@ -750,7 +750,7 @@ static void wave_reset(void)
 
 const krteq_screen_t krteq_screen_waves = {
     .name      = "Waves",
-    .start     = wave_start,
+    .show      = wave_show,
     .update    = wave_update,
     .key_event = wave_key_event,
     .reset     = wave_reset
@@ -948,7 +948,7 @@ static void circles_draw(void)
     for (uint16_t i = 0; i < sizeof(circles_frame); i++) oled_write_raw_byte(circles_frame[i], i);
 }
 
-static void circles_start(void)
+static void circles_show(void)
 {
     circles_timer = timer_read();
     circles_idle_timer = timer_read();
@@ -1009,7 +1009,7 @@ static void circles_reset(void)
 
 const krteq_screen_t krteq_screen_ball_pit = {
     .name      = "Ball pit",
-    .start     = circles_start,
+    .show      = circles_show,
     .update    = circles_update,
     .key_event = circles_key_event,
     .reset     = circles_reset
@@ -1149,7 +1149,7 @@ static void life_draw(void)
     }
 }
 
-static void life_start(void)
+static void life_show(void)
 {
     life_timer = timer_read();
     life_idle_timer = timer_read();
@@ -1201,7 +1201,7 @@ static void life_reset(void)
 
 const krteq_screen_t krteq_screen_game_of_life = {
     .name      = "Game of life",
-    .start     = life_start,
+    .show      = life_show,
     .update    = life_update,
     .key_event = life_key_event,
     .reset     = life_reset
@@ -1320,7 +1320,7 @@ static const uint8_t logo_image[] = {
 static uint16_t logo_timer;
 static bool logo_finished = false;
 
-static void logo_start(void)
+static void logo_show(void)
 {
     logo_timer = timer_read();
     draw_image(logo_image, LOGO_X, LOGO_Y);
@@ -1337,7 +1337,7 @@ static void logo_reset(void)
 }
 
 static const krteq_screen_t system_screen_logo = {
-    .start  = logo_start,
+    .show   = logo_show,
     .update = logo_update,
     .reset  = logo_reset
 };
@@ -1653,7 +1653,7 @@ static void render_screen(const krteq_screen_t *screen)
         screen_redraw = true;
         oled_clear();
 
-        if (screen->start) screen->start();
+        if (screen->show) screen->show();
     }
 
     if (screen->update) screen->update();
