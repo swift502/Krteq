@@ -290,7 +290,7 @@ static void draw_selection(const char *title, const selection_t *selection, uint
     int16_t to_x = left + selection->to * gap;
     int16_t dot_x = from_x + (to_x - from_x) * (int16_t)progress / SELECT_PROGRESS_MAX;
 
-    draw_box(dot_x - SELECT_DOT_SIZE / 2, SELECT_DOT_Y - SELECT_DOT_SIZE / 2, SELECT_DOT_SIZE, SELECT_DOT_SIZE, true);
+    fill_rect(dot_x - SELECT_DOT_SIZE / 2, SELECT_DOT_Y - SELECT_DOT_SIZE / 2, SELECT_DOT_SIZE, SELECT_DOT_SIZE, true);
 }
 
 //==============================================================================
@@ -1025,61 +1025,29 @@ const krteq_screen_t krteq_screen_ball_pit = {
 //==============================================================================
 
 #define LIFE_FRAME_DURATION 100
-#define LIFE_SLICES 6
-#define LIFE_SLICE_DURATION (LIFE_FRAME_DURATION / LIFE_SLICES)
-#define LIFE_SLICE_ROWS (LIFE_HEIGHT / LIFE_SLICES)
 #define LIFE_IDLE_DURATION 5000
 #define LIFE_MARGIN_X 6
 #define LIFE_MARGIN_Y 8
 #define LIFE_GLIDER_Y 2
 #define LIFE_WIDTH (OLED_DISPLAY_WIDTH + LIFE_MARGIN_X * 2)
 #define LIFE_HEIGHT (OLED_DISPLAY_HEIGHT + LIFE_MARGIN_Y * 2)
-#define LIFE_BYTES (LIFE_HEIGHT / 8 * LIFE_WIDTH)
+#define LIFE_PAGES (LIFE_HEIGHT / 8)
+#define LIFE_BYTES (LIFE_PAGES * LIFE_WIDTH)
 
 // A whole page of vertical margin keeps the visible window byte aligned with the display
 _Static_assert(LIFE_MARGIN_Y % 8 == 0, "The life margin must be a whole number of pages tall");
-_Static_assert(LIFE_HEIGHT % LIFE_SLICES == 0, "Every slice must cover the same number of rows");
 
 static uint8_t life_cells[LIFE_BYTES];
 static uint8_t life_next[LIFE_BYTES];
 static uint16_t life_timer;
 static uint16_t life_idle_timer;
-static uint8_t life_slice;
 static bool life_seeded;
 
-static bool life_inside(int16_t x, int16_t y)
-{
-    return x >= 0 && x < LIFE_WIDTH && y >= 0 && y < LIFE_HEIGHT;
-}
-
-static uint16_t life_index(int16_t x, int16_t y)
-{
-    return y / 8 * LIFE_WIDTH + x;
-}
-
 // The grid extends past the screen, so patterns leave view before hitting a wall
-static bool life_cell(int16_t x, int16_t y)
-{
-    if (!life_inside(x, y)) return false;
-    return life_cells[life_index(x, y)] >> (y % 8) & 1;
-}
-
-static void life_set_cell(uint8_t *cells, int16_t x, int16_t y, bool alive)
-{
-    if (!life_inside(x, y)) return;
-
-    uint16_t index = life_index(x, y);
-    uint8_t mask = 1 << (y % 8);
-
-    if (alive) cells[index] |= mask;
-    else cells[index] &= ~mask;
-}
-
-// Written to both buffers so a cell still lands whole partway through a generation
 static void life_add_cell(int16_t x, int16_t y)
 {
-    life_set_cell(life_cells, x, y, true);
-    life_set_cell(life_next, x, y, true);
+    if (x < 0 || x >= LIFE_WIDTH || y < 0 || y >= LIFE_HEIGHT) return;
+    life_cells[y / 8 * LIFE_WIDTH + x] |= 1 << (y % 8);
 }
 
 enum bomb_shapes
@@ -1136,6 +1104,43 @@ static void life_spawn_glider(void)
     }
 }
 
+// One column of a page with the touching rows of the pages above and below, the page itself in bits 8 to 15
+static uint32_t life_column(uint8_t page, int16_t x)
+{
+    if (x < 0 || x >= LIFE_WIDTH) return 0;
+
+    const uint8_t *column = life_cells + page * LIFE_WIDTH + x;
+    uint32_t word = (uint32_t)column[0] << 8;
+
+    if (page > 0) word |= column[-LIFE_WIDTH];
+    if (page < LIFE_PAGES - 1) word |= (uint32_t)column[LIFE_WIDTH] << 16;
+    return word;
+}
+
+// Every bit of the words is a cell, so the eight neighbours of a whole page column are counted at once
+// by adding them up bitwise. The count is only needed modulo 8, as a full 8 neighbours dies the same as 0.
+static uint8_t life_step(uint32_t left, uint32_t centre, uint32_t right)
+{
+    // Each side column sums its three cells, the centre only its two
+    uint32_t left_low   = (left << 1) ^ left ^ (left >> 1);
+    uint32_t left_high  = ((left << 1) & left) | ((left >> 1) & ((left << 1) ^ left));
+    uint32_t right_low  = (right << 1) ^ right ^ (right >> 1);
+    uint32_t right_high = ((right << 1) & right) | ((right >> 1) & ((right << 1) ^ right));
+    uint32_t centre_low  = (centre << 1) ^ (centre >> 1);
+    uint32_t centre_high = (centre << 1) & (centre >> 1);
+
+    // Then the column sums are added together, one bit position at a time
+    uint32_t ones = left_low ^ right_low ^ centre_low;
+    uint32_t carry = (left_low & right_low) | (centre_low & (left_low ^ right_low));
+    uint32_t twos_sum = left_high ^ right_high ^ centre_high;
+    uint32_t twos_carry = (left_high & right_high) | (centre_high & (left_high ^ right_high));
+    uint32_t twos = twos_sum ^ carry;
+    uint32_t fours = twos_carry ^ (twos_sum & carry);
+
+    // Two or three neighbours, with two only keeping a live cell alive
+    return (twos & ~fours & (ones | centre)) >> 8;
+}
+
 static void life_draw(void)
 {
     for (uint8_t page = 0; page < OLED_PAGES; page++)
@@ -1165,32 +1170,23 @@ static void life_start(void)
 
 static void life_update(void)
 {
-    if (timer_elapsed(life_timer) < LIFE_SLICE_DURATION) return;
+    if (timer_elapsed(life_timer) < LIFE_FRAME_DURATION) return;
     life_timer = timer_read();
 
-    // One generation is spread over several slices, so no single pass stalls the keyboard
-    uint8_t first = life_slice * LIFE_SLICE_ROWS;
-
-    for (uint8_t y = first; y < first + LIFE_SLICE_ROWS; y++)
+    // Columns slide through a window of three, so each is read only once per page
+    for (uint8_t page = 0; page < LIFE_PAGES; page++)
     {
+        uint32_t left = 0;
+        uint32_t centre = life_column(page, 0);
+
         for (uint8_t x = 0; x < LIFE_WIDTH; x++)
         {
-            uint8_t neighbours = 0;
-
-            for (int8_t dy = -1; dy <= 1; dy++)
-            {
-                for (int8_t dx = -1; dx <= 1; dx++)
-                {
-                    if (dx || dy) neighbours += life_cell(x + dx, y + dy);
-                }
-            }
-
-            life_set_cell(life_next, x, y, neighbours == 3 || (neighbours == 2 && life_cell(x, y)));
+            uint32_t right = life_column(page, x + 1);
+            life_next[page * LIFE_WIDTH + x] = life_step(left, centre, right);
+            left = centre;
+            centre = right;
         }
     }
-
-    if (++life_slice < LIFE_SLICES) return;
-    life_slice = 0;
 
     memcpy(life_cells, life_next, sizeof(life_cells));
 
@@ -1207,8 +1203,6 @@ static void life_update(void)
 static void life_reset(void)
 {
     memset(life_cells, 0, sizeof(life_cells));
-    memset(life_next, 0, sizeof(life_next));
-    life_slice = 0;
     life_seeded = false;
 }
 
