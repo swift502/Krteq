@@ -173,15 +173,19 @@ static void draw_labelled(const char *title, const char *text)
     draw_text(OLED_DISPLAY_WIDTH / 2, CONTENT_Y, text, false);
 }
 
-// Numbered item over its name, such as "Screen 3" over "Bongo cat"
-static void draw_numbered(const char *label, uint32_t number, const char *name)
+// Title over a numbered name, such as "Screen" over "3. Bongo cat"
+static void draw_numbered(const char *title, uint32_t number, const char *name)
 {
-    char title[24];
-    char *out = stpcpy(title, label);
+    char text[OLED_DISPLAY_WIDTH / OLED_FONT_WIDTH + 1];
+    char *end = text + sizeof(text) - 1;
+    char *out = print_number(text, number, 1);
+    *out++ = '.';
     *out++ = ' ';
-    print_number(out, number, 1);
 
-    draw_labelled(title, name ? name : UNNAMED);
+    for (const char *in = name ? name : UNNAMED; *in && out < end; in++) *out++ = *in;
+    *out = '\0';
+
+    draw_labelled(title, text);
 }
 
 //==============================================================================
@@ -657,7 +661,9 @@ const krteq_screen_t krteq_screen_waves = {
 #define CIRCLES_GRAVITY 24
 #define CIRCLES_RESTITUTION 230 // Velocity kept per bounce, out of CIRCLES_ONE
 #define CIRCLES_KICK 5120
+#define CIRCLES_IDLE_KICK (CIRCLES_KICK * 2)
 #define CIRCLES_KICK_SOFTENING 16 // Squared pixels, tames kicks right on top of a circle
+#define CIRCLES_ITERATIONS 4 // Collision passes per frame
 
 struct circle
 {
@@ -720,7 +726,7 @@ static void circles_seed(void)
 
 // Blasts every circle sideways away from the point and always upwards, fading with distance
 // Most keys sit above the resting circles, so a plain radial push would only pin them to the floor
-static void circles_kick(uint8_t x, uint8_t y)
+static void circles_kick(uint8_t x, uint8_t y, int32_t strength)
 {
     for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
     {
@@ -730,8 +736,8 @@ static void circles_kick(uint8_t x, uint8_t y)
         int16_t reach = (dx < 0 ? -dx : dx) + (dy < 0 ? -dy : dy) + 1;
         int32_t falloff = dx * dx + dy * dy + CIRCLES_KICK_SOFTENING;
 
-        circle->vx += dx * CIRCLES_KICK / falloff;
-        circle->vy -= reach * CIRCLES_KICK / falloff;
+        circle->vx += dx * strength / falloff;
+        circle->vy -= reach * strength / falloff;
     }
 }
 
@@ -740,7 +746,7 @@ static void circles_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool press
     if (!pressed) return;
 
     circles_idle_timer = timer_read();
-    circles_kick(x, y);
+    circles_kick(x, y, CIRCLES_KICK);
 }
 
 static void circles_wall(int32_t *position, int32_t *velocity, int32_t low, int32_t high)
@@ -858,7 +864,7 @@ static void circles_update(void)
     if (timer_elapsed(circles_idle_timer) > CIRCLES_IDLE_DURATION)
     {
         circles_idle_timer = timer_read();
-        circles_kick(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT);
+        circles_kick(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT, CIRCLES_IDLE_KICK);
     }
 
     for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
@@ -870,9 +876,13 @@ static void circles_update(void)
         circle->y += circle->vy;
     }
 
-    for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
+    // Each pass carries corrections one circle further through a pile
+    for (uint8_t pass = 0; pass < CIRCLES_ITERATIONS; pass++)
     {
-        for (uint8_t j = i + 1; j < CIRCLES_COUNT; j++) circles_collide(&circles[i], &circles[j]);
+        for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
+        {
+            for (uint8_t j = i + 1; j < CIRCLES_COUNT; j++) circles_collide(&circles[i], &circles[j]);
+        }
     }
 
     // Walls go last so no circle is ever drawn off screen
@@ -1430,7 +1440,7 @@ static void rgb_status_update(void)
     switch (rgb_status_component)
     {
         case RGB_STATUS_POWER:      draw_labelled("RGB", rgb_matrix_is_enabled() ? "Enabled" : "Disabled");          break;
-        case RGB_STATUS_EFFECT:     draw_numbered("Effect", mode, name);                                    break;
+        case RGB_STATUS_EFFECT:     draw_numbered("RGB Effect", mode, name);                                break;
         case RGB_STATUS_HUE:        draw_slider("RGB Hue", hsv.h, UINT8_MAX);                              break;
         case RGB_STATUS_SATURATION: draw_slider("RGB Saturation", hsv.s, UINT8_MAX);                       break;
         case RGB_STATUS_BRIGHTNESS: draw_slider("RGB Brightness", hsv.v, RGB_MATRIX_MAXIMUM_BRIGHTNESS);   break;
