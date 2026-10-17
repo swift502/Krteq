@@ -1457,6 +1457,7 @@ static const krteq_screen_t system_screen_input_lock = {
 #define RGB_BAR_WIDTH OLED_DISPLAY_WIDTH
 #define RGB_BAR_HEIGHT 7 // Matches the lit rows of a glyph
 #define RGB_BAR_PADDING 2
+#define RGB_HUE_MAXIMUM (UINT8_MAX + 1 - RGB_MATRIX_HUE_STEP) // Hue wraps, so the step before 0 is the top
 
 // Defined at the end of this section
 static const krteq_screen_t system_screen_rgb;
@@ -1523,16 +1524,19 @@ static int8_t rgb_key_component(uint16_t keycode)
     }
 }
 
-static void draw_slider(const char *title, uint8_t value, uint8_t maximum)
+// Values are shown in key steps, rounded since the last step clamps short of a full one at the top
+static void draw_slider(const char *title, uint8_t value, uint8_t maximum, uint8_t step)
 {
-    uint8_t fill = (uint16_t)value * (RGB_BAR_WIDTH - RGB_BAR_PADDING * 2) / maximum;
+    uint8_t max_steps = (maximum + step / 2) / step;
+    uint8_t steps = MIN((value + step / 2) / step, max_steps);
+    uint8_t fill = (uint16_t)steps * (RGB_BAR_WIDTH - RGB_BAR_PADDING * 2) / max_steps;
 
     fill_rect(0, CONTENT_Y, RGB_BAR_WIDTH, RGB_BAR_HEIGHT, true);
     fill_rect(1, CONTENT_Y + 1, RGB_BAR_WIDTH - 2, RGB_BAR_HEIGHT - 2, false);
     fill_rect(RGB_BAR_PADDING, CONTENT_Y + RGB_BAR_PADDING, fill, RGB_BAR_HEIGHT - RGB_BAR_PADDING * 2, true);
 
     char text[4];
-    print_number(text, value, 1);
+    print_number(text, steps, 1);
 
     draw_text_at(0, TITLE_Y, title, false);
     draw_text_at(OLED_DISPLAY_WIDTH - strlen(text) * OLED_FONT_WIDTH, TITLE_Y, text, false);
@@ -1559,10 +1563,10 @@ static void rgb_status_update(void)
     {
         case RGB_STATUS_POWER:      draw_labelled("RGB", rgb_matrix_is_enabled() ? "Enabled" : "Disabled");                  break;
         case RGB_STATUS_EFFECT:     draw_selection("RGB Effect", &rgb_effect_selection, RGB_EFFECT_COUNT, rgb_effect_name);  break;
-        case RGB_STATUS_HUE:        draw_slider("RGB Hue", hsv.h, UINT8_MAX);                                                break;
-        case RGB_STATUS_SATURATION: draw_slider("RGB Saturation", hsv.s, UINT8_MAX);                                         break;
-        case RGB_STATUS_BRIGHTNESS: draw_slider("RGB Brightness", hsv.v, RGB_MATRIX_MAXIMUM_BRIGHTNESS);                     break;
-        case RGB_STATUS_SPEED:      draw_slider("RGB Speed", rgb_matrix_get_speed(), UINT8_MAX);                             break;
+        case RGB_STATUS_HUE:        draw_slider("RGB Hue", hsv.h, RGB_HUE_MAXIMUM, RGB_MATRIX_HUE_STEP);                             break;
+        case RGB_STATUS_SATURATION: draw_slider("RGB Saturation", hsv.s, UINT8_MAX, RGB_MATRIX_SAT_STEP);                            break;
+        case RGB_STATUS_BRIGHTNESS: draw_slider("RGB Brightness", hsv.v, RGB_MATRIX_MAXIMUM_BRIGHTNESS, RGB_MATRIX_VAL_STEP);        break;
+        case RGB_STATUS_SPEED:      draw_slider("RGB Speed", rgb_matrix_get_speed(), UINT8_MAX, RGB_MATRIX_SPD_STEP);                break;
     }
 }
 
