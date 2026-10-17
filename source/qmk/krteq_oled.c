@@ -11,7 +11,6 @@
 #define DATA_BONGO_HITS_OFFSET 1
 
 static int current_user_screen = 0;
-static int selected_user_screen;
 static const krteq_screen_t *last_rendered_screen = NULL;
 static bool screen_redraw; // Set on a screen switch or by events, cleared by the screen once drawn
 
@@ -42,6 +41,15 @@ static void save_user_screen(void)
 {
     uint8_t screen = current_user_screen;
     eeconfig_update_kb_datablock(&screen, DATA_SCREEN_OFFSET, sizeof(screen));
+}
+
+// Whether the duration has passed since the timer was last restarted, restarting it if so
+static bool timer_due(uint16_t *timer, uint16_t duration)
+{
+    if (timer_elapsed(*timer) < duration) return false;
+
+    *timer = timer_read();
+    return true;
 }
 
 //==============================================================================
@@ -87,25 +95,29 @@ static uint8_t font_column(char character, uint8_t column)
     return pgm_read_byte(&font[(character - OLED_FONT_START) * OLED_FONT_WIDTH + column]);
 }
 
-static void draw_text_at(uint8_t x, uint8_t y, const char *text, bool inverted)
+// Only the part of the text that lands on the screen is drawn, so text can slide in from off screen
+static void draw_text_at(int16_t x, uint8_t y, const char *text, bool inverted)
 {
     for (uint8_t i = 0; text[i]; i++)
     {
         for (uint8_t ix = 0; ix < OLED_FONT_WIDTH; ix++)
         {
+            int16_t px = x + i * OLED_FONT_WIDTH + ix;
+            if (px < 0 || px >= OLED_DISPLAY_WIDTH) continue;
+
             uint8_t glyph = font_column(text[i], ix);
 
             for (uint8_t iy = 0; iy < OLED_FONT_HEIGHT; iy++)
             {
-                oled_write_pixel(x + i * OLED_FONT_WIDTH + ix, y + iy, (glyph >> iy & 1) != inverted);
+                oled_write_pixel(px, y + iy, (glyph >> iy & 1) != inverted);
             }
         }
     }
 }
 
-static void draw_text(uint8_t center_x, uint8_t y, const char *text, bool inverted)
+static void draw_text(int16_t center_x, uint8_t y, const char *text, bool inverted)
 {
-    draw_text_at(center_x - strlen(text) * OLED_FONT_WIDTH / 2, y, text, inverted);
+    draw_text_at(center_x - (int16_t)strlen(text) * OLED_FONT_WIDTH / 2, y, text, inverted);
 }
 
 static void fill_rect(uint8_t left, uint8_t top, uint8_t width, uint8_t height, bool on)
@@ -203,6 +215,7 @@ static void selection_reset(selection_t *selection, uint8_t index)
     selection->animating = false;
 }
 
+// The first frame is left to the caller's redraw, later ones follow at the frame rate
 static void selection_move(selection_t *selection, uint8_t index, int8_t direction)
 {
     if (index == selection->to) return;
@@ -211,17 +224,26 @@ static void selection_move(selection_t *selection, uint8_t index, int8_t directi
     selection->to = index;
     selection->direction = direction;
     selection->animating = true;
-    selection->timer = timer_read();
-    selection->frame_timer = selection->timer - SELECT_FRAME_DURATION;
+    selection->timer = selection->frame_timer = timer_read();
+}
+
+// For moves made elsewhere, a step to a neighbour slides that way, wrapping around the ends, while jumps slide by order
+static void selection_follow(selection_t *selection, uint8_t index, uint8_t count)
+{
+    uint8_t from = selection->to;
+    int8_t direction = index > from ? 1 : -1;
+
+    if (index == (from + 1) % count) direction = 1;
+    else if (index == (from + count - 1) % count) direction = -1;
+
+    selection_move(selection, index, direction);
 }
 
 // Whether a frame is due, capped at the frame rate while sliding. The settled frame is the last one.
 static bool selection_frame(selection_t *selection)
 {
-    if (!selection->animating) return false;
-    if (timer_elapsed(selection->frame_timer) < SELECT_FRAME_DURATION) return false;
+    if (!selection->animating || !timer_due(&selection->frame_timer, SELECT_FRAME_DURATION)) return false;
 
-    selection->frame_timer = timer_read();
     if (timer_elapsed(selection->timer) >= SELECT_SLIDE_DURATION) selection->animating = false;
     return true;
 }
@@ -236,23 +258,10 @@ static uint16_t selection_progress(const selection_t *selection)
     return SELECT_PROGRESS_MAX - SELECT_PROGRESS_MAX * remaining * remaining / (SELECT_SLIDE_DURATION * SELECT_SLIDE_DURATION);
 }
 
-// Only the part of the text that lands on the screen is drawn
-static void draw_text_clipped(int16_t x, uint8_t y, const char *text)
+// Centered, then offset by the slide
+static void draw_selection_name(const char *name, int16_t offset)
 {
-    for (uint8_t i = 0; text[i]; i++)
-    {
-        for (uint8_t ix = 0; ix < OLED_FONT_WIDTH; ix++)
-        {
-            int16_t px = x + i * OLED_FONT_WIDTH + ix;
-            if (px < 0 || px >= OLED_DISPLAY_WIDTH) continue;
-
-            uint8_t glyph = font_column(text[i], ix);
-            for (uint8_t iy = 0; iy < OLED_FONT_HEIGHT; iy++)
-            {
-                oled_write_pixel(px, y + iy, glyph >> iy & 1);
-            }
-        }
-    }
+    draw_text(OLED_DISPLAY_WIDTH / 2 + offset, SELECT_NAME_Y, name ? name : UNNAMED, false);
 }
 
 static void draw_selection(const char *title, const selection_t *selection, uint8_t count, selection_name_t name)
@@ -260,27 +269,16 @@ static void draw_selection(const char *title, const selection_t *selection, uint
     if (count == 0) count = 1;
 
     uint16_t progress = selection_progress(selection);
-    int8_t direction = selection->direction;
+    int16_t shift = SELECT_SLIDE_DISTANCE * progress / SELECT_PROGRESS_MAX;
 
     draw_text(OLED_DISPLAY_WIDTH / 2, SELECT_TITLE_Y, title, false);
 
-    // Both names are laid out centered, then pushed apart by the slide
-    const char *names[] = {name(selection->from), name(selection->to)};
-    int16_t offsets[] = {
-        -direction * (int16_t)(SELECT_SLIDE_DISTANCE * progress / SELECT_PROGRESS_MAX),
-        direction * (int16_t)(SELECT_SLIDE_DISTANCE * (SELECT_PROGRESS_MAX - progress) / SELECT_PROGRESS_MAX)
-    };
-
-    for (uint8_t i = selection->animating ? 0 : 1; i < 2; i++)
-    {
-        const char *text = names[i] ? names[i] : UNNAMED;
-        int16_t x = OLED_DISPLAY_WIDTH / 2 - strlen(text) * OLED_FONT_WIDTH / 2 + offsets[i];
-        draw_text_clipped(x, SELECT_NAME_Y, text);
-    }
+    // The old name is pushed out by the new one following a slide distance behind
+    if (selection->animating) draw_selection_name(name(selection->from), -selection->direction * shift);
+    draw_selection_name(name(selection->to), selection->direction * (SELECT_SLIDE_DISTANCE - shift));
 
     // Dots shrink their spacing to fit longer lists
-    uint8_t gap = SELECT_DOT_GAP;
-    if (count > 1 && (OLED_DISPLAY_WIDTH - SELECT_DOT_SIZE) / (count - 1) < gap) gap = (OLED_DISPLAY_WIDTH - SELECT_DOT_SIZE) / (count - 1);
+    uint8_t gap = count > 1 ? MIN(SELECT_DOT_GAP, (OLED_DISPLAY_WIDTH - SELECT_DOT_SIZE) / (count - 1)) : 0;
     uint8_t left = OLED_DISPLAY_WIDTH / 2 - (count - 1) * gap / 2;
 
     for (uint8_t i = 0; i < count; i++) oled_write_pixel(left + i * gap, SELECT_DOT_Y, true);
@@ -715,13 +713,11 @@ static void wave_start(void)
 
 static void wave_update(void)
 {
-    if (timer_elapsed(wave_timer) < WAVE_FRAME_DURATION) return;
-    wave_timer = timer_read();
+    if (!timer_due(&wave_timer, WAVE_FRAME_DURATION)) return;
 
     // Idle hands get a drop of their own somewhere on the surface
-    if (timer_elapsed(wave_idle_timer) > WAVE_IDLE_DURATION)
+    if (timer_due(&wave_idle_timer, WAVE_IDLE_DURATION))
     {
-        wave_idle_timer = timer_read();
         wave_drop(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT);
     }
 
@@ -967,12 +963,10 @@ static void circles_start(void)
 
 static void circles_update(void)
 {
-    if (timer_elapsed(circles_timer) < CIRCLES_FRAME_DURATION) return;
-    circles_timer = timer_read();
+    if (!timer_due(&circles_timer, CIRCLES_FRAME_DURATION)) return;
 
-    if (timer_elapsed(circles_idle_timer) > CIRCLES_IDLE_DURATION)
+    if (timer_due(&circles_idle_timer, CIRCLES_IDLE_DURATION))
     {
-        circles_idle_timer = timer_read();
         circles_kick(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT, CIRCLES_IDLE_KICK);
     }
 
@@ -1170,8 +1164,7 @@ static void life_start(void)
 
 static void life_update(void)
 {
-    if (timer_elapsed(life_timer) < LIFE_FRAME_DURATION) return;
-    life_timer = timer_read();
+    if (!timer_due(&life_timer, LIFE_FRAME_DURATION)) return;
 
     // Columns slide through a window of three, so each is read only once per page
     for (uint8_t page = 0; page < LIFE_PAGES; page++)
@@ -1191,9 +1184,8 @@ static void life_update(void)
     memcpy(life_cells, life_next, sizeof(life_cells));
 
     // Spawn gliders on inactivity
-    if (timer_elapsed(life_idle_timer) > LIFE_IDLE_DURATION)
+    if (timer_due(&life_idle_timer, LIFE_IDLE_DURATION))
     {
-        life_idle_timer = timer_read();
         life_spawn_glider();
     }
 
@@ -1226,17 +1218,6 @@ _Static_assert(OLED_DISPLAY_HEIGHT / INFO_ROW_HEIGHT >= 4, "The system info scre
 
 static uint16_t info_timer;
 
-// DEVICE_VER packs the keyboard.json version as BCD, two digits of major and one each of the rest
-static void print_device_version(char *out)
-{
-    *out++ = 'v';
-    out = print_number(out, (DEVICE_VER >> 12 & 0xF) * 10 + (DEVICE_VER >> 8 & 0xF), 1);
-    *out++ = '.';
-    out = print_number(out, DEVICE_VER >> 4 & 0xF, 1);
-    *out++ = '.';
-    print_number(out, DEVICE_VER & 0xF, 1);
-}
-
 static uint16_t bcd_value(uint16_t bcd)
 {
     uint16_t value = 0;
@@ -1244,14 +1225,26 @@ static uint16_t bcd_value(uint16_t bcd)
     return value;
 }
 
+static void print_version(char *out, uint16_t major, uint16_t minor, uint16_t patch)
+{
+    out = print_number(out, major, 1);
+    *out++ = '.';
+    out = print_number(out, minor, 1);
+    *out++ = '.';
+    print_number(out, patch, 1);
+}
+
+// DEVICE_VER packs the keyboard.json version as BCD, two digits of major and one each of the rest
+static void print_device_version(char *out)
+{
+    *out++ = 'v';
+    print_version(out, bcd_value(DEVICE_VER >> 8 & 0xFF), DEVICE_VER >> 4 & 0xF, DEVICE_VER & 0xF);
+}
+
 // QMK_VERSION_BCD packs major and minor into a byte each and patch into the low half
 static void print_qmk_version(char *out)
 {
-    out = print_number(out, bcd_value(QMK_VERSION_BCD >> 24 & 0xFF), 1);
-    *out++ = '.';
-    out = print_number(out, bcd_value(QMK_VERSION_BCD >> 16 & 0xFF), 1);
-    *out++ = '.';
-    print_number(out, bcd_value(QMK_VERSION_BCD & 0xFFFF), 1);
+    print_version(out, bcd_value(QMK_VERSION_BCD >> 24 & 0xFF), bcd_value(QMK_VERSION_BCD >> 16 & 0xFF), bcd_value(QMK_VERSION_BCD & 0xFFFF));
 }
 
 static void print_uptime(char *out)
@@ -1283,10 +1276,8 @@ static void render_info_row(uint8_t row, const char *label, const char *value)
 
 static void system_info_update(void)
 {
-    if (!screen_redraw && timer_elapsed(info_timer) < INFO_INTERVAL) return;
-
+    if (!timer_due(&info_timer, INFO_INTERVAL) && !screen_redraw) return;
     screen_redraw = false;
-    info_timer = timer_read();
 
     char device_version[12];
     print_device_version(device_version);
@@ -1356,30 +1347,33 @@ static const krteq_screen_t system_screen_logo = {
 
 // Defined in the screen select section, which in turn builds on the overlays
 static const krteq_screen_t system_screen_select;
+static selection_t screen_selection;
 
-// Short lived screen shown over the user screen, closing itself once its time is up
+// Short lived screen shown over the user screen, closed by the dispatch once its time is up
 static const krteq_screen_t *overlay = NULL;
 static uint16_t overlay_timer;
+static uint16_t overlay_duration;
 
 // A selection is kept however it ends, timed out or cut short
 static void close_overlay(void)
 {
-    if (overlay == &system_screen_select && selected_user_screen != current_user_screen)
+    if (overlay == &system_screen_select && screen_selection.to != current_user_screen)
     {
         bongo_save_hits();
-        current_user_screen = selected_user_screen;
+        current_user_screen = screen_selection.to;
         save_user_screen();
     }
 
     overlay = NULL;
 }
 
-static void open_overlay(const krteq_screen_t *screen)
+static void open_overlay(const krteq_screen_t *screen, uint16_t duration)
 {
     if (overlay != screen) close_overlay();
 
     overlay = screen;
     overlay_timer = timer_read();
+    overlay_duration = duration;
 }
 
 //==============================================================================
@@ -1387,8 +1381,6 @@ static void open_overlay(const krteq_screen_t *screen)
 //==============================================================================
 
 #define SELECT_DURATION 1500
-
-static selection_t screen_selection;
 
 static const char *user_screen_name(uint8_t index)
 {
@@ -1398,20 +1390,15 @@ static const char *user_screen_name(uint8_t index)
 // A fresh selection starts from the screen in use
 static void start_selecting(void)
 {
-    if (overlay != &system_screen_select)
-    {
-        selected_user_screen = current_user_screen;
-        selection_reset(&screen_selection, current_user_screen);
-    }
+    if (overlay != &system_screen_select) selection_reset(&screen_selection, current_user_screen);
 
-    open_overlay(&system_screen_select);
+    open_overlay(&system_screen_select, SELECT_DURATION);
     screen_redraw = true;
 }
 
 void default_user_screen(void)
 {
     start_selecting();
-    selected_user_screen = 0;
     selection_move(&screen_selection, 0, -1);
 }
 
@@ -1419,24 +1406,17 @@ void shift_user_screen(int shift)
 {
     start_selecting();
 
-    uint8_t count = user_screen_count();
+    int count = user_screen_count();
     if (count == 0) return;
 
-    selected_user_screen += shift;
-    selected_user_screen %= count;
-    if (selected_user_screen < 0) selected_user_screen += count;
+    int index = (screen_selection.to + shift) % count;
+    if (index < 0) index += count;
 
-    selection_move(&screen_selection, selected_user_screen, shift < 0 ? -1 : 1);
+    selection_move(&screen_selection, index, shift < 0 ? -1 : 1);
 }
 
 static void screen_select_update(void)
 {
-    if (timer_elapsed(overlay_timer) >= SELECT_DURATION)
-    {
-        close_overlay();
-        return;
-    }
-
     if (!selection_frame(&screen_selection) && !screen_redraw) return;
     screen_redraw = false;
 
@@ -1516,20 +1496,6 @@ static const char *rgb_effect_name(uint8_t index)
     return rgb_effect_names[index + 1];
 }
 
-// Keys only report the effect step after it happened, so neighbours are told apart from jumps afterwards
-static void rgb_effect_follow(void)
-{
-    uint8_t index = rgb_effect_index();
-    uint8_t from = rgb_effect_selection.to;
-    if (index == from) return;
-
-    int8_t direction = index > from ? 1 : -1;
-    if (index == (from + 1) % RGB_EFFECT_COUNT) direction = 1;
-    else if (index == (from + RGB_EFFECT_COUNT - 1) % RGB_EFFECT_COUNT) direction = -1;
-
-    selection_move(&rgb_effect_selection, index, direction);
-}
-
 // Called as the key goes down, before the effect steps, so a fresh effect selection starts from the old one
 static void rgb_status_show(int8_t component)
 {
@@ -1537,7 +1503,7 @@ static void rgb_status_show(int8_t component)
     if (component == RGB_STATUS_EFFECT && !showing_effect) selection_reset(&rgb_effect_selection, rgb_effect_index());
 
     rgb_status_component = component;
-    open_overlay(&system_screen_rgb);
+    open_overlay(&system_screen_rgb, RGB_STATUS_DURATION);
     screen_redraw = true;
 }
 
@@ -1573,16 +1539,11 @@ static void draw_slider(const char *title, uint8_t value, uint8_t maximum)
 
 static void rgb_status_update(void)
 {
-    if (timer_elapsed(overlay_timer) >= RGB_STATUS_DURATION)
-    {
-        close_overlay();
-        return;
-    }
-
+    // The effect steps after the key reaches the overlay, so the move is picked up here
     bool frame = false;
     if (rgb_status_component == RGB_STATUS_EFFECT)
     {
-        rgb_effect_follow();
+        selection_follow(&rgb_effect_selection, rgb_effect_index(), RGB_EFFECT_COUNT);
         frame = selection_frame(&rgb_effect_selection);
     }
 
@@ -1700,6 +1661,19 @@ oled_rotation_t oled_init_kb(oled_rotation_t rotation)
     return OLED_ROTATION_180;
 }
 
+// The first match wins, so the boot logo and layer screens outrank the overlays, which outrank the user screen
+static const krteq_screen_t *active_screen(void)
+{
+    if (!logo_finished) return &system_screen_logo;
+
+    uint8_t layer = get_highest_layer(layer_state);
+    if (layer >= INPUT_LOCK_LAYER) return &system_screen_input_lock;
+    if (layer == INDICATORS_LAYER) return &krteq_screen_indicators;
+
+    if (overlay) return overlay;
+    return get_user_screen(current_user_screen);
+}
+
 bool oled_task_kb(void)
 {
     if (!oled_task_user())
@@ -1707,29 +1681,9 @@ bool oled_task_kb(void)
         return false;
     }
 
-    uint8_t layer = get_highest_layer(layer_state);
-    const krteq_screen_t *screen;
+    if (overlay && timer_elapsed(overlay_timer) >= overlay_duration) close_overlay();
 
-    if (!logo_finished)
-    {
-        screen = &system_screen_logo;
-    }
-    else if (layer >= INPUT_LOCK_LAYER)
-    {
-        screen = &system_screen_input_lock;
-    }
-    else if (layer == INDICATORS_LAYER)
-    {
-        screen = &krteq_screen_indicators;
-    }
-    else if (overlay)
-    {
-        screen = overlay;
-    }
-    else
-    {
-        screen = get_user_screen(current_user_screen);
-    }
+    const krteq_screen_t *screen = active_screen();
 
     // An overlay outranked by another screen is cut short rather than left waiting underneath
     if (overlay && screen != overlay) close_overlay();
