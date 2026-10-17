@@ -173,19 +173,124 @@ static void draw_labelled(const char *title, const char *text)
     draw_text(OLED_DISPLAY_WIDTH / 2, CONTENT_Y, text, false);
 }
 
-// Title over a numbered name, such as "Screen" over "3. Bongo cat"
-static void draw_numbered(const char *title, uint32_t number, const char *name)
+// Title over a name, with a row of dots marking the position along the bottom.
+// A move slides the old name out and the new one in from the pressed side.
+#define SELECT_TITLE_Y 0
+#define SELECT_NAME_Y 13
+#define SELECT_SLIDE_DISTANCE OLED_DISPLAY_WIDTH
+#define SELECT_SLIDE_DURATION 200
+#define SELECT_FRAME_DURATION 33
+#define SELECT_DOT_SIZE 5
+#define SELECT_DOT_Y (OLED_DISPLAY_HEIGHT - SELECT_DOT_SIZE / 2 - 1) // The current dot rests on the bottom edge
+#define SELECT_DOT_GAP 8
+#define SELECT_PROGRESS_MAX 256
+
+typedef struct
 {
-    char text[OLED_DISPLAY_WIDTH / OLED_FONT_WIDTH + 1];
-    char *end = text + sizeof(text) - 1;
-    char *out = print_number(text, number, 1);
-    *out++ = '.';
-    *out++ = ' ';
+    uint8_t from;
+    uint8_t to;
+    int8_t direction;
+    bool animating;
+    uint16_t timer;
+    uint16_t frame_timer;
+} selection_t;
 
-    for (const char *in = name ? name : UNNAMED; *in && out < end; in++) *out++ = *in;
-    *out = '\0';
+typedef const char *(*selection_name_t)(uint8_t index);
 
-    draw_labelled(title, text);
+static void selection_reset(selection_t *selection, uint8_t index)
+{
+    selection->from = selection->to = index;
+    selection->animating = false;
+}
+
+static void selection_move(selection_t *selection, uint8_t index, int8_t direction)
+{
+    if (index == selection->to) return;
+
+    selection->from = selection->to;
+    selection->to = index;
+    selection->direction = direction;
+    selection->animating = true;
+    selection->timer = timer_read();
+    selection->frame_timer = selection->timer - SELECT_FRAME_DURATION;
+}
+
+// Whether a frame is due, capped at the frame rate while sliding. The settled frame is the last one.
+static bool selection_frame(selection_t *selection)
+{
+    if (!selection->animating) return false;
+    if (timer_elapsed(selection->frame_timer) < SELECT_FRAME_DURATION) return false;
+
+    selection->frame_timer = timer_read();
+    if (timer_elapsed(selection->timer) >= SELECT_SLIDE_DURATION) selection->animating = false;
+    return true;
+}
+
+// Eased out, so the slide starts fast and settles gently
+static uint16_t selection_progress(const selection_t *selection)
+{
+    uint16_t elapsed = timer_elapsed(selection->timer);
+    if (!selection->animating || elapsed >= SELECT_SLIDE_DURATION) return SELECT_PROGRESS_MAX;
+
+    uint32_t remaining = SELECT_SLIDE_DURATION - elapsed;
+    return SELECT_PROGRESS_MAX - SELECT_PROGRESS_MAX * remaining * remaining / (SELECT_SLIDE_DURATION * SELECT_SLIDE_DURATION);
+}
+
+// Only the part of the text that lands on the screen is drawn
+static void draw_text_clipped(int16_t x, uint8_t y, const char *text)
+{
+    for (uint8_t i = 0; text[i]; i++)
+    {
+        for (uint8_t ix = 0; ix < OLED_FONT_WIDTH; ix++)
+        {
+            int16_t px = x + i * OLED_FONT_WIDTH + ix;
+            if (px < 0 || px >= OLED_DISPLAY_WIDTH) continue;
+
+            uint8_t glyph = font_column(text[i], ix);
+            for (uint8_t iy = 0; iy < OLED_FONT_HEIGHT; iy++)
+            {
+                oled_write_pixel(px, y + iy, glyph >> iy & 1);
+            }
+        }
+    }
+}
+
+static void draw_selection(const char *title, const selection_t *selection, uint8_t count, selection_name_t name)
+{
+    if (count == 0) count = 1;
+
+    uint16_t progress = selection_progress(selection);
+    int8_t direction = selection->direction;
+
+    draw_text(OLED_DISPLAY_WIDTH / 2, SELECT_TITLE_Y, title, false);
+
+    // Both names are laid out centered, then pushed apart by the slide
+    const char *names[] = {name(selection->from), name(selection->to)};
+    int16_t offsets[] = {
+        -direction * (int16_t)(SELECT_SLIDE_DISTANCE * progress / SELECT_PROGRESS_MAX),
+        direction * (int16_t)(SELECT_SLIDE_DISTANCE * (SELECT_PROGRESS_MAX - progress) / SELECT_PROGRESS_MAX)
+    };
+
+    for (uint8_t i = selection->animating ? 0 : 1; i < 2; i++)
+    {
+        const char *text = names[i] ? names[i] : UNNAMED;
+        int16_t x = OLED_DISPLAY_WIDTH / 2 - strlen(text) * OLED_FONT_WIDTH / 2 + offsets[i];
+        draw_text_clipped(x, SELECT_NAME_Y, text);
+    }
+
+    // Dots shrink their spacing to fit longer lists
+    uint8_t gap = SELECT_DOT_GAP;
+    if (count > 1 && (OLED_DISPLAY_WIDTH - SELECT_DOT_SIZE) / (count - 1) < gap) gap = (OLED_DISPLAY_WIDTH - SELECT_DOT_SIZE) / (count - 1);
+    uint8_t left = OLED_DISPLAY_WIDTH / 2 - (count - 1) * gap / 2;
+
+    for (uint8_t i = 0; i < count; i++) oled_write_pixel(left + i * gap, SELECT_DOT_Y, true);
+
+    // The current dot glides along with the names, sweeping across the row when wrapping around the ends
+    int16_t from_x = left + selection->from * gap;
+    int16_t to_x = left + selection->to * gap;
+    int16_t dot_x = from_x + (to_x - from_x) * (int16_t)progress / SELECT_PROGRESS_MAX;
+
+    draw_box(dot_x - SELECT_DOT_SIZE / 2, SELECT_DOT_Y - SELECT_DOT_SIZE / 2, SELECT_DOT_SIZE, SELECT_DOT_SIZE, true);
 }
 
 //==============================================================================
@@ -536,7 +641,10 @@ const krteq_screen_t krteq_screen_bongo_cat = {
 #define WAVE_DROP_HEIGHT 1200
 #define WAVE_CREST 60 // Height that lights a pixel
 
-#define WAVE_CELLS (OLED_DISPLAY_WIDTH * OLED_DISPLAY_HEIGHT)
+// The grid reaches one cell past each screen edge, where it is held still so waves reflect just off screen
+#define WAVE_WIDTH (OLED_DISPLAY_WIDTH + 2)
+#define WAVE_HEIGHT (OLED_DISPLAY_HEIGHT + 2)
+#define WAVE_CELLS (WAVE_WIDTH * WAVE_HEIGHT)
 
 static int16_t wave_heights[2][WAVE_CELLS];
 static uint8_t wave_front;
@@ -544,20 +652,21 @@ static uint16_t wave_timer;
 static uint16_t wave_idle_timer;
 static bool wave_seeded;
 
+// Takes screen coordinates
 static void wave_drop(int16_t x, int16_t y)
 {
     for (int8_t dy = -WAVE_DROP_RADIUS; dy <= WAVE_DROP_RADIUS; dy++)
     {
         for (int8_t dx = -WAVE_DROP_RADIUS; dx <= WAVE_DROP_RADIUS; dx++)
         {
-            int16_t drop_x = x + dx;
-            int16_t drop_y = y + dy;
+            int16_t drop_x = x + 1 + dx;
+            int16_t drop_y = y + 1 + dy;
 
             if (dx * dx + dy * dy > WAVE_DROP_RADIUS * WAVE_DROP_RADIUS) continue;
-            if (drop_x < 1 || drop_x >= OLED_DISPLAY_WIDTH - 1) continue;
-            if (drop_y < 1 || drop_y >= OLED_DISPLAY_HEIGHT - 1) continue;
+            if (drop_x < 1 || drop_x >= WAVE_WIDTH - 1) continue;
+            if (drop_y < 1 || drop_y >= WAVE_HEIGHT - 1) continue;
 
-            wave_heights[wave_front][drop_y * OLED_DISPLAY_WIDTH + drop_x] = WAVE_DROP_HEIGHT;
+            wave_heights[wave_front][drop_y * WAVE_WIDTH + drop_x] = WAVE_DROP_HEIGHT;
         }
     }
 }
@@ -582,7 +691,7 @@ static void wave_draw(void)
 
             for (uint8_t bit = 0; bit < 8; bit++)
             {
-                if (heights[(page * 8 + bit) * OLED_DISPLAY_WIDTH + x] > WAVE_CREST) column |= 1 << bit;
+                if (heights[(page * 8 + bit + 1) * WAVE_WIDTH + x + 1] > WAVE_CREST) column |= 1 << bit;
             }
 
             oled_write_raw_byte(column, page * OLED_DISPLAY_WIDTH + x);
@@ -613,20 +722,20 @@ static void wave_update(void)
     if (timer_elapsed(wave_idle_timer) > WAVE_IDLE_DURATION)
     {
         wave_idle_timer = timer_read();
-        wave_drop(1 + random_value() % (OLED_DISPLAY_WIDTH - 2), 1 + random_value() % (OLED_DISPLAY_HEIGHT - 2));
+        wave_drop(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT);
     }
 
     const int16_t *previous = wave_heights[wave_front];
     int16_t *current = wave_heights[wave_front ^= 1];
 
-    // Wave equation over a still border, so the screen edges reflect
-    for (uint8_t y = 1; y < OLED_DISPLAY_HEIGHT - 1; y++)
+    // Wave equation over a still border, so the edges reflect
+    for (uint8_t y = 1; y < WAVE_HEIGHT - 1; y++)
     {
-        for (uint8_t x = 1; x < OLED_DISPLAY_WIDTH - 1; x++)
+        for (uint8_t x = 1; x < WAVE_WIDTH - 1; x++)
         {
-            uint16_t cell = y * OLED_DISPLAY_WIDTH + x;
+            uint16_t cell = y * WAVE_WIDTH + x;
             int16_t height = (previous[cell - 1] + previous[cell + 1] +
-                              previous[cell - OLED_DISPLAY_WIDTH] + previous[cell + OLED_DISPLAY_WIDTH]) / 2 - current[cell];
+                              previous[cell - WAVE_WIDTH] + previous[cell + WAVE_WIDTH]) / 2 - current[cell];
 
             current[cell] = height - (height >> WAVE_DAMPING);
         }
@@ -1283,12 +1392,24 @@ static void open_overlay(const krteq_screen_t *screen)
 // Screen select screen
 //==============================================================================
 
-#define SELECT_DURATION 1000
+#define SELECT_DURATION 1500
+
+static selection_t screen_selection;
+
+static const char *user_screen_name(uint8_t index)
+{
+    return get_user_screen(index)->name;
+}
 
 // A fresh selection starts from the screen in use
 static void start_selecting(void)
 {
-    if (overlay != &system_screen_select) selected_user_screen = current_user_screen;
+    if (overlay != &system_screen_select)
+    {
+        selected_user_screen = current_user_screen;
+        selection_reset(&screen_selection, current_user_screen);
+    }
+
     open_overlay(&system_screen_select);
     screen_redraw = true;
 }
@@ -1297,6 +1418,7 @@ void default_user_screen(void)
 {
     start_selecting();
     selected_user_screen = 0;
+    selection_move(&screen_selection, 0, -1);
 }
 
 void shift_user_screen(int shift)
@@ -1309,6 +1431,8 @@ void shift_user_screen(int shift)
     selected_user_screen += shift;
     selected_user_screen %= count;
     if (selected_user_screen < 0) selected_user_screen += count;
+
+    selection_move(&screen_selection, selected_user_screen, shift < 0 ? -1 : 1);
 }
 
 static void screen_select_update(void)
@@ -1319,11 +1443,11 @@ static void screen_select_update(void)
         return;
     }
 
-    if (!screen_redraw) return;
+    if (!selection_frame(&screen_selection) && !screen_redraw) return;
     screen_redraw = false;
 
     oled_clear();
-    draw_numbered("Screen", selected_user_screen + 1, get_user_screen(selected_user_screen)->name);
+    draw_selection("Screen", &screen_selection, user_screen_count(), user_screen_name);
 }
 
 static const krteq_screen_t system_screen_select = {
@@ -1382,8 +1506,42 @@ static const char *const rgb_effect_names[RGB_MATRIX_EFFECT_MAX] = {
 
 static int8_t rgb_status_component;
 
+// Mode 0 is RGB_MATRIX_NONE, so effects are counted from mode 1
+#define RGB_EFFECT_COUNT (RGB_MATRIX_EFFECT_MAX - 1)
+
+static selection_t rgb_effect_selection;
+
+static uint8_t rgb_effect_index(void)
+{
+    uint8_t mode = rgb_matrix_get_mode();
+    return mode > 0 && mode < RGB_MATRIX_EFFECT_MAX ? mode - 1 : 0;
+}
+
+static const char *rgb_effect_name(uint8_t index)
+{
+    return rgb_effect_names[index + 1];
+}
+
+// Keys only report the effect step after it happened, so neighbours are told apart from jumps afterwards
+static void rgb_effect_follow(void)
+{
+    uint8_t index = rgb_effect_index();
+    uint8_t from = rgb_effect_selection.to;
+    if (index == from) return;
+
+    int8_t direction = index > from ? 1 : -1;
+    if (index == (from + 1) % RGB_EFFECT_COUNT) direction = 1;
+    else if (index == (from + RGB_EFFECT_COUNT - 1) % RGB_EFFECT_COUNT) direction = -1;
+
+    selection_move(&rgb_effect_selection, index, direction);
+}
+
+// Called as the key goes down, before the effect steps, so a fresh effect selection starts from the old one
 static void rgb_status_show(int8_t component)
 {
+    bool showing_effect = overlay == &system_screen_rgb && rgb_status_component == RGB_STATUS_EFFECT;
+    if (component == RGB_STATUS_EFFECT && !showing_effect) selection_reset(&rgb_effect_selection, rgb_effect_index());
+
     rgb_status_component = component;
     open_overlay(&system_screen_rgb);
     screen_redraw = true;
@@ -1427,24 +1585,28 @@ static void rgb_status_update(void)
         return;
     }
 
-    if (!screen_redraw) return;
+    bool frame = false;
+    if (rgb_status_component == RGB_STATUS_EFFECT)
+    {
+        rgb_effect_follow();
+        frame = selection_frame(&rgb_effect_selection);
+    }
+
+    if (!frame && !screen_redraw) return;
     screen_redraw = false;
 
-    uint8_t mode = rgb_matrix_get_mode();
-    const char *name = mode < RGB_MATRIX_EFFECT_MAX ? rgb_effect_names[mode] : NULL;
     hsv_t hsv = rgb_matrix_get_hsv();
 
     oled_clear();
 
-    // Mode 0 is RGB_MATRIX_NONE, so effects are already numbered from 1
     switch (rgb_status_component)
     {
-        case RGB_STATUS_POWER:      draw_labelled("RGB", rgb_matrix_is_enabled() ? "Enabled" : "Disabled");          break;
-        case RGB_STATUS_EFFECT:     draw_numbered("RGB Effect", mode, name);                                break;
-        case RGB_STATUS_HUE:        draw_slider("RGB Hue", hsv.h, UINT8_MAX);                              break;
-        case RGB_STATUS_SATURATION: draw_slider("RGB Saturation", hsv.s, UINT8_MAX);                       break;
-        case RGB_STATUS_BRIGHTNESS: draw_slider("RGB Brightness", hsv.v, RGB_MATRIX_MAXIMUM_BRIGHTNESS);   break;
-        case RGB_STATUS_SPEED:      draw_slider("RGB Speed", rgb_matrix_get_speed(), UINT8_MAX);            break;
+        case RGB_STATUS_POWER:      draw_labelled("RGB", rgb_matrix_is_enabled() ? "Enabled" : "Disabled");                  break;
+        case RGB_STATUS_EFFECT:     draw_selection("RGB Effect", &rgb_effect_selection, RGB_EFFECT_COUNT, rgb_effect_name);  break;
+        case RGB_STATUS_HUE:        draw_slider("RGB Hue", hsv.h, UINT8_MAX);                                                break;
+        case RGB_STATUS_SATURATION: draw_slider("RGB Saturation", hsv.s, UINT8_MAX);                                         break;
+        case RGB_STATUS_BRIGHTNESS: draw_slider("RGB Brightness", hsv.v, RGB_MATRIX_MAXIMUM_BRIGHTNESS);                     break;
+        case RGB_STATUS_SPEED:      draw_slider("RGB Speed", rgb_matrix_get_speed(), UINT8_MAX);                             break;
     }
 }
 
