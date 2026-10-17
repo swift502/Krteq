@@ -192,8 +192,9 @@ static void draw_labelled(const char *title, const char *text)
 #define SELECT_SLIDE_DISTANCE OLED_DISPLAY_WIDTH
 #define SELECT_SLIDE_DURATION 200
 #define SELECT_FRAME_DURATION 33
-#define SELECT_DOT_SIZE 5
-#define SELECT_DOT_Y (OLED_DISPLAY_HEIGHT - SELECT_DOT_SIZE / 2 - 1) // The current dot rests on the bottom edge
+#define SELECT_DOT_WIDTH 7
+#define SELECT_DOT_HEIGHT 5
+#define SELECT_DOT_Y (OLED_DISPLAY_HEIGHT - SELECT_DOT_HEIGHT / 2 - 1) // The current dot rests on the bottom edge
 #define SELECT_DOT_GAP 8
 #define SELECT_PROGRESS_MAX 256
 
@@ -278,7 +279,7 @@ static void draw_selection(const char *title, const selection_t *selection, uint
     draw_selection_name(name(selection->to), selection->direction * (SELECT_SLIDE_DISTANCE - shift));
 
     // Dots shrink their spacing to fit longer lists
-    uint8_t gap = count > 1 ? MIN(SELECT_DOT_GAP, (OLED_DISPLAY_WIDTH - SELECT_DOT_SIZE) / (count - 1)) : 0;
+    uint8_t gap = count > 1 ? MIN(SELECT_DOT_GAP, (OLED_DISPLAY_WIDTH - SELECT_DOT_WIDTH) / (count - 1)) : 0;
     uint8_t left = OLED_DISPLAY_WIDTH / 2 - (count - 1) * gap / 2;
 
     for (uint8_t i = 0; i < count; i++) oled_write_pixel(left + i * gap, SELECT_DOT_Y, true);
@@ -288,7 +289,7 @@ static void draw_selection(const char *title, const selection_t *selection, uint
     int16_t to_x = left + selection->to * gap;
     int16_t dot_x = from_x + (to_x - from_x) * (int16_t)progress / SELECT_PROGRESS_MAX;
 
-    fill_rect(dot_x - SELECT_DOT_SIZE / 2, SELECT_DOT_Y - SELECT_DOT_SIZE / 2, SELECT_DOT_SIZE, SELECT_DOT_SIZE, true);
+    draw_box(dot_x - SELECT_DOT_WIDTH / 2, SELECT_DOT_Y - SELECT_DOT_HEIGHT / 2, SELECT_DOT_WIDTH, SELECT_DOT_HEIGHT, true);
 }
 
 //==============================================================================
