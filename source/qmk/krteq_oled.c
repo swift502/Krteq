@@ -44,7 +44,7 @@ static void save_user_screen(void)
 }
 
 // Whether the duration has passed since the timer was last restarted, restarting it if so
-static bool timer_due(uint16_t *timer, uint16_t duration)
+static bool timer_finished(uint16_t *timer, uint16_t duration)
 {
     if (timer_elapsed(*timer) < duration) return false;
 
@@ -243,7 +243,7 @@ static void selection_follow(selection_t *selection, uint8_t index, uint8_t coun
 // Whether a frame is due, capped at the frame rate while sliding. The settled frame is the last one.
 static bool selection_frame(selection_t *selection)
 {
-    if (!selection->animating || !timer_due(&selection->frame_timer, SELECT_FRAME_DURATION)) return false;
+    if (!selection->animating || !timer_finished(&selection->frame_timer, SELECT_FRAME_DURATION)) return false;
 
     if (timer_elapsed(selection->timer) >= SELECT_SLIDE_DURATION) selection->animating = false;
     return true;
@@ -474,25 +474,6 @@ static void bongo_save_hits(void)
     eeconfig_update_kb_datablock(&bongo_hits, DATA_BONGO_HITS_OFFSET, sizeof(bongo_hits));
 }
 
-// Every strike starts raised so the paw is always seen coming down
-static void bongo_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
-{
-    if (!pressed) return;
-
-    if (bongo_hits < UINT32_MAX) bongo_hits++;
-    bongo_wake();
-
-    if (keycode != bongo_last_keycode) bongo_paw ^= 1;
-    bongo_last_keycode = keycode;
-
-    // Restarting an already raised paw would starve its strike under fast repeats
-    if (bongo_paw_state[bongo_paw] == BONGO_PAW_RAISED) return;
-
-    bongo_paw_state[bongo_paw] = BONGO_PAW_RAISED;
-    bongo_paw_timer[bongo_paw] = timer_read();
-    screen_redraw = true;
-}
-
 static void advance_paw(uint8_t paw)
 {
     switch (bongo_paw_state[paw])
@@ -566,6 +547,16 @@ static void draw_trophies(uint32_t trophies)
     draw_image(bongo_trophy_image, left + text_width + BONGO_TROPHY_GAP, BONGO_TROPHY_Y);
 }
 
+// The hit count is persistent, so it is read back rather than cleared
+static void bongo_cat_init(void)
+{
+    bongo_load_hits();
+    bongo_last_keycode = 0;
+    bongo_paw = 0;
+    bongo_sleeping = false;
+    bongo_blinking = false;
+}
+
 // Animations in flight are dropped, since their 16 bit timers may have wrapped while hidden
 // Sleep carries over, an awake cat starts a fresh sleep countdown
 static void bongo_cat_show(void)
@@ -611,22 +602,31 @@ static void bongo_cat_update(void)
     }
 }
 
-// The hit count is persistent and survives the reset
-static void bongo_cat_reset(void)
+// Every strike starts raised so the paw is always seen coming down
+static void bongo_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
-    bongo_last_keycode = 0;
-    bongo_paw = 0;
-    memset(bongo_paw_state, BONGO_PAW_IDLE, sizeof(bongo_paw_state));
-    bongo_sleeping = false;
-    bongo_blinking = false;
+    if (!pressed) return;
+
+    if (bongo_hits < UINT32_MAX) bongo_hits++;
+    bongo_wake();
+
+    if (keycode != bongo_last_keycode) bongo_paw ^= 1;
+    bongo_last_keycode = keycode;
+
+    // Restarting an already raised paw would starve its strike under fast repeats
+    if (bongo_paw_state[bongo_paw] == BONGO_PAW_RAISED) return;
+
+    bongo_paw_state[bongo_paw] = BONGO_PAW_RAISED;
+    bongo_paw_timer[bongo_paw] = timer_read();
+    screen_redraw = true;
 }
 
 const krteq_screen_t krteq_screen_bongo_cat = {
     .name      = "Bongo cat",
+    .init      = bongo_cat_init,
     .show      = bongo_cat_show,
     .update    = bongo_cat_update,
-    .key_event = bongo_key_event,
-    .reset     = bongo_cat_reset
+    .key_event = bongo_key_event
 };
 
 //==============================================================================
@@ -649,7 +649,6 @@ static int16_t wave_heights[2][WAVE_CELLS];
 static uint8_t wave_front;
 static uint16_t wave_timer;
 static uint16_t wave_idle_timer;
-static bool wave_seeded;
 
 // Takes screen coordinates
 static void wave_drop(int16_t x, int16_t y)
@@ -668,14 +667,6 @@ static void wave_drop(int16_t x, int16_t y)
             wave_heights[wave_front][drop_y * WAVE_WIDTH + drop_x] = WAVE_DROP_HEIGHT;
         }
     }
-}
-
-static void wave_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
-{
-    if (!pressed) return;
-
-    wave_idle_timer = timer_read();
-    wave_drop(x, y);
 }
 
 static void wave_draw(void)
@@ -698,26 +689,26 @@ static void wave_draw(void)
     }
 }
 
+static void wave_init(void)
+{
+    memset(wave_heights, 0, sizeof(wave_heights));
+    wave_front = 0;
+    wave_drop(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
+}
+
 static void wave_show(void)
 {
     wave_timer = timer_read();
     wave_idle_timer = timer_read();
-
-    if (!wave_seeded)
-    {
-        wave_seeded = true;
-        wave_drop(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
-    }
-
-    wave_draw();
 }
 
 static void wave_update(void)
 {
-    if (!timer_due(&wave_timer, WAVE_FRAME_DURATION)) return;
+    if (!timer_finished(&wave_timer, WAVE_FRAME_DURATION) && !screen_redraw) return;
+    screen_redraw = false;
 
     // Idle hands get a drop of their own somewhere on the surface
-    if (timer_due(&wave_idle_timer, WAVE_IDLE_DURATION))
+    if (timer_finished(&wave_idle_timer, WAVE_IDLE_DURATION))
     {
         wave_drop(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT);
     }
@@ -741,19 +732,20 @@ static void wave_update(void)
     wave_draw();
 }
 
-static void wave_reset(void)
+static void wave_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
-    memset(wave_heights, 0, sizeof(wave_heights));
-    wave_front = 0;
-    wave_seeded = false;
+    if (!pressed) return;
+
+    wave_idle_timer = timer_read();
+    wave_drop(x, y);
 }
 
 const krteq_screen_t krteq_screen_waves = {
     .name      = "Waves",
+    .init      = wave_init,
     .show      = wave_show,
     .update    = wave_update,
-    .key_event = wave_key_event,
-    .reset     = wave_reset
+    .key_event = wave_key_event
 };
 
 //==============================================================================
@@ -788,7 +780,6 @@ static struct circle circles[CIRCLES_COUNT];
 static uint8_t circles_frame[OLED_PAGES * OLED_DISPLAY_WIDTH];
 static uint16_t circles_timer;
 static uint16_t circles_idle_timer;
-static bool circles_seeded;
 
 static uint32_t square_root(uint32_t value)
 {
@@ -815,21 +806,6 @@ static int16_t circles_pixel(int32_t position)
     return (position + CIRCLES_ONE / 2) >> CIRCLES_SHIFT;
 }
 
-static void circles_seed(void)
-{
-    for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
-    {
-        struct circle *circle = &circles[i];
-        uint8_t radius = circles_radii[i];
-
-        circle->radius = radius;
-        circle->x = (int32_t)(radius + random_value() % (OLED_DISPLAY_WIDTH - radius * 2)) << CIRCLES_SHIFT;
-        circle->y = (int32_t)(radius + random_value() % (OLED_DISPLAY_HEIGHT - radius * 2)) << CIRCLES_SHIFT;
-        circle->vx = 0;
-        circle->vy = 0;
-    }
-}
-
 // Blasts every circle sideways away from the point and always upwards, fading with distance
 // Most keys sit above the resting circles, so a plain radial push would only pin them to the floor
 static void circles_kick(uint8_t x, uint8_t y, int32_t strength)
@@ -845,14 +821,6 @@ static void circles_kick(uint8_t x, uint8_t y, int32_t strength)
         circle->vx += dx * strength / falloff;
         circle->vy -= reach * strength / falloff;
     }
-}
-
-static void circles_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
-{
-    if (!pressed) return;
-
-    circles_idle_timer = timer_read();
-    circles_kick(x, y, CIRCLES_KICK);
 }
 
 static void circles_wall(int32_t *position, int32_t *velocity, int32_t low, int32_t high)
@@ -948,25 +916,33 @@ static void circles_draw(void)
     for (uint16_t i = 0; i < sizeof(circles_frame); i++) oled_write_raw_byte(circles_frame[i], i);
 }
 
+static void circles_init(void)
+{
+    for (uint8_t i = 0; i < CIRCLES_COUNT; i++)
+    {
+        struct circle *circle = &circles[i];
+        uint8_t radius = circles_radii[i];
+
+        circle->radius = radius;
+        circle->x = (int32_t)(radius + random_value() % (OLED_DISPLAY_WIDTH - radius * 2)) << CIRCLES_SHIFT;
+        circle->y = (int32_t)(radius + random_value() % (OLED_DISPLAY_HEIGHT - radius * 2)) << CIRCLES_SHIFT;
+        circle->vx = 0;
+        circle->vy = 0;
+    }
+}
+
 static void circles_show(void)
 {
     circles_timer = timer_read();
     circles_idle_timer = timer_read();
-
-    if (!circles_seeded)
-    {
-        circles_seeded = true;
-        circles_seed();
-    }
-
-    circles_draw();
 }
 
 static void circles_update(void)
 {
-    if (!timer_due(&circles_timer, CIRCLES_FRAME_DURATION)) return;
+    if (!timer_finished(&circles_timer, CIRCLES_FRAME_DURATION) && !screen_redraw) return;
+    screen_redraw = false;
 
-    if (timer_due(&circles_idle_timer, CIRCLES_IDLE_DURATION))
+    if (timer_finished(&circles_idle_timer, CIRCLES_IDLE_DURATION))
     {
         circles_kick(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT, CIRCLES_IDLE_KICK);
     }
@@ -1002,17 +978,20 @@ static void circles_update(void)
     circles_draw();
 }
 
-static void circles_reset(void)
+static void circles_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
-    circles_seeded = false;
+    if (!pressed) return;
+
+    circles_idle_timer = timer_read();
+    circles_kick(x, y, CIRCLES_KICK);
 }
 
 const krteq_screen_t krteq_screen_ball_pit = {
     .name      = "Ball pit",
+    .init      = circles_init,
     .show      = circles_show,
     .update    = circles_update,
-    .key_event = circles_key_event,
-    .reset     = circles_reset
+    .key_event = circles_key_event
 };
 
 //==============================================================================
@@ -1036,7 +1015,6 @@ static uint8_t life_cells[LIFE_BYTES];
 static uint8_t life_next[LIFE_BYTES];
 static uint16_t life_timer;
 static uint16_t life_idle_timer;
-static bool life_seeded;
 
 // The grid extends past the screen, so patterns leave view before hitting a wall
 static void life_add_cell(int16_t x, int16_t y)
@@ -1069,14 +1047,6 @@ static void life_bomb(int16_t x, int16_t y, uint8_t shape)
             }
         }
     }
-}
-
-static void life_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
-{
-    if (!pressed) return;
-
-    life_idle_timer = timer_read();
-    life_bomb(x + LIFE_MARGIN_X, y + LIFE_MARGIN_Y, BOMB_SHAPE_HORIZONTAL);
 }
 
 // Glider heading down and right, mirrored into the other three diagonals
@@ -1149,23 +1119,22 @@ static void life_draw(void)
     }
 }
 
+static void life_init(void)
+{
+    memset(life_cells, 0, sizeof(life_cells));
+    life_bomb(LIFE_WIDTH / 2, LIFE_HEIGHT / 2, BOMB_SHAPE_VERTICAL);
+}
+
 static void life_show(void)
 {
     life_timer = timer_read();
     life_idle_timer = timer_read();
-
-    if (!life_seeded)
-    {
-        life_seeded = true;
-        life_bomb(LIFE_WIDTH / 2, LIFE_HEIGHT / 2, BOMB_SHAPE_VERTICAL);
-    }
-
-    life_draw();
 }
 
 static void life_update(void)
 {
-    if (!timer_due(&life_timer, LIFE_FRAME_DURATION)) return;
+    if (!timer_finished(&life_timer, LIFE_FRAME_DURATION) && !screen_redraw) return;
+    screen_redraw = false;
 
     // Columns slide through a window of three, so each is read only once per page
     for (uint8_t page = 0; page < LIFE_PAGES; page++)
@@ -1185,7 +1154,7 @@ static void life_update(void)
     memcpy(life_cells, life_next, sizeof(life_cells));
 
     // Spawn gliders on inactivity
-    if (timer_due(&life_idle_timer, LIFE_IDLE_DURATION))
+    if (timer_finished(&life_idle_timer, LIFE_IDLE_DURATION))
     {
         life_spawn_glider();
     }
@@ -1193,18 +1162,20 @@ static void life_update(void)
     life_draw();
 }
 
-static void life_reset(void)
+static void life_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
-    memset(life_cells, 0, sizeof(life_cells));
-    life_seeded = false;
+    if (!pressed) return;
+
+    life_idle_timer = timer_read();
+    life_bomb(x + LIFE_MARGIN_X, y + LIFE_MARGIN_Y, BOMB_SHAPE_HORIZONTAL);
 }
 
 const krteq_screen_t krteq_screen_game_of_life = {
     .name      = "Game of life",
+    .init      = life_init,
     .show      = life_show,
     .update    = life_update,
-    .key_event = life_key_event,
-    .reset     = life_reset
+    .key_event = life_key_event
 };
 
 //==============================================================================
@@ -1277,7 +1248,7 @@ static void render_info_row(uint8_t row, const char *label, const char *value)
 
 static void system_info_update(void)
 {
-    if (!timer_due(&info_timer, INFO_INTERVAL) && !screen_redraw) return;
+    if (!timer_finished(&info_timer, INFO_INTERVAL) && !screen_redraw) return;
     screen_redraw = false;
 
     char device_version[12];
@@ -1331,15 +1302,9 @@ static void logo_update(void)
     logo_finished = timer_elapsed(logo_timer) > LOGO_DURATION;
 }
 
-static void logo_reset(void)
-{
-    logo_finished = false;
-}
-
 static const krteq_screen_t system_screen_logo = {
     .show   = logo_show,
-    .update = logo_update,
-    .reset  = logo_reset
+    .update = logo_update
 };
 
 //==============================================================================
@@ -1437,16 +1402,13 @@ static const uint8_t input_lock_image[] = {
 #embed "bitmaps/input_lock.bmp"
 };
 
-static void input_lock_update(void)
+static void input_lock_show(void)
 {
-    if (!screen_redraw) return;
-    screen_redraw = false;
-
     draw_icon_text(input_lock_image, "Input lock");
 }
 
 static const krteq_screen_t system_screen_input_lock = {
-    .update = input_lock_update
+    .show = input_lock_show
 };
 
 //==============================================================================
@@ -1616,13 +1578,6 @@ __attribute__((weak)) const krteq_screen_t *const user_screens[] = {
     &krteq_screen_system_info
 };
 
-static const krteq_screen_t *const system_screens[] = {
-    &system_screen_logo,
-    &system_screen_select,
-    &system_screen_input_lock,
-    &system_screen_rgb
-};
-
 void oled_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
 {
     // Keys that drive the screens themselves must not disturb their contents
@@ -1650,8 +1605,8 @@ static void render_screen(const krteq_screen_t *screen)
     if (screen != last_rendered_screen)
     {
         last_rendered_screen = screen;
-        screen_redraw = true;
         oled_clear();
+        screen_redraw = true;
 
         if (screen->show) screen->show();
     }
@@ -1659,10 +1614,20 @@ static void render_screen(const krteq_screen_t *screen)
     if (screen->update) screen->update();
 }
 
+// Runs at boot and on wake while the logo plays, so every screen starts from a fresh state
+// Screens left out of the list are never shown, so they have no state to set up
+static void init_screens(void)
+{
+    for (uint8_t screen = 0; screen < user_screen_count(); screen++)
+    {
+        if (user_screens[screen]->init) user_screens[screen]->init();
+    }
+}
+
 oled_rotation_t oled_init_kb(oled_rotation_t rotation)
 {
     load_user_screen();
-    bongo_load_hits();
+    init_screens();
     return OLED_ROTATION_180;
 }
 
@@ -1704,15 +1669,7 @@ void oled_restart(void)
     oled_clear();
     oled_render_dirty(true);
     last_rendered_screen = NULL;
+    logo_finished = false;
 
-    // Screens left out of the list are never shown, so they have nothing to reset
-    for (uint8_t screen = 0; screen < ARRAY_SIZE(system_screens); screen++)
-    {
-        if (system_screens[screen]->reset) system_screens[screen]->reset();
-    }
-
-    for (uint8_t screen = 0; screen < user_screen_count(); screen++)
-    {
-        if (user_screens[screen]->reset) user_screens[screen]->reset();
-    }
+    init_screens();
 }

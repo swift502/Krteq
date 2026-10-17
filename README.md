@@ -139,10 +139,10 @@ Here's a table of fields and callbacks available for screens to implement:
 | Property     | Description |
 | ------------ | ----------- |
 | `.name`      | Display name string |
-| `.show`      | Runs once every time screen is shown |
-| `.update`    | Refresh on every OLED task cycle |
+| `.init`      | Runs once on keyboard start-up |
+| `.show`      | Runs every time the screen is activated |
+| `.update`    | Runs every OLED task cycle when screen is active |
 | `.key_event` | Key press event |
-| `.reset`     | Screen state reset |
 
 
 
