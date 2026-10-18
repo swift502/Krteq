@@ -96,8 +96,8 @@ Case blend file can be found in [source/Krteq.blend](source/Krteq.blend). It's d
 STL files for 3D printing can be found in [production/stl](production/stl). Recommended printing parameters are:
 
 - PLA
-- 100% infill
 - 0.15mm layer height
+- 100% infill
 
 The plate has a "keychron" variant, which adjusts stabilizer cutouts for their non-standard [triangular stem design](https://www.keychron.com/blogs/news/the-design-details-of-our-keychron-low-profile-keyboard-stabilizers).
 
