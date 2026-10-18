@@ -117,7 +117,7 @@ Here's a minimal example of a custom screen definition in a user keymap:
 
 ```c
 // 1. Create custom render function
-static void oled_render(void)
+static void my_screen_render(void)
 {
     oled_write_P(PSTR("Hello world"), false);
 }
@@ -125,7 +125,7 @@ static void oled_render(void)
 // 2. Construct screen instance
 static const krteq_screen_t my_screen = {
     .name = "Custom screen",
-    .start = oled_render,
+    .start = my_screen_render,
 };
 
 // 3. Override built-in screen list
