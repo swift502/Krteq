@@ -124,7 +124,7 @@ static void my_screen_render(void)
 
 // 2. Construct screen instance
 static const krteq_screen_t my_screen = {
-    .name = "Custom screen",
+    .name = "My screen",
     .start = my_screen_render,
 };
 
