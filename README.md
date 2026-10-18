@@ -130,7 +130,7 @@ static const krteq_screen_t custom_screen = {
 
 // 3. Override built-in screen list
 const krteq_screen_t *const user_screens[] = {
-    &my_screen
+    &custom_screen
 };
 ```
 
