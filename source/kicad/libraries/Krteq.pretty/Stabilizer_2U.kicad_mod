@@ -8,7 +8,7 @@
 		(at -2.54 -2.794 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "0649973f-3722-4e42-849c-16d84d3455b1")
+		(uuid "5d7b11ef-8a6a-4101-ada1-75e0b7dc718f")
 		(effects
 			(font
 				(size 1 1)
@@ -19,7 +19,7 @@
 	(property "Value" "2U_Stabilizer"
 		(at 0 11 0)
 		(layer "F.Fab")
-		(uuid "38043d39-3459-4c14-9b6a-35f0838c4114")
+		(uuid "4334fac2-5cdc-4ee3-ba16-f276cc4ee50d")
 		(effects
 			(font
 				(size 1 1)
@@ -32,7 +32,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "ca2c95fa-3724-466c-988f-f00b4c18fc02")
+		(uuid "22de8006-9d66-4ce5-b7c0-f43b9d0bc94f")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -45,7 +45,7 @@
 		(unlocked yes)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "f342b7f3-75d5-4155-b890-dee6b89ba084")
+		(uuid "9bccf36f-a346-4aa4-a9d8-43c19dfe1587")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -76,17 +76,6 @@
 		(fill no)
 		(layer "F.Fab")
 		(uuid "41967be3-3204-4f4f-9c54-c7d55ed2da60")
-	)
-	(fp_text user "${REFERENCE}"
-		(at 0 -11 0)
-		(layer "F.Fab")
-		(uuid "3f5ad74a-2aa8-407a-9d44-5f9121b352c3")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/Stabilizer_2U.step"
