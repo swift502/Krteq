@@ -127,6 +127,112 @@
 			(outputdirectory "")
 		)
 	)
+	(footprint "Krteq:Stabilizer_2U"
+		(layer "F.Cu")
+		(uuid "59f75c22-8223-496b-8a1e-4dcaac145674")
+		(at 219.425 181.65)
+		(descr "2U low-profile stabilizer guide")
+		(property "Reference" "S1"
+			(at -2.54 -2.794 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "545b701e-f65f-4469-89b0-1ed3164869c3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Spacebar Stabilizer"
+			(at 0 11 0)
+			(layer "F.Fab")
+			(uuid "1b9466ea-55ac-4033-a624-b5739d927532")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c0efc5e6-315b-4f7f-85c8-fe961531be31")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9c56d656-e296-41c9-a628-c2bb26d3fb0d")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "*Shape* *Outline*")
+		(path "/33814759-8e27-452c-b1fd-24d3fb3fb3fd")
+		(sheetname "/")
+		(sheetfile "Krteq.kicad_sch")
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -15.1 -6.5)
+			(end -8.9 10.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "7bf769b0-8dff-4063-bbf4-3e6dec797cbb")
+		)
+		(fp_rect
+			(start 8.9 -6.5)
+			(end 15.1 10.5)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "dbc0f2b0-ed4c-4b7d-b05a-6100d27b297e")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 -11 0)
+			(layer "F.Fab")
+			(uuid "173b91b0-8b39-47bd-96ba-588c3966545b")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(embedded_fonts no)
+		(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/Stabilizer_2U.step"
+			(offset
+				(xyz -60 0 -3.3)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz -0 -0 -0)
+			)
+		)
+	)
 	(footprint "Krteq:ReverseMount_LED"
 		(layer "B.Cu")
 		(uuid "0085a6f5-5ee6-49fe-8712-1eea1019c6bd")
@@ -35710,137 +35816,6 @@
 			)
 			(rotate
 				(xyz 90 -0 -0)
-			)
-		)
-	)
-	(footprint "Krteq:Stabilizer_2U"
-		(layer "B.Cu")
-		(uuid "59f75c22-8223-496b-8a1e-4dcaac145674")
-		(at 219.425 181.65 180)
-		(descr "2U low-profile stabilizer guide")
-		(property "Reference" "S1"
-			(at -2.54 2.794 0)
-			(layer "B.SilkS")
-			(hide yes)
-			(uuid "545b701e-f65f-4469-89b0-1ed3164869c3")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Value" "Spacebar Stabilizer"
-			(at 0 -11 0)
-			(layer "B.Fab")
-			(uuid "1b9466ea-55ac-4033-a624-b5739d927532")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Datasheet" ""
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "c0efc5e6-315b-4f7f-85c8-fe961531be31")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Description" "Mechanical shape, non-electric, board outlines"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "9c56d656-e296-41c9-a628-c2bb26d3fb0d")
-			(effects
-				(font
-					(size 1.27 1.27)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property "Procurement Type" "DNP"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "B.Fab")
-			(hide yes)
-			(uuid "4786f338-b0e1-4eb8-a696-54f82cda5d9e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(property ki_fp_filters "*Shape* *Outline*")
-		(path "/33814759-8e27-452c-b1fd-24d3fb3fb3fd")
-		(sheetname "/")
-		(sheetfile "Krteq.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins)
-			)
-		)
-		(attr through_hole)
-		(duplicate_pad_numbers_are_jumpers no)
-		(fp_rect
-			(start 8.9 6.5)
-			(end 15.1 -10.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(fill no)
-			(layer "B.Fab")
-			(uuid "dbc0f2b0-ed4c-4b7d-b05a-6100d27b297e")
-		)
-		(fp_rect
-			(start -15.1 6.5)
-			(end -8.9 -10.5)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(fill no)
-			(layer "B.Fab")
-			(uuid "7bf769b0-8dff-4063-bbf4-3e6dec797cbb")
-		)
-		(fp_text user "${REFERENCE}"
-			(at 0 11 0)
-			(layer "B.Fab")
-			(uuid "173b91b0-8b39-47bd-96ba-588c3966545b")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-				(justify mirror)
-			)
-		)
-		(embedded_fonts no)
-		(model "${KIPRJMOD}/../libraries/Krteq.3dshapes/Stabilizer_2U.step"
-			(offset
-				(xyz 60 0 1.55)
-			)
-			(scale
-				(xyz 1 1 1)
-			)
-			(rotate
-				(xyz -0 -180 -0)
 			)
 		)
 	)
