@@ -11,6 +11,7 @@
 #define OLED_TIMEOUT 0
 
 #define RGB_TRIGGER_ON_KEYDOWN
+#define RGB_MATRIX_MODE_NAME_ENABLE
 
 // Persistent memory
 // - Screen selection (uint8_t): 1 byte

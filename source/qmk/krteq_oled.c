@@ -1,3 +1,4 @@
+#include <ctype.h>
 #include "krteq_oled.h"
 #include "version.h"
 #include OLED_FONT_H
@@ -559,7 +560,7 @@ static void bongo_cat_init(void)
 
 // Animations in flight are dropped, since their 16 bit timers may have wrapped while hidden
 // Sleep carries over, an awake cat starts a fresh sleep countdown
-static void bongo_cat_show(void)
+static void bongo_cat_start(void)
 {
     memset(bongo_paw_state, BONGO_PAW_IDLE, sizeof(bongo_paw_state));
     bongo_schedule_blink();
@@ -624,7 +625,7 @@ static void bongo_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed
 const krteq_screen_t krteq_screen_bongo_cat = {
     .name      = "Bongo cat",
     .init      = bongo_cat_init,
-    .show      = bongo_cat_show,
+    .start     = bongo_cat_start,
     .update    = bongo_cat_update,
     .key_event = bongo_key_event
 };
@@ -696,7 +697,7 @@ static void wave_init(void)
     wave_drop(OLED_DISPLAY_WIDTH / 2, OLED_DISPLAY_HEIGHT / 2);
 }
 
-static void wave_show(void)
+static void wave_start(void)
 {
     wave_timer = timer_read();
     wave_idle_timer = timer_read();
@@ -743,7 +744,7 @@ static void wave_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 const krteq_screen_t krteq_screen_waves = {
     .name      = "Waves",
     .init      = wave_init,
-    .show      = wave_show,
+    .start     = wave_start,
     .update    = wave_update,
     .key_event = wave_key_event
 };
@@ -931,7 +932,7 @@ static void circles_init(void)
     }
 }
 
-static void circles_show(void)
+static void circles_start(void)
 {
     circles_timer = timer_read();
     circles_idle_timer = timer_read();
@@ -989,7 +990,7 @@ static void circles_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool press
 const krteq_screen_t krteq_screen_ball_pit = {
     .name      = "Ball pit",
     .init      = circles_init,
-    .show      = circles_show,
+    .start     = circles_start,
     .update    = circles_update,
     .key_event = circles_key_event
 };
@@ -1125,7 +1126,7 @@ static void life_init(void)
     life_bomb(LIFE_WIDTH / 2, LIFE_HEIGHT / 2, BOMB_SHAPE_VERTICAL);
 }
 
-static void life_show(void)
+static void life_start(void)
 {
     life_timer = timer_read();
     life_idle_timer = timer_read();
@@ -1173,7 +1174,7 @@ static void life_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 const krteq_screen_t krteq_screen_game_of_life = {
     .name      = "Game of life",
     .init      = life_init,
-    .show      = life_show,
+    .start     = life_start,
     .update    = life_update,
     .key_event = life_key_event
 };
@@ -1291,7 +1292,7 @@ static const uint8_t logo_image[] = {
 static uint16_t logo_timer;
 static bool logo_finished = false;
 
-static void logo_show(void)
+static void logo_start(void)
 {
     logo_timer = timer_read();
     draw_image(logo_image, LOGO_X, LOGO_Y);
@@ -1303,7 +1304,7 @@ static void logo_update(void)
 }
 
 static const krteq_screen_t system_screen_logo = {
-    .show   = logo_show,
+    .start  = logo_start,
     .update = logo_update
 };
 
@@ -1402,13 +1403,13 @@ static const uint8_t input_lock_image[] = {
 #embed "bitmaps/input_lock.bmp"
 };
 
-static void input_lock_show(void)
+static void input_lock_start(void)
 {
     draw_icon_text(input_lock_image, "Input lock");
 }
 
 static const krteq_screen_t system_screen_input_lock = {
-    .show = input_lock_show
+    .start = input_lock_start
 };
 
 //==============================================================================
@@ -1435,13 +1436,6 @@ enum rgb_status_components
     RGB_STATUS_SPEED
 };
 
-// Effects missing here show as unnamed, see the animations in keyboard.json
-static const char *const rgb_effect_names[RGB_MATRIX_EFFECT_MAX] = {
-    [RGB_MATRIX_SOLID_COLOR]          = "Solid color",
-    [RGB_MATRIX_RIVERFLOW]            = "Riverflow",
-    [RGB_MATRIX_SOLID_REACTIVE_CROSS] = "Reactive cross"
-};
-
 static int8_t rgb_status_component;
 
 // Mode 0 is RGB_MATRIX_NONE, so effects are counted from mode 1
@@ -1455,9 +1449,28 @@ static uint8_t rgb_effect_index(void)
     return mode > 0 && mode < RGB_MATRIX_EFFECT_MAX ? mode - 1 : 0;
 }
 
-static const char *rgb_effect_name(uint8_t index)
+static const char *get_effect_display_name(uint8_t index)
 {
-    return rgb_effect_names[index + 1];
+    static char display_name[32];
+    const char *mode = rgb_matrix_get_mode_name(index + 1);
+
+    // Shorten long names
+    if (strncmp(mode, "SOLID_REACTIVE", strlen("SOLID_REACTIVE")) == 0) mode += strlen("SOLID_");
+    if (strcmp(mode, "RAINBOW_MOVING_CHEVRON") == 0) mode = "RAINBOW_CHEVRON";
+
+    // Format
+    uint8_t i = 0;
+    for (; mode[i] && i < sizeof(display_name) - 1; i++)
+    {
+        char c = mode[i];
+        if (c == '_') c = ' ';
+        else if (i > 0) c = tolower(c);
+
+        display_name[i] = c;
+    }
+    display_name[i] = '\0';
+
+    return display_name;
 }
 
 // Called as the key goes down, before the effect steps, so a fresh effect selection starts from the old one
@@ -1524,7 +1537,7 @@ static void rgb_status_update(void)
     switch (rgb_status_component)
     {
         case RGB_STATUS_POWER:      draw_labelled("RGB", rgb_matrix_is_enabled() ? "Enabled" : "Disabled");                  break;
-        case RGB_STATUS_EFFECT:     draw_selection("RGB Effect", &rgb_effect_selection, RGB_EFFECT_COUNT, rgb_effect_name);  break;
+        case RGB_STATUS_EFFECT:     draw_selection("RGB Effect", &rgb_effect_selection, RGB_EFFECT_COUNT, get_effect_display_name);  break;
         case RGB_STATUS_HUE:        draw_slider("RGB Hue", hsv.h, RGB_HUE_MAXIMUM, RGB_MATRIX_HUE_STEP);                             break;
         case RGB_STATUS_SATURATION: draw_slider("RGB Saturation", hsv.s, UINT8_MAX, RGB_MATRIX_SAT_STEP);                            break;
         case RGB_STATUS_BRIGHTNESS: draw_slider("RGB Brightness", hsv.v, RGB_MATRIX_MAXIMUM_BRIGHTNESS, RGB_MATRIX_VAL_STEP);        break;
@@ -1608,7 +1621,7 @@ static void render_screen(const krteq_screen_t *screen)
         oled_clear();
         screen_redraw = true;
 
-        if (screen->show) screen->show();
+        if (screen->start) screen->start();
     }
 
     if (screen->update) screen->update();

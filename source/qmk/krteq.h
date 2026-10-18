@@ -13,7 +13,7 @@ typedef struct
 {
     const char *name;
     void (*init)(void);
-    void (*show)(void);
+    void (*start)(void);
     void (*update)(void);
     void (*key_event)(uint16_t keycode, uint8_t x, uint8_t y, bool pressed);
 } krteq_screen_t;
