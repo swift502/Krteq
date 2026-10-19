@@ -1065,7 +1065,7 @@ const krteq_screen_t krteq_screen_bubbles = {
 #define STARFIELD_SPREAD_Y (STARFIELD_FAR_DEPTH * OLED_DISPLAY_HEIGHT / 2 / STARFIELD_FOCAL)
 #define STARFIELD_BASE_SPEED (6 << STARFIELD_SHIFT) // Depth travelled per frame while idle
 #define STARFIELD_MAX_BOOST (64 << STARFIELD_SHIFT)
-#define STARFIELD_KICK (4 << STARFIELD_SHIFT) // Boost added per key press, felt on the very next frame
+#define STARFIELD_KICK (3 << STARFIELD_SHIFT) // Boost added per key press, felt on the very next frame
 // Drag in proportion to speed, so steady typing settles at a speed matching its pace
 #define STARFIELD_DRAG 6 // The boost loses one part in 2^n per frame
 
