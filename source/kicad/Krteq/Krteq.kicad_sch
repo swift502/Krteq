@@ -1012,7 +1012,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:LED_ABGR"
+		(symbol "Device:LED_ARGB"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -1032,7 +1032,7 @@
 					)
 				)
 			)
-			(property "Value" "LED_ABGR"
+			(property "Value" "LED_ARGB"
 				(at 0 -8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1064,7 +1064,7 @@
 					)
 				)
 			)
-			(property "Description" "RGB LED, anode/blue/green/red"
+			(property "Description" "RGB LED, anode/red/green/blue"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1097,7 +1097,7 @@
 					)
 				)
 			)
-			(symbol "LED_ABGR_0_0"
+			(symbol "LED_ARGB_0_0"
 				(text "R"
 					(at -1.905 3.81 0)
 					(effects
@@ -1123,7 +1123,7 @@
 					)
 				)
 			)
-			(symbol "LED_ABGR_0_1"
+			(symbol "LED_ARGB_0_1"
 				(polyline
 					(pts
 						(xy -1.27 6.35) (xy -1.27 3.81)
@@ -1455,7 +1455,7 @@
 					)
 				)
 			)
-			(symbol "LED_ABGR_1_1"
+			(symbol "LED_ARGB_1_1"
 				(pin passive line
 					(at 5.08 0 180)
 					(length 2.54)
@@ -1475,9 +1475,9 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
+					(at -5.08 5.08 0)
 					(length 2.54)
-					(name "BK"
+					(name "RK"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1511,9 +1511,9 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at -5.08 -5.08 0)
 					(length 2.54)
-					(name "RK"
+					(name "BK"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3685,104 +3685,6 @@
 						)
 					)
 					(alternate "VBUS_IN" power_in line)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Mechanical:Mechanical_Shape"
-			(exclude_from_sim yes)
-			(in_bom no)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "S"
-				(at 0 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Mechanical_Shape"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Mechanical shape, non-electric, board outlines"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Mechanical Shape Outline"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "*Shape* *Outline*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Mechanical_Shape_1_1"
-				(polyline
-					(pts
-						(xy 1.27 2.54) (xy -1.27 2.54) (xy -2.54 1.27) (xy -2.54 -1.27) (xy -1.27 -2.54) (xy 1.27 -2.54)
-						(xy 2.54 -1.27) (xy 2.54 1.27) (xy 1.27 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
 				)
 			)
 			(embedded_fonts no)
@@ -12423,30 +12325,6 @@
 			)
 		)
 	)
-	(global_label "SW3"
-		(shape input)
-		(at 104.14 250.19 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0e33f535-b59e-46fd-b07c-22f4f3e9982a")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110.9956 250.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "SW4"
 		(shape input)
 		(at 163.83 173.99 180)
@@ -12468,30 +12346,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-	)
-	(global_label "SW6"
-		(shape input)
-		(at 104.14 240.03 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0ec5bbf1-3d80-479a-b492-34778fd3808b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110.9956 240.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 	)
@@ -12567,6 +12421,30 @@
 			)
 		)
 	)
+	(global_label "SW4"
+		(shape input)
+		(at 104.14 242.57 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "141ca91b-6ed5-401c-a06c-2ce869e30306")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110.9956 242.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "COL5"
 		(shape input)
 		(at 257.81 46.99 90)
@@ -12628,6 +12506,30 @@
 		(uuid "1bcacd2b-5b9d-4028-b482-ca7b740012cc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 112.2051 229.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "SW7"
+		(shape input)
+		(at 104.14 234.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1ea1bf9e-8b62-4147-9ec6-b7d6cbfb7be3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110.9956 234.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13311,30 +13213,6 @@
 			)
 		)
 	)
-	(global_label "SW4"
-		(shape input)
-		(at 104.14 242.57 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6c48f68d-fef0-4429-ad33-becacf944af5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110.9956 242.57 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "ROW4"
 		(shape input)
 		(at 180.34 95.25 180)
@@ -13356,30 +13234,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-	)
-	(global_label "SW1"
-		(shape input)
-		(at 104.14 252.73 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "701f5953-7cbd-4298-9415-732bb533220d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110.9956 252.73 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 	)
@@ -13455,30 +13309,6 @@
 			)
 		)
 	)
-	(global_label "SW12"
-		(shape input)
-		(at 104.14 247.65 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "75d79fdc-5db5-481d-b152-8326d67cde9b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 112.2051 247.65 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "CS7"
 		(shape input)
 		(at 104.14 184.15 0)
@@ -13527,30 +13357,6 @@
 			)
 		)
 	)
-	(global_label "SW10"
-		(shape input)
-		(at 104.14 227.33 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "816edb94-5ed6-481a-a8ab-89a4c0ec1086")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 112.2051 227.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "CS1"
 		(shape input)
 		(at 104.14 217.17 0)
@@ -13575,9 +13381,9 @@
 			)
 		)
 	)
-	(global_label "SW9"
+	(global_label "SW6"
 		(shape input)
-		(at 104.14 232.41 0)
+		(at 104.14 240.03 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13585,9 +13391,9 @@
 			)
 			(justify left)
 		)
-		(uuid "84257099-d4b0-4793-ba28-0084db1aa19f")
+		(uuid "8557e976-d175-49d4-ac1a-352748735f9d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110.9956 232.41 0)
+			(at 110.9956 240.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14151,6 +13957,30 @@
 			)
 		)
 	)
+	(global_label "SW10"
+		(shape input)
+		(at 104.14 227.33 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b691b7b9-f3b6-4fad-af5a-76458c1c0b75")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 112.2051 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "CS15"
 		(shape input)
 		(at 337.82 143.51 90)
@@ -14319,9 +14149,9 @@
 			)
 		)
 	)
-	(global_label "SW7"
+	(global_label "SW12"
 		(shape input)
-		(at 104.14 234.95 0)
+		(at 104.14 247.65 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -14329,9 +14159,9 @@
 			)
 			(justify left)
 		)
-		(uuid "c794644c-76f5-4c84-865b-34e8053e5fb7")
+		(uuid "c72d422a-00e3-4328-9a13-0e488d6b1678")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 110.9956 234.95 0)
+			(at 112.2051 247.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14583,6 +14413,30 @@
 			)
 		)
 	)
+	(global_label "SW3"
+		(shape input)
+		(at 104.14 250.19 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e9800cb3-45a7-46c1-97e4-ba8172ffd789")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110.9956 250.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
 	(global_label "VBUS"
 		(shape input)
 		(at 156.21 266.7 0)
@@ -14628,6 +14482,54 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "SW9"
+		(shape input)
+		(at 104.14 232.41 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "edd11649-0082-4bf2-974b-c5bb942a6402")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110.9956 232.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(global_label "SW1"
+		(shape input)
+		(at 104.14 252.73 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ee744ec7-ccc0-4c23-8232-f81cecc3591e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 110.9956 252.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -14944,7 +14846,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 184.15 219.71 0)
 		(unit 1)
 		(body_style 1)
@@ -14964,7 +14866,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 184.15 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -14997,7 +14899,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 184.15 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -15008,7 +14910,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 184.15 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -15063,7 +14965,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 218.44 220.98 0)
 		(unit 1)
 		(body_style 1)
@@ -15083,7 +14985,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 218.44 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -15116,7 +15018,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 218.44 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -15127,7 +15029,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 218.44 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -15641,7 +15543,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 218.44 200.66 0)
 		(unit 1)
 		(body_style 1)
@@ -15661,7 +15563,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 218.44 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -15694,7 +15596,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 218.44 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -15705,7 +15607,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 218.44 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -16032,7 +15934,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 229.87 179.07 0)
 		(unit 1)
 		(body_style 1)
@@ -16052,7 +15954,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 229.87 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -16085,7 +15987,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 229.87 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -16096,7 +15998,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 229.87 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -16265,7 +16167,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 275.59 219.71 0)
 		(unit 1)
 		(body_style 1)
@@ -16285,7 +16187,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 275.59 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -16318,7 +16220,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 275.59 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -16329,7 +16231,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 275.59 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -16496,7 +16398,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 229.87 199.39 0)
 		(unit 1)
 		(body_style 1)
@@ -16516,7 +16418,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 229.87 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -16549,7 +16451,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 229.87 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -16560,7 +16462,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 229.87 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -16615,7 +16517,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 298.45 179.07 0)
 		(unit 1)
 		(body_style 1)
@@ -16635,7 +16537,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 298.45 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -16668,7 +16570,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 298.45 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -16679,7 +16581,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 298.45 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -16734,7 +16636,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 195.58 160.02 0)
 		(unit 1)
 		(body_style 1)
@@ -16754,7 +16656,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 195.58 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -16787,7 +16689,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 195.58 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -16798,7 +16700,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 195.58 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -16853,7 +16755,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 264.16 220.98 0)
 		(unit 1)
 		(body_style 1)
@@ -16873,7 +16775,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 264.16 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -16906,7 +16808,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 264.16 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -16917,7 +16819,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 264.16 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -17108,7 +17010,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 264.16 180.34 0)
 		(unit 1)
 		(body_style 1)
@@ -17128,7 +17030,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 264.16 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -17161,7 +17063,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 264.16 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -17172,7 +17074,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 264.16 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -18160,7 +18062,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 321.31 199.39 0)
 		(unit 1)
 		(body_style 1)
@@ -18180,7 +18082,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 321.31 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -18213,7 +18115,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 321.31 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -18224,7 +18126,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 321.31 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -19279,7 +19181,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 344.17 199.39 0)
 		(unit 1)
 		(body_style 1)
@@ -19299,7 +19201,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 344.17 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -19332,7 +19234,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 344.17 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -19343,7 +19245,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 344.17 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -19512,7 +19414,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 207.01 199.39 0)
 		(unit 1)
 		(body_style 1)
@@ -19532,7 +19434,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 207.01 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -19565,7 +19467,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 207.01 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -19576,7 +19478,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 207.01 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -19631,7 +19533,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 207.01 158.75 0)
 		(unit 1)
 		(body_style 1)
@@ -19651,7 +19553,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 207.01 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -19684,7 +19586,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 207.01 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -19695,7 +19597,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 207.01 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -19750,7 +19652,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 275.59 199.39 0)
 		(unit 1)
 		(body_style 1)
@@ -19770,7 +19672,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 275.59 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -19803,7 +19705,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 275.59 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -19814,7 +19716,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 275.59 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -20119,7 +20021,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 241.3 200.66 0)
 		(unit 1)
 		(body_style 1)
@@ -20139,7 +20041,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 241.3 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -20172,7 +20074,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 241.3 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -20183,7 +20085,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 241.3 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -20465,93 +20367,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:Mechanical_Shape")
-		(at 254 111.76 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "33814759-8e27-452c-b1fd-24d3fb3fb3fd")
-		(property "Reference" "S1"
-			(at 257.81 110.4899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Spacebar Stabilizer"
-			(at 257.81 113.0299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Krteq:Stabilizer_2U"
-			(at 254 116.84 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 254 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mechanical shape, non-electric, board outlines"
-			(at 254 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Procurement Type" "DNP"
-			(at 254 111.76 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "Krteq"
-				(path "/9e7f33ad-d3b4-42c3-9373-23856f560db6"
-					(reference "S1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_Push")
 		(at 316.23 53.34 0)
 		(unit 1)
@@ -20666,7 +20481,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 332.74 220.98 0)
 		(unit 1)
 		(body_style 1)
@@ -20686,7 +20501,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 332.74 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -20719,7 +20534,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 332.74 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -20730,7 +20545,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 332.74 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -20785,7 +20600,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 321.31 158.75 0)
 		(unit 1)
 		(body_style 1)
@@ -20805,7 +20620,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 321.31 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -20838,7 +20653,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 321.31 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -20849,7 +20664,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 321.31 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -21118,7 +20933,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 252.73 219.71 0)
 		(unit 1)
 		(body_style 1)
@@ -21138,7 +20953,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 252.73 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -21171,7 +20986,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 252.73 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -21182,7 +20997,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 252.73 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -21237,7 +21052,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 207.01 179.07 0)
 		(unit 1)
 		(body_style 1)
@@ -21257,7 +21072,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 207.01 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -21290,7 +21105,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 207.01 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -21301,7 +21116,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 207.01 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -21470,7 +21285,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 298.45 158.75 0)
 		(unit 1)
 		(body_style 1)
@@ -21490,7 +21305,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 298.45 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -21523,7 +21338,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 298.45 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -21534,7 +21349,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 298.45 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -21589,7 +21404,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 309.88 160.02 0)
 		(unit 1)
 		(body_style 1)
@@ -21609,7 +21424,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 309.88 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -21642,7 +21457,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 309.88 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -21653,7 +21468,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 309.88 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -22670,7 +22485,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 252.73 179.07 0)
 		(unit 1)
 		(body_style 1)
@@ -22690,7 +22505,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 252.73 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -22723,7 +22538,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 252.73 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -22734,7 +22549,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 252.73 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -22903,7 +22718,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 287.02 180.34 0)
 		(unit 1)
 		(body_style 1)
@@ -22923,7 +22738,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 287.02 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -22956,7 +22771,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 287.02 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -22967,7 +22782,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 287.02 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -23294,7 +23109,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 229.87 219.71 0)
 		(unit 1)
 		(body_style 1)
@@ -23314,7 +23129,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 229.87 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -23347,7 +23162,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 229.87 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -23358,7 +23173,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 229.87 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -24301,7 +24116,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 241.3 220.98 0)
 		(unit 1)
 		(body_style 1)
@@ -24321,7 +24136,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 241.3 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -24354,7 +24169,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 241.3 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -24365,7 +24180,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 241.3 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -24670,7 +24485,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 287.02 220.98 0)
 		(unit 1)
 		(body_style 1)
@@ -24690,7 +24505,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 287.02 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -24723,7 +24538,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 287.02 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -24734,7 +24549,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 287.02 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -24789,7 +24604,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 252.73 199.39 0)
 		(unit 1)
 		(body_style 1)
@@ -24809,7 +24624,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 252.73 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -24842,7 +24657,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 252.73 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -24853,7 +24668,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 252.73 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -24986,7 +24801,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 252.73 158.75 0)
 		(unit 1)
 		(body_style 1)
@@ -25006,7 +24821,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 252.73 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -25039,7 +24854,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 252.73 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -25050,7 +24865,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 252.73 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -25354,7 +25169,7 @@
 				)
 			)
 		)
-		(property "Value" "Pico test points"
+		(property "Value" "Pico Test Points"
 			(at 182.626 257.556 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25563,7 +25378,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 241.3 160.02 0)
 		(unit 1)
 		(body_style 1)
@@ -25583,7 +25398,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 241.3 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -25616,7 +25431,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 241.3 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -25627,7 +25442,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 241.3 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -25682,7 +25497,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 229.87 158.75 0)
 		(unit 1)
 		(body_style 1)
@@ -25702,7 +25517,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 229.87 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -25735,7 +25550,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 229.87 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -25746,7 +25561,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 229.87 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -26029,7 +25844,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 321.31 219.71 0)
 		(unit 1)
 		(body_style 1)
@@ -26049,7 +25864,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 321.31 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -26082,7 +25897,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 321.31 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -26093,7 +25908,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 321.31 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -26556,7 +26371,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 184.15 199.39 0)
 		(unit 1)
 		(body_style 1)
@@ -26576,7 +26391,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 184.15 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -26609,7 +26424,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 184.15 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -26620,7 +26435,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 184.15 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -27025,7 +26840,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 195.58 180.34 0)
 		(unit 1)
 		(body_style 1)
@@ -27045,7 +26860,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 195.58 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -27078,7 +26893,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 195.58 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -27089,7 +26904,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 195.58 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -27437,7 +27252,7 @@
 				)
 			)
 		)
-		(property "Value" "USB breakout board"
+		(property "Value" "USB Breakout Board"
 			(at 159.258 257.556 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27649,7 +27464,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 344.17 158.75 0)
 		(unit 1)
 		(body_style 1)
@@ -27669,7 +27484,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 344.17 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -27702,7 +27517,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 344.17 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -27713,7 +27528,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 344.17 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -27995,7 +27810,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 218.44 180.34 0)
 		(unit 1)
 		(body_style 1)
@@ -28015,7 +27830,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 218.44 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -28048,7 +27863,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 218.44 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -28059,7 +27874,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 218.44 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -28953,7 +28768,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 264.16 160.02 0)
 		(unit 1)
 		(body_style 1)
@@ -28973,7 +28788,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 264.16 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -29006,7 +28821,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 264.16 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -29017,7 +28832,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 264.16 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -29072,7 +28887,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 321.31 179.07 0)
 		(unit 1)
 		(body_style 1)
@@ -29092,7 +28907,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 321.31 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -29125,7 +28940,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 321.31 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -29136,7 +28951,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 321.31 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -29191,7 +29006,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 298.45 219.71 0)
 		(unit 1)
 		(body_style 1)
@@ -29211,7 +29026,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 298.45 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -29244,7 +29059,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 298.45 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -29255,7 +29070,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 298.45 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -30287,7 +30102,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 195.58 220.98 0)
 		(unit 1)
 		(body_style 1)
@@ -30307,7 +30122,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 195.58 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -30340,7 +30155,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 195.58 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -30351,7 +30166,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 195.58 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -30656,7 +30471,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 172.72 160.02 0)
 		(unit 1)
 		(body_style 1)
@@ -30676,7 +30491,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 172.72 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -30709,7 +30524,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 172.72 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -30720,7 +30535,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 172.72 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -31025,7 +30840,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 344.17 219.71 0)
 		(unit 1)
 		(body_style 1)
@@ -31045,7 +30860,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 344.17 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -31078,7 +30893,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 344.17 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -31089,7 +30904,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 344.17 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -31222,7 +31037,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 287.02 200.66 0)
 		(unit 1)
 		(body_style 1)
@@ -31242,7 +31057,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 287.02 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -31275,7 +31090,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 287.02 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -31286,7 +31101,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 287.02 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -31477,7 +31292,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 195.58 200.66 0)
 		(unit 1)
 		(body_style 1)
@@ -31497,7 +31312,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 195.58 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -31530,7 +31345,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 195.58 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -31541,7 +31356,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 195.58 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -31846,7 +31661,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 332.74 200.66 0)
 		(unit 1)
 		(body_style 1)
@@ -31866,7 +31681,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 332.74 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -31899,7 +31714,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 332.74 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -31910,7 +31725,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 332.74 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -32329,7 +32144,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 184.15 179.07 0)
 		(unit 1)
 		(body_style 1)
@@ -32349,7 +32164,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 184.15 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -32382,7 +32197,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 184.15 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -32393,7 +32208,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 184.15 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -32640,7 +32455,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 344.17 179.07 0)
 		(unit 1)
 		(body_style 1)
@@ -32660,7 +32475,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 344.17 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -32693,7 +32508,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 344.17 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -32704,7 +32519,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 344.17 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -33123,7 +32938,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 287.02 160.02 0)
 		(unit 1)
 		(body_style 1)
@@ -33143,7 +32958,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 287.02 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -33176,7 +32991,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 287.02 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -33187,7 +33002,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 287.02 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -33708,7 +33523,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 241.3 180.34 0)
 		(unit 1)
 		(body_style 1)
@@ -33728,7 +33543,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 241.3 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -33761,7 +33576,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 241.3 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -33772,7 +33587,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 241.3 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -33963,7 +33778,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 264.16 200.66 0)
 		(unit 1)
 		(body_style 1)
@@ -33983,7 +33798,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 264.16 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -34016,7 +33831,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 264.16 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -34027,7 +33842,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 264.16 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -35490,7 +35305,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 172.72 220.98 0)
 		(unit 1)
 		(body_style 1)
@@ -35510,7 +35325,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 172.72 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -35543,7 +35358,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 172.72 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -35554,7 +35369,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 172.72 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -36930,7 +36745,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 207.01 219.71 0)
 		(unit 1)
 		(body_style 1)
@@ -36950,7 +36765,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 207.01 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -36983,7 +36798,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 207.01 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -36994,7 +36809,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 207.01 219.71 0)
 			(hide yes)
 			(show_name no)
@@ -37161,7 +36976,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 309.88 200.66 0)
 		(unit 1)
 		(body_style 1)
@@ -37181,7 +36996,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 309.88 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -37214,7 +37029,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 309.88 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -37225,7 +37040,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 309.88 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -37530,7 +37345,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 298.45 199.39 0)
 		(unit 1)
 		(body_style 1)
@@ -37550,7 +37365,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 298.45 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -37583,7 +37398,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 298.45 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -37594,7 +37409,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 298.45 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -37899,7 +37714,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 275.59 158.75 0)
 		(unit 1)
 		(body_style 1)
@@ -37919,7 +37734,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 275.59 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -37952,7 +37767,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 275.59 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -37963,7 +37778,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 275.59 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -38346,7 +38161,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 309.88 220.98 0)
 		(unit 1)
 		(body_style 1)
@@ -38366,7 +38181,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 309.88 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -38399,7 +38214,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 309.88 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -38410,7 +38225,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 309.88 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -38943,7 +38758,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 218.44 160.02 0)
 		(unit 1)
 		(body_style 1)
@@ -38963,7 +38778,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 218.44 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -38996,7 +38811,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 218.44 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -39007,7 +38822,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 218.44 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -39198,7 +39013,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 309.88 180.34 0)
 		(unit 1)
 		(body_style 1)
@@ -39218,7 +39033,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 309.88 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -39251,7 +39066,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 309.88 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -39262,7 +39077,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 309.88 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -39681,7 +39496,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 184.15 158.75 0)
 		(unit 1)
 		(body_style 1)
@@ -39701,7 +39516,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 184.15 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -39734,7 +39549,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 184.15 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -39745,7 +39560,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 184.15 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -40300,7 +40115,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 332.74 160.02 0)
 		(unit 1)
 		(body_style 1)
@@ -40320,7 +40135,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 332.74 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -40353,7 +40168,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 332.74 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -40364,7 +40179,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 332.74 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -40419,7 +40234,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED_ABGR")
+		(lib_id "Device:LED_ARGB")
 		(at 275.59 179.07 0)
 		(unit 1)
 		(body_style 1)
@@ -40439,7 +40254,7 @@
 				)
 			)
 		)
-		(property "Value" "Reverse Mount LED ABGR"
+		(property "Value" "Reverse Mount LED ARGB"
 			(at 275.59 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -40472,7 +40287,7 @@
 				)
 			)
 		)
-		(property "Description" "RGB LED, anode/blue/green/red"
+		(property "Description" "RGB LED, anode/red/green/blue"
 			(at 275.59 179.07 0)
 			(hide yes)
 			(show_name no)
@@ -40483,7 +40298,7 @@
 				)
 			)
 		)
-		(property "MPN" "A-SP1513R6GHB1C-A01-2A"
+		(property "MPN" "23-23B/R6GHBHC-A30/2A"
 			(at 275.59 179.07 0)
 			(hide yes)
 			(show_name no)
