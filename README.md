@@ -47,6 +47,8 @@ Connecting the keyboard to [usevia.app](https://usevia.app) requires manually up
 - 2x M2.5x6 screw
 - Rubber feet
 
+TODO: Use 8x 2,2x8mm thread-forming screws for plastic
+
 ### Breakout boards
 
 The **USB-C breakout board** is expected to match the specs of the Adafruit USB-C breakout board with two M2.5 screw holes 15.24mm apart, 2.54mm from the front edge, and built-in resistors for the CC lines.
@@ -88,6 +90,8 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 | 2kΩ resistor | 0603 | 0603WAF2001T5E |
 | 20kΩ resistor | 0603 | 0603WAF2002T5E |
 | 100kΩ resistor | 0603 | 0603WAF1003T5E |
+
+TODO: Use 23-23B/R6GHBHC-A30/2A for the LED
 
 ## Case
 
