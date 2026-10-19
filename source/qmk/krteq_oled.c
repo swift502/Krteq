@@ -140,6 +140,30 @@ static void draw_box(uint8_t left, uint8_t top, uint8_t width, uint8_t height, b
     fill_rect(left, top + 1, width, height - 2, filled);
 }
 
+// Off screen frame for the animated screens, which clear it and redraw it in full every frame
+static uint8_t frame_buffer[OLED_PAGES * OLED_DISPLAY_WIDTH];
+
+static bool on_screen(int16_t x, int16_t y)
+{
+    return x >= 0 && x < OLED_DISPLAY_WIDTH && y >= 0 && y < OLED_DISPLAY_HEIGHT;
+}
+
+static void frame_clear(void)
+{
+    memset(frame_buffer, 0, sizeof(frame_buffer));
+}
+
+static void frame_plot(int16_t x, int16_t y)
+{
+    if (on_screen(x, y)) frame_buffer[y / 8 * OLED_DISPLAY_WIDTH + x] |= 1 << (y % 8);
+}
+
+// Only bytes that changed are marked dirty, so unchanged parts of the frame cost no display traffic
+static void frame_show(void)
+{
+    for (uint16_t i = 0; i < sizeof(frame_buffer); i++) oled_write_raw_byte(frame_buffer[i], i);
+}
+
 // Icon and label are centered together, so the pair shifts with the length of the label
 #define ICON_SIZE 14
 #define ICON_TEXT_GAP 6
@@ -751,36 +775,106 @@ const krteq_screen_t krteq_screen_waves = {
 };
 
 //==============================================================================
-// Ball pit screen
+// Bubbles screen
 //==============================================================================
 
-#define BALL_PIT_FRAME_DURATION FRAME_DURATION_30_FPS
-#define BALL_PIT_IDLE_DURATION 10000
-#define BALL_PIT_SHIFT 8 // Positions and velocities are fixed point pixels with this many fractional bits
-#define BALL_PIT_ONE (1 << BALL_PIT_SHIFT)
-#define BALL_PIT_GRAVITY 24
-#define BALL_PIT_RESTITUTION 250 // Velocity kept per bounce, out of BALL_PIT_ONE
-#define BALL_PIT_KICK 5120
-#define BALL_PIT_KICK_SOFTENING 16 // Squared pixels, tames kicks right on top of a circle
-#define BALL_PIT_ITERATIONS 4 // Collision passes per frame
+#define BUBBLE_FRAME_DURATION FRAME_DURATION_30_FPS
+#define BUBBLE_POP_INTERVAL 10000 // A bubble pops on its own this long after the last pop
+#define BUBBLE_SHIFT 8 // Positions and velocities are fixed point pixels with this many fractional bits
+#define BUBBLE_MIN_SPEED 32 // New bubbles drift between these speeds along each axis
+#define BUBBLE_MAX_SPEED 96
+#define BUBBLE_SPEED_LIMIT 160 // Caps each axis so blasts can't fling bubbles across the screen
+#define BUBBLE_BLAST 5000 // Push from a pop on the bubbles around it, fading with distance
+#define BUBBLE_BLAST_RANGE 24 // Pixels
+#define BUBBLE_BLAST_SOFTENING 16 // Squared pixels, tames blasts right next to the pop
+#define BUBBLE_WALL 6 // Bubbles within the margin are pushed inwards by one part in 2^n of how deep in they are per frame
+#define BUBBLE_WALL_MARGIN 4 // Pixels from the edges where the push starts, measured to the bubble's edge
+#define BUBBLE_FIELD 5 // Bubbles within range push apart, as a pair, by one part in 2^n of how far inside it they are per frame
+#define BUBBLE_FIELD_RANGE 4 // Pixels between two bubbles' edges where they start pushing each other
+#define BUBBLE_DRAG 12 // Bubbles lose one part in 2^n of their velocity per frame
+#define BUBBLE_WANDER 16 // Random nudge per frame, which the drag smooths into a slow airy float
+#define BUBBLE_POP_FRAMES 4
 
-struct circle
+struct bubble
 {
     int32_t x;
     int32_t y;
     int32_t vx;
     int32_t vy;
     uint8_t radius;
+    uint8_t pop; // Frames of the pop burst left, zero while floating
 };
 
-static const uint8_t ball_pit_radii[] = { 3, 3, 3, 4, 4, 5, 6, 7, 8, 10 };
+static const uint8_t bubble_radii[] = { 3, 3, 3, 4, 5, 6, 7, 8, 9 };
 
-#define BALL_PIT_COUNT ARRAY_SIZE(ball_pit_radii)
+#define BUBBLE_COUNT ARRAY_SIZE(bubble_radii)
 
-static struct circle ball_pit[BALL_PIT_COUNT];
-static uint8_t ball_pit_frame[OLED_PAGES * OLED_DISPLAY_WIDTH];
-static uint16_t ball_pit_timer;
-static uint16_t ball_pit_idle_timer;
+static struct bubble bubbles[BUBBLE_COUNT];
+static uint16_t bubble_timer;
+static uint16_t bubble_pop_timer;
+static uint8_t bubble_next; // Every pop takes the next bubble in turn, so the oldest always goes first
+
+static int32_t bubble_speed(void)
+{
+    int32_t speed = BUBBLE_MIN_SPEED + random_value() % (BUBBLE_MAX_SPEED - BUBBLE_MIN_SPEED);
+    return random_value() & 1 ? speed : -speed;
+}
+
+// Places the bubble just off the edge it is drifting away from, so it floats in
+static void bubble_spawn(struct bubble *bubble)
+{
+    int16_t radius = bubble->radius;
+    int16_t x = random_value() % OLED_DISPLAY_WIDTH;
+    int16_t y = random_value() % OLED_DISPLAY_HEIGHT;
+
+    bubble->vx = bubble_speed();
+    bubble->vy = bubble_speed();
+    bubble->pop = 0;
+
+    if (random_value() & 1)
+    {
+        x = bubble->vx > 0 ? -radius : OLED_DISPLAY_WIDTH + radius;
+    }
+    else
+    {
+        y = bubble->vy > 0 ? -radius : OLED_DISPLAY_HEIGHT + radius;
+    }
+
+    bubble->x = (int32_t)x << BUBBLE_SHIFT;
+    bubble->y = (int32_t)y << BUBBLE_SHIFT;
+}
+
+// Pops the oldest bubble, blasting the ones close by away from it
+static void bubble_pop(void)
+{
+    struct bubble *popped = &bubbles[bubble_next];
+
+    bubble_next = (bubble_next + 1) % BUBBLE_COUNT;
+    bubble_pop_timer = timer_read();
+
+    if (popped->pop) return;
+    popped->pop = BUBBLE_POP_FRAMES;
+
+    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
+    {
+        struct bubble *bubble = &bubbles[i];
+        int16_t dx = (bubble->x - popped->x) >> BUBBLE_SHIFT;
+        int16_t dy = (bubble->y - popped->y) >> BUBBLE_SHIFT;
+        int32_t distance_squared = dx * dx + dy * dy;
+
+        if (bubble->pop || distance_squared > BUBBLE_BLAST_RANGE * BUBBLE_BLAST_RANGE) continue;
+
+        bubble->vx += dx * BUBBLE_BLAST / (distance_squared + BUBBLE_BLAST_SOFTENING);
+        bubble->vy += dy * BUBBLE_BLAST / (distance_squared + BUBBLE_BLAST_SOFTENING);
+    }
+}
+
+// Bubbles nearing an edge are pushed back inwards, harder the closer they get
+static void bubble_wall(int32_t position, int32_t *velocity, int32_t low, int32_t high)
+{
+    if (position < low) *velocity += (low - position) >> BUBBLE_WALL;
+    if (position > high) *velocity -= (position - high) >> BUBBLE_WALL;
+}
 
 static uint32_t square_root(uint32_t value)
 {
@@ -802,106 +896,65 @@ static uint32_t square_root(uint32_t value)
     return root;
 }
 
-static int16_t ball_pit_pixel(int32_t position)
-{
-    return (position + BALL_PIT_ONE / 2) >> BALL_PIT_SHIFT;
-}
-
-// Blasts every circle sideways away from the point and always upwards, fading with distance
-// Most keys sit above the resting circles, so a plain radial push would only pin them to the floor
-static void ball_pit_kick(uint8_t x, uint8_t y, int32_t strength)
-{
-    for (uint8_t i = 0; i < BALL_PIT_COUNT; i++)
-    {
-        struct circle *circle = &ball_pit[i];
-        int16_t dx = ball_pit_pixel(circle->x) - x;
-        int16_t dy = ball_pit_pixel(circle->y) - y;
-        int16_t reach = (dx < 0 ? -dx : dx) + (dy < 0 ? -dy : dy) + 1;
-        int32_t falloff = dx * dx + dy * dy + BALL_PIT_KICK_SOFTENING;
-
-        circle->vx += dx * strength / falloff;
-        circle->vy -= reach * strength / falloff;
-    }
-}
-
-static void ball_pit_wall(int32_t *position, int32_t *velocity, int32_t low, int32_t high)
-{
-    if (*position < low)
-    {
-        *position = low;
-        if (*velocity < 0) *velocity = -*velocity * BALL_PIT_RESTITUTION >> BALL_PIT_SHIFT;
-    }
-    else if (*position > high)
-    {
-        *position = high;
-        if (*velocity > 0) *velocity = -*velocity * BALL_PIT_RESTITUTION >> BALL_PIT_SHIFT;
-    }
-}
-
-// Mass goes with area, so each circle gives way by the other's share of the total
-static void ball_pit_collide(struct circle *a, struct circle *b)
+// Nearby bubbles gently push each other apart, harder the closer they get
+// Mass goes with area, so each bubble gives way by the other's share of the total
+static void bubble_push(struct bubble *a, struct bubble *b)
 {
     int32_t dx = b->x - a->x;
     int32_t dy = b->y - a->y;
-    int32_t reach = (int32_t)(a->radius + b->radius) << BALL_PIT_SHIFT;
+    int32_t reach = (int32_t)(a->radius + b->radius + BUBBLE_FIELD_RANGE) << BUBBLE_SHIFT;
 
     if (dx >= reach || dx <= -reach || dy >= reach || dy <= -reach) return;
 
-    int32_t distance_squared = dx * dx + dy * dy;
-    if (distance_squared >= reach * reach) return;
+    int32_t distance = square_root(dx * dx + dy * dy);
+    if (!distance || distance >= reach) return;
 
-    int32_t distance = square_root(distance_squared);
-
-    // Coincident centres have no normal of their own, so pick one
-    if (!distance)
-    {
-        dx = 1;
-        distance = 1;
-    }
-
-    int32_t nx = dx * BALL_PIT_ONE / distance;
-    int32_t ny = dy * BALL_PIT_ONE / distance;
+    int32_t force = (reach - distance) >> BUBBLE_FIELD;
     int32_t mass_a = a->radius * a->radius;
     int32_t mass_b = b->radius * b->radius;
-    int32_t total = mass_a + mass_b;
+    int32_t force_a = force * mass_b / (mass_a + mass_b);
+    int32_t force_b = force - force_a;
 
-    int32_t overlap = reach - distance;
-    int32_t push_a = overlap * mass_b / total;
-    int32_t push_b = overlap - push_a;
-
-    a->x -= nx * push_a >> BALL_PIT_SHIFT;
-    a->y -= ny * push_a >> BALL_PIT_SHIFT;
-    b->x += nx * push_b >> BALL_PIT_SHIFT;
-    b->y += ny * push_b >> BALL_PIT_SHIFT;
-
-    int32_t closing = ((a->vx - b->vx) * nx + (a->vy - b->vy) * ny) >> BALL_PIT_SHIFT;
-    if (closing <= 0) return;
-
-    int32_t impulse = closing * (BALL_PIT_ONE + BALL_PIT_RESTITUTION) >> BALL_PIT_SHIFT;
-    int32_t kick_a = impulse * mass_b / total;
-    int32_t kick_b = impulse - kick_a;
-
-    a->vx -= nx * kick_a >> BALL_PIT_SHIFT;
-    a->vy -= ny * kick_a >> BALL_PIT_SHIFT;
-    b->vx += nx * kick_b >> BALL_PIT_SHIFT;
-    b->vy += ny * kick_b >> BALL_PIT_SHIFT;
+    a->vx -= dx * force_a / distance;
+    a->vy -= dy * force_a / distance;
+    b->vx += dx * force_b / distance;
+    b->vy += dy * force_b / distance;
 }
 
-static void ball_pit_plot(int16_t x, int16_t y)
+// A random nudge, then drag that rounds away from zero so it still bites at the slowest speeds
+static int32_t bubble_float(int32_t velocity)
 {
-    if (x < 0 || x >= OLED_DISPLAY_WIDTH || y < 0 || y >= OLED_DISPLAY_HEIGHT) return;
-    ball_pit_frame[y / 8 * OLED_DISPLAY_WIDTH + x] |= 1 << (y % 8);
+    velocity += (int32_t)(random_value() % (BUBBLE_WANDER * 2 + 1)) - BUBBLE_WANDER;
+    return velocity - (velocity + (velocity > 0 ? 1 : -1) * ((1 << BUBBLE_DRAG) - 1)) / (1 << BUBBLE_DRAG);
 }
 
-static void ball_pit_draw(void)
+static void bubble_draw(void)
 {
-    memset(ball_pit_frame, 0, sizeof(ball_pit_frame));
+    frame_clear();
 
-    for (uint8_t i = 0; i < BALL_PIT_COUNT; i++)
+    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
     {
-        int16_t x = ball_pit_pixel(ball_pit[i].x);
-        int16_t y = ball_pit_pixel(ball_pit[i].y);
-        int16_t radius = ball_pit[i].radius;
+        struct bubble *bubble = &bubbles[i];
+        int16_t x = bubble->x >> BUBBLE_SHIFT;
+        int16_t y = bubble->y >> BUBBLE_SHIFT;
+        int16_t radius = bubble->radius;
+
+        // A popping bubble bursts into a ring of droplets flying outwards
+        if (bubble->pop)
+        {
+            int16_t spread = radius + (BUBBLE_POP_FRAMES - bubble->pop) * 2;
+            int16_t diagonal = spread * 181 >> 8; // Spread / sqrt(2)
+
+            frame_plot(x + spread, y);
+            frame_plot(x - spread, y);
+            frame_plot(x, y + spread);
+            frame_plot(x, y - spread);
+            frame_plot(x + diagonal, y + diagonal);
+            frame_plot(x + diagonal, y - diagonal);
+            frame_plot(x - diagonal, y + diagonal);
+            frame_plot(x - diagonal, y - diagonal);
+            continue;
+        }
 
         // Pixels within half a pixel of the radius, r - 0.5 < d <= r + 0.5 squared and rounded
         for (int16_t dy = -radius; dy <= radius; dy++)
@@ -909,90 +962,91 @@ static void ball_pit_draw(void)
             for (int16_t dx = -radius; dx <= radius; dx++)
             {
                 int16_t distance_squared = dx * dx + dy * dy;
-                if (distance_squared > radius * radius - radius && distance_squared <= radius * radius + radius) ball_pit_plot(x + dx, y + dy);
+                if (distance_squared > radius * radius - radius && distance_squared <= radius * radius + radius) frame_plot(x + dx, y + dy);
             }
         }
+
+        // A glint of light in the upper left
+        if (radius >= 4) frame_plot(x - radius / 2, y - radius / 2);
     }
 
-    for (uint16_t i = 0; i < sizeof(ball_pit_frame); i++) oled_write_raw_byte(ball_pit_frame[i], i);
+    frame_show();
 }
 
-static void ball_pit_init(void)
+static void bubble_init(void)
 {
-    for (uint8_t i = 0; i < BALL_PIT_COUNT; i++)
+    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
     {
-        struct circle *circle = &ball_pit[i];
-        uint8_t radius = ball_pit_radii[i];
+        struct bubble *bubble = &bubbles[i];
+        uint8_t radius = bubble_radii[i];
 
-        circle->radius = radius;
-        circle->x = (int32_t)(radius + random_value() % (OLED_DISPLAY_WIDTH - radius * 2)) << BALL_PIT_SHIFT;
-        circle->y = (int32_t)(radius + random_value() % (OLED_DISPLAY_HEIGHT - radius * 2)) << BALL_PIT_SHIFT;
-        circle->vx = 0;
-        circle->vy = 0;
+        // Spawned as usual, then moved on screen so the first bubbles are already there
+        bubble->radius = radius;
+        bubble_spawn(bubble);
+        bubble->x = (int32_t)(radius + random_value() % (OLED_DISPLAY_WIDTH - radius * 2)) << BUBBLE_SHIFT;
+        bubble->y = (int32_t)(radius + random_value() % (OLED_DISPLAY_HEIGHT - radius * 2)) << BUBBLE_SHIFT;
     }
+
+    bubble_next = 0;
 }
 
-static void ball_pit_start(void)
+static void bubble_start(void)
 {
-    ball_pit_timer = timer_read();
-    ball_pit_idle_timer = timer_read();
+    bubble_timer = timer_read();
+    bubble_pop_timer = timer_read();
 }
 
-static void ball_pit_update(void)
+static void bubble_update(void)
 {
-    if (!timer_finished(&ball_pit_timer, BALL_PIT_FRAME_DURATION) && !screen_redraw) return;
+    if (!timer_finished(&bubble_timer, BUBBLE_FRAME_DURATION) && !screen_redraw) return;
     screen_redraw = false;
 
-    if (timer_finished(&ball_pit_idle_timer, BALL_PIT_IDLE_DURATION))
-    {
-        ball_pit_kick(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT, BALL_PIT_KICK);
-    }
+    if (timer_finished(&bubble_pop_timer, BUBBLE_POP_INTERVAL)) bubble_pop();
 
-    for (uint8_t i = 0; i < BALL_PIT_COUNT; i++)
+    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
     {
-        struct circle *circle = &ball_pit[i];
-
-        circle->vy += BALL_PIT_GRAVITY;
-        circle->x += circle->vx;
-        circle->y += circle->vy;
-    }
-
-    // Each pass carries corrections one circle further through a pile
-    for (uint8_t pass = 0; pass < BALL_PIT_ITERATIONS; pass++)
-    {
-        for (uint8_t i = 0; i < BALL_PIT_COUNT; i++)
+        for (uint8_t j = i + 1; j < BUBBLE_COUNT; j++)
         {
-            for (uint8_t j = i + 1; j < BALL_PIT_COUNT; j++) ball_pit_collide(&ball_pit[i], &ball_pit[j]);
+            if (!bubbles[i].pop && !bubbles[j].pop) bubble_push(&bubbles[i], &bubbles[j]);
         }
     }
 
-    // Walls go last so no circle is ever drawn off screen
-    for (uint8_t i = 0; i < BALL_PIT_COUNT; i++)
+    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
     {
-        struct circle *circle = &ball_pit[i];
-        int32_t radius = circle->radius;
+        struct bubble *bubble = &bubbles[i];
 
-        ball_pit_wall(&circle->x, &circle->vx, radius << BALL_PIT_SHIFT, (OLED_DISPLAY_WIDTH - 1 - radius) << BALL_PIT_SHIFT);
-        ball_pit_wall(&circle->y, &circle->vy, radius << BALL_PIT_SHIFT, (OLED_DISPLAY_HEIGHT - 1 - radius) << BALL_PIT_SHIFT);
+        // Popped bubbles come back from off screen once the burst is over
+        if (bubble->pop)
+        {
+            if (!--bubble->pop) bubble_spawn(bubble);
+            continue;
+        }
+
+        bubble->vx = MAX(-BUBBLE_SPEED_LIMIT, MIN(BUBBLE_SPEED_LIMIT, bubble_float(bubble->vx)));
+        bubble->vy = MAX(-BUBBLE_SPEED_LIMIT, MIN(BUBBLE_SPEED_LIMIT, bubble_float(bubble->vy)));
+        bubble->x += bubble->vx;
+        bubble->y += bubble->vy;
+
+        int32_t reach = (int32_t)(bubble->radius + BUBBLE_WALL_MARGIN) << BUBBLE_SHIFT;
+
+        bubble_wall(bubble->x, &bubble->vx, reach, ((OLED_DISPLAY_WIDTH - 1) << BUBBLE_SHIFT) - reach);
+        bubble_wall(bubble->y, &bubble->vy, reach, ((OLED_DISPLAY_HEIGHT - 1) << BUBBLE_SHIFT) - reach);
     }
 
-    ball_pit_draw();
+    bubble_draw();
 }
 
-static void ball_pit_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
+static void bubble_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
-    if (!pressed) return;
-
-    ball_pit_idle_timer = timer_read();
-    ball_pit_kick(x, y, BALL_PIT_KICK);
+    if (pressed) bubble_pop();
 }
 
-const krteq_screen_t krteq_screen_ball_pit = {
-    .name      = "Ball pit",
-    .init      = ball_pit_init,
-    .start     = ball_pit_start,
-    .update    = ball_pit_update,
-    .key_event = ball_pit_key_event
+const krteq_screen_t krteq_screen_bubbles = {
+    .name      = "Bubbles",
+    .init      = bubble_init,
+    .start     = bubble_start,
+    .update    = bubble_update,
+    .key_event = bubble_key_event
 };
 
 //==============================================================================
@@ -1009,12 +1063,11 @@ const krteq_screen_t krteq_screen_ball_pit = {
 // Spawn spread that lands exactly on the screen edges at the far plane
 #define STARFIELD_SPREAD_X (STARFIELD_FAR_DEPTH * OLED_DISPLAY_WIDTH / 2 / STARFIELD_FOCAL)
 #define STARFIELD_SPREAD_Y (STARFIELD_FAR_DEPTH * OLED_DISPLAY_HEIGHT / 2 / STARFIELD_FOCAL)
-#define STARFIELD_BASE_SPEED (3 << STARFIELD_SHIFT) // Depth travelled per frame while idle
+#define STARFIELD_BASE_SPEED (6 << STARFIELD_SHIFT) // Depth travelled per frame while idle
 #define STARFIELD_MAX_BOOST (64 << STARFIELD_SHIFT)
-#define STARFIELD_KICK (6 << STARFIELD_SHIFT) // Boost added per key press, felt on the very next frame
+#define STARFIELD_KICK (4 << STARFIELD_SHIFT) // Boost added per key press, felt on the very next frame
 // Drag in proportion to speed, so steady typing settles at a speed matching its pace
 #define STARFIELD_DRAG 6 // The boost loses one part in 2^n per frame
-#define STARFIELD_NO_TRAIL INT16_MIN
 
 struct star
 {
@@ -1026,22 +1079,10 @@ struct star
 };
 
 static struct star starfield[STARFIELD_COUNT];
-static uint8_t starfield_frame[OLED_PAGES * OLED_DISPLAY_WIDTH];
 static uint16_t starfield_timer;
 static int32_t starfield_boost;
 
-static bool starfield_on_screen(int16_t x, int16_t y)
-{
-    return x >= 0 && x < OLED_DISPLAY_WIDTH && y >= 0 && y < OLED_DISPLAY_HEIGHT;
-}
-
-static void starfield_plot(int16_t x, int16_t y)
-{
-    if (!starfield_on_screen(x, y)) return;
-    starfield_frame[y / 8 * OLED_DISPLAY_WIDTH + x] |= 1 << (y % 8);
-}
-
-// Bresenham from an on screen point, stopping once the line leaves the screen
+// Bresenham, stopping once the line leaves the screen
 static void starfield_line(int16_t x0, int16_t y0, int16_t x1, int16_t y1)
 {
     int16_t dx = x1 > x0 ? x1 - x0 : x0 - x1;
@@ -1050,9 +1091,9 @@ static void starfield_line(int16_t x0, int16_t y0, int16_t x1, int16_t y1)
     int8_t sy = y1 > y0 ? 1 : -1;
     int16_t error = dx + dy;
 
-    while (starfield_on_screen(x0, y0))
+    while (on_screen(x0, y0))
     {
-        starfield_plot(x0, y0);
+        frame_plot(x0, y0);
         if (x0 == x1 && y0 == y1) return;
 
         int16_t doubled = error * 2;
@@ -1069,13 +1110,18 @@ static void starfield_line(int16_t x0, int16_t y0, int16_t x1, int16_t y1)
     }
 }
 
+static void starfield_project(const struct star *star, int16_t *x, int16_t *y)
+{
+    *x = OLED_DISPLAY_WIDTH / 2 + ((int32_t)star->x * STARFIELD_FOCAL << STARFIELD_SHIFT) / star->z;
+    *y = OLED_DISPLAY_HEIGHT / 2 + ((int32_t)star->y * STARFIELD_FOCAL << STARFIELD_SHIFT) / star->z;
+}
+
 static void starfield_spawn(struct star *star, int32_t z)
 {
     star->x = (int16_t)(random_value() % (STARFIELD_SPREAD_X * 2 + 1)) - STARFIELD_SPREAD_X;
     star->y = (int16_t)(random_value() % (STARFIELD_SPREAD_Y * 2 + 1)) - STARFIELD_SPREAD_Y;
     star->z = z;
-    star->trail_x = STARFIELD_NO_TRAIL;
-    star->trail_y = STARFIELD_NO_TRAIL;
+    starfield_project(star, &star->trail_x, &star->trail_y);
 }
 
 static void starfield_init(void)
@@ -1104,7 +1150,7 @@ static void starfield_update(void)
     // Rounds up so the boost settles all the way back to zero
     starfield_boost -= (starfield_boost + (1 << STARFIELD_DRAG) - 1) >> STARFIELD_DRAG;
 
-    memset(starfield_frame, 0, sizeof(starfield_frame));
+    frame_clear();
 
     for (uint8_t i = 0; i < STARFIELD_COUNT; i++)
     {
@@ -1112,37 +1158,25 @@ static void starfield_update(void)
 
         star->z -= speed;
 
-        if (star->z < STARFIELD_NEAR)
+        if (star->z >= STARFIELD_NEAR)
         {
-            // A small depth jitter keeps stars respawned together from flying in a sheet
-            starfield_spawn(star, (int32_t)(STARFIELD_FAR_DEPTH - random_value() % 64) << STARFIELD_SHIFT);
-            continue;
-        }
+            int16_t x, y;
+            starfield_project(star, &x, &y);
 
-        int16_t x = OLED_DISPLAY_WIDTH / 2 + ((int32_t)star->x * STARFIELD_FOCAL << STARFIELD_SHIFT) / star->z;
-        int16_t y = OLED_DISPLAY_HEIGHT / 2 + ((int32_t)star->y * STARFIELD_FOCAL << STARFIELD_SHIFT) / star->z;
-
-        // Streaks grow with speed on their own, as each frame spans more of the screen
-        if (star->trail_x != STARFIELD_NO_TRAIL)
-        {
+            // Streaks grow with speed on their own, as each frame spans more of the screen
             starfield_line(star->trail_x, star->trail_y, x, y);
-        }
-        else
-        {
-            starfield_plot(x, y);
+            star->trail_x = x;
+            star->trail_y = y;
+
+            if (on_screen(x, y)) continue;
         }
 
-        if (!starfield_on_screen(x, y))
-        {
-            starfield_spawn(star, (int32_t)(STARFIELD_FAR_DEPTH - random_value() % 64) << STARFIELD_SHIFT);
-            continue;
-        }
-
-        star->trail_x = x;
-        star->trail_y = y;
+        // Past the camera or off the edge, so it starts over far away
+        // A small depth jitter keeps stars respawned together from flying in a sheet
+        starfield_spawn(star, (int32_t)(STARFIELD_FAR_DEPTH - random_value() % 64) << STARFIELD_SHIFT);
     }
 
-    for (uint16_t i = 0; i < sizeof(starfield_frame); i++) oled_write_raw_byte(starfield_frame[i], i);
+    frame_show();
 }
 
 static void starfield_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
@@ -1754,7 +1788,7 @@ __attribute__((weak)) const krteq_screen_t *const user_screens[] = {
     &krteq_screen_starfield,
     &krteq_screen_waves,
     &krteq_screen_game_of_life,
-    &krteq_screen_ball_pit,
+    &krteq_screen_bubbles,
     &krteq_screen_system_info
 };
 
