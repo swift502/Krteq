@@ -4,6 +4,7 @@
 #include OLED_FONT_H
 
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
+#define FRAME_DURATION_30_FPS 33 // Milliseconds per frame
 #define INDICATORS_LAYER 1
 #define INPUT_LOCK_LAYER 4
 
@@ -192,7 +193,7 @@ static void draw_labelled(const char *title, const char *text)
 #define SELECT_NAME_Y 13
 #define SELECT_SLIDE_DISTANCE OLED_DISPLAY_WIDTH
 #define SELECT_SLIDE_DURATION 200
-#define SELECT_FRAME_DURATION 33
+#define SELECT_FRAME_DURATION FRAME_DURATION_30_FPS
 #define SELECT_DOT_WIDTH 7
 #define SELECT_DOT_HEIGHT 5
 #define SELECT_DOT_Y (OLED_DISPLAY_HEIGHT - SELECT_DOT_HEIGHT / 2 - 1) // The current dot rests on the bottom edge
@@ -634,7 +635,7 @@ const krteq_screen_t krteq_screen_bongo_cat = {
 // Waves screen
 //==============================================================================
 
-#define WAVE_FRAME_DURATION 33
+#define WAVE_FRAME_DURATION FRAME_DURATION_30_FPS
 #define WAVE_IDLE_DURATION 15000
 #define WAVE_DAMPING 6 // Waves lose one part in 2^n of their height per frame
 #define WAVE_DROP_RADIUS 2
@@ -753,14 +754,13 @@ const krteq_screen_t krteq_screen_waves = {
 // Ball pit screen
 //==============================================================================
 
-#define BALL_PIT_FRAME_DURATION WAVE_FRAME_DURATION
-#define BALL_PIT_IDLE_DURATION 15000
+#define BALL_PIT_FRAME_DURATION FRAME_DURATION_30_FPS
+#define BALL_PIT_IDLE_DURATION 10000
 #define BALL_PIT_SHIFT 8 // Positions and velocities are fixed point pixels with this many fractional bits
 #define BALL_PIT_ONE (1 << BALL_PIT_SHIFT)
 #define BALL_PIT_GRAVITY 24
-#define BALL_PIT_RESTITUTION 230 // Velocity kept per bounce, out of BALL_PIT_ONE
+#define BALL_PIT_RESTITUTION 250 // Velocity kept per bounce, out of BALL_PIT_ONE
 #define BALL_PIT_KICK 5120
-#define BALL_PIT_IDLE_KICK (BALL_PIT_KICK * 2)
 #define BALL_PIT_KICK_SOFTENING 16 // Squared pixels, tames kicks right on top of a circle
 #define BALL_PIT_ITERATIONS 4 // Collision passes per frame
 
@@ -945,7 +945,7 @@ static void ball_pit_update(void)
 
     if (timer_finished(&ball_pit_idle_timer, BALL_PIT_IDLE_DURATION))
     {
-        ball_pit_kick(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT, BALL_PIT_IDLE_KICK);
+        ball_pit_kick(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT, BALL_PIT_KICK);
     }
 
     for (uint8_t i = 0; i < BALL_PIT_COUNT; i++)
@@ -993,6 +993,172 @@ const krteq_screen_t krteq_screen_ball_pit = {
     .start     = ball_pit_start,
     .update    = ball_pit_update,
     .key_event = ball_pit_key_event
+};
+
+//==============================================================================
+// Starfield screen
+//==============================================================================
+
+#define STARFIELD_FRAME_DURATION FRAME_DURATION_30_FPS
+#define STARFIELD_COUNT 48
+#define STARFIELD_SHIFT 8 // Depths and speeds are fixed point with this many fractional bits
+#define STARFIELD_FAR_DEPTH 1024
+#define STARFIELD_NEAR_DEPTH 8
+#define STARFIELD_NEAR ((int32_t)STARFIELD_NEAR_DEPTH << STARFIELD_SHIFT)
+#define STARFIELD_FOCAL OLED_DISPLAY_WIDTH
+// Spawn spread that lands exactly on the screen edges at the far plane
+#define STARFIELD_SPREAD_X (STARFIELD_FAR_DEPTH * OLED_DISPLAY_WIDTH / 2 / STARFIELD_FOCAL)
+#define STARFIELD_SPREAD_Y (STARFIELD_FAR_DEPTH * OLED_DISPLAY_HEIGHT / 2 / STARFIELD_FOCAL)
+#define STARFIELD_BASE_SPEED (3 << STARFIELD_SHIFT) // Depth travelled per frame while idle
+#define STARFIELD_MAX_BOOST (64 << STARFIELD_SHIFT)
+#define STARFIELD_KICK (6 << STARFIELD_SHIFT) // Boost added per key press, felt on the very next frame
+// Drag in proportion to speed, so steady typing settles at a speed matching its pace
+#define STARFIELD_DRAG 6 // The boost loses one part in 2^n per frame
+#define STARFIELD_NO_TRAIL INT16_MIN
+
+struct star
+{
+    int16_t x;
+    int16_t y;
+    int32_t z;
+    int16_t trail_x; // Last drawn screen position, the streak runs from here
+    int16_t trail_y;
+};
+
+static struct star starfield[STARFIELD_COUNT];
+static uint8_t starfield_frame[OLED_PAGES * OLED_DISPLAY_WIDTH];
+static uint16_t starfield_timer;
+static int32_t starfield_boost;
+
+static bool starfield_on_screen(int16_t x, int16_t y)
+{
+    return x >= 0 && x < OLED_DISPLAY_WIDTH && y >= 0 && y < OLED_DISPLAY_HEIGHT;
+}
+
+static void starfield_plot(int16_t x, int16_t y)
+{
+    if (!starfield_on_screen(x, y)) return;
+    starfield_frame[y / 8 * OLED_DISPLAY_WIDTH + x] |= 1 << (y % 8);
+}
+
+// Bresenham from an on screen point, stopping once the line leaves the screen
+static void starfield_line(int16_t x0, int16_t y0, int16_t x1, int16_t y1)
+{
+    int16_t dx = x1 > x0 ? x1 - x0 : x0 - x1;
+    int16_t dy = y1 > y0 ? y0 - y1 : y1 - y0;
+    int8_t sx = x1 > x0 ? 1 : -1;
+    int8_t sy = y1 > y0 ? 1 : -1;
+    int16_t error = dx + dy;
+
+    while (starfield_on_screen(x0, y0))
+    {
+        starfield_plot(x0, y0);
+        if (x0 == x1 && y0 == y1) return;
+
+        int16_t doubled = error * 2;
+        if (doubled >= dy)
+        {
+            error += dy;
+            x0 += sx;
+        }
+        if (doubled <= dx)
+        {
+            error += dx;
+            y0 += sy;
+        }
+    }
+}
+
+static void starfield_spawn(struct star *star, int32_t z)
+{
+    star->x = (int16_t)(random_value() % (STARFIELD_SPREAD_X * 2 + 1)) - STARFIELD_SPREAD_X;
+    star->y = (int16_t)(random_value() % (STARFIELD_SPREAD_Y * 2 + 1)) - STARFIELD_SPREAD_Y;
+    star->z = z;
+    star->trail_x = STARFIELD_NO_TRAIL;
+    star->trail_y = STARFIELD_NO_TRAIL;
+}
+
+static void starfield_init(void)
+{
+    for (uint8_t i = 0; i < STARFIELD_COUNT; i++)
+    {
+        int32_t depth = STARFIELD_NEAR_DEPTH + random_value() % (STARFIELD_FAR_DEPTH - STARFIELD_NEAR_DEPTH);
+        starfield_spawn(&starfield[i], depth << STARFIELD_SHIFT);
+    }
+
+    starfield_boost = 0;
+}
+
+static void starfield_start(void)
+{
+    starfield_timer = timer_read();
+}
+
+static void starfield_update(void)
+{
+    if (!timer_finished(&starfield_timer, STARFIELD_FRAME_DURATION) && !screen_redraw) return;
+    screen_redraw = false;
+
+    int32_t speed = STARFIELD_BASE_SPEED + starfield_boost;
+
+    // Rounds up so the boost settles all the way back to zero
+    starfield_boost -= (starfield_boost + (1 << STARFIELD_DRAG) - 1) >> STARFIELD_DRAG;
+
+    memset(starfield_frame, 0, sizeof(starfield_frame));
+
+    for (uint8_t i = 0; i < STARFIELD_COUNT; i++)
+    {
+        struct star *star = &starfield[i];
+
+        star->z -= speed;
+
+        if (star->z < STARFIELD_NEAR)
+        {
+            // A small depth jitter keeps stars respawned together from flying in a sheet
+            starfield_spawn(star, (int32_t)(STARFIELD_FAR_DEPTH - random_value() % 64) << STARFIELD_SHIFT);
+            continue;
+        }
+
+        int16_t x = OLED_DISPLAY_WIDTH / 2 + ((int32_t)star->x * STARFIELD_FOCAL << STARFIELD_SHIFT) / star->z;
+        int16_t y = OLED_DISPLAY_HEIGHT / 2 + ((int32_t)star->y * STARFIELD_FOCAL << STARFIELD_SHIFT) / star->z;
+
+        // Streaks grow with speed on their own, as each frame spans more of the screen
+        if (star->trail_x != STARFIELD_NO_TRAIL)
+        {
+            starfield_line(star->trail_x, star->trail_y, x, y);
+        }
+        else
+        {
+            starfield_plot(x, y);
+        }
+
+        if (!starfield_on_screen(x, y))
+        {
+            starfield_spawn(star, (int32_t)(STARFIELD_FAR_DEPTH - random_value() % 64) << STARFIELD_SHIFT);
+            continue;
+        }
+
+        star->trail_x = x;
+        star->trail_y = y;
+    }
+
+    for (uint16_t i = 0; i < sizeof(starfield_frame); i++) oled_write_raw_byte(starfield_frame[i], i);
+}
+
+static void starfield_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
+{
+    if (!pressed) return;
+
+    starfield_boost += STARFIELD_KICK;
+    if (starfield_boost > STARFIELD_MAX_BOOST) starfield_boost = STARFIELD_MAX_BOOST;
+}
+
+const krteq_screen_t krteq_screen_starfield = {
+    .name      = "Starfield",
+    .init      = starfield_init,
+    .start     = starfield_start,
+    .update    = starfield_update,
+    .key_event = starfield_key_event
 };
 
 //==============================================================================
@@ -1585,8 +1751,9 @@ void render_shutdown_screen(bool jump_to_bootloader)
 __attribute__((weak)) const krteq_screen_t *const user_screens[] = {
     &krteq_screen_indicators,
     &krteq_screen_bongo_cat,
-    &krteq_screen_game_of_life,
+    &krteq_screen_starfield,
     &krteq_screen_waves,
+    &krteq_screen_game_of_life,
     &krteq_screen_ball_pit,
     &krteq_screen_system_info
 };

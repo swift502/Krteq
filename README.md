@@ -154,8 +154,9 @@ You can combine custom screens with the built-in ones. You can reshuffle them, r
 const krteq_screen_t *const user_screens[] = {
     &krteq_screen_indicators,
     &krteq_screen_bongo_cat,
-    &krteq_screen_game_of_life,
+    &krteq_screen_starfield,
     &krteq_screen_waves,
+    &krteq_screen_game_of_life,
     &krteq_screen_ball_pit,
     &krteq_screen_system_info
 };
