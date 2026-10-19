@@ -80,8 +80,7 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 |---|---|---|
 | Switch diode | SOD-123 | 1N4148W |
 | Switch socket | SMD | KS-2P02B01-02 |
-| RGB LED | SMD-4P,3.2x1.3mm | A-SP1513R6GHB1C-A01-2A |
-<!-- | RGB LED | SMD-4P,3.2x1.3mm | 23-23B/R6GHBHC-A30/2A | -->
+| RGB LED | SMD-4P,3.2x1.3mm | A-SP1513R6GHB1C-A01-2A (considering 23-23B/R6GHBHC-A30/2A) |
 | RGB driver | QFN-48-EP(6x6) | IS31FL3733B-QFLS4-TR |
 | 0.1µF capacitor | 0402 | CL05B104KO5NNNC |
 | 0.47µF capacitor | 0603 | CL10B474KA8NNNC |
