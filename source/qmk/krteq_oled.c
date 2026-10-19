@@ -18,7 +18,7 @@ static bool screen_redraw; // Set on a screen switch or by events, cleared by th
 static uint8_t user_screen_count(void)
 {
     uint8_t count = 0;
-    while (count < KRTEQ_MAX_SCREENS && user_screens[count]) count++;
+    while (count < UINT8_MAX && user_screens[count]) count++;
     return count;
 }
 

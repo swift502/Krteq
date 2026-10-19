@@ -26,5 +26,4 @@ extern const krteq_screen_t krteq_screen_waves;
 extern const krteq_screen_t krteq_screen_ball_pit;
 extern const krteq_screen_t krteq_screen_system_info;
 
-#define KRTEQ_MAX_SCREENS 255
-extern const krteq_screen_t *const user_screens[KRTEQ_MAX_SCREENS];
+extern const krteq_screen_t *const user_screens[UINT8_MAX];
