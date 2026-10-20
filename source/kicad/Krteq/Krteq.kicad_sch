@@ -35017,7 +35017,7 @@
 				)
 			)
 		)
-		(property "Package" "0805"
+		(property "Package" "CASE-A-3216-18(mm)"
 			(at 72.39 153.67 0)
 			(hide yes)
 			(show_name no)

@@ -13144,7 +13144,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Package" "0805"
+		(property "Package" "CASE-A-3216-18(mm)"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
