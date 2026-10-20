@@ -726,7 +726,7 @@
 				)
 			)
 			(property "Description" "Unpolarized capacitor, small symbol"
-				(at 0 0 0)
+				(at 0 -10.16 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -776,7 +776,7 @@
 						(xy -1.524 -0.508) (xy 1.524 -0.508)
 					)
 					(stroke
-						(width 0.3302)
+						(width 0.3048)
 						(type default)
 					)
 					(fill
@@ -6174,6 +6174,54 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ff2812b6-2b61-413c-ae3b-175cb9f23523")
+	)
+	(no_connect
+		(at 54.61 49.53)
+		(uuid "0cc1eb0f-40b2-4098-b15a-7d56e5149604")
+	)
+	(no_connect
+		(at 100.33 77.47)
+		(uuid "13d86e63-ecbd-4735-8378-53c5db7075f9")
+	)
+	(no_connect
+		(at 54.61 72.39)
+		(uuid "1cdecce3-9cb3-4bb6-a40e-50d38ff90191")
+	)
+	(no_connect
+		(at 100.33 72.39)
+		(uuid "2a7f9dbf-60e5-42ee-959d-c133ea44c157")
+	)
+	(no_connect
+		(at 68.58 194.31)
+		(uuid "3b2fba5d-d422-430c-a7d1-f10039f471fc")
+	)
+	(no_connect
+		(at 54.61 77.47)
+		(uuid "6aa7b5e8-ef08-4dc6-b937-75161f5a111f")
+	)
+	(no_connect
+		(at 54.61 69.85)
+		(uuid "7c708b8c-bce7-434e-a270-13385c7700f1")
+	)
+	(no_connect
+		(at 72.39 31.75)
+		(uuid "7f734ddd-2eae-418e-bd3e-1ee3d4642677")
+	)
+	(no_connect
+		(at 54.61 74.93)
+		(uuid "9d938d97-3db2-45bd-8b2e-396a7fd8511d")
+	)
+	(no_connect
+		(at 68.58 204.47)
+		(uuid "d70d7163-345c-4518-a59c-6e9aa1aab492")
+	)
+	(no_connect
+		(at 54.61 46.99)
+		(uuid "e308aee0-9347-4ba9-8cae-8653418bd0b3")
+	)
+	(no_connect
+		(at 100.33 92.71)
+		(uuid "edabb5de-0c2c-4434-bafd-a03d3e5f48b6")
 	)
 	(wire
 		(pts
