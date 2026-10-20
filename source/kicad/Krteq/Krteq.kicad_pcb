@@ -231,6 +231,12 @@
 		(path "/8e048bb8-8afb-4763-861d-44c9d7f29770")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2157,6 +2163,12 @@
 		(path "/96cf45f4-1af0-4b60-b690-919ac7b65f20")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4904,6 +4916,12 @@
 		(path "/ce6ea20d-f42d-4d44-9f91-0da282d74433")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6535,6 +6553,12 @@
 		(path "/6ba543ce-1df7-4aea-96f5-3a479c203596")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9901,6 +9925,12 @@
 		(path "/69521731-b292-484f-be74-39b9a8837efe")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13100,7 +13130,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "CL21A226MAYNNNE"
+		(property "MPN" "T520A226M010ATE080"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -13445,6 +13475,12 @@
 		(path "/5db91326-bc5d-4852-baeb-a98d8dff3521")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18038,6 +18074,12 @@
 		(path "/85cfeae9-c026-422b-be5d-071d6b83db0c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18340,6 +18382,12 @@
 		(path "/28fa194d-6aa3-485e-956f-8a274a2b1580")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -18642,6 +18690,12 @@
 		(path "/5182cb05-6fe2-4f68-abaa-b1cec40f3087")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21085,6 +21139,12 @@
 		(path "/00ac18ad-bc6c-4bf6-bbea-8ed65bcbe567")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21387,6 +21447,12 @@
 		(path "/b9de7003-7407-49d4-bd10-d4db4ab318c1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21689,6 +21755,12 @@
 		(path "/610c6ff1-9b21-4270-8028-2cb02154d420")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -21991,6 +22063,12 @@
 		(path "/9ae1036e-c0c7-4317-ba62-37f0e1f87e20")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -23216,6 +23294,12 @@
 		(path "/018c3d12-89dc-4a90-bb5d-dab81fc89889")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -28428,6 +28512,12 @@
 		(path "/b02bf5e0-3c74-4300-bef2-9a50a7c1db5b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -30702,6 +30792,12 @@
 		(path "/a18ff9ef-b835-4e11-9548-21cda6ff19d5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -31004,6 +31100,12 @@
 		(path "/356c6855-c9ea-48ff-a478-6f96e986f481")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -31306,6 +31408,12 @@
 		(path "/13a6a814-23e3-46f1-9ee9-e97923cdb263")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -31608,6 +31716,12 @@
 		(path "/f5733096-c4cf-4332-885f-00f8d613e237")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -32509,6 +32623,12 @@
 		(path "/aa34cdcc-836c-4be7-8e5a-434867988560")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -32811,6 +32931,12 @@
 		(path "/788f339c-c354-41fc-9aff-4f3c7109ef83")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -33306,6 +33432,12 @@
 		(path "/74591d3e-1dcb-47fa-85e1-baace134a4a1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -35942,6 +36074,12 @@
 		(path "/8e7b9355-e68a-40c4-be92-037d4835cdef")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -37360,6 +37498,12 @@
 		(path "/9b4652fb-a214-4002-a3f1-0552413b88cd")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -37662,6 +37806,12 @@
 		(path "/390e8fda-3c7e-43e2-8fae-472db1fa9a73")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -38887,6 +39037,12 @@
 		(path "/37b8b8e0-55ae-4d84-af3d-ef686af9c888")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -43480,6 +43636,12 @@
 		(path "/390c826c-fc83-4e79-a554-b1bb759787d0")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -43782,6 +43944,12 @@
 		(path "/1184ca44-aa7a-4b75-a538-567595edaed3")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -46225,6 +46393,12 @@
 		(path "/60acee82-0afd-4fd1-ba8e-e357451469ba")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -46527,6 +46701,12 @@
 		(path "/114ef921-7d52-4d66-9b22-17b282d6f188")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -49984,6 +50164,12 @@
 		(path "/fcb38770-8c40-425c-a34a-ddbe729210a2")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -51817,6 +52003,12 @@
 		(path "/8ca50711-9ff1-444d-ab6c-142821a34299")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -54371,6 +54563,12 @@
 		(path "/2e17ed08-92b1-4ffd-b120-45e6d65e4afd")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -54673,6 +54871,12 @@
 		(path "/547d0d26-011f-4bcf-b290-711bed170130")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -58150,6 +58354,12 @@
 		(path "/49dc7eb2-3cfc-4597-8a2c-14edef3050a6")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -58452,6 +58662,12 @@
 		(path "/1cf8d7cc-bb94-441e-9863-3a482fd83669")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -61412,6 +61628,12 @@
 		(path "/64c7ed47-2e21-4092-bbc9-ba8fa6996f6b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -63560,6 +63782,12 @@
 		(path "/e0ac8401-5c19-42cd-9674-06e6696f8ebe")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -63862,6 +64090,12 @@
 		(path "/ee748a80-b554-4931-82ea-673b3eebdbb1")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -69074,6 +69308,12 @@
 		(path "/15eb8d3f-0536-4772-9916-2e435ee95045")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -69376,6 +69616,12 @@
 		(path "/e0390359-6e6d-4f00-aa41-17cf53820b8c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -71606,6 +71852,12 @@
 		(path "/3d6201ef-afe7-4503-8091-56adba81d4c5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -71908,6 +72160,12 @@
 		(path "/10abf206-7ae6-48d7-8c7c-a31570af5f5a")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -73539,6 +73797,12 @@
 		(path "/f6e6d6c3-cb1b-45a6-861a-d5913ccd380a")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -73841,6 +74105,12 @@
 		(path "/11e75500-fff0-4c8f-b508-310b484a899c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -74143,6 +74413,12 @@
 		(path "/7eba852f-8607-460e-a0d2-3ac7352d244b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -74445,6 +74721,12 @@
 		(path "/9de304f8-f5c2-4932-8c1e-4634d024d5cb")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -74747,6 +75029,12 @@
 		(path "/0c2dea78-fc93-4909-8a28-e4f1002552e3")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -81887,6 +82175,12 @@
 		(path "/30156bf1-8da5-430e-9955-3cca537c8798")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -82595,6 +82889,12 @@
 		(path "/b82a2109-f2e8-4a93-b6ea-132c489bc63f")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -85555,6 +85855,12 @@
 		(path "/e3fa51a2-2953-4ddf-b05f-02bc65cba9b5")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -86770,6 +87076,12 @@
 		(path "/3e0945d3-3ccd-47bf-b160-25df1eab3802")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -87072,6 +87384,12 @@
 		(path "/fbb88e44-16ff-4ff1-b5b0-8edd090dddb2")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -87374,6 +87692,12 @@
 		(path "/949b6e0e-59db-4ac9-b42d-23a368366a2e")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -91450,6 +91774,12 @@
 		(path "/ade9c372-81ff-4b45-8c07-afca19a54cae")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -92970,6 +93300,12 @@
 		(path "/2e4ce7c5-59c8-47f3-8624-f832c865beb7")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -97452,6 +97788,12 @@
 		(path "/68e6e80f-6619-466f-9527-87f2c1c53436")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -97754,6 +98096,12 @@
 		(path "/ea86eaa1-4f1c-4807-8912-29355610f989")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -99385,6 +99733,12 @@
 		(path "/f4622b50-2c0a-4553-bd04-c64d65bc119b")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -101512,6 +101866,12 @@
 		(path "/0f8fc85c-9709-4fce-9eb7-7ec0be3bac0c")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -102737,6 +103097,12 @@
 		(path "/2e674431-a013-487a-9a6b-5c10b721f28a")
 		(sheetname "/")
 		(sheetfile "Krteq.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "2" "3" "4" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
