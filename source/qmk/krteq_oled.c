@@ -812,7 +812,7 @@ static const uint8_t bubble_radii[] = { 3, 3, 3, 4, 5, 6, 7, 8, 9 };
 static struct bubble bubbles[BUBBLE_COUNT];
 static uint16_t bubble_timer;
 static uint16_t bubble_pop_timer;
-static uint8_t bubble_next; // Every pop takes the next bubble in turn, so the oldest always goes first
+static uint8_t bubble_next; // Idle pops take the next bubble in turn
 
 static int32_t bubble_speed(void)
 {
@@ -844,15 +844,12 @@ static void bubble_spawn(struct bubble *bubble)
     bubble->y = (int32_t)y << BUBBLE_SHIFT;
 }
 
-// Pops the oldest bubble, blasting the ones close by away from it
-static void bubble_pop(void)
+// Pops the bubble, blasting the ones close by away from it
+static void bubble_pop(struct bubble *popped)
 {
-    struct bubble *popped = &bubbles[bubble_next];
-
-    bubble_next = (bubble_next + 1) % BUBBLE_COUNT;
     bubble_pop_timer = timer_read();
 
-    if (popped->pop) return;
+    if (!popped || popped->pop) return;
     popped->pop = BUBBLE_POP_FRAMES;
 
     for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
@@ -867,6 +864,31 @@ static void bubble_pop(void)
         bubble->vx += dx * BUBBLE_BLAST / (distance_squared + BUBBLE_BLAST_SOFTENING);
         bubble->vy += dy * BUBBLE_BLAST / (distance_squared + BUBBLE_BLAST_SOFTENING);
     }
+}
+
+// The floating bubble nearest to the given pixel, or NULL if all are popping
+static struct bubble *bubble_closest(uint8_t x, uint8_t y)
+{
+    struct bubble *closest = NULL;
+    int32_t closest_distance = INT32_MAX;
+
+    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
+    {
+        struct bubble *bubble = &bubbles[i];
+        if (bubble->pop) continue;
+
+        int32_t dx = (bubble->x >> BUBBLE_SHIFT) - x;
+        int32_t dy = (bubble->y >> BUBBLE_SHIFT) - y;
+        int32_t distance_squared = dx * dx + dy * dy;
+
+        if (distance_squared < closest_distance)
+        {
+            closest = bubble;
+            closest_distance = distance_squared;
+        }
+    }
+
+    return closest;
 }
 
 // Bubbles nearing an edge are pushed back inwards, harder the closer they get
@@ -1001,7 +1023,11 @@ static void bubble_update(void)
     if (!timer_finished(&bubble_timer, BUBBLE_FRAME_DURATION) && !screen_redraw) return;
     screen_redraw = false;
 
-    if (timer_finished(&bubble_pop_timer, BUBBLE_POP_INTERVAL)) bubble_pop();
+    if (timer_finished(&bubble_pop_timer, BUBBLE_POP_INTERVAL))
+    {
+        bubble_pop(&bubbles[bubble_next]);
+        bubble_next = (bubble_next + 1) % BUBBLE_COUNT;
+    }
 
     for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
     {
@@ -1038,7 +1064,7 @@ static void bubble_update(void)
 
 static void bubble_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
-    if (pressed) bubble_pop();
+    if (pressed) bubble_pop(bubble_closest(x, y));
 }
 
 const krteq_screen_t krteq_screen_bubbles = {
