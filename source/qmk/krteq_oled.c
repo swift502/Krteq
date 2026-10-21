@@ -445,10 +445,6 @@ static const uint8_t bongo_paw_hit_image[] = {
 #embed "bitmaps/bongo_paw_hit.bmp"
 };
 
-static const uint8_t bongo_eye_open_image[] = {
-#embed "bitmaps/bongo_eye_open.bmp"
-};
-
 static const uint8_t bongo_eye_closed_image[] = {
 #embed "bitmaps/bongo_eye_closed.bmp"
 };
@@ -611,9 +607,12 @@ static void bongo_cat_update(void)
     oled_clear();
     draw_image(bongo_cat_image, BONGO_CAT_X, BONGO_CAT_Y);
 
-    const uint8_t *eye_image = bongo_sleeping || bongo_blinking ? bongo_eye_closed_image : bongo_eye_open_image;
-    draw_image(eye_image, BONGO_EYE_LEFT_X, BONGO_EYE_LEFT_Y);
-    draw_image(eye_image, BONGO_EYE_RIGHT_X, BONGO_EYE_RIGHT_Y);
+    // The base image has its eyes open, so only closed eyes are drawn over it
+    if (bongo_sleeping || bongo_blinking)
+    {
+        draw_image(bongo_eye_closed_image, BONGO_EYE_LEFT_X, BONGO_EYE_LEFT_Y);
+        draw_image(bongo_eye_closed_image, BONGO_EYE_RIGHT_X, BONGO_EYE_RIGHT_Y);
+    }
 
     for (uint8_t paw = 0; paw < BONGO_PAW_COUNT; paw++)
     {
