@@ -421,6 +421,10 @@ const krteq_screen_t krteq_screen_indicators = {
 #define BONGO_SLEEP_DELAY 60000
 #define BONGO_ZZ_X 56
 #define BONGO_ZZ_Y 2
+#define BONGO_EYE_LEFT_X 76
+#define BONGO_EYE_LEFT_Y 21
+#define BONGO_EYE_RIGHT_X 101
+#define BONGO_EYE_RIGHT_Y 23
 
 enum bongo_paw_states
 {
@@ -441,8 +445,12 @@ static const uint8_t bongo_paw_hit_image[] = {
 #embed "bitmaps/bongo_paw_hit.bmp"
 };
 
-static const uint8_t bongo_cat_sleep_image[] = {
-#embed "bitmaps/bongo_cat_sleep.bmp"
+static const uint8_t bongo_eye_open_image[] = {
+#embed "bitmaps/bongo_eye_open.bmp"
+};
+
+static const uint8_t bongo_eye_closed_image[] = {
+#embed "bitmaps/bongo_eye_closed.bmp"
 };
 
 static const uint8_t bongo_paw_down_image[] = {
@@ -601,7 +609,11 @@ static void bongo_cat_update(void)
     screen_redraw = false;
 
     oled_clear();
-    draw_image(bongo_sleeping || bongo_blinking ? bongo_cat_sleep_image : bongo_cat_image, BONGO_CAT_X, BONGO_CAT_Y);
+    draw_image(bongo_cat_image, BONGO_CAT_X, BONGO_CAT_Y);
+
+    const uint8_t *eye_image = bongo_sleeping || bongo_blinking ? bongo_eye_closed_image : bongo_eye_open_image;
+    draw_image(eye_image, BONGO_EYE_LEFT_X, BONGO_EYE_LEFT_Y);
+    draw_image(eye_image, BONGO_EYE_RIGHT_X, BONGO_EYE_RIGHT_Y);
 
     for (uint8_t paw = 0; paw < BONGO_PAW_COUNT; paw++)
     {
