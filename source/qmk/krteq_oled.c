@@ -58,6 +58,48 @@ static bool timer_finished(uint16_t *timer, uint16_t duration)
 // Drawing
 //==============================================================================
 
+// Off screen frame for the screens that redraw in full, which clear it and redraw it every frame
+static uint8_t frame_buffer[OLED_PAGES * OLED_DISPLAY_WIDTH];
+static bool frame_open; // Between frame_clear and frame_show, the drawing helpers draw into the frame
+
+static bool on_screen(int16_t x, int16_t y)
+{
+    return x >= 0 && x < OLED_DISPLAY_WIDTH && y >= 0 && y < OLED_DISPLAY_HEIGHT;
+}
+
+static void frame_clear(void)
+{
+    memset(frame_buffer, 0, sizeof(frame_buffer));
+    frame_open = true;
+}
+
+static void frame_plot(int16_t x, int16_t y)
+{
+    if (on_screen(x, y)) frame_buffer[y / 8 * OLED_DISPLAY_WIDTH + x] |= 1 << (y % 8);
+}
+
+// Only bytes that changed are marked dirty, so unchanged parts of the frame cost no display traffic
+static void frame_show(void)
+{
+    for (uint16_t i = 0; i < sizeof(frame_buffer); i++) oled_write_raw_byte(frame_buffer[i], i);
+    frame_open = false;
+}
+
+static void draw_pixel(int16_t x, int16_t y, bool on)
+{
+    if (!frame_open)
+    {
+        oled_write_pixel(x, y, on);
+        return;
+    }
+
+    if (!on_screen(x, y)) return;
+
+    uint8_t *byte = &frame_buffer[y / 8 * OLED_DISPLAY_WIDTH + x];
+    uint8_t bit = 1 << (y % 8);
+    *byte = on ? *byte | bit : *byte & ~bit;
+}
+
 // Indexed BMP palette: 0 = black, 1 = white, 2 = transparent
 #define IMAGE_TRANSPARENT 2
 
@@ -86,7 +128,7 @@ static void draw_image(const uint8_t *image, uint8_t x, uint8_t y)
         {
             uint16_t bit = ix * depth;
             uint8_t pixel = (row[bit / 8] >> (8 - depth - bit % 8)) & ((1 << depth) - 1);
-            if (pixel != IMAGE_TRANSPARENT) oled_write_pixel(x + ix, y + iy, pixel);
+            if (pixel != IMAGE_TRANSPARENT) draw_pixel(x + ix, y + iy, pixel);
         }
     }
 }
@@ -111,7 +153,7 @@ static void draw_text_at(int16_t x, uint8_t y, const char *text, bool inverted)
 
             for (uint8_t iy = 0; iy < OLED_FONT_HEIGHT; iy++)
             {
-                oled_write_pixel(px, y + iy, (glyph >> iy & 1) != inverted);
+                draw_pixel(px, y + iy, (glyph >> iy & 1) != inverted);
             }
         }
     }
@@ -128,7 +170,7 @@ static void fill_rect(uint8_t left, uint8_t top, uint8_t width, uint8_t height, 
     {
         for (uint8_t ix = 0; ix < width; ix++)
         {
-            oled_write_pixel(left + ix, top + iy, on);
+            draw_pixel(left + ix, top + iy, on);
         }
     }
 }
@@ -138,30 +180,6 @@ static void draw_box(uint8_t left, uint8_t top, uint8_t width, uint8_t height, b
 {
     fill_rect(left + 1, top, width - 2, height, filled);
     fill_rect(left, top + 1, width, height - 2, filled);
-}
-
-// Off screen frame for the animated screens, which clear it and redraw it in full every frame
-static uint8_t frame_buffer[OLED_PAGES * OLED_DISPLAY_WIDTH];
-
-static bool on_screen(int16_t x, int16_t y)
-{
-    return x >= 0 && x < OLED_DISPLAY_WIDTH && y >= 0 && y < OLED_DISPLAY_HEIGHT;
-}
-
-static void frame_clear(void)
-{
-    memset(frame_buffer, 0, sizeof(frame_buffer));
-}
-
-static void frame_plot(int16_t x, int16_t y)
-{
-    if (on_screen(x, y)) frame_buffer[y / 8 * OLED_DISPLAY_WIDTH + x] |= 1 << (y % 8);
-}
-
-// Only bytes that changed are marked dirty, so unchanged parts of the frame cost no display traffic
-static void frame_show(void)
-{
-    for (uint16_t i = 0; i < sizeof(frame_buffer); i++) oled_write_raw_byte(frame_buffer[i], i);
 }
 
 // Icon and label are centered together, so the pair shifts with the length of the label
@@ -308,7 +326,7 @@ static void draw_selection(const char *title, const selection_t *selection, uint
     uint8_t gap = count > 1 ? MIN(SELECT_DOT_GAP, (OLED_DISPLAY_WIDTH - SELECT_DOT_WIDTH) / (count - 1)) : 0;
     uint8_t left = OLED_DISPLAY_WIDTH / 2 - (count - 1) * gap / 2;
 
-    for (uint8_t i = 0; i < count; i++) oled_write_pixel(left + i * gap, SELECT_DOT_Y, true);
+    for (uint8_t i = 0; i < count; i++) draw_pixel(left + i * gap, SELECT_DOT_Y, true);
 
     // The current dot glides along with the names, sweeping across the row when wrapping around the ends
     int16_t from_x = left + selection->from * gap;
@@ -604,7 +622,7 @@ static void bongo_cat_update(void)
     if (!screen_redraw) return;
     screen_redraw = false;
 
-    oled_clear();
+    frame_clear();
     draw_image(bongo_cat_image, BONGO_CAT_X, BONGO_CAT_Y);
 
     // The base image has its eyes open, so only closed eyes are drawn over it
@@ -637,6 +655,8 @@ static void bongo_cat_update(void)
     {
         draw_number(BONGO_HITS_X, BONGO_HITS_Y, shown);
     }
+
+    frame_show();
 }
 
 // Every strike starts raised so the paw is always seen coming down
@@ -1502,11 +1522,12 @@ static void system_info_update(void)
     char qmk_version[16];
     print_qmk_version(qmk_version);
 
-    oled_clear();
+    frame_clear();
     render_info_row(0, PRODUCT, device_version);
     render_info_row(1, "Uptime", uptime);
     render_info_row(2, "QMK", qmk_version);
     render_info_row(3, "Built", build_date);
+    frame_show();
 }
 
 const krteq_screen_t krteq_screen_system_info = {
@@ -1624,8 +1645,9 @@ static void screen_select_update(void)
     if (!selection_frame(&screen_selection) && !screen_redraw) return;
     screen_redraw = false;
 
-    oled_clear();
+    frame_clear();
     draw_selection("Screen", &screen_selection, user_screen_count(), user_screen_name);
+    frame_show();
 }
 
 static const krteq_screen_t system_screen_select = {
@@ -1769,7 +1791,7 @@ static void rgb_status_update(void)
 
     hsv_t hsv = rgb_matrix_get_hsv();
 
-    oled_clear();
+    frame_clear();
 
     switch (rgb_status_component)
     {
@@ -1780,6 +1802,8 @@ static void rgb_status_update(void)
         case RGB_STATUS_BRIGHTNESS: draw_slider("RGB Brightness", hsv.v, RGB_MATRIX_MAXIMUM_BRIGHTNESS, RGB_MATRIX_VAL_STEP);        break;
         case RGB_STATUS_SPEED:      draw_slider("RGB Speed", rgb_matrix_get_speed(), UINT8_MAX, RGB_MATRIX_SPD_STEP);                break;
     }
+
+    frame_show();
 }
 
 static const krteq_screen_t system_screen_rgb = {
