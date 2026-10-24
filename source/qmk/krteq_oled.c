@@ -820,7 +820,7 @@ const krteq_screen_t krteq_screen_waves = {
 #define OSCILLATOR_SAMPLES 256 // Line segments per figure
 #define OSCILLATOR_FREQUENCY_X 1 // 1:3 appears to travel sideways
 #define OSCILLATOR_FREQUENCY_Y 3
-#define OSCILLATOR_PADDING_X 8
+#define OSCILLATOR_PADDING_X 12
 #define OSCILLATOR_PADDING_Y 4
 #define OSCILLATOR_AMPLITUDE_X (OLED_DISPLAY_WIDTH / 2 - OSCILLATOR_PADDING_X)
 #define OSCILLATOR_AMPLITUDE_Y (OLED_DISPLAY_HEIGHT / 2 - OSCILLATOR_PADDING_Y)
