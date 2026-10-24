@@ -8,13 +8,13 @@
 #define INDICATORS_LAYER 1
 #define INPUT_LOCK_LAYER 4
 
-// Offsets into the keyboard datablock, sized by EECONFIG_KB_DATA_SIZE
+// Offsets into the EEPROM keyboard datablock
 #define DATA_SCREEN_OFFSET 0
 #define DATA_BONGO_HITS_OFFSET 1
 
 static int current_user_screen = 0;
 static const krteq_screen_t *last_rendered_screen = NULL;
-static bool screen_redraw; // Set on a screen switch or by events, cleared by the screen once drawn
+static bool screen_redraw;
 
 static uint8_t user_screen_count(void)
 {
@@ -23,7 +23,6 @@ static uint8_t user_screen_count(void)
     return count;
 }
 
-// An empty keymap list falls back to the indicators
 static const krteq_screen_t *get_user_screen(int index)
 {
     if (user_screen_count() == 0) return &krteq_screen_indicators;
@@ -35,7 +34,6 @@ static void load_user_screen(void)
     uint8_t screen = 0;
     eeconfig_read_kb_datablock(&screen, DATA_SCREEN_OFFSET, sizeof(screen));
 
-    // A stale block from an older layout or keymap could name a screen that no longer exists
     if (screen < user_screen_count()) current_user_screen = screen;
 }
 
@@ -45,7 +43,7 @@ static void save_user_screen(void)
     eeconfig_update_kb_datablock(&screen, DATA_SCREEN_OFFSET, sizeof(screen));
 }
 
-// Whether the duration has passed since the timer was last restarted, restarting it if so
+// Restarts the timer if it has finished
 static bool timer_finished(uint16_t *timer, uint16_t duration)
 {
     if (timer_elapsed(*timer) < duration) return false;
@@ -58,9 +56,8 @@ static bool timer_finished(uint16_t *timer, uint16_t duration)
 // Drawing
 //==============================================================================
 
-// Off screen frame for the screens that redraw in full, which clear it and redraw it every frame
 static uint8_t frame_buffer[OLED_PAGES * OLED_DISPLAY_WIDTH];
-static bool frame_open; // Between frame_clear and frame_show, the drawing helpers draw into the frame
+static bool frame_open; // Drawing goes to frame_buffer while open
 
 static bool on_screen(int16_t x, int16_t y)
 {
@@ -78,7 +75,7 @@ static void frame_plot(int16_t x, int16_t y)
     if (on_screen(x, y)) frame_buffer[y / 8 * OLED_DISPLAY_WIDTH + x] |= 1 << (y % 8);
 }
 
-// Only bytes that changed are marked dirty, so unchanged parts of the frame cost no display traffic
+// QMK only marks changed bytes as dirty
 static void frame_show(void)
 {
     for (uint16_t i = 0; i < sizeof(frame_buffer); i++) oled_write_raw_byte(frame_buffer[i], i);
@@ -103,7 +100,6 @@ static void draw_pixel(int16_t x, int16_t y, bool on)
 // Indexed BMP palette: 0 = black, 1 = white, 2 = transparent
 #define IMAGE_TRANSPARENT 2
 
-// BMP header fields are unaligned little endian, so they must be read byte-wise
 static uint32_t image_field(const uint8_t *image, uint8_t offset, uint8_t size)
 {
     uint32_t value = 0;
@@ -133,13 +129,11 @@ static void draw_image(const uint8_t *image, uint8_t x, uint8_t y)
     }
 }
 
-// One vertical slice of a glyph, with bit 0 at the top
 static uint8_t font_column(char character, uint8_t column)
 {
     return pgm_read_byte(&font[(character - OLED_FONT_START) * OLED_FONT_WIDTH + column]);
 }
 
-// Only the part of the text that lands on the screen is drawn, so text can slide in from off screen
 static void draw_text_at(int16_t x, uint8_t y, const char *text, bool inverted)
 {
     for (uint8_t i = 0; text[i]; i++)
@@ -175,14 +169,13 @@ static void fill_rect(uint8_t left, uint8_t top, uint8_t width, uint8_t height, 
     }
 }
 
-// Two overlapping rects leave the corner pixels out to round the box off
+// Box with rounded corners
 static void draw_box(uint8_t left, uint8_t top, uint8_t width, uint8_t height, bool filled)
 {
     fill_rect(left + 1, top, width - 2, height, filled);
     fill_rect(left, top + 1, width, height - 2, filled);
 }
 
-// Icon and label are centered together, so the pair shifts with the length of the label
 #define ICON_SIZE 14
 #define ICON_TEXT_GAP 6
 #define ICON_Y 8
@@ -197,7 +190,7 @@ static void draw_icon_text(const uint8_t *image, const char *text)
     draw_text(left + ICON_SIZE + ICON_TEXT_GAP + text_width / 2, ICON_TEXT_Y, text, false);
 }
 
-// Writes the decimal value padded with zeros up to the given width, returning the terminator so writes can chain on
+// Zero padded to width, returns the end of the string
 static char *print_number(char *out, uint32_t value, uint8_t width)
 {
     char digits[10];
@@ -218,7 +211,6 @@ static void draw_number(uint8_t center_x, uint8_t y, uint32_t value)
     draw_text(center_x, y, text, false);
 }
 
-// Title over a line of content, shared by the overlays
 #define TITLE_Y 4
 #define CONTENT_Y 20
 #define UNNAMED "Undefined"
@@ -229,8 +221,6 @@ static void draw_labelled(const char *title, const char *text)
     draw_text(OLED_DISPLAY_WIDTH / 2, CONTENT_Y, text, false);
 }
 
-// Title over a name, with a row of dots marking the position along the bottom.
-// A move slides the old name out and the new one in from the pressed side.
 #define SELECT_TITLE_Y 0
 #define SELECT_NAME_Y 13
 #define SELECT_SLIDE_DISTANCE OLED_DISPLAY_WIDTH
@@ -238,7 +228,7 @@ static void draw_labelled(const char *title, const char *text)
 #define SELECT_FRAME_DURATION FRAME_DURATION_30_FPS
 #define SELECT_DOT_WIDTH 7
 #define SELECT_DOT_HEIGHT 5
-#define SELECT_DOT_Y (OLED_DISPLAY_HEIGHT - SELECT_DOT_HEIGHT / 2 - 1) // The current dot rests on the bottom edge
+#define SELECT_DOT_Y (OLED_DISPLAY_HEIGHT - SELECT_DOT_HEIGHT / 2 - 1)
 #define SELECT_DOT_GAP 8
 #define SELECT_PROGRESS_MAX 256
 
@@ -260,7 +250,6 @@ static void selection_reset(selection_t *selection, uint8_t index)
     selection->animating = false;
 }
 
-// The first frame is left to the caller's redraw, later ones follow at the frame rate
 static void selection_move(selection_t *selection, uint8_t index, int8_t direction)
 {
     if (index == selection->to) return;
@@ -272,7 +261,7 @@ static void selection_move(selection_t *selection, uint8_t index, int8_t directi
     selection->timer = selection->frame_timer = timer_read();
 }
 
-// For moves made elsewhere, a step to a neighbour slides that way, wrapping around the ends, while jumps slide by order
+// Steps to a neighbour slide towards it, wrapping around the ends
 static void selection_follow(selection_t *selection, uint8_t index, uint8_t count)
 {
     uint8_t from = selection->to;
@@ -284,7 +273,6 @@ static void selection_follow(selection_t *selection, uint8_t index, uint8_t coun
     selection_move(selection, index, direction);
 }
 
-// Whether a frame is due, capped at the frame rate while sliding. The settled frame is the last one.
 static bool selection_frame(selection_t *selection)
 {
     if (!selection->animating || !timer_finished(&selection->frame_timer, SELECT_FRAME_DURATION)) return false;
@@ -293,7 +281,7 @@ static bool selection_frame(selection_t *selection)
     return true;
 }
 
-// Eased out, so the slide starts fast and settles gently
+// Quadratic ease out
 static uint16_t selection_progress(const selection_t *selection)
 {
     uint16_t elapsed = timer_elapsed(selection->timer);
@@ -303,7 +291,6 @@ static uint16_t selection_progress(const selection_t *selection)
     return SELECT_PROGRESS_MAX - SELECT_PROGRESS_MAX * remaining * remaining / (SELECT_SLIDE_DURATION * SELECT_SLIDE_DURATION);
 }
 
-// Centered, then offset by the slide
 static void draw_selection_name(const char *name, int16_t offset)
 {
     draw_text(OLED_DISPLAY_WIDTH / 2 + offset, SELECT_NAME_Y, name ? name : UNNAMED, false);
@@ -318,17 +305,14 @@ static void draw_selection(const char *title, const selection_t *selection, uint
 
     draw_text(OLED_DISPLAY_WIDTH / 2, SELECT_TITLE_Y, title, false);
 
-    // The old name is pushed out by the new one following a slide distance behind
     if (selection->animating) draw_selection_name(name(selection->from), -selection->direction * shift);
     draw_selection_name(name(selection->to), selection->direction * (SELECT_SLIDE_DISTANCE - shift));
 
-    // Dots shrink their spacing to fit longer lists
     uint8_t gap = count > 1 ? MIN(SELECT_DOT_GAP, (OLED_DISPLAY_WIDTH - SELECT_DOT_WIDTH) / (count - 1)) : 0;
     uint8_t left = OLED_DISPLAY_WIDTH / 2 - (count - 1) * gap / 2;
 
     for (uint8_t i = 0; i < count; i++) draw_pixel(left + i * gap, SELECT_DOT_Y, true);
 
-    // The current dot glides along with the names, sweeping across the row when wrapping around the ends
     int16_t from_x = left + selection->from * gap;
     int16_t to_x = left + selection->to * gap;
     int16_t dot_x = from_x + (to_x - from_x) * (int16_t)progress / SELECT_PROGRESS_MAX;
@@ -340,11 +324,10 @@ static void draw_selection(const char *title, const selection_t *selection, uint
 // Key positions
 //==============================================================================
 
-// Span of the physical key coordinates declared by the RGB matrix layout
+// RGB matrix LED coordinate space
 #define KEY_SPACE_WIDTH 224
 #define KEY_SPACE_HEIGHT 64
 
-// Projects the physical location of a key onto the screen
 static bool key_position(keypos_t keypos, uint8_t *x, uint8_t *y)
 {
     uint8_t led = g_led_config.matrix_co[keypos.row][keypos.col];
@@ -544,12 +527,10 @@ static void advance_paw(uint8_t paw)
     screen_redraw = true;
 }
 
-// Blinking only fills quiet moments, so any paw movement pushes the next blink back
 static void advance_idle(void)
 {
     if (bongo_sleeping) return;
 
-    // Latched until the next hit wakes the cat
     if (timer_elapsed32(bongo_sleep_timer) >= BONGO_SLEEP_DELAY)
     {
         bongo_sleeping = true;
@@ -595,7 +576,6 @@ static void draw_trophies(uint32_t trophies)
     draw_image(bongo_trophy_image, left + text_width + BONGO_TROPHY_GAP, BONGO_TROPHY_Y);
 }
 
-// The hit count is persistent, so it is read back rather than cleared
 static void bongo_cat_init(void)
 {
     bongo_load_hits();
@@ -605,8 +585,7 @@ static void bongo_cat_init(void)
     bongo_blinking = false;
 }
 
-// Animations in flight are dropped, since their 16 bit timers may have wrapped while hidden
-// Sleep carries over, an awake cat starts a fresh sleep countdown
+// 16 bit timers may have wrapped while hidden, so animations are reset
 static void bongo_cat_start(void)
 {
     memset(bongo_paw_state, BONGO_PAW_IDLE, sizeof(bongo_paw_state));
@@ -625,7 +604,6 @@ static void bongo_cat_update(void)
     frame_clear();
     draw_image(bongo_cat_image, BONGO_CAT_X, BONGO_CAT_Y);
 
-    // The base image has its eyes open, so only closed eyes are drawn over it
     if (bongo_sleeping || bongo_blinking)
     {
         draw_image(bongo_eye_closed_image, BONGO_EYE_LEFT_X, BONGO_EYE_LEFT_Y);
@@ -659,7 +637,6 @@ static void bongo_cat_update(void)
     frame_show();
 }
 
-// Every strike starts raised so the paw is always seen coming down
 static void bongo_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
     if (!pressed) return;
@@ -670,7 +647,7 @@ static void bongo_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed
     if (keycode != bongo_last_keycode) bongo_paw ^= 1;
     bongo_last_keycode = keycode;
 
-    // Restarting an already raised paw would starve its strike under fast repeats
+    // Restarting a raised paw would keep it from ever hitting under fast repeats
     if (bongo_paw_state[bongo_paw] == BONGO_PAW_RAISED) return;
 
     bongo_paw_state[bongo_paw] = BONGO_PAW_RAISED;
@@ -692,12 +669,12 @@ const krteq_screen_t krteq_screen_bongo_cat = {
 
 #define WAVE_FRAME_DURATION FRAME_DURATION_30_FPS
 #define WAVE_IDLE_DURATION 15000
-#define WAVE_DAMPING 6 // Waves lose one part in 2^n of their height per frame
+#define WAVE_DAMPING 6 // Height lost per frame, 1/2^n
 #define WAVE_DROP_RADIUS 2
 #define WAVE_DROP_HEIGHT 1200
 #define WAVE_CREST 60 // Height that lights a pixel
 
-// The grid reaches one cell past each screen edge, where it is held still so waves reflect just off screen
+// One cell border held at zero
 #define WAVE_WIDTH (OLED_DISPLAY_WIDTH + 2)
 #define WAVE_HEIGHT (OLED_DISPLAY_HEIGHT + 2)
 #define WAVE_CELLS (WAVE_WIDTH * WAVE_HEIGHT)
@@ -764,7 +741,6 @@ static void wave_update(void)
     if (!timer_finished(&wave_timer, WAVE_FRAME_DURATION) && !screen_redraw) return;
     screen_redraw = false;
 
-    // Idle hands get a drop of their own somewhere on the surface
     if (timer_finished(&wave_idle_timer, WAVE_IDLE_DURATION))
     {
         wave_drop(random_value() % OLED_DISPLAY_WIDTH, random_value() % OLED_DISPLAY_HEIGHT);
@@ -773,7 +749,6 @@ static void wave_update(void)
     const int16_t *previous = wave_heights[wave_front];
     int16_t *current = wave_heights[wave_front ^= 1];
 
-    // Wave equation over a still border, so the edges reflect
     for (uint8_t y = 1; y < WAVE_HEIGHT - 1; y++)
     {
         for (uint8_t x = 1; x < WAVE_WIDTH - 1; x++)
@@ -810,20 +785,20 @@ const krteq_screen_t krteq_screen_waves = {
 //==============================================================================
 
 #define BUBBLE_FRAME_DURATION FRAME_DURATION_30_FPS
-#define BUBBLE_POP_INTERVAL 10000 // A bubble pops on its own this long after the last pop
-#define BUBBLE_SHIFT 8 // Positions and velocities are fixed point pixels with this many fractional bits
-#define BUBBLE_MIN_SPEED 32 // New bubbles drift between these speeds along each axis
+#define BUBBLE_POP_INTERVAL 10000
+#define BUBBLE_SHIFT 8 // Fixed point fractional bits
+#define BUBBLE_MIN_SPEED 32
 #define BUBBLE_MAX_SPEED 96
-#define BUBBLE_SPEED_LIMIT 160 // Caps each axis so blasts can't fling bubbles across the screen
-#define BUBBLE_BLAST 5000 // Push from a pop on the bubbles around it, fading with distance
-#define BUBBLE_BLAST_RANGE 24 // Pixels
-#define BUBBLE_BLAST_SOFTENING 16 // Squared pixels, tames blasts right next to the pop
-#define BUBBLE_WALL 6 // Bubbles within the margin are pushed inwards by one part in 2^n of how deep in they are per frame
-#define BUBBLE_WALL_MARGIN 4 // Pixels from the edges where the push starts, measured to the bubble's edge
-#define BUBBLE_FIELD 5 // Bubbles within range push apart, as a pair, by one part in 2^n of how far inside it they are per frame
-#define BUBBLE_FIELD_RANGE 4 // Pixels between two bubbles' edges where they start pushing each other
-#define BUBBLE_DRAG 12 // Bubbles lose one part in 2^n of their velocity per frame
-#define BUBBLE_WANDER 16 // Random nudge per frame, which the drag smooths into a slow airy float
+#define BUBBLE_SPEED_LIMIT 160
+#define BUBBLE_BLAST 5000
+#define BUBBLE_BLAST_RANGE 24
+#define BUBBLE_BLAST_SOFTENING 16
+#define BUBBLE_WALL 6
+#define BUBBLE_WALL_MARGIN 4
+#define BUBBLE_FIELD 5
+#define BUBBLE_FIELD_RANGE 4
+#define BUBBLE_DRAG 12
+#define BUBBLE_WANDER 16
 #define BUBBLE_POP_FRAMES 4
 
 struct bubble
@@ -833,7 +808,7 @@ struct bubble
     int32_t vx;
     int32_t vy;
     uint8_t radius;
-    uint8_t pop; // Frames of the pop burst left, zero while floating
+    uint8_t pop; // Remaining pop frames, 0 while floating
 };
 
 static const uint8_t bubble_radii[] = { 3, 3, 3, 4, 5, 6, 7, 8, 9 };
@@ -843,7 +818,7 @@ static const uint8_t bubble_radii[] = { 3, 3, 3, 4, 5, 6, 7, 8, 9 };
 static struct bubble bubbles[BUBBLE_COUNT];
 static uint16_t bubble_timer;
 static uint16_t bubble_pop_timer;
-static uint8_t bubble_next; // Idle pops take the next bubble in turn
+static uint8_t bubble_next;
 
 static int32_t bubble_speed(void)
 {
@@ -851,7 +826,7 @@ static int32_t bubble_speed(void)
     return random_value() & 1 ? speed : -speed;
 }
 
-// Places the bubble just off the edge it is drifting away from, so it floats in
+// Spawns off screen, drifting in
 static void bubble_spawn(struct bubble *bubble)
 {
     int16_t radius = bubble->radius;
@@ -875,7 +850,6 @@ static void bubble_spawn(struct bubble *bubble)
     bubble->y = (int32_t)y << BUBBLE_SHIFT;
 }
 
-// Pops the bubble, blasting the ones close by away from it
 static void bubble_pop(struct bubble *popped)
 {
     bubble_pop_timer = timer_read();
@@ -897,7 +871,6 @@ static void bubble_pop(struct bubble *popped)
     }
 }
 
-// The floating bubble nearest to the given pixel, or NULL if all are popping
 static struct bubble *bubble_closest(uint8_t x, uint8_t y)
 {
     struct bubble *closest = NULL;
@@ -922,7 +895,6 @@ static struct bubble *bubble_closest(uint8_t x, uint8_t y)
     return closest;
 }
 
-// Bubbles nearing an edge are pushed back inwards, harder the closer they get
 static void bubble_wall(int32_t position, int32_t *velocity, int32_t low, int32_t high)
 {
     if (position < low) *velocity += (low - position) >> BUBBLE_WALL;
@@ -949,8 +921,7 @@ static uint32_t square_root(uint32_t value)
     return root;
 }
 
-// Nearby bubbles gently push each other apart, harder the closer they get
-// Mass goes with area, so each bubble gives way by the other's share of the total
+// Mass is proportional to area
 static void bubble_push(struct bubble *a, struct bubble *b)
 {
     int32_t dx = b->x - a->x;
@@ -974,7 +945,7 @@ static void bubble_push(struct bubble *a, struct bubble *b)
     b->vy += dy * force_b / distance;
 }
 
-// A random nudge, then drag that rounds away from zero so it still bites at the slowest speeds
+// Random nudge, then drag rounded away from zero so it still slows the slowest bubbles
 static int32_t bubble_float(int32_t velocity)
 {
     velocity += (int32_t)(random_value() % (BUBBLE_WANDER * 2 + 1)) - BUBBLE_WANDER;
@@ -992,7 +963,6 @@ static void bubble_draw(void)
         int16_t y = bubble->y >> BUBBLE_SHIFT;
         int16_t radius = bubble->radius;
 
-        // A popping bubble bursts into a ring of droplets flying outwards
         if (bubble->pop)
         {
             int16_t spread = radius + (BUBBLE_POP_FRAMES - bubble->pop) * 2;
@@ -1009,7 +979,7 @@ static void bubble_draw(void)
             continue;
         }
 
-        // Pixels within half a pixel of the radius, r - 0.5 < d <= r + 0.5 squared and rounded
+        // Circle outline, r - 0.5 < d <= r + 0.5
         for (int16_t dy = -radius; dy <= radius; dy++)
         {
             for (int16_t dx = -radius; dx <= radius; dx++)
@@ -1019,7 +989,6 @@ static void bubble_draw(void)
             }
         }
 
-        // A glint of light in the upper left
         if (radius >= 4) frame_plot(x - radius / 2, y - radius / 2);
     }
 
@@ -1033,7 +1002,7 @@ static void bubble_init(void)
         struct bubble *bubble = &bubbles[i];
         uint8_t radius = bubble_radii[i];
 
-        // Spawned as usual, then moved on screen so the first bubbles are already there
+        // The first bubbles start on screen
         bubble->radius = radius;
         bubble_spawn(bubble);
         bubble->x = (int32_t)(radius + random_value() % (OLED_DISPLAY_WIDTH - radius * 2)) << BUBBLE_SHIFT;
@@ -1072,7 +1041,6 @@ static void bubble_update(void)
     {
         struct bubble *bubble = &bubbles[i];
 
-        // Popped bubbles come back from off screen once the burst is over
         if (bubble->pop)
         {
             if (!--bubble->pop) bubble_spawn(bubble);
@@ -1112,26 +1080,25 @@ const krteq_screen_t krteq_screen_bubbles = {
 
 #define STARFIELD_FRAME_DURATION FRAME_DURATION_30_FPS
 #define STARFIELD_COUNT 48
-#define STARFIELD_SHIFT 8 // Depths and speeds are fixed point with this many fractional bits
+#define STARFIELD_SHIFT 8 // Fixed point fractional bits
 #define STARFIELD_FAR_DEPTH 1024
 #define STARFIELD_NEAR_DEPTH 8
 #define STARFIELD_NEAR ((int32_t)STARFIELD_NEAR_DEPTH << STARFIELD_SHIFT)
 #define STARFIELD_FOCAL OLED_DISPLAY_WIDTH
-// Spawn spread that lands exactly on the screen edges at the far plane
+// Fills the screen at the far plane
 #define STARFIELD_SPREAD_X (STARFIELD_FAR_DEPTH * OLED_DISPLAY_WIDTH / 2 / STARFIELD_FOCAL)
 #define STARFIELD_SPREAD_Y (STARFIELD_FAR_DEPTH * OLED_DISPLAY_HEIGHT / 2 / STARFIELD_FOCAL)
-#define STARFIELD_BASE_SPEED (6 << STARFIELD_SHIFT) // Depth travelled per frame while idle
+#define STARFIELD_BASE_SPEED (6 << STARFIELD_SHIFT)
 #define STARFIELD_MAX_BOOST (64 << STARFIELD_SHIFT)
-#define STARFIELD_KICK (3 << STARFIELD_SHIFT) // Boost added per key press, felt on the very next frame
-// Drag in proportion to speed, so steady typing settles at a speed matching its pace
-#define STARFIELD_DRAG 6 // The boost loses one part in 2^n per frame
+#define STARFIELD_KICK (3 << STARFIELD_SHIFT)
+#define STARFIELD_DRAG 6
 
 struct star
 {
     int16_t x;
     int16_t y;
     int32_t z;
-    int16_t trail_x; // Last drawn screen position, the streak runs from here
+    int16_t trail_x; // Last drawn screen position
     int16_t trail_y;
 };
 
@@ -1139,7 +1106,7 @@ static struct star starfield[STARFIELD_COUNT];
 static uint16_t starfield_timer;
 static int32_t starfield_boost;
 
-// Bresenham, stopping once the line leaves the screen
+// Bresenham, stops at the screen edge
 static void starfield_line(int16_t x0, int16_t y0, int16_t x1, int16_t y1)
 {
     int16_t dx = x1 > x0 ? x1 - x0 : x0 - x1;
@@ -1204,7 +1171,7 @@ static void starfield_update(void)
 
     int32_t speed = STARFIELD_BASE_SPEED + starfield_boost;
 
-    // Rounds up so the boost settles all the way back to zero
+    // Rounded up so the boost reaches zero
     starfield_boost -= (starfield_boost + (1 << STARFIELD_DRAG) - 1) >> STARFIELD_DRAG;
 
     frame_clear();
@@ -1220,7 +1187,6 @@ static void starfield_update(void)
             int16_t x, y;
             starfield_project(star, &x, &y);
 
-            // Streaks grow with speed on their own, as each frame spans more of the screen
             starfield_line(star->trail_x, star->trail_y, x, y);
             star->trail_x = x;
             star->trail_y = y;
@@ -1228,8 +1194,7 @@ static void starfield_update(void)
             if (on_screen(x, y)) continue;
         }
 
-        // Past the camera or off the edge, so it starts over far away
-        // A small depth jitter keeps stars respawned together from flying in a sheet
+        // Depth jitter keeps stars respawned together from moving as a sheet
         starfield_spawn(star, (int32_t)(STARFIELD_FAR_DEPTH - random_value() % 64) << STARFIELD_SHIFT);
     }
 
@@ -1266,7 +1231,6 @@ const krteq_screen_t krteq_screen_starfield = {
 #define LIFE_PAGES (LIFE_HEIGHT / 8)
 #define LIFE_BYTES (LIFE_PAGES * LIFE_WIDTH)
 
-// A whole page of vertical margin keeps the visible window byte aligned with the display
 _Static_assert(LIFE_MARGIN_Y % 8 == 0, "The life margin must be a whole number of pages tall");
 
 static uint8_t life_cells[LIFE_BYTES];
@@ -1274,7 +1238,6 @@ static uint8_t life_next[LIFE_BYTES];
 static uint16_t life_timer;
 static uint16_t life_idle_timer;
 
-// The grid extends past the screen, so patterns leave view before hitting a wall
 static void life_add_cell(int16_t x, int16_t y)
 {
     if (x < 0 || x >= LIFE_WIDTH || y < 0 || y >= LIFE_HEIGHT) return;
@@ -1307,7 +1270,7 @@ static void life_bomb(int16_t x, int16_t y, uint8_t shape)
     }
 }
 
-// Glider heading down and right, mirrored into the other three diagonals
+// Glider heading down and right
 static const uint8_t life_glider[3] = { 0b010, 0b001, 0b111 };
 
 static void life_spawn_glider(void)
@@ -1327,7 +1290,7 @@ static void life_spawn_glider(void)
     }
 }
 
-// One column of a page with the touching rows of the pages above and below, the page itself in bits 8 to 15
+// Page column in bits 8-15, with the neighbouring pages' bytes below and above
 static uint32_t life_column(uint8_t page, int16_t x)
 {
     if (x < 0 || x >= LIFE_WIDTH) return 0;
@@ -1340,8 +1303,7 @@ static uint32_t life_column(uint8_t page, int16_t x)
     return word;
 }
 
-// Every bit of the words is a cell, so the eight neighbours of a whole page column are counted at once
-// by adding them up bitwise. The count is only needed modulo 8, as a full 8 neighbours dies the same as 0.
+// Counts neighbours of a whole page column at once, bitwise. Modulo 8 is enough, 8 neighbours dies like 0.
 static uint8_t life_step(uint32_t left, uint32_t centre, uint32_t right)
 {
     // Each side column sums its three cells, the centre only its two
@@ -1352,7 +1314,6 @@ static uint8_t life_step(uint32_t left, uint32_t centre, uint32_t right)
     uint32_t centre_low  = (centre << 1) ^ (centre >> 1);
     uint32_t centre_high = (centre << 1) & (centre >> 1);
 
-    // Then the column sums are added together, one bit position at a time
     uint32_t ones = left_low ^ right_low ^ centre_low;
     uint32_t carry = (left_low & right_low) | (centre_low & (left_low ^ right_low));
     uint32_t twos_sum = left_high ^ right_high ^ centre_high;
@@ -1360,7 +1321,7 @@ static uint8_t life_step(uint32_t left, uint32_t centre, uint32_t right)
     uint32_t twos = twos_sum ^ carry;
     uint32_t fours = twos_carry ^ (twos_sum & carry);
 
-    // Two or three neighbours, with two only keeping a live cell alive
+    // Born with 3, survives with 2 or 3
     return (twos & ~fours & (ones | centre)) >> 8;
 }
 
@@ -1394,7 +1355,6 @@ static void life_update(void)
     if (!timer_finished(&life_timer, LIFE_FRAME_DURATION) && !screen_redraw) return;
     screen_redraw = false;
 
-    // Columns slide through a window of three, so each is read only once per page
     for (uint8_t page = 0; page < LIFE_PAGES; page++)
     {
         uint32_t left = 0;
@@ -1411,7 +1371,6 @@ static void life_update(void)
 
     memcpy(life_cells, life_next, sizeof(life_cells));
 
-    // Spawn gliders on inactivity
     if (timer_finished(&life_idle_timer, LIFE_IDLE_DURATION))
     {
         life_spawn_glider();
@@ -1442,7 +1401,7 @@ const krteq_screen_t krteq_screen_game_of_life = {
 
 #define INFO_INTERVAL 1000
 #define INFO_ROW_HEIGHT 8
-#define INFO_BUILD_DATE_LENGTH 10 // QMK_BUILDDATE also carries a time, which is just noise here
+#define INFO_BUILD_DATE_LENGTH 10 // Date part of QMK_BUILDDATE
 
 _Static_assert(OLED_DISPLAY_HEIGHT / INFO_ROW_HEIGHT >= 4, "The system info screen needs four rows of text");
 
@@ -1570,16 +1529,13 @@ static const krteq_screen_t system_screen_logo = {
 // Overlays
 //==============================================================================
 
-// Defined in the screen select section, which in turn builds on the overlays
 static const krteq_screen_t system_screen_select;
 static selection_t screen_selection;
 
-// Short lived screen shown over the user screen, closed by the dispatch once its time is up
 static const krteq_screen_t *overlay = NULL;
 static uint16_t overlay_timer;
 static uint16_t overlay_duration;
 
-// A selection is kept however it ends, timed out or cut short
 static void close_overlay(void)
 {
     if (overlay == &system_screen_select && screen_selection.to != current_user_screen)
@@ -1612,7 +1568,6 @@ static const char *user_screen_name(uint8_t index)
     return get_user_screen(index)->name;
 }
 
-// A fresh selection starts from the screen in use
 static void start_selecting(void)
 {
     if (overlay != &system_screen_select) selection_reset(&screen_selection, current_user_screen);
@@ -1677,11 +1632,10 @@ static const krteq_screen_t system_screen_input_lock = {
 
 #define RGB_STATUS_DURATION 3000
 #define RGB_BAR_WIDTH OLED_DISPLAY_WIDTH
-#define RGB_BAR_HEIGHT 7 // Matches the lit rows of a glyph
+#define RGB_BAR_HEIGHT 7
 #define RGB_BAR_PADDING 2
 #define RGB_HUE_MAXIMUM (UINT8_MAX + 1 - RGB_MATRIX_HUE_STEP) // Hue wraps, so the step before 0 is the top
 
-// Defined at the end of this section
 static const krteq_screen_t system_screen_rgb;
 
 enum rgb_status_components
@@ -1717,7 +1671,6 @@ static const char *get_effect_display_name(uint8_t index)
     if (strncmp(mode, "SOLID_REACTIVE", strlen("SOLID_REACTIVE")) == 0) mode += strlen("SOLID_");
     if (strcmp(mode, "RAINBOW_MOVING_CHEVRON") == 0) mode = "RAINBOW_CHEVRON";
 
-    // Format
     uint8_t i = 0;
     for (; mode[i] && i < sizeof(display_name) - 1; i++)
     {
@@ -1732,7 +1685,7 @@ static const char *get_effect_display_name(uint8_t index)
     return display_name;
 }
 
-// Called as the key goes down, before the effect steps, so a fresh effect selection starts from the old one
+// Runs before the effect changes, so the selection starts from the old effect
 static void rgb_status_show(int8_t component)
 {
     bool showing_effect = overlay == &system_screen_rgb && rgb_status_component == RGB_STATUS_EFFECT;
@@ -1758,7 +1711,7 @@ static int8_t rgb_key_component(uint16_t keycode)
     }
 }
 
-// Values are shown in key steps, rounded since the last step clamps short of a full one at the top
+// Shown in key steps, rounded since the top may be clamped short of a full step
 static void draw_slider(const char *title, uint8_t value, uint8_t maximum, uint8_t step)
 {
     uint8_t max_steps = (maximum + step / 2) / step;
@@ -1778,7 +1731,7 @@ static void draw_slider(const char *title, uint8_t value, uint8_t maximum, uint8
 
 static void rgb_status_update(void)
 {
-    // The effect steps after the key reaches the overlay, so the move is picked up here
+    // The effect changes after the key event, so it's picked up here
     bool frame = false;
     if (rgb_status_component == RGB_STATUS_EFFECT)
     {
@@ -1855,7 +1808,6 @@ __attribute__((weak)) const krteq_screen_t *const user_screens[] = {
 
 void oled_key_event(uint16_t keycode, keypos_t keypos, bool pressed)
 {
-    // Keys that drive the screens themselves must not disturb their contents
     if (keycode == KRT_SCR) return;
     if (IS_QK_MOMENTARY(keycode)) return;
 
@@ -1889,8 +1841,6 @@ static void render_screen(const krteq_screen_t *screen)
     if (screen->update) screen->update();
 }
 
-// Runs at boot and on wake while the logo plays, so every screen starts from a fresh state
-// Screens left out of the list are never shown, so they have no state to set up
 static void init_screens(void)
 {
     for (uint8_t screen = 0; screen < user_screen_count(); screen++)
@@ -1906,7 +1856,6 @@ oled_rotation_t oled_init_kb(oled_rotation_t rotation)
     return OLED_ROTATION_180;
 }
 
-// The first match wins, so the boot logo and layer screens outrank the overlays, which outrank the user screen
 static const krteq_screen_t *active_screen(void)
 {
     if (!logo_finished) return &system_screen_logo;
@@ -1930,7 +1879,7 @@ bool oled_task_kb(void)
 
     const krteq_screen_t *screen = active_screen();
 
-    // An overlay outranked by another screen is cut short rather than left waiting underneath
+    // Close an overlay hidden by a higher priority screen
     if (overlay && screen != overlay) close_overlay();
 
     render_screen(screen);
