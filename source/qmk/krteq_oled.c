@@ -1,4 +1,5 @@
 #include <ctype.h>
+#include <lib/lib8tion/lib8tion.h>
 #include "krteq_oled.h"
 #include "version.h"
 #include OLED_FONT_H
@@ -73,6 +74,34 @@ static void frame_clear(void)
 static void frame_plot(int16_t x, int16_t y)
 {
     if (on_screen(x, y)) frame_buffer[y / 8 * OLED_DISPLAY_WIDTH + x] |= 1 << (y % 8);
+}
+
+// Bresenham, stops at the screen edge
+static void frame_line(int16_t x0, int16_t y0, int16_t x1, int16_t y1)
+{
+    int16_t dx = x1 > x0 ? x1 - x0 : x0 - x1;
+    int16_t dy = y1 > y0 ? y0 - y1 : y1 - y0;
+    int8_t sx = x1 > x0 ? 1 : -1;
+    int8_t sy = y1 > y0 ? 1 : -1;
+    int16_t error = dx + dy;
+
+    while (on_screen(x0, y0))
+    {
+        frame_plot(x0, y0);
+        if (x0 == x1 && y0 == y1) return;
+
+        int16_t doubled = error * 2;
+        if (doubled >= dy)
+        {
+            error += dy;
+            x0 += sx;
+        }
+        if (doubled <= dx)
+        {
+            error += dx;
+            y0 += sy;
+        }
+    }
 }
 
 // QMK only marks changed bytes as dirty
@@ -781,297 +810,110 @@ const krteq_screen_t krteq_screen_waves = {
 };
 
 //==============================================================================
-// Bubbles screen
+// Oscillator screen
 //==============================================================================
 
-#define BUBBLE_FRAME_DURATION FRAME_DURATION_30_FPS
-#define BUBBLE_POP_INTERVAL 10000
-#define BUBBLE_SHIFT 8 // Fixed point fractional bits
-#define BUBBLE_MIN_SPEED 32
-#define BUBBLE_MAX_SPEED 96
-#define BUBBLE_SPEED_LIMIT 160
-#define BUBBLE_BLAST 5000
-#define BUBBLE_BLAST_RANGE 24
-#define BUBBLE_BLAST_SOFTENING 16
-#define BUBBLE_WALL 6
-#define BUBBLE_WALL_MARGIN 4
-#define BUBBLE_FIELD 5
-#define BUBBLE_FIELD_RANGE 4
-#define BUBBLE_DRAG 12
-#define BUBBLE_WANDER 16
-#define BUBBLE_POP_FRAMES 4
+// x = sin(a * t + phase), y = sin(b * t), the drifting phase makes the figure appear to rotate
 
-struct bubble
+#define OSCILLATOR_FRAME_DURATION FRAME_DURATION_30_FPS
+#define OSCILLATOR_SHIFT 8 // Fixed point fractional bits
+#define OSCILLATOR_SAMPLES 256 // Line segments per figure
+#define OSCILLATOR_FREQUENCY_X 1 // 1:3 appears to travel sideways
+#define OSCILLATOR_FREQUENCY_Y 3
+#define OSCILLATOR_AMPLITUDE_X (OLED_DISPLAY_WIDTH / 2 - 2)
+#define OSCILLATOR_AMPLITUDE_Y (OLED_DISPLAY_HEIGHT / 2 - 1)
+#define OSCILLATOR_BASE_SPEED 144 // Phase drift per frame, 65536 is a full turn
+#define OSCILLATOR_MAX_BOOST 1536
+#define OSCILLATOR_KICK 128
+#define OSCILLATOR_DRAG 6 // Boost lost per frame, 1/2^n
+#define OSCILLATOR_SQUEEZE (4 << OSCILLATOR_SHIFT) // Height lost per keypress
+#define OSCILLATOR_MAX_SQUEEZE (16 << OSCILLATOR_SHIFT)
+#define OSCILLATOR_SQUEEZE_DECAY 2 // Squeeze lost per frame, 1/2^n
+
+static int32_t oscillator_boost;
+static uint16_t oscillator_phase;
+static int32_t oscillator_squeeze;
+static uint16_t oscillator_timer;
+
+// Takes the position along the figure, 65536 is a full loop
+static void oscillator_point(uint32_t t, int16_t *x, int16_t *y)
 {
-    int32_t x;
-    int32_t y;
-    int32_t vx;
-    int32_t vy;
-    uint8_t radius;
-    uint8_t pop; // Remaining pop frames, 0 while floating
-};
+    uint16_t angle_x = t * OSCILLATOR_FREQUENCY_X + oscillator_phase;
+    uint16_t angle_y = t * OSCILLATOR_FREQUENCY_Y;
 
-static const uint8_t bubble_radii[] = { 3, 3, 3, 4, 5, 6, 7, 8, 9 };
+    // Squeezes towards the centre line, so the figure never leaves the screen
+    int32_t amplitude_y = MAX(0, (OSCILLATOR_AMPLITUDE_Y << OSCILLATOR_SHIFT) - oscillator_squeeze);
 
-#define BUBBLE_COUNT ARRAY_SIZE(bubble_radii)
-
-static struct bubble bubbles[BUBBLE_COUNT];
-static uint16_t bubble_timer;
-static uint16_t bubble_pop_timer;
-static uint8_t bubble_next;
-
-static int32_t bubble_speed(void)
-{
-    int32_t speed = BUBBLE_MIN_SPEED + random_value() % (BUBBLE_MAX_SPEED - BUBBLE_MIN_SPEED);
-    return random_value() & 1 ? speed : -speed;
+    *x = OLED_DISPLAY_WIDTH / 2 + ((int32_t)sin16(angle_x) * OSCILLATOR_AMPLITUDE_X >> 15);
+    *y = OLED_DISPLAY_HEIGHT / 2 + (((int32_t)sin16(angle_y) * amplitude_y >> 15) >> OSCILLATOR_SHIFT);
 }
 
-// Spawns off screen, drifting in
-static void bubble_spawn(struct bubble *bubble)
-{
-    int16_t radius = bubble->radius;
-    int16_t x = random_value() % OLED_DISPLAY_WIDTH;
-    int16_t y = random_value() % OLED_DISPLAY_HEIGHT;
-
-    bubble->vx = bubble_speed();
-    bubble->vy = bubble_speed();
-    bubble->pop = 0;
-
-    if (random_value() & 1)
-    {
-        x = bubble->vx > 0 ? -radius : OLED_DISPLAY_WIDTH + radius;
-    }
-    else
-    {
-        y = bubble->vy > 0 ? -radius : OLED_DISPLAY_HEIGHT + radius;
-    }
-
-    bubble->x = (int32_t)x << BUBBLE_SHIFT;
-    bubble->y = (int32_t)y << BUBBLE_SHIFT;
-}
-
-static void bubble_pop(struct bubble *popped)
-{
-    bubble_pop_timer = timer_read();
-
-    if (!popped || popped->pop) return;
-    popped->pop = BUBBLE_POP_FRAMES;
-
-    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
-    {
-        struct bubble *bubble = &bubbles[i];
-        int16_t dx = (bubble->x - popped->x) >> BUBBLE_SHIFT;
-        int16_t dy = (bubble->y - popped->y) >> BUBBLE_SHIFT;
-        int32_t distance_squared = dx * dx + dy * dy;
-
-        if (bubble->pop || distance_squared > BUBBLE_BLAST_RANGE * BUBBLE_BLAST_RANGE) continue;
-
-        bubble->vx += dx * BUBBLE_BLAST / (distance_squared + BUBBLE_BLAST_SOFTENING);
-        bubble->vy += dy * BUBBLE_BLAST / (distance_squared + BUBBLE_BLAST_SOFTENING);
-    }
-}
-
-static struct bubble *bubble_closest(uint8_t x, uint8_t y)
-{
-    struct bubble *closest = NULL;
-    int32_t closest_distance = INT32_MAX;
-
-    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
-    {
-        struct bubble *bubble = &bubbles[i];
-        if (bubble->pop) continue;
-
-        int32_t dx = (bubble->x >> BUBBLE_SHIFT) - x;
-        int32_t dy = (bubble->y >> BUBBLE_SHIFT) - y;
-        int32_t distance_squared = dx * dx + dy * dy;
-
-        if (distance_squared < closest_distance)
-        {
-            closest = bubble;
-            closest_distance = distance_squared;
-        }
-    }
-
-    return closest;
-}
-
-static void bubble_wall(int32_t position, int32_t *velocity, int32_t low, int32_t high)
-{
-    if (position < low) *velocity += (low - position) >> BUBBLE_WALL;
-    if (position > high) *velocity -= (position - high) >> BUBBLE_WALL;
-}
-
-static uint32_t square_root(uint32_t value)
-{
-    uint32_t root = 0;
-
-    for (uint32_t bit = 1ul << 30; bit; bit >>= 2)
-    {
-        if (value >= root + bit)
-        {
-            value -= root + bit;
-            root = (root >> 1) + bit;
-        }
-        else
-        {
-            root >>= 1;
-        }
-    }
-
-    return root;
-}
-
-// Mass is proportional to area
-static void bubble_push(struct bubble *a, struct bubble *b)
-{
-    int32_t dx = b->x - a->x;
-    int32_t dy = b->y - a->y;
-    int32_t reach = (int32_t)(a->radius + b->radius + BUBBLE_FIELD_RANGE) << BUBBLE_SHIFT;
-
-    if (dx >= reach || dx <= -reach || dy >= reach || dy <= -reach) return;
-
-    int32_t distance = square_root(dx * dx + dy * dy);
-    if (!distance || distance >= reach) return;
-
-    int32_t force = (reach - distance) >> BUBBLE_FIELD;
-    int32_t mass_a = a->radius * a->radius;
-    int32_t mass_b = b->radius * b->radius;
-    int32_t force_a = force * mass_b / (mass_a + mass_b);
-    int32_t force_b = force - force_a;
-
-    a->vx -= dx * force_a / distance;
-    a->vy -= dy * force_a / distance;
-    b->vx += dx * force_b / distance;
-    b->vy += dy * force_b / distance;
-}
-
-// Random nudge, then drag rounded away from zero so it still slows the slowest bubbles
-static int32_t bubble_float(int32_t velocity)
-{
-    velocity += (int32_t)(random_value() % (BUBBLE_WANDER * 2 + 1)) - BUBBLE_WANDER;
-    return velocity - (velocity + (velocity > 0 ? 1 : -1) * ((1 << BUBBLE_DRAG) - 1)) / (1 << BUBBLE_DRAG);
-}
-
-static void bubble_draw(void)
+static void oscillator_draw(void)
 {
     frame_clear();
 
-    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
+    int16_t previous_x, previous_y;
+    oscillator_point(0, &previous_x, &previous_y);
+
+    for (uint16_t sample = 1; sample <= OSCILLATOR_SAMPLES; sample++)
     {
-        struct bubble *bubble = &bubbles[i];
-        int16_t x = bubble->x >> BUBBLE_SHIFT;
-        int16_t y = bubble->y >> BUBBLE_SHIFT;
-        int16_t radius = bubble->radius;
-
-        if (bubble->pop)
-        {
-            int16_t spread = radius + (BUBBLE_POP_FRAMES - bubble->pop) * 2;
-            int16_t diagonal = spread * 181 >> 8; // Spread / sqrt(2)
-
-            frame_plot(x + spread, y);
-            frame_plot(x - spread, y);
-            frame_plot(x, y + spread);
-            frame_plot(x, y - spread);
-            frame_plot(x + diagonal, y + diagonal);
-            frame_plot(x + diagonal, y - diagonal);
-            frame_plot(x - diagonal, y + diagonal);
-            frame_plot(x - diagonal, y - diagonal);
-            continue;
-        }
-
-        // Circle outline, r - 0.5 < d <= r + 0.5
-        for (int16_t dy = -radius; dy <= radius; dy++)
-        {
-            for (int16_t dx = -radius; dx <= radius; dx++)
-            {
-                int16_t distance_squared = dx * dx + dy * dy;
-                if (distance_squared > radius * radius - radius && distance_squared <= radius * radius + radius) frame_plot(x + dx, y + dy);
-            }
-        }
-
-        if (radius >= 4) frame_plot(x - radius / 2, y - radius / 2);
+        int16_t x, y;
+        oscillator_point((uint32_t)sample * 65536 / OSCILLATOR_SAMPLES, &x, &y);
+        frame_line(previous_x, previous_y, x, y);
+        previous_x = x;
+        previous_y = y;
     }
 
     frame_show();
 }
 
-static void bubble_init(void)
+static void oscillator_init(void)
 {
-    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
-    {
-        struct bubble *bubble = &bubbles[i];
-        uint8_t radius = bubble_radii[i];
-
-        // The first bubbles start on screen
-        bubble->radius = radius;
-        bubble_spawn(bubble);
-        bubble->x = (int32_t)(radius + random_value() % (OLED_DISPLAY_WIDTH - radius * 2)) << BUBBLE_SHIFT;
-        bubble->y = (int32_t)(radius + random_value() % (OLED_DISPLAY_HEIGHT - radius * 2)) << BUBBLE_SHIFT;
-    }
-
-    bubble_next = 0;
+    oscillator_boost = 0;
+    oscillator_phase = 0;
+    oscillator_squeeze = 0;
 }
 
-static void bubble_start(void)
+static void oscillator_start(void)
 {
-    bubble_timer = timer_read();
-    bubble_pop_timer = timer_read();
+    oscillator_timer = timer_read();
 }
 
-static void bubble_update(void)
+static void oscillator_update(void)
 {
-    if (!timer_finished(&bubble_timer, BUBBLE_FRAME_DURATION) && !screen_redraw) return;
+    if (!timer_finished(&oscillator_timer, OSCILLATOR_FRAME_DURATION) && !screen_redraw) return;
     screen_redraw = false;
 
-    if (timer_finished(&bubble_pop_timer, BUBBLE_POP_INTERVAL))
-    {
-        bubble_pop(&bubbles[bubble_next]);
-        bubble_next = (bubble_next + 1) % BUBBLE_COUNT;
-    }
+    int32_t speed = OSCILLATOR_BASE_SPEED + oscillator_boost;
 
-    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
-    {
-        for (uint8_t j = i + 1; j < BUBBLE_COUNT; j++)
-        {
-            if (!bubbles[i].pop && !bubbles[j].pop) bubble_push(&bubbles[i], &bubbles[j]);
-        }
-    }
+    // Rounded up so the boost reaches zero
+    oscillator_boost -= (oscillator_boost + (1 << OSCILLATOR_DRAG) - 1) >> OSCILLATOR_DRAG;
 
-    for (uint8_t i = 0; i < BUBBLE_COUNT; i++)
-    {
-        struct bubble *bubble = &bubbles[i];
+    oscillator_phase += speed;
 
-        if (bubble->pop)
-        {
-            if (!--bubble->pop) bubble_spawn(bubble);
-            continue;
-        }
+    // Snaps to zero under half a pixel
+    oscillator_squeeze -= oscillator_squeeze >> OSCILLATOR_SQUEEZE_DECAY;
+    if (oscillator_squeeze < (1 << (OSCILLATOR_SHIFT - 1))) oscillator_squeeze = 0;
 
-        bubble->vx = MAX(-BUBBLE_SPEED_LIMIT, MIN(BUBBLE_SPEED_LIMIT, bubble_float(bubble->vx)));
-        bubble->vy = MAX(-BUBBLE_SPEED_LIMIT, MIN(BUBBLE_SPEED_LIMIT, bubble_float(bubble->vy)));
-        bubble->x += bubble->vx;
-        bubble->y += bubble->vy;
-
-        int32_t reach = (int32_t)(bubble->radius + BUBBLE_WALL_MARGIN) << BUBBLE_SHIFT;
-
-        bubble_wall(bubble->x, &bubble->vx, reach, ((OLED_DISPLAY_WIDTH - 1) << BUBBLE_SHIFT) - reach);
-        bubble_wall(bubble->y, &bubble->vy, reach, ((OLED_DISPLAY_HEIGHT - 1) << BUBBLE_SHIFT) - reach);
-    }
-
-    bubble_draw();
+    oscillator_draw();
 }
 
-static void bubble_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
+static void oscillator_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
 {
-    if (pressed) bubble_pop(bubble_closest(x, y));
+    if (!pressed) return;
+
+    oscillator_boost += OSCILLATOR_KICK;
+    if (oscillator_boost > OSCILLATOR_MAX_BOOST) oscillator_boost = OSCILLATOR_MAX_BOOST;
+
+    oscillator_squeeze = MIN(oscillator_squeeze + OSCILLATOR_SQUEEZE, OSCILLATOR_MAX_SQUEEZE);
 }
 
-const krteq_screen_t krteq_screen_bubbles = {
-    .name      = "Bubbles",
-    .init      = bubble_init,
-    .start     = bubble_start,
-    .update    = bubble_update,
-    .key_event = bubble_key_event
+const krteq_screen_t krteq_screen_oscillator = {
+    .name      = "Oscillator",
+    .init      = oscillator_init,
+    .start     = oscillator_start,
+    .update    = oscillator_update,
+    .key_event = oscillator_key_event
 };
 
 //==============================================================================
@@ -1106,33 +948,6 @@ static struct star starfield[STARFIELD_COUNT];
 static uint16_t starfield_timer;
 static int32_t starfield_boost;
 
-// Bresenham, stops at the screen edge
-static void starfield_line(int16_t x0, int16_t y0, int16_t x1, int16_t y1)
-{
-    int16_t dx = x1 > x0 ? x1 - x0 : x0 - x1;
-    int16_t dy = y1 > y0 ? y0 - y1 : y1 - y0;
-    int8_t sx = x1 > x0 ? 1 : -1;
-    int8_t sy = y1 > y0 ? 1 : -1;
-    int16_t error = dx + dy;
-
-    while (on_screen(x0, y0))
-    {
-        frame_plot(x0, y0);
-        if (x0 == x1 && y0 == y1) return;
-
-        int16_t doubled = error * 2;
-        if (doubled >= dy)
-        {
-            error += dy;
-            x0 += sx;
-        }
-        if (doubled <= dx)
-        {
-            error += dx;
-            y0 += sy;
-        }
-    }
-}
 
 static void starfield_project(const struct star *star, int16_t *x, int16_t *y)
 {
@@ -1187,7 +1002,7 @@ static void starfield_update(void)
             int16_t x, y;
             starfield_project(star, &x, &y);
 
-            starfield_line(star->trail_x, star->trail_y, x, y);
+            frame_line(star->trail_x, star->trail_y, x, y);
             star->trail_x = x;
             star->trail_y = y;
 
@@ -1801,7 +1616,7 @@ __attribute__((weak)) const krteq_screen_t *const user_screens[] = {
     &krteq_screen_bongo_cat,
     &krteq_screen_starfield,
     &krteq_screen_waves,
-    &krteq_screen_bubbles,
+    &krteq_screen_oscillator,
     &krteq_screen_game_of_life,
     &krteq_screen_system_info
 };
