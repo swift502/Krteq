@@ -1,4 +1,5 @@
 #include <ctype.h>
+#include <math.h>
 #include <lib/lib8tion/lib8tion.h>
 #include "krteq_oled.h"
 #include "version.h"
@@ -813,70 +814,79 @@ const krteq_screen_t krteq_screen_waves = {
 // Cursor screen
 //==============================================================================
 
-// Idles along a lemniscate of Bernoulli, x = cos t / (1 + sin^2 t), y = x sin t, stretched to fit the screen
+// Idles along a lemniscate of Gerono, x = cos t, y = sin 2t, which keeps round ends when stretched wide
+// Positions are in pixels, pixel centres sit on whole numbers, speeds are per frame
 
 #define CURSOR_FRAME_DURATION FRAME_DURATION_30_FPS
-#define CURSOR_SHIFT 8 // Fixed point fractional bits
-#define CURSOR_ONE (1 << CURSOR_SHIFT)
-#define CURSOR_SPRING_SHIFT 12 // Spring and damping are 1/4096 per frame
-#define CURSOR_CHASE_SPRING 410 // Higher value makes it move to a pressed key faster, 1 to 16383 - 2 * damping
-#define CURSOR_CHASE_DAMPING 906 // Higher value makes it overshoot the key less, 0 (no damping) to 4096 (stops dead every frame)
-#define CURSOR_CHASE_LAUNCH 1024 // Higher value makes it shoot off towards a pressed key harder, 0 (no kick) to 4096 (adds the whole distance in one frame)
-#define CURSOR_TRACK_SPRING 82 // Higher value makes it rejoin the idle path faster, 1 to 16383 - 2 * damping
-#define CURSOR_TRACK_DAMPING 1159 // Higher value makes it overshoot the idle path less, 0 (no damping) to 4096 (stops dead every frame)
-#define CURSOR_ARRIVE_DISTANCE (2 * CURSOR_ONE) // Higher value makes it leave a released key sooner
-#define CURSOR_PATH_WIDTH 44 // Higher value makes the infinity symbol wider
-#define CURSOR_PATH_HEIGHT 24 // Higher value makes the infinity symbol taller
-#define CURSOR_PATH_SPEED 233 // Higher value makes it move along the idle path faster
-#define CURSOR_PATH_ACCELERATION 3 // Higher value makes it get up to idle speed faster
-#define CURSOR_PATH_PROBE 1024 // Phase span measuring the local path length, 65536 is a lap
-#define CURSOR_PATH_PROBE_SHIFT 2 // Keeps the probe length squared within sqrt16
+#define CURSOR_CHASE_SPRING 0.1f // Higher value makes it move to a pressed key faster, 0 to 4 - 2 * damping
+#define CURSOR_CHASE_DAMPING 0.22f // Higher value makes it overshoot the key less, 0 (no damping) to 1 (stops dead every frame)
+#define CURSOR_CHASE_LAUNCH 0.25f // Higher value makes it shoot off towards a pressed key harder, 0 (no kick) to 1 (adds the whole distance in one frame)
+#define CURSOR_TRACK_SPRING 0.02f // Higher value makes it rejoin the idle path faster, 0 to 4 - 2 * damping
+#define CURSOR_TRACK_DAMPING 0.28f // Higher value makes it overshoot the idle path less, 0 (no damping) to 1 (stops dead every frame)
+#define CURSOR_PATH_WIDTH 44.0f // Higher value makes the infinity symbol wider, half width in pixels
+#define CURSOR_PATH_HEIGHT 11.0f // Higher value makes the infinity symbol taller, half height in pixels
+#define CURSOR_PATH_SPEED 0.91f // Higher value makes it move along the idle path faster, pixels per frame
+#define CURSOR_PATH_ACCELERATION 0.012f // Higher value makes it get up to idle speed faster
 #define CURSOR_PATH_SAMPLES 64 // Points checked for the nearest place to rejoin the path
-#define CURSOR_MAX_RADIUS (4 * CURSOR_ONE) // Radius when still
-#define CURSOR_MIN_RADIUS (3 * CURSOR_ONE / 2) // Radius at the fast speed
-#define CURSOR_FAST_SPEED (6 * CURSOR_ONE) // Higher value makes it shrink less when moving
+#define CURSOR_TARGET_SIZE 2 // Higher value makes the target cross bigger, arm length in pixels
+#define CURSOR_MAX_RADIUS 4.0f // Radius when still
+#define CURSOR_MIN_RADIUS 1.5f // Radius at the fast speed
+#define CURSOR_FAST_SPEED 6.0f // Higher value makes it shrink less when moving, pixels per frame
 #define CURSOR_MIN_X CURSOR_MAX_RADIUS
-#define CURSOR_MAX_X ((OLED_DISPLAY_WIDTH - 1) * CURSOR_ONE - CURSOR_MAX_RADIUS)
+#define CURSOR_MAX_X (OLED_DISPLAY_WIDTH - 1 - CURSOR_MAX_RADIUS)
 #define CURSOR_MIN_Y CURSOR_MAX_RADIUS
-#define CURSOR_MAX_Y ((OLED_DISPLAY_HEIGHT - 1) * CURSOR_ONE - CURSOR_MAX_RADIUS)
+#define CURSOR_MAX_Y (OLED_DISPLAY_HEIGHT - 1 - CURSOR_MAX_RADIUS)
+#define CURSOR_TURN (2.0f * (float)M_PI)
 
-static int32_t cursor_x, cursor_y;
-static int32_t cursor_vx, cursor_vy;
-static int32_t cursor_target_x, cursor_target_y;
-static int32_t cursor_radius;
-static int32_t cursor_previous_x, cursor_previous_y;
-static uint16_t cursor_phase;
-static uint16_t cursor_path_speed;
-static int32_t cursor_path_x, cursor_path_y; // Last target on the path
+static float cursor_x, cursor_y;
+static float cursor_vx, cursor_vy;
+static float cursor_previous_x, cursor_previous_y;
+static float cursor_target_x, cursor_target_y;
+static float cursor_radius;
+static float cursor_phase; // Radians along the path
+static float cursor_path_speed;
+static float cursor_path_x, cursor_path_y; // Last target on the path
 static uint8_t cursor_held_keys;
 static bool cursor_chasing;
 static uint16_t cursor_timer;
 
-static void cursor_path(uint16_t phase, int32_t *x, int32_t *y)
+static void cursor_path(float phase, float *x, float *y)
 {
-    int32_t sine = sin16(phase);
-    int32_t cosine = cos16(phase);
-    int32_t divisor = 32768 + (sine * sine >> 15);
+    *x = OLED_DISPLAY_WIDTH / 2 + CURSOR_PATH_WIDTH * cosf(phase);
+    *y = OLED_DISPLAY_HEIGHT / 2 + CURSOR_PATH_HEIGHT * sinf(2.0f * phase);
+}
 
-    *x = (OLED_DISPLAY_WIDTH / 2) * CURSOR_ONE + (CURSOR_PATH_WIDTH * CURSOR_ONE) * cosine / divisor;
-    *y = (OLED_DISPLAY_HEIGHT / 2) * CURSOR_ONE + (CURSOR_PATH_HEIGHT * CURSOR_ONE) * (sine * cosine >> 15) / divisor;
+// Pixels travelled per radian of phase, from the derivative of the path
+static float cursor_path_rate(float phase)
+{
+    float dx = -CURSOR_PATH_WIDTH * sinf(phase);
+    float dy = 2.0f * CURSOR_PATH_HEIGHT * cosf(2.0f * phase);
+
+    return sqrtf(dx * dx + dy * dy);
+}
+
+// Advances by the path speed in pixels, so the speed is even along the whole path
+// The rate is taken at the midpoint of the step, which keeps the distance accurate on curves
+static void cursor_path_advance(void)
+{
+    float step = cursor_path_speed / cursor_path_rate(cursor_phase);
+
+    cursor_phase += cursor_path_speed / cursor_path_rate(cursor_phase + step / 2.0f);
+    if (cursor_phase >= CURSOR_TURN) cursor_phase -= CURSOR_TURN;
 }
 
 // Starts from rest at the nearest point, so the cursor glides off instead of being yanked
 static void cursor_rejoin_path(void)
 {
-    uint32_t nearest = UINT32_MAX;
+    float nearest = INFINITY;
 
     for (uint8_t i = 0; i < CURSOR_PATH_SAMPLES; i++)
     {
-        uint16_t phase = i * (65536 / CURSOR_PATH_SAMPLES);
-        int32_t x, y;
+        float phase = i * CURSOR_TURN / CURSOR_PATH_SAMPLES;
+        float x, y;
         cursor_path(phase, &x, &y);
 
-        int32_t dx = (x - cursor_x) >> CURSOR_SHIFT;
-        int32_t dy = (y - cursor_y) >> CURSOR_SHIFT;
-        uint32_t distance = dx * dx + dy * dy;
-
+        float distance = (x - cursor_x) * (x - cursor_x) + (y - cursor_y) * (y - cursor_y);
         if (distance < nearest)
         {
             nearest = distance;
@@ -888,34 +898,20 @@ static void cursor_rejoin_path(void)
     cursor_path_speed = 0;
 }
 
-// Phase step covering the path speed in pixels, so the speed is even along the whole path
-static uint16_t cursor_path_step(void)
-{
-    int32_t x0, y0, x1, y1;
-    cursor_path(cursor_phase - CURSOR_PATH_PROBE / 2, &x0, &y0);
-    cursor_path(cursor_phase + CURSOR_PATH_PROBE / 2, &x1, &y1);
-
-    int32_t dx = (x1 - x0) >> CURSOR_PATH_PROBE_SHIFT;
-    int32_t dy = (y1 - y0) >> CURSOR_PATH_PROBE_SHIFT;
-    int32_t length = MAX(sqrt16(MIN(dx * dx + dy * dy, UINT16_MAX)), 1) << CURSOR_PATH_PROBE_SHIFT;
-
-    return (uint32_t)cursor_path_speed * CURSOR_PATH_PROBE / length;
-}
-
 // Spring damper step, semi-implicit Euler, the target velocity and acceleration let the cursor follow a moving target exactly
-static int32_t cursor_spring(int32_t *position, int32_t velocity, int32_t target, int32_t target_velocity, int32_t target_acceleration, int32_t minimum, int32_t maximum)
+static float cursor_spring(float *position, float velocity, float target, float target_velocity, float target_acceleration, float minimum, float maximum)
 {
-    int32_t spring = cursor_chasing ? CURSOR_CHASE_SPRING : CURSOR_TRACK_SPRING;
-    int32_t damping = cursor_chasing ? CURSOR_CHASE_DAMPING : CURSOR_TRACK_DAMPING;
+    float spring = cursor_chasing ? CURSOR_CHASE_SPRING : CURSOR_TRACK_SPRING;
+    float damping = cursor_chasing ? CURSOR_CHASE_DAMPING : CURSOR_TRACK_DAMPING;
 
-    velocity += target_acceleration + ((spring * (target - *position) + damping * (target_velocity - velocity)) >> CURSOR_SPRING_SHIFT);
+    velocity += target_acceleration + spring * (target - *position) + damping * (target_velocity - velocity);
     *position += velocity;
 
     // Bounces off the screen edge, losing half the speed
     if (*position < minimum || *position > maximum)
     {
         *position = MIN(MAX(*position, minimum), maximum);
-        velocity = -velocity / 2;
+        velocity = -velocity / 2.0f;
     }
 
     return velocity;
@@ -932,69 +928,77 @@ static void cursor_move(void)
 
     cursor_path_speed = MIN(cursor_path_speed + CURSOR_PATH_ACCELERATION, CURSOR_PATH_SPEED);
 
-    int32_t x, y, next_x, next_y;
+    float x, y, next_x, next_y;
     cursor_path(cursor_phase, &x, &y);
-    cursor_phase += cursor_path_step();
+    cursor_path_advance();
     cursor_path(cursor_phase, &next_x, &next_y);
 
-    int32_t previous_x = cursor_path_x;
-    int32_t previous_y = cursor_path_y;
+    float previous_x = cursor_path_x;
+    float previous_y = cursor_path_y;
     cursor_path_x = x;
     cursor_path_y = y;
 
-    cursor_vx = cursor_spring(&cursor_x, cursor_vx, x, x - previous_x, next_x - 2 * x + previous_x, CURSOR_MIN_X, CURSOR_MAX_X);
-    cursor_vy = cursor_spring(&cursor_y, cursor_vy, y, y - previous_y, next_y - 2 * y + previous_y, CURSOR_MIN_Y, CURSOR_MAX_Y);
+    cursor_vx = cursor_spring(&cursor_x, cursor_vx, x, x - previous_x, next_x - 2.0f * x + previous_x, CURSOR_MIN_X, CURSOR_MAX_X);
+    cursor_vy = cursor_spring(&cursor_y, cursor_vy, y, y - previous_y, next_y - 2.0f * y + previous_y, CURSOR_MIN_Y, CURSOR_MAX_Y);
 }
 
 static void cursor_resize(void)
 {
-    int32_t vx = cursor_vx < 0 ? -cursor_vx : cursor_vx;
-    int32_t vy = cursor_vy < 0 ? -cursor_vy : cursor_vy;
-
-    // Approximate length, max + 3/8 min
-    int32_t speed = MIN(MAX(vx, vy) + MIN(vx, vy) * 3 / 8, CURSOR_FAST_SPEED);
+    float speed = MIN(sqrtf(cursor_vx * cursor_vx + cursor_vy * cursor_vy), CURSOR_FAST_SPEED);
     cursor_radius = CURSOR_MAX_RADIUS - (CURSOR_MAX_RADIUS - CURSOR_MIN_RADIUS) * speed / CURSOR_FAST_SPEED;
 }
 
-// Capsule from the previous position to the current one, a frame of motion blur
-// Takes fixed point coordinates, pixel centres sit on whole numbers
+// Squared distance to the path covered this frame, from the previous position to the current one
+static float cursor_swept_distance(float x, float y)
+{
+    float dx = x - cursor_previous_x;
+    float dy = y - cursor_previous_y;
+    float move_x = cursor_x - cursor_previous_x;
+    float move_y = cursor_y - cursor_previous_y;
+    float length = move_x * move_x + move_y * move_y;
+
+    // Moves to the nearest point on the segment
+    if (length > 0)
+    {
+        float along = MIN(MAX((dx * move_x + dy * move_y) / length, 0.0f), 1.0f);
+        dx -= move_x * along;
+        dy -= move_y * along;
+    }
+
+    return dx * dx + dy * dy;
+}
+
+// Capsule covering the movement this frame, a frame of motion blur
 static void cursor_draw(void)
 {
-    int32_t ax = cursor_previous_x, ay = cursor_previous_y;
-    int32_t bx = cursor_x, by = cursor_y;
-    int32_t abx = bx - ax, aby = by - ay;
-    int64_t length = (int64_t)abx * abx + (int64_t)aby * aby;
-    int32_t outer = cursor_radius * cursor_radius;
-
     frame_clear();
 
-    for (int16_t py = (MIN(ay, by) - cursor_radius) >> CURSOR_SHIFT; py <= (MAX(ay, by) + cursor_radius) >> CURSOR_SHIFT; py++)
+    if (cursor_chasing)
     {
-        for (int16_t px = (MIN(ax, bx) - cursor_radius) >> CURSOR_SHIFT; px <= (MAX(ax, bx) + cursor_radius) >> CURSOR_SHIFT; px++)
+        int16_t x = lroundf(cursor_target_x);
+        int16_t y = lroundf(cursor_target_y);
+
+        for (int8_t i = -CURSOR_TARGET_SIZE; i <= CURSOR_TARGET_SIZE; i++)
         {
-            int32_t dx = px * CURSOR_ONE - ax;
-            int32_t dy = py * CURSOR_ONE - ay;
+            frame_plot(x + i, y);
+            frame_plot(x, y + i);
+        }
+    }
 
-            // Moves to the nearest point on the segment
-            if (length)
-            {
-                int64_t along = MIN(MAX((int64_t)dx * abx + (int64_t)dy * aby, 0), length);
-                dx -= abx * along / length;
-                dy -= aby * along / length;
-            }
+    int16_t left = floorf(MIN(cursor_previous_x, cursor_x) - cursor_radius);
+    int16_t right = ceilf(MAX(cursor_previous_x, cursor_x) + cursor_radius);
+    int16_t top = floorf(MIN(cursor_previous_y, cursor_y) - cursor_radius);
+    int16_t bottom = ceilf(MAX(cursor_previous_y, cursor_y) + cursor_radius);
 
-            if (dx * dx + dy * dy <= outer) frame_plot(px, py);
+    for (int16_t py = top; py <= bottom; py++)
+    {
+        for (int16_t px = left; px <= right; px++)
+        {
+            if (cursor_swept_distance(px, py) <= cursor_radius * cursor_radius) frame_plot(px, py);
         }
     }
 
     frame_show();
-}
-
-static bool cursor_arrived(void)
-{
-    int32_t dx = cursor_target_x - cursor_x;
-    int32_t dy = cursor_target_y - cursor_y;
-    return dx > -CURSOR_ARRIVE_DISTANCE && dx < CURSOR_ARRIVE_DISTANCE && dy > -CURSOR_ARRIVE_DISTANCE && dy < CURSOR_ARRIVE_DISTANCE;
 }
 
 static void cursor_init(void)
@@ -1004,12 +1008,12 @@ static void cursor_init(void)
     cursor_path(cursor_phase, &cursor_x, &cursor_y);
     cursor_path_x = cursor_x;
     cursor_path_y = cursor_y;
+    cursor_previous_x = cursor_x;
+    cursor_previous_y = cursor_y;
     cursor_vx = 0;
     cursor_vy = 0;
     cursor_radius = CURSOR_MAX_RADIUS;
     cursor_chasing = false;
-    cursor_previous_x = cursor_x;
-    cursor_previous_y = cursor_y;
 }
 
 static void cursor_start(void)
@@ -1025,17 +1029,19 @@ static void cursor_update(void)
     if (!timer_finished(&cursor_timer, CURSOR_FRAME_DURATION) && !screen_redraw) return;
     screen_redraw = false;
 
-    if (cursor_chasing && !cursor_held_keys && cursor_arrived())
-    {
-        cursor_chasing = false;
-        cursor_rejoin_path();
-    }
-
     cursor_previous_x = cursor_x;
     cursor_previous_y = cursor_y;
 
     cursor_move();
     cursor_resize();
+
+    // Checks the whole movement, so a fast cursor can't skip over the target between frames
+    if (cursor_chasing && !cursor_held_keys && cursor_swept_distance(cursor_target_x, cursor_target_y) <= cursor_radius * cursor_radius)
+    {
+        cursor_chasing = false;
+        cursor_rejoin_path();
+    }
+
     cursor_draw();
 }
 
@@ -1050,12 +1056,12 @@ static void cursor_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool presse
     if (cursor_held_keys < UINT8_MAX) cursor_held_keys++;
 
     cursor_chasing = true;
-    cursor_target_x = MIN(MAX((int32_t)x * CURSOR_ONE, CURSOR_MIN_X), CURSOR_MAX_X);
-    cursor_target_y = MIN(MAX((int32_t)y * CURSOR_ONE, CURSOR_MIN_Y), CURSOR_MAX_Y);
+    cursor_target_x = MIN(MAX(x, CURSOR_MIN_X), CURSOR_MAX_X);
+    cursor_target_y = MIN(MAX(y, CURSOR_MIN_Y), CURSOR_MAX_Y);
 
     // Adds to the current velocity, so it keeps some momentum while heading for the key
-    cursor_vx += (cursor_target_x - cursor_x) * CURSOR_CHASE_LAUNCH >> CURSOR_SPRING_SHIFT;
-    cursor_vy += (cursor_target_y - cursor_y) * CURSOR_CHASE_LAUNCH >> CURSOR_SPRING_SHIFT;
+    cursor_vx += (cursor_target_x - cursor_x) * CURSOR_CHASE_LAUNCH;
+    cursor_vy += (cursor_target_y - cursor_y) * CURSOR_CHASE_LAUNCH;
 }
 
 const krteq_screen_t krteq_screen_cursor = {
