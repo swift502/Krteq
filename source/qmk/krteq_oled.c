@@ -819,19 +819,21 @@ const krteq_screen_t krteq_screen_waves = {
 
 #define CURSOR_FRAME_DURATION FRAME_DURATION_30_FPS
 #define CURSOR_CHASE_SPRING 0.1f // Higher value makes it move to a pressed key faster, 0 to 4 - 2 * damping
-#define CURSOR_CHASE_DAMPING 0.22f // Higher value makes it overshoot the key less, 0 (no damping) to 1 (stops dead every frame)
-#define CURSOR_CHASE_LAUNCH 0.25f // Higher value makes it shoot off towards a pressed key harder, 0 (no kick) to 1 (adds the whole distance in one frame)
+#define CURSOR_CHASE_DAMPING 0.35f // Higher value makes it overshoot the key less, 0 (no damping) to 1 (stops dead every frame)
+#define CURSOR_CHASE_LAUNCH 7.0f // Higher value makes it shoot off towards a pressed key harder, speed in pixels per frame added towards the key
+#define CURSOR_CHASE_LAUNCH_SCALE 0.08f // Higher value makes the kick grow more with distance, launch * (1 + distance * scale)
 #define CURSOR_TRACK_SPRING 0.02f // Higher value makes it rejoin the idle path faster, 0 to 4 - 2 * damping
 #define CURSOR_TRACK_DAMPING 0.28f // Higher value makes it overshoot the idle path less, 0 (no damping) to 1 (stops dead every frame)
-#define CURSOR_PATH_WIDTH 44.0f // Higher value makes the infinity symbol wider, half width in pixels
-#define CURSOR_PATH_HEIGHT 11.0f // Higher value makes the infinity symbol taller, half height in pixels
+#define CURSOR_WALL_BOUNCE 0.15f // Higher value makes it bounce off the screen edge harder, share of speed kept, 0 (stops dead) to 1 (no loss)
+#define CURSOR_PATH_WIDTH 40.0f // Higher value makes the infinity symbol wider, half width in pixels
+#define CURSOR_PATH_HEIGHT 8.0f // Higher value makes the infinity symbol taller, half height in pixels
 #define CURSOR_PATH_SPEED 0.91f // Higher value makes it move along the idle path faster, pixels per frame
 #define CURSOR_PATH_ACCELERATION 0.012f // Higher value makes it get up to idle speed faster
 #define CURSOR_PATH_SAMPLES 64 // Points checked for the nearest place to rejoin the path
-#define CURSOR_TARGET_SIZE 2 // Higher value makes the target cross bigger, arm length in pixels
-#define CURSOR_MAX_RADIUS 4.0f // Radius when still
-#define CURSOR_MIN_RADIUS 1.5f // Radius at the fast speed
+#define CURSOR_MAX_RADIUS 5.0f // Radius when still
+#define CURSOR_MIN_RADIUS 2.5f // Radius at the fast speed
 #define CURSOR_FAST_SPEED 6.0f // Higher value makes it shrink less when moving, pixels per frame
+#define CURSOR_BLUR_SPEED 1.5f // Higher value makes it skip the motion blur at faster idle speeds, pixels per frame
 #define CURSOR_MIN_X CURSOR_MAX_RADIUS
 #define CURSOR_MAX_X (OLED_DISPLAY_WIDTH - 1 - CURSOR_MAX_RADIUS)
 #define CURSOR_MIN_Y CURSOR_MAX_RADIUS
@@ -841,6 +843,8 @@ const krteq_screen_t krteq_screen_waves = {
 static float cursor_x, cursor_y;
 static float cursor_vx, cursor_vy;
 static float cursor_previous_x, cursor_previous_y;
+static float cursor_move_x, cursor_move_y; // Movement this frame
+static float cursor_move_scale; // Inverse squared length of the movement, 0 when still
 static float cursor_target_x, cursor_target_y;
 static float cursor_radius;
 static float cursor_phase; // Radians along the path
@@ -899,7 +903,7 @@ static void cursor_rejoin_path(void)
 }
 
 // Spring damper step, semi-implicit Euler, the target velocity and acceleration let the cursor follow a moving target exactly
-static float cursor_spring(float *position, float velocity, float target, float target_velocity, float target_acceleration, float minimum, float maximum)
+static float cursor_spring(float *position, float velocity, float target, float target_velocity, float target_acceleration)
 {
     float spring = cursor_chasing ? CURSOR_CHASE_SPRING : CURSOR_TRACK_SPRING;
     float damping = cursor_chasing ? CURSOR_CHASE_DAMPING : CURSOR_TRACK_DAMPING;
@@ -907,22 +911,39 @@ static float cursor_spring(float *position, float velocity, float target, float 
     velocity += target_acceleration + spring * (target - *position) + damping * (target_velocity - velocity);
     *position += velocity;
 
-    // Bounces off the screen edge, losing half the speed
-    if (*position < minimum || *position > maximum)
-    {
-        *position = MIN(MAX(*position, minimum), maximum);
-        velocity = -velocity / 2.0f;
-    }
-
     return velocity;
+}
+
+// Returns whether the position hit the edge, flipping the velocity away from it
+static bool cursor_wall(float *position, float *velocity, float minimum, float maximum)
+{
+    if (*position >= minimum && *position <= maximum) return false;
+
+    *position = MIN(MAX(*position, minimum), maximum);
+    *velocity = -*velocity;
+    return true;
+}
+
+// Bounces off the screen edge, losing speed in every direction
+static void cursor_bounce(void)
+{
+    bool hit_x = cursor_wall(&cursor_x, &cursor_vx, CURSOR_MIN_X, CURSOR_MAX_X);
+    bool hit_y = cursor_wall(&cursor_y, &cursor_vy, CURSOR_MIN_Y, CURSOR_MAX_Y);
+
+    if (hit_x || hit_y)
+    {
+        cursor_vx *= CURSOR_WALL_BOUNCE;
+        cursor_vy *= CURSOR_WALL_BOUNCE;
+    }
 }
 
 static void cursor_move(void)
 {
     if (cursor_chasing)
     {
-        cursor_vx = cursor_spring(&cursor_x, cursor_vx, cursor_target_x, 0, 0, CURSOR_MIN_X, CURSOR_MAX_X);
-        cursor_vy = cursor_spring(&cursor_y, cursor_vy, cursor_target_y, 0, 0, CURSOR_MIN_Y, CURSOR_MAX_Y);
+        cursor_vx = cursor_spring(&cursor_x, cursor_vx, cursor_target_x, 0, 0);
+        cursor_vy = cursor_spring(&cursor_y, cursor_vy, cursor_target_y, 0, 0);
+        cursor_bounce();
         return;
     }
 
@@ -938,8 +959,9 @@ static void cursor_move(void)
     cursor_path_x = x;
     cursor_path_y = y;
 
-    cursor_vx = cursor_spring(&cursor_x, cursor_vx, x, x - previous_x, next_x - 2.0f * x + previous_x, CURSOR_MIN_X, CURSOR_MAX_X);
-    cursor_vy = cursor_spring(&cursor_y, cursor_vy, y, y - previous_y, next_y - 2.0f * y + previous_y, CURSOR_MIN_Y, CURSOR_MAX_Y);
+    cursor_vx = cursor_spring(&cursor_x, cursor_vx, x, x - previous_x, next_x - 2.0f * x + previous_x);
+    cursor_vy = cursor_spring(&cursor_y, cursor_vy, y, y - previous_y, next_y - 2.0f * y + previous_y);
+    cursor_bounce();
 }
 
 static void cursor_resize(void)
@@ -948,22 +970,33 @@ static void cursor_resize(void)
     cursor_radius = CURSOR_MAX_RADIUS - (CURSOR_MAX_RADIUS - CURSOR_MIN_RADIUS) * speed / CURSOR_FAST_SPEED;
 }
 
+// Measures the movement this frame once, so per pixel checks avoid division
+static void cursor_sweep(void)
+{
+    // A still ball when idling slowly, the blur would only smear it
+    if (!cursor_chasing && cursor_vx * cursor_vx + cursor_vy * cursor_vy < CURSOR_BLUR_SPEED * CURSOR_BLUR_SPEED)
+    {
+        cursor_previous_x = cursor_x;
+        cursor_previous_y = cursor_y;
+    }
+
+    cursor_move_x = cursor_x - cursor_previous_x;
+    cursor_move_y = cursor_y - cursor_previous_y;
+
+    float length = cursor_move_x * cursor_move_x + cursor_move_y * cursor_move_y;
+    cursor_move_scale = length > 0 ? 1.0f / length : 0;
+}
+
 // Squared distance to the path covered this frame, from the previous position to the current one
 static float cursor_swept_distance(float x, float y)
 {
     float dx = x - cursor_previous_x;
     float dy = y - cursor_previous_y;
-    float move_x = cursor_x - cursor_previous_x;
-    float move_y = cursor_y - cursor_previous_y;
-    float length = move_x * move_x + move_y * move_y;
 
     // Moves to the nearest point on the segment
-    if (length > 0)
-    {
-        float along = MIN(MAX((dx * move_x + dy * move_y) / length, 0.0f), 1.0f);
-        dx -= move_x * along;
-        dy -= move_y * along;
-    }
+    float along = MIN(MAX((dx * cursor_move_x + dy * cursor_move_y) * cursor_move_scale, 0.0f), 1.0f);
+    dx -= cursor_move_x * along;
+    dy -= cursor_move_y * along;
 
     return dx * dx + dy * dy;
 }
@@ -973,18 +1006,7 @@ static void cursor_draw(void)
 {
     frame_clear();
 
-    if (cursor_chasing)
-    {
-        int16_t x = lroundf(cursor_target_x);
-        int16_t y = lroundf(cursor_target_y);
-
-        for (int8_t i = -CURSOR_TARGET_SIZE; i <= CURSOR_TARGET_SIZE; i++)
-        {
-            frame_plot(x + i, y);
-            frame_plot(x, y + i);
-        }
-    }
-
+    float reach = cursor_radius * cursor_radius;
     int16_t left = floorf(MIN(cursor_previous_x, cursor_x) - cursor_radius);
     int16_t right = ceilf(MAX(cursor_previous_x, cursor_x) + cursor_radius);
     int16_t top = floorf(MIN(cursor_previous_y, cursor_y) - cursor_radius);
@@ -994,7 +1016,7 @@ static void cursor_draw(void)
     {
         for (int16_t px = left; px <= right; px++)
         {
-            if (cursor_swept_distance(px, py) <= cursor_radius * cursor_radius) frame_plot(px, py);
+            if (cursor_swept_distance(px, py) <= reach) frame_plot(px, py);
         }
     }
 
@@ -1034,6 +1056,7 @@ static void cursor_update(void)
 
     cursor_move();
     cursor_resize();
+    cursor_sweep();
 
     // Checks the whole movement, so a fast cursor can't skip over the target between frames
     if (cursor_chasing && !cursor_held_keys && cursor_swept_distance(cursor_target_x, cursor_target_y) <= cursor_radius * cursor_radius)
@@ -1060,8 +1083,16 @@ static void cursor_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool presse
     cursor_target_y = MIN(MAX(y, CURSOR_MIN_Y), CURSOR_MAX_Y);
 
     // Adds to the current velocity, so it keeps some momentum while heading for the key
-    cursor_vx += (cursor_target_x - cursor_x) * CURSOR_CHASE_LAUNCH;
-    cursor_vy += (cursor_target_y - cursor_y) * CURSOR_CHASE_LAUNCH;
+    float dx = cursor_target_x - cursor_x;
+    float dy = cursor_target_y - cursor_y;
+    float distance = sqrtf(dx * dx + dy * dy);
+
+    if (distance > 0)
+    {
+        float launch = CURSOR_CHASE_LAUNCH * (1.0f + distance * CURSOR_CHASE_LAUNCH_SCALE);
+        cursor_vx += dx * launch / distance;
+        cursor_vy += dy * launch / distance;
+    }
 }
 
 const krteq_screen_t krteq_screen_cursor = {
