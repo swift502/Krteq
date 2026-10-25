@@ -822,6 +822,7 @@ const krteq_screen_t krteq_screen_waves = {
 #define CURSOR_CHASE_DAMPING 0.35f // Higher value makes it overshoot the key less, 0 (no damping) to 1 (stops dead every frame)
 #define CURSOR_CHASE_LAUNCH 7.0f // Higher value makes it shoot off towards a pressed key harder, speed in pixels per frame added towards the key
 #define CURSOR_CHASE_LAUNCH_SCALE 0.08f // Higher value makes the kick grow more with distance, launch * (1 + distance * scale)
+#define CURSOR_REPEAT_LAUNCH 3.0f // Higher value makes it shoot off harder when the same key is pressed again, speed in pixels per frame
 #define CURSOR_TRACK_SPRING 0.02f // Higher value makes it rejoin the idle path faster, 0 to 4 - 2 * damping
 #define CURSOR_TRACK_DAMPING 0.28f // Higher value makes it overshoot the idle path less, 0 (no damping) to 1 (stops dead every frame)
 #define CURSOR_WALL_BOUNCE 0.15f // Higher value makes it bounce off the screen edge harder, share of speed kept, 0 (stops dead) to 1 (no loss)
@@ -851,6 +852,7 @@ static float cursor_phase; // Radians along the path
 static float cursor_path_speed;
 static float cursor_path_x, cursor_path_y; // Last target on the path
 static uint8_t cursor_held_keys;
+static uint16_t cursor_last_keycode;
 static bool cursor_chasing;
 static uint16_t cursor_timer;
 
@@ -1089,10 +1091,13 @@ static void cursor_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool presse
 
     if (distance > 0)
     {
-        float launch = CURSOR_CHASE_LAUNCH * (1.0f + distance * CURSOR_CHASE_LAUNCH_SCALE);
+        // Repeating a key gives a gentle nudge instead of a full launch
+        float launch = keycode == cursor_last_keycode ? CURSOR_REPEAT_LAUNCH : CURSOR_CHASE_LAUNCH * (1.0f + distance * CURSOR_CHASE_LAUNCH_SCALE);
         cursor_vx += dx * launch / distance;
         cursor_vy += dy * launch / distance;
     }
+
+    cursor_last_keycode = keycode;
 }
 
 const krteq_screen_t krteq_screen_cursor = {
