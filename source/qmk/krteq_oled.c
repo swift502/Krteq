@@ -831,8 +831,8 @@ const krteq_screen_t krteq_screen_waves = {
 #define CURSOR_PATH_SPEED 0.91f // Higher value makes it move along the idle path faster, pixels per frame
 #define CURSOR_PATH_ACCELERATION 0.012f // Higher value makes it get up to idle speed faster
 #define CURSOR_PATH_SAMPLES 64 // Points checked for the nearest place to rejoin the path
-#define CURSOR_MAX_RADIUS 5.0f // Radius when still
-#define CURSOR_MIN_RADIUS 2.5f // Radius at the fast speed
+#define CURSOR_MAX_RADIUS 4.5f // Radius when still
+#define CURSOR_MIN_RADIUS 2.0f // Radius at the fast speed
 #define CURSOR_FAST_SPEED 6.0f // Higher value makes it shrink less when moving, pixels per frame
 #define CURSOR_BLUR_SPEED 1.5f // Higher value makes it skip the motion blur at faster idle speeds, pixels per frame
 #define CURSOR_MIN_X CURSOR_MAX_RADIUS
