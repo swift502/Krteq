@@ -23,7 +23,7 @@ extern const krteq_screen_t krteq_screen_indicators;
 extern const krteq_screen_t krteq_screen_bongo_cat;
 extern const krteq_screen_t krteq_screen_starfield;
 extern const krteq_screen_t krteq_screen_waves;
-extern const krteq_screen_t krteq_screen_oscillator;
+extern const krteq_screen_t krteq_screen_cursor;
 extern const krteq_screen_t krteq_screen_game_of_life;
 extern const krteq_screen_t krteq_screen_system_info;
 
