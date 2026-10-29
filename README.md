@@ -110,7 +110,7 @@ QMK/VIA setup with a few custom features:
 
 ### Overrides
 
-Some functionality can be overridden in user keymap's `config.h`:
+Some functionality can be overridden in a user keymap `config.h`:
 
 ```c
 // Layer which forces a preview of the "Indicators" screen
