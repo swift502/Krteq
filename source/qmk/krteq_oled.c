@@ -405,15 +405,18 @@ static uint16_t random_value(void)
 #define INDICATOR_NUM_X 13
 #define INDICATOR_CAP_X 55
 #define INDICATOR_SCR_X 97
+#define INDICATOR_MAX_LABEL_LENGTH 3
 
 static uint8_t indicator_leds;
 
 static void render_indicator(uint8_t x, const char *label, bool enabled)
 {
-    uint8_t width = strlen(label) * OLED_FONT_WIDTH;
+    char text[INDICATOR_MAX_LABEL_LENGTH + 1] = {0};
+    strncpy(text, label, INDICATOR_MAX_LABEL_LENGTH);
+    uint8_t width = strlen(text) * OLED_FONT_WIDTH;
 
     draw_box(x - INDICATOR_PADDING_X, INDICATOR_TOP, width + INDICATOR_PADDING_X * 2, INDICATOR_HEIGHT, enabled);
-    draw_text(x + width / 2, INDICATOR_TOP + INDICATOR_PADDING_Y, label, enabled);
+    draw_text(x + width / 2, INDICATOR_TOP + INDICATOR_PADDING_Y, text, enabled);
 }
 
 static void indicators_update(void)

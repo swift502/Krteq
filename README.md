@@ -113,10 +113,12 @@ QMK/VIA setup with a few custom features:
 Some functionality can be overridden in user keymap's `config.h`:
 
 ```c
-// Layer which temporarily shows the "Indicators" screen
+// Layer which forces a preview of the "Indicators" screen
 #define INDICATORS_SHOW_LAYER 1
 
-// Scroll lock label on the "Indicators" screen
+// Because scroll lock is rarely used nowadays, its indicator
+// label can display a custom three letter string to denote
+// custom script functionality
 #define INDICATORS_SCROLL_LABEL "ACC"
 
 // Layer (and above) which shows the "Input lock" screen
