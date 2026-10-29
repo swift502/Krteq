@@ -7,8 +7,18 @@
 
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
 #define FRAME_DURATION_30_FPS 33 // Milliseconds per frame
-#define INDICATORS_LAYER 1
-#define INPUT_LOCK_LAYER 4
+
+#ifndef INDICATORS_SHOW_LAYER
+#    define INDICATORS_SHOW_LAYER 255
+#endif
+
+#ifndef INDICATORS_SCROLL_LABEL
+#    define INDICATORS_SCROLL_LABEL "SCR"
+#endif
+
+#ifndef INPUT_LOCK_LAYER
+#    define INPUT_LOCK_LAYER 255
+#endif
 
 // Offsets into the EEPROM keyboard datablock
 #define DATA_SCREEN_OFFSET 0
@@ -394,7 +404,7 @@ static uint16_t random_value(void)
 #define INDICATOR_TOP ((OLED_DISPLAY_HEIGHT - INDICATOR_HEIGHT) / 2)
 #define INDICATOR_NUM_X 13
 #define INDICATOR_CAP_X 55
-#define INDICATOR_ACC_X 97
+#define INDICATOR_SCR_X 97
 
 static uint8_t indicator_leds;
 
@@ -416,7 +426,7 @@ static void indicators_update(void)
 
     render_indicator(INDICATOR_NUM_X, "NUM", leds.num_lock);
     render_indicator(INDICATOR_CAP_X, "CAP", leds.caps_lock);
-    render_indicator(INDICATOR_ACC_X, "ACC", leds.scroll_lock);
+    render_indicator(INDICATOR_SCR_X, INDICATORS_SCROLL_LABEL, leds.scroll_lock);
 }
 
 const krteq_screen_t krteq_screen_indicators = {
@@ -1443,22 +1453,33 @@ static void print_qmk_version(char *out)
     print_version(out, bcd_value(QMK_VERSION_BCD >> 24 & 0xFF), bcd_value(QMK_VERSION_BCD >> 16 & 0xFF), bcd_value(QMK_VERSION_BCD & 0xFFFF));
 }
 
+// Accumulated separately because the 32-bit millisecond timer wraps around after ~49 days
+static uint32_t uptime_seconds;
+static uint32_t uptime_last_ms;
+
+static void uptime_update(void)
+{
+    uint32_t elapsed_seconds = (timer_read32() - uptime_last_ms) / 1000;
+    uptime_seconds += elapsed_seconds;
+    uptime_last_ms += elapsed_seconds * 1000;
+}
+
 static void print_uptime(char *out)
 {
-    uint32_t seconds = timer_read32() / 1000;
+    uint32_t seconds = uptime_seconds;
+    uint32_t values[] = { seconds / 86400, seconds / 3600 % 24, seconds / 60 % 60, seconds % 60 };
+    const char units[] = "dhms";
 
-    if (seconds >= 24 * 60 * 60)
-    {
-        out = print_number(out, seconds / (24 * 60 * 60), 1);
-        *out++ = 'd';
-        *out++ = ' ';
-    }
+    // Print the two largest units, starting from the first non-zero one
+    uint8_t first = 0;
+    while (first < 2 && values[first] == 0) first++;
 
-    out = print_number(out, seconds / (60 * 60) % 24, 2);
-    *out++ = ':';
-    out = print_number(out, seconds / 60 % 60, 2);
-    *out++ = ':';
-    print_number(out, seconds % 60, 2);
+    out = print_number(out, values[first], 1);
+    *out++ = units[first];
+    *out++ = ' ';
+    out = print_number(out, values[first + 1], 1);
+    *out++ = units[first + 1];
+    *out = '\0';
 }
 
 static void render_info_row(uint8_t row, const char *label, const char *value)
@@ -1869,7 +1890,7 @@ static const krteq_screen_t *active_screen(void)
 
     uint8_t layer = get_highest_layer(layer_state);
     if (layer >= INPUT_LOCK_LAYER) return &system_screen_input_lock;
-    if (layer == INDICATORS_LAYER) return &krteq_screen_indicators;
+    if (layer == INDICATORS_SHOW_LAYER) return &krteq_screen_indicators;
 
     if (overlay) return overlay;
     return get_user_screen(current_user_screen);
@@ -1877,6 +1898,8 @@ static const krteq_screen_t *active_screen(void)
 
 bool oled_task_kb(void)
 {
+    uptime_update();
+
     if (!oled_task_user())
     {
         return false;

@@ -108,6 +108,21 @@ QMK/VIA setup with a few custom features:
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> reverts to the default keymap
 
+### Overrides
+
+Some functionality can be overridden in user keymap's `config.h`:
+
+```c
+// Layer which temporarily shows the "Indicators" screen
+#define INDICATORS_SHOW_LAYER 1
+
+// Scroll lock label on the "Indicators" screen
+#define INDICATORS_SCROLL_LABEL "ACC"
+
+// Layer (and above) which shows the "Input lock" screen
+#define INPUT_LOCK_LAYER 4
+```
+
 ### Adding custom OLED screens
 
 In QMK, user keymaps can completely override oled rendering via `oled_task_user()`. However, Krteq also exposes its custom screen system, where screen interaction is done via the `KRT_SCR` keycode. Hooking into this system is preferred as it ensures that other built-in system screen features continue to work properly.

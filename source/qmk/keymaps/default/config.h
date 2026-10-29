@@ -1,0 +1,5 @@
+#pragma once
+
+#define INDICATORS_SHOW_LAYER 1
+#define INDICATORS_SCROLL_LABEL "ACC"
+#define INPUT_LOCK_LAYER 4
