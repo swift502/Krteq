@@ -88,6 +88,8 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 | 20kΩ resistor | 0603 | 0603WAF2002T5E |
 | 100kΩ resistor | 0603 | 0603WAF1003T5E |
 
+<!-- Consider 23-23B/R6GHBHW-C30/2A backlight LED if discolored glint issues persist -->
+
 ## Case
 
 Case blend file can be found in [source/Krteq.blend](source/Krteq.blend). It's designed non-destructively, so it should be easy to modify if needed.
