@@ -5,8 +5,16 @@
 <title>Krteq - Owner's Manual</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
+    :root {
+        --display: 400 12pt/1 "Silkscreen", "Space Mono", monospace;
+        --text: 400 7.6pt/1.45 "Space Mono", "Courier New", monospace;
+        --small: 400 5.4pt/1.15 "Space Grotesk", "Space Mono", sans-serif;
+        --line: 0.25mm solid #000;
+        --rule: 0.6mm solid #000;
+    }
+
     @page { size: A5; margin: 0; }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,13 +22,14 @@
     html, body { background: #888; }
 
     body {
-        font-family: "IBM Plex Mono", Consolas, "Courier New", monospace;
-        font-size: 8.3pt;
-        line-height: 1.42;
+        font: var(--text);
+        font-synthesis: none;
         color: #000;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
+
+    b, code, kbd, th, .pageno, ol li::before { font-weight: 700; }
 
     .page {
         width: 148mm;
@@ -38,45 +47,26 @@
         .page:last-child { break-after: auto; }
     }
 
-    /* ---------- header ---------- */
-
-    header {
-        padding-bottom: 2mm;
-        border-bottom: 0.6mm solid #000;
-    }
-
+    header { padding-bottom: 2mm; border-bottom: var(--rule); }
     img { display: block; image-rendering: pixelated; }
-
-    header img {
-        height: 7mm;
-    }
-
-    /* ---------- sections ---------- */
+    header img { height: 7mm; }
 
     section { margin-top: 7mm; }
 
     h2 {
-        font-family: "VT323", "IBM Plex Mono", monospace;
-        font-weight: normal;
-        font-size: 15pt;
-        line-height: 1;
+        font: var(--display);
         display: flex;
         align-items: center;
         gap: 2mm;
         margin-bottom: 3mm;
     }
 
-    h2 .num {
-        background: #000;
-        color: #fff;
-        padding: 0.3mm 1.4mm 0;
-    }
+    h2 .num { background: #000; color: #fff; padding: 0.6mm 1.2mm 0.4mm; }
 
     h2::after {
         content: "";
         flex: 1;
         border-bottom: 0.3mm dashed #000;
-        transform: translateY(-0.4mm);
     }
 
     p + p { margin-top: 1.2mm; }
@@ -84,73 +74,38 @@
     section > p + table { margin-top: 3mm; }
 
     ol { list-style: none; counter-reset: step; }
+    ol li { counter-increment: step; position: relative; padding-left: 6mm; margin-bottom: 0.9mm; }
+    ol li::before { content: "[" counter(step) "]"; position: absolute; left: 0; }
 
-    ol li {
-        counter-increment: step;
-        position: relative;
-        padding-left: 6mm;
-        margin-bottom: 0.9mm;
-    }
-
-    ol li::before {
-        content: "[" counter(step) "]";
-        position: absolute;
-        left: 0;
-        font-weight: 700;
-    }
-
-    b { font-weight: 700; }
-
-    code {
-        font-family: inherit;
-        font-weight: 600;
-        border-bottom: 0.25mm dotted #000;
-    }
+    code { font: inherit; font-weight: 700; border-bottom: 0.25mm dotted #000; }
 
     kbd {
-        font-family: inherit;
-        font-size: 6.4pt;
-        font-weight: 600;
+        font: var(--small);
+        font-weight: 700;
         display: inline-block;
         min-width: 4.2mm;
+        padding: 0.2mm 1mm;
         text-align: center;
-        padding: 0 1mm;
-        border: 0.25mm solid #000;
+        border: var(--line);
         border-bottom-width: 0.7mm;
         border-radius: 0.8mm;
-        line-height: 1.35;
         vertical-align: 0.2mm;
     }
 
-    /* ---------- keycode table ---------- */
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 7.8pt;
-    }
+    table { width: 100%; border-collapse: collapse; }
 
     th {
+        font: var(--small);
+        font-weight: 700;
         text-align: left;
-        font-weight: 600;
-        font-size: 6.3pt;
         text-transform: uppercase;
-        letter-spacing: 0.2mm;
         border-bottom: 0.4mm solid #000;
-        padding: 0 1.5mm 0.5mm;
+        padding: 0 1.5mm 0.7mm;
     }
 
-    td {
-        padding: 0.9mm 1.5mm;
-        border-bottom: 0.2mm dashed #000;
-        vertical-align: top;
-    }
-
+    td { padding: 0.8mm 1.5mm; border-bottom: 0.2mm dashed #000; vertical-align: top; }
     td:first-child, th:first-child { padding-left: 0; }
-
     td:first-child code { border: none; }
-
-    /* ---------- keyboard map ---------- */
 
     .board {
         display: grid;
@@ -172,60 +127,43 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
         white-space: nowrap;
         overflow: hidden;
-        padding: 0.3mm 0;
     }
 
-    .key b { font-size: 8.5pt; line-height: 1; }
-    .key i { font-style: normal; font-size: 5pt; line-height: 1; letter-spacing: -0.2mm; }
-    .key i { position: absolute; }
-    .key i.r { top: 0.6mm; right: 0.4mm; }
-    .key i.l { bottom: 0.4mm; left: 0.4mm; }
+    .key b { line-height: 1; }
+    .key i { font: var(--small); position: absolute; }
+    .key i.r { top: 0.6mm; right: 0.5mm; }
+    .key i.l { bottom: 0.5mm; left: 0.5mm; }
+
+    .arrow { width: 0.8em; height: 0.8em; display: block; fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: square; }
+    .key i .arrow { stroke-width: 1.1; }
 
     .board .gap { grid-column: span 10; }
     .board .wide { grid-column: span 2; aspect-ratio: auto; }
     .board .hi { background: #000; color: #fff; }
     .board .hi b,
-    .board .volume b { font-size: 6.6pt; }
+    .board .volume b { font: var(--small); font-weight: 700; }
 
-    .layout-legend {
-        margin-top: 3mm;
-        font-size: 7.4pt;
-    }
+    .layout-legend { margin-top: 3mm; }
 
-    .firmware-info {
-        display: flex;
-        align-items: center;
-        gap: 5mm;
-        break-inside: avoid;
-    }
-
+    .firmware-info { display: flex; align-items: center; gap: 5mm; break-inside: avoid; }
     .firmware-info .qr { width: 28mm; height: 28mm; flex-shrink: 0; }
-    .bottom-cat {
-        width: 28mm;
-        align-self: center;
-        margin-top: auto;
-        margin-bottom: 0.5mm;
-    }
-    .bottom-cat + footer { margin-top: 0; }
 
-    /* ---------- footer ---------- */
+    .bottom-cat { width: 28mm; align-self: center; margin-top: auto; margin-bottom: 0.5mm; }
+    .bottom-cat + footer { margin-top: 0; }
 
     footer {
         margin-top: auto;
         padding-top: 2.2mm;
-        border-top: 0.6mm solid #000;
+        border-top: var(--rule);
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        font-size: 7.4pt;
         gap: 4mm;
     }
 
-    .pageno { font-weight: 600; letter-spacing: 0.3mm; white-space: nowrap; }
-
+    .pageno { white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -247,10 +185,12 @@
                 [["1","F1"],["2","F2"],["3","F3"],["4","F4"],["5","F5"],["6","F6"],["7","F7"],["8","F8"],["9","F9"],["0","F10","Mute"],["-","F11","Vol-"],["=","F12","Vol+"]],
                 [["Tab","Ins","KrtRgb"],["Q","","Sat-"],["W","↑","Bri+"],["E","","Sat+"],["R","PgUp","Spd+"],["T","7"],["Y","8"],["U","9"],["I"],["O","","/"],["P","","*"],["Bsp","","-"]],
                 [["Esc","CapLck"],["A","←","Hue-"],["S","↓","Bri-"],["D","→","Hue+"],["F","PgDn","Spd-"],["G","4"],["H","5"],["J","6"],["K"],["L","["],[";","]"],["'","\\","+"]],
-                [["Sft","Sfnt"],["Z","\\"],["X"],["C"],["V"],["B","1"],["N","2"],["M","3"],[","],["."],["/"],["Sfnt","","Shift+Ent"]],
-                [["Ctl","ScrLck"],["GUI"],["KrtVol",,,"volume"],["Alt"],["Lwr",,,"hi"],["Space","0",,"wide"],["Rse",".",,"hi"],["←","Home"],["↓"],["↑"],["→","End","Ctrl+Ent"]],
+                [["Sft","Sfnt"],["Z","\\"],["X"],["C"],["V"],["B","1"],["N","2"],["M","3"],[","],["."],["/"],["Sfnt","","Sft+Ent"]],
+                [["Ctl","ScrLck"],["GUI"],["KrtVol",,,"volume"],["Alt"],["Lwr",,,"hi"],["Space","0",,"wide"],["Rse",".",,"hi"],["←","Home"],["↓"],["↑"],["→","End","Ctl+Ent"]],
             ];
-            const esc = t => (t || "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
+            const arrows = { "↑": 0, "→": 90, "↓": 180, "←": 270 };
+            const esc = t => (t || "").replace(/&/g, "&amp;").replace(/</g, "&lt;")
+                .replace(/[↑→↓←]/g, a => `<svg class="arrow" viewBox="0 0 10 10" style="transform: rotate(${arrows[a]}deg)"><path d="M5 9V1.5M1.8 4.7 5 1.5l3.2 3.2"/></svg>`);
             document.getElementById("board").innerHTML = rows.map(row => row.map(k => k
                 ? `<div class="key ${k[3] || ""}"><i class="r">${esc(k[2])}</i><b>${esc(k[0])}</b><i class="l">${esc(k[1])}</i></div>`
                 : `<div class="gap"></div>`).join("")).join("");
@@ -294,7 +234,7 @@
 
     <section>
         <h2><span class="num">03</span> KRT KEYCODES</h2>
-        <p>Krteq keycodes can be found in VIA under the <b>Custom</b> keycodes section.</p>
+        <p>Krteq keycodes are available in VIA under the <b>Custom</b> keycodes section. This table lists their exact behavior.</p>
         <table>
             <tr><th>Key</th><th>Press</th><th>Shift + press</th><th>Ctrl + press</th></tr>
             <tr><td><code>KrtScr</code></td><td>Next OLED screen</td><td>Previous screen</td><td>Default screen</td></tr>
