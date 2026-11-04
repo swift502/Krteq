@@ -5,12 +5,12 @@
 <title>krteq_manual</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tiny5&family=Martian+Mono:wght@400;700&family=Chakra+Petch:wght@400;700&display=swap" rel="stylesheet">
 <style>
     :root {
-        --display: 400 12pt/1 "Silkscreen", "Space Mono", monospace;
-        --text: 400 7.6pt/1.45 "Space Mono", "Courier New", monospace;
-        --small: 400 5.4pt/1.15 "Space Grotesk", "Space Mono", sans-serif;
+        --display: 400 12pt/1 "Tiny5", "Martian Mono", monospace;
+        --text: 400 6.6pt/1.6 "Martian Mono", "Courier New", monospace;
+        --small: 400 5.6pt/1.15 "Chakra Petch", sans-serif;
         --line: 0.25mm solid #000;
         --rule: 0.6mm solid #000;
     }
@@ -48,7 +48,7 @@
     }
 
     header { padding-bottom: 2mm; border-bottom: var(--rule); }
-    img { display: block; image-rendering: pixelated; }
+    img { display: block; }
     header img { height: 7mm; }
 
     section { margin-top: 7mm; }
@@ -70,7 +70,7 @@
     }
 
     p + p { margin-top: 1.2mm; }
-    section > p + ol,
+    section > p + ol { margin-top: 3mm; }
     section > p + table { margin-top: 3mm; }
 
     ol { list-style: none; counter-reset: step; }
@@ -114,7 +114,7 @@
         padding: 2mm;
         border: 0.4mm solid #000;
         border-radius: 1.8mm;
-        margin-top: 3mm;
+        margin: 4.0mm 0 6.0mm;
     }
 
     .key {
@@ -131,7 +131,7 @@
         overflow: hidden;
     }
 
-    .key b { line-height: 1; }
+    .key b { font: var(--small); font-size: 7.4pt; font-weight: 700; line-height: 1; }
     .key i { font: var(--small); position: absolute; }
     .key i.r { top: 0.6mm; right: 0.5mm; }
     .key i.l { bottom: 0.5mm; left: 0.5mm; }
@@ -145,10 +145,10 @@
     .board .hi b,
     .board .volume b { font: var(--small); font-weight: 700; }
 
-    .layout-legend { margin-top: 3mm; }
+    .layout-legend { margin-top: 4mm; }
 
-    .firmware-info { display: flex; align-items: center; gap: 5mm; break-inside: avoid; }
-    .firmware-info .qr { width: 28mm; height: 28mm; flex-shrink: 0; }
+    .firmware-info { display: flex; align-items: flex-start; gap: 5mm; break-inside: avoid; }
+    .firmware-info .qr { width: 26mm; height: 26mm; flex-shrink: 0; }
 
     .bottom-cat { width: 28mm; align-self: center; margin-top: auto; margin-bottom: 0.5mm; }
     .bottom-cat + footer { margin-top: 0; }
@@ -170,7 +170,7 @@
 <div class="page">
 
     <header>
-        <img src="logo.png" alt="KRT">
+        <img src="logo.svg" alt="KRT">
     </header>
 
 
@@ -200,7 +200,7 @@
             <tr><th scope="col">Label</th><th scope="col">Key</th><th scope="col">Action</th></tr>
             <tr><td><b>Sfnt</b></td><td>Space cadet enter</td><td>Tap for Enter, hold for Shift</td></tr>
             <tr><td><b>InpLck</b></td><td>Input lock</td><td>Disables typing for cleaning</td></tr>
-            <tr><td><b>KrtScr</b></td><td>Krteq Screen</td><td>Combined screen control</td></tr>
+            <tr><td><b>KrtScr</b></td><td>Krteq Screen</td><td>Combined keyboard screen control</td></tr>
             <tr><td><b>KrtRgb</b></td><td>Krteq RGB</td><td>Combined RGB control</td></tr>
             <tr><td><b>KrtVol</b></td><td>Krteq Volume</td><td>Combined volume control</td></tr>
         </table>
@@ -229,7 +229,7 @@
 <div class="page">
 
     <header>
-        <img src="logo.png" alt="KRT">
+        <img src="logo.svg" alt="KRT">
     </header>
 
     <section>
@@ -248,8 +248,8 @@
         <p>Low-level shortcuts baked into the firmware.</p>
         <table>
             <tr><th scope="col">Shortcut</th><th scope="col">Action</th></tr>
-            <tr><td style="width: 34mm;"><kbd>Sft</kbd> + <kbd>Ent</kbd> + <kbd>B</kbd></td><td>Bootloader mode, for flashing new firmware.</td></tr>
-            <tr><td><kbd>Sft</kbd> + <kbd>Ent</kbd> + <kbd>C</kbd></td><td>Factory reset. Wipes your VIA keymap back to default.</td></tr>
+            <tr><td style="width: 34mm;"><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd></td><td>Bootloader mode, for flashing new firmware.</td></tr>
+            <tr><td><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd></td><td>Factory reset. Wipes your VIA keymap back to default.</td></tr>
         </table>
     </section>
 
@@ -260,11 +260,11 @@
                 <p>Add interactive OLED screens or customize the built-in behaviors by compiling your own QMK user keymap!</p>
                 <p>Advanced documentation and examples are available in the GitHub repository's README.</p>
             </div>
-            <img class="qr" src="project-qr.png" alt="QR code for source code and OLED customization guide">
+            <img class="qr" src="project-qr.svg" alt="QR code for source code and OLED customization guide">
         </div>
     </section>
 
-    <img class="bottom-cat" src="bongo-cat.png" alt="Pixel-art bongo cat from the keyboard's OLED">
+    <img class="bottom-cat" src="bongo-cat.svg" alt="Pixel-art bongo cat from the keyboard's OLED">
 
     <footer>
         <div><b>github.com/swift502/Krteq</b></div>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="89" height="30" viewBox="0 0 89 30">
+<path d="M0 0h13v2h-13z"/>
+<path d="M18 0h10v2h-10z"/>
+<path d="M32 0h21v1h2v1h-23z"/>
+<path d="M61 0h28v2h-28z"/>
+<path d="M0 4h13v2h-13z"/>
+<path d="M16 4h12v2h-13v-1h1z"/>
+<path d="M32 4h25v1h1v1h-26z"/>
+<path d="M61 4h28v2h-28z"/>
+<path d="M5 8h8v1h1v-1h9v1h-1v1h-17z"/>
+<path d="M36 8h8v2h-8z"/>
+<path d="M49 8h9v2h-9z"/>
+<path d="M61 8h7v2h-7z"/>
+<path d="M71 8h8v2h-8z"/>
+<path d="M82 8h7v2h-7z"/>
+<path d="M5 12h16v1h-1v1h-15z"/>
+<path d="M36 12h20v1h-1v1h-19z"/>
+<path d="M71 12h8v2h-8z"/>
+<path d="M5 16h15v2h-15z"/>
+<path d="M36 16h19v1h1v1h-20z"/>
+<path d="M71 16h8v2h-8z"/>
+<path d="M5 20h16v1h1v1h-8v-1h-1v1h-8z"/>
+<path d="M36 20h8v2h-8z"/>
+<path d="M48 20h9v2h-8v-1h-1z"/>
+<path d="M71 20h8v2h-8z"/>
+<path d="M0 24h13v2h-13z"/>
+<path d="M15 24h14v2h-13v-1h-1z"/>
+<path d="M32 24h12v2h-12z"/>
+<path d="M49 24h11v2h-11z"/>
+<path d="M67 24h16v2h-16z"/>
+<path d="M0 28h13v2h-13z"/>
+<path d="M17 28h12v2h-12z"/>
+<path d="M32 28h12v2h-12z"/>
+<path d="M49 28h11v2h-11z"/>
+<path d="M67 28h16v2h-16z"/>
+</svg>
