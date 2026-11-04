@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Krteq - Owner's Manual</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+<style>
+    @page { size: A5; margin: 0; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { background: #888; }
+
+    body {
+        font-family: "IBM Plex Mono", Consolas, "Courier New", monospace;
+        font-size: 8.3pt;
+        line-height: 1.42;
+        color: #000;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .page {
+        width: 148mm;
+        height: 210mm;
+        margin: 10mm auto;
+        padding: 8mm 9mm 7mm;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media print {
+        html, body { background: #fff; }
+        .page { margin: 0; break-after: page; }
+        .page:last-child { break-after: auto; }
+    }
+
+    /* ---------- header ---------- */
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5mm;
+        padding-bottom: 2mm;
+        border-bottom: 0.6mm solid #000;
+    }
+
+    header img {
+        height: 7mm;
+        image-rendering: pixelated;
+        display: block;
+    }
+
+    /* ---------- sections ---------- */
+
+    section { margin-top: 8mm; }
+
+    h2 {
+        font-family: "VT323", "IBM Plex Mono", monospace;
+        font-weight: normal;
+        font-size: 15pt;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        gap: 2mm;
+        margin-bottom: 3mm;
+    }
+
+    h2 .num {
+        background: #000;
+        color: #fff;
+        padding: 0.3mm 1.4mm 0;
+    }
+
+    h2::after {
+        content: "";
+        flex: 1;
+        border-bottom: 0.3mm dashed #000;
+        transform: translateY(-0.4mm);
+    }
+
+    p + p { margin-top: 1.2mm; }
+    section > p + ol,
+    section > p + table { margin-top: 3mm; }
+
+    ol { list-style: none; counter-reset: step; }
+
+    ol li {
+        counter-increment: step;
+        position: relative;
+        padding-left: 6mm;
+        margin-bottom: 0.9mm;
+    }
+
+    ol li::before {
+        content: "[" counter(step) "]";
+        position: absolute;
+        left: 0;
+        font-weight: 700;
+    }
+
+    b, strong { font-weight: 700; }
+
+    code {
+        font-family: inherit;
+        font-weight: 600;
+        border-bottom: 0.25mm dotted #000;
+    }
+
+    kbd {
+        font-family: inherit;
+        font-size: 6.4pt;
+        font-weight: 600;
+        display: inline-block;
+        min-width: 4.2mm;
+        text-align: center;
+        padding: 0 1mm;
+        border: 0.25mm solid #000;
+        border-bottom-width: 0.7mm;
+        border-radius: 0.8mm;
+        line-height: 1.35;
+        vertical-align: 0.2mm;
+    }
+
+    /* ---------- keycode table ---------- */
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 7.8pt;
+    }
+
+    th {
+        text-align: left;
+        font-weight: 600;
+        font-size: 6.3pt;
+        text-transform: uppercase;
+        letter-spacing: 0.2mm;
+        border-bottom: 0.4mm solid #000;
+        padding: 0 1.5mm 0.5mm;
+    }
+
+    td {
+        padding: 0.9mm 1.5mm;
+        border-bottom: 0.2mm dashed #000;
+        vertical-align: top;
+    }
+
+    td:first-child, th:first-child { padding-left: 0; }
+
+    td:first-child code { border: none; }
+
+    /* ---------- keyboard map ---------- */
+
+    .board {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 0.8mm;
+        padding: 2mm;
+        border: 0.4mm solid #000;
+        border-radius: 1.8mm;
+        margin-top: 3mm;
+    }
+
+    .key {
+        aspect-ratio: 1;
+        position: relative;
+        min-width: 0;
+        border: 0.2mm solid #000;
+        box-shadow: 0 0.5mm 0 #000;
+        border-radius: 0.8mm;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 0.3mm 0;
+    }
+
+    .key b { font-size: 8.5pt; font-weight: 700; line-height: 1; }
+    .key i { font-style: normal; font-size: 5pt; line-height: 1; letter-spacing: -0.2mm; }
+    .key i { position: absolute; }
+    .key i.r { top: 0.6mm; right: 0.4mm; }
+    .key i.l { bottom: 0.4mm; left: 0.4mm; }
+
+    .board .gap { grid-column: span 10; }
+    .board .wide { grid-column: span 2; aspect-ratio: auto; }
+    .board .hi { background: #000; color: #fff; }
+    .board .hi b,
+    .board .volume b { font-size: 6.6pt; }
+
+    .layout-legend {
+        margin-top: 3mm;
+        font-size: 7.4pt;
+    }
+
+    /* ---------- footer ---------- */
+
+    footer {
+        margin-top: auto;
+        padding-top: 2.2mm;
+        border-top: 0.6mm solid #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 7.4pt;
+        gap: 4mm;
+    }
+
+    .pageno { font-weight: 600; letter-spacing: 0.3mm; white-space: nowrap; }
+
+</style>
+</head>
+<body>
+<div class="page">
+
+    <header>
+        <img src="logo.png" alt="KRT">
+    </header>
+
+
+    <section>
+        <h2><span class="num">01</span> DEFAULT LAYOUT</h2>
+
+        <div class="board" id="board"></div>
+
+        <table class="layout-legend">
+            <tr><th scope="col">Label</th><th scope="col">Key</th><th scope="col">Action</th></tr>
+            <tr><td><b>Sfnt</b></td><td>Space cadet enter</td><td>Tap for Enter, hold for Shift</td></tr>
+            <tr><td><b>InpLck</b></td><td>Input lock</td><td>Disables typing for cleaning</td></tr>
+        </table>
+
+    </section>
+
+    <section>
+        <h2><span class="num">02</span> CONNECT TO VIA</h2>
+        <p>VIA allows you to easily change the keyboard layout or settings. However a custom design file must be uploaded to make it work.</p>
+        <ol>
+            <li>Get <b>krteq_via.json</b> from <code>github.com/swift502/Krteq/production</code></li>
+            <li>Visit <code>usevia.app</code></li>
+            <li>In the <b>Settings</b> tab, enable <b>Show Design tab</b></li>
+            <li>In the <b>Design</b> tab, click <b>Load</b> and select the JSON file</li>
+            <li>In the <b>Configure</b> tab, click <b>Authorize device</b> and select Krteq</li>
+        </ol>
+    </section>
+
+    <footer>
+        <div><b>github.com/swift502/Krteq</b></div>
+        <div class="pageno">[ 1/2 ]</div>
+    </footer>
+
+</div>
+
+<div class="page">
+
+    <header>
+        <img src="logo.png" alt="KRT">
+    </header>
+
+    <section>
+        <h2><span class="num">03</span> KRT KEYCODES</h2>
+        <p>Found in VIA under the <b>Custom</b> keycode tab.</p>
+        <table>
+            <tr><th>Key</th><th>Press</th><th>Shift + press</th><th>Ctrl + press</th></tr>
+            <tr><td><code>KrtVol</code></td><td>Volume down</td><td>Volume up</td><td>Mute</td></tr>
+            <tr><td><code>KrtScr</code></td><td>Next OLED screen</td><td>Previous screen</td><td>Default screen</td></tr>
+            <tr><td><code>KrtRgb</code></td><td>Next RGB effect</td><td>Previous effect</td><td>Default effect</td></tr>
+        </table>
+    </section>
+
+    <section>
+        <h2><span class="num">04</span> SYSTEM SHORTCUTS</h2>
+        <table>
+            <tr><th scope="col">Shortcut</th><th scope="col">Action</th></tr>
+            <tr><td style="width: 34mm;"><kbd>Sft</kbd> + <kbd>Ent</kbd> + <kbd>B</kbd></td><td>Bootloader mode, for flashing new firmware.</td></tr>
+            <tr><td><kbd>Sft</kbd> + <kbd>Ent</kbd> + <kbd>C</kbd></td><td>Factory reset. Wipes your VIA keymap back to default.</td></tr>
+        </table>
+    </section>
+
+    <script>
+        // [base, lower, raise, class]
+        const rows = [
+            [["`", "InpLck", "KrtScr"], null, ["Del", "NumLck", "RGB"]],
+            [["1","F1"],["2","F2"],["3","F3"],["4","F4"],["5","F5"],["6","F6"],["7","F7"],["8","F8"],["9","F9"],["0","F10","Mute"],["-","F11","Vol-"],["=","F12","Vol+"]],
+            [["Tab","Ins","KrtRgb"],["Q","","Sat-"],["W","↑","Bri+"],["E","","Sat+"],["R","PgUp","Spd+"],["T","7"],["Y","8"],["U","9"],["I"],["O","","/"],["P","","*"],["Bsp","","-"]],
+            [["Esc","CapLck"],["A","←","Hue-"],["S","↓","Bri-"],["D","→","Hue+"],["F","PgDn","Spd-"],["G","4"],["H","5"],["J","6"],["K"],["L","["],[";","]"],["'","\\","+"]],
+            [["Sft","Sfnt"],["Z","\\"],["X"],["C"],["V"],["B","1"],["N","2"],["M","3"],[","],["."],["/"],["Sfnt","","Shift+Ent"]],
+            [["Ctl","ScrLck"],["GUI"],["KrtVol",,,"volume"],["Alt"],["Lwr",,,"hi"],["Space","0",,"wide"],["Rse",".",,"hi"],["←","Home"],["↓"],["↑"],["→","End","Ctrl+Ent"]],
+        ];
+        const esc = t => (t || "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
+        document.getElementById("board").innerHTML = rows.map(row => row.map(k => k
+            ? `<div class="key ${k[3] || ""}"><i class="r">${esc(k[2])}</i><b>${esc(k[0])}</b><i class="l">${esc(k[1])}</i></div>`
+            : `<div class="gap"></div>`).join("")).join("");
+    </script>
+
+    <footer>
+        <div><b>github.com/swift502/Krteq</b></div>
+        <div class="pageno">[ 2/2 ]</div>
+    </footer>
+
+</div>
+</body>
+</html>
