@@ -116,9 +116,8 @@ Some functionality can be overridden in a user keymap `config.h`:
 // Layer which forces a preview of the "Indicators" screen
 #define INDICATORS_SHOW_LAYER 1
 
-// Because scroll lock is rarely used nowadays, its indicator
-// label can display a custom three letter string to denote
-// custom script functionality
+// Replace the scroll lock indicator with three letter
+// string to denote custom script functionality
 #define INDICATORS_SCROLL_LABEL "ACC"
 
 // Layer (and above) which shows the "Input lock" screen
