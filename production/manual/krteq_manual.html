@@ -5,7 +5,7 @@
 <title>Krteq - Owner's Manual</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=VT323&display=swap" rel="stylesheet">
 <style>
     @page { size: A5; margin: 0; }
 
@@ -28,8 +28,6 @@
         margin: 10mm auto;
         padding: 8mm 9mm 7mm;
         background: #fff;
-        position: relative;
-        overflow: hidden;
         display: flex;
         flex-direction: column;
     }
@@ -43,23 +41,19 @@
     /* ---------- header ---------- */
 
     header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 5mm;
         padding-bottom: 2mm;
         border-bottom: 0.6mm solid #000;
     }
 
+    img { display: block; image-rendering: pixelated; }
+
     header img {
         height: 7mm;
-        image-rendering: pixelated;
-        display: block;
     }
 
     /* ---------- sections ---------- */
 
-    section { margin-top: 8mm; }
+    section { margin-top: 7mm; }
 
     h2 {
         font-family: "VT323", "IBM Plex Mono", monospace;
@@ -105,7 +99,7 @@
         font-weight: 700;
     }
 
-    b, strong { font-weight: 700; }
+    b { font-weight: 700; }
 
     code {
         font-family: inherit;
@@ -184,7 +178,7 @@
         padding: 0.3mm 0;
     }
 
-    .key b { font-size: 8.5pt; font-weight: 700; line-height: 1; }
+    .key b { font-size: 8.5pt; line-height: 1; }
     .key i { font-style: normal; font-size: 5pt; line-height: 1; letter-spacing: -0.2mm; }
     .key i { position: absolute; }
     .key i.r { top: 0.6mm; right: 0.4mm; }
@@ -200,6 +194,22 @@
         margin-top: 3mm;
         font-size: 7.4pt;
     }
+
+    .firmware-info {
+        display: flex;
+        align-items: center;
+        gap: 5mm;
+        break-inside: avoid;
+    }
+
+    .firmware-info .qr { width: 28mm; height: 28mm; flex-shrink: 0; }
+    .bottom-cat {
+        width: 28mm;
+        align-self: center;
+        margin-top: auto;
+        margin-bottom: 0.5mm;
+    }
+    .bottom-cat + footer { margin-top: 0; }
 
     /* ---------- footer ---------- */
 
@@ -230,11 +240,29 @@
         <h2><span class="num">01</span> DEFAULT LAYOUT</h2>
 
         <div class="board" id="board"></div>
+        <script>
+            // [base, lower, raise, class]
+            const rows = [
+                [["`", "InpLck", "KrtScr"], null, ["Del", "NumLck", "RGB"]],
+                [["1","F1"],["2","F2"],["3","F3"],["4","F4"],["5","F5"],["6","F6"],["7","F7"],["8","F8"],["9","F9"],["0","F10","Mute"],["-","F11","Vol-"],["=","F12","Vol+"]],
+                [["Tab","Ins","KrtRgb"],["Q","","Sat-"],["W","↑","Bri+"],["E","","Sat+"],["R","PgUp","Spd+"],["T","7"],["Y","8"],["U","9"],["I"],["O","","/"],["P","","*"],["Bsp","","-"]],
+                [["Esc","CapLck"],["A","←","Hue-"],["S","↓","Bri-"],["D","→","Hue+"],["F","PgDn","Spd-"],["G","4"],["H","5"],["J","6"],["K"],["L","["],[";","]"],["'","\\","+"]],
+                [["Sft","Sfnt"],["Z","\\"],["X"],["C"],["V"],["B","1"],["N","2"],["M","3"],[","],["."],["/"],["Sfnt","","Shift+Ent"]],
+                [["Ctl","ScrLck"],["GUI"],["KrtVol",,,"volume"],["Alt"],["Lwr",,,"hi"],["Space","0",,"wide"],["Rse",".",,"hi"],["←","Home"],["↓"],["↑"],["→","End","Ctrl+Ent"]],
+            ];
+            const esc = t => (t || "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
+            document.getElementById("board").innerHTML = rows.map(row => row.map(k => k
+                ? `<div class="key ${k[3] || ""}"><i class="r">${esc(k[2])}</i><b>${esc(k[0])}</b><i class="l">${esc(k[1])}</i></div>`
+                : `<div class="gap"></div>`).join("")).join("");
+        </script>
 
         <table class="layout-legend">
             <tr><th scope="col">Label</th><th scope="col">Key</th><th scope="col">Action</th></tr>
             <tr><td><b>Sfnt</b></td><td>Space cadet enter</td><td>Tap for Enter, hold for Shift</td></tr>
             <tr><td><b>InpLck</b></td><td>Input lock</td><td>Disables typing for cleaning</td></tr>
+            <tr><td><b>KrtScr</b></td><td>Krteq Screen</td><td>Combined screen control</td></tr>
+            <tr><td><b>KrtRgb</b></td><td>Krteq RGB</td><td>Combined RGB control</td></tr>
+            <tr><td><b>KrtVol</b></td><td>Krteq Volume</td><td>Combined volume control</td></tr>
         </table>
 
     </section>
@@ -266,17 +294,18 @@
 
     <section>
         <h2><span class="num">03</span> KRT KEYCODES</h2>
-        <p>Found in VIA under the <b>Custom</b> keycode tab.</p>
+        <p>Krteq keycodes found in VIA under the <b>Custom</b> keycodes section.</p>
         <table>
             <tr><th>Key</th><th>Press</th><th>Shift + press</th><th>Ctrl + press</th></tr>
-            <tr><td><code>KrtVol</code></td><td>Volume down</td><td>Volume up</td><td>Mute</td></tr>
             <tr><td><code>KrtScr</code></td><td>Next OLED screen</td><td>Previous screen</td><td>Default screen</td></tr>
             <tr><td><code>KrtRgb</code></td><td>Next RGB effect</td><td>Previous effect</td><td>Default effect</td></tr>
+            <tr><td><code>KrtVol</code></td><td>Volume down</td><td>Volume up</td><td>Mute</td></tr>
         </table>
     </section>
 
     <section>
         <h2><span class="num">04</span> SYSTEM SHORTCUTS</h2>
+        <p>Low-level shortcuts baked into the firmware.</p>
         <table>
             <tr><th scope="col">Shortcut</th><th scope="col">Action</th></tr>
             <tr><td style="width: 34mm;"><kbd>Sft</kbd> + <kbd>Ent</kbd> + <kbd>B</kbd></td><td>Bootloader mode, for flashing new firmware.</td></tr>
@@ -284,21 +313,18 @@
         </table>
     </section>
 
-    <script>
-        // [base, lower, raise, class]
-        const rows = [
-            [["`", "InpLck", "KrtScr"], null, ["Del", "NumLck", "RGB"]],
-            [["1","F1"],["2","F2"],["3","F3"],["4","F4"],["5","F5"],["6","F6"],["7","F7"],["8","F8"],["9","F9"],["0","F10","Mute"],["-","F11","Vol-"],["=","F12","Vol+"]],
-            [["Tab","Ins","KrtRgb"],["Q","","Sat-"],["W","↑","Bri+"],["E","","Sat+"],["R","PgUp","Spd+"],["T","7"],["Y","8"],["U","9"],["I"],["O","","/"],["P","","*"],["Bsp","","-"]],
-            [["Esc","CapLck"],["A","←","Hue-"],["S","↓","Bri-"],["D","→","Hue+"],["F","PgDn","Spd-"],["G","4"],["H","5"],["J","6"],["K"],["L","["],[";","]"],["'","\\","+"]],
-            [["Sft","Sfnt"],["Z","\\"],["X"],["C"],["V"],["B","1"],["N","2"],["M","3"],[","],["."],["/"],["Sfnt","","Shift+Ent"]],
-            [["Ctl","ScrLck"],["GUI"],["KrtVol",,,"volume"],["Alt"],["Lwr",,,"hi"],["Space","0",,"wide"],["Rse",".",,"hi"],["←","Home"],["↓"],["↑"],["→","End","Ctrl+Ent"]],
-        ];
-        const esc = t => (t || "").replace(/&/g, "&amp;").replace(/</g, "&lt;");
-        document.getElementById("board").innerHTML = rows.map(row => row.map(k => k
-            ? `<div class="key ${k[3] || ""}"><i class="r">${esc(k[2])}</i><b>${esc(k[0])}</b><i class="l">${esc(k[1])}</i></div>`
-            : `<div class="gap"></div>`).join("")).join("");
-    </script>
+    <section>
+        <h2><span class="num">05</span> CUSTOMIZATION</h2>
+        <div class="firmware-info">
+            <div>
+                <p>Add interactive OLED screens or customize the built-in behaviors by compiling your own QMK user keymap.</p>
+                <p>Advanced documentation and examples are available in the GitHub repository's README.</p>
+            </div>
+            <img class="qr" src="project-qr.png" alt="QR code for source code and OLED customization guide">
+        </div>
+    </section>
+
+    <img class="bottom-cat" src="bongo-cat.png" alt="Pixel-art bongo cat from the keyboard's OLED">
 
     <footer>
         <div><b>github.com/swift502/Krteq</b></div>
