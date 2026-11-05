@@ -166,9 +166,6 @@
     h3::before { content: ">"; background: #000; color: #fff; padding: 0.4mm 0.9mm 0.2mm; }
     .board + h3 { margin-top: 0; }
 
-    .firmware-info { display: flex; align-items: flex-start; gap: 5mm; break-inside: avoid; }
-    .firmware-info .qr { width: 22mm; height: 22mm; flex-shrink: 0; }
-
     .bottom-cat { width: 26mm; align-self: center; margin-top: auto; margin-bottom: 0.5mm; }
     .bottom-cat + footer { margin-top: 0; }
 
@@ -231,14 +228,14 @@
 
         <h3>Aliases</h3>
         <table>
-            <tr><th scope="col">Label</th><th scope="col">Key</th><th scope="col">Action</th></tr>
+            <tr><th scope="col">Alias</th><th scope="col">Function</th><th scope="col">Action</th></tr>
             <tr><td><code>SftEnt</code></td><td>Space cadet enter</td><td>Tap for Enter, hold for Shift</td></tr>
             <tr><td><code>InpLck</code></td><td>Input lock</td><td>Disables typing (for cleaning and switch testing)</td></tr>
         </table>
 
         <h3>KRT keycodes</h3>
         <table>
-            <tr><th scope="col">Key</th><th scope="col">Press</th><th scope="col">Shift + press</th><th scope="col">Ctrl + press</th></tr>
+            <tr><th scope="col">Keycode</th><th scope="col">Press</th><th scope="col">Shift + press</th><th scope="col">Ctrl + press</th></tr>
             <tr><td><code>KrtScr</code></td><td>Next OLED screen</td><td>Previous screen</td><td>Default screen</td></tr>
             <tr><td><code>KrtRgb</code></td><td>Next RGB effect</td><td>Previous effect</td><td>Default effect</td></tr>
             <tr><td><code>KrtVol</code></td><td>Volume down</td><td>Volume up</td><td>Mute</td></tr>
@@ -286,13 +283,8 @@
 
     <section>
         <h2><span class="num">03</span> CUSTOMIZATION</h2>
-        <div class="firmware-info">
-            <div>
-                <p>Add more interactive OLED screens or customize the built-in behaviors by compiling your own QMK user keymap!</p>
-                <p>Advanced documentation and examples are available in the GitHub repository's README.</p>
-            </div>
-            <img class="qr" src="project-qr.svg" alt="QR code for source code and OLED customization guide">
-        </div>
+        <p>You can add custom interactive OLED screens or customize the built-in behaviors by compiling your own QMK user keymap.</p>
+        <p>Documentation and examples are available at: <code>github.com/swift502/Krteq</code></p>
     </section>
 
     <img class="bottom-cat" src="bongo-cat.svg" alt="Pixel-art bongo cat from the keyboard's OLED">
