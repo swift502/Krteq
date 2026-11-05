@@ -19,7 +19,7 @@
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html, body { background: #888; }
+    html, body { background: #2a2a2e; }
 
     body {
         font: var(--text);
@@ -56,7 +56,7 @@
     img { display: block; }
     header img { height: 7mm; }
 
-    section { margin-top: 7mm; }
+    section { margin-top: 5.5mm; }
 
     h2 {
         font: var(--display);
@@ -160,14 +160,18 @@
         display: flex;
         align-items: center;
         gap: 1.5mm;
-        margin: 4.5mm 0 3mm;
+        margin: 5.0mm 0 3mm;
     }
 
     h3::before { content: ">"; background: #000; color: #fff; padding: 0.4mm 0.9mm 0.2mm; }
     .board + h3 { margin-top: 0; }
 
-    .bottom-cat { width: 26mm; align-self: center; margin-top: auto; margin-bottom: 0.5mm; }
-    .bottom-cat + footer { margin-top: 0; }
+    .with-qr { display: flex; align-items: flex-start; gap: 5mm; }
+    .with-qr .qr-link { width: 18mm; flex-shrink: 0; text-align: center; }
+    .with-qr .qr { width: 100%; image-rendering: pixelated; }
+    .with-qr .qr-label { display: block; margin-top: 1.2mm; font: var(--text); font-weight: 700; font-size: 7px; }
+
+    .schematic { width: 100%; margin-top: 5mm; }
 
     footer {
         margin-top: auto;
@@ -277,17 +281,29 @@
             <li>Visit <code>usevia.app</code></li>
             <li>In the <b>Settings</b> tab, enable <b>Show Design tab</b></li>
             <li>In the <b>Design</b> tab, click <b>Load</b> and select the JSON file</li>
+            <li>Refresh the page (F5)</li>
             <li>In the <b>Configure</b> tab, click <b>Authorize device</b> and select Krteq</li>
         </ol>
     </section>
 
     <section>
         <h2><span class="num">03</span> CUSTOMIZATION</h2>
-        <p>You can add custom interactive OLED screens or customize the built-in behaviors by compiling your own QMK user keymap.</p>
-        <p>Documentation and examples are available at: <code>github.com/swift502/Krteq</code></p>
+        <div class="with-qr">
+            <div>
+                <p>You can add more interactive screens or override the built-in behaviors by compiling your own QMK user keymap. Documentation and examples are available in the GitHub readme.</p>
+                <p>If you find more built-in behaviors which should be exposed for overrides, let's discuss it on Github and improve the firmware!</p>
+            </div>
+            <div class="qr-link">
+                <img class="qr" src="project-qr.svg" alt="QR code linking to github.com/swift502/Krteq">
+                <span class="qr-label">GitHub Page</span>
+            </div>
+        </div>
     </section>
 
-    <img class="bottom-cat" src="bongo-cat.svg" alt="Pixel-art bongo cat from the keyboard's OLED">
+    <section>
+        <h2><span class="num">04</span> SCHEMATIC</h2>
+        <img class="schematic" src="schematic.svg" alt="Switch matrix schematic">
+    </section>
 
     <footer>
         <div class="rule"></div>
