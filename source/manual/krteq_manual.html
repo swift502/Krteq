@@ -47,8 +47,12 @@
         .page:last-child { break-after: auto; }
     }
 
-    header { padding-bottom: 2mm; border-bottom: var(--rule); display: flex; justify-content: space-between; align-items: center; }
-    header .title { font: var(--small); font-size: 14pt; font-weight: 700; line-height: 1; }
+    header, footer { font-family: "Martian Mono", "Courier New", monospace; }
+    header { padding-bottom: 0.5mm; border-bottom: 0.2mm solid #000; }
+    header .masthead { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 1.6mm; border-bottom: 0.9mm solid #000; }
+    header .doc { text-align: right; line-height: 1; }
+    header .title { font-size: 13pt; font-weight: 700; letter-spacing: -0.02em; }
+    header .subtitle { font-size: 5.6pt; margin-top: 0.8mm; }
     img { display: block; }
     header img { height: 7mm; }
 
@@ -108,6 +112,9 @@
     td:first-child, th:first-child { padding-left: 0; }
     td:first-child code { border: none; }
 
+    /* Whole-pixel rows keep kbd borders and legends snapping together in print */
+    .shortcuts tr:not(:first-child) { height: 22px; }
+
     .board {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -160,19 +167,27 @@
     .board + h3 { margin-top: 0; }
 
     .firmware-info { display: flex; align-items: flex-start; gap: 5mm; break-inside: avoid; }
-    .firmware-info .qr { width: 24mm; height: 24mm; flex-shrink: 0; }
+    .firmware-info .qr { width: 22mm; height: 22mm; flex-shrink: 0; }
 
     .bottom-cat { width: 26mm; align-self: center; margin-top: auto; margin-bottom: 0.5mm; }
     .bottom-cat + footer { margin-top: 0; }
 
     footer {
         margin-top: auto;
-        padding-top: 2.2mm;
-        border-top: var(--rule);
+        padding-top: 0.5mm;
+        border-top: 0.2mm solid #000;
+    }
+
+    footer .rule { border-top: 0.9mm solid #000; }
+
+    footer .foot {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
-        gap: 4mm;
+        align-items: baseline;
+        padding-top: 2.4mm;
+        font-size: 6.6pt;
+        font-weight: 700;
+        line-height: 1;
     }
 
     .pageno { white-space: nowrap; }
@@ -182,8 +197,13 @@
 <div class="page">
 
     <header>
-        <img src="logo.svg" alt="KRT">
-        <span class="title">Krteq</span>
+        <div class="masthead">
+            <img src="logo.svg" alt="KRT">
+            <div class="doc">
+                <div class="title">Krteq</div>
+                <div class="subtitle">User Manual</div>
+            </div>
+        </div>
     </header>
 
 
@@ -225,7 +245,7 @@
         </table>
 
         <h3>System shortcuts</h3>
-        <table>
+        <table class="shortcuts">
             <tr><th scope="col">Shortcut</th><th scope="col">Action</th></tr>
             <tr><td style="width: 34mm;"><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd></td><td>Trigger bootloader mode for flashing new firmware</td></tr>
             <tr><td><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd></td><td>Factory reset, wipes your VIA keymap back to default</td></tr>
@@ -234,8 +254,8 @@
     </section>
 
     <footer>
-        <div><b>github.com/swift502/Krteq</b></div>
-        <div class="pageno">[ 1/2 ]</div>
+        <div class="rule"></div>
+        <div class="foot"><span>github.com/swift502/Krteq</span><span class="pageno">[ 1/2 ]</span></div>
     </footer>
 
 </div>
@@ -243,8 +263,13 @@
 <div class="page">
 
     <header>
-        <img src="logo.svg" alt="KRT">
-        <span class="title">Krteq</span>
+        <div class="masthead">
+            <img src="logo.svg" alt="KRT">
+            <div class="doc">
+                <div class="title">Krteq</div>
+                <div class="subtitle">User Manual</div>
+            </div>
+        </div>
     </header>
 
     <section>
@@ -273,8 +298,8 @@
     <img class="bottom-cat" src="bongo-cat.svg" alt="Pixel-art bongo cat from the keyboard's OLED">
 
     <footer>
-        <div><b>github.com/swift502/Krteq</b></div>
-        <div class="pageno">[ 2/2 ]</div>
+        <div class="rule"></div>
+        <div class="foot"><span>github.com/swift502/Krteq</span><span class="pageno">[ 2/2 ]</span></div>
     </footer>
 
 </div>
