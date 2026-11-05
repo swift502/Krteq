@@ -47,7 +47,8 @@
         .page:last-child { break-after: auto; }
     }
 
-    header { padding-bottom: 2mm; border-bottom: var(--rule); }
+    header { padding-bottom: 2mm; border-bottom: var(--rule); display: flex; justify-content: space-between; align-items: center; }
+    header .title { font: var(--small); font-size: 14pt; font-weight: 700; line-height: 1; }
     img { display: block; }
     header img { height: 7mm; }
 
@@ -145,12 +146,23 @@
     .board .hi b,
     .board .volume b { font: var(--small); font-weight: 700; }
 
-    .layout-legend { margin-top: 4mm; }
+    h3 {
+        font: var(--display);
+        font-size: 9pt;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 1.5mm;
+        margin: 4.5mm 0 3mm;
+    }
+
+    h3::before { content: ">"; background: #000; color: #fff; padding: 0.4mm 0.9mm 0.2mm; }
+    .board + h3 { margin-top: 0; }
 
     .firmware-info { display: flex; align-items: flex-start; gap: 5mm; break-inside: avoid; }
-    .firmware-info .qr { width: 26mm; height: 26mm; flex-shrink: 0; }
+    .firmware-info .qr { width: 24mm; height: 24mm; flex-shrink: 0; }
 
-    .bottom-cat { width: 28mm; align-self: center; margin-top: auto; margin-bottom: 0.5mm; }
+    .bottom-cat { width: 26mm; align-self: center; margin-top: auto; margin-bottom: 0.5mm; }
     .bottom-cat + footer { margin-top: 0; }
 
     footer {
@@ -171,6 +183,7 @@
 
     <header>
         <img src="logo.svg" alt="KRT">
+        <span class="title">Krteq</span>
     </header>
 
 
@@ -185,7 +198,7 @@
                 [["1","F1"],["2","F2"],["3","F3"],["4","F4"],["5","F5"],["6","F6"],["7","F7"],["8","F8"],["9","F9"],["0","F10","Mute"],["-","F11","Vol-"],["=","F12","Vol+"]],
                 [["Tab","Ins","KrtRgb"],["Q","","Sat-"],["W","↑","Bri+"],["E","","Sat+"],["R","PgUp","Spd+"],["T","7"],["Y","8"],["U","9"],["I"],["O","","/"],["P","","*"],["Bsp","","-"]],
                 [["Esc","CapLck"],["A","←","Hue-"],["S","↓","Bri-"],["D","→","Hue+"],["F","PgDn","Spd-"],["G","4"],["H","5"],["J","6"],["K"],["L","["],[";","]"],["'","\\","+"]],
-                [["Sft","Sfnt"],["Z","\\"],["X"],["C"],["V"],["B","1"],["N","2"],["M","3"],[","],["."],["/"],["Sfnt","","Sft+Ent"]],
+                [["Sft","SftEnt"],["Z","\\"],["X"],["C"],["V"],["B","1"],["N","2"],["M","3"],[","],["."],["/"],["SftEnt","","Sft+Ent"]],
                 [["Ctl","ScrLck"],["GUI"],["KrtVol",,,"volume"],["Alt"],["Lwr",,,"hi"],["Space","0",,"wide"],["Rse",".",,"hi"],["←","Home"],["↓"],["↑"],["→","End","Ctl+Ent"]],
             ];
             const arrows = { "↑": 0, "→": 90, "↓": 180, "←": 270 };
@@ -196,27 +209,28 @@
                 : `<div class="gap"></div>`).join("")).join("");
         </script>
 
-        <table class="layout-legend">
+        <h3>Aliases</h3>
+        <table>
             <tr><th scope="col">Label</th><th scope="col">Key</th><th scope="col">Action</th></tr>
-            <tr><td><b>Sfnt</b></td><td>Space cadet enter</td><td>Tap for Enter, hold for Shift</td></tr>
-            <tr><td><b>InpLck</b></td><td>Input lock</td><td>Disables typing for cleaning</td></tr>
-            <tr><td><b>KrtScr</b></td><td>Krteq Screen</td><td>Combined keyboard screen control</td></tr>
-            <tr><td><b>KrtRgb</b></td><td>Krteq RGB</td><td>Combined RGB control</td></tr>
-            <tr><td><b>KrtVol</b></td><td>Krteq Volume</td><td>Combined volume control</td></tr>
+            <tr><td><code>SftEnt</code></td><td>Space cadet enter</td><td>Tap for Enter, hold for Shift</td></tr>
+            <tr><td><code>InpLck</code></td><td>Input lock</td><td>Disables typing (for cleaning and switch testing)</td></tr>
         </table>
 
-    </section>
+        <h3>KRT keycodes</h3>
+        <table>
+            <tr><th scope="col">Key</th><th scope="col">Press</th><th scope="col">Shift + press</th><th scope="col">Ctrl + press</th></tr>
+            <tr><td><code>KrtScr</code></td><td>Next OLED screen</td><td>Previous screen</td><td>Default screen</td></tr>
+            <tr><td><code>KrtRgb</code></td><td>Next RGB effect</td><td>Previous effect</td><td>Default effect</td></tr>
+            <tr><td><code>KrtVol</code></td><td>Volume down</td><td>Volume up</td><td>Mute</td></tr>
+        </table>
 
-    <section>
-        <h2><span class="num">02</span> CONNECT TO VIA</h2>
-        <p>VIA allows you to easily change the keyboard layout or settings. However a custom design file must be uploaded to make it work.</p>
-        <ol>
-            <li>Get <b>krteq_via.json</b> from <code>github.com/swift502/Krteq/production</code></li>
-            <li>Visit <code>usevia.app</code></li>
-            <li>In the <b>Settings</b> tab, enable <b>Show Design tab</b></li>
-            <li>In the <b>Design</b> tab, click <b>Load</b> and select the JSON file</li>
-            <li>In the <b>Configure</b> tab, click <b>Authorize device</b> and select Krteq</li>
-        </ol>
+        <h3>System shortcuts</h3>
+        <table>
+            <tr><th scope="col">Shortcut</th><th scope="col">Action</th></tr>
+            <tr><td style="width: 34mm;"><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd></td><td>Trigger bootloader mode for flashing new firmware</td></tr>
+            <tr><td><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd></td><td>Factory reset, wipes your VIA keymap back to default</td></tr>
+        </table>
+
     </section>
 
     <footer>
@@ -230,34 +244,26 @@
 
     <header>
         <img src="logo.svg" alt="KRT">
+        <span class="title">Krteq</span>
     </header>
 
     <section>
-        <h2><span class="num">03</span> KRT KEYCODES</h2>
-        <p>Krteq keycodes are available in VIA under the <b>Custom</b> keycodes section. This table lists their exact behavior.</p>
-        <table>
-            <tr><th>Key</th><th>Press</th><th>Shift + press</th><th>Ctrl + press</th></tr>
-            <tr><td><code>KrtScr</code></td><td>Next OLED screen</td><td>Previous screen</td><td>Default screen</td></tr>
-            <tr><td><code>KrtRgb</code></td><td>Next RGB effect</td><td>Previous effect</td><td>Default effect</td></tr>
-            <tr><td><code>KrtVol</code></td><td>Volume down</td><td>Volume up</td><td>Mute</td></tr>
-        </table>
+        <h2><span class="num">02</span> CONNECT TO VIA</h2>
+        <p>VIA allows you to easily change the keyboard layout or settings. Follow the steps below to complete the VIA interface setup.</p>
+        <ol>
+            <li>Get <b>krteq_via.json</b> from <code>github.com/swift502/Krteq/production</code></li>
+            <li>Visit <code>usevia.app</code></li>
+            <li>In the <b>Settings</b> tab, enable <b>Show Design tab</b></li>
+            <li>In the <b>Design</b> tab, click <b>Load</b> and select the JSON file</li>
+            <li>In the <b>Configure</b> tab, click <b>Authorize device</b> and select Krteq</li>
+        </ol>
     </section>
 
     <section>
-        <h2><span class="num">04</span> SYSTEM SHORTCUTS</h2>
-        <p>Low-level shortcuts baked into the firmware.</p>
-        <table>
-            <tr><th scope="col">Shortcut</th><th scope="col">Action</th></tr>
-            <tr><td style="width: 34mm;"><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd></td><td>Bootloader mode, for flashing new firmware.</td></tr>
-            <tr><td><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd></td><td>Factory reset. Wipes your VIA keymap back to default.</td></tr>
-        </table>
-    </section>
-
-    <section>
-        <h2><span class="num">05</span> CUSTOMIZATION</h2>
+        <h2><span class="num">03</span> CUSTOMIZATION</h2>
         <div class="firmware-info">
             <div>
-                <p>Add interactive OLED screens or customize the built-in behaviors by compiling your own QMK user keymap!</p>
+                <p>Add more interactive OLED screens or customize the built-in behaviors by compiling your own QMK user keymap!</p>
                 <p>Advanced documentation and examples are available in the GitHub repository's README.</p>
             </div>
             <img class="qr" src="project-qr.svg" alt="QR code for source code and OLED customization guide">
