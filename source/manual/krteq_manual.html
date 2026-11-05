@@ -66,7 +66,8 @@
         margin-bottom: 3mm;
     }
 
-    h2 .num { background: #000; color: #fff; padding: 0.6mm 1.2mm 0.4mm; }
+    /* Whole-pixel vertical padding keeps badge text snapping with its background in print */
+    h2 .num { background: #000; color: #fff; padding: 2px 1.2mm; }
 
     h2::after {
         content: "";
@@ -163,7 +164,7 @@
         margin: 5.0mm 0 3mm;
     }
 
-    h3::before { content: ">"; background: #000; color: #fff; padding: 0.4mm 0.9mm 0.2mm; }
+    h3::before { content: ">"; background: #000; color: #fff; padding: 1px 0.9mm; }
     .board + h3 { margin-top: 0; }
 
     .with-qr { display: flex; align-items: flex-start; gap: 5mm; }
