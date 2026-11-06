@@ -56,7 +56,7 @@
     img { display: block; }
     header img { height: 7mm; }
 
-    section { margin-top: 5.5mm; }
+    section { margin-top: 6mm; }
 
     h2 {
         font: var(--display);
@@ -123,7 +123,7 @@
         padding: 2mm;
         border: 0.4mm solid #000;
         border-radius: 1.8mm;
-        margin: 4.0mm 0 6.0mm;
+        margin: 4.0mm 0 5.5mm;
     }
 
     .key {
@@ -161,18 +161,21 @@
         display: flex;
         align-items: center;
         gap: 1.5mm;
-        margin: 5.0mm 0 3mm;
+        margin: 5.5mm 0 3mm;
     }
 
     h3::before { content: ">"; background: #000; color: #fff; padding: 1px 0.9mm; }
     .board + h3 { margin-top: 0; }
 
     .with-qr { display: flex; align-items: flex-start; gap: 5mm; }
-    .with-qr .qr-link { width: 18mm; flex-shrink: 0; text-align: center; }
+    .with-qr .qr-link { width: 19.5mm; flex-shrink: 0; text-align: center; position: relative; }
     .with-qr .qr { width: 100%; image-rendering: pixelated; }
-    .with-qr .qr-label { display: block; margin-top: 1.2mm; font: var(--text); font-weight: 700; font-size: 7px; }
+    .with-qr .qr-label { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); white-space: nowrap; margin-top: 1.2mm; font: var(--text); font-weight: 700; font-size: 8px; }
 
     .schematic { width: 100%; margin-top: 5mm; }
+
+    .bongo { margin: auto auto 0mm; width: 25mm; image-rendering: pixelated; }
+    .bongo + footer { margin-top: 0; }
 
     footer {
         margin-top: auto;
@@ -292,7 +295,7 @@
         <div class="with-qr">
             <div>
                 <p>You can add more interactive screens or override the built-in behaviors by compiling your own QMK user keymap. Documentation and examples are available in the GitHub README.</p>
-                <p>If you find more built-in behaviors which should be exposed for overrides, let's discuss it on GitHub and improve the firmware!</p>
+                <p>If you find more built-in behaviors that should be exposed for overrides, let's discuss it on GitHub and improve the firmware!</p>
             </div>
             <div class="qr-link">
                 <img class="qr" src="project-qr.svg" alt="QR code linking to github.com/swift502/Krteq">
@@ -302,9 +305,16 @@
     </section>
 
     <section>
-        <h2><span class="num">04</span> SCHEMATIC</h2>
-        <img class="schematic" src="schematic.svg" alt="Switch matrix schematic">
+        <h2><span class="num">04</span> DISASSEMBLY</h2>
+        <p>If the keyboard stops working, it might be possible to repair by replacing a part or repairing some of the solder joints.</p>
+        <ol>
+            <li>Unplug the USB cable from the back</li>
+            <li>Unscrew the 6 screws holding the plate</li>
+            <li>Separate the case from the plate</li>
+        </ol>
     </section>
+
+    <img class="bongo" src="bongo-cat.svg" alt="Bongo cat">
 
     <footer>
         <div class="rule"></div>
