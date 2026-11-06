@@ -56,10 +56,11 @@
     img { display: block; }
     header img { height: 7mm; }
 
-    section { margin-top: 6mm; }
+    section { margin-top: 5.5mm; }
 
     h2 {
         font: var(--display);
+        text-transform: uppercase;
         display: flex;
         align-items: center;
         gap: 2mm;
@@ -76,26 +77,34 @@
     }
 
     p + p { margin-top: 1.2mm; }
-    section > p + ol { margin-top: 3mm; }
+    section > p + ol,
+    section > p + ul { margin-top: 3mm; }
     section > p + table { margin-top: 3mm; }
 
-    ol { list-style: none; counter-reset: step; }
-    ol li { counter-increment: step; position: relative; padding-left: 6mm; margin-bottom: 0.9mm; }
-    ol li::before { content: "[" counter(step) "]"; position: absolute; left: 0; }
+    ol, ul { list-style: none; }
+    ol { counter-reset: step; }
+    li { position: relative; padding-left: 6mm; margin-bottom: 0.9mm; }
+    li::before { position: absolute; left: 0; }
+    ol li { counter-increment: step; }
+    ol li::before { content: "[" counter(step) "]"; }
+    ul li { padding-left: 4mm; }
+    ul li::before { content: ""; top: 1.3mm; width: 1.2mm; height: 1.2mm; background: #000; }
 
     code { font: inherit; font-weight: 700; border-bottom: 0.25mm dotted #000; }
 
+    /* Whole-pixel vertical metrics keep the box height constant wherever it lands, so print snapping can't squash it against the legend */
     kbd {
         font: var(--small);
         font-weight: 700;
+        line-height: 9px;
         display: inline-block;
         min-width: 4.2mm;
-        padding: 0.2mm 1mm;
+        padding: 1px 1mm;
         text-align: center;
-        border: var(--line);
-        border-bottom-width: 0.7mm;
+        border: 1px solid #000;
+        border-bottom-width: 2px;
         border-radius: 0.8mm;
-        vertical-align: 0.2mm;
+        vertical-align: 1px;
     }
 
     table { width: 100%; border-collapse: collapse; }
@@ -167,11 +176,6 @@
     h3::before { content: ">"; background: #000; color: #fff; padding: 1px 0.9mm; }
     .board + h3 { margin-top: 0; }
 
-    .with-qr { display: flex; align-items: flex-start; gap: 5mm; }
-    .with-qr .qr-link { width: 19.5mm; flex-shrink: 0; text-align: center; position: relative; }
-    .with-qr .qr { width: 100%; image-rendering: pixelated; }
-    .with-qr .qr-label { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); white-space: nowrap; margin-top: 1.2mm; font: var(--text); font-weight: 700; font-size: 8px; }
-
     .schematic { width: 100%; margin-top: 5mm; }
 
     .bongo { margin: auto auto 0mm; width: 20mm; image-rendering: pixelated; }
@@ -213,7 +217,7 @@
 
 
     <section>
-        <h2><span class="num">01</span> DEFAULT LAYOUT</h2>
+        <h2><span class="num">01</span> Default layout</h2>
 
         <div class="board" id="board"></div>
         <script>
@@ -278,7 +282,7 @@
     </header>
 
     <section>
-        <h2><span class="num">02</span> CONNECT TO VIA</h2>
+        <h2><span class="num">02</span> Connect to VIA</h2>
         <p>VIA allows you to easily change the keyboard layout or settings. Follow the steps below to complete the VIA interface setup.</p>
         <ol>
             <li>Get <b>krteq_via.json</b> from <code>github.com/swift502/Krteq/production</code></li>
@@ -291,27 +295,25 @@
     </section>
 
     <section>
-        <h2><span class="num">03</span> CUSTOMIZATION</h2>
-        <div class="with-qr">
-            <div>
-                <p>You can add more interactive screens or override the built-in behaviors by compiling your own QMK user keymap. Documentation and examples are available in the GitHub README.</p>
-                <p>If you find more built-in behaviors that should be exposed for overrides, let's discuss it on GitHub and improve the firmware!</p>
-            </div>
-            <div class="qr-link">
-                <img class="qr" src="project-qr.svg" alt="QR code linking to github.com/swift502/Krteq">
-                <span class="qr-label">GitHub Page</span>
-            </div>
-        </div>
+        <h2><span class="num">03</span> Customization</h2>
+        <p>You can add more interactive screens or override the built-in behaviors by compiling your own QMK user keymap. Documentation and examples are available in the GitHub README.</p>
+        <p>And if you find more built-in behaviors that you think should be exposed for overrides, let's discuss it on GitHub and improve the firmware!</p>
     </section>
 
     <section>
-        <h2><span class="num">04</span> DISASSEMBLY</h2>
+        <h2><span class="num">04</span> Disassembly</h2>
         <p>If the keyboard stops working, it might be possible to repair it by replacing a part or repairing some of the solder joints.</p>
         <ol>
             <li>Unplug the USB cable from the back</li>
             <li>Unscrew the 6 screws holding the plate</li>
             <li>Separate the case from the plate</li>
         </ol>
+        <h3>Components</h3>
+        <p>The OLED display and USB breakout board can be replaced after desoldering their connections.</p>
+        <ul>
+            <li>The OLED display is only clipped in. To remove it, push down on it from the top side.</li>
+            <li>The USB breakout board is secured with two more screws. Unscrew them to replace the board.</li>
+        </ul>
     </section>
 
     <img class="bongo" src="bongo-cat.svg" alt="Bongo cat">
