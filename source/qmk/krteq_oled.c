@@ -1,6 +1,4 @@
 #include <ctype.h>
-#include <math.h>
-#include <lib/lib8tion/lib8tion.h>
 #include "krteq_oled.h"
 #include "version.h"
 #include OLED_FONT_H
@@ -85,6 +83,18 @@ static void frame_clear(void)
 static void frame_plot(int16_t x, int16_t y)
 {
     if (on_screen(x, y)) frame_buffer[y / 8 * OLED_DISPLAY_WIDTH + x] |= 1 << (y % 8);
+}
+
+// Lights up to 8 pixels downwards from the top one, the lowest bit at the top, cut off at the bottom edge
+static void frame_column(int16_t x, int16_t y, uint8_t bits)
+{
+    if (!on_screen(x, y)) return;
+
+    uint8_t *byte = &frame_buffer[y / 8 * OLED_DISPLAY_WIDTH + x];
+    uint8_t shift = y % 8;
+
+    byte[0] |= bits << shift;
+    if (shift && y / 8 + 1 < OLED_PAGES) byte[OLED_DISPLAY_WIDTH] |= bits >> (8 - shift);
 }
 
 // Bresenham, stops at the screen edge
@@ -367,14 +377,18 @@ static void draw_selection(const char *title, const selection_t *selection, uint
 // RGB matrix LED coordinate space
 #define KEY_SPACE_WIDTH 224
 #define KEY_SPACE_HEIGHT 64
+#define KEY_GRID_TOP 13 // Top row of the main grid, the two keys above it land in the top corners
 
+// The main grid is stretched over the whole screen
 static bool key_position(keypos_t keypos, uint8_t *x, uint8_t *y)
 {
     uint8_t led = g_led_config.matrix_co[keypos.row][keypos.col];
     if (led == NO_LED) return false;
 
+    uint8_t grid_y = MAX(g_led_config.point[led].y, KEY_GRID_TOP) - KEY_GRID_TOP;
+
     *x = (uint16_t)g_led_config.point[led].x * (OLED_DISPLAY_WIDTH - 1) / KEY_SPACE_WIDTH;
-    *y = (uint16_t)g_led_config.point[led].y * (OLED_DISPLAY_HEIGHT - 1) / KEY_SPACE_HEIGHT;
+    *y = (uint16_t)grid_y * (OLED_DISPLAY_HEIGHT - 1) / (KEY_SPACE_HEIGHT - KEY_GRID_TOP);
     return true;
 }
 
@@ -824,301 +838,374 @@ const krteq_screen_t krteq_screen_waves = {
 };
 
 //==============================================================================
-// Cursor screen
+// Matrix rain screen
 //==============================================================================
 
-// Idles along a lemniscate of Gerono, x = cos t, y = sin 2t, which keeps round ends when stretched wide
-// Positions are in pixels, pixel centres sit on whole numbers, speeds are per frame
+// A fixed number of streams fall at once, each one respawns in a free column once its trail has left the screen
+// A pixel can't be dimmed, so cells further down the trail use sparser symbols instead
+// Key presses start an extra stream at the key, which falls the same way but doesn't respawn
 
-#define CURSOR_FRAME_DURATION FRAME_DURATION_30_FPS
-#define CURSOR_CHASE_SPRING 0.1f // Higher value makes it move to a pressed key faster, 0 to 4 - 2 * damping
-#define CURSOR_CHASE_DAMPING 0.35f // Higher value makes it overshoot the key less, 0 (no damping) to 1 (stops dead every frame)
-#define CURSOR_CHASE_LAUNCH 7.0f // Higher value makes it shoot off towards a pressed key harder, speed in pixels per frame added towards the key
-#define CURSOR_CHASE_LAUNCH_SCALE 0.08f // Higher value makes the kick grow more with distance, launch * (1 + distance * scale)
-#define CURSOR_REPEAT_LAUNCH 3.0f // Higher value makes it shoot off harder when the same key is pressed again, speed in pixels per frame
-#define CURSOR_TRACK_SPRING 0.02f // Higher value makes it rejoin the idle path faster, 0 to 4 - 2 * damping
-#define CURSOR_TRACK_DAMPING 0.28f // Higher value makes it overshoot the idle path less, 0 (no damping) to 1 (stops dead every frame)
-#define CURSOR_WALL_BOUNCE 0.15f // Higher value makes it bounce off the screen edge harder, share of speed kept, 0 (stops dead) to 1 (no loss)
-#define CURSOR_PATH_WIDTH 40.0f // Higher value makes the infinity symbol wider, half width in pixels
-#define CURSOR_PATH_HEIGHT 8.0f // Higher value makes the infinity symbol taller, half height in pixels
-#define CURSOR_PATH_SPEED 0.91f // Higher value makes it move along the idle path faster, pixels per frame
-#define CURSOR_PATH_ACCELERATION 0.012f // Higher value makes it get up to idle speed faster
-#define CURSOR_PATH_SAMPLES 64 // Points checked for the nearest place to rejoin the path
-#define CURSOR_MAX_RADIUS 4.5f // Radius when still
-#define CURSOR_MIN_RADIUS 2.0f // Radius at the fast speed
-#define CURSOR_FAST_SPEED 6.0f // Higher value makes it shrink less when moving, pixels per frame
-#define CURSOR_BLUR_SPEED 1.5f // Higher value makes it skip the motion blur at faster idle speeds, pixels per frame
-#define CURSOR_MIN_X CURSOR_MAX_RADIUS
-#define CURSOR_MAX_X (OLED_DISPLAY_WIDTH - 1 - CURSOR_MAX_RADIUS)
-#define CURSOR_MIN_Y CURSOR_MAX_RADIUS
-#define CURSOR_MAX_Y (OLED_DISPLAY_HEIGHT - 1 - CURSOR_MAX_RADIUS)
-#define CURSOR_TURN (2.0f * (float)M_PI)
+#define RAIN_FRAME_DURATION FRAME_DURATION_30_FPS
+#define RAIN_GLYPH_WIDTH 3
+#define RAIN_GLYPH_HEIGHT 4
+#define RAIN_GLYPH_COLUMN_MASK ((1 << RAIN_GLYPH_HEIGHT) - 1)
+#define RAIN_CELL_WIDTH (RAIN_GLYPH_WIDTH + 1)
+#define RAIN_CELL_HEIGHT (RAIN_GLYPH_HEIGHT + 1)
+#define RAIN_COLUMNS (OLED_DISPLAY_WIDTH / RAIN_CELL_WIDTH)
+#define RAIN_ROWS (OLED_DISPLAY_HEIGHT / RAIN_CELL_HEIGHT)
+#define RAIN_CELLS (RAIN_COLUMNS * RAIN_ROWS)
+// The gap after the last cell is left off when centring
+#define RAIN_LEFT ((OLED_DISPLAY_WIDTH - RAIN_COLUMNS * RAIN_CELL_WIDTH + 1) / 2)
+#define RAIN_TOP ((OLED_DISPLAY_HEIGHT - RAIN_ROWS * RAIN_CELL_HEIGHT + 1) / 2)
+#define RAIN_STREAMS 10 // Streams on screen at any time, fewer than the columns
+#define RAIN_KEY_STREAMS (RAIN_COLUMNS * (RAIN_ROWS + RAIN_TRAIL)) // Extra streams started by key presses, one for every place a leading symbol can be
+#define RAIN_ALL_STREAMS (RAIN_STREAMS + RAIN_KEY_STREAMS)
+#define RAIN_UNUSED UINT8_MAX // Column of a key stream slot that isn't falling
+#define RAIN_STEP 256 // Fixed point stream positions and speeds, per row
+#define RAIN_MIN_SPEED 35 // Fixed point rows per frame
+#define RAIN_MAX_SPEED 45
+#define RAIN_TRAIL 4 // Cells behind the leading symbol
+#define RAIN_HEAD_CHANGE 2 // Higher value makes the leading symbols change less often, every n frames
+#define RAIN_TRAIL_CHANGE 6 // Higher value makes the trail symbols change less often, every n frames
+#define RAIN_MIRRORED 0x80 // Seed bit that mirrors a symbol, like in the film
 
-static float cursor_x, cursor_y;
-static float cursor_vx, cursor_vy;
-static float cursor_previous_x, cursor_previous_y;
-static float cursor_move_x, cursor_move_y; // Movement this frame
-static float cursor_move_scale; // Inverse squared length of the movement, 0 when still
-static float cursor_target_x, cursor_target_y;
-static float cursor_radius;
-static float cursor_phase; // Radians along the path
-static float cursor_path_speed;
-static float cursor_path_x, cursor_path_y; // Last target on the path
-static uint8_t cursor_held_keys;
-static uint16_t cursor_last_keycode;
-static bool cursor_chasing;
-static uint16_t cursor_timer;
+_Static_assert(RAIN_STREAMS < RAIN_COLUMNS, "Every stream needs a column of its own");
 
-static void cursor_path(float phase, float *x, float *y)
+enum rain_levels
 {
-    *x = OLED_DISPLAY_WIDTH / 2 + CURSOR_PATH_WIDTH * cosf(phase);
-    *y = OLED_DISPLAY_HEIGHT / 2 + CURSOR_PATH_HEIGHT * sinf(2.0f * phase);
+    RAIN_STRONG, // Leading symbol
+    RAIN_MEDIUM,
+    RAIN_LIGHT,
+    RAIN_FAINT,
+    RAIN_LEVELS // Unlit
+};
+
+// Drawn as rows top to bottom, 3 bits each, the leftmost pixel in the highest bit
+// Stored as columns left to right, 4 bits each, the top pixel in the lowest bit, which the frame buffer takes directly
+#define RAIN_GLYPH_COLUMN(row0, row1, row2, row3, bit) \
+    (((row0) >> (bit) & 1) | ((row1) >> (bit) & 1) << 1 | ((row2) >> (bit) & 1) << 2 | ((row3) >> (bit) & 1) << 3)
+#define RAIN_GLYPH(row0, row1, row2, row3) \
+    (RAIN_GLYPH_COLUMN(row0, row1, row2, row3, 2) | RAIN_GLYPH_COLUMN(row0, row1, row2, row3, 1) << 4 | RAIN_GLYPH_COLUMN(row0, row1, row2, row3, 0) << 8)
+
+// Katakana, digits and punctuation, 8 to 11 pixels
+static const uint16_t rain_strong[] = {
+    RAIN_GLYPH(0b111, 0b101, 0b101, 0b111), // 0
+    RAIN_GLYPH(0b111, 0b111, 0b101, 0b111), // 8
+    RAIN_GLYPH(0b111, 0b111, 0b001, 0b110), // 9
+    RAIN_GLYPH(0b111, 0b011, 0b001, 0b111), // 3
+    RAIN_GLYPH(0b111, 0b010, 0b111, 0b011), // Mo
+    RAIN_GLYPH(0b111, 0b010, 0b010, 0b111), // E
+    RAIN_GLYPH(0b001, 0b111, 0b011, 0b101), // O
+    RAIN_GLYPH(0b010, 0b111, 0b111, 0b010), // Ki
+    RAIN_GLYPH(0b111, 0b001, 0b001, 0b111), // Ko
+    RAIN_GLYPH(0b101, 0b111, 0b101, 0b010), // Sa
+    RAIN_GLYPH(0b111, 0b110, 0b001, 0b110), // 5
+    RAIN_GLYPH(0b111, 0b001, 0b100, 0b111)  // Z
+};
+
+// 6 to 7 pixels
+static const uint16_t rain_medium[] = {
+    RAIN_GLYPH(0b111, 0b011, 0b010, 0b100), // A
+    RAIN_GLYPH(0b111, 0b001, 0b010, 0b101), // Su
+    RAIN_GLYPH(0b100, 0b111, 0b100, 0b011), // Se
+    RAIN_GLYPH(0b111, 0b000, 0b111, 0b010), // Te
+    RAIN_GLYPH(0b010, 0b111, 0b010, 0b101), // Ho
+    RAIN_GLYPH(0b110, 0b010, 0b010, 0b111), // Yu
+    RAIN_GLYPH(0b111, 0b101, 0b001, 0b010), // Wa
+    RAIN_GLYPH(0b110, 0b001, 0b010, 0b111), // 2
+    RAIN_GLYPH(0b101, 0b111, 0b001, 0b001), // 4
+    RAIN_GLYPH(0b111, 0b001, 0b010, 0b010), // 7
+    RAIN_GLYPH(0b010, 0b111, 0b001, 0b010), // U
+    RAIN_GLYPH(0b000, 0b111, 0b000, 0b111)  // =
+};
+
+// 4 to 5 pixels
+static const uint16_t rain_light[] = {
+    RAIN_GLYPH(0b001, 0b010, 0b110, 0b010), // I
+    RAIN_GLYPH(0b100, 0b110, 0b100, 0b100), // To
+    RAIN_GLYPH(0b100, 0b001, 0b001, 0b110), // N
+    RAIN_GLYPH(0b010, 0b110, 0b010, 0b010), // 1
+    RAIN_GLYPH(0b000, 0b101, 0b010, 0b101), // *
+    RAIN_GLYPH(0b000, 0b010, 0b111, 0b010), // +
+    RAIN_GLYPH(0b010, 0b010, 0b010, 0b010), // |
+    RAIN_GLYPH(0b101, 0b101, 0b000, 0b000)  // "
+};
+
+// 1 to 3 pixels
+static const uint16_t rain_faint[] = {
+    RAIN_GLYPH(0b000, 0b010, 0b000, 0b010), // :
+    RAIN_GLYPH(0b000, 0b000, 0b000, 0b010), // .
+    RAIN_GLYPH(0b000, 0b000, 0b111, 0b000), // -
+    RAIN_GLYPH(0b010, 0b010, 0b000, 0b010), // Broken bar
+    RAIN_GLYPH(0b010, 0b010, 0b000, 0b000), // '
+    RAIN_GLYPH(0b000, 0b000, 0b010, 0b100), // ,
+    RAIN_GLYPH(0b100, 0b010, 0b000, 0b000)  // `
+};
+
+static const uint16_t *const rain_symbols[RAIN_LEVELS] = {
+    rain_strong,
+    rain_medium,
+    rain_light,
+    rain_faint
+};
+
+static const uint8_t rain_symbol_counts[RAIN_LEVELS] = {
+    ARRAY_SIZE(rain_strong),
+    ARRAY_SIZE(rain_medium),
+    ARRAY_SIZE(rain_light),
+    ARRAY_SIZE(rain_faint)
+};
+
+typedef struct
+{
+    uint16_t position; // Rows from the top to the leading symbol, fixed point
+    uint8_t column; // RAIN_UNUSED for a free key stream slot
+    uint8_t top; // Row the stream started on, the trail doesn't reach above it
+    uint8_t speed; // Fixed point rows per frame
+    uint8_t seed; // Leading symbol, kept when moving to the next row
+    uint8_t ticks; // Frames since the leading symbol changed
+} rain_stream_t;
+
+// Regular streams first, then the key streams
+static rain_stream_t rain_streams[RAIN_ALL_STREAMS];
+static uint8_t rain_levels[RAIN_CELLS]; // Row by row
+static uint8_t rain_seeds[RAIN_CELLS]; // Picks the symbol
+static uint8_t rain_ticks[RAIN_CELLS]; // Frames since the symbol changed, counted per cell so they don't all change at once
+static uint16_t rain_timer;
+
+static uint8_t rain_random(uint8_t minimum, uint8_t maximum)
+{
+    return minimum + random_value() % (maximum - minimum + 1);
 }
 
-// Pixels travelled per radian of phase, from the derivative of the path
-static float cursor_path_rate(float phase)
+static int16_t rain_row(const rain_stream_t *stream)
 {
-    float dx = -CURSOR_PATH_WIDTH * sinf(phase);
-    float dy = 2.0f * CURSOR_PATH_HEIGHT * cosf(2.0f * phase);
-
-    return sqrtf(dx * dx + dy * dy);
+    return stream->position / RAIN_STEP;
 }
 
-// Advances by the path speed in pixels, so the speed is even along the whole path
-// The rate is taken at the midpoint of the step, which keeps the distance accurate on curves
-static void cursor_path_advance(void)
+// Only the regular streams keep to their own columns, key streams may overlap them
+static bool rain_column_taken(uint8_t column)
 {
-    float step = cursor_path_speed / cursor_path_rate(cursor_phase);
-
-    cursor_phase += cursor_path_speed / cursor_path_rate(cursor_phase + step / 2.0f);
-    if (cursor_phase >= CURSOR_TURN) cursor_phase -= CURSOR_TURN;
-}
-
-// Starts from rest at the nearest point, so the cursor glides off instead of being yanked
-static void cursor_rejoin_path(void)
-{
-    float nearest = INFINITY;
-
-    for (uint8_t i = 0; i < CURSOR_PATH_SAMPLES; i++)
+    for (uint8_t i = 0; i < RAIN_STREAMS; i++)
     {
-        float phase = i * CURSOR_TURN / CURSOR_PATH_SAMPLES;
-        float x, y;
-        cursor_path(phase, &x, &y);
+        if (rain_streams[i].column == column) return true;
+    }
+    return false;
+}
 
-        float distance = (x - cursor_x) * (x - cursor_x) + (y - cursor_y) * (y - cursor_y);
-        if (distance < nearest)
+// Always shows a different symbol
+static uint8_t rain_change_seed(uint8_t seed, uint8_t level)
+{
+    uint8_t count = rain_symbol_counts[level];
+    uint8_t changed;
+
+    do changed = random_value(); while ((changed & ~RAIN_MIRRORED) % count == (seed & ~RAIN_MIRRORED) % count);
+    return changed;
+}
+
+// Trail cells above the top row are left out, so a key stream grows its trail from the key
+static void rain_launch(rain_stream_t *stream, uint8_t column, uint8_t top, uint16_t position)
+{
+    stream->column = column;
+    stream->top = top;
+    stream->position = position;
+    stream->speed = rain_random(RAIN_MIN_SPEED, RAIN_MAX_SPEED);
+    stream->seed = random_value();
+    stream->ticks = 0;
+}
+
+// Also skips the stream's own column, so it never falls in the same place twice in a row
+static void rain_spawn(rain_stream_t *stream, uint16_t position)
+{
+    uint8_t column;
+    do column = random_value() % RAIN_COLUMNS; while (rain_column_taken(column));
+
+    rain_launch(stream, column, 0, position);
+}
+
+static void rain_move(void)
+{
+    for (uint16_t i = 0; i < RAIN_ALL_STREAMS; i++)
+    {
+        rain_stream_t *stream = &rain_streams[i];
+
+        if (stream->column == RAIN_UNUSED) continue;
+
+        if (++stream->ticks >= RAIN_HEAD_CHANGE)
         {
-            nearest = distance;
-            cursor_phase = phase;
+            stream->ticks = 0;
+            stream->seed = rain_change_seed(stream->seed, RAIN_STRONG);
+        }
+
+        stream->position += stream->speed;
+        if (rain_row(stream) - RAIN_TRAIL < RAIN_ROWS) continue;
+
+        if (i < RAIN_STREAMS) rain_spawn(stream, 0);
+        else stream->column = RAIN_UNUSED;
+    }
+}
+
+// Keeps the strongest level when streams overlap
+static void rain_mark(uint8_t *levels, uint8_t column, int16_t row, uint8_t level)
+{
+    if (row < 0 || row >= RAIN_ROWS) return;
+
+    uint8_t *cell = &levels[row * RAIN_COLUMNS + column];
+    *cell = MIN(*cell, level);
+}
+
+// The leading symbol comes from the stream, so it stays the same when moving to the next row and is left behind for the trail
+static void rain_mark_stream(uint8_t *levels, const rain_stream_t *stream)
+{
+    int16_t head = rain_row(stream);
+
+    if (head < RAIN_ROWS)
+    {
+        levels[head * RAIN_COLUMNS + stream->column] = RAIN_STRONG;
+        rain_seeds[head * RAIN_COLUMNS + stream->column] = stream->seed;
+    }
+
+    // Spreads the remaining levels evenly along the trail
+    for (uint8_t distance = 1; distance <= RAIN_TRAIL && head - distance >= stream->top; distance++)
+    {
+        uint8_t level = RAIN_MEDIUM + (distance - 1) * (RAIN_LEVELS - RAIN_MEDIUM) / RAIN_TRAIL;
+        rain_mark(levels, stream->column, head - distance, level);
+    }
+}
+
+// Trail cells change symbol on a regular beat, counted from when they lit up or the leading symbol left them
+static void rain_shade(void)
+{
+    uint8_t levels[RAIN_CELLS];
+    memset(levels, RAIN_LEVELS, sizeof(levels));
+
+    for (uint16_t i = 0; i < RAIN_ALL_STREAMS; i++)
+    {
+        if (rain_streams[i].column != RAIN_UNUSED) rain_mark_stream(levels, &rain_streams[i]);
+    }
+
+    for (uint16_t cell = 0; cell < RAIN_CELLS; cell++)
+    {
+        uint8_t level = levels[cell];
+        bool fresh = rain_levels[cell] == RAIN_LEVELS;
+
+        rain_levels[cell] = level;
+        if (level == RAIN_LEVELS) continue;
+
+        if (level == RAIN_STRONG)
+        {
+            rain_ticks[cell] = 0;
+        }
+        else if (fresh)
+        {
+            rain_seeds[cell] = random_value();
+            rain_ticks[cell] = 0;
+        }
+        else if (++rain_ticks[cell] >= RAIN_TRAIL_CHANGE)
+        {
+            rain_seeds[cell] = rain_change_seed(rain_seeds[cell], level);
+            rain_ticks[cell] = 0;
         }
     }
-
-    cursor_path(cursor_phase, &cursor_path_x, &cursor_path_y);
-    cursor_path_speed = 0;
 }
 
-// Spring damper step, semi-implicit Euler, the target velocity and acceleration let the cursor follow a moving target exactly
-static float cursor_spring(float *position, float velocity, float target, float target_velocity, float target_acceleration)
+static void rain_draw_symbol(int16_t x, int16_t y, uint8_t level, uint8_t seed)
 {
-    float spring = cursor_chasing ? CURSOR_CHASE_SPRING : CURSOR_TRACK_SPRING;
-    float damping = cursor_chasing ? CURSOR_CHASE_DAMPING : CURSOR_TRACK_DAMPING;
+    uint16_t glyph = rain_symbols[level][(seed & ~RAIN_MIRRORED) % rain_symbol_counts[level]];
+    bool mirrored = seed & RAIN_MIRRORED;
 
-    velocity += target_acceleration + spring * (target - *position) + damping * (target_velocity - velocity);
-    *position += velocity;
-
-    return velocity;
-}
-
-// Returns whether the position hit the edge, flipping the velocity away from it
-static bool cursor_wall(float *position, float *velocity, float minimum, float maximum)
-{
-    if (*position >= minimum && *position <= maximum) return false;
-
-    *position = MIN(MAX(*position, minimum), maximum);
-    *velocity = -*velocity;
-    return true;
-}
-
-// Bounces off the screen edge, losing speed in every direction
-static void cursor_bounce(void)
-{
-    bool hit_x = cursor_wall(&cursor_x, &cursor_vx, CURSOR_MIN_X, CURSOR_MAX_X);
-    bool hit_y = cursor_wall(&cursor_y, &cursor_vy, CURSOR_MIN_Y, CURSOR_MAX_Y);
-
-    if (hit_x || hit_y)
+    for (uint8_t ix = 0; ix < RAIN_GLYPH_WIDTH; ix++)
     {
-        cursor_vx *= CURSOR_WALL_BOUNCE;
-        cursor_vy *= CURSOR_WALL_BOUNCE;
+        uint8_t column = mirrored ? RAIN_GLYPH_WIDTH - 1 - ix : ix;
+        frame_column(x + ix, y, glyph >> (column * RAIN_GLYPH_HEIGHT) & RAIN_GLYPH_COLUMN_MASK);
     }
 }
 
-static void cursor_move(void)
-{
-    if (cursor_chasing)
-    {
-        cursor_vx = cursor_spring(&cursor_x, cursor_vx, cursor_target_x, 0, 0);
-        cursor_vy = cursor_spring(&cursor_y, cursor_vy, cursor_target_y, 0, 0);
-        cursor_bounce();
-        return;
-    }
-
-    cursor_path_speed = MIN(cursor_path_speed + CURSOR_PATH_ACCELERATION, CURSOR_PATH_SPEED);
-
-    float x, y, next_x, next_y;
-    cursor_path(cursor_phase, &x, &y);
-    cursor_path_advance();
-    cursor_path(cursor_phase, &next_x, &next_y);
-
-    float previous_x = cursor_path_x;
-    float previous_y = cursor_path_y;
-    cursor_path_x = x;
-    cursor_path_y = y;
-
-    cursor_vx = cursor_spring(&cursor_x, cursor_vx, x, x - previous_x, next_x - 2.0f * x + previous_x);
-    cursor_vy = cursor_spring(&cursor_y, cursor_vy, y, y - previous_y, next_y - 2.0f * y + previous_y);
-    cursor_bounce();
-}
-
-static void cursor_resize(void)
-{
-    float speed = MIN(sqrtf(cursor_vx * cursor_vx + cursor_vy * cursor_vy), CURSOR_FAST_SPEED);
-    cursor_radius = CURSOR_MAX_RADIUS - (CURSOR_MAX_RADIUS - CURSOR_MIN_RADIUS) * speed / CURSOR_FAST_SPEED;
-}
-
-// Measures the movement this frame once, so per pixel checks avoid division
-static void cursor_sweep(void)
-{
-    // A still ball when idling slowly, the blur would only smear it
-    if (!cursor_chasing && cursor_vx * cursor_vx + cursor_vy * cursor_vy < CURSOR_BLUR_SPEED * CURSOR_BLUR_SPEED)
-    {
-        cursor_previous_x = cursor_x;
-        cursor_previous_y = cursor_y;
-    }
-
-    cursor_move_x = cursor_x - cursor_previous_x;
-    cursor_move_y = cursor_y - cursor_previous_y;
-
-    float length = cursor_move_x * cursor_move_x + cursor_move_y * cursor_move_y;
-    cursor_move_scale = length > 0 ? 1.0f / length : 0;
-}
-
-// Squared distance to the path covered this frame, from the previous position to the current one
-static float cursor_swept_distance(float x, float y)
-{
-    float dx = x - cursor_previous_x;
-    float dy = y - cursor_previous_y;
-
-    // Moves to the nearest point on the segment
-    float along = MIN(MAX((dx * cursor_move_x + dy * cursor_move_y) * cursor_move_scale, 0.0f), 1.0f);
-    dx -= cursor_move_x * along;
-    dy -= cursor_move_y * along;
-
-    return dx * dx + dy * dy;
-}
-
-// Capsule covering the movement this frame, a frame of motion blur
-static void cursor_draw(void)
+static void rain_draw(void)
 {
     frame_clear();
 
-    float reach = cursor_radius * cursor_radius;
-    int16_t left = floorf(MIN(cursor_previous_x, cursor_x) - cursor_radius);
-    int16_t right = ceilf(MAX(cursor_previous_x, cursor_x) + cursor_radius);
-    int16_t top = floorf(MIN(cursor_previous_y, cursor_y) - cursor_radius);
-    int16_t bottom = ceilf(MAX(cursor_previous_y, cursor_y) + cursor_radius);
-
-    for (int16_t py = top; py <= bottom; py++)
+    for (uint8_t row = 0; row < RAIN_ROWS; row++)
     {
-        for (int16_t px = left; px <= right; px++)
+        for (uint8_t column = 0; column < RAIN_COLUMNS; column++)
         {
-            if (cursor_swept_distance(px, py) <= reach) frame_plot(px, py);
+            uint16_t cell = row * RAIN_COLUMNS + column;
+            if (rain_levels[cell] == RAIN_LEVELS) continue;
+
+            rain_draw_symbol(RAIN_LEFT + column * RAIN_CELL_WIDTH, RAIN_TOP + row * RAIN_CELL_HEIGHT,
+                             rain_levels[cell], rain_seeds[cell]);
         }
     }
 
     frame_show();
 }
 
-static void cursor_init(void)
+// Scatters the streams down the screen, so it starts full
+static void rain_init(void)
 {
-    cursor_phase = 0;
-    cursor_path_speed = CURSOR_PATH_SPEED;
-    cursor_path(cursor_phase, &cursor_x, &cursor_y);
-    cursor_path_x = cursor_x;
-    cursor_path_y = cursor_y;
-    cursor_previous_x = cursor_x;
-    cursor_previous_y = cursor_y;
-    cursor_vx = 0;
-    cursor_vy = 0;
-    cursor_radius = CURSOR_MAX_RADIUS;
-    cursor_chasing = false;
+    memset(rain_levels, RAIN_LEVELS, sizeof(rain_levels));
+
+    for (uint16_t i = 0; i < RAIN_ALL_STREAMS; i++) rain_streams[i].column = RAIN_UNUSED;
+
+    for (uint8_t i = 0; i < RAIN_STREAMS; i++)
+    {
+        rain_spawn(&rain_streams[i], random_value() % ((RAIN_ROWS + RAIN_TRAIL) * RAIN_STEP));
+    }
 }
 
-static void cursor_start(void)
+static void rain_start(void)
 {
-    cursor_timer = timer_read();
-
-    // Keys may have been released while another screen was showing
-    cursor_held_keys = 0;
+    rain_timer = timer_read();
 }
 
-static void cursor_update(void)
+static void rain_update(void)
 {
-    if (!timer_finished(&cursor_timer, CURSOR_FRAME_DURATION) && !screen_redraw) return;
+    if (!timer_finished(&rain_timer, RAIN_FRAME_DURATION) && !screen_redraw) return;
     screen_redraw = false;
 
-    cursor_previous_x = cursor_x;
-    cursor_previous_y = cursor_y;
-
-    cursor_move();
-    cursor_resize();
-    cursor_sweep();
-
-    // Checks the whole movement, so a fast cursor can't skip over the target between frames
-    if (cursor_chasing && !cursor_held_keys && cursor_swept_distance(cursor_target_x, cursor_target_y) <= cursor_radius * cursor_radius)
-    {
-        cursor_chasing = false;
-        cursor_rejoin_path();
-    }
-
-    cursor_draw();
+    rain_move();
+    rain_shade();
+    rain_draw();
 }
 
-static void cursor_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
+// Cell under a pixel, clamped to the grid
+static uint8_t rain_cell(uint8_t pixel, uint8_t start, uint8_t size, uint8_t count)
 {
-    if (!pressed)
-    {
-        if (cursor_held_keys) cursor_held_keys--;
-        return;
-    }
-
-    if (cursor_held_keys < UINT8_MAX) cursor_held_keys++;
-
-    cursor_chasing = true;
-    cursor_target_x = MIN(MAX(x, CURSOR_MIN_X), CURSOR_MAX_X);
-    cursor_target_y = MIN(MAX(y, CURSOR_MIN_Y), CURSOR_MAX_Y);
-
-    // Adds to the current velocity, so it keeps some momentum while heading for the key
-    float dx = cursor_target_x - cursor_x;
-    float dy = cursor_target_y - cursor_y;
-    float distance = sqrtf(dx * dx + dy * dy);
-
-    if (distance > 0)
-    {
-        // Repeating a key gives a gentle nudge instead of a full launch
-        float launch = keycode == cursor_last_keycode ? CURSOR_REPEAT_LAUNCH : CURSOR_CHASE_LAUNCH * (1.0f + distance * CURSOR_CHASE_LAUNCH_SCALE);
-        cursor_vx += dx * launch / distance;
-        cursor_vy += dy * launch / distance;
-    }
-
-    cursor_last_keycode = keycode;
+    return MIN(MAX(pixel, start) - start, count * size - 1) / size;
 }
 
-const krteq_screen_t krteq_screen_cursor = {
-    .name      = "Cursor",
-    .init      = cursor_init,
-    .start     = cursor_start,
-    .update    = cursor_update,
-    .key_event = cursor_key_event
+static void rain_key_event(uint16_t keycode, uint8_t x, uint8_t y, bool pressed)
+{
+    if (!pressed) return;
+
+    uint8_t column = rain_cell(x, RAIN_LEFT, RAIN_CELL_WIDTH, RAIN_COLUMNS);
+    uint8_t row = rain_cell(y, RAIN_TOP, RAIN_CELL_HEIGHT, RAIN_ROWS);
+    rain_stream_t *slot = NULL;
+
+    for (uint16_t i = 0; i < RAIN_ALL_STREAMS; i++)
+    {
+        rain_stream_t *stream = &rain_streams[i];
+
+        if (stream->column == RAIN_UNUSED)
+        {
+            if (!slot) slot = stream;
+        }
+        // A leading symbol is already there, a new one would look the same
+        else if (stream->column == column && rain_row(stream) == row)
+        {
+            return;
+        }
+    }
+
+    if (slot) rain_launch(slot, column, row, row * RAIN_STEP);
+}
+
+const krteq_screen_t krteq_screen_rain = {
+    .name      = "Matrix rain",
+    .init      = rain_init,
+    .start     = rain_start,
+    .update    = rain_update,
+    .key_event = rain_key_event
 };
 
 //==============================================================================
@@ -1831,8 +1918,8 @@ __attribute__((weak)) const krteq_screen_t *const user_screens[] = {
     &krteq_screen_indicators,
     &krteq_screen_bongo_cat,
     &krteq_screen_starfield,
+    &krteq_screen_rain,
     &krteq_screen_waves,
-    &krteq_screen_cursor,
     &krteq_screen_game_of_life,
     &krteq_screen_system_info
 };
