@@ -1557,19 +1557,12 @@ static void uptime_update(void)
 static void print_uptime(char *out)
 {
     uint32_t seconds = uptime_seconds;
-    uint32_t values[] = { seconds / 86400, seconds / 3600 % 24, seconds / 60 % 60, seconds % 60 };
-    const char units[] = "dhms";
 
-    // Print the two largest units, starting from the first non-zero one
-    uint8_t first = 0;
-    while (first < 2 && values[first] == 0) first++;
-
-    out = print_number(out, values[first], 1);
-    *out++ = units[first];
-    *out++ = ' ';
-    out = print_number(out, values[first + 1], 1);
-    *out++ = units[first + 1];
-    *out = '\0';
+    out = print_number(out, seconds / 3600, 1);
+    *out++ = ':';
+    out = print_number(out, seconds / 60 % 60, 2);
+    *out++ = ':';
+    print_number(out, seconds % 60, 2);
 }
 
 static void render_info_row(uint8_t row, const char *label, const char *value)
