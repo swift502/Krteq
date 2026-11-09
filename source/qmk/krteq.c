@@ -35,7 +35,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
 
     switch (keycode)
     {
-        case KC_B:
+        case KC_SPC:
             if (record->event.pressed && double_shift)
             {
                 process_quantum(QK_BOOTLOADER, record);
@@ -43,7 +43,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
             }
             break;
 
-        case KC_D:
+        case KC_DEL:
             if (record->event.pressed && double_shift)
             {
                 process_quantum(QK_CLEAR_EEPROM, record);

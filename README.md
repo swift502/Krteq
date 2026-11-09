@@ -105,8 +105,8 @@ The plate also has a "keychron" variant, which adjusts stabilizer cutouts for th
 QMK/VIA setup with a few custom features:
 
 - custom keycodes for volume, screen and RGB control
-- pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
-- pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>D</kbd> reverts to the default keymap
+- pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>Space</kbd> enters bootloader mode
+- pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>Delete</kbd> reverts to the default keymap
 
 ### Overrides
 
@@ -190,7 +190,7 @@ python source/scripts/qmk_compile.py
 
 For the initial flash, hold the BOOTSEL button while connecting the Pico to a computer to have it show up as a storage device, then copy the compiled [firmware file](production/krteq_firmware.uf2) over to it.
 
-Once flashed, you can trigger the bootloader mode again by simply pressing the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> key combination.
+Once flashed, you can trigger the bootloader mode again by simply pressing the <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>Space</kbd> key combination.
 
 ## Documentation
 

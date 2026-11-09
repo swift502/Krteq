@@ -124,6 +124,7 @@
 
     /* Whole-pixel rows keep kbd borders and legends snapping together in print */
     .shortcuts tr:not(:first-child) { height: 22px; }
+    .shortcuts td:first-child { width: 1%; white-space: nowrap; padding-right: 3mm; }
 
     .board {
         display: grid;
@@ -268,8 +269,8 @@
         <h3>System shortcuts</h3>
         <table class="shortcuts">
             <tr><th scope="col">Shortcut</th><th scope="col">Action</th></tr>
-            <tr><td style="width: 34mm;"><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd></td><td>Trigger bootloader mode for flashing new firmware</td></tr>
-            <tr><td><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>D</kbd></td><td>Factory reset, wipes your VIA keymap back to default</td></tr>
+            <tr><td><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>Space</kbd></td><td>Trigger bootloader mode for flashing new firmware</td></tr>
+            <tr><td><kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>Delete</kbd></td><td>Factory reset, wipes your VIA keymap back to default</td></tr>
         </table>
 
     </section>
