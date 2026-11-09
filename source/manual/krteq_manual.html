@@ -133,6 +133,7 @@
         border: 0.4mm solid #000;
         border-radius: 1.8mm;
         margin: 4.0mm 0 5.5mm;
+        container-type: inline-size;
     }
 
     .key {
@@ -157,7 +158,18 @@
     .arrow { width: 0.8em; height: 0.8em; display: block; fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: square; }
     .key i .arrow { stroke-width: 1.1; }
 
-    .board .gap { grid-column: span 10; }
+    .board .gap { grid-column: span 10; display: flex; align-items: center; justify-content: center; }
+
+    /* OLED cutout, 25.5 x 8.5 mm on the 229 x 115 mm plate */
+    .board .gap::before {
+        --plate-mm: calc((100cqw + 4.8mm) / 229);
+        content: "";
+        width: calc(var(--plate-mm) * 25.5);
+        aspect-ratio: 25.5 / 8.5;
+        background: #000;
+        border-radius: calc(var(--plate-mm) * 1.5);
+        translate: 0 calc(var(--plate-mm) * -1);
+    }
     .board .wide { grid-column: span 2; aspect-ratio: auto; }
     .board .hi { background: #000; color: #fff; }
     .board .hi b,
