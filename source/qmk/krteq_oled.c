@@ -728,7 +728,7 @@ const krteq_screen_t krteq_screen_bongo_cat = {
 #define WAVE_IDLE_DURATION 15000
 #define WAVE_DAMPING 6 // Height lost per frame, 1/2^n
 #define WAVE_DROP_RADIUS 2
-#define WAVE_DROP_HEIGHT 1200
+#define WAVE_DROP_HEIGHT 800
 #define WAVE_CREST 60 // Height that lights a pixel
 
 // One cell border held at zero
@@ -862,8 +862,8 @@ const krteq_screen_t krteq_screen_waves = {
 #define RAIN_ALL_STREAMS (RAIN_STREAMS + RAIN_KEY_STREAMS)
 #define RAIN_UNUSED UINT8_MAX // Column of a key stream slot that isn't falling
 #define RAIN_STEP 256 // Fixed point stream positions and speeds, per row
-#define RAIN_MIN_SPEED 40 // Fixed point rows per frame
-#define RAIN_MAX_SPEED 60
+#define RAIN_MIN_SPEED 35 // Fixed point rows per frame
+#define RAIN_MAX_SPEED 55
 #define RAIN_TRAIL 4 // Cells behind the leading symbol
 #define RAIN_HEAD_CHANGE 2 // Higher value makes the leading symbols change less often, every n frames
 #define RAIN_TRAIL_CHANGE 6 // Higher value makes the trail symbols change less often, every n frames
