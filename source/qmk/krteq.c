@@ -43,7 +43,7 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
             }
             break;
 
-        case KC_C:
+        case KC_D:
             if (record->event.pressed && double_shift)
             {
                 process_quantum(QK_CLEAR_EEPROM, record);

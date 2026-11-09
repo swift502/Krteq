@@ -106,7 +106,7 @@ QMK/VIA setup with a few custom features:
 
 - custom keycodes for volume, screen and RGB control
 - pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>B</kbd> enters bootloader mode
-- pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>C</kbd> reverts to the default keymap
+- pressing <kbd>LShift</kbd> + <kbd>RShift</kbd> + <kbd>D</kbd> reverts to the default keymap
 
 ### Overrides
 
