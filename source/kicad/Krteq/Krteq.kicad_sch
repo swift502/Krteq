@@ -14925,7 +14925,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 184.15 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -15044,7 +15044,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 218.44 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -15622,7 +15622,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 218.44 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -16013,7 +16013,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 229.87 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -16246,7 +16246,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 275.59 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -16477,7 +16477,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 229.87 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -16596,7 +16596,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 298.45 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -16715,7 +16715,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 195.58 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -16834,7 +16834,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 264.16 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -17089,7 +17089,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 264.16 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -18141,7 +18141,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 321.31 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -19260,7 +19260,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 344.17 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -19493,7 +19493,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 207.01 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -19612,7 +19612,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 207.01 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -19731,7 +19731,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 275.59 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -20100,7 +20100,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 241.3 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -20560,7 +20560,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 332.74 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -20679,7 +20679,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 321.31 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -21012,7 +21012,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 252.73 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -21131,7 +21131,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 207.01 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -21364,7 +21364,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 298.45 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -21483,7 +21483,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 309.88 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -22564,7 +22564,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 252.73 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -22797,7 +22797,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 287.02 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -23188,7 +23188,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 229.87 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -24195,7 +24195,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 241.3 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -24564,7 +24564,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 287.02 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -24683,7 +24683,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 252.73 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -24880,7 +24880,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 252.73 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -25457,7 +25457,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 241.3 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -25576,7 +25576,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 229.87 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -25923,7 +25923,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 321.31 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -26450,7 +26450,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 184.15 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -26919,7 +26919,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 195.58 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -27543,7 +27543,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 344.17 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -27889,7 +27889,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 218.44 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -28847,7 +28847,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 264.16 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -28966,7 +28966,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 321.31 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -29085,7 +29085,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 298.45 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -30181,7 +30181,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 195.58 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -30550,7 +30550,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 172.72 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -30919,7 +30919,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 344.17 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -31116,7 +31116,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 287.02 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -31371,7 +31371,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 195.58 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -31740,7 +31740,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 332.74 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -32223,7 +32223,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 184.15 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -32534,7 +32534,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 344.17 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -33017,7 +33017,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 287.02 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -33602,7 +33602,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 241.3 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -33857,7 +33857,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 264.16 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -35384,7 +35384,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 172.72 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -36824,7 +36824,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 207.01 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -37055,7 +37055,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 309.88 201.93 0)
 			(hide yes)
 			(show_name no)
@@ -37424,7 +37424,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 298.45 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -37793,7 +37793,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 275.59 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -38240,7 +38240,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 309.88 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -38837,7 +38837,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 218.44 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -39092,7 +39092,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 309.88 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -39575,7 +39575,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 184.15 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -40194,7 +40194,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 332.74 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -40313,7 +40313,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Krteq:ReverseMount_LED"
+		(property "Footprint" "Krteq:SMD-4P_3.2x1.3mm"
 			(at 275.59 180.34 0)
 			(hide yes)
 			(show_name no)
