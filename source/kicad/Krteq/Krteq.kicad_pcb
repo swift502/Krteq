@@ -28770,7 +28770,7 @@
 				(justify mirror)
 			)
 		)
-		(property "MPN" "IS31FL3733-QFLS4-TR"
+		(property "MPN" "IS31FL3733B-QFLS4-TR"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")

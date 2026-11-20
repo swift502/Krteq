@@ -1745,7 +1745,6 @@ static const krteq_screen_t system_screen_input_lock = {
 #define RGB_BAR_WIDTH OLED_DISPLAY_WIDTH
 #define RGB_BAR_HEIGHT 7
 #define RGB_BAR_PADDING 2
-#define RGB_HUE_MAXIMUM (UINT8_MAX + 1 - RGB_MATRIX_HUE_STEP) // Hue wraps, so the step before 0 is the top
 
 static const krteq_screen_t system_screen_rgb;
 
@@ -1822,22 +1821,49 @@ static int8_t rgb_key_component(uint16_t keycode)
     }
 }
 
-// Shown in key steps, rounded since the top may be clamped short of a full step
+#define RGB_BAR_INNER_WIDTH (RGB_BAR_WIDTH - RGB_BAR_PADDING * 2)
+#define RGB_BAR_INNER_HEIGHT (RGB_BAR_HEIGHT - RGB_BAR_PADDING * 2)
+#define RGB_HUE_POSITIONS ((UINT8_MAX + 1) / RGB_MATRIX_HUE_STEP) // Hue wraps, so each step is a distinct position
+#define RGB_HUE_MARKER_WIDTH 5
+
+static void draw_bar_outline(const char *title, const char *text)
+{
+    fill_rect(0, CONTENT_Y, RGB_BAR_WIDTH, RGB_BAR_HEIGHT, true);
+    fill_rect(1, CONTENT_Y + 1, RGB_BAR_WIDTH - 2, RGB_BAR_HEIGHT - 2, false);
+
+    draw_text_at(0, TITLE_Y, title, false);
+    draw_text_at(OLED_DISPLAY_WIDTH - strlen(text) * OLED_FONT_WIDTH, TITLE_Y, text, false);
+}
+
+// Snapped to key steps and shown as a percentage, rounded since the top may be clamped short of a full step
 static void draw_slider(const char *title, uint8_t value, uint8_t maximum, uint8_t step)
 {
     uint8_t max_steps = (maximum + step / 2) / step;
     uint8_t steps = MIN((value + step / 2) / step, max_steps);
-    uint8_t fill = (uint16_t)steps * (RGB_BAR_WIDTH - RGB_BAR_PADDING * 2) / max_steps;
+    uint8_t fill = (uint16_t)steps * RGB_BAR_INNER_WIDTH / max_steps;
 
-    fill_rect(0, CONTENT_Y, RGB_BAR_WIDTH, RGB_BAR_HEIGHT, true);
-    fill_rect(1, CONTENT_Y + 1, RGB_BAR_WIDTH - 2, RGB_BAR_HEIGHT - 2, false);
-    fill_rect(RGB_BAR_PADDING, CONTENT_Y + RGB_BAR_PADDING, fill, RGB_BAR_HEIGHT - RGB_BAR_PADDING * 2, true);
+    char text[5];
+    char *end = print_number(text, ((uint16_t)steps * 100 + max_steps / 2) / max_steps, 1);
+    end[0] = '%';
+    end[1] = '\0';
 
-    char text[4];
-    print_number(text, steps, 1);
+    draw_bar_outline(title, text);
+    fill_rect(RGB_BAR_PADDING, CONTENT_Y + RGB_BAR_PADDING, fill, RGB_BAR_INNER_HEIGHT, true);
+}
 
-    draw_text_at(0, TITLE_Y, title, false);
-    draw_text_at(OLED_DISPLAY_WIDTH - strlen(text) * OLED_FONT_WIDTH, TITLE_Y, text, false);
+// Shown as a position out of the hue steps, with a marker sliding along the bar
+static void draw_hue_slider(const char *title, uint8_t hue)
+{
+    uint8_t position = (hue + RGB_MATRIX_HUE_STEP / 2) / RGB_MATRIX_HUE_STEP % RGB_HUE_POSITIONS;
+    uint8_t marker_x = RGB_BAR_PADDING + (uint16_t)position * (RGB_BAR_INNER_WIDTH - RGB_HUE_MARKER_WIDTH) / (RGB_HUE_POSITIONS - 1);
+
+    char text[8];
+    char *end = print_number(text, position + 1, 1);
+    *end++ = '/';
+    print_number(end, RGB_HUE_POSITIONS, 1);
+
+    draw_bar_outline(title, text);
+    fill_rect(marker_x, CONTENT_Y + RGB_BAR_PADDING, RGB_HUE_MARKER_WIDTH, RGB_BAR_INNER_HEIGHT, true);
 }
 
 static void rgb_status_update(void)
@@ -1861,7 +1887,7 @@ static void rgb_status_update(void)
     {
         case RGB_STATUS_POWER:      draw_labelled("RGB", rgb_matrix_is_enabled() ? "Enabled" : "Disabled");                  break;
         case RGB_STATUS_EFFECT:     draw_selection("RGB Effect", &rgb_effect_selection, RGB_EFFECT_COUNT, get_effect_display_name);  break;
-        case RGB_STATUS_HUE:        draw_slider("RGB Hue", hsv.h, RGB_HUE_MAXIMUM, RGB_MATRIX_HUE_STEP);                             break;
+        case RGB_STATUS_HUE:        draw_hue_slider("RGB Hue", hsv.h);                                                               break;
         case RGB_STATUS_SATURATION: draw_slider("RGB Saturation", hsv.s, UINT8_MAX, RGB_MATRIX_SAT_STEP);                            break;
         case RGB_STATUS_BRIGHTNESS: draw_slider("RGB Brightness", hsv.v, RGB_MATRIX_MAXIMUM_BRIGHTNESS, RGB_MATRIX_VAL_STEP);        break;
         case RGB_STATUS_SPEED:      draw_slider("RGB Speed", rgb_matrix_get_speed(), UINT8_MAX, RGB_MATRIX_SPD_STEP);                break;

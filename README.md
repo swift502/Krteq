@@ -60,12 +60,14 @@ The **OLED display module** is expected to be a 128x32 I2C OLED screen. These sc
 1. Attach the stabilizer to the plate
 1. Place the OLED module into plate's display slot
 1. Screw the USB board to the plate
-1. Solder the Pico onto the PCB via pin headers
+1. Solder the Pico onto the PCB
 1. Secure the plate to the PCB by installing the switches
-1. TODO: Suggest good wire lengths
-1. Solder wires between the J1, J2 and J3 interfaces and their respective breakout boards
+1. Cut up 8x 15mm wires and 3x 20mm wires for the Pico
+1. Solder the wires to the PCB and their corresponding breakout boards
 1. Screw the plate to the case
 1. Put some keycaps on and you're done!
+
+![](images/pcb.webp)
 
 ## PCB
 
@@ -80,7 +82,7 @@ To generate fabrication files, open the Kicad project and use an export plugin p
 | Switch diode | SOD-123 | 1N4148W |
 | Switch socket | SMD | KS-2P02B01-02 |
 | RGB LED | SMD-4P,3.2x1.3mm | 23-23B/R6GHBHC-A30/2A |
-| RGB driver | QFN-48-EP(6x6) | IS31FL3733-QFLS4-TR |
+| RGB driver | QFN-48-EP(6x6) | IS31FL3733B-QFLS4-TR |
 | 0.1µF capacitor | 0402 | CL05B104KO5NNNC |
 | 0.47µF capacitor | 0603 | CL10B474KA8NNNC |
 | 22µF/10V capacitor | CASE-A-3216-18(mm) | T520A226M010ATE080 |
