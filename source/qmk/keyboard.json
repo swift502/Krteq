@@ -115,8 +115,8 @@
         "default": {
             "animation": "solid_color",
             "on": true,
-            "hue": 52,
-            "sat": 128,
+            "hue": 48,
+            "sat": 160,
             "val": 96
         },
         "driver": "is31fl3733",
