@@ -61,10 +61,14 @@ The **OLED display module** is expected to be a 128x32 I2C OLED screen. These sc
 1. Place the OLED module into plate's display slot
 1. Screw the USB board to the plate
 1. Solder the Pico onto the PCB
-1. Secure the plate to the PCB by installing the switches
-1. Cut up 8x 15mm wires and 3x 20mm wires for the Pico
-1. Solder the wires to the PCB and their corresponding breakout boards
+1. Secure the plate to the PCB by installing few of the switches
+1. Cut up wire lenghts:
+    - 8x 15mm
+    - 2x 18mm (TP2, TP3)
+    - 1x 22mm (TP1)
+1. Solder the wires to the PCB and the components 
 1. Screw the plate to the case
+1. Install the rest of the switches
 1. Put some keycaps on and you're done!
 
 ![](images/pcb.webp)
