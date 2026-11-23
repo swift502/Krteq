@@ -1558,7 +1558,7 @@ static void print_uptime(char *out)
 {
     uint32_t seconds = uptime_seconds;
 
-    out = print_number(out, seconds / 3600, 1);
+    out = print_number(out, seconds / 3600, 2);
     *out++ = ':';
     out = print_number(out, seconds / 60 % 60, 2);
     *out++ = ':';
