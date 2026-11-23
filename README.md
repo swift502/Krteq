@@ -68,8 +68,7 @@ The **OLED display module** is expected to be a 128x32 I2C OLED screen. These sc
     - 1x 22mm (TP1)
 1. Solder the wires to the PCB and the components 
 1. Screw the plate to the case
-1. Install the rest of the switches
-1. Put some keycaps on and you're done!
+1. Install the rest of the switches, put some keycaps on and you're done!
 
 ![](images/pcb.webp)
 
