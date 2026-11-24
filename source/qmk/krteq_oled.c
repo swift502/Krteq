@@ -6,18 +6,6 @@
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
 #define FRAME_DURATION_30_FPS 33 // Milliseconds per frame
 
-#ifndef INDICATORS_SHOW_LAYER
-#    define INDICATORS_SHOW_LAYER 255
-#endif
-
-#ifndef INDICATORS_SCROLL_LABEL
-#    define INDICATORS_SCROLL_LABEL "SCR"
-#endif
-
-#ifndef INPUT_LOCK_LAYER
-#    define INPUT_LOCK_LAYER 255
-#endif
-
 // Offsets into the EEPROM keyboard datablock
 #define DATA_SCREEN_OFFSET 0
 #define DATA_BONGO_HITS_OFFSET 1

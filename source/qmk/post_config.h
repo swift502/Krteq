@@ -15,3 +15,15 @@
 #        define OLED_VCOM_DETECT 0x30
 #    endif
 #endif
+
+#ifndef INDICATORS_SCROLL_LABEL
+#    define INDICATORS_SCROLL_LABEL "SCR"
+#endif
+
+#ifndef INDICATORS_SHOW_LAYER
+#    define INDICATORS_SHOW_LAYER 255
+#endif
+
+#ifndef INPUT_LOCK_LAYER
+#    define INPUT_LOCK_LAYER 255
+#endif
