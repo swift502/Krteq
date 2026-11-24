@@ -1985,9 +1985,19 @@ static const krteq_screen_t *active_screen(void)
 {
     if (!logo_finished) return &system_screen_logo;
 
-    uint8_t layer = get_highest_layer(layer_state);
-    if (layer >= INPUT_LOCK_LAYER) return &system_screen_input_lock;
-    if (layer == INDICATORS_SHOW_LAYER) return &krteq_screen_indicators;
+#ifdef INPUT_LOCK_LAYER
+    if (get_highest_layer(layer_state) >= INPUT_LOCK_LAYER)
+    {
+        return &system_screen_input_lock;
+    }
+#endif
+
+#ifdef INDICATORS_SHOW_LAYER
+    if (get_highest_layer(layer_state) == INDICATORS_SHOW_LAYER)
+    {
+        return &krteq_screen_indicators;
+    }
+#endif
 
     if (overlay) return overlay;
     return get_user_screen(current_user_screen);

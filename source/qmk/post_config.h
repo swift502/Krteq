@@ -1,6 +1,6 @@
 #pragma once
 
-#if defined(SCREEN_BRIGHTNESS)
+#ifdef SCREEN_BRIGHTNESS
 #    if SCREEN_BRIGHTNESS == SCREEN_BRIGHTNESS_LOW
 #        define OLED_BRIGHTNESS 0
 #        define OLED_PRE_CHARGE_PERIOD 0x11
@@ -18,12 +18,4 @@
 
 #ifndef INDICATORS_SCROLL_LABEL
 #    define INDICATORS_SCROLL_LABEL "SCR"
-#endif
-
-#ifndef INDICATORS_SHOW_LAYER
-#    define INDICATORS_SHOW_LAYER 255
-#endif
-
-#ifndef INPUT_LOCK_LAYER
-#    define INPUT_LOCK_LAYER 255
 #endif
