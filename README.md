@@ -118,18 +118,20 @@ QMK/VIA setup with a few custom features:
 Some functionality can be overridden in a user keymap `config.h`:
 
 ```c
-// Layer which forces a preview of the "Indicators" screen
-#define INDICATORS_SHOW_LAYER 1
+// Set OLED screen brightness: LOW, MEDIUM or HIGH
+#define SCREEN_BRIGHTNESS SCREEN_BRIGHTNESS_LOW
 
 // Replace the scroll lock indicator with three letter
 // string to denote custom script functionality
 #define INDICATORS_SCROLL_LABEL "ACC"
 
+// Layer which forces a preview of the "Indicators" screen
+#define INDICATORS_SHOW_LAYER 1
+
 // Layer (and above) which shows the "Input lock" screen
 #define INPUT_LOCK_LAYER 4
 
-// Set OLED screen brightness: LOW, MEDIUM or HIGH
-#define SCREEN_BRIGHTNESS SCREEN_BRIGHTNESS_LOW
+
 ```
 
 ### Adding custom OLED screens
