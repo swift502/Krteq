@@ -4,7 +4,7 @@
 #include OLED_FONT_H
 
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
-#define FRAME_DURATION_30_FPS 33 // Milliseconds per frame
+#define FRAME_DURATION_30_FPS 33
 
 // Offsets into the EEPROM keyboard datablock
 #define DATA_SCREEN_OFFSET 0
