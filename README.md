@@ -127,6 +127,9 @@ Some functionality can be overridden in a user keymap `config.h`:
 
 // Layer (and above) which shows the "Input lock" screen
 #define INPUT_LOCK_LAYER 4
+
+// Set OLED screen brightness: LOW, MEDIUM or HIGH
+#define SCREEN_BRIGHTNESS SCREEN_BRIGHTNESS_LOW
 ```
 
 ### Adding custom OLED screens

@@ -1,0 +1,17 @@
+#pragma once
+
+#if defined(SCREEN_BRIGHTNESS)
+#    if SCREEN_BRIGHTNESS == SCREEN_BRIGHTNESS_LOW
+#        define OLED_BRIGHTNESS 0
+#        define OLED_PRE_CHARGE_PERIOD 0x11
+#        define OLED_VCOM_DETECT 0x00
+#    elif SCREEN_BRIGHTNESS == SCREEN_BRIGHTNESS_MEDIUM
+#        define OLED_BRIGHTNESS 128
+#        define OLED_PRE_CHARGE_PERIOD 0x81
+#        define OLED_VCOM_DETECT 0x20
+#    elif SCREEN_BRIGHTNESS == SCREEN_BRIGHTNESS_HIGH
+#        define OLED_BRIGHTNESS 255
+#        define OLED_PRE_CHARGE_PERIOD 0xF1
+#        define OLED_VCOM_DETECT 0x30
+#    endif
+#endif
