@@ -1814,8 +1814,11 @@ static int8_t rgb_key_component(uint16_t keycode)
 #define RGB_HUE_POSITIONS ((UINT8_MAX + 1) / RGB_MATRIX_HUE_STEP) // Hue wraps, so each step is a distinct position
 #define RGB_HUE_MARKER_WIDTH 5
 
-static void draw_bar_outline(const char *title, const char *text)
+static void draw_bar_outline(const char *title, uint8_t current)
 {
+    char text[4];
+    print_number(text, current, 1);
+
     fill_rect(0, CONTENT_Y, RGB_BAR_WIDTH, RGB_BAR_HEIGHT, true);
     fill_rect(1, CONTENT_Y + 1, RGB_BAR_WIDTH - 2, RGB_BAR_HEIGHT - 2, false);
 
@@ -1823,34 +1826,22 @@ static void draw_bar_outline(const char *title, const char *text)
     draw_text_at(OLED_DISPLAY_WIDTH - strlen(text) * OLED_FONT_WIDTH, TITLE_Y, text, false);
 }
 
-// Snapped to key steps and shown as a percentage, rounded since the top may be clamped short of a full step
 static void draw_slider(const char *title, uint8_t value, uint8_t maximum, uint8_t step)
 {
     uint8_t max_steps = (maximum + step / 2) / step;
     uint8_t steps = MIN((value + step / 2) / step, max_steps);
     uint8_t fill = (uint16_t)steps * RGB_BAR_INNER_WIDTH / max_steps;
 
-    char text[5];
-    char *end = print_number(text, ((uint16_t)steps * 100 + max_steps / 2) / max_steps, 1);
-    end[0] = '%';
-    end[1] = '\0';
-
-    draw_bar_outline(title, text);
+    draw_bar_outline(title, steps);
     fill_rect(RGB_BAR_PADDING, CONTENT_Y + RGB_BAR_PADDING, fill, RGB_BAR_INNER_HEIGHT, true);
 }
 
-// Shown as a position out of the hue steps, with a marker sliding along the bar
 static void draw_hue_slider(const char *title, uint8_t hue)
 {
     uint8_t position = (hue + RGB_MATRIX_HUE_STEP / 2) / RGB_MATRIX_HUE_STEP % RGB_HUE_POSITIONS;
     uint8_t marker_x = RGB_BAR_PADDING + (uint16_t)position * (RGB_BAR_INNER_WIDTH - RGB_HUE_MARKER_WIDTH) / (RGB_HUE_POSITIONS - 1);
 
-    char text[8];
-    char *end = print_number(text, position + 1, 1);
-    *end++ = '/';
-    print_number(end, RGB_HUE_POSITIONS, 1);
-
-    draw_bar_outline(title, text);
+    draw_bar_outline(title, position + 1);
     fill_rect(marker_x, CONTENT_Y + RGB_BAR_PADDING, RGB_HUE_MARKER_WIDTH, RGB_BAR_INNER_HEIGHT, true);
 }
 
