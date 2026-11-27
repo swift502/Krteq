@@ -16,28 +16,6 @@
 #define DATA_BONGO_HITS_OFFSET 1
 #define DATA_OLED_SETTINGS_OFFSET 5
 
-// SSD1306 command bytes
-#define OLED_CMD_PREFIX 0x00
-#define OLED_CMD_PRE_CHARGE_PERIOD 0xD9
-#define OLED_CMD_VCOM_DETECT 0xDB
-
-// Order also defines the VIA value_id in krteq_via.json
-typedef enum
-{
-    OLED_SETTING_BRIGHTNESS,
-    OLED_SETTING_PRE_CHARGE,
-    OLED_SETTING_VCOM,
-    OLED_SETTING_COUNT
-} oled_setting_t;
-
-static const uint8_t oled_default_settings[OLED_SETTING_COUNT] = {
-    [OLED_SETTING_BRIGHTNESS] = OLED_BRIGHTNESS,
-    [OLED_SETTING_PRE_CHARGE] = OLED_PRE_CHARGE_PERIOD,
-    [OLED_SETTING_VCOM] = OLED_VCOM_DETECT,
-};
-
-static uint8_t oled_settings[OLED_SETTING_COUNT];
-
 static int current_user_screen = 0;
 static const krteq_screen_t *last_rendered_screen = NULL;
 static bool screen_redraw;
@@ -67,100 +45,6 @@ static void save_user_screen(void)
 {
     uint8_t screen = current_user_screen;
     eeconfig_update_kb_datablock(&screen, DATA_SCREEN_OFFSET, sizeof(screen));
-}
-
-static void oled_send_setting_cmd(uint8_t command, uint8_t value)
-{
-    uint8_t data[] = { OLED_CMD_PREFIX, command, value };
-    oled_send_cmd(data, ARRAY_SIZE(data));
-}
-
-static void oled_setting_apply(oled_setting_t setting)
-{
-    uint8_t value = oled_settings[setting];
-
-    switch (setting)
-    {
-        case OLED_SETTING_BRIGHTNESS:
-            oled_set_brightness(value);
-            break;
-
-        case OLED_SETTING_PRE_CHARGE:
-            oled_send_setting_cmd(OLED_CMD_PRE_CHARGE_PERIOD, value);
-            break;
-
-        case OLED_SETTING_VCOM:
-            oled_send_setting_cmd(OLED_CMD_VCOM_DETECT, value);
-            break;
-
-        default:
-            break;
-    }
-}
-
-// Called by QMK when the datablock is missing, outdated or reset
-void eeconfig_init_kb_datablock(void)
-{
-    uint8_t data[EECONFIG_KB_DATA_SIZE] = { 0 };
-    memcpy(&data[DATA_OLED_SETTINGS_OFFSET], oled_default_settings, sizeof(oled_default_settings));
-    eeconfig_update_kb_datablock(data, 0, sizeof(data));
-}
-
-void oled_settings_load(void)
-{
-    eeconfig_read_kb_datablock(oled_settings, DATA_OLED_SETTINGS_OFFSET, sizeof(oled_settings));
-
-    for (uint8_t setting = 0; setting < OLED_SETTING_COUNT; setting++)
-    {
-        oled_setting_apply(setting);
-    }
-}
-
-void via_custom_value_command_kb(uint8_t *data, uint8_t length)
-{
-    // data = [ command_id, channel_id, value_id, value_data ]
-    uint8_t *command_id = &data[0];
-    uint8_t channel_id = data[1];
-    uint8_t value_id = data[2];
-    uint8_t *value_data = &data[3];
-
-    if (channel_id != id_custom_channel)
-    {
-        *command_id = id_unhandled;
-        return;
-    }
-
-    switch (*command_id)
-    {
-        case id_custom_set_value:
-            if (value_id >= OLED_SETTING_COUNT)
-            {
-                *command_id = id_unhandled;
-                break;
-            }
-            oled_settings[value_id] = value_data[0];
-            oled_setting_apply(value_id);
-            break;
-
-        case id_custom_get_value:
-            if (value_id >= OLED_SETTING_COUNT)
-            {
-                *command_id = id_unhandled;
-                break;
-            }
-            value_data[0] = oled_settings[value_id];
-            break;
-
-        // VIA sends save per channel without a value_id
-        // EEPROM update only writes bytes that changed
-        case id_custom_save:
-            eeconfig_update_kb_datablock(oled_settings, DATA_OLED_SETTINGS_OFFSET, sizeof(oled_settings));
-            break;
-
-        default:
-            *command_id = id_unhandled;
-            break;
-    }
 }
 
 // Restarts the timer if it has finished
@@ -2028,6 +1912,127 @@ void render_shutdown_screen(bool jump_to_bootloader)
     }
 
     oled_render_dirty(true);
+}
+
+//==============================================================================
+// OLED settings
+//==============================================================================
+
+// SSD1306 command bytes
+#define OLED_CMD_PREFIX 0x00
+#define OLED_CMD_PRE_CHARGE_PERIOD 0xD9
+#define OLED_CMD_VCOM_DETECT 0xDB
+
+// Order also defines the VIA value_id in krteq_via.json
+typedef enum
+{
+    OLED_SETTING_BRIGHTNESS,
+    OLED_SETTING_PRE_CHARGE,
+    OLED_SETTING_VCOM,
+    OLED_SETTING_COUNT
+} oled_setting_t;
+
+static const uint8_t oled_default_settings[OLED_SETTING_COUNT] = {
+    [OLED_SETTING_BRIGHTNESS] = OLED_BRIGHTNESS,
+    [OLED_SETTING_PRE_CHARGE] = OLED_PRE_CHARGE_PERIOD,
+    [OLED_SETTING_VCOM] = OLED_VCOM_DETECT,
+};
+
+static uint8_t oled_settings[OLED_SETTING_COUNT];
+
+static void oled_send_setting_cmd(uint8_t command, uint8_t value)
+{
+    uint8_t data[] = { OLED_CMD_PREFIX, command, value };
+    oled_send_cmd(data, ARRAY_SIZE(data));
+}
+
+static void oled_setting_apply(oled_setting_t setting)
+{
+    uint8_t value = oled_settings[setting];
+
+    switch (setting)
+    {
+        case OLED_SETTING_BRIGHTNESS:
+            oled_set_brightness(value);
+            break;
+
+        case OLED_SETTING_PRE_CHARGE:
+            oled_send_setting_cmd(OLED_CMD_PRE_CHARGE_PERIOD, value);
+            break;
+
+        case OLED_SETTING_VCOM:
+            oled_send_setting_cmd(OLED_CMD_VCOM_DETECT, value);
+            break;
+
+        default:
+            break;
+    }
+}
+
+// Called by QMK when the datablock is missing, outdated or reset
+// Initializes the whole datablock, not just the OLED settings
+void eeconfig_init_kb_datablock(void)
+{
+    uint8_t data[EECONFIG_KB_DATA_SIZE] = { 0 };
+    memcpy(&data[DATA_OLED_SETTINGS_OFFSET], oled_default_settings, sizeof(oled_default_settings));
+    eeconfig_update_kb_datablock(data, 0, sizeof(data));
+}
+
+void oled_settings_load(void)
+{
+    eeconfig_read_kb_datablock(oled_settings, DATA_OLED_SETTINGS_OFFSET, sizeof(oled_settings));
+
+    for (uint8_t setting = 0; setting < OLED_SETTING_COUNT; setting++)
+    {
+        oled_setting_apply(setting);
+    }
+}
+
+void via_custom_value_command_kb(uint8_t *data, uint8_t length)
+{
+    // data = [ command_id, channel_id, value_id, value_data ]
+    uint8_t *command_id = &data[0];
+    uint8_t channel_id = data[1];
+    uint8_t value_id = data[2];
+    uint8_t *value_data = &data[3];
+
+    if (channel_id != id_custom_channel)
+    {
+        *command_id = id_unhandled;
+        return;
+    }
+
+    switch (*command_id)
+    {
+        case id_custom_set_value:
+            if (value_id >= OLED_SETTING_COUNT)
+            {
+                *command_id = id_unhandled;
+                break;
+            }
+            oled_settings[value_id] = value_data[0];
+            oled_setting_apply(value_id);
+            break;
+
+        case id_custom_get_value:
+            if (value_id >= OLED_SETTING_COUNT)
+            {
+                *command_id = id_unhandled;
+                break;
+            }
+            value_data[0] = oled_settings[value_id];
+            break;
+
+        // VIA sends save per channel without a value_id
+        // EEPROM update only writes bytes that changed
+        case id_custom_save:
+            eeconfig_update_kb_datablock(oled_settings, DATA_OLED_SETTINGS_OFFSET, sizeof(oled_settings));
+            break;
+
+        default:
+            *command_id = id_unhandled;
+            break;
+    }
 }
 
 //==============================================================================
