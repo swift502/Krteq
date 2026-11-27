@@ -28,18 +28,18 @@
             {
               "label": "Brightness",
               "type": "range",
-              "options": [0, 255],
+              "options": [0, 100],
               "content": ["oled_brightness", 0, 0]
             },
             {
               "label": "Pre-charge Period",
               "type": "dropdown",
               "options": [
-                ["0x11 (default)", 17],
-                ["0x21", 33],
-                ["0x41", 65],
-                ["0x81", 129],
-                ["0xF1", 241]
+                ["0x11 (default)", 0],
+                ["0x21", 1],
+                ["0x41", 2],
+                ["0x81", 3],
+                ["0xF1", 4]
               ],
               "content": ["oled_pre_charge", 0, 1]
             },
@@ -48,8 +48,8 @@
               "type": "dropdown",
               "options": [
                 ["0x00 (default)", 0],
-                ["0x20", 32],
-                ["0x30", 48]
+                ["0x20", 1],
+                ["0x30", 2]
               ],
               "content": ["oled_vcom", 0, 2]
             }

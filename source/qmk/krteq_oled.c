@@ -1923,6 +1923,9 @@ void render_shutdown_screen(bool jump_to_bootloader)
 #define OLED_CMD_PRE_CHARGE_PERIOD 0xD9
 #define OLED_CMD_VCOM_DETECT 0xDB
 
+// Brightness slider range in krteq_via.json
+#define OLED_BRIGHTNESS_STEPS 100
+
 // Order also defines the VIA value_id in krteq_via.json
 typedef enum
 {
@@ -1932,10 +1935,15 @@ typedef enum
     OLED_SETTING_COUNT
 } oled_setting_t;
 
+// Dropdown options, VIA sends the option index, order must match krteq_via.json
+static const uint8_t oled_pre_charge_values[] = { 0x11, 0x21, 0x41, 0x81, 0xF1 };
+static const uint8_t oled_vcom_values[] = { 0x00, 0x20, 0x30 };
+
+// Dropdown defaults are option indices, index 0 matches config.h
 static const uint8_t oled_default_settings[OLED_SETTING_COUNT] = {
-    [OLED_SETTING_BRIGHTNESS] = OLED_BRIGHTNESS,
-    [OLED_SETTING_PRE_CHARGE] = OLED_PRE_CHARGE_PERIOD,
-    [OLED_SETTING_VCOM] = OLED_VCOM_DETECT,
+    [OLED_SETTING_BRIGHTNESS] = OLED_BRIGHTNESS * OLED_BRIGHTNESS_STEPS / 255,
+    [OLED_SETTING_PRE_CHARGE] = 0,
+    [OLED_SETTING_VCOM] = 0,
 };
 
 static uint8_t oled_settings[OLED_SETTING_COUNT];
@@ -1953,15 +1961,22 @@ static void oled_setting_apply(oled_setting_t setting)
     switch (setting)
     {
         case OLED_SETTING_BRIGHTNESS:
-            oled_set_brightness(value);
+            if (value > OLED_BRIGHTNESS_STEPS) value = oled_settings[setting] = oled_default_settings[setting];
+            oled_set_brightness(value * 255 / OLED_BRIGHTNESS_STEPS);
             break;
 
         case OLED_SETTING_PRE_CHARGE:
-            oled_send_setting_cmd(OLED_CMD_PRE_CHARGE_PERIOD, value);
+            // Invalid value reset
+            if (value >= ARRAY_SIZE(oled_pre_charge_values)) value = oled_settings[setting] = oled_default_settings[setting];
+            // Apply
+            oled_send_setting_cmd(OLED_CMD_PRE_CHARGE_PERIOD, oled_pre_charge_values[value]);
             break;
 
         case OLED_SETTING_VCOM:
-            oled_send_setting_cmd(OLED_CMD_VCOM_DETECT, value);
+            // Invalid value reset
+            if (value >= ARRAY_SIZE(oled_vcom_values)) value = oled_settings[setting] = oled_default_settings[setting];
+            // Apply
+            oled_send_setting_cmd(OLED_CMD_VCOM_DETECT, oled_vcom_values[value]);
             break;
 
         default:
