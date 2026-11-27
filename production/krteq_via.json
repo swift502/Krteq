@@ -29,7 +29,7 @@
               "label": "Brightness",
               "type": "range",
               "options": [0, 255],
-              "content": ["id_krteq_oled_brightness", 0, 1]
+              "content": ["oled_brightness", 0, 0]
             },
             {
               "label": "Pre-charge Period",
@@ -41,7 +41,7 @@
                 ["0x81", 129],
                 ["0xF1", 241]
               ],
-              "content": ["id_krteq_oled_pre_charge", 0, 2]
+              "content": ["oled_pre_charge", 0, 1]
             },
             {
               "label": "VCOM Deselect Level",
@@ -51,7 +51,7 @@
                 ["0x20", 32],
                 ["0x30", 48]
               ],
-              "content": ["id_krteq_oled_vcom", 0, 3]
+              "content": ["oled_vcom", 0, 2]
             }
           ]
         }

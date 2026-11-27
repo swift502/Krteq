@@ -3,73 +3,10 @@
 #include "usb_main.h"
 #include "krteq_oled.h"
 
-enum krteq_via_value_id
-{
-    id_krteq_oled_brightness = 1,
-    id_krteq_oled_pre_charge,
-    id_krteq_oled_vcom
-};
-
 void keyboard_post_init_kb(void)
 {
     oled_settings_load();
     keyboard_post_init_user();
-}
-
-static bool via_value_to_oled_setting(uint8_t value_id, oled_setting_t *setting)
-{
-    switch (value_id)
-    {
-        case id_krteq_oled_brightness: *setting = OLED_SETTING_BRIGHTNESS; return true;
-        case id_krteq_oled_pre_charge: *setting = OLED_SETTING_PRE_CHARGE; return true;
-        case id_krteq_oled_vcom: *setting = OLED_SETTING_VCOM; return true;
-        default: return false;
-    }
-}
-
-void via_custom_value_command_kb(uint8_t *data, uint8_t length)
-{
-    // data = [ command_id, channel_id, value_id, value_data ]
-    uint8_t *command_id = &data[0];
-    uint8_t channel_id = data[1];
-    uint8_t *value_data = &data[3];
-    oled_setting_t setting;
-
-    if (channel_id != id_custom_channel)
-    {
-        *command_id = id_unhandled;
-        return;
-    }
-
-    switch (*command_id)
-    {
-        case id_custom_set_value:
-            if (!via_value_to_oled_setting(data[2], &setting))
-            {
-                *command_id = id_unhandled;
-                break;
-            }
-            oled_setting_set(setting, value_data[0]);
-            break;
-
-        case id_custom_get_value:
-            if (!via_value_to_oled_setting(data[2], &setting))
-            {
-                *command_id = id_unhandled;
-                break;
-            }
-            value_data[0] = oled_setting_get(setting);
-            break;
-
-        // VIA sends save per channel without a value_id
-        case id_custom_save:
-            oled_settings_save();
-            break;
-
-        default:
-            *command_id = id_unhandled;
-            break;
-    }
 }
 
 void suspend_power_down_kb(void)
