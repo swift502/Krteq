@@ -8,3 +8,4 @@ void shift_user_screen(int shift);
 void oled_key_event(uint16_t keycode, keypos_t keypos, bool pressed);
 void render_shutdown_screen(bool jump_to_bootloader);
 void oled_restart(void);
+void oled_settings_load(void);

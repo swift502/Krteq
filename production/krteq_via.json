@@ -17,7 +17,47 @@
     }
   ],
   "keycodes": ["qmk_rgb_matrix_keycodes"],
-  "menus": ["qmk_rgb_matrix"],
+  "menus": [
+    "qmk_rgb_matrix",
+    {
+      "label": "Display",
+      "content": [
+        {
+          "label": "OLED",
+          "content": [
+            {
+              "label": "Brightness",
+              "type": "range",
+              "options": [0, 100],
+              "content": ["oled_brightness", 0, 0]
+            },
+            {
+              "label": "Pre-charge Period",
+              "type": "dropdown",
+              "options": [
+                ["0x11 (default)", 0],
+                ["0x21", 1],
+                ["0x41", 2],
+                ["0x81", 3],
+                ["0xF1", 4]
+              ],
+              "content": ["oled_pre_charge", 0, 1]
+            },
+            {
+              "label": "VCOM Deselect Level",
+              "type": "dropdown",
+              "options": [
+                ["0x00 (default)", 0],
+                ["0x20", 1],
+                ["0x30", 2]
+              ],
+              "content": ["oled_vcom", 0, 2]
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "matrix": {
     "rows": 6,
     "cols": 12

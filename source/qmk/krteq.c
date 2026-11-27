@@ -3,6 +3,12 @@
 #include "usb_main.h"
 #include "krteq_oled.h"
 
+void keyboard_post_init_kb(void)
+{
+    oled_settings_load();
+    keyboard_post_init_user();
+}
+
 void suspend_power_down_kb(void)
 {
     // ChibiOS bug workaround, remove when/if the source fix ever makes it to QMK
