@@ -1,7 +1,12 @@
 #include <ctype.h>
+#include <string.h>
 #include "krteq_oled.h"
 #include "version.h"
 #include OLED_FONT_H
+
+#ifndef INDICATORS_SCROLL_LABEL
+#    define INDICATORS_SCROLL_LABEL "SCR"
+#endif
 
 #define OLED_PAGES (OLED_DISPLAY_HEIGHT / 8)
 #define FRAME_DURATION_30_FPS 33
@@ -9,6 +14,20 @@
 // Offsets into the EEPROM keyboard datablock
 #define DATA_SCREEN_OFFSET 0
 #define DATA_BONGO_HITS_OFFSET 1
+#define DATA_OLED_SETTINGS_OFFSET 5
+
+// SSD1306 command bytes
+#define OLED_CMD_PREFIX 0x00
+#define OLED_CMD_PRE_CHARGE_PERIOD 0xD9
+#define OLED_CMD_VCOM_DETECT 0xDB
+
+static const uint8_t oled_default_settings[OLED_SETTING_COUNT] = {
+    [OLED_SETTING_BRIGHTNESS] = OLED_BRIGHTNESS,
+    [OLED_SETTING_PRE_CHARGE] = OLED_PRE_CHARGE_PERIOD,
+    [OLED_SETTING_VCOM] = OLED_VCOM_DETECT,
+};
+
+static uint8_t oled_settings[OLED_SETTING_COUNT];
 
 static int current_user_screen = 0;
 static const krteq_screen_t *last_rendered_screen = NULL;
@@ -39,6 +58,73 @@ static void save_user_screen(void)
 {
     uint8_t screen = current_user_screen;
     eeconfig_update_kb_datablock(&screen, DATA_SCREEN_OFFSET, sizeof(screen));
+}
+
+static void oled_send_setting_cmd(uint8_t command, uint8_t value)
+{
+    uint8_t data[] = { OLED_CMD_PREFIX, command, value };
+    oled_send_cmd(data, ARRAY_SIZE(data));
+}
+
+static void oled_setting_apply(oled_setting_t setting)
+{
+    uint8_t value = oled_settings[setting];
+
+    switch (setting)
+    {
+        case OLED_SETTING_BRIGHTNESS:
+            oled_set_brightness(value);
+            break;
+
+        case OLED_SETTING_PRE_CHARGE:
+            oled_send_setting_cmd(OLED_CMD_PRE_CHARGE_PERIOD, value);
+            break;
+
+        case OLED_SETTING_VCOM:
+            oled_send_setting_cmd(OLED_CMD_VCOM_DETECT, value);
+            break;
+
+        default:
+            break;
+    }
+}
+
+// Called by QMK when the datablock is missing, outdated or reset
+void eeconfig_init_kb_datablock(void)
+{
+    uint8_t data[EECONFIG_KB_DATA_SIZE] = { 0 };
+    memcpy(&data[DATA_OLED_SETTINGS_OFFSET], oled_default_settings, sizeof(oled_default_settings));
+    eeconfig_update_kb_datablock(data, 0, sizeof(data));
+}
+
+void oled_settings_load(void)
+{
+    eeconfig_read_kb_datablock(oled_settings, DATA_OLED_SETTINGS_OFFSET, sizeof(oled_settings));
+
+    for (uint8_t setting = 0; setting < OLED_SETTING_COUNT; setting++)
+    {
+        oled_setting_apply(setting);
+    }
+}
+
+// EEPROM update only writes bytes that changed
+void oled_settings_save(void)
+{
+    eeconfig_update_kb_datablock(oled_settings, DATA_OLED_SETTINGS_OFFSET, sizeof(oled_settings));
+}
+
+uint8_t oled_setting_get(oled_setting_t setting)
+{
+    if (setting >= OLED_SETTING_COUNT) return 0;
+    return oled_settings[setting];
+}
+
+void oled_setting_set(oled_setting_t setting, uint8_t value)
+{
+    if (setting >= OLED_SETTING_COUNT) return;
+
+    oled_settings[setting] = value;
+    oled_setting_apply(setting);
 }
 
 // Restarts the timer if it has finished

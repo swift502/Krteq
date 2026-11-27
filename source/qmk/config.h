@@ -6,11 +6,10 @@
 #define IS31FL3733_SDB_PIN GP2
 #define IS31FL3733_PWM_FREQUENCY IS31FL3733_PWM_FREQUENCY_26K7_HZ
 
-#define SCREEN_BRIGHTNESS_LOW 1
-#define SCREEN_BRIGHTNESS_MEDIUM 2
-#define SCREEN_BRIGHTNESS_HIGH 3
-
 #define OLED_TIMEOUT 0
+#define OLED_BRIGHTNESS 0
+#define OLED_PRE_CHARGE_PERIOD 0x11
+#define OLED_VCOM_DETECT 0x00
 
 #define RGB_TRIGGER_ON_KEYDOWN
 #define RGB_MATRIX_MODE_NAME_ENABLE
@@ -18,4 +17,5 @@
 // Persistent memory
 // - Screen selection (uint8_t): 1 byte
 // - Bongo cat hits (uint32_t): 4 bytes
-#define EECONFIG_KB_DATA_SIZE 5
+// - OLED brightness, pre-charge and VCOM (uint8_t): 3 bytes
+#define EECONFIG_KB_DATA_SIZE 8
