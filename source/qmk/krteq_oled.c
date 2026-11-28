@@ -2003,51 +2003,35 @@ void oled_settings_load(void)
     }
 }
 
-void via_custom_value_command_kb(uint8_t *data, uint8_t length)
+bool oled_via_command(uint8_t command_id, uint8_t value_id, uint8_t *value_data)
 {
-    // data = [ command_id, channel_id, value_id, value_data ]
-    uint8_t *command_id = &data[0];
-    uint8_t channel_id = data[1];
-    uint8_t value_id = data[2];
-    uint8_t *value_data = &data[3];
-
-    if (channel_id != id_custom_channel)
-    {
-        *command_id = id_unhandled;
-        return;
-    }
-
-    switch (*command_id)
+    switch (command_id)
     {
         case id_custom_set_value:
-            if (value_id >= OLED_SETTING_COUNT)
+            if (value_id < OLED_SETTING_COUNT)
             {
-                *command_id = id_unhandled;
-                break;
+                oled_settings[value_id] = value_data[0];
+                oled_setting_apply(value_id);
+                return true;
             }
-            oled_settings[value_id] = value_data[0];
-            oled_setting_apply(value_id);
             break;
 
         case id_custom_get_value:
-            if (value_id >= OLED_SETTING_COUNT)
+            if (value_id < OLED_SETTING_COUNT)
             {
-                *command_id = id_unhandled;
-                break;
+                value_data[0] = oled_settings[value_id];
+                return true;
             }
-            value_data[0] = oled_settings[value_id];
             break;
 
         // VIA sends save per channel without a value_id
         // EEPROM update only writes bytes that changed
         case id_custom_save:
             eeconfig_update_kb_datablock(oled_settings, DATA_OLED_SETTINGS_OFFSET, sizeof(oled_settings));
-            break;
-
-        default:
-            *command_id = id_unhandled;
-            break;
+            return true;
     }
+
+    return false;
 }
 
 //==============================================================================

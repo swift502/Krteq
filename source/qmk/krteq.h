@@ -9,6 +9,12 @@ enum keyboard_keycodes
     KRT_RGB
 };
 
+// VIA custom value channels, 1-4 are reserved by QMK
+enum krteq_via_channels
+{
+    KRTEQ_CHANNEL_OLED = id_custom_channel
+};
+
 typedef struct
 {
     const char *name;

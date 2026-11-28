@@ -127,6 +127,29 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record)
     return true;
 }
 
+void via_custom_value_command_kb(uint8_t *data, uint8_t length)
+{
+    // data = [ command_id, channel_id, value_id, value_data ]
+    uint8_t *command_id = &data[0];
+    uint8_t channel_id = data[1];
+    uint8_t value_id = data[2];
+    uint8_t *value_data = &data[3];
+
+    bool handled = false;
+
+    switch (channel_id)
+    {
+        case KRTEQ_CHANNEL_OLED:
+            handled = oled_via_command(*command_id, value_id, value_data);
+            break;
+    }
+
+    if (!handled)
+    {
+        *command_id = id_unhandled;
+    }
+}
+
 const is31fl3733_led_t PROGMEM g_is31fl3733_leds[IS31FL3733_LED_COUNT] = {
     {0, SW11_CS14, SW12_CS14, SW10_CS14},
     {0, SW1_CS14, SW2_CS14, SW9_CS14},
